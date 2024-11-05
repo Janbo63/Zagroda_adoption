@@ -12,9 +12,6 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  env: {
-    _next_intl_trailing_slash: 'true'
   }
 };
 
