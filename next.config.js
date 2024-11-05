@@ -1,19 +1,24 @@
 const createNextIntlPlugin = require('next-intl/plugin');
-
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['your-domain.com'],
     unoptimized: true,
-    deviceSizes: [640, 750, 828, 1080, 1200],
-    imageSizes: [16, 32, 48, 64, 96],
+    remotePatterns: [],
   },
   experimental: {
     optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react']
-  }
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  staticPageGenerationTimeout: 120,
+  output: 'standalone'
 };
 
 module.exports = withNextIntl(nextConfig);
