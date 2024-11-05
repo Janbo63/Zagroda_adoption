@@ -14,7 +14,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'standalone'
+  output: 'standalone',
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  trailingSlash: false,
+  poweredByHeader: false,
+  generateBuildId: () => 'build',
+  experimental: {
+    isrMemoryCacheSize: 0,
+    serverActions: false
+  }
 };
 
 module.exports = withNextIntl(nextConfig);

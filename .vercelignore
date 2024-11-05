@@ -3,5 +3,12 @@ node_modules
 .next
 README.md
 .env*
-_posts
-public/images
+.gitignore
+.eslintrc*
+.prettier*
+yarn.lock
+package-lock.json
+tsconfig.tsbuildinfo
+.vscode
+.idea
+*.log
