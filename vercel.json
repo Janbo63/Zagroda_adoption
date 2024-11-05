@@ -5,7 +5,7 @@
       "use": "@vercel/next",
       "config": {
         "maxDuration": 60,
-        "nodeVersion": "18.x"
+        "nodeVersion": "20.x"
       }
     }
   ],
