@@ -1,0 +1,179 @@
+{
+  "Common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Doświadcz uzdrawiającej mocy alpak i natury"
+  },
+  "common": {
+    "home": "Strona główna",
+    "animals": "Zwierzęta",
+    "stay": "Nocleg",
+    "activities": "Aktywności",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "backToAnimals": "Powrót do wszystkich zwierząt",
+    "age": "Wiek",
+    "color": "Kolor",
+    "birthplace": "Miejsce urodzenia",
+    "breed": "Rasa",
+    "role": "Rola",
+    "years": "lat",
+    "attributes": "Atrybuty",
+    "character": "Charakter",
+    "stories": "Historie"
+  },
+  "home": {
+    "title": "Witamy w Zagrodzie Alpakoterapii",
+    "subtitle": "Doświadcz magii alpakoterapii w naszym spokojnym gospodarstwie",
+    "heroImageAlt": "Widok na Zagrodę Alpakoterapii",
+    "planVisit": "Zaplanuj Wizytę",
+    "featuredAnimals": "Nasi zwierzęcy przyjaciele",
+    "alpacasTitle": "Alpaki",
+    "alpacasDescription": "Poznaj nasze przyjazne alpaki i doświadcz ich uspokajającej obecności.",
+    "alpacasAlt": "Alpaki w Zagrodzie Alpakoterapii",
+    "goatsTitle": "Kozy",
+    "goatsDescription": "Nasze figlarne kozy są zawsze gotowe do zabawy.",
+    "goatsAlt": "Kozy w Zagrodzie Alpakoterapii",
+    "dogsTitle": "Psy",
+    "dogsDescription": "Nasze wierne psy gospodarskie są tu, by Cię przywitać i dotrzymać Ci towarzystwa.",
+    "dogsAlt": "Psy w Zagrodzie Alpakoterapii",
+    "meetThem": "Poznaj je",
+    "stayTitle": "Zostań z nami",
+    "farmhouseRoomsTitle": "Przytulne pokoje w gospodarstwie",
+    "farmhouseRoomsDescription": "Doświadcz wiejskiego uroku w naszym odnowionym gospodarstwie",
+    "farmhouseRoomsAlt": "Przytulne pokoje w gospodarstwie Zagrody Alpakoterapii",
+    "caravanStaysTitle": "Unikalne pobyty w przyczepach",
+    "caravanStaysDescription": "Ciesz się oryginalnym pobytem w naszych zabytkowych przyczepach",
+    "caravanStaysAlt": "Unikalne pobyty w przyczepach w Zagrodzie Alpakoterapii",
+    "bookStay": "Zarezerwuj pobyt",
+    "activitiesTitle": "Nasze aktywności",
+    "meetAlpacasTitle": "Spotkanie z alpakami",
+    "meetAlpacasDescription": "Poznaj z bliska nasze przyjazne alpaki",
+    "meetAlpacasAlt": "Spotkanie z alpakami w Zagrodzie Alpakoterapii",
+    "alpacaWalksTitle": "Spacery z alpakami",
+    "alpacaWalksDescription": "Wybierz się na spacer w towarzystwie alpaki",
+    "alpacaWalksAlt": "Spacery z alpakami w Zagrodzie Alpakoterapii",
+    "weekendHelperTitle": "Pomocnik weekendowy",
+    "weekendHelperDescription": "Doświadcz życia na farmie z pierwszej ręki",
+    "weekendHelperAlt": "Aktywności pomocnika weekendowego w Zagrodzie Alpakoterapii",
+    "exploreActivities": "Odkryj aktywności",
+    "latestBlog": "Najnowsze wpisy na blogu",
+    "blogPost1Title": "Wiosna na farmie",
+    "blogPost1Excerpt": "Alpaki cieszą się świeżą trawą...",
+    "blogPost1Alt": "Wiosna na farmie w Zagrodzie Alpakoterapii",
+    "blogPost2Title": "Nowe koźlęta",
+    "blogPost2Excerpt": "Z radością ogłaszamy narodziny...",
+    "blogPost2Alt": "Nowe koźlęta w Zagrodzie Alpakoterapii",
+    "blogPost3Title": "Doświadczenia pomocników weekendowych",
+    "blogPost3Excerpt": "W zeszły weekend nasi pomocnicy mieli okazję doświadczyć...",
+    "blogPost3Alt": "Doświadczenia pomocników weekendowych w Zagrodzie Alpakoterapii",
+    "readMore": "Czytaj więcej",
+    "logoAlt": "Logo Zagrody Alpakoterapii",
+    "contactUs": "Skontaktuj się z nami",
+    "phoneNumber": "695 545 330",
+    "address": "Orłowice 24, 59-630 Mirsk, Polska",
+    "followUs": "Obserwuj nas",
+    "imageNotFound": "Image not found"
+  },
+  "animals": {
+    "title": "Poznaj Nasze Zwierzęta",
+    "sectionTitle": "Poznaj Naszych Zwierzęcych Przyjaciół",
+    "meetButton": "Poznaj {name}",
+    "alpacas": {
+      "name": "Alpaki",
+      "description": "Nasi łagodni, puchaci terapeuci gotowi na spotkanie!",
+      "alt": "Alpaki w naszym gospodarstwie"
+    },
+    "goats": {
+      "name": "Kozy",
+      "description": "Zabawne i przyjazne kozy, które uwielbiają uwagę",
+      "alt": "Kozy w naszym gospodarstwie"
+    },
+    "dogs": {
+      "name": "Psy",
+      "description": "Nasi wierni czworonożni przyjaciele",
+      "alt": "Psy w naszym gospodarstwie"
+    }
+  },
+  "stay": {
+    "title": "Opcje zakwaterowania",
+    "farmhouseRooms": {
+      "title": "Pokoje w gospodarstwie",
+      "description": "Doświadcz uroku naszego odnowionego gospodarstwa"
+    },
+    "caravanStays": {
+      "title": "Pobyty w przyczepach",
+      "description": "Ciesz się unikalnym pobytem w naszych zabytkowych przyczepach"
+    },
+    "bookNow": "Zarezerwuj teraz",
+    "checkAvailability": "Sprawdź dostępność"
+  },
+  "activities": {
+    "title": "Aktywności na Farmie",
+    "sectionTitle": "Nasze Aktywności",
+    "viewDetails": "Zobacz Szczegóły",
+    "seeAll": "Zobacz Wszystkie Aktywności",
+    "meetthealpacas": {
+      "name": "Poznaj Alpaki",
+      "description": "Zaprzyjaźnij się z puchatymi terapeutami!",
+      "alt": "Spotkanie z alpakami na naszej farmie"
+    },
+    "alpacawalks": {
+      "name": "Spacery z Alpakami",
+      "description": "Wybierz się na spacer z alpaczym przyjacielem!",
+      "alt": "Spacery z alpakami"
+    },
+    "privatealpacasafari": {
+      "name": "Prywatne Safari z Alpakami",
+      "description": "Odkryj farmę ze stadem alpak!",
+      "alt": "Safari z alpakami"
+    }
+  },
+  "blog": {
+    "title": "Nasz Blog",
+    "noPosts": "Aktualnie brak wpisów na blogu. Sprawdź ponownie wkrótce!",
+    "readMore": "Czytaj Więcej",
+    "recentPosts": "Najnowsze Wpisy",
+    "viewAll": "Zobacz Wszystkie Wpisy"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "callOrMessage": "Zadzwoń lub napisz",
+    "call": "Zadzwoń",
+    "visitUs": "Odwiedź nas",
+    "followUs": "Obserwuj nas"
+  },
+  "accommodation": {
+    "title": "Zostań z Nami",
+    "cozyfarmhouserooms": {
+      "name": "Przytulne Pokoje w Gospodarstwie",
+      "description": "Wyśpij się w naszym wygodnym gospodarstwie!",
+      "alt": "Przytulne pokoje w gospodarstwie"
+    },
+    "uniquecaravanstays": {
+      "name": "Wyjątkowe Pobyty w Przyczepach",
+      "description": "Spędź noc w naszych fajnych przyczepach!",
+      "alt": "Zakwaterowanie w przyczepie"
+    }
+  },
+  "hero": {
+    "title": "Witamy w Zagrodzie Alpakoterapii",
+    "subtitle": "Doświadcz magii alpakoterapii w naszym spokojnym gospodarstwie",
+    "planVisit": "Zaplanuj Wizytę",
+    "exploreActivities": "Zobacz Aktywności",
+    "contactUs": "Kontakt"
+  },
+  "navigation": {
+    "home": "Strona Główna",
+    "animals": "Zwierzęta",
+    "activities": "Aktywności",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "Blog": {
+    "title": "Nasz Blog",
+    "latestPosts": "Najnowsze Wpisy"
+  },
+  "accommodation": {
+    "sectionTitle": "Zakwaterowanie"
+  }
+}

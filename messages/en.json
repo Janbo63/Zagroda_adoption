@@ -1,0 +1,189 @@
+{
+  "Common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Experience the healing power of alpacas and nature"
+  },
+  "common": {
+    "home": "Home",
+    "animals": "Animals",
+    "stay": "Stay",
+    "activities": "Activities",
+    "blog": "Blog",
+    "contact": "Contact",
+    "backToAnimals": "Back to All Animals",
+    "age": "Age",
+    "color": "Color",
+    "birthplace": "Birthplace",
+    "breed": "Breed",
+    "role": "Role",
+    "years": "years",
+    "attributes": "Attributes",
+    "character": "Character",
+    "stories": "Stories"
+  },
+  "home": {
+    "title": "Welcome to Zagroda Alpakoterapii",
+    "subtitle": "Experience the joy of alpaca therapy",
+    "heroImageAlt": "Zagroda Alpakoterapii farm view",
+    "planVisit": "Plan Your Visit",
+    "featuredAnimals": "Our Animal Friends",
+    "alpacasTitle": "Alpacas",
+    "alpacasDescription": "Meet our friendly alpacas and experience their calming presence.",
+    "alpacasAlt": "Alpacas at Zagroda Alpakoterapii",
+    "goatsTitle": "Goats",
+    "goatsDescription": "Our playful goats are always ready for fun interactions.",
+    "goatsAlt": "Goats at Zagroda Alpakoterapii",
+    "dogsTitle": "Dogs",
+    "dogsDescription": "Our loyal farm dogs are here to greet you and keep you company.",
+    "dogsAlt": "Dogs at Zagroda Alpakoterapii",
+    "meetThem": "Meet Them",
+    "stayTitle": "Stay With Us",
+    "farmhouseRoomsTitle": "Cozy Farmhouse Rooms",
+    "farmhouseRoomsDescription": "Experience rustic charm in our renovated farmhouse",
+    "farmhouseRoomsAlt": "Cozy farmhouse rooms at Zagroda Alpakoterapii",
+    "caravanStaysTitle": "Unique Caravan Stays",
+    "caravanStaysDescription": "Enjoy a quirky stay in our vintage caravans",
+    "caravanStaysAlt": "Unique caravan stays at Zagroda Alpakoterapii",
+    "bookStay": "Book Your Stay",
+    "activitiesTitle": "Our Activities",
+    "meetAlpacasTitle": "Meet the Alpacas",
+    "meetAlpacasDescription": "Get up close with our friendly alpacas",
+    "meetAlpacasAlt": "Meeting alpacas at Zagroda Alpakoterapii",
+    "alpacaWalksTitle": "Alpaca Walks",
+    "alpacaWalksDescription": "Take a stroll with an alpaca companion",
+    "alpacaWalksAlt": "Alpaca walks at Zagroda Alpakoterapii",
+    "weekendHelperTitle": "Weekend Helper",
+    "weekendHelperDescription": "Experience hands-on farm life",
+    "weekendHelperAlt": "Weekend helper activities at Zagroda Alpakoterapii",
+    "exploreActivities": "Explore Activities",
+    "latestBlog": "Latest from Our Blog",
+    "blogPost1Title": "Spring on the Farm",
+    "blogPost1Excerpt": "The alpacas are enjoying the fresh grass...",
+    "blogPost1Alt": "Spring on the farm at Zagroda Alpakoterapii",
+    "blogPost2Title": "New Goat Kids",
+    "blogPost2Excerpt": "We're excited to announce the arrival of...",
+    "blogPost2Alt": "New goat kids at Zagroda Alpakoterapii",
+    "blogPost3Title": "Weekend Helper Experiences",
+    "blogPost3Excerpt": "Last weekend, our helpers got to experience...",
+    "blogPost3Alt": "Weekend helper experiences at Zagroda Alpakoterapii",
+    "readMore": "Read More",
+    "logoAlt": "Zagroda Alpakoterapii Logo",
+    "contactUs": "Contact Us",
+    "phoneNumber": "695 545 330",
+    "address": "24 Orłowice, Mirsk 59-630, Poland",
+    "followUs": "Follow Us",
+    "imageNotFound": "Image not found"
+  },
+  "animals": {
+    "title": "Meet Our Animals",
+    "sectionTitle": "Meet Our Animal Friends",
+    "meetButton": "Meet {name}",
+    "alpacas": {
+      "name": "Alpacas",
+      "description": "Our gentle, fluffy therapists ready to meet you!",
+      "alt": "Alpacas at our farm"
+    },
+    "goats": {
+      "name": "Goats",
+      "description": "Playful and friendly goats that love attention",
+      "alt": "Goats at our farm"
+    },
+    "dogs": {
+      "name": "Dogs",
+      "description": "Our faithful canine companions",
+      "alt": "Dogs at our farm"
+    }
+  },
+  "stay": {
+    "title": "Accommodation Options",
+    "farmhouseRooms": {
+      "title": "Farmhouse Rooms",
+      "description": "Experience the charm of our renovated farmhouse"
+    },
+    "caravanStays": {
+      "title": "Caravan Stays",
+      "description": "Enjoy a unique stay in our vintage caravans"
+    },
+    "bookNow": "Book Now",
+    "checkAvailability": "Check Availability"
+  },
+  "activities": {
+    "title": "Farm Activities",
+    "sectionTitle": "Our Activities",
+    "viewDetails": "View Details",
+    "seeAll": "See All Activities",
+    "meetthealpacas": {
+      "name": "Meet the Alpacas",
+      "description": "Make new fluffy friends!",
+      "alt": "Meeting alpacas at our farm"
+    },
+    "alpacawalks": {
+      "name": "Alpaca Walks",
+      "description": "Take a stroll with your new buddy!",
+      "alt": "Walking with alpacas"
+    },
+    "privatealpacasafari": {
+      "name": "Private Alpaca Safari",
+      "description": "Explore the farm with a herd of alpacas!",
+      "alt": "Alpaca safari experience"
+    }
+  },
+  "blog": {
+    "title": "Our Blog",
+    "noPosts": "No blog posts available at the moment. Check back soon!",
+    "readMore": "Read More",
+    "recentPosts": "Recent Posts",
+    "viewAll": "View All Posts"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "addressTitle": "Our Address",
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "formSuccess": "Thank you for your message. We'll get back to you soon!",
+    "formError": "There was an error sending your message. Please try again.",
+    "callOrMessage": "Call or Message Us",
+    "call": "Call",
+    "visitUs": "Visit Us",
+    "followUs": "Follow Us"
+  },
+  "hero": {
+    "title": "Welcome to Zagroda Alpakoterapii",
+    "subtitle": "Experience the magic of alpaca therapy in our peaceful farm setting",
+    "planVisit": "Plan Your Visit",
+    "exploreActivities": "Explore Activities",
+    "contactUs": "Contact Us"
+  },
+  "accommodation": {
+    "sectionTitle": "Accommodation",
+    "title": "Stay With Us",
+    "cozyfarmhouserooms": {
+      "name": "Cozy Farmhouse Rooms",
+      "description": "Sleep tight in our comfy farmhouse!",
+      "alt": "Cozy farmhouse accommodation"
+    },
+    "uniquecaravanstays": {
+      "name": "Unique Caravan Stays",
+      "description": "Camp out in our fun caravans!",
+      "alt": "Caravan accommodation"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "animals": "Animals",
+    "activities": "Activities",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "Blog": {
+    "title": "Our Blog",
+    "latestPosts": "Latest Posts"
+  },
+  "accommodation": {
+    "sectionTitle": "Accommodation"
+  }
+}
