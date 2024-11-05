@@ -1,27 +1,14 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
   "framework": "nextjs",
   "builds": [
     {
       "src": "next.config.js",
       "use": "@vercel/next",
       "config": {
-        "maxDuration": 60,
-        "nodeVersion": "20.x",
-        "buildCommand": "npm run build"
+        "nodeVersion": "20.x"
       }
     }
-  ],
-  "build": {
-    "env": {
-      "NEXT_TELEMETRY_DISABLED": "1",
-      "NEXT_SHARP_PATH": "/tmp/node_modules/sharp",
-      "NODE_ENV": "production"
-    }
-  },
-  "env": {
-    "NEXT_PUBLIC_API_URL": "https://your-production-url.vercel.app"
-  }
+  ]
 } 

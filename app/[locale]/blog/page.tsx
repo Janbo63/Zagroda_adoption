@@ -1,8 +1,10 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { BlogPageContent } from '@/components/BlogPageContent';
 
-export default function BlogPage({ params: { locale } }: { params: { locale: string } }) {
-  unstable_setRequestLocale(locale);
+export const dynamic = 'force-dynamic'
+
+export default function BlogPage() {
+  unstable_setRequestLocale('en');
   
-  return <BlogPageContent locale={locale} />;
+  return <BlogPageContent locale='en' />;
 }

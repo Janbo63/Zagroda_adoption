@@ -5,8 +5,10 @@ type Props = {
   params: {locale: string}
 };
 
-// Mark as async to match the middleware expectations
-export default async function ActivitiesPage({params: {locale}}: Props) {
+// ISR - Activities listing
+export const revalidate = 60
+
+export default function ActivitiesPage({params: {locale}}: Props) {
   unstable_setRequestLocale(locale);
 
   return (

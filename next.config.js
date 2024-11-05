@@ -15,13 +15,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'standalone',
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  trailingSlash: false,
-  poweredByHeader: false,
-  generateBuildId: () => 'build',
   experimental: {
-    isrMemoryCacheSize: 0,
-    serverActions: false
+    isrMemoryCacheSize: 0
   }
 };
 
