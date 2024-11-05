@@ -6,8 +6,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true
-  }
+    domains: ['your-domain.com'],
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
