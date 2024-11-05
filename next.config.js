@@ -16,8 +16,24 @@ const nextConfig = {
   },
   output: 'standalone',
   experimental: {
-    isrMemoryCacheSize: 0
-  }
+    optimizeCss: true,
+    turbotrace: {
+      logLevel: 'error',
+      memoryLimit: 4096,
+    },
+  },
+  env: {
+    _next_intl_trailing_slash: 'true'
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
