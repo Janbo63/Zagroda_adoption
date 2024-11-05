@@ -7,13 +7,19 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
-    remotePatterns: [],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  experimental: {
+    outputFileTracingExcludes: {
+      '*': [
+        'node_modules/**/*'
+      ]
+    }
   }
 };
 
