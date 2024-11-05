@@ -18,7 +18,11 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 120,
-  output: 'standalone'
+  output: 'standalone',
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
