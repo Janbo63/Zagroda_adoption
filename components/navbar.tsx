@@ -8,11 +8,11 @@ import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Animals', href: '/animals' },
-  { name: 'Activities', href: '/activities' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'home', href: '/' },
+  { name: 'animals', href: '/animals' },
+  { name: 'activities', href: '/activities' },
+  { name: 'blog', href: '/blog' },
+  { name: 'contact', href: '/contact' },
 ]
 
 interface NavbarProps {
@@ -20,7 +20,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ locale }: NavbarProps) {
-  const _t = useTranslations('navigation')
+  const t = useTranslations('navigation')
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -58,7 +58,7 @@ export function Navbar({ locale }: NavbarProps) {
                         : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
                     }`}
                   >
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 )
               })}
