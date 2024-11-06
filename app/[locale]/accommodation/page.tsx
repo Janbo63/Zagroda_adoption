@@ -13,7 +13,7 @@ export default function AccommodationPage({ params: { locale } }: AccommodationP
       <Header locale={locale} />
       <div className="container mx-auto px-4 py-8">
         <iframe 
-          data-src="https://beds24.com/booking2.php?propid=	98031&referer=iFrame" 
+          data-src="https://beds24.com/booking2.php?propid=YOUR_PROPERTY_ID&referer=iFrame" 
           width="100%" 
           height="800" 
           style={{ border: 'none', maxWidth: '100%', overflow: 'auto' }}
@@ -53,4 +53,5 @@ export function generateMetadata({ params: { locale } }: AccommodationPageProps)
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: '
+  return [{ locale: 'en' }, { locale: 'pl' }]
+}
