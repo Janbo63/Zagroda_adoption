@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
 const goats = [
   {
     name: "Madonna",
-    image: "/images/goats/madonna.jpg",
+    image: "/images/goats/Madonna.jpg",
     attributes: {
       age: 3,
       color: "White",
@@ -25,7 +25,7 @@ const goats = [
   },
   {
     name: "Lady Gaga",
-    image: "/images/goats/lady-gaga.jpg",
+    image: "/images/goats/Lady-Gaga.jpg",
     attributes: {
       age: 2,
       color: "Black and White",
@@ -39,7 +39,7 @@ const goats = [
   },
   {
     name: "Nella",
-    image: "/images/goats/nella.jpg",
+    image: "/images/goats/Nella.jpg",
     attributes: {
       age: 4,
       color: "Brown",
@@ -53,7 +53,7 @@ const goats = [
   },
   {
     name: "Baron",
-    image: "/images/goats/baron.jpg",
+    image: "/images/goats/Baron.jpg",
     attributes: {
       age: 5,
       color: "Black",
