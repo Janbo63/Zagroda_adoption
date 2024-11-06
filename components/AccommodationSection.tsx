@@ -42,7 +42,13 @@ export function AccommodationSection({ locale: _locale }: AccommodationSectionPr
               <CardTitle>{accommodation.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <Image src={accommodation.image} alt={accommodation.name} width={500} height={300} className="w-full h-auto" />
+              <Image 
+                src={accommodation.image} 
+                alt={accommodation.name} 
+                width={1280} 
+                height={622} 
+                className="w-full h-auto" 
+              />
               <CardDescription>{accommodation.description}</CardDescription>
             </CardContent>
           </Card>
