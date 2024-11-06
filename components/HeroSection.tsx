@@ -13,12 +13,12 @@ export function HeroSection({ locale }: HeroSectionProps) {
   const t = useTranslations('hero')
 
   return (
-    <section className="relative w-full h-[56.25vw] max-h-[600px] mb-8 md:mb-12 mt-16 rounded-3xl overflow-hidden shadow-lg">
+    <section className="relative w-full aspect-[16/9] max-h-[600px] mb-8 md:mb-12 mt-16 rounded-3xl overflow-hidden shadow-lg">
       <Image
         src="/images/hero-banner.png"
         alt="Happy children with alpacas"
         fill
-        className="rounded-3xl object-cover"
+        className="rounded-3xl object-contain"
         priority
         sizes="100vw"
         quality={75}

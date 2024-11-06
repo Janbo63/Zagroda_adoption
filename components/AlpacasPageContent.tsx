@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
 const alpacas = [
   {
     name: "Micky",
-    image: "/images/alpacas/micky.jpg",
+    image: "/images/Alpacas/Micky.jpg",
     attributes: {
       age: 5,
       color: "White",
@@ -25,7 +25,7 @@ const alpacas = [
   },
   {
     name: "Elvis",
-    image: "/images/alpacas/elvis.jpg",
+    image: "/images/Alpacas/Elvis.jpg",
     attributes: {
       age: 4,
       color: "Brown",
@@ -39,7 +39,7 @@ const alpacas = [
   },
   {
     name: "Ricky",
-    image: "/images/alpacas/ricky.jpg",
+    image: "/images/Alpacas/Ricky.jpg",
     attributes: {
       age: 3,
       color: "Black",
@@ -53,7 +53,7 @@ const alpacas = [
   },
   {
     name: "Teddy",
-    image: "/images/alpacas/teddy.jpg",
+    image: "/images/Alpacas/Teddy.jpg",
     attributes: {
       age: 6,
       color: "Light Brown",
@@ -67,7 +67,7 @@ const alpacas = [
   },
   {
     name: "Suri",
-    image: "/images/alpacas/suri.jpg",
+    image: "/images/Alpacas/Suri.jpg",
     attributes: {
       age: 2,
       color: "White with Brown Spots",
@@ -81,7 +81,7 @@ const alpacas = [
   },
   {
     name: "Freddy",
-    image: "/images/alpacas/freddy.jpg",
+    image: "/images/Alpacas/Freddy.jpg",
     attributes: {
       age: 4,
       color: "Dark Brown",
