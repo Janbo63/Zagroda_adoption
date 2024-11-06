@@ -1,5 +1,5 @@
 import { unstable_setRequestLocale } from 'next-intl/server'
-import { Header } from '@/components/Header'
+import { Navbar } from '@/components/navbar'
 
 interface AccommodationPageProps {
   params: { locale: string }
@@ -10,8 +10,8 @@ export default function AccommodationPage({ params: { locale } }: AccommodationP
   
   return (
     <div className="flex flex-col min-h-screen">
-      <Header locale={locale} />
-      <div className="container mx-auto px-4 py-8">
+      <Navbar locale={locale} />
+      <div className="container mx-auto px-4 py-8 mt-16">
         <iframe 
           data-src="https://beds24.com/booking2.php?propid=YOUR_PROPERTY_ID&referer=iFrame" 
           width="100%" 
