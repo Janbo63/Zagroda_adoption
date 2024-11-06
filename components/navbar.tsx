@@ -11,6 +11,7 @@ const navigation = [
   { name: 'home', href: '/' },
   { name: 'animals', href: '/animals' },
   { name: 'activities', href: '/activities' },
+  { name: 'accommodation', href: '/accommodation' },
   { name: 'blog', href: '/blog' },
   { name: 'contact', href: '/contact' },
 ]
@@ -92,6 +93,31 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="sm:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {navigation.map((item) => {
+              const isActive = currentPath === item.href
+              return (
+                <Link
+                  key={item.name}
+                  href={`/${locale}${item.href}`}
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    isActive
+                      ? 'bg-orange-400 text-white'
+                      : 'text-gray-200 hover:bg-orange-400 hover:text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t(item.name)}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </nav>
   )
 } 
