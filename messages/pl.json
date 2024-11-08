@@ -126,36 +126,16 @@
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "description": "Spaceruj w towarzystwie alpaki",
-      "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami w towarzystwie własnej alpaki. Nasze wyszkolone alpaki to idealni towarzysze spacerów.",
-      "requirements": [
-        "Wygodne buty trekkingowe",
-        "Odpowiednie ubranie do pogody",
-        "Minimalny wiek: 6 lat",
-        "Wymagana wcześniejsza rezerwacja"
-      ],
-      "highlights": [
-        "Indywidualny spacer z alpaką",
-        "Malownicze trasy",
-        "Nauka prowadzenia alpaki",
-        "Możliwości zrobienia zdjęć"
-      ]
+      "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami w towarzystwie własnej alpaki.",
+      "highlights": "Przeżyj wyjątkową przygodę spacerując z własną alpaką. Ciesz się malowniczymi trasami, naucz się prowadzenia alpaki i zrób pamiątkowe zdjęcia po drodze.",
+      "requirements": "Wygodne buty trekkingowe, odpowiednie ubranie do pogody. Minimalny wiek: 6 lat. Wymagana wcześniejsza rezerwacja."
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
       "description": "Prywatna wycieczka z przewodnikiem i alpakami",
-      "content": "Ekskluzywne doświadczenie z alpakami",
-      "requirementsContent": [
-        "Wygodne buty do chodzenia",
-        "Odpowiednie ubranie do pogody",
-        "Wymagana wcześniejsza rezerwacja",
-        "Maksymalna wielkość grupy: 6 osób"
-      ],
-      "highlightsContent": [
-        "Prywatny przewodnik",
-        "Spersonalizowane doświadczenie",
-        "Wydłużony czas z alpakami",
-        "Specjalne możliwości zdjęciowe"
-      ]
+      "details": "Ciesz się ekskluzywnym doświadczeniem z alpakami w prywatnym otoczeniu.",
+      "highlights": "Skorzystaj ze spersonalizowanego doświadczenia z prywatnym przewodnikiem i naszymi alpakami. Ciesz się wydłużonym czasem ze stadem, specjalnymi możliwościami zdjęciowymi i dostosowanym programem dla Twojej grupy.",
+      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody. Maksymalna wielkość grupy: 6 osób. Wymagana wcześniejsza rezerwacja."
     },
     "tabLabels": {
       "activityAttributes": "Atrybuty Aktywności",
