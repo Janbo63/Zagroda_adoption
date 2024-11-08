@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTranslations } from 'next-intl'
 
 const activities = [
@@ -16,6 +17,13 @@ const activities = [
       minAge: "3+",
       availability: "Daily"
     },
+    details: "A hands-on session where you'll meet our alpaca herd up close. Perfect for families and individuals looking to learn about these amazing animals.",
+    highlights: [
+      "Feed the alpacas their favorite treats",
+      "Learn about alpaca behavior and care",
+      "Take photos with our friendly herd",
+      "Participate in grooming activities"
+    ],
     requirements: [
       "Comfortable shoes recommended",
       "Outdoor activity",
@@ -33,6 +41,13 @@ const activities = [
       minAge: "6+",
       availability: "Weekends"
     },
+    details: "Take a guided walk through our scenic trails with your own alpaca companion. Learn handling techniques and bond with these gentle animals.",
+    highlights: [
+      "One-on-one time with an alpaca",
+      "Guided nature walk",
+      "Learn alpaca handling skills",
+      "Photo opportunities throughout"
+    ],
     requirements: [
       "Sturdy walking shoes required",
       "Weather appropriate clothing",
@@ -46,10 +61,17 @@ const activities = [
     attributes: {
       price: "150 PLN",
       duration: "2 hours",
-      groupSize: "Private",
+      groupSize: "2-6 people",
       minAge: "All ages",
       availability: "By appointment"
     },
+    details: "An exclusive experience where you'll get private time with our alpaca herd. Perfect for special occasions or those wanting a more personalized experience.",
+    highlights: [
+      "Private access to the herd",
+      "Customized experience",
+      "Extended interaction time",
+      "Professional photo session included"
+    ],
     requirements: [
       "Advance booking required",
       "2-6 people per group",
@@ -75,39 +97,65 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 {t(`${activity.id}.name`)}
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={activity.image}
-                  alt={t(`${activity.id}.alt`)}
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <div className="flex justify-between items-center text-sm text-gray-600">
-                  <span>{activity.price}</span>
-                  <span>{activity.duration}</span>
-                </div>
-                <div className="flex justify-between items-center text-sm text-gray-600">
-                  <span>{activity.groupSize}</span>
-                  <span>{activity.minAge}</span>
-                </div>
-                <div className="flex justify-between items-center text-sm text-gray-600">
-                  <span>{activity.availability}</span>
-                </div>
-              </div>
-              <CardContent className="p-4">
-                {t(`${activity.id}.description`)}
-              </CardContent>
-              <CardContent className="p-4">
-                <strong>{t('requirements')}:</strong>
-                <ul className="list-disc pl-6">
-                  {activity.requirements.map((requirement, index) => (
-                    <li key={index}>{requirement}</li>
-                  ))}
-                </ul>
-              </CardContent>
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src={activity.image}
+                alt={t(`${activity.id}.alt`)}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <CardContent className="p-4">
+              <Tabs defaultValue="attributes">
+                <TabsList className="grid w-full grid-cols-4">
+                  <TabsTrigger value="attributes">{t('attributes')}</TabsTrigger>
+                  <TabsTrigger value="details">{t('details')}</TabsTrigger>
+                  <TabsTrigger value="highlights">{t('highlights')}</TabsTrigger>
+                  <TabsTrigger value="requirements">{t('requirements')}</TabsTrigger>
+                </TabsList>
+                <TabsContent value="attributes">
+                  <dl className="mt-4 space-y-2">
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('price')}:</dt>
+                      <dd>{activity.attributes.price}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('duration')}:</dt>
+                      <dd>{activity.attributes.duration}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('groupSize')}:</dt>
+                      <dd>{activity.attributes.groupSize}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('minAge')}:</dt>
+                      <dd>{activity.attributes.minAge}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('availability')}:</dt>
+                      <dd>{activity.attributes.availability}</dd>
+                    </div>
+                  </dl>
+                </TabsContent>
+                <TabsContent value="details">
+                  <p className="mt-4 text-primary-700">{activity.details}</p>
+                </TabsContent>
+                <TabsContent value="highlights">
+                  <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
+                    {activity.highlights.map((highlight, index) => (
+                      <li key={index}>{highlight}</li>
+                    ))}
+                  </ul>
+                </TabsContent>
+                <TabsContent value="requirements">
+                  <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
+                    {activity.requirements.map((requirement, index) => (
+                      <li key={index}>{requirement}</li>
+                    ))}
+                  </ul>
+                </TabsContent>
+              </Tabs>
             </CardContent>
           </Card>
         ))}

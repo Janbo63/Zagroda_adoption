@@ -109,9 +109,15 @@
   },
   "activities": {
     "title": "Our Activities",
-    "sectionTitle": "Farm Activities",
-    "viewDetails": "View Details",
+    "attributes": "Details",
+    "details": "About",
+    "highlights": "Highlights",
     "requirements": "Requirements",
+    "price": "Price",
+    "duration": "Duration",
+    "groupSize": "Group Size",
+    "minAge": "Min Age",
+    "availability": "Availability",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "alt": "Meet and greet with alpacas",

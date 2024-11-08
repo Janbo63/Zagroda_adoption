@@ -109,20 +109,15 @@
   },
   "activities": {
     "title": "Nasze Aktywności",
-    "sectionTitle": "Aktywności na Farmie",
-    "viewDetails": "Zobacz Szczegóły",
-    "attributes": {
-      "price": "Cena",
-      "duration": "Czas trwania",
-      "groupSize": "Wielkość grupy",
-      "minAge": "Minimalny wiek",
-      "availability": "Dostępność"
-    },
-    "tabs": {
-      "description": "Opis",
-      "requirements": "Wymagania"
-    },
+    "attributes": "Szczegóły",
+    "details": "O Aktywności",
+    "highlights": "Główne Atrakcje",
     "requirements": "Wymagania",
+    "price": "Cena",
+    "duration": "Czas trwania",
+    "groupSize": "Wielkość grupy",
+    "minAge": "Minimalny wiek",
+    "availability": "Dostępność",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "alt": "Spotkanie z alpakami",
