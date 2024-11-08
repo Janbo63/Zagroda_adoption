@@ -132,12 +132,38 @@
     "alpacawalks": {
       "name": "Alpaca Walks",
       "alt": "Alpaca walks activity image",
-      "description": "Take an alpaca for a walk"
+      "description": "Take an alpaca for a walk",
+      "details": "Take a walk with our alpacas",
+      "highlights": [
+        "Individual walk with an alpaca",
+        "Scenic routes",
+        "Learn to handle alpacas",
+        "Photo opportunities"
+      ],
+      "requirements": [
+        "Comfortable walking shoes",
+        "Weather appropriate clothing",
+        "Minimum age: 6 years",
+        "Advance booking required"
+      ]
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "alt": "Private alpaca safari image",
-      "description": "Private guided tour with alpacas"
+      "description": "Private guided tour with alpacas",
+      "details": "Exclusive alpaca experience",
+      "highlights": [
+        "Private guide",
+        "Customized experience",
+        "Extended time with alpacas",
+        "Special photo opportunities"
+      ],
+      "requirements": [
+        "Comfortable walking shoes",
+        "Weather appropriate clothing",
+        "Advance booking required",
+        "Maximum group size: 6 people"
+      ]
     },
     "attributes": "Activity Attributes",
     "details": "Activity Details",

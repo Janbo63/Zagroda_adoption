@@ -132,13 +132,38 @@
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "alt": "Zdjęcie aktywności spacerów z alpakami",
+      "description": "Spaceruj z alpakami",
       "details": "Wybierz się na spacer z naszymi alpakami",
-      "description": "Spaceruj po malowniczych trasach w towarzystwie alpak"
+      "highlights": [
+        "Indywidualny spacer z alpaką",
+        "Malownicze trasy",
+        "Nauka prowadzenia alpaki",
+        "Możliwości zrobienia zdjęć"
+      ],
+      "requirements": [
+        "Wygodne buty trekkingowe",
+        "Odpowiednie ubranie do pogody",
+        "Minimalny wiek: 6 lat",
+        "Wymagana wcześniejsza rezerwacja"
+      ]
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
       "alt": "Zdjęcie prywatnego safari z alpakami",
-      "description": "Prywatna wycieczka z przewodnikiem i alpakami"
+      "description": "Prywatna wycieczka z przewodnikiem i alpakami",
+      "details": "Ekskluzywne doświadczenie z alpakami",
+      "highlights": [
+        "Prywatny przewodnik",
+        "Spersonalizowane doświadczenie",
+        "Wydłużony czas z alpakami",
+        "Specjalne możliwości zdjęciowe"
+      ],
+      "requirements": [
+        "Wygodne buty do chodzenia",
+        "Odpowiednie ubranie do pogody",
+        "Wymagana wcześniejsza rezerwacja",
+        "Maksymalna wielkość grupy: 6 osób"
+      ]
     },
     "attributes": "Atrybuty Aktywności",
     "details": "Szczegóły Aktywności",
