@@ -119,19 +119,9 @@
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "description": "Spotkaj się z bliska z naszym stadem alpak",
-      "details": "Skorzystaj z wyjątkowej okazji poznania naszego przyjaznego stada alpak. Dowiedz się więcej o ich opiece, zachowaniu i indywidualnych osobowościach.",
-      "highlightsList": [
-        "Poznaj stado",
-        "Dowiedz się więcej o alpakach",
-        "Możliwości zrobienia zdjęć",
-        "Karmienie alpak"
-      ],
-      "requirementsList": [
-        "Wygodne buty do chodzenia",
-        "Odpowiednie ubranie do pogody",
-        "Aparat fotograficzny (opcjonalnie)",
-        "Wymagana wcześniejsza rezerwacja"
-      ]
+      "details": "Skorzystaj z wyjątkowej okazji poznania naszego przyjaznego stada alpak.",
+      "highlights": "Poznaj nasze przyjazne alpaki i ich wyjątkowe osobowości. Będziesz mógł wejść w interakcję ze stadem, dowiedzieć się więcej o opiece nad alpakami i zrobić pamiątkowe zdjęcia.",
+      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody. Aparat fotograficzny opcjonalnie. Wymagana wcześniejsza rezerwacja."
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
