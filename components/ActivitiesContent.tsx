@@ -16,20 +16,7 @@ const activities = [
       groupSize: "2-8 people",
       minAge: "3+",
       availability: "Daily"
-    },
-    details: "A hands-on session where you'll meet our alpaca herd up close. Perfect for families and individuals looking to learn about these amazing animals.",
-    highlights: [
-      "Feed the alpacas their favorite treats",
-      "Learn about alpaca behavior and care",
-      "Take photos with our friendly herd",
-      "Participate in grooming activities"
-    ],
-    requirements: [
-      "Comfortable shoes recommended",
-      "Outdoor activity",
-      "Children under 12 must be accompanied",
-      "All equipment provided"
-    ]
+    }
   },
   {
     id: 'alpacawalks',
@@ -40,20 +27,7 @@ const activities = [
       groupSize: "2-4 people",
       minAge: "6+",
       availability: "Weekends"
-    },
-    details: "Take a guided walk through our scenic trails with your own alpaca companion. Learn handling techniques and bond with these gentle animals.",
-    highlights: [
-      "One-on-one time with an alpaca",
-      "Guided nature walk",
-      "Learn alpaca handling skills",
-      "Photo opportunities throughout"
-    ],
-    requirements: [
-      "Sturdy walking shoes required",
-      "Weather appropriate clothing",
-      "Minimum age 6 years",
-      "Basic fitness level needed"
-    ]
+    }
   },
   {
     id: 'privatealpacasafari',
@@ -64,20 +38,7 @@ const activities = [
       groupSize: "2-6 people",
       minAge: "All ages",
       availability: "By appointment"
-    },
-    details: "An exclusive experience where you'll get private time with our alpaca herd. Perfect for special occasions or those wanting a more personalized experience.",
-    highlights: [
-      "Private access to the herd",
-      "Customized experience",
-      "Extended interaction time",
-      "Professional photo session included"
-    ],
-    requirements: [
-      "Advance booking required",
-      "2-6 people per group",
-      "Duration 2 hours",
-      "Camera recommended"
-    ]
+    }
   }
 ]
 
@@ -159,18 +120,18 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                   </dl>
                 </TabsContent>
                 <TabsContent value="details">
-                  <p className="mt-4 text-primary-700">{activity.details}</p>
+                  <p className="mt-4 text-primary-700">{t(`${activity.id}.details`)}</p>
                 </TabsContent>
                 <TabsContent value="highlights">
                   <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    {activity.highlights.map((highlight, index) => (
+                    {t(`${activity.id}.highlights`).map((highlight: string, index: number) => (
                       <li key={index}>{highlight}</li>
                     ))}
                   </ul>
                 </TabsContent>
                 <TabsContent value="requirements">
                   <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    {activity.requirements.map((requirement, index) => (
+                    {t(`${activity.id}.requirements`).map((requirement: string, index: number) => (
                       <li key={index}>{requirement}</li>
                     ))}
                   </ul>

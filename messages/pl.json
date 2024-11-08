@@ -121,18 +121,53 @@
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "alt": "Spotkanie z alpakami",
-      "description": "Poznaj nasze przyjazne alpaki z bliska"
+      "details": "Praktyczne zajęcia, podczas których poznasz nasze stado alpak z bliska. Idealne dla rodzin i osób, które chcą poznać te wspaniałe zwierzęta.",
+      "highlights": [
+        "Karmienie alpak ich ulubionymi przysmakami",
+        "Nauka o zachowaniu i opiece nad alpakami",
+        "Zdjęcia z naszym przyjaznym stadem",
+        "Udział w czynnościach pielęgnacyjnych"
+      ],
+      "requirements": [
+        "Zalecane wygodne buty",
+        "Aktywność na świeżym powietrzu",
+        "Dzieci poniżej 12 lat muszą być pod opieką",
+        "Zapewniamy cały potrzebny sprzęt"
+      ]
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "alt": "Spacer z alpakami",
-      "description": "Wybierz się na spacer z alpaką"
+      "details": "Wybierz się na spacer po malowniczych szlakach z własną alpaką. Naucz się technik prowadzenia i nawiąż więź z tymi łagodnymi zwierzętami.",
+      "highlights": [
+        "Indywidualny czas z alpaką",
+        "Spacer z przewodnikiem",
+        "Nauka prowadzenia alpaki",
+        "Okazje do zdjęć"
+      ],
+      "requirements": [
+        "Wymagane solidne buty do chodzenia",
+        "Odpowiednia odzież do pogody",
+        "Minimalny wiek 6 lat",
+        "Podstawowa sprawność fizyczna"
+      ]
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
       "alt": "Prywatna wycieczka z alpakami",
-      "description": "Ekskluzywna wycieczka z naszym stadem alpak",
-      "requirements": "Wymagana rezerwacja z wyprzedzeniem,2-6 osób w grupie,Czas trwania 2 godziny,Zalecany aparat fotograficzny"
+      "details": "Ekskluzywne doświadczenie, podczas którego spędzisz prywatny czas z naszym stadem alpak. Idealne na specjalne okazje lub dla osób pragnących bardziej spersonalizowanego doświadczenia.",
+      "highlights": [
+        "Prywatny dostęp do stada",
+        "Spersonalizowane doświadczenie",
+        "Wydłużony czas interakcji",
+        "Profesjonalna sesja zdjęciowa w cenie"
+      ],
+      "requirements": [
+        "Wymagana rezerwacja z wyprzedzeniem",
+        "2-6 osób w grupie",
+        "Czas trwania 2 godziny",
+        "Zalecany aparat fotograficzny"
+      ]
     }
   },
   "blog": {
@@ -184,5 +219,9 @@
   "accommodation": {
     "sectionTitle": "Zakwaterowanie",
     "bookNow": "Zarezerwuj"
+  },
+  "activities": {
+    "sectionTitle": "Nasze Aktywności",
+    "viewDetails": "Zobacz Szczegóły"
   }
 }

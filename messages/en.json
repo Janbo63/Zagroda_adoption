@@ -121,17 +121,53 @@
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "alt": "Meet and greet with alpacas",
-      "description": "Get up close with our friendly alpacas"
+      "details": "A hands-on session where you'll meet our alpaca herd up close. Perfect for families and individuals looking to learn about these amazing animals.",
+      "highlights": [
+        "Feed the alpacas their favorite treats",
+        "Learn about alpaca behavior and care",
+        "Take photos with our friendly herd",
+        "Participate in grooming activities"
+      ],
+      "requirements": [
+        "Comfortable shoes recommended",
+        "Outdoor activity",
+        "Children under 12 must be accompanied",
+        "All equipment provided"
+      ]
     },
     "alpacawalks": {
       "name": "Alpaca Walks",
       "alt": "Walking with alpacas",
-      "description": "Take a walk with an alpaca companion"
+      "details": "Take a guided walk through our scenic trails with your own alpaca companion. Learn handling techniques and bond with these gentle animals.",
+      "highlights": [
+        "One-on-one time with an alpaca",
+        "Guided nature walk",
+        "Learn alpaca handling skills",
+        "Photo opportunities throughout"
+      ],
+      "requirements": [
+        "Sturdy walking shoes required",
+        "Weather appropriate clothing",
+        "Minimum age 6 years",
+        "Basic fitness level needed"
+      ]
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "alt": "Private tour with alpacas",
-      "description": "Exclusive tour with our alpaca herd"
+      "details": "An exclusive experience where you'll get private time with our alpaca herd. Perfect for special occasions or those wanting a more personalized experience.",
+      "highlights": [
+        "Private access to the herd",
+        "Customized experience",
+        "Extended interaction time",
+        "Professional photo session included"
+      ],
+      "requirements": [
+        "Advance booking required",
+        "2-6 people per group",
+        "Duration 2 hours",
+        "Camera recommended"
+      ]
     }
   },
   "blog": {
@@ -194,5 +230,9 @@
   "accommodation": {
     "sectionTitle": "Accommodation",
     "bookNow": "Book Now"
+  },
+  "activities": {
+    "sectionTitle": "Our Activities",
+    "viewDetails": "View Details"
   }
 }

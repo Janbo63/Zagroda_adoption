@@ -68,7 +68,7 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
                 />
               </div>
               <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
-              <Link href={`/${locale}/activities`}>
+              <Link href={`/${locale}/activities/${activity.id}`}>
                 <Button variant="outline" className="mt-4">
                   {t('viewDetails')}
                 </Button>
