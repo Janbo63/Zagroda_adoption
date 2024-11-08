@@ -111,19 +111,21 @@
     "title": "Aktywności",
     "sectionTitle": "Nasze Aktywności",
     "viewDetails": "Zobacz Szczegóły",
-    "highlightsTab": "Główne Atrakcje",
-    "requirementsTab": "Wymagania",
+    "attribute": "Atrybuty Aktywności",
+    "details": "Szczegóły Aktywności",
+    "highlights": "Główne Atrakcje",
+    "requirements": "Wymagania",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "description": "Spotkaj się z bliska z naszym stadem alpak",
-      "content": "Poznaj nasze przyjazne alpaki i ich unikalne osobowości",
-      "requirementsContent": [
+      "details": "Skorzystaj z wyjątkowej okazji poznania naszego przyjaznego stada alpak. Dowiedz się więcej o ich opiece, zachowaniu i indywidualnych osobowościach, ciesząc się ich uspokajającą obecnością.",
+      "requirements": [
         "Wygodne buty do chodzenia",
         "Odpowiednie ubranie do pogody",
         "Aparat fotograficzny (opcjonalnie)",
         "Wymagana wcześniejsza rezerwacja"
       ],
-      "highlightsContent": [
+      "highlights": [
         "Poznaj stado",
         "Dowiedz się więcej o alpakach",
         "Możliwości zrobienia zdjęć",
@@ -133,14 +135,14 @@
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "description": "Spaceruj w towarzystwie alpaki",
-      "content": "Ciesz się spokojnym spacerem z naszymi wyszkolonymi alpakami",
-      "requirementsContent": [
+      "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami w towarzystwie własnej alpaki. Nasze wyszkolone alpaki to idealni towarzysze spacerów.",
+      "requirements": [
         "Wygodne buty trekkingowe",
         "Odpowiednie ubranie do pogody",
         "Minimalny wiek: 6 lat",
         "Wymagana wcześniejsza rezerwacja"
       ],
-      "highlightsContent": [
+      "highlights": [
         "Indywidualny spacer z alpaką",
         "Malownicze trasy",
         "Nauka prowadzenia alpaki",

@@ -111,19 +111,21 @@
     "title": "Activities",
     "sectionTitle": "Our Activities",
     "viewDetails": "View Details",
-    "highlightsTab": "Highlights",
-    "requirementsTab": "Requirements",
+    "attribute": "Activity Attributes",
+    "details": "Activity Details",
+    "highlights": "Highlights",
+    "requirements": "Requirements",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "description": "Get up close with our alpaca herd",
-      "content": "Meet our friendly alpacas and learn about their unique personalities",
-      "requirementsContent": [
+      "details": "Experience a unique opportunity to meet our friendly alpaca herd. Learn about their care, behavior, and individual personalities while enjoying their calming presence.",
+      "requirements": [
         "Comfortable walking shoes",
         "Weather appropriate clothing",
         "Camera (optional)",
         "Advance booking required"
       ],
-      "highlightsContent": [
+      "highlights": [
         "Meet the herd",
         "Learn about alpacas",
         "Photo opportunities",
@@ -133,14 +135,14 @@
     "alpacawalks": {
       "name": "Alpaca Walks",
       "description": "Take a walk with an alpaca companion",
-      "content": "Enjoy a peaceful walk with our trained alpacas",
-      "requirementsContent": [
+      "details": "Join us for a peaceful walk through scenic trails with your own alpaca companion. Our trained alpacas make perfect walking partners.",
+      "requirements": [
         "Comfortable walking shoes",
         "Weather appropriate clothing",
         "Minimum age: 6 years",
         "Advance booking required"
       ],
-      "highlightsContent": [
+      "highlights": [
         "Individual walk with an alpaca",
         "Scenic routes",
         "Learn to handle alpacas",
@@ -150,25 +152,19 @@
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "description": "Private guided tour with alpacas",
-      "content": "Exclusive alpaca experience",
-      "requirementsContent": [
+      "details": "Enjoy an exclusive experience with our alpacas in a private setting. Perfect for families or small groups wanting a more personalized interaction.",
+      "requirements": [
         "Comfortable walking shoes",
         "Weather appropriate clothing",
         "Advance booking required",
         "Maximum group size: 6 people"
       ],
-      "highlightsContent": [
+      "highlights": [
         "Private guide",
         "Customized experience",
         "Extended time with alpacas",
         "Special photo opportunities"
       ]
-    },
-    "tabLabels": {
-      "activityAttributes": "Activity Attributes",
-      "activityDetails": "Activity Details",
-      "highlights": "Highlights",
-      "requirements": "Requirements"
     }
   },
   "blog": {
