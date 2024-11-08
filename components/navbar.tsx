@@ -12,7 +12,6 @@ const navigation = [
   { name: 'animals', href: '/animals' },
   { name: 'activities', href: '/activities' },
   { name: 'accommodation', href: '/accommodation' },
-  { name: 'blog', href: '/blog' },
   { name: 'contact', href: '/contact' },
 ]
 
