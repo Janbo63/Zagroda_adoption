@@ -111,75 +111,65 @@
     "title": "Aktywności",
     "sectionTitle": "Nasze Aktywności",
     "viewDetails": "Zobacz Szczegóły",
+    "highlightsTab": "Główne Atrakcje",
+    "requirementsTab": "Wymagania",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
-      "alt": "Zdjęcie aktywności Poznaj Alpaki",
-      "details": "Poznaj nasze przyjazne alpaki",
       "description": "Spotkaj się z bliska z naszym stadem alpak",
-      "highlightsTab": "Główne Atrakcje",
-      "requirementsTab": "Wymagania",
-      "highlights": [
-        "Poznaj stado",
-        "Dowiedz się więcej o alpakach",
-        "Możliwości zrobienia zdjęć",
-        "Karmienie alpak"
-      ],
-      "requirements": [
+      "content": "Poznaj nasze przyjazne alpaki i ich unikalne osobowości",
+      "requirementsContent": [
         "Wygodne buty do chodzenia",
         "Odpowiednie ubranie do pogody",
         "Aparat fotograficzny (opcjonalnie)",
         "Wymagana wcześniejsza rezerwacja"
+      ],
+      "highlightsContent": [
+        "Poznaj stado",
+        "Dowiedz się więcej o alpakach",
+        "Możliwości zrobienia zdjęć",
+        "Karmienie alpak"
       ]
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
-      "alt": "Zdjęcie aktywności spacerów z alpakami",
-      "description": "Spaceruj z alpakami",
-      "details": "Wybierz się na spacer z naszymi alpakami",
-      "highlightsTab": "Główne Atrakcje",
-      "requirementsTab": "Wymagania",
-      "highlights": [
-        "Indywidualny spacer z alpaką",
-        "Malownicze trasy",
-        "Nauka prowadzenia alpaki",
-        "Możliwości zrobienia zdjęć"
-      ],
-      "requirements": [
+      "description": "Spaceruj w towarzystwie alpaki",
+      "content": "Ciesz się spokojnym spacerem z naszymi wyszkolonymi alpakami",
+      "requirementsContent": [
         "Wygodne buty trekkingowe",
         "Odpowiednie ubranie do pogody",
         "Minimalny wiek: 6 lat",
         "Wymagana wcześniejsza rezerwacja"
+      ],
+      "highlightsContent": [
+        "Indywidualny spacer z alpaką",
+        "Malownicze trasy",
+        "Nauka prowadzenia alpaki",
+        "Możliwości zrobienia zdjęć"
       ]
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
-      "alt": "Zdjęcie prywatnego safari z alpakami",
       "description": "Prywatna wycieczka z przewodnikiem i alpakami",
-      "details": "Ekskluzywne doświadczenie z alpakami",
-      "highlightsTab": "Główne Atrakcje",
-      "requirementsTab": "Wymagania",
-      "highlights": [
-        "Prywatny przewodnik",
-        "Spersonalizowane doświadczenie",
-        "Wydłużony czas z alpakami",
-        "Specjalne możliwości zdjęciowe"
-      ],
-      "requirements": [
+      "content": "Ekskluzywne doświadczenie z alpakami",
+      "requirementsContent": [
         "Wygodne buty do chodzenia",
         "Odpowiednie ubranie do pogody",
         "Wymagana wcześniejsza rezerwacja",
         "Maksymalna wielkość grupy: 6 osób"
+      ],
+      "highlightsContent": [
+        "Prywatny przewodnik",
+        "Spersonalizowane doświadczenie",
+        "Wydłużony czas z alpakami",
+        "Specjalne możliwości zdjęciowe"
       ]
     },
-    "attributes": "Atrybuty Aktywności",
-    "details": "Szczegóły Aktywności",
-    "highlights": "Główne Atrakcje",
-    "requirements": "Wymagania",
-    "price": "Cena",
-    "duration": "Czas Trwania",
-    "groupSize": "Wielkość Grupy",
-    "minAge": "Minimalny Wiek",
-    "availability": "Dostępność"
+    "tabLabels": {
+      "activityAttributes": "Atrybuty Aktywności",
+      "activityDetails": "Szczegóły Aktywności",
+      "highlights": "Główne Atrakcje",
+      "requirements": "Wymagania"
+    }
   },
   "blog": {
     "title": "Nasz Blog",

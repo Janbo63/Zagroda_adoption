@@ -111,75 +111,65 @@
     "title": "Activities",
     "sectionTitle": "Our Activities",
     "viewDetails": "View Details",
+    "highlightsTab": "Highlights",
+    "requirementsTab": "Requirements",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
-      "alt": "Meet the Alpacas activity image",
-      "details": "Meet our friendly alpacas",
       "description": "Get up close with our alpaca herd",
-      "highlightsTab": "Activity Highlights",
-      "requirementsTab": "Activity Requirements",
-      "highlights": [
-        "Meet the herd",
-        "Learn about alpacas",
-        "Photo opportunities",
-        "Feed the alpacas"
-      ],
-      "requirements": [
+      "content": "Meet our friendly alpacas and learn about their unique personalities",
+      "requirementsContent": [
         "Comfortable walking shoes",
         "Weather appropriate clothing",
         "Camera (optional)",
         "Advance booking required"
+      ],
+      "highlightsContent": [
+        "Meet the herd",
+        "Learn about alpacas",
+        "Photo opportunities",
+        "Feed the alpacas"
       ]
     },
     "alpacawalks": {
       "name": "Alpaca Walks",
-      "alt": "Alpaca walks activity image",
-      "description": "Take an alpaca for a walk",
-      "details": "Take a walk with our alpacas",
-      "highlightsTab": "Activity Highlights",
-      "requirementsTab": "Activity Requirements",
-      "highlights": [
-        "Individual walk with an alpaca",
-        "Scenic routes",
-        "Learn to handle alpacas",
-        "Photo opportunities"
-      ],
-      "requirements": [
+      "description": "Take a walk with an alpaca companion",
+      "content": "Enjoy a peaceful walk with our trained alpacas",
+      "requirementsContent": [
         "Comfortable walking shoes",
         "Weather appropriate clothing",
         "Minimum age: 6 years",
         "Advance booking required"
+      ],
+      "highlightsContent": [
+        "Individual walk with an alpaca",
+        "Scenic routes",
+        "Learn to handle alpacas",
+        "Photo opportunities"
       ]
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
-      "alt": "Private alpaca safari image",
       "description": "Private guided tour with alpacas",
-      "details": "Exclusive alpaca experience",
-      "highlightsTab": "Activity Highlights",
-      "requirementsTab": "Activity Requirements",
-      "highlights": [
-        "Private guide",
-        "Customized experience",
-        "Extended time with alpacas",
-        "Special photo opportunities"
-      ],
-      "requirements": [
+      "content": "Exclusive alpaca experience",
+      "requirementsContent": [
         "Comfortable walking shoes",
         "Weather appropriate clothing",
         "Advance booking required",
         "Maximum group size: 6 people"
+      ],
+      "highlightsContent": [
+        "Private guide",
+        "Customized experience",
+        "Extended time with alpacas",
+        "Special photo opportunities"
       ]
     },
-    "attributes": "Activity Attributes",
-    "details": "Activity Details",
-    "highlights": "Highlights",
-    "requirements": "Requirements",
-    "price": "Price",
-    "duration": "Duration",
-    "groupSize": "Group Size",
-    "minAge": "Minimum Age",
-    "availability": "Availability"
+    "tabLabels": {
+      "activityAttributes": "Activity Attributes",
+      "activityDetails": "Activity Details",
+      "highlights": "Highlights",
+      "requirements": "Requirements"
+    }
   },
   "blog": {
     "title": "Our Blog",
