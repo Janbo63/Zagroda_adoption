@@ -126,34 +126,19 @@
       "name": "Meet the Alpacas",
       "alt": "Meet and greet with alpacas",
       "description": "Get up close with our friendly alpacas",
-      "requirements": [
-        "Comfortable shoes recommended",
-        "Outdoor activity",
-        "Children under 12 must be accompanied",
-        "All equipment provided"
-      ]
+      "requirements": "Comfortable shoes recommended,Outdoor activity,Children under 12 must be accompanied,All equipment provided"
     },
     "alpacawalks": {
       "name": "Alpaca Walks",
       "alt": "Walking with alpacas",
       "description": "Take a walk with an alpaca companion",
-      "requirements": [
-        "Sturdy walking shoes required",
-        "Weather appropriate clothing",
-        "Minimum age 6 years",
-        "Basic fitness level needed"
-      ]
+      "requirements": "Sturdy walking shoes required,Weather appropriate clothing,Minimum age 6 years,Basic fitness level needed"
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "alt": "Private tour with alpacas",
       "description": "Exclusive tour with our alpaca herd",
-      "requirements": [
-        "Advance booking required",
-        "2-6 people per group",
-        "Duration 2 hours",
-        "Camera recommended"
-      ]
+      "requirements": "Advance booking required,2-6 people per group,Duration 2 hours,Camera recommended"
     }
   },
   "blog": {
