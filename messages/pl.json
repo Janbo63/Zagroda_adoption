@@ -116,6 +116,8 @@
       "alt": "Zdjęcie aktywności Poznaj Alpaki",
       "details": "Poznaj nasze przyjazne alpaki",
       "description": "Spotkaj się z bliska z naszym stadem alpak",
+      "highlightsTab": "Główne Atrakcje",
+      "requirementsTab": "Wymagania",
       "highlights": [
         "Poznaj stado",
         "Dowiedz się więcej o alpakach",
@@ -134,6 +136,8 @@
       "alt": "Zdjęcie aktywności spacerów z alpakami",
       "description": "Spaceruj z alpakami",
       "details": "Wybierz się na spacer z naszymi alpakami",
+      "highlightsTab": "Główne Atrakcje",
+      "requirementsTab": "Wymagania",
       "highlights": [
         "Indywidualny spacer z alpaką",
         "Malownicze trasy",
@@ -152,6 +156,8 @@
       "alt": "Zdjęcie prywatnego safari z alpakami",
       "description": "Prywatna wycieczka z przewodnikiem i alpakami",
       "details": "Ekskluzywne doświadczenie z alpakami",
+      "highlightsTab": "Główne Atrakcje",
+      "requirementsTab": "Wymagania",
       "highlights": [
         "Prywatny przewodnik",
         "Spersonalizowane doświadczenie",

@@ -116,6 +116,8 @@
       "alt": "Meet the Alpacas activity image",
       "details": "Meet our friendly alpacas",
       "description": "Get up close with our alpaca herd",
+      "highlightsTab": "Activity Highlights",
+      "requirementsTab": "Activity Requirements",
       "highlights": [
         "Meet the herd",
         "Learn about alpacas",
@@ -134,6 +136,8 @@
       "alt": "Alpaca walks activity image",
       "description": "Take an alpaca for a walk",
       "details": "Take a walk with our alpacas",
+      "highlightsTab": "Activity Highlights",
+      "requirementsTab": "Activity Requirements",
       "highlights": [
         "Individual walk with an alpaca",
         "Scenic routes",
@@ -152,6 +156,8 @@
       "alt": "Private alpaca safari image",
       "description": "Private guided tour with alpacas",
       "details": "Exclusive alpaca experience",
+      "highlightsTab": "Activity Highlights",
+      "requirementsTab": "Activity Requirements",
       "highlights": [
         "Private guide",
         "Customized experience",
