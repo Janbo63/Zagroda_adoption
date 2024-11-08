@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 interface Accommodation {
   name: string;
@@ -27,14 +28,18 @@ interface AccommodationSectionProps {
   locale: string;
 }
 
-export function AccommodationSection({ locale: _locale }: AccommodationSectionProps) {
+export function AccommodationSection({ locale }: AccommodationSectionProps) {
   const t = useTranslations('accommodation')
 
   return (
     <section className="w-full mb-8 md:mb-12 px-2 sm:px-4">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-primary-700">
-        {t('sectionTitle')}
-      </h2>
+      <Link href={`/${locale}/accommodation`}>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-primary-700 
+          hover:text-primary-500 transition-colors duration-300 group flex items-center justify-center gap-2">
+          {t('sectionTitle')}
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
+        </h2>
+      </Link>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {accommodations.map((accommodation) => (
           <Card key={accommodation.name} className="flex flex-col">
