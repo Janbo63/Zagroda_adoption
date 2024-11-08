@@ -108,14 +108,24 @@
     "checkAvailability": "Check Availability"
   },
   "activities": {
-    "title": "Farm Activities",
-    "sectionTitle": "Our Activities",
-    "viewDetails": "View Details",
-    "seeAll": "See All Activities",
+    "title": "Our Activities",
+    "attributes": {
+      "price": "Price",
+      "duration": "Duration",
+      "groupSize": "Group Size",
+      "ageLimit": "Age Limit",
+      "availability": "Availability"
+    },
+    "tabs": {
+      "description": "Description",
+      "thingsToKnow": "Things to Know"
+    },
+    "bookNow": "Book Now",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
-      "description": "Make new fluffy friends!",
-      "alt": "Meeting alpacas at our farm"
+      "alt": "People meeting alpacas",
+      "description": "...",
+      "thingsToKnow": "..."
     },
     "alpacawalks": {
       "name": "Alpaca Walks",

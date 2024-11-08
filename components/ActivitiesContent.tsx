@@ -2,27 +2,43 @@
 
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 const activities = [
   {
     id: 'meetthealpacas',
     image: '/images/activities/meet-alpacas.jpg',
-    price: '50 PLN',
-    duration: '1 hour'
+    attributes: {
+      price: '50 PLN',
+      duration: '1 hour',
+      groupSize: '2-8 people',
+      ageLimit: '3+',
+      availability: 'Daily'
+    }
   },
   {
     id: 'alpacawalks',
     image: '/images/activities/alpaca-walks.jpg',
-    price: '80 PLN',
-    duration: '1.5 hours'
+    attributes: {
+      price: '80 PLN',
+      duration: '1.5 hours',
+      groupSize: '2-4 people',
+      ageLimit: '6+',
+      availability: 'Weekends'
+    }
   },
   {
     id: 'privatealpacasafari',
     image: '/images/activities/alpaca-safari.jpg',
-    price: '150 PLN',
-    duration: '2 hours'
+    attributes: {
+      price: '150 PLN',
+      duration: '2 hours',
+      groupSize: 'Private',
+      ageLimit: 'All ages',
+      availability: 'By appointment'
+    }
   }
 ]
 
