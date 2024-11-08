@@ -3,7 +3,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTranslations } from 'next-intl'
 
 const activities = [
@@ -16,7 +15,13 @@ const activities = [
       groupSize: "2-8 people",
       minAge: "3+",
       availability: "Daily"
-    }
+    },
+    requirements: [
+      "Comfortable shoes recommended",
+      "Outdoor activity",
+      "Children under 12 must be accompanied",
+      "All equipment provided"
+    ]
   },
   {
     id: 'alpacawalks',
@@ -27,7 +32,13 @@ const activities = [
       groupSize: "2-4 people",
       minAge: "6+",
       availability: "Weekends"
-    }
+    },
+    requirements: [
+      "Sturdy walking shoes required",
+      "Weather appropriate clothing",
+      "Minimum age 6 years",
+      "Basic fitness level needed"
+    ]
   },
   {
     id: 'privatealpacasafari',
@@ -38,7 +49,13 @@ const activities = [
       groupSize: "Private",
       minAge: "All ages",
       availability: "By appointment"
-    }
+    },
+    requirements: [
+      "Advance booking required",
+      "2-6 people per group",
+      "Duration 2 hours",
+      "Camera recommended"
+    ]
   }
 ]
 

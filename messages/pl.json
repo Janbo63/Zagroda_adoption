@@ -126,14 +126,12 @@
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "alt": "Spotkanie z alpakami",
-      "description": "Poznaj nasze przyjazne alpaki z bliska",
-      "requirements": "Zalecane wygodne buty,Aktywność na świeżym powietrzu,Dzieci poniżej 12 lat muszą być pod opieką,Zapewniamy cały sprzęt"
+      "description": "Poznaj nasze przyjazne alpaki z bliska"
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "alt": "Spacer z alpakami",
-      "description": "Wybierz się na spacer z alpaką",
-      "requirements": "Wymagane solidne buty do chodzenia,Ubranie odpowiednie do pogody,Minimalny wiek 6 lat,Wymagana podstawowa sprawność fizyczna"
+      "description": "Wybierz się na spacer z alpaką"
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",

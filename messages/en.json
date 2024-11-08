@@ -111,34 +111,21 @@
     "title": "Our Activities",
     "sectionTitle": "Farm Activities",
     "viewDetails": "View Details",
-    "attributes": {
-      "price": "Price",
-      "duration": "Duration",
-      "groupSize": "Group Size",
-      "minAge": "Minimum Age",
-      "availability": "Availability"
-    },
-    "tabs": {
-      "description": "Description",
-      "requirements": "Requirements"
-    },
+    "requirements": "Requirements",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "alt": "Meet and greet with alpacas",
-      "description": "Get up close with our friendly alpacas",
-      "requirements": "Comfortable shoes recommended,Outdoor activity,Children under 12 must be accompanied,All equipment provided"
+      "description": "Get up close with our friendly alpacas"
     },
     "alpacawalks": {
       "name": "Alpaca Walks",
       "alt": "Walking with alpacas",
-      "description": "Take a walk with an alpaca companion",
-      "requirements": "Sturdy walking shoes required,Weather appropriate clothing,Minimum age 6 years,Basic fitness level needed"
+      "description": "Take a walk with an alpaca companion"
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "alt": "Private tour with alpacas",
-      "description": "Exclusive tour with our alpaca herd",
-      "requirements": "Advance booking required,2-6 people per group,Duration 2 hours,Camera recommended"
+      "description": "Exclusive tour with our alpaca herd"
     }
   },
   "blog": {
