@@ -9,36 +9,60 @@ import { useTranslations } from 'next-intl'
 const activities = [
   {
     id: 'meetthealpacas',
-    image: '/images/activities/meet-alpacas.jpg',
+    name: "Meet the Alpacas",
+    image: "/images/activities/meet-alpacas.jpg",
     attributes: {
-      price: '50 PLN',
-      duration: '1 hour',
-      groupSize: '2-8 people',
-      minAge: '3+',
-      availability: 'Daily'
-    }
+      price: "50 PLN",
+      duration: "1 hour",
+      groupSize: "2-8 people",
+      minAge: "3+",
+      availability: "Daily"
+    },
+    description: "Get up close and personal with our friendly alpacas in their natural environment. Learn about their habits, personalities, and role in animal therapy.",
+    requirements: [
+      "Comfortable shoes recommended",
+      "Outdoor activity",
+      "Children under 12 must be accompanied by an adult",
+      "Rain ponchos provided if needed"
+    ]
   },
   {
     id: 'alpacawalks',
-    image: '/images/activities/alpaca-walks.jpg',
+    name: "Alpaca Walks",
+    image: "/images/activities/alpaca-walks.jpg",
     attributes: {
-      price: '80 PLN',
-      duration: '1.5 hours',
-      groupSize: '2-4 people',
-      minAge: '6+',
-      availability: 'Weekends'
-    }
+      price: "80 PLN",
+      duration: "1.5 hours",
+      groupSize: "2-4 people",
+      minAge: "6+",
+      availability: "Weekends"
+    },
+    description: "Take a relaxing walk with one of our alpacas. This unique experience allows you to bond with these amazing animals while enjoying the beautiful farm surroundings.",
+    requirements: [
+      "Sturdy footwear required",
+      "Trail adapted to participants' abilities",
+      "Water provided",
+      "May be rescheduled in case of bad weather"
+    ]
   },
   {
     id: 'privatealpacasafari',
-    image: '/images/activities/alpaca-safari.jpg',
+    name: "Private Alpaca Safari",
+    image: "/images/activities/alpaca-safari.jpg",
     attributes: {
-      price: '150 PLN',
-      duration: '2 hours',
-      groupSize: 'Private',
-      minAge: 'All ages',
-      availability: 'By appointment'
-    }
+      price: "150 PLN",
+      duration: "2 hours",
+      groupSize: "Private",
+      minAge: "All ages",
+      availability: "By appointment"
+    },
+    description: "Enjoy a private tour with one of our alpacas. This exclusive experience allows you to explore the farm and learn about alpacas in a more personalized setting.",
+    requirements: [
+      "Comfortable shoes recommended",
+      "Outdoor activity",
+      "Children under 12 must be accompanied by an adult",
+      "Rain ponchos provided if needed"
+    ]
   }
 ]
 
@@ -82,6 +106,14 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
               </div>
               <CardContent className="p-4">
                 {t(`${activity.id}.description`)}
+              </CardContent>
+              <CardContent className="p-4">
+                <strong>{t('requirements')}:</strong>
+                <ul className="list-disc pl-6">
+                  {activity.requirements.map((requirement, index) => (
+                    <li key={index}>{requirement}</li>
+                  ))}
+                </ul>
               </CardContent>
             </CardContent>
           </Card>
