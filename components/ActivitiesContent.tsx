@@ -18,12 +18,19 @@ const activities = [
       minAge: "3+",
       availability: "Daily"
     },
-    description: "Get up close and personal with our friendly alpacas in their natural environment. Learn about their habits, personalities, and role in animal therapy.",
-    requirements: [
+    details: "A hands-on session where you'll meet our alpaca herd up close. Perfect for families and individuals looking to learn about these amazing animals.",
+    highlights: [
+      "Feed the alpacas their favorite treats",
+      "Learn about alpaca behavior and care",
+      "Take photos with our friendly herd",
+      "Participate in grooming activities"
+    ],
+    practicalInfo: [
       "Comfortable shoes recommended",
-      "Outdoor activity",
-      "Children under 12 must be accompanied by an adult",
-      "Rain ponchos provided if needed"
+      "Outdoor activity - dress for weather",
+      "Children under 12 must be accompanied",
+      "All equipment provided",
+      "Cameras welcome"
     ]
   },
   {
@@ -37,12 +44,18 @@ const activities = [
       minAge: "6+",
       availability: "Weekends"
     },
-    description: "Take a relaxing walk with one of our alpacas. This unique experience allows you to bond with these amazing animals while enjoying the beautiful farm surroundings.",
-    requirements: [
+    details: "Take a guided walk through our scenic trails with your own alpaca companion. Learn handling techniques and bond with these gentle animals.",
+    highlights: [
+      "One-on-one time with an alpaca",
+      "Guided nature walk",
+      "Basic training demonstration",
+      "Photo opportunities on the trail"
+    ],
+    practicalInfo: [
       "Sturdy footwear required",
-      "Trail adapted to participants' abilities",
-      "Water provided",
-      "May be rescheduled in case of bad weather"
+      "Trail suitable for all fitness levels",
+      "Water and snacks provided",
+      "Weather-appropriate clothing recommended"
     ]
   },
   {
@@ -56,8 +69,14 @@ const activities = [
       minAge: "All ages",
       availability: "By appointment"
     },
-    description: "Enjoy a private tour with one of our alpacas. This exclusive experience allows you to explore the farm and learn about alpacas in a more personalized setting.",
-    requirements: [
+    details: "Enjoy a private tour with one of our alpacas. This exclusive experience allows you to explore the farm and learn about alpacas in a more personalized setting.",
+    highlights: [
+      "One-on-one time with an alpaca",
+      "Guided tour of the farm",
+      "Learn about alpaca behavior and care",
+      "Photo opportunities on the farm"
+    ],
+    practicalInfo: [
       "Comfortable shoes recommended",
       "Outdoor activity",
       "Children under 12 must be accompanied by an adult",

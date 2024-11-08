@@ -56,25 +56,25 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {activities.map((activity) => (
-          <Link href={`/${locale}${activity.link}`} key={activity.id}>
-            <Card className="h-full hover:shadow-lg transition-shadow">
-              <CardContent className="p-4">
-                <CardTitle className="mb-2">{t(`${activity.id}.name`)}</CardTitle>
-                <div className="relative aspect-[4/3] mb-4">
-                  <Image 
-                    src={activity.image} 
-                    alt={t(`${activity.id}.alt`)} 
-                    fill
-                    className="object-cover rounded-md" 
-                  />
-                </div>
-                <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
+          <Card key={activity.id} className="h-full hover:shadow-lg transition-shadow">
+            <CardContent className="p-4">
+              <CardTitle className="mb-2">{t(`${activity.id}.name`)}</CardTitle>
+              <div className="relative aspect-[4/3] mb-4">
+                <Image 
+                  src={activity.image} 
+                  alt={t(`${activity.id}.alt`)} 
+                  fill
+                  className="object-cover rounded-md" 
+                />
+              </div>
+              <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
+              <Link href={`/${locale}/activities`}>
                 <Button variant="outline" className="mt-4">
                   {t('viewDetails')}
                 </Button>
-              </CardContent>
-            </Card>
-          </Link>
+              </Link>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>
