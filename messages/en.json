@@ -113,7 +113,7 @@
       "price": "Price",
       "duration": "Duration",
       "groupSize": "Group Size",
-      "ageLimit": "Age Limit",
+      "minAge": "Minimum Age",
       "availability": "Availability"
     },
     "tabs": {
@@ -124,8 +124,8 @@
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "alt": "People meeting alpacas",
-      "description": "...",
-      "thingsToKnow": "..."
+      "description": "Get up close and personal with our friendly alpacas in their natural environment. Learn about their habits, personalities, and role in animal therapy.",
+      "thingsToKnow": "- Comfortable shoes recommended\n- Outdoor activity\n- Children under 12 must be accompanied by an adult\n- Rain ponchos provided if needed"
     },
     "alpacawalks": {
       "name": "Alpaca Walks",

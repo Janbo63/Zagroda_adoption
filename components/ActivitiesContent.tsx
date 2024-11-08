@@ -2,9 +2,8 @@
 
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { Card, CardContent } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 
 const activities = [
   {
@@ -14,7 +13,7 @@ const activities = [
       price: '50 PLN',
       duration: '1 hour',
       groupSize: '2-8 people',
-      ageLimit: '3+',
+      minAge: '3+',
       availability: 'Daily'
     }
   },
@@ -25,7 +24,7 @@ const activities = [
       price: '80 PLN',
       duration: '1.5 hours',
       groupSize: '2-4 people',
-      ageLimit: '6+',
+      minAge: '6+',
       availability: 'Weekends'
     }
   },
@@ -36,7 +35,7 @@ const activities = [
       price: '150 PLN',
       duration: '2 hours',
       groupSize: 'Private',
-      ageLimit: 'All ages',
+      minAge: 'All ages',
       availability: 'By appointment'
     }
   }
@@ -50,34 +49,45 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
       <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-primary-700">
         {t('title')}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {activities.map((activity) => (
-          <Card key={activity.id} className="hover:shadow-lg transition-shadow">
-            <CardContent className="p-4">
+      
+      {activities.map((activity) => (
+        <div key={activity.id} className="mb-16 last:mb-0">
+          <h2 className="text-2xl font-bold mb-6 text-primary-600">
+            {t(`${activity.id}.name`)}
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            {/* Image Section */}
+            <div className="relative aspect-[4/3]">
               <Image
                 src={activity.image}
                 alt={t(`${activity.id}.alt`)}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded-t mb-4"
+                fill
+                className="object-cover rounded-lg"
               />
-              <CardTitle className="mb-2">
-                {t(`${activity.id}.name`)}
-              </CardTitle>
-              <CardDescription className="mb-4">
-                {t(`${activity.id}.description`)}
-              </CardDescription>
+            </div>
+
+            {/* Description Section */}
+            <div className="flex flex-col justify-between">
               <div className="flex justify-between items-center text-sm text-gray-600">
                 <span>{activity.price}</span>
                 <span>{activity.duration}</span>
               </div>
-              <Button className="w-full mt-4">
-                {t('seeAll')}
-              </Button>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+              <div className="flex justify-between items-center text-sm text-gray-600">
+                <span>{activity.groupSize}</span>
+                <span>{activity.minAge}</span>
+              </div>
+              <div className="flex justify-between items-center text-sm text-gray-600">
+                <span>{activity.availability}</span>
+              </div>
+            </div>
+          </div>
+
+          <CardContent className="p-4">
+            {t(`${activity.id}.description`)}
+          </CardContent>
+        </div>
+      ))}
     </div>
   )
 } 

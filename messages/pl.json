@@ -113,7 +113,7 @@
       "price": "Cena",
       "duration": "Czas trwania",
       "groupSize": "Wielkość grupy",
-      "ageLimit": "Limit wieku",
+      "minAge": "Minimalny wiek",
       "availability": "Dostępność"
     },
     "tabs": {
