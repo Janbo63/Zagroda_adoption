@@ -111,25 +111,26 @@
     "title": "Activities",
     "sectionTitle": "Our Activities",
     "viewDetails": "View Details",
-    "attribute": "Activity Attributes",
+    "attributes": "Activity Attributes",
     "details": "Activity Details",
     "highlights": "Highlights",
     "requirements": "Requirements",
+    "price": "Price",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "description": "Get up close with our alpaca herd",
       "details": "Experience a unique opportunity to meet our friendly alpaca herd. Learn about their care, behavior, and individual personalities while enjoying their calming presence.",
-      "requirements": [
-        "Comfortable walking shoes",
-        "Weather appropriate clothing",
-        "Camera (optional)",
-        "Advance booking required"
-      ],
-      "highlights": [
+      "highlightsList": [
         "Meet the herd",
         "Learn about alpacas",
         "Photo opportunities",
         "Feed the alpacas"
+      ],
+      "requirementsList": [
+        "Comfortable walking shoes",
+        "Weather appropriate clothing",
+        "Camera (optional)",
+        "Advance booking required"
       ]
     },
     "alpacawalks": {

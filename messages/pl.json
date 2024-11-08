@@ -111,25 +111,26 @@
     "title": "Aktywności",
     "sectionTitle": "Nasze Aktywności",
     "viewDetails": "Zobacz Szczegóły",
-    "attribute": "Atrybuty Aktywności",
+    "attributes": "Atrybuty Aktywności",
     "details": "Szczegóły Aktywności",
     "highlights": "Główne Atrakcje",
     "requirements": "Wymagania",
+    "price": "Cena",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "description": "Spotkaj się z bliska z naszym stadem alpak",
-      "details": "Skorzystaj z wyjątkowej okazji poznania naszego przyjaznego stada alpak. Dowiedz się więcej o ich opiece, zachowaniu i indywidualnych osobowościach, ciesząc się ich uspokajającą obecnością.",
-      "requirements": [
-        "Wygodne buty do chodzenia",
-        "Odpowiednie ubranie do pogody",
-        "Aparat fotograficzny (opcjonalnie)",
-        "Wymagana wcześniejsza rezerwacja"
-      ],
-      "highlights": [
+      "details": "Skorzystaj z wyjątkowej okazji poznania naszego przyjaznego stada alpak. Dowiedz się więcej o ich opiece, zachowaniu i indywidualnych osobowościach.",
+      "highlightsList": [
         "Poznaj stado",
         "Dowiedz się więcej o alpakach",
         "Możliwości zrobienia zdjęć",
         "Karmienie alpak"
+      ],
+      "requirementsList": [
+        "Wygodne buty do chodzenia",
+        "Odpowiednie ubranie do pogody",
+        "Aparat fotograficzny (opcjonalnie)",
+        "Wymagana wcześniejsza rezerwacja"
       ]
     },
     "alpacawalks": {
