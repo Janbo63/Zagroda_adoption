@@ -109,6 +109,8 @@
   },
   "activities": {
     "title": "Our Activities",
+    "sectionTitle": "Farm Activities",
+    "viewDetails": "View Details",
     "attributes": {
       "price": "Price",
       "duration": "Duration",
@@ -118,28 +120,23 @@
     },
     "tabs": {
       "description": "Description",
-      "thingsToKnow": "Things to Know"
+      "requirements": "Requirements"
     },
-    "bookNow": "Book Now",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
-      "alt": "People meeting alpacas",
-      "description": "Get up close and personal with our friendly alpacas in their natural environment. Learn about their habits, personalities, and role in animal therapy.",
-      "thingsToKnow": "- Comfortable shoes recommended\n- Outdoor activity\n- Children under 12 must be accompanied by an adult\n- Rain ponchos provided if needed"
+      "alt": "Meet and greet with alpacas",
+      "description": "Get up close with our friendly alpacas"
     },
     "alpacawalks": {
       "name": "Alpaca Walks",
-      "description": "Take a stroll with your new buddy!",
-      "alt": "Walking with alpacas"
+      "alt": "Walking with alpacas",
+      "description": "Take a walk with an alpaca companion"
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
-      "description": "Explore the farm with a herd of alpacas!",
-      "alt": "Alpaca safari experience"
-    },
-    "sectionTitle": "Our Activities",
-    "viewDetails": "View Details",
-    "title": "Farm Activities"
+      "alt": "Private tour with alpacas",
+      "description": "Exclusive tour with our alpaca herd"
+    }
   },
   "blog": {
     "title": "Our Blog",
@@ -199,6 +196,7 @@
     "latestPosts": "Latest Posts"
   },
   "accommodation": {
-    "sectionTitle": "Accommodation"
+    "sectionTitle": "Accommodation",
+    "bookNow": "Book Now"
   }
 }

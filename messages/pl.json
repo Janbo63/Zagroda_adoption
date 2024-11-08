@@ -108,7 +108,9 @@
     "checkAvailability": "Sprawdź dostępność"
   },
   "activities": {
-    "title": "Aktywności na Farmie",
+    "title": "Nasze Aktywności",
+    "sectionTitle": "Aktywności na Farmie",
+    "viewDetails": "Zobacz Szczegóły",
     "attributes": {
       "price": "Cena",
       "duration": "Czas trwania",
@@ -118,26 +120,22 @@
     },
     "tabs": {
       "description": "Opis",
-      "thingsToKnow": "Co trzeba wiedzieć"
+      "requirements": "Wymagania"
     },
-    "bookNow": "Zarezerwuj teraz",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
-      "alt": "Spotkanie z alpakami na naszej farmie",
-      "description": "Podczas tej aktywności będziesz miał okazję poznać nasze przyjazne alpaki w ich naturalnym środowisku. Dowiesz się wszystkiego o ich zwyczajach, charakterze i roli w alpakoterapii.",
-      "thingsToKnow": "- Zalecamy wygodne buty\n- Aktywność odbywa się na świeżym powietrzu\n- Dzieci poniżej 12 lat muszą być pod opieką dorosłych\n- W razie deszczu zapewniamy płaszcze przeciwdeszczowe"
+      "alt": "Spotkanie z alpakami",
+      "description": "Poznaj nasze przyjazne alpaki z bliska"
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
-      "alt": "Spacery z alpakami",
-      "description": "Wybierz się na relaksujący spacer w towarzystwie alpaki. To wyjątkowe doświadczenie pozwoli Ci nawiązać szczególną więź z tymi niezwykłymi zwierzętami.",
-      "thingsToKnow": "- Wymagane są pełne buty\n- Trasa jest dostosowana do możliwości uczestników\n- Zapewniamy wodę\n- Spacer może zostać przełożony w przypadku złej pogody"
+      "alt": "Spacer z alpakami",
+      "description": "Wybierz się na spacer z alpaką"
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
-      "alt": "Safari z alpakami",
-      "description": "Ekskluzywna wycieczka po naszym gospodarstwie w towarzystwie stada alpak. Poznaj wszystkie zakamarki farmy i spędź wyjątkowy czas z naszymi zwierzętami.",
-      "thingsToKnow": "- Maksymalnie 6 osób w grupie\n- Możliwość dostosowania programu\n- Includes refreshments\n- Dostępne tylko po wcześniejszej rezerwacji"
+      "alt": "Prywatna wycieczka z alpakami",
+      "description": "Ekskluzywna wycieczka z naszym stadem alpak"
     }
   },
   "blog": {
@@ -187,14 +185,7 @@
     "latestPosts": "Najnowsze Wpisy"
   },
   "accommodation": {
-    "sectionTitle": "Zakwaterowanie"
-  },
-  "activities": {
-    "sectionTitle": "Nasze Aktywności",
-    "viewDetails": "Zobacz Szczegóły",
-    "title": "Aktywności na Farmie"
-  },
-  "accommodation": {
+    "sectionTitle": "Zakwaterowanie",
     "bookNow": "Zarezerwuj"
   }
 }
