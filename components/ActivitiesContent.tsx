@@ -124,16 +124,22 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 </TabsContent>
                 <TabsContent value="highlights">
                   <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    {t(`${activity.id}.highlights`).map((highlight: string, index: number) => (
-                      <li key={index}>{highlight}</li>
-                    ))}
+                    {Array.isArray(t(`${activity.id}.highlights`)) 
+                      ? t(`${activity.id}.highlights`).map((highlight: string, index: number) => (
+                          <li key={index}>{highlight}</li>
+                        ))
+                      : <li>{t(`${activity.id}.highlights`)}</li>
+                    }
                   </ul>
                 </TabsContent>
                 <TabsContent value="requirements">
                   <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    {t(`${activity.id}.requirements`).map((requirement: string, index: number) => (
-                      <li key={index}>{requirement}</li>
-                    ))}
+                    {Array.isArray(t(`${activity.id}.requirements`))
+                      ? t(`${activity.id}.requirements`).map((requirement: string, index: number) => (
+                          <li key={index}>{requirement}</li>
+                        ))
+                      : <li>{t(`${activity.id}.requirements`)}</li>
+                    }
                   </ul>
                 </TabsContent>
               </Tabs>

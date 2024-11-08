@@ -108,67 +108,44 @@
     "checkAvailability": "Check Availability"
   },
   "activities": {
-    "title": "Our Activities",
-    "attributes": "Details",
-    "details": "About",
+    "title": "Activities",
+    "meetthealpacas": {
+      "name": "Meet the Alpacas",
+      "alt": "Meet the Alpacas activity image",
+      "details": "Meet our friendly alpacas",
+      "description": "Get up close with our alpaca herd",
+      "highlights": [
+        "Meet the herd",
+        "Learn about alpacas",
+        "Photo opportunities",
+        "Feed the alpacas"
+      ],
+      "requirements": [
+        "Comfortable walking shoes",
+        "Weather appropriate clothing",
+        "Camera (optional)",
+        "Advance booking required"
+      ]
+    },
+    "alpacawalks": {
+      "name": "Alpaca Walks",
+      "alt": "Alpaca walks activity image",
+      "description": "Take an alpaca for a walk"
+    },
+    "privatealpacasafari": {
+      "name": "Private Alpaca Safari",
+      "alt": "Private alpaca safari image",
+      "description": "Private guided tour with alpacas"
+    },
+    "attributes": "Activity Attributes",
+    "details": "Activity Details",
     "highlights": "Highlights",
     "requirements": "Requirements",
     "price": "Price",
     "duration": "Duration",
     "groupSize": "Group Size",
-    "minAge": "Min Age",
-    "availability": "Availability",
-    "meetthealpacas": {
-      "name": "Meet the Alpacas",
-      "alt": "Meet and greet with alpacas",
-      "details": "A hands-on session where you'll meet our alpaca herd up close. Perfect for families and individuals looking to learn about these amazing animals.",
-      "highlights": [
-        "Feed the alpacas their favorite treats",
-        "Learn about alpaca behavior and care",
-        "Take photos with our friendly herd",
-        "Participate in grooming activities"
-      ],
-      "requirements": [
-        "Comfortable shoes recommended",
-        "Outdoor activity",
-        "Children under 12 must be accompanied",
-        "All equipment provided"
-      ]
-    },
-    "alpacawalks": {
-      "name": "Alpaca Walks",
-      "alt": "Walking with alpacas",
-      "details": "Take a guided walk through our scenic trails with your own alpaca companion. Learn handling techniques and bond with these gentle animals.",
-      "highlights": [
-        "One-on-one time with an alpaca",
-        "Guided nature walk",
-        "Learn alpaca handling skills",
-        "Photo opportunities throughout"
-      ],
-      "requirements": [
-        "Sturdy walking shoes required",
-        "Weather appropriate clothing",
-        "Minimum age 6 years",
-        "Basic fitness level needed"
-      ]
-    },
-    "privatealpacasafari": {
-      "name": "Private Alpaca Safari",
-      "alt": "Private tour with alpacas",
-      "details": "An exclusive experience where you'll get private time with our alpaca herd. Perfect for special occasions or those wanting a more personalized experience.",
-      "highlights": [
-        "Private access to the herd",
-        "Customized experience",
-        "Extended interaction time",
-        "Professional photo session included"
-      ],
-      "requirements": [
-        "Advance booking required",
-        "2-6 people per group",
-        "Duration 2 hours",
-        "Camera recommended"
-      ]
-    }
+    "minAge": "Minimum Age",
+    "availability": "Availability"
   },
   "blog": {
     "title": "Our Blog",
