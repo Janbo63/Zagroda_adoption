@@ -56,13 +56,14 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
             <Card className="h-full hover:shadow-lg transition-shadow">
               <CardContent className="p-4">
                 <CardTitle className="mb-2">{t(`${activity.id}.name`)}</CardTitle>
-                <Image 
-                  src={activity.image} 
-                  alt={t(`${activity.id}.alt`)} 
-                  width={300} 
-                  height={200} 
-                  className="w-full h-40 object-cover mb-4" 
-                />
+                <div className="relative aspect-[4/3] mb-4">
+                  <Image 
+                    src={activity.image} 
+                    alt={t(`${activity.id}.alt`)} 
+                    fill
+                    className="object-cover rounded-md" 
+                  />
+                </div>
                 <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
                 <Button variant="outline" className="mt-4">
                   {t('viewDetails')}

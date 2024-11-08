@@ -38,13 +38,14 @@ export function AnimalSection({ locale }: { locale: string }) {
             <Card className="h-full hover:shadow-lg transition-shadow">
               <CardContent className="p-4">
                 <CardTitle className="mb-2">{t(`${animal.id}.name`)}</CardTitle>
-                <Image 
-                  src={animal.image} 
-                  alt={t(`${animal.id}.alt`)} 
-                  width={300} 
-                  height={200} 
-                  className="w-full h-40 object-cover mb-4" 
-                />
+                <div className="relative aspect-[4/3] mb-4">
+                  <Image 
+                    src={animal.image} 
+                    alt={t(`${animal.id}.alt`)} 
+                    fill
+                    className="object-cover rounded-md" 
+                  />
+                </div>
                 <CardDescription>{t(`${animal.id}.description`)}</CardDescription>
                 <Button variant="outline" className="mt-4">
                   {t('meetButton', { name: t(`${animal.id}.name`) })}
