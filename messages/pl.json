@@ -109,6 +109,8 @@
   },
   "activities": {
     "title": "Aktywności",
+    "sectionTitle": "Nasze Aktywności",
+    "viewDetails": "Zobacz Szczegóły",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "alt": "Zdjęcie aktywności Poznaj Alpaki",
@@ -131,19 +133,7 @@
       "name": "Spacery z Alpakami",
       "alt": "Zdjęcie aktywności spacerów z alpakami",
       "details": "Wybierz się na spacer z naszymi alpakami",
-      "description": "Spaceruj po malowniczych trasach w towarzystwie alpak",
-      "highlights": [
-        "Indywidualny spacer z alpaką",
-        "Malownicze trasy",
-        "Nauka prowadzenia alpaki",
-        "Sesja zdjęciowa w trakcie spaceru"
-      ],
-      "requirements": [
-        "Wygodne buty trekkingowe",
-        "Odpowiednie ubranie do pogody",
-        "Minimalny wiek: 6 lat",
-        "Wymagana wcześniejsza rezerwacja"
-      ]
+      "description": "Spaceruj po malowniczych trasach w towarzystwie alpak"
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
