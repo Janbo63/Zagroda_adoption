@@ -127,15 +127,15 @@
       "name": "Alpaca Walks",
       "description": "Take a walk with an alpaca companion",
       "details": "Join us for a peaceful walk through scenic trails with your own alpaca companion.",
-      "highlights": "Experience a unique walking adventure with your own alpaca companion. Enjoy scenic routes, learn how to handle alpacas, and take memorable photos along the way.",
-      "requirements": "Comfortable walking shoes, weather-appropriate clothing. Minimum age: 6 years. Advance booking required."
+      "highlights": "Individual walk with an alpaca, scenic routes, learn to handle alpacas, photo opportunities. Experience the joy of walking with these gentle creatures while enjoying beautiful surroundings.",
+      "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years, advance booking required. Basic fitness level needed for walking activity."
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "description": "Private guided tour with alpacas",
       "details": "Enjoy an exclusive experience with our alpacas in a private setting.",
-      "highlights": "Get a personalized experience with a private guide and our alpacas. Enjoy extended time with the herd, special photo opportunities, and a customized experience for your group.",
-      "requirements": "Comfortable walking shoes, weather-appropriate clothing. Maximum group size: 6 people. Advance booking required."
+      "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities. Enjoy a personalized journey with our alpacas tailored to your group's interests.",
+      "requirements": "Comfortable walking shoes, weather appropriate clothing, advance booking required, maximum group size: 6 people. Perfect for families and small groups."
     }
   },
   "blog": {

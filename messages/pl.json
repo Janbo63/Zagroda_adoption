@@ -127,15 +127,15 @@
       "name": "Spacery z Alpakami",
       "description": "Spaceruj w towarzystwie alpaki",
       "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami w towarzystwie własnej alpaki.",
-      "highlights": "Przeżyj wyjątkową przygodę spacerując z własną alpaką. Ciesz się malowniczymi trasami, naucz się prowadzenia alpaki i zrób pamiątkowe zdjęcia po drodze.",
-      "requirements": "Wygodne buty trekkingowe, odpowiednie ubranie do pogody. Minimalny wiek: 6 lat. Wymagana wcześniejsza rezerwacja."
+      "highlights": "Indywidualny spacer z alpaką, malownicze trasy, nauka prowadzenia alpaki, możliwości zrobienia zdjęć. Doświadcz radości spaceru z tymi łagodnymi stworzeniami, podziwiając piękne otoczenie.",
+      "requirements": "Wygodne buty trekkingowe, odpowiednie ubranie do pogody, minimalny wiek: 6 lat, wymagana wcześniejsza rezerwacja. Podstawowa sprawność fizyczna potrzebna do aktywności spacerowej."
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
       "description": "Prywatna wycieczka z przewodnikiem i alpakami",
       "details": "Ciesz się ekskluzywnym doświadczeniem z alpakami w prywatnym otoczeniu.",
-      "highlights": "Skorzystaj ze spersonalizowanego doświadczenia z prywatnym przewodnikiem i naszymi alpakami. Ciesz się wydłużonym czasem ze stadem, specjalnymi możliwościami zdjęciowymi i dostosowanym programem dla Twojej grupy.",
-      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody. Maksymalna wielkość grupy: 6 osób. Wymagana wcześniejsza rezerwacja."
+      "highlights": "Prywatny przewodnik, spersonalizowane doświadczenie, wydłużony czas z alpakami, specjalne możliwości zdjęciowe. Ciesz się spersonalizowaną przygodą z naszymi alpakami dostosowaną do zainteresowań Twojej grupy.",
+      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody, wymagana wcześniejsza rezerwacja, maksymalna wielkość grupy: 6 osób. Idealne dla rodzin i małych grup."
     },
     "tabLabels": {
       "activityAttributes": "Atrybuty Aktywności",
