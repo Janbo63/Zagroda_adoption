@@ -108,11 +108,19 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
             </div>
             <CardContent className="p-4">
               <Tabs defaultValue="attributes">
-                <TabsList className="grid w-full grid-cols-4">
-                  <TabsTrigger value="attributes">{t('attributes')}</TabsTrigger>
-                  <TabsTrigger value="details">{t('details')}</TabsTrigger>
-                  <TabsTrigger value="highlights">{t('highlights')}</TabsTrigger>
-                  <TabsTrigger value="requirements">{t('requirements')}</TabsTrigger>
+                <TabsList className="grid w-full grid-cols-4 text-xs sm:text-sm">
+                  <TabsTrigger value="attributes" className="px-2 py-1">
+                    {t('attributes')}
+                  </TabsTrigger>
+                  <TabsTrigger value="details" className="px-2 py-1">
+                    {t('details')}
+                  </TabsTrigger>
+                  <TabsTrigger value="highlights" className="px-2 py-1">
+                    {t('highlights')}
+                  </TabsTrigger>
+                  <TabsTrigger value="requirements" className="px-2 py-1">
+                    {t('requirements')}
+                  </TabsTrigger>
                 </TabsList>
                 <TabsContent value="attributes">
                   <dl className="mt-4 space-y-2">
