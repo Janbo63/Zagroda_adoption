@@ -136,7 +136,10 @@
       "name": "Private Alpaca Safari",
       "description": "Explore the farm with a herd of alpacas!",
       "alt": "Alpaca safari experience"
-    }
+    },
+    "sectionTitle": "Our Activities",
+    "viewDetails": "View Details",
+    "title": "Farm Activities"
   },
   "blog": {
     "title": "Our Blog",
@@ -180,7 +183,8 @@
       "name": "Unique Caravan Stays",
       "description": "Camp out in our fun caravans!",
       "alt": "Caravan accommodation"
-    }
+    },
+    "bookNow": "Book Now"
   },
   "navigation": {
     "home": "Home",

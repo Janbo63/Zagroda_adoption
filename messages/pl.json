@@ -188,5 +188,13 @@
   },
   "accommodation": {
     "sectionTitle": "Zakwaterowanie"
+  },
+  "activities": {
+    "sectionTitle": "Nasze Aktywności",
+    "viewDetails": "Zobacz Szczegóły",
+    "title": "Aktywności na Farmie"
+  },
+  "accommodation": {
+    "bookNow": "Zarezerwuj"
   }
 }
