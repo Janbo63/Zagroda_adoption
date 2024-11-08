@@ -1,9 +1,10 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import React from 'react'
 import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useTranslations } from 'next-intl'
 
 const activities = [
   {
@@ -45,49 +46,47 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
   const t = useTranslations('activities')
 
   return (
-    <div className="py-8 px-4">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-primary-700">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-8 text-primary-700">
         {t('title')}
       </h1>
-      
-      {activities.map((activity) => (
-        <div key={activity.id} className="mb-16 last:mb-0">
-          <h2 className="text-2xl font-bold mb-6 text-primary-600">
-            {t(`${activity.id}.name`)}
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-            {/* Image Section */}
-            <div className="relative aspect-[4/3]">
-              <Image
-                src={activity.image}
-                alt={t(`${activity.id}.alt`)}
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
-
-            {/* Description Section */}
-            <div className="flex flex-col justify-between">
-              <div className="flex justify-between items-center text-sm text-gray-600">
-                <span>{activity.price}</span>
-                <span>{activity.duration}</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {activities.map((activity) => (
+          <Card key={activity.id} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-primary-600">
+                {t(`${activity.id}.name`)}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={activity.image}
+                  alt={t(`${activity.id}.alt`)}
+                  fill
+                  className="object-cover rounded-lg"
+                />
               </div>
-              <div className="flex justify-between items-center text-sm text-gray-600">
-                <span>{activity.groupSize}</span>
-                <span>{activity.minAge}</span>
+              <div className="flex flex-col justify-between">
+                <div className="flex justify-between items-center text-sm text-gray-600">
+                  <span>{activity.price}</span>
+                  <span>{activity.duration}</span>
+                </div>
+                <div className="flex justify-between items-center text-sm text-gray-600">
+                  <span>{activity.groupSize}</span>
+                  <span>{activity.minAge}</span>
+                </div>
+                <div className="flex justify-between items-center text-sm text-gray-600">
+                  <span>{activity.availability}</span>
+                </div>
               </div>
-              <div className="flex justify-between items-center text-sm text-gray-600">
-                <span>{activity.availability}</span>
-              </div>
-            </div>
-          </div>
-
-          <CardContent className="p-4">
-            {t(`${activity.id}.description`)}
-          </CardContent>
-        </div>
-      ))}
+              <CardContent className="p-4">
+                {t(`${activity.id}.description`)}
+              </CardContent>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
   )
 } 
