@@ -31,7 +31,8 @@ const activities = [
       "Children under 12 must be accompanied",
       "All equipment provided",
       "Cameras welcome"
-    ]
+    ],
+    requirements: useTranslations('meetthealpacas.requirements').split(',')
   },
   {
     id: 'alpacawalks',
@@ -56,7 +57,8 @@ const activities = [
       "Trail suitable for all fitness levels",
       "Water and snacks provided",
       "Weather-appropriate clothing recommended"
-    ]
+    ],
+    requirements: useTranslations('alpacawalks.requirements').split(',')
   },
   {
     id: 'privatealpacasafari',
@@ -81,7 +83,8 @@ const activities = [
       "Outdoor activity",
       "Children under 12 must be accompanied by an adult",
       "Rain ponchos provided if needed"
-    ]
+    ],
+    requirements: useTranslations('privatealpacasafari.requirements').split(',')
   }
 ]
 

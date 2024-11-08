@@ -122,20 +122,39 @@
       "description": "Opis",
       "requirements": "Wymagania"
     },
+    "requirements": "Wymagania",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "alt": "Spotkanie z alpakami",
-      "description": "Poznaj nasze przyjazne alpaki z bliska"
+      "description": "Poznaj nasze przyjazne alpaki z bliska",
+      "requirements": [
+        "Zalecane wygodne buty",
+        "Aktywność na świeżym powietrzu",
+        "Dzieci poniżej 12 lat muszą być pod opieką",
+        "Zapewniamy cały sprzęt"
+      ]
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "alt": "Spacer z alpakami",
-      "description": "Wybierz się na spacer z alpaką"
+      "description": "Wybierz się na spacer z alpaką",
+      "requirements": [
+        "Wymagane solidne buty do chodzenia",
+        "Ubranie odpowiednie do pogody",
+        "Minimalny wiek 6 lat",
+        "Wymagana podstawowa sprawność fizyczna"
+      ]
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
       "alt": "Prywatna wycieczka z alpakami",
-      "description": "Ekskluzywna wycieczka z naszym stadem alpak"
+      "description": "Ekskluzywna wycieczka z naszym stadem alpak",
+      "requirements": [
+        "Wymagana rezerwacja z wyprzedzeniem",
+        "2-6 osób w grupie",
+        "Czas trwania 2 godziny",
+        "Zalecany aparat fotograficzny"
+      ]
     }
   },
   "blog": {
