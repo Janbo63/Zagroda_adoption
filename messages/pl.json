@@ -201,17 +201,5 @@
     "accommodation": "Zakwaterowanie",
     "blog": "Blog",
     "contact": "Kontakt"
-  },
-  "Blog": {
-    "title": "Nasz Blog",
-    "latestPosts": "Najnowsze Wpisy"
-  },
-  "accommodation": {
-    "sectionTitle": "Zakwaterowanie",
-    "bookNow": "Zarezerwuj"
-  },
-  "activities": {
-    "sectionTitle": "Nasze Aktywności",
-    "viewDetails": "Zobacz Szczegóły"
   }
 }

@@ -109,6 +109,8 @@
   },
   "activities": {
     "title": "Activities",
+    "sectionTitle": "Our Activities",
+    "viewDetails": "View Details",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "alt": "Meet the Alpacas activity image",
@@ -199,17 +201,5 @@
     "blog": "Blog",
     "contact": "Contact",
     "accommodation": "Accommodation"
-  },
-  "Blog": {
-    "title": "Our Blog",
-    "latestPosts": "Latest Posts"
-  },
-  "accommodation": {
-    "sectionTitle": "Accommodation",
-    "bookNow": "Book Now"
-  },
-  "activities": {
-    "sectionTitle": "Our Activities",
-    "viewDetails": "View Details"
-  }
+
 }
