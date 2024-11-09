@@ -166,5 +166,68 @@
     "accommodation": "Zakwaterowanie",
     "blog": "Blog",
     "contact": "Kontakt"
+  },
+  "alpacas": {
+    "pageTitle": "Poznaj Naszą Grupę Alpak",
+    "backToAnimals": "Powrót do Zwierząt",
+    "attributes": "Atrybuty",
+    "character": "Charakter",
+    "stories": "Historie",
+    "age": "Wiek",
+    "years": "lat",
+    "color": "Kolor",
+    "birthplace": "Miejsce urodzenia",
+    "micky": {
+      "name": "Micky",
+      "character": "Micky jest łagodną i ciekawską alpaką. Uwielbia podchodzić do gości i często jako pierwszy wita nowych przybyszów na farmie.",
+      "stories": [
+        "Pewnego razu Micky odkrył, jak otworzyć bramę i poprowadził całe stado na przygodę po farmie!",
+        "Micky ma szczególną słabość do dzieci i zawsze wydaje się wiedzieć, kiedy dziecko potrzebuje dodatkowego komfortu podczas sesji terapeutycznych."
+      ],
+      "attributes": {
+        "age": "5",
+        "color": "Biały",
+        "birthplace": "Lokalna Farma, Polska"
+      }
+    },
+    "elvis": {
+      "name": "Elvis",
+      "character": "Elvis jest gwiazdą grupy. Jest charyzmatyczny i uwielbia być w centrum uwagi podczas wydarzeń na farmie.",
+      "stories": [
+        "Podczas dnia otwartego na farmie Elvis 'występował', nucąc do muzyki w tle, ku rozbawieniu wszystkich.",
+        "Elvis ma zwyczaj pozowania, gdy tylko widzi aparat, co przyniosło mu przydomek 'Król' wśród personelu."
+      ],
+      "attributes": {
+        "age": "4",
+        "color": "Brązowy",
+        "birthplace": "Zagroda Alpakoterapii"
+      }
+    },
+    "ricky": {
+      "name": "Ricky",
+      "character": "Ricky jest poszukiwaczem przygód. Zawsze chętnie odkrywa nowe miejsca na farmie i próbuje nowych aktywności.",
+      "stories": [
+        "Ricky kiedyś poprowadził grupę gości na spontaniczną 'wycieczkę' po farmie, pokazując im wszystkie swoje ulubione miejsca.",
+        "Podczas burzy Ricky zaskoczył wszystkich, spokojnie obserwując błyskawice, podczas gdy inne alpaki szukały schronienia."
+      ],
+      "attributes": {
+        "age": "3",
+        "color": "Czarny",
+        "birthplace": "Hodowla Alpak, Południowa Polska"
+      }
+    },
+    "teddy": {
+      "name": "Teddy",
+      "character": "Teddy jest łagodnym alpaką. Uwielbia podchodzić do gości i często jako pierwszy wita nowych przybyszów na farmie.",
+      "stories": [
+        "Teddy kiedyś poprowadził grupę gości na spontaniczną 'wycieczkę' po farmie, pokazując im wszystkie swoje ulubione miejsca.",
+        "Podczas burzy Teddy zaskoczył wszystkich, spokojnie obserwując błyskawice, podczas gdy inne alpaki szukały schronienia."
+      ],
+      "attributes": {
+        "age": "2",
+        "color": "Brązowy",
+        "birthplace": "Zagroda Alpakoterapii"
+      }
+    }
   }
 }
