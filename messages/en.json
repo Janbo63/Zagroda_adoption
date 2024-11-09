@@ -86,6 +86,10 @@
       "title": "Farmhouse Rooms",
       "description": "Experience the charm of our renovated farmhouse"
     },
+    "caravanStays": {
+      "title": "Caravan Stays",
+      "description": "Enjoy a unique stay in our vintage caravans"
+    },
     "bookNow": "Book Now",
     "checkAvailability": "Check Availability"
   },
@@ -151,14 +155,13 @@
     "contactUs": "Contact Us"
   },
   "accommodation": {
-    "sectionTitle": "Accommodation",
-    "title": "Stay With Us",
+    "sectionTitle": "Stay With Us",
+    "bookNow": "Book Now",
     "cozyfarmhouserooms": {
       "name": "Cozy Farmhouse Rooms",
       "description": "Sleep tight in our comfy farmhouse!",
       "alt": "Cozy farmhouse accommodation"
-    },
-    "bookNow": "Book Now"
+    }
   },
   "navigation": {
     "home": "Home",

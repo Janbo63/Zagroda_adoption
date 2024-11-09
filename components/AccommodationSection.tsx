@@ -14,9 +14,9 @@ interface Accommodation {
 
 const accommodations: Accommodation[] = [
   { 
-    name: "Cozy Farmhouse Rooms", 
+    name: "cozyfarmhouserooms.name", 
     image: "/images/accommodation/farmhouse-rooms.jpg", 
-    description: "Sleep tight in our comfy farmhouse!" 
+    description: "cozyfarmhouserooms.description" 
   }
 ]
 
@@ -40,17 +40,17 @@ export function AccommodationSection({ locale }: AccommodationSectionProps) {
         {accommodations.map((accommodation) => (
           <Card key={accommodation.name} className="flex flex-col">
             <CardHeader>
-              <CardTitle>{accommodation.name}</CardTitle>
+              <CardTitle>{t(accommodation.name)}</CardTitle>
             </CardHeader>
             <CardContent>
               <Image 
                 src={accommodation.image} 
-                alt={accommodation.name} 
+                alt={t(accommodation.description)} 
                 width={1280} 
                 height={622} 
                 className="w-full h-auto" 
               />
-              <CardDescription>{accommodation.description}</CardDescription>
+              <CardDescription>{t(accommodation.description)}</CardDescription>
               <Link href="/book-now">
                 <Button>{t('bookNow')}</Button>
               </Link>
