@@ -217,28 +217,23 @@
         "color": "Czarno-biały",
         "birthplace": "Zagroda Alpakoterapii"
       },
-      "character": "Ricky jest najbardziej żądnym przygód,
-      "stories": [
-        "Ricky kiedyś poprowadził grupę gości na spontaniczną 'wycieczkę' po farmie, pokazując im wszystkie swoje ulubione miejsca.",
-        "Podczas burzy Ricky zaskoczył wszystkich, spokojnie obserwując błyskawice, podczas gdy inne alpaki szukały schronienia."
-      ],
-      "attributes": {
-        "age": "3",
-        "color": "Czarny",
-        "birthplace": "Hodowla Alpak, Południowa Polska"
+      "character": "Ricky jest najbardziej żądnym przygód, zawsze ciekawym i chętnym do odkrywania nowych rzeczy.",
+      "stories": {
+        "0": "Ricky kiedyś odkrył ukrytą jabłoń i teraz prowadzi tam stado na przysmaki.",
+        "1": "Uwielbia bawić się w chowanego z psami z farmy."
       }
     },
     "teddy": {
       "name": "Teddy",
-      "character": "Teddy jest łagodnym alpaką. Uwielbia podchodzić do gości i często jako pierwszy wita nowych przybyszów na farmie.",
-      "stories": [
-        "Teddy kiedyś poprowadził grupę gości na spontaniczną 'wycieczkę' po farmie, pokazując im wszystkie swoje ulubione miejsca.",
-        "Podczas burzy Teddy zaskoczył wszystkich, spokojnie obserwując błyskawice, podczas gdy inne alpaki szukały schronienia."
-      ],
       "attributes": {
         "age": "2",
-        "color": "Brązowy",
-        "birthplace": "Zagroda Alpakoterapii"
+        "color": "Jasnobrązowy",
+        "birthplace": "Lokalna Farma, Polska"
+      },
+      "character": "Teddy jest najmłodszym i najbardziej zabawowym z naszych alpak, doskonale pasującym do swojego pluszowego imienia.",
+      "stories": {
+        "0": "Teddy uwielbia tarzać się w świeżej trawie w słoneczne poranki.",
+        "1": "Ma szczególną przyjaźń z farmą."
       }
     }
   }
