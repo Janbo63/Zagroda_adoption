@@ -17,12 +17,7 @@ const accommodations: Accommodation[] = [
     name: "Cozy Farmhouse Rooms", 
     image: "/images/accommodation/farmhouse-rooms.jpg", 
     description: "Sleep tight in our comfy farmhouse!" 
-  },
-  { 
-    name: "Unique Caravan Stays", 
-    image: "/images/accommodation/caravan-stays.jpg", 
-    description: "Camp out in our fun caravans!" 
-  },
+  }
 ]
 
 interface AccommodationSectionProps {

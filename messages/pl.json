@@ -41,9 +41,6 @@
     "farmhouseRoomsTitle": "Przytulne pokoje w gospodarstwie",
     "farmhouseRoomsDescription": "Doświadcz wiejskiego uroku w naszym odnowionym gospodarstwie",
     "farmhouseRoomsAlt": "Przytulne pokoje w gospodarstwie Zagrody Alpakoterapii",
-    "caravanStaysTitle": "Unikalne pobyty w przyczepach",
-    "caravanStaysDescription": "Ciesz się oryginalnym pobytem w naszych zabytkowych przyczepach",
-    "caravanStaysAlt": "Unikalne pobyty w przyczepach w Zagrodzie Alpakoterapii",
     "bookStay": "Zarezerwuj pobyt",
     "activitiesTitle": "Nasze aktywności",
     "meetAlpacasTitle": "Spotkanie z alpakami",
@@ -88,10 +85,6 @@
     "farmhouseRooms": {
       "title": "Pokoje w gospodarstwie",
       "description": "Doświadcz uroku naszego odnowionego gospodarstwa"
-    },
-    "caravanStays": {
-      "title": "Pobyty w przyczepach",
-      "description": "Ciesz się unikalnym pobytem w naszych zabytkowych przyczepach"
     },
     "bookNow": "Zarezerwuj teraz",
     "checkAvailability": "Sprawdź dostępność"
@@ -146,11 +139,6 @@
       "name": "Przytulne Pokoje w Gospodarstwie",
       "description": "Wyśpij się w naszym wygodnym gospodarstwie!",
       "alt": "Przytulne pokoje w gospodarstwie"
-    },
-    "uniquecaravanstays": {
-      "name": "Wyjątkowe Pobyty w Przyczepach",
-      "description": "Spędź noc w naszych fajnych przyczepach!",
-      "alt": "Zakwaterowanie w przyczepie"
     }
   },
   "hero": {

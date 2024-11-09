@@ -41,9 +41,6 @@
     "farmhouseRoomsTitle": "Cozy Farmhouse Rooms",
     "farmhouseRoomsDescription": "Experience rustic charm in our renovated farmhouse",
     "farmhouseRoomsAlt": "Cozy farmhouse rooms at Zagroda Alpakoterapii",
-    "caravanStaysTitle": "Unique Caravan Stays",
-    "caravanStaysDescription": "Enjoy a quirky stay in our vintage caravans",
-    "caravanStaysAlt": "Unique caravan stays at Zagroda Alpakoterapii",
     "bookStay": "Book Your Stay",
     "activitiesTitle": "Our Activities",
     "meetAlpacasTitle": "Meet the Alpacas",
@@ -88,10 +85,6 @@
     "farmhouseRooms": {
       "title": "Farmhouse Rooms",
       "description": "Experience the charm of our renovated farmhouse"
-    },
-    "caravanStays": {
-      "title": "Caravan Stays",
-      "description": "Enjoy a unique stay in our vintage caravans"
     },
     "bookNow": "Book Now",
     "checkAvailability": "Check Availability"
@@ -164,11 +157,6 @@
       "name": "Cozy Farmhouse Rooms",
       "description": "Sleep tight in our comfy farmhouse!",
       "alt": "Cozy farmhouse accommodation"
-    },
-    "uniquecaravanstays": {
-      "name": "Unique Caravan Stays",
-      "description": "Camp out in our fun caravans!",
-      "alt": "Caravan accommodation"
     },
     "bookNow": "Book Now"
   },
