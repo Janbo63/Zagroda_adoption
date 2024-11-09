@@ -185,46 +185,46 @@
     "character": "Character",
     "stories": "Stories",
     "age": "Age",
-    "years": "years",
     "color": "Color",
     "birthplace": "Birthplace",
+    "years": "years",
     "micky": {
       "name": "Micky",
-      "character": "Micky is a gentle and curious alpaca. He loves to approach visitors and is often the first to greet newcomers to the farm.",
-      "stories": [
-        "Once, Micky figured out how to open the gate and led the whole troop on an adventure around the farm!",
-        "Micky has a special fondness for children and always seems to know when a child needs extra comfort during therapy sessions."
-      ],
-      "attributes": {
-        "age": "5",
-        "color": "White",
-        "birthplace": "Local Farm, Poland"
-      }
-    },
-    "elvis": {
-      "name": "Elvis",
-      "character": "Elvis is the rock star of the group. He's charismatic and loves being the center of attention during farm events.",
-      "stories": [
-        "During a farm open day, Elvis 'performed' by humming along to the background music, much to everyone's amusement.",
-        "Elvis has a habit of striking poses whenever he sees a camera, earning him the nickname 'The King' among the staff."
-      ],
       "attributes": {
         "age": "4",
         "color": "Brown",
         "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Micky is the gentle leader of our alpaca herd, known for his calm demeanor and friendly nature.",
+      "stories": {
+        "0": "Micky once helped a shy child overcome their fears by approaching them with gentle curiosity.",
+        "1": "He's known for his unique humming sound that he makes when he's happy."
+      }
+    },
+    "elvis": {
+      "name": "Elvis",
+      "attributes": {
+        "age": "3",
+        "color": "White",
+        "birthplace": "Local Farm, Poland"
+      },
+      "character": "Elvis is the showman of the group, always ready to entertain visitors with his charming personality.",
+      "stories": {
+        "0": "Elvis loves to dance in the meadow, especially during sunset.",
+        "1": "He has a special talent for making children laugh with his silly expressions."
       }
     },
     "ricky": {
       "name": "Ricky",
-      "character": "Ricky is the adventurous one. He's always eager to explore new areas of the farm and try new activities.",
-      "stories": [
-        "Ricky once led a group of visitors on an impromptu 'tour' of the farm, showing them all his favorite spots.",
-        "During a thunderstorm, Ricky surprised everyone by calmly watching the lightning, while the other alpacas sought shelter."
-      ],
       "attributes": {
-        "age": "3",
-        "color": "Black",
+        "age": "5",
+        "color": "Black and White",
         "birthplace": "Alpaca Breeder, Southern Poland"
+      },
+      "character": "Ricky is the adventurous one, always curious and eager to explore new things.",
+      "stories": {
+        "0": "Ricky once discovered a hidden apple tree and now loves to climb it whenever he can.",
+        "1": "He has a knack for finding the most interesting spots on the farm."
       }
     },
     "teddy": {
