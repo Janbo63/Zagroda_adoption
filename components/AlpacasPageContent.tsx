@@ -3,10 +3,9 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-export default function AlpacasPageContent() {
+export function AlpacasPageContent({ locale }: { locale: string }) {
   const t = useTranslations('alpacas')
   
-  // Create an array of alpaca IDs
   const alpacaIds = ['micky', 'elvis', 'ricky', 'teddy', 'suri', 'freddy']
   
   return (
@@ -14,7 +13,6 @@ export default function AlpacasPageContent() {
       <h1 className="text-3xl font-bold mb-8">{t('pageTitle')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {alpacaIds.map((alpacaId) => {
-          // Safely access translations using optional chaining
           const name = t(`${alpacaId}.name`)
           const character = t(`${alpacaId}.character`)
           const stories = [
