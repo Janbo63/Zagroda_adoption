@@ -107,22 +107,29 @@
       "description": "Get up close with our alpaca herd",
       "details": "Experience a unique opportunity to meet our friendly alpaca herd.",
       "highlights": "Meet our friendly alpacas and learn about their unique personalities. You'll get to interact with the herd, learn about alpaca care, and have plenty of photo opportunities.",
-      "requirements": "Comfortable walking shoes, weather-appropriate clothing. Camera optional. Advance booking required."
+      "requirements": "Comfortable walking shoes, weather-appropriate clothing. Camera optional. Advance booking required.",
+      "alt": "Meet the Alpacas Activity"
     },
     "alpacawalks": {
       "name": "Alpaca Walks",
       "description": "Take a walk with an alpaca companion",
       "details": "Join us for a peaceful walk through scenic trails with your own alpaca companion.",
       "highlights": "Individual walk with an alpaca, scenic routes, learn to handle alpacas, photo opportunities. Experience the joy of walking with these gentle creatures while enjoying beautiful surroundings.",
-      "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years, advance booking required. Basic fitness level needed for walking activity."
+      "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years, advance booking required. Basic fitness level needed for walking activity.",
+      "alt": "Alpaca Walks Activity"
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
       "description": "Private guided tour with alpacas",
       "details": "Enjoy an exclusive experience with our alpacas in a private setting.",
       "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities. Enjoy a personalized journey with our alpacas tailored to your group's interests.",
-      "requirements": "Comfortable walking shoes, weather appropriate clothing, advance booking required, maximum group size: 6 people. Perfect for families and small groups."
-    }
+      "requirements": "Comfortable walking shoes, weather appropriate clothing, advance booking required, maximum group size: 6 people. Perfect for families and small groups.",
+      "alt": "Private Alpaca Safari Activity"
+    },
+    "duration": "Duration",
+    "groupSize": "Group Size",
+    "minAge": "Minimum Age",
+    "availability": "Availability"
   },
   "blog": {
     "title": "Our Blog",

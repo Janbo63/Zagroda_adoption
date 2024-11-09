@@ -107,22 +107,29 @@
       "description": "Spotkaj się z bliska z naszym stadem alpak",
       "details": "Skorzystaj z wyjątkowej okazji poznania naszego przyjaznego stada alpak.",
       "highlights": "Poznaj nasze przyjazne alpaki i ich wyjątkowe osobowości. Będziesz mógł wejść w interakcję ze stadem, dowiedzieć się więcej o opiece nad alpakami i zrobić pamiątkowe zdjęcia.",
-      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody. Aparat fotograficzny opcjonalnie. Wymagana wcześniejsza rezerwacja."
+      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody. Aparat fotograficzny opcjonalnie. Wymagana wcześniejsza rezerwacja.",
+      "alt": "Poznaj Alpaki"
     },
     "alpacawalks": {
       "name": "Spacery z Alpakami",
       "description": "Spaceruj w towarzystwie alpaki",
       "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami w towarzystwie własnej alpaki.",
       "highlights": "Indywidualny spacer z alpaką, malownicze trasy, nauka prowadzenia alpaki, możliwości zrobienia zdjęć. Doświadcz radości spaceru z tymi łagodnymi stworzeniami, podziwiając piękne otoczenie.",
-      "requirements": "Wygodne buty trekkingowe, odpowiednie ubranie do pogody, minimalny wiek: 6 lat, wymagana wcześniejsza rezerwacja. Podstawowa sprawność fizyczna potrzebna do aktywności spacerowej."
+      "requirements": "Wygodne buty trekkingowe, odpowiednie ubranie do pogody, minimalny wiek: 6 lat, wymagana wcześniejsza rezerwacja. Podstawowa sprawność fizyczna potrzebna do aktywności spacerowej.",
+      "alt": "Spacery z Alpakami"
     },
     "privatealpacasafari": {
       "name": "Prywatne Safari z Alpakami",
       "description": "Prywatna wycieczka z przewodnikiem i alpakami",
       "details": "Ciesz się ekskluzywnym doświadczeniem z alpakami w prywatnym otoczeniu.",
       "highlights": "Prywatny przewodnik, spersonalizowane doświadczenie, wydłużony czas z alpakami, specjalne możliwości zdjęciowe. Ciesz się spersonalizowaną przygodą z naszymi alpakami dostosowaną do zainteresowań Twojej grupy.",
-      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody, wymagana wcześniejsza rezerwacja, maksymalna wielkość grupy: 6 osób. Idealne dla rodzin i małych grup."
+      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody, wymagana wcześniejsza rezerwacja, maksymalna wielkość grupy: 6 osób. Idealne dla rodzin i małych grup.",
+      "alt": "Prywatne Safari z Alpakami"
     },
+    "duration": "Czas trwania",
+    "groupSize": "Wielkość grupy",
+    "minAge": "Minimalny wiek",
+    "availability": "Dostępność",
     "tabLabels": {
       "activityAttributes": "Atrybuty Aktywności",
       "activityDetails": "Szczegóły Aktywności",
