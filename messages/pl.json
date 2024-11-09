@@ -139,6 +139,8 @@
   },
   "accommodation": {
     "title": "Zostań z Nami",
+    "sectionTitle": "Zakwaterowanie",
+    "bookNow": "Zarezerwuj Pobyt",
     "cozyfarmhouserooms": {
       "name": "Przytulne Pokoje w Gospodarstwie",
       "description": "Wyśpij się w naszym wygodnym gospodarstwie!",
