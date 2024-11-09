@@ -96,7 +96,11 @@ export function AccommodationSection({ locale }: AccommodationSectionProps) {
               {t('cozyfarmhouserooms.description')}
             </CardDescription>
             <Link href="/book-now">
-              <Button size="lg">{t('bookNow')}</Button>
+              <Button 
+                className="bg-blue-500 text-white hover:bg-blue-600 rounded-full transition-all duration-300 px-6"
+              >
+                {t('bookNow')}
+              </Button>
             </Link>
           </div>
         </CardContent>

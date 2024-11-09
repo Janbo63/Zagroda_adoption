@@ -51,7 +51,9 @@ export function AnimalSection({ locale }: { locale: string }) {
                   />
                 </div>
                 <CardDescription>{t(`${animal.id}.description`)}</CardDescription>
-                <Button variant="outline" className="mt-4">
+                <Button 
+                  className="mt-4 bg-blue-500 text-white hover:bg-blue-600 rounded-full transition-all duration-300 px-6"
+                >
                   {t('meetButton', { name: t(`${animal.id}.name`) })}
                 </Button>
               </CardContent>
