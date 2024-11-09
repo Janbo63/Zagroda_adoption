@@ -9,10 +9,26 @@ import { useState, useEffect } from 'react'
 
 const accommodationImages = [
     "/images/accommodation/farmhouse-rooms.jpg",
-    "/images/accommodation/room1.jpg",
-    "/images/accommodation/room2.jpg",
-    "/images/accommodation/room3.jpg",
-    // Add more image paths as needed
+    "/images/accommodation/Garden-1.jpg",
+    "/images/accommodation/garden2.jpg",
+    "/images/accommodation/kitchen.jpg",
+    "/images/accommodation/lounge-1.jpg",
+    "/images/accommodation/table-tennis-table.jpg",
+    "/images/accommodation/Jungle-Room-5-edited.jpg",
+    "/images/accommodation/apartment3-1.jpg",
+    "/images/accommodation/fireside-1-1.jpg"
+]
+
+const accommodationImageDetails = [
+    { src: "/images/accommodation/farmhouse-rooms.jpg", alt: "Farmhouse Exterior" },
+    { src: "/images/accommodation/Garden-1.jpg", alt: "Beautiful Garden View" },
+    { src: "/images/accommodation/garden2.jpg", alt: "Garden Second View" },
+    { src: "/images/accommodation/kitchen.jpg", alt: "Fully Equipped Kitchen" },
+    { src: "/images/accommodation/lounge-1.jpg", alt: "Comfortable Lounge Area" },
+    { src: "/images/accommodation/table-tennis-table.jpg", alt: "Table Tennis Recreation Area" },
+    { src: "/images/accommodation/Jungle-Room-5-edited.jpg", alt: "Jungle Themed Room" },
+    { src: "/images/accommodation/apartment3-1.jpg", alt: "Apartment Interior" },
+    { src: "/images/accommodation/fireside-1-1.jpg", alt: "Cozy Fireside Area" }
 ]
 
 interface AccommodationSectionProps {
@@ -54,7 +70,7 @@ export function AccommodationSection({ locale }: AccommodationSectionProps) {
               <Image
                 key={image}
                 src={image}
-                alt={`${t('cozyfarmhouserooms.name')} - Image ${index + 1}`}
+                alt={accommodationImageDetails[index].alt}
                 width={1280}
                 height={720}
                 className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000
