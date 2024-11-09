@@ -11,10 +11,10 @@ import { useTranslations } from 'next-intl'
 const dogs = [
   {
     name: "Max",
-    image: "/images/dogs/max.jpg",
+    image: "/images/dogs/lucy.jpg",
     attributes: {
       age: 4,
-      color: "Golden",
+      color: "Golden and Tan",
       birthplace: "Local Shelter, Poland"
     },
     character: "Max is our friendly farm guardian. He's gentle with visitors but takes his job seriously.",

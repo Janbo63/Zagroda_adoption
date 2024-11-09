@@ -24,7 +24,6 @@ export function Navbar({ locale }: NavbarProps) {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
-  // Add a safety check for pathname
   const currentPath = pathname?.replace(/^\/(en|pl)/, '') || ''
 
   return (
@@ -34,7 +33,7 @@ export function Navbar({ locale }: NavbarProps) {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center">
+              <Link href={`/${locale}`} className="flex items-center">
                 <Image
                   src="/images/zagrodalogo.png"
                   alt="Zagroda Alpakoterapii Logo"
@@ -47,11 +46,11 @@ export function Navbar({ locale }: NavbarProps) {
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navigation.map((item) => {
-                const isActive = pathname === item.href
+                const isActive = currentPath === item.href
                 return (
                   <Link
                     key={item.name}
-                    href={item.href}
+                    href={`/${locale}${item.href}`}
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                       isActive
                         ? 'border-orange-400 text-white'
