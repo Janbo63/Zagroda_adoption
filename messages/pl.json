@@ -236,5 +236,68 @@
         "1": "Ma szczególną przyjaźń z farmą."
       }
     }
+  },
+  "goats": {
+    "pageTitle": "Poznaj Naszą Kozią Bandę",
+    "backToAnimals": "Powrót do Zwierząt",
+    "attributes": "Atrybuty",
+    "character": "Charakter",
+    "stories": "Historie",
+    "age": "Wiek",
+    "color": "Kolor",
+    "birthplace": "Miejsce urodzenia",
+    "years": "lat",
+    "madonna": {
+      "name": "Madonna",
+      "attributes": {
+        "age": "3",
+        "color": "Biały",
+        "birthplace": "Lokalna Farma, Polska"
+      },
+      "character": "Madonna jest diwą koziego stada. Uwielbia uwagę i często 'śpiewa' dla odwiedzających.",
+      "stories": {
+        "0": "Madonna kiedyś ukradła kapelusz odwiedzającego i nosiła go przez cały dzień po farmie.",
+        "1": "Ma zwyczaj stawania na najwyższym punkcie każdej konstrukcji, jakby pozowała do sesji zdjęciowej."
+      }
+    },
+    "ladygaga": {
+      "name": "Lady Gaga",
+      "attributes": {
+        "age": "2",
+        "color": "Czarno-biały",
+        "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Lady Gaga znana jest ze swojego unikalnego 'zmysłu mody', często można ją znaleźć z kwiatami lub liśćmi we włosach.",
+      "stories": {
+        "0": "Lady Gaga kiedyś zorganizowała 'kozią paradę', prowadząc całe stado w szeregu dookoła farmy.",
+        "1": "Ma szczególny talent do znajdowania najsmaczniejszych liści i dzieli się nimi z kozimi przyjaciółmi."
+      }
+    },
+    "nella": {
+      "name": "Nella",
+      "attributes": {
+        "age": "4",
+        "color": "Brązowy",
+        "birthplace": "Hodowca Kóz, Wschodnia Polska"
+      },
+      "character": "Nella jest łagodną duszą grupy. Szczególnie dobrze radzi sobie z dziećmi i uwielbia przytulanie.",
+      "stories": {
+        "0": "Nella kiedyś pocieszyła płaczące dziecko, przytulając się do niego i pozostając przy jego boku, aż się uśmiechnęło.",
+        "1": "Ma wyjątkową przyjaźń z jednym z farmowych kotów i często można je znaleźć drzemiące razem w słońcu."
+      }
+    },
+    "baron": {
+      "name": "Baron",
+      "attributes": {
+        "age": "5",
+        "color": "Czarny",
+        "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Baron jest dostojnym przywódcą koziego stada. Jest spokojny, mądry i opiekuńczy wobec innych.",
+      "stories": {
+        "0": "Baron kiedyś zaalarmował farmerów o złamanym płocie, wielokrotnie uderzając głową w drzwi stodoły, aż ktoś przyszedł sprawdzić.",
+        "1": "Ma wyjątkowy zwyczaj 'eskortowania' gości po farmie, spacerując obok nich jak przewodnik."
+      }
+    }
   }
 }

@@ -76,7 +76,7 @@
     },
     "dogs": {
       "name": "Dogs",
-      "description": "Our faithful canine companions",
+      "description": "Our loyal farm dogs are here to greet you and keep you company.",
       "alt": "Dogs at our farm"
     }
   },
@@ -264,6 +264,69 @@
         "age": "4",
         "color": "Dark Brown",
         "birthplace": "Zagroda Alpakoterapii"
+      }
+    }
+  },
+  "goats": {
+    "pageTitle": "Meet Our Goat Gang",
+    "backToAnimals": "Back to Animals",
+    "attributes": "Attributes",
+    "character": "Character",
+    "stories": "Stories",
+    "age": "Age",
+    "color": "Color",
+    "birthplace": "Birthplace",
+    "years": "years",
+    "madonna": {
+      "name": "Madonna",
+      "attributes": {
+        "age": "3",
+        "color": "White",
+        "birthplace": "Local Farm, Poland"
+      },
+      "character": "Madonna is the diva of the goat herd. She loves attention and often 'sings' to visitors.",
+      "stories": {
+        "0": "Madonna once stole a visitor's hat and wore it around the farm for an entire day.",
+        "1": "She has a habit of standing on the highest point of any structure, as if posing for a photo shoot."
+      }
+    },
+    "ladygaga": {
+      "name": "Lady Gaga",
+      "attributes": {
+        "age": "2",
+        "color": "Black and White",
+        "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Lady Gaga is known for her unique 'fashion sense', often found wearing flowers or leaves in her fur.",
+      "stories": {
+        "0": "Lady Gaga once organized a 'goat parade' where she led the entire herd in a line around the farm.",
+        "1": "She has a special talent for finding the tastiest leaves and will share them with her goat friends."
+      }
+    },
+    "nella": {
+      "name": "Nella",
+      "attributes": {
+        "age": "4",
+        "color": "Brown",
+        "birthplace": "Goat Breeder, Eastern Poland"
+      },
+      "character": "Nella is the gentle soul of the group. She's particularly good with children and loves cuddles.",
+      "stories": {
+        "0": "Nella once comforted a crying child by nuzzling up to them and staying by their side until they smiled.",
+        "1": "She has a unique friendship with one of the farm cats and they can often be found napping together in the sun."
+      }
+    },
+    "baron": {
+      "name": "Baron",
+      "attributes": {
+        "age": "5",
+        "color": "Black",
+        "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Baron is the dignified leader of the goat herd. He's calm, wise, and protective of the others.",
+      "stories": {
+        "0": "Baron once alerted the farmers to a broken fence by repeatedly headbutting the barn door until someone came to check.",
+        "1": "He has a unique habit of 'escorting' visitors around the farm, walking beside them like a tour guide."
       }
     }
   }
