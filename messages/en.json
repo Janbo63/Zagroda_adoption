@@ -242,28 +242,28 @@
     },
     "suri": {
       "name": "Suri",
-      "character": "Suri is the fashionista of the group. Her unique coat always draws attention, and she seems to enjoy being admired.",
-      "stories": [
-        "During a shearing session, Suri kept trying to style her wool into different 'hairdos', much to the amusement of the shearers.",
-        "Suri has a talent for finding the sunniest spots in the field, and the other alpacas often follow her lead for the best sunbathing locations."
-      ],
       "attributes": {
         "age": "2",
         "color": "White with Brown Spots",
         "birthplace": "Alpaca Farm, Western Poland"
+      },
+      "character": "Suri is the fashionista of the group. Her unique coat always draws attention, and she seems to enjoy being admired.",
+      "stories": {
+        "0": "During a shearing session, Suri kept trying to style her wool into different 'hairdos', much to the amusement of the shearers.",
+        "1": "Suri has a talent for finding the sunniest spots in the field, and the other alpacas often follow her lead for the best sunbathing locations."
       }
     },
     "freddy": {
       "name": "Freddy",
-      "character": "Freddy is the peacekeeper of the group. He has a calm demeanor and often mediates when there's any tension among the other alpacas.",
-      "stories": [
-        "Once, when two younger alpacas were squabbling over a favorite toy, Freddy intervened by bringing them each a different toy, resolving the conflict.",
-        "Freddy has a unique way of communicating with humans, using different humming tones that the regular visitors have started to recognize and interpret."
-      ],
       "attributes": {
         "age": "4",
         "color": "Dark Brown",
         "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Freddy is the peacekeeper of the group. He has a calm demeanor and often mediates when there's any tension among the other alpacas.",
+      "stories": {
+        "0": "Once, when two younger alpacas were squabbling over a favorite toy, Freddy intervened by bringing them each a different toy, resolving the conflict.",
+        "1": "Freddy has a unique way of communicating with humans, using different humming tones that the regular visitors have started to recognize and interpret."
       }
     }
   },

@@ -33,7 +33,7 @@ export function GoatsPageContent({ locale }: GoatsPageContentProps) {
             </CardHeader>
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src={`/images/goats/${t(`${id}.name`)}.jpg`}
+                src={`/images/goats/${id === 'ladygaga' ? 'Lady-Gaga' : t(`${id}.name`)}.jpg`}
                 alt={t(`${id}.name`)}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

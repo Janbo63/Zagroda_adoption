@@ -235,6 +235,32 @@
         "0": "Teddy uwielbia tarzać się w świeżej trawie w słoneczne poranki.",
         "1": "Ma szczególną przyjaźń z farmą."
       }
+    },
+    "suri": {
+      "name": "Suri",
+      "attributes": {
+        "age": "2",
+        "color": "Biały z brązowymi plamami",
+        "birthplace": "Hodowla Alpak, Zachodnia Polska"
+      },
+      "character": "Suri jest modną elegantką grupy. Jej wyjątkowa sierść zawsze przyciąga uwagę, a ona sama zdaje się cieszyć z podziwu.",
+      "stories": {
+        "0": "Podczas strzyżenia Suri próbowała układać swoją wełnę w różne 'fryzury', ku rozbawieniu strzyżących.",
+        "1": "Suri ma talent do znajdowania najbardziej nasłonecznionych miejsc na pastwisku, a inne alpaki często podążają za jej wyborem najlepszych miejsc do opalania."
+      }
+    },
+    "freddy": {
+      "name": "Freddy",
+      "attributes": {
+        "age": "4",
+        "color": "Ciemnobrązowy",
+        "birthplace": "Zagroda Alpakoterapii"
+      },
+      "character": "Freddy jest rozjemcą grupy. Ma spokojne usposobienie i często mediuje, gdy pojawia się napięcie między innymi alpakami.",
+      "stories": {
+        "0": "Pewnego razu, gdy dwie młodsze alpaki kłóciły się o ulubioną zabawkę, Freddy interweniował przynosząc każdej z nich inną zabawkę, rozwiązując konflikt.",
+        "1": "Freddy ma wyjątkowy sposób komunikowania się z ludźmi, używając różnych tonów mruczenia, które stali bywalcy nauczyli się już rozpoznawać i interpretować."
+      }
     }
   },
   "goats": {
