@@ -56,17 +56,6 @@
     "weekendHelperDescription": "Doświadcz życia na farmie z pierwszej ręki",
     "weekendHelperAlt": "Aktywności pomocnika weekendowego w Zagrodzie Alpakoterapii",
     "exploreActivities": "Odkryj aktywności",
-    "latestBlog": "Najnowsze wpisy na blogu",
-    "blogPost1Title": "Wiosna na farmie",
-    "blogPost1Excerpt": "Alpaki cieszą się świeżą trawą...",
-    "blogPost1Alt": "Wiosna na farmie w Zagrodzie Alpakoterapii",
-    "blogPost2Title": "Nowe koźlęta",
-    "blogPost2Excerpt": "Z radością ogłaszamy narodziny...",
-    "blogPost2Alt": "Nowe koźlęta w Zagrodzie Alpakoterapii",
-    "blogPost3Title": "Doświadczenia pomocników weekendowych",
-    "blogPost3Excerpt": "W zeszły weekend nasi pomocnicy mieli okazję doświadczyć...",
-    "blogPost3Alt": "Doświadczenia pomocników weekendowych w Zagrodzie Alpakoterapii",
-    "readMore": "Czytaj więcej",
     "logoAlt": "Logo Zagrody Alpakoterapii",
     "contactUs": "Skontaktuj się z nami",
     "phoneNumber": "695 545 330",
@@ -143,13 +132,6 @@
       "highlights": "Główne Atrakcje",
       "requirements": "Wymagania"
     }
-  },
-  "blog": {
-    "title": "Nasz Blog",
-    "noPosts": "Aktualnie brak wpisów na blogu. Sprawdź ponownie wkrótce!",
-    "readMore": "Czytaj Więcej",
-    "recentPosts": "Najnowsze Wpisy",
-    "viewAll": "Zobacz Wszystkie Wpisy"
   },
   "contact": {
     "title": "Kontakt",
