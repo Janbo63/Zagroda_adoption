@@ -10,7 +10,6 @@ interface Activity {
   name: string;
   image: string;
   description: string;
-  link: string;
   id: string;
 }
 
@@ -19,21 +18,18 @@ const activities: Activity[] = [
     name: "Meet the Alpacas", 
     image: "/images/activities/meet-alpacas.jpg", 
     description: "Make new fluffy friends!", 
-    link: "/meet-alpacas", 
     id: "meetthealpacas" 
   },
   { 
     name: "Alpaca Walks", 
     image: "/images/activities/alpaca-walks.jpg", 
     description: "Take a stroll with your new buddy!", 
-    link: "/alpaca-walks", 
     id: "alpacawalks" 
   },
   { 
     name: "Private Alpaca Safari", 
     image: "/images/Meet-and-Greet.jpg", 
     description: "Explore the farm with a herd of alpacas!", 
-    link: "/private-alpaca-safari", 
     id: "privatealpacasafari" 
   },
 ]
@@ -68,7 +64,7 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
                 />
               </div>
               <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
-              <Link href={`/${locale}/activities/${activity.id}`}>
+              <Link href={`/${locale}/activities`}>
                 <Button 
                   className="mt-4 bg-blue-500 text-white hover:bg-blue-600 rounded-full transition-all duration-300 px-6"
                 >
