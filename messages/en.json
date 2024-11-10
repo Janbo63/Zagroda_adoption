@@ -104,32 +104,51 @@
     "price": "Price",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
-      "description": "Get up close with our alpaca herd",
+      "image": "/images/activities/meet-alpacas.jpg",
+      "description": "Get up close and personal with our friendly alpacas! Perfect for families who want to learn more about these fascinating animals.",
       "details": "Experience a unique opportunity to meet our friendly alpaca herd.",
       "highlights": "Meet our friendly alpacas and learn about their unique personalities. You'll get to interact with the herd, learn about alpaca care, and have plenty of photo opportunities.",
       "requirements": "Comfortable walking shoes, weather-appropriate clothing. Camera optional. Advance booking required.",
+      "attributes": {
+        "cost": "£20 per family (up to 2 adults + 2 children)",
+        "duration": "Approximately 1 hour",
+        "terms": "No special requirements. Suitable for all ages."
+      },
       "alt": "Meet the Alpacas Activity"
     },
     "alpacawalks": {
-      "name": "Alpaca Walks",
-      "description": "Take a walk with an alpaca companion",
+      "name": "Walk with the Alpacas",
+      "image": "/images/activities/alpaca-walks.jpg",
+      "description": "Take a leisurely stroll through our beautiful farm grounds, accompanied by your very own alpaca buddy!",
       "details": "Join us for a peaceful walk through scenic trails with your own alpaca companion.",
-      "highlights": "Individual walk with an alpaca, scenic routes, learn to handle alpacas, photo opportunities. Experience the joy of walking with these gentle creatures while enjoying beautiful surroundings.",
-      "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years, advance booking required. Basic fitness level needed for walking activity.",
+      "highlights": "Individual walk with an alpaca, scenic routes, learn to handle alpacas, photo opportunities.",
+      "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years.",
+      "attributes": {
+        "cost": "£20 per alpaca (max 2 people per alpaca)",
+        "duration": "Approximately 90 minutes",
+        "terms": "Suitable for ages 6 and up. Sturdy footwear recommended."
+      },
       "alt": "Alpaca Walks Activity"
     },
     "privatealpacasafari": {
       "name": "Private Alpaca Safari",
-      "description": "Private guided tour with alpacas",
+      "image": "/images/activities/alpaca-safari.jpg",
+      "description": "Enjoy an exclusive tour of our farm with a herd of alpacas! Perfect for larger groups or special occasions.",
       "details": "Enjoy an exclusive experience with our alpacas in a private setting.",
-      "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities. Enjoy a personalized journey with our alpacas tailored to your group's interests.",
-      "requirements": "Comfortable walking shoes, weather appropriate clothing, advance booking required, maximum group size: 6 people. Perfect for families and small groups.",
+      "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities.",
+      "requirements": "Booking required at least 48 hours in advance. Suitable for all ages.",
+      "attributes": {
+        "cost": "£100 (up to 6 alpacas, max 12 people)",
+        "duration": "Approximately 2 hours",
+        "terms": "Booking required at least 48 hours in advance. Suitable for all ages."
+      },
       "alt": "Private Alpaca Safari Activity"
     },
     "duration": "Duration",
     "groupSize": "Group Size",
     "minAge": "Minimum Age",
-    "availability": "Availability"
+    "availability": "Availability",
+    "bookNow": "Book Now"
   },
   "blog": {
     "title": "Our Blog",
