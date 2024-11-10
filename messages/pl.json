@@ -149,14 +149,7 @@
     "sectionTitle": "Zakwaterowanie",
     "bookNow": "Zarezerwuj Pobyt",
     "cozyfarmhouserooms": {
-      "name": "Przytulne Pokoje w Gospodarstwie",
-      "description": "Wyśpij się w naszym wygodnym gospodarstwie!",
-      "alt": "Przytulne pokoje w gospodarstwie"
-    },
-    "uniquecaravanstays": {
-      "name": "Wyjątkowe Pobyty w Przyczepach",
-      "description": "Spędź noc w naszych fajnych przyczepach!",
-      "alt": "Zakwaterowanie w przyczepie"
+      "name": "Przytulne Pokoje w Gospodarstwie"
     }
   },
   "hero": {
@@ -191,9 +184,9 @@
         "color": "Brązowy",
         "birthplace": "Zagroda Alpakoterapii"
       },
-      "character": "Mickey jest bardzo bojaźliwy, boi się hałasów i krzyków.",
+      "character": "Micky jest bardzo bojaźliwy, boi się hałasów i krzyków.",
       "stories": {
-        "0": "Gdy Mickey zobaczył pierwszy raz mysz w stodole wystraszył się i szybko uciekł."
+        "0": "Gdy Micky zobaczył pierwszy raz mysz w stodole wystraszył się i szybko uciekł."
       }
     },
     "elvis": {
@@ -229,8 +222,7 @@
       },
       "character": "Teddy jest przywódcą stada. Znany jest ze swojego spokojnego usposobienia i przyjaznej natury.",
       "stories": {
-        "0": "Teddy dał się prowadzić 2 letniej dziewczynce na spacer.",
-        
+        "0": "Teddy dał się prowadzić 2 letniej dziewczynce na spacer."
       }
     },
     "suri": {
@@ -242,8 +234,7 @@
       },
       "character": "Suri jest bardzo odważny, przez co często próbuje dominować w stadzie.",
       "stories": {
-        "0": "Suri się niczego nie boi i pewnego razu napluł na Daisy.",
-      
+        "0": "Suri się niczego nie boi i pewnego razu napluł na Daisy."
       }
     },
     "freddy": {
@@ -255,8 +246,7 @@
       },
       "character": "Freddy ma zmienny charakter- czasami potrafi prychać na gości.",
       "stories": {
-        "0": "Freddy jest bardzo inteligentny. Szybko nauczył się prosić nóżką o jedzenie.",
-       
+        "0": "Freddy jest bardzo inteligentny. Szybko nauczył się prosić nóżką o jedzenie."
       }
     }
   },
