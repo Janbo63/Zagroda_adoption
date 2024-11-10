@@ -184,8 +184,8 @@
     "color": "Kolor",
     "birthplace": "Miejsce urodzenia",
     "years": "",
-    "mickey": {
-      "name": "Mickey",
+    "micky": {
+      "name": "Micky",
       "attributes": {
         "age": "2018",
         "color": "Brązowy",
@@ -205,8 +205,7 @@
       },
       "character": "Elvis jest uparty i buntowniczy. Jest ciekawski oraz często gwiazdorzy.",
       "stories": {
-        "0": "Elvis potrafi wysoko skakać, więc kiedyś przeskoczył przez płot i uciekł do lasu. Na szczęście po krótkim czasie wrócił.",
-        
+        "0": "Elvis potrafi wysoko skakać, więc kiedyś przeskoczył przez płot i uciekł do lasu. Na szczęście po krótkim czasie wrócił."
       }
     },
     "ricky": {
@@ -218,8 +217,7 @@
       },
       "character": "Ricky jest bardzo nieśmiały, lecz jest największą gadułą.",
       "stories": {
-        "0": "Ricky przyjechał do nas w gości, ale tak się zaprzyjaźnił z Elvisem, że został.",
-       
+        "0": "Ricky przyjechał do nas w gości, ale tak się zaprzyjaźnił z Elvisem, że został."
       }
     },
     "teddy": {
