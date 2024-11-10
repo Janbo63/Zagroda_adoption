@@ -203,7 +203,7 @@
     "elvis": {
       "name": "Elvis",
       "attributes": {
-        "age": "2020",
+        "Born in": "2020",
         "color": "Gray and white",
         "birthplace": "Local Farm, Poland"
       },
@@ -215,7 +215,7 @@
     "ricky": {
       "name": "Ricky",
       "attributes": {
-        "age": "2020",
+        "Born in": "2020",
         "color": "Red and white",
         "birthplace": "Zagroda Alpakoterapii"
       },
@@ -227,7 +227,7 @@
     "teddy": {
       "name": "Teddy",
       "attributes": {
-        "age": "2018",
+        "Born in": "2018",
         "color": "Caramel",
         "birthplace": "Local Farm, Poland"
       },
@@ -239,7 +239,7 @@
     "suri": {
       "name": "Suri",
       "attributes": {
-        "age": "2018",
+        "Born in": "2018",
         "color": "Black",
         "birthplace": "Alpaca Farm, Western Poland"
       },
@@ -251,7 +251,7 @@
     "freddy": {
       "name": "Freddy",
       "attributes": {
-        "age": "2019",
+        "Born in": "2019",
         "color": "Beige",
         "birthplace": "Zagroda Alpakoterapii"
       },
