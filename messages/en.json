@@ -110,7 +110,7 @@
       "highlights": "Meet our friendly alpacas and learn about their unique personalities. You'll get to interact with the herd, learn about alpaca care, and have plenty of photo opportunities.",
       "requirements": "Comfortable walking shoes, weather-appropriate clothing. Camera optional. Advance booking required.",
       "attributes": {
-        "cost": "£20 per family (up to 2 adults + 2 children)",
+        "cost": "100zł per family (up to 2 adults + 2 children)",
         "duration": "Approximately 1 hour",
         "terms": "No special requirements. Suitable for all ages."
       },
@@ -124,21 +124,21 @@
       "highlights": "Individual walk with an alpaca, scenic routes, learn to handle alpacas, photo opportunities.",
       "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years.",
       "attributes": {
-        "cost": "£20 per alpaca (max 2 people per alpaca)",
+        "cost": "150zł per alpaca (max 2 people per alpaca)",
         "duration": "Approximately 90 minutes",
         "terms": "Suitable for ages 6 and up. Sturdy footwear recommended."
       },
       "alt": "Alpaca Walks Activity"
     },
     "privatealpacasafari": {
-      "name": "Private Alpaca Safari",
+      "name": "Special Private Offer",
       "image": "/images/activities/alpaca-safari.jpg",
       "description": "Enjoy an exclusive tour of our farm with a herd of alpacas! Perfect for larger groups or special occasions.",
       "details": "Enjoy an exclusive experience with our alpacas in a private setting.",
       "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities.",
       "requirements": "Booking required at least 48 hours in advance. Suitable for all ages.",
       "attributes": {
-        "cost": "£100 (up to 6 alpacas, max 12 people)",
+        "cost": "Priced on request(up to 6 alpacas, max 12 people)",
         "duration": "Approximately 2 hours",
         "terms": "Booking required at least 48 hours in advance. Suitable for all ages."
       },
