@@ -35,11 +35,11 @@ export function Navbar({ locale }: NavbarProps) {
             <div className="flex-shrink-0 flex items-center">
               <Link href={`/${locale}`} className="flex items-center">
                 <Image
-                  src="/images/zagrodalogo.png"
+                  src="/images/zagrodanewlogo.png"
                   alt="Zagroda Alpakoterapii Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2"
+                  width={80}
+                  height={80}
+                  className="mr-2 object-contain"
                 />
                 <span className="text-xl font-bold">Zagroda Alpakoterapii</span>
               </Link>
