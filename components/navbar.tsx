@@ -94,7 +94,7 @@ export function Navbar({ locale }: NavbarProps) {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="sm:hidden">
+        <div className="sm:hidden fixed inset-x-0 top-16 bg-green-800 z-50">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navigation.map((item) => {
               const isActive = currentPath === item.href
@@ -102,12 +102,14 @@ export function Navbar({ locale }: NavbarProps) {
                 <Link
                   key={item.name}
                   href={`/${locale}${item.href}`}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  className={`block px-3 py-2 rounded-md text-base font-medium touch-manipulation ${
                     isActive
                       ? 'bg-orange-400 text-white'
-                      : 'text-gray-200 hover:bg-orange-400 hover:text-white'
+                      : 'text-gray-200 hover:bg-orange-400 hover:text-white active:bg-orange-500'
                   }`}
                   onClick={() => setIsOpen(false)}
+                  role="button"
+                  tabIndex={0}
                 >
                   {t(item.name)}
                 </Link>
