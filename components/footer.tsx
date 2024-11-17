@@ -15,7 +15,7 @@ export function Footer({ locale }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-center">
             <Image
-              src="/images/zagrodalogo.png"
+              src="/images/zagrodanewlogo.png"
               alt="Zagroda Alpakoterapii Logo"
               width={60}
               height={60}
