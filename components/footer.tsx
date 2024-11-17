@@ -30,7 +30,7 @@ export function Footer({ locale }: FooterProps) {
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <p className="flex items-center mb-2">
               <Phone className="mr-2" size={18} />
-              <a href="tel:695545330" className="hover:text-orange-200">695 545 330</a>
+              <a href="tel:+48695545330" className="hover:text-orange-200">+48 695 545 330</a>
             </p>
             <p className="flex items-center mb-2">
               <MapPin className="mr-2" size={18} />
