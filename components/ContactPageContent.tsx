@@ -13,7 +13,8 @@ interface ContactPageContentProps {
 
 export function ContactPageContent({ locale: _locale }: ContactPageContentProps) {
   const t = useTranslations('contact')
-  const phoneNumber = '695545330'
+  const phoneNumber = '+48695545330'
+  const displayNumber = '+48 695 545 330'
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -27,7 +28,7 @@ export function ContactPageContent({ locale: _locale }: ContactPageContentProps)
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-lg">{phoneNumber}</p>
+              <p className="text-lg">{displayNumber}</p>
               <div className="flex space-x-2">
                 <Button asChild variant="outline">
                   <Link href={`tel:${phoneNumber}`}>
