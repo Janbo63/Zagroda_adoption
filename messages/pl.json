@@ -34,7 +34,7 @@
     "goatsDescription": "Nasze figlarne kozy są zawsze gotowe do zabawy.",
     "goatsAlt": "Kozy w Zagrodzie Alpakoterapii",
     "dogsTitle": "Psy",
-    "dogsDescription": "Nasze wierne psy gospodarskie są tu, by Cię przywitać i dotrzymać Ci towarzystwa.",
+    "dogsDescription": "Nasi wierne psy gospodarskie są tu, by Cię przywitać i dotrzymać Ci towarzystwa.",
     "dogsAlt": "Psy w Zagrodzie Alpakoterapii",
     "meetThem": "Poznaj je",
     "stayTitle": "Zostań z nami",
@@ -202,9 +202,10 @@
         "color": "Brązowy",
         "birthplace": "Zagroda Alpakoterapii"
       },
-      "character": "Micky jest bardzo bojaźliwy, boi się hałasów i krzyków.",
+      "character": "Micky jest bardzo nieśmiały, boi się hałasów i krzyków.",
       "stories": {
-        "0": "Gdy Micky zobaczył pierwszy raz mysz w stodole wystraszył się i szybko uciekł."
+        "0": "Kiedy Micky po raz pierwszy zobaczył mysz w stodole, przestraszył się i szybko uciekł.",
+        "1": "Mimo swojej nieśmiałości, Micky wykazał się niezwykłą odwagą, gdy pomógł uspokoić zdenerwowane dziecko podczas terapii, delikatnie podchodząc i pozostając blisko."
       }
     },
     "elvis": {
@@ -214,21 +215,23 @@
         "color": "Szaro-biały",
         "birthplace": "Lokalna Farma, Polska"
       },
-      "character": "Elvis jest uparty i buntowniczy. Jest ciekawski oraz często gwiazdorzy.",
+      "character": "Elvis jest uparty i buntowniczy. Jest ciekawy i często zachowuje się jak gwiazda.",
       "stories": {
-        "0": "Elvis potrafi wysoko skakać, więc kiedyś przeskoczył przez płot i uciekł do lasu. Na szczęście po krótkim czasie wrócił."
+        "0": "Elvis potrafi bardzo wysoko skakać, więc pewnego razu przeskoczył przez płot i pobiegł do lasu. Na szczęście wrócił po krótkim czasie.",
+        "1": "Podczas jednej sesji terapeutycznej Elvis zaczął nucić, gdy odwiedzający śpiewał, żyjąc zgodnie ze swoim imieniem jako prawdziwy artysta!"
       }
     },
     "ricky": {
       "name": "Ricky",
       "attributes": {
         "age": "2020",
-        "color": "Rudo-biały",
+        "color": "Czerwono-biały",
         "birthplace": "Zagroda Alpakoterapii"
       },
-      "character": "Ricky jest bardzo nieśmiały, lecz jest największą gadułą.",
+      "character": "Ricky jest bardzo nieśmiały, ale jest największym gadułą.",
       "stories": {
-        "0": "Ricky przyjechał do nas w gości, ale tak się zaprzyjaźnił z Elvisem, że został."
+        "0": "Ricky przyszedł do nas jako gość, ale zaprzyjaźnił się tak dobrze z Elvisem, że został.",
+        "1": "Pewnego deszczowego dnia Ricky odkrył, że uwielbia bawić się w kałużach i teraz tańczy z radości, gdy pada deszcz."
       }
     },
     "teddy": {
@@ -238,9 +241,10 @@
         "color": "Karmelowy",
         "birthplace": "Lokalna Farma, Polska"
       },
-      "character": "Teddy jest przywódcą stada. Znany jest ze swojego spokojnego usposobienia i przyjaznej natury.",
+      "character": "Teddy jest liderem stada. Znany jest ze swojego spokojnego usposobienia i przyjaznej natury.",
       "stories": {
-        "0": "Teddy dał się prowadzić 2 letniej dziewczynce na spacer."
+        "0": "Teddy pozwolił 2-letniej dziewczynce zabrać się na spacer.",
+        "1": "Podczas burzowej nocy Teddy stał na straży młodszych alpak, pokazując swoje prawdziwe cechy przywódcze."
       }
     },
     "suri": {
@@ -248,11 +252,12 @@
       "attributes": {
         "age": "2018",
         "color": "Czarny",
-        "birthplace": "Hodowla Alpak, Zachodnia Polska"
+        "birthplace": "Farma Alpak, Zachodnia Polska"
       },
-      "character": "Suri jest bardzo odważny, przez co często próbuje dominować w stadzie.",
+      "character": "Suri jest bardzo odważny, co często prowadzi go do prób dominacji w stadzie.",
       "stories": {
-        "0": "Suri się niczego nie boi i pewnego razu napluł na Daisy."
+        "0": "Suri niczego się nie boi i kiedyś napluł na Daisy.",
+        "1": "Kiedy wprowadziliśmy nowe karmniki na siano, Suri jako pierwszy odkrył, jak ich używać i pokazał innym."
       }
     },
     "freddy": {
@@ -262,9 +267,10 @@
         "color": "Beżowy",
         "birthplace": "Zagroda Alpakoterapii"
       },
-      "character": "Freddy ma zmienny charakter- czasami potrafi prychać na gości.",
+      "character": "Freddy ma zmienny charakter - czasami potrafi parskać na gości.",
       "stories": {
-        "0": "Freddy jest bardzo inteligentny. Szybko nauczył się prosić nóżką o jedzenie."
+        "0": "Freddy jest bardzo inteligentny. Szybko nauczył się prosić o jedzenie łapką.",
+        "1": "Zimą Freddy odkrył, że uwielbia łapać płatki śniegu językiem, rozśmieszając wszystkich swoimi figlarnym zachowaniem."
       }
     }
   },

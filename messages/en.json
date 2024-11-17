@@ -216,7 +216,8 @@
       },
       "character": "Micky is very timid, afraid of noises and shouting.",
       "stories": {
-        "0": "When Micky saw a mouse in the barn for the first time, he got scared and quickly ran away."
+        "0": "When Micky saw a mouse in the barn for the first time, he got scared and quickly ran away.",
+        "1": "Despite being timid, Micky showed incredible bravery when he helped calm a nervous child during therapy by gently approaching and staying close."
       }
     },
     "elvis": {
@@ -228,7 +229,8 @@
       },
       "character": "Elvis is stubborn and rebellious. He's curious and often acts like a star.",
       "stories": {
-        "0": "Elvis can jump very high, so once he jumped over the fence and ran into the forest. Fortunately, he came back after a short time."
+        "0": "Elvis can jump very high, so once he jumped over the fence and ran into the forest. Fortunately, he came back after a short time.",
+        "1": "During one therapy session, Elvis started humming along when a visitor was singing, living up to his namesake as a true performer!"
       }
     },
     "ricky": {
@@ -240,7 +242,8 @@
       },
       "character": "Ricky is very shy, but he's the biggest chatterbox.",
       "stories": {
-        "0": "Ricky came to us as a visitor, but he became such good friends with Elvis that he stayed."
+        "0": "Ricky came to us as a visitor, but he became such good friends with Elvis that he stayed.",
+        "1": "One rainy day, Ricky discovered he loves playing in puddles and now does a happy dance whenever it rains."
       }
     },
     "teddy": {
@@ -252,7 +255,8 @@
       },
       "character": "Teddy is the leader of the herd. He is known for his calm demeanor and friendly nature.",
       "stories": {
-        "0": "Teddy let a 2-year-old girl take him for a walk."
+        "0": "Teddy let a 2-year-old girl take him for a walk.",
+        "1": "During a stormy night, Teddy stood guard over the younger alpacas, showing his true leadership qualities."
       }
     },
     "suri": {
@@ -264,7 +268,8 @@
       },
       "character": "Suri is very brave, which often leads him to try to dominate the herd.",
       "stories": {
-        "0": "Suri isn't afraid of anything and once spat on Daisy."
+        "0": "Suri isn't afraid of anything and once spat on Daisy.",
+        "1": "When we introduced new hay feeders, Suri was the first to figure out how to use them and showed the others."
       }
     },
     "freddy": {
@@ -276,7 +281,8 @@
       },
       "character": "Freddy has a changeable character - sometimes he can snort at guests.",
       "stories": {
-        "0": "Freddy is very intelligent. He quickly learned to ask for food with his foot."
+        "0": "Freddy is very intelligent. He quickly learned to ask for food with his foot.",
+        "1": "During winter, Freddy discovered he loves catching snowflakes with his tongue, making everyone laugh at his playful antics."
       }
     }
   },
