@@ -10,20 +10,33 @@ import { useTranslations } from 'next-intl'
 
 const dogs = [
   {
-    name: "Max",
+    name: "Lucy",
     image: "/images/dogs/lucy.jpg",
     attributes: {
       age: 4,
       color: "Golden and Tan",
       birthplace: "Local Shelter, Poland"
     },
-    character: "Max is our friendly farm guardian. He's gentle with visitors but takes his job seriously.",
+    character: "Lucy is our friendly farm guardian. She's gentle with visitors but takes her job seriously.",
     stories: [
-      "Max once helped guide a lost sheep back to its pen.",
-      "He loves to greet every visitor and give tours of the farm."
+      "Lucy once helped guide a lost sheep back to its pen.",
+      "She loves to greet every visitor and give tours of the farm."
+    ]
+  },
+  {
+    name: "Daisy",
+    image: "/images/dogs/Daisy.jpg",
+    attributes: {
+      age: 12,
+      color: "Yellow",
+      birthplace: "Family Breeder, Poland"
+    },
+    character: "Daisy is loving and gentle, especially with children. Her calm demeanor makes her perfect for our farm visitors.",
+    stories: [
+      "Daisy has a special bond with our youngest farm visitors and always knows when they need extra comfort.",
+      "She's known for patiently sitting beside children during animal therapy sessions, providing a calming presence."
     ]
   }
-  // Add more dogs here...
 ]
 
 interface DogsPageContentProps {

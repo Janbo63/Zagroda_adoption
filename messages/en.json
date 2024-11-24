@@ -286,6 +286,43 @@
       }
     }
   },
+  "dogs": {
+    "pageTitle": "Meet Our Farm Dogs",
+    "backToAnimals": "Back to Animals",
+    "attributes": "Attributes",
+    "character": "Character",
+    "stories": "Stories",
+    "age": "Age",
+    "color": "Color",
+    "birthplace": "Birthplace",
+    "years": "years",
+    "lucy": {
+      "name": "Lucy",
+      "attributes": {
+        "age": "4",
+        "color": "Golden and Tan",
+        "birthplace": "Local Shelter, Poland"
+      },
+      "character": "Lucy is our friendly farm guardian. She's gentle with visitors but takes her job seriously.",
+      "stories": {
+        "0": "Lucy once helped guide a lost sheep back to its pen.",
+        "1": "She loves to greet every visitor and give tours of the farm."
+      }
+    },
+    "daisy": {
+      "name": "Daisy",
+      "attributes": {
+        "age": "12",
+        "color": "Yellow",
+        "birthplace": "Family Breeder, Poland"
+      },
+      "character": "Daisy is loving and gentle, especially with children. Her calm demeanor makes her perfect for our farm visitors.",
+      "stories": {
+        "0": "Daisy has a special bond with our youngest farm visitors and always knows when they need extra comfort.",
+        "1": "She's known for patiently sitting beside children during animal therapy sessions, providing a calming presence."
+      }
+    }
+  },
   "goats": {
     "pageTitle": "Meet Our Goat Gang",
     "backToAnimals": "Back to Animals",

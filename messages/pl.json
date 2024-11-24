@@ -336,5 +336,42 @@
         "1": "Ma wyjątkowy zwyczaj 'eskortowania' gości po farmie, spacerując obok nich jak przewodnik."
       }
     }
+  },
+  "dogs": {
+    "pageTitle": "Poznaj Nasze Psy",
+    "backToAnimals": "Powrót do Zwierząt",
+    "attributes": "Atrybuty",
+    "character": "Charakter",
+    "stories": "Historie",
+    "age": "Wiek",
+    "color": "Kolor",
+    "birthplace": "Miejsce urodzenia",
+    "years": "lat",
+    "lucy": {
+      "name": "Lucy",
+      "attributes": {
+        "age": "4",
+        "color": "Złoto-brązowy",
+        "birthplace": "Schronisko lokalne, Polska"
+      },
+      "character": "Lucy jest naszym przyjaznym strażnikiem farmy. Jest łagodna dla gości, ale poważnie traktuje swoją pracę.",
+      "stories": {
+        "0": "Lucy kiedyś pomogła zaprowadzić zagubioną owcę z powrotem do zagrody.",
+        "1": "Uwielbia witać każdego gościa i oprowadzać po farmie."
+      }
+    },
+    "daisy": {
+      "name": "Daisy",
+      "attributes": {
+        "age": "12",
+        "color": "Żółty",
+        "birthplace": "Hodowla rodzinna, Polska"
+      },
+      "character": "Daisy jest kochająca i łagodna, szczególnie z dziećmi. Jej spokojne usposobienie sprawia, że jest idealna dla naszych gości.",
+      "stories": {
+        "0": "Daisy ma szczególną więź z naszymi najmłodszymi gośćmi i zawsze wie, kiedy potrzebują dodatkowego wsparcia.",
+        "1": "Jest znana z tego, że cierpliwie siedzi obok dzieci podczas sesji terapeutycznych, zapewniając uspokajającą obecność."
+      }
+    }
   }
 }
