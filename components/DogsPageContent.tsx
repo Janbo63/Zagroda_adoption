@@ -8,6 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
 
+const dogImages = {
+  lucy: '/images/dogs/Lucy.jpg',
+  daisy: '/images/dogs/Daisy.jpg'
+}
+
 interface DogsPageContentProps {
   locale: string;
 }
@@ -30,15 +35,12 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
         {dogs.map((dogId) => (
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
-              {/* Debug image path */}
-              {console.log('Loading dog image:', `/images/dogs/${dogId.charAt(0).toUpperCase() + dogId.slice(1)}.jpg`)}
               <Image
-                src={`/images/dogs/${dogId.charAt(0).toUpperCase() + dogId.slice(1)}.jpg`}
+                src={dogImages[dogId]}
                 alt={t(`${dogId}.name`)}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 hover:scale-110"
-                priority={true}
               />
             </div>
             <CardHeader>
