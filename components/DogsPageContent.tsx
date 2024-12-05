@@ -30,6 +30,8 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
         {dogs.map((dogId) => (
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
+              {/* Add console log to debug image path */}
+              {console.log(`Loading dog image: /images/dogs/${t(`${dogId}.name`)}.jpg`)}
               <Image
                 src={`/images/dogs/${t(`${dogId}.name`)}.jpg`}
                 alt={t(`${dogId}.name`)}
