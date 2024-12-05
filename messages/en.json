@@ -284,39 +284,37 @@
     }
   },
   "dogs": {
-    "pageTitle": "Meet Our Farm Dogs",
+    "pageTitle": "Meet Our Dogs",
     "backToAnimals": "Back to Animals",
     "attributes": "Attributes",
     "character": "Character",
     "stories": "Stories",
-    "age": "Age",
-    "color": "Color",
-    "birthplace": "Birthplace",
-    "years": "years",
     "lucy": {
       "name": "Lucy",
       "attributes": {
-        "age": "4",
-        "color": "Golden and Tan",
-        "birthplace": "Local Shelter, Poland"
+        "age": "2019",
+        "color": "Black and White",
+        "breed": "Border Collie",
+        "role": "Farm Guardian"
       },
-      "character": "Lucy is our friendly farm guardian. She's gentle with visitors but takes her job seriously.",
+      "character": "Lucy is an energetic and intelligent Border Collie. She loves to play fetch and is always ready for a new adventure.",
       "stories": {
-        "0": "Lucy once helped guide a lost sheep back to its pen.",
-        "1": "She loves to greet every visitor and give tours of the farm."
+        "0": "Lucy has a special talent for herding the alpacas when needed.",
+        "1": "She's incredibly gentle with visitors and loves to show them around the farm."
       }
     },
     "daisy": {
       "name": "Daisy",
       "attributes": {
-        "age": "12",
-        "color": "Yellow",
-        "birthplace": "Family Breeder, Poland"
+        "age": "2020",
+        "color": "Golden",
+        "breed": "Mixed Breed",
+        "role": "Farm Friend"
       },
-      "character": "Daisy is loving and gentle, especially with children. Her calm demeanor makes her perfect for our farm visitors.",
+      "character": "Daisy is a sweet and friendly dog who loves attention. She's always ready to greet visitors with a wagging tail.",
       "stories": {
-        "0": "Daisy has a special bond with our youngest farm visitors and always knows when they need extra comfort.",
-        "1": "She's known for patiently sitting beside children during animal therapy sessions, providing a calming presence."
+        "0": "Daisy has a special bond with the baby goats and often watches over them.",
+        "1": "She's known for her gentle nature and patience with children who visit the farm."
       }
     }
   },

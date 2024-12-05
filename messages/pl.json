@@ -346,27 +346,29 @@
     "lucy": {
       "name": "Lucy",
       "attributes": {
-        "age": "4",
-        "color": "Złoto-brązowy",
-        "birthplace": "Schronisko lokalne, Polska"
+        "age": "2019",
+        "color": "Czarno-biała",
+        "breed": "Border Collie",
+        "role": "Strażnik Farmy"
       },
-      "character": "Lucy jest naszym przyjaznym strażnikiem farmy. Jest łagodna dla gości, ale poważnie traktuje swoją pracę.",
+      "character": "Lucy to energiczny i inteligentny Border Collie. Uwielbia aportować i zawsze jest gotowa na nową przygodę.",
       "stories": {
-        "0": "Lucy kiedyś pomogła zaprowadzić zagubioną owcę z powrotem do zagrody.",
-        "1": "Uwielbia witać każdego gościa i oprowadzać po farmie."
+        "0": "Lucy ma szczególny talent do zaganiania alpak, gdy jest to potrzebne.",
+        "1": "Jest niezwykle łagodna wobec gości i uwielbia oprowadzać ich po farmie."
       }
     },
     "daisy": {
       "name": "Daisy",
       "attributes": {
-        "age": "12",
-        "color": "Żółty",
-        "birthplace": "Hodowla rodzinna, Polska"
+        "age": "2020",
+        "color": "Złota",
+        "breed": "Mieszaniec",
+        "role": "Przyjaciel Farmy"
       },
-      "character": "Daisy jest kochająca i łagodna, szczególnie z dziećmi. Jej spokojne usposobienie sprawia, że jest idealna dla naszych gości.",
+      "character": "Daisy to słodki i przyjazny pies, który uwielbia uwagę. Zawsze wita gości machając ogonem.",
       "stories": {
-        "0": "Daisy ma szczególną więź z naszymi najmłodszymi gośćmi i zawsze wie, kiedy potrzebują dodatkowego wsparcia.",
-        "1": "Jest znana z tego, że cierpliwie siedzi obok dzieci podczas sesji terapeutycznych, zapewniając uspokajającą obecność."
+        "0": "Daisy ma szczególną więź z małymi kózkami i często się nimi opiekuje.",
+        "1": "Jest znana ze swojej łagodnej natury i cierpliwości wobec dzieci odwiedzających farmę."
       }
     }
   }
