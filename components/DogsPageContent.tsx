@@ -30,8 +30,15 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
         {dogs.map((dogId) => (
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
+<<<<<<< HEAD
               <Image
                 src={`/images/dogs/${dogId.charAt(0).toUpperCase()}${dogId.slice(1)}.jpg`}
+=======
+              {/* Add console log to debug image path */}
+              {console.log(`Loading dog image: /images/dogs/${dogId.charAt(0).toUpperCase() + dogId.slice(1)}.jpg`)}
+              <Image
+                src={`/images/dogs/${dogId.charAt(0).toUpperCase() + dogId.slice(1)}.jpg`}
+>>>>>>> e15c0f8bab387791e9f92d36a3f15d56522245b2
                 alt={t(`${dogId}.name`)}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
