@@ -294,12 +294,12 @@
       "attributes": {
         "age": "2019",
         "color": "Black and White",
-        "breed": "Border Collie",
+        "breed": "Yorkshire Terrier",
         "role": "Farm Guardian"
       },
-      "character": "Lucy is an energetic and intelligent Border Collie. She loves to play fetch and is always ready for a new adventure.",
+      "character": "Lucy is an energetic and loving Yorkshire Terrier. Despite her small size, she has a big personality and loves to keep watch over the farm.",
       "stories": {
-        "0": "Lucy has a special talent for herding the alpacas when needed.",
+        "0": "Lucy may be tiny, but she takes her job as farm guardian very seriously.",
         "1": "She's incredibly gentle with visitors and loves to show them around the farm."
       }
     },

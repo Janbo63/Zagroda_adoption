@@ -348,12 +348,12 @@
       "attributes": {
         "age": "2019",
         "color": "Czarno-biała",
-        "breed": "Border Collie",
+        "breed": "Yorkshire Terrier",
         "role": "Strażnik Farmy"
       },
-      "character": "Lucy to energiczny i inteligentny Border Collie. Uwielbia aportować i zawsze jest gotowa na nową przygodę.",
+      "character": "Lucy to energiczny i kochający Yorkshire Terrier. Pomimo małego rozmiaru, ma wielką osobowość i uwielbia pilnować farmy.",
       "stories": {
-        "0": "Lucy ma szczególny talent do zaganiania alpak, gdy jest to potrzebne.",
+        "0": "Lucy może być mała, ale bardzo poważnie traktuje swoją rolę strażnika farmy.",
         "1": "Jest niezwykle łagodna wobec gości i uwielbia oprowadzać ich po farmie."
       }
     },
