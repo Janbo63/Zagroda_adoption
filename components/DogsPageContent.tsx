@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
 const dogs = [
   {
     name: "Lucy",
-    image: "/images/dogs/lucy.jpg",
+    image: "/images/dogs/Lucy.jpg",
     attributes: {
       age: 4,
       color: "Golden and Tan",

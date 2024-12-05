@@ -203,7 +203,7 @@
     "attributes": "Attributes",
     "character": "Character",
     "stories": "Stories",
-    "age": "Age",
+    "age": "Born In",
     "color": "Color",
     "birthplace": "Birthplace",
     "years": "years",
@@ -212,7 +212,7 @@
       "attributes": {
         "age": "2018",
         "color": "Brown",
-        "birthplace": "Zagroda Alpakoterapii"
+        "birthplace": "Germany"
       },
       "character": "Micky is very timid, afraid of noises and shouting.",
       "stories": {
@@ -223,9 +223,9 @@
     "elvis": {
       "name": "Elvis",
       "attributes": {
-        "Born in": "2020",
+        "age": "2020",
         "color": "Gray and white",
-        "birthplace": "Local Farm, Poland"
+        "birthplace": "Germany"
       },
       "character": "Elvis is stubborn and rebellious. He's curious and often acts like a star.",
       "stories": {
@@ -236,9 +236,9 @@
     "ricky": {
       "name": "Ricky",
       "attributes": {
-        "Born in": "2020",
+        "age": "2020",
         "color": "Red and white",
-        "birthplace": "Zagroda Alpakoterapii"
+        "birthplace": "Germany"
       },
       "character": "Ricky is very shy, but he's the biggest chatterbox.",
       "stories": {
@@ -249,9 +249,9 @@
     "teddy": {
       "name": "Teddy",
       "attributes": {
-        "Born in": "2018",
+        "age": "2018",
         "color": "Caramel",
-        "birthplace": "Local Farm, Poland"
+        "birthplace": "Germany"
       },
       "character": "Teddy is the leader of the herd. He is known for his calm demeanor and friendly nature.",
       "stories": {
@@ -262,9 +262,9 @@
     "suri": {
       "name": "Suri",
       "attributes": {
-        "Born in": "2018",
+        "age": "2018",
         "color": "Black",
-        "birthplace": "Alpaca Farm, Western Poland"
+        "birthplace": "Germany"
       },
       "character": "Suri is very brave, which often leads him to try to dominate the herd.",
       "stories": {
@@ -275,9 +275,9 @@
     "freddy": {
       "name": "Freddy",
       "attributes": {
-        "Born in": "2019",
+        "age": "2019",
         "color": "Beige",
-        "birthplace": "Zagroda Alpakoterapii"
+        "birthplace": "Chile"
       },
       "character": "Freddy has a changeable character - sometimes he can snort at guests.",
       "stories": {
