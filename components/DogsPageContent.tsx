@@ -36,12 +36,10 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
               {dogId === 'lucy' ? (
-                <Image
+                <img
                   src="/images/dogs/Lucy2.jpg"
                   alt={t(`${dogId}.name`)}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <Image
@@ -50,6 +48,10 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-300 hover:scale-110"
+                  onError={(e) => {
+                    console.error(`Error loading ${dogId} image:`, e);
+                    console.log(`Attempted path: ${dogImages[dogId]}`);
+                  }}
                 />
               )}
             </div>
