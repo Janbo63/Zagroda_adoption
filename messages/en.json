@@ -22,18 +22,23 @@
     "stories": "Stories"
   },
   "animals": {
-    "title": "Our Animal Friends",
+    "title": "Meet Our Animals",
+    "sectionTitle": "Meet Our Animal Friends",
+    "meetButton": "Meet {name}",
     "alpacas": {
       "name": "Alpacas",
-      "alt": "Alpacas at Zagroda Alpakoterapii"
+      "description": "Our gentle, fluffy therapists ready to meet you!",
+      "alt": "Alpacas at our farm"
     },
     "goats": {
       "name": "Goats",
-      "alt": "Goats at Zagroda Alpakoterapii"
+      "description": "Playful and friendly goats that love attention",
+      "alt": "Goats at our farm"
     },
     "dogs": {
       "name": "Dogs",
-      "alt": "Dogs at Zagroda Alpakoterapii"
+      "description": "Our loyal farm dogs are here to greet you and keep you company.",
+      "alt": "Dogs at our farm"
     }
   },
   "home": {
@@ -74,26 +79,6 @@
     "address": "24 Orłowice, Mirsk 59-630, Poland",
     "followUs": "Follow Us",
     "imageNotFound": "Image not found"
-  },
-  "animals": {
-    "title": "Meet Our Animals",
-    "sectionTitle": "Meet Our Animal Friends",
-    "meetButton": "Meet {name}",
-    "alpacas": {
-      "name": "Alpacas",
-      "description": "Our gentle, fluffy therapists ready to meet you!",
-      "alt": "Alpacas at our farm"
-    },
-    "goats": {
-      "name": "Goats",
-      "description": "Playful and friendly goats that love attention",
-      "alt": "Goats at our farm"
-    },
-    "dogs": {
-      "name": "Dogs",
-      "description": "Our loyal farm dogs are here to greet you and keep you company.",
-      "alt": "Dogs at our farm"
-    }
   },
   "stay": {
     "title": "Accommodation Options",

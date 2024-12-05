@@ -33,7 +33,7 @@ export function AlpacasPageContent({ locale }: AlpacasPageContentProps) {
             </CardHeader>
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src={`/images/Alpacas/${t(`${id}.name`)}.jpg`}
+                src={`/images/Alpacas/${id.charAt(0).toUpperCase() + id.slice(1)}.jpg`}
                 alt={t(`${id}.name`)}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
