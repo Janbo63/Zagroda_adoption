@@ -51,7 +51,7 @@ export function AlpacasPageContent({ locale }: AlpacasPageContentProps) {
                   <dl className="mt-4 space-y-2">
                     <div>
                       <dt className="font-semibold text-primary-700">{t('age')}:</dt>
-                      <dd>{t(`${id}.attributes.age`)} {t('years')}</dd>
+                      <dd>{t(`${id}.attributes.age`)}</dd>
                     </div>
                     <div>
                       <dt className="font-semibold text-primary-700">{t('color')}:</dt>

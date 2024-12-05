@@ -20,7 +20,7 @@ const animals = [
   },
   {
     id: 'dogs',
-    image: "/images/animals/dogs-main.jpg",
+    image: "/images/dogs/dogs-main.jpg",
     link: "/animals/dogs"
   }
 ]
