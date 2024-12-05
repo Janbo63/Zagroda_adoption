@@ -6,11 +6,11 @@
   "common": {
     "home": "Strona główna",
     "animals": "Zwierzęta",
-    "stay": "Nocleg",
+    "stay": "Pobyt",
     "activities": "Aktywności",
     "blog": "Blog",
     "contact": "Kontakt",
-    "backToAnimals": "Powrót do wszystkich zwierząt",
+    "backToAnimals": "Powrót do zwierząt",
     "age": "Wiek",
     "color": "Kolor",
     "birthplace": "Miejsce urodzenia",
@@ -19,7 +19,7 @@
     "years": "lat",
     "attributes": "Atrybuty",
     "character": "Charakter",
-    "stories": "Historia"
+    "stories": "Historie"
   },
   "home": {
     "title": "Witamy w Zagrodzie Alpakoterapii",
@@ -61,7 +61,7 @@
     "imageNotFound": "Image not found"
   },
   "animals": {
-    "title": "Poznaj Nasze Zwierzęta",
+    "title": "Nasi Zwierzęcy Przyjaciele",
     "sectionTitle": "Poznaj Naszych Zwierzęcych Przyjaciół",
     "meetButton": "Poznaj {name}",
     "alpacas": {

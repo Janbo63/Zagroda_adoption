@@ -21,6 +21,21 @@
     "character": "Character",
     "stories": "Stories"
   },
+  "animals": {
+    "title": "Our Animal Friends",
+    "alpacas": {
+      "name": "Alpacas",
+      "alt": "Alpacas at Zagroda Alpakoterapii"
+    },
+    "goats": {
+      "name": "Goats",
+      "alt": "Goats at Zagroda Alpakoterapii"
+    },
+    "dogs": {
+      "name": "Dogs",
+      "alt": "Dogs at Zagroda Alpakoterapii"
+    }
+  },
   "home": {
     "title": "Welcome to Zagroda Alpakoterapii",
     "subtitle": "Experience the joy of alpaca therapy",
