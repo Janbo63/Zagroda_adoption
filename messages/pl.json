@@ -101,6 +101,7 @@
     "details": "Szczegóły Aktywności",
     "highlights": "Główne Atrakcje",
     "requirements": "Wymagania",
+    "price": "Cena",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "image": "/images/activities/meet-alpacas.jpg",
@@ -163,7 +164,8 @@
     "sectionTitle": "Zakwaterowanie",
     "bookNow": "Zarezerwuj Pobyt",
     "cozyfarmhouserooms": {
-      "name": "Przytulne Pokoje w Gospodarstwie"
+      "name": "Przytulne Pokoje w Gospodarstwie",
+      "description": "Doświadcz uroku naszego odnowionego gospodarstwa"
     }
   },
   "hero": {
