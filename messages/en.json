@@ -110,7 +110,6 @@
       "highlights": "Meet our friendly alpacas and learn about their unique personalities. You'll get to interact with the herd, learn about alpaca care, and have plenty of photo opportunities.",
       "requirements": "Comfortable walking shoes, weather-appropriate clothing. Camera optional. Advance booking required.",
       "attributes": {
-        "cost": "100zł per family (up to 2 adults + 2 children)",
         "duration": "Approximately 1 hour",
         "terms": "No special requirements. Suitable for all ages."
       },
@@ -124,7 +123,6 @@
       "highlights": "Individual walk with an alpaca, scenic routes, learn to handle alpacas, photo opportunities.",
       "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years.",
       "attributes": {
-        "cost": "150zł per alpaca (max 2 people per alpaca)",
         "duration": "Approximately 90 minutes",
         "terms": "Suitable for ages 6 and up. Sturdy footwear recommended."
       },
@@ -138,7 +136,6 @@
       "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities.",
       "requirements": "Booking required at least 48 hours in advance. Suitable for all ages.",
       "attributes": {
-        "cost": "Priced on request(up to 6 alpacas, max 12 people)",
         "duration": "Approximately 2 hours",
         "terms": "Booking required at least 48 hours in advance. Suitable for all ages."
       },
@@ -329,14 +326,14 @@
     "attributes": "Attributes",
     "character": "Character",
     "stories": "Stories",
-    "age": "Age",
+    "age": "Born in",
     "color": "Color",
     "birthplace": "Birthplace",
     "years": "years",
     "madonna": {
       "name": "Madonna",
       "attributes": {
-        "age": "3",
+        "age": "2017",
         "color": "White",
         "birthplace": "Local Farm, Poland"
       },
@@ -349,7 +346,7 @@
     "ladygaga": {
       "name": "Lady Gaga",
       "attributes": {
-        "age": "2",
+        "age": "2016",
         "color": "Black and White",
         "birthplace": "Zagroda Alpakoterapii"
       },
@@ -362,7 +359,7 @@
     "nella": {
       "name": "Nella",
       "attributes": {
-        "age": "4",
+        "age": "2020",
         "color": "Brown",
         "birthplace": "Goat Breeder, Eastern Poland"
       },
@@ -375,7 +372,7 @@
     "baron": {
       "name": "Baron",
       "attributes": {
-        "age": "5",
+        "age": "2020",
         "color": "Black",
         "birthplace": "Zagroda Alpakoterapii"
       },

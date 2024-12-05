@@ -101,48 +101,44 @@
     "details": "Szczegóły Aktywności",
     "highlights": "Główne Atrakcje",
     "requirements": "Wymagania",
-    "price": "Cena",
     "meetthealpacas": {
-      "name": "Spotkania z Alpakami",
+      "name": "Poznaj Alpaki",
       "image": "/images/activities/meet-alpacas.jpg",
-      "description": "Poznaj z bliska nasze przyjazne alpaki! Idealne dla rodzin, które chcą dowiedzieć się więcej o tych fascynujących zwierzętach.",
-      "details": "Sześć alpak w Zagrodzie mamy, więc sześć rodzin zapraszamy. Każda rodzina alpaczką się opiekuje- prowadza, tuli i marchewką częstuje.",
-      "highlights": "Poznaj nasze przyjazne alpaki i ich wyjątkowe osobowości. Będziesz mógł wejść w interakcję ze stadem, dowiedzieć się więcej o opiece nad alpakami i zrobić pamiątkowe zdjęcia.",
-      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody. Wymagana wcześniejsza rezerwacja.",
+      "description": "Spotkaj się z naszymi przyjaznymi alpakami! Idealne dla rodzin, które chcą dowiedzieć się więcej o tych fascynujących zwierzętach.",
+      "details": "Skorzystaj z wyjątkowej okazji, aby poznać nasze przyjazne stado alpak.",
+      "highlights": "Poznaj nasze przyjazne alpaki i dowiedz się o ich wyjątkowych osobowościach. Będziesz mieć okazję wejść w interakcję ze stadem, dowiedzieć się o opiece nad alpakami i zrobić wiele zdjęć.",
+      "requirements": "Wygodne buty do chodzenia, odpowiednia odzież do pogody. Aparat fotograficzny opcjonalnie. Wymagana wcześniejsza rezerwacja.",
       "attributes": {
-        "cost": "100zł za rodzinę (do 2 dorosłych + 2 dzieci)",
         "duration": "Około 1 godziny",
-        "terms": "Bez specjalnych wymagań. Odpowiednie dla wszystkich grup wiekowych."
+        "terms": "Brak specjalnych wymagań. Odpowiednie dla wszystkich grup wiekowych."
       },
-      "alt": "Poznaj Alpaki"
+      "alt": "Aktywność Poznaj Alpaki"
     },
     "alpacawalks": {
-      "name": "Spacery z Alpakami",
+      "name": "Spacer z Alpakami",
       "image": "/images/activities/alpaca-walks.jpg",
-      "description": "Wybierz się na spokojny spacer po naszym pięknym gospodarstwie w towarzystwie własnej alpaki!",
-      "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami w towarzystwie własnej alpaki.",
-      "highlights": "Indywidualny spacer z alpaką, malownicze trasy, nauka prowadzenia alpaki, możliwość zrobienia zdjęć.",
-      "requirements": "Wygodne buty trekkingowe, odpowiednie ubranie do pogody, minimalny wiek: 6 lat.",
+      "description": "Wybierz się na spokojny spacer po naszym pięknym terenie gospodarstwa w towarzystwie własnej alpaki!",
+      "details": "Dołącz do nas na spokojny spacer po malowniczych szlakach z własnym towarzyszem - alpaką.",
+      "highlights": "Indywidualny spacer z alpaką, malownicze trasy, nauka obsługi alpak, możliwość robienia zdjęć.",
+      "requirements": "Wygodne buty do chodzenia, odpowiednia odzież do pogody, minimalny wiek: 6 lat.",
       "attributes": {
-        "cost": "150zł za alpakę (maksymalnie 2 osoby na alpakę)",
         "duration": "Około 90 minut",
-        "terms": "Odpowiednie dla osób w wieku od 6 lat. Zalecane solidne obuwie."
+        "terms": "Odpowiednie dla osób w wieku 6 lat i starszych. Zalecane solidne obuwie."
       },
-      "alt": "Spacery z Alpakami"
+      "alt": "Aktywność Spacer z Alpakami"
     },
     "privatealpacasafari": {
-      "name": "Oferta specjalna",
+      "name": "Specjalna Oferta Prywatna",
       "image": "/images/activities/alpaca-safari.jpg",
       "description": "Skorzystaj z ekskluzywnej wycieczki po naszym gospodarstwie ze stadem alpak! Idealne dla większych grup lub specjalnych okazji.",
-      "details": "Terapia, romantyczny piknik/zaręczyny, imprezy okolicznościowe, sesje zdjęciowe, zajęcia edukacyjne dla przedszkoli/szkół oraz inne na życzenie klienta.",
-      "highlights": "Prowadzenie alpak na kantarze, przytulanie, karmienie, zabawa z kozami, ognisko i biesada w stodole.",
-      "requirements": "Wygodne buty do chodzenia, odpowiednie ubranie do pogody, wymagana wcześniejsza rezerwacja.",
+      "details": "Ciesz się wyjątkowym doświadczeniem z naszymi alpakami w prywatnym otoczeniu.",
+      "highlights": "Prywatny przewodnik, spersonalizowane doświadczenie, wydłużony czas z alpakami, specjalne okazje do zdjęć.",
+      "requirements": "Wymagana rezerwacja z co najmniej 48-godzinnym wyprzedzeniem. Odpowiednie dla wszystkich grup wiekowych.",
       "attributes": {
-        "cost": "250zł (do 6 alpak, maksymalnie 12 osób)",
-        "duration": "Około 2 godziny",
+        "duration": "Około 2 godzin",
         "terms": "Wymagana rezerwacja z co najmniej 48-godzinnym wyprzedzeniem. Odpowiednie dla wszystkich grup wiekowych."
       },
-      "alt": "Prywatne Safari z Alpakami"
+      "alt": "Aktywność Prywatne Safari z Alpakami"
     },
     "duration": "Czas trwania",
     "groupSize": "Wielkość grupy",
@@ -280,14 +276,14 @@
     "attributes": "Atrybuty",
     "character": "Charakter",
     "stories": "Historie",
-    "age": "Wiek",
+    "age": "Rok urodzenia",
     "color": "Kolor",
     "birthplace": "Miejsce urodzenia",
     "years": "lat",
     "madonna": {
       "name": "Madonna",
       "attributes": {
-        "age": "???",
+        "age": "2017",
         "color": "Czarno-biała",
         "birthplace": "Lokalna Farma, Polska"
       },
@@ -300,7 +296,7 @@
     "ladygaga": {
       "name": "Lady Gaga",
       "attributes": {
-        "age": "???",
+        "age": "2016",
         "color": "Biało-brązowo-czarna",
         "birthplace": "Zagroda Alpakoterapii"
       },
