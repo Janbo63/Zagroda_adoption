@@ -6,22 +6,7 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   images: {
-    unoptimized: true,
-    domains: ['localhost', '127.0.0.1', 'futuresolutionstestbed.eu'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'futuresolutionstestbed.eu'
-      },
-      {
-        protocol: 'http',
-        hostname: 'localhost'
-      },
-      {
-        protocol: 'http',
-        hostname: '127.0.0.1'
-      }
-    ]
+    unoptimized: true
   },
   typescript: {
     ignoreBuildErrors: true,
