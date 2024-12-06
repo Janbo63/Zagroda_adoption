@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
 
 const dogImages = {
-  lucy: '/images/dogs/Lucy.jpg',
+  lucy: '/images/dogs/LucyNew.jpg',
   daisy: '/images/dogs/Daisy.jpg'
 }
 
