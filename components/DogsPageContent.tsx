@@ -42,11 +42,23 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 hover:scale-110"
-                priority={dogId === 'lucy'}
+                priority={true}
+                loading="eager"
                 unoptimized={true}
-                onError={(e) => {
-                  console.error('Image failed to load:', dogImages[dogId]);
-                  console.error('Error:', e);
+                onError={(e: any) => {
+                  console.error('Failed to load image:', {
+                    dogId,
+                    src: dogImages[dogId],
+                    error: e.target?.outerHTML
+                  });
+                }}
+                onLoadingComplete={(img) => {
+                  console.log('Image loaded successfully:', {
+                    dogId,
+                    src: dogImages[dogId],
+                    naturalWidth: img.naturalWidth,
+                    naturalHeight: img.naturalHeight
+                  });
                 }}
               />
             </div>
