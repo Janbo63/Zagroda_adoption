@@ -5,8 +5,10 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
+  assetPrefix: '',
   images: {
     unoptimized: true,
+    domains: ['futuresolutionstestbed.eu']
   },
   typescript: {
     ignoreBuildErrors: true,
