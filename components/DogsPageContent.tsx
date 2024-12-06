@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
 
 const dogImages = {
-  lucy: '/images/dogs/Lucy.jpg',
-  daisy: '/images/dogs/Daisy.jpg'
+  lucy: 'https://futuresolutionstestbed.eu/images/dogs/LucyNew.jpg',
+  daisy: 'https://futuresolutionstestbed.eu/images/dogs/Daisy.jpg'
 }
 
 interface DogsPageContentProps {
