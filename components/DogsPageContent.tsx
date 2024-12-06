@@ -35,6 +35,7 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
         {dogs.map((dogId) => (
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
+              {console.log('dogId:', dogId, 'image path:', dogImages[dogId])}
               <Image
                 src={dogImages[dogId]}
                 alt={t(`${dogId}.name`)}
@@ -43,6 +44,10 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
                 className="object-cover transition-transform duration-300 hover:scale-110"
                 priority={dogId === 'lucy'}
                 unoptimized={true}
+                onError={(e) => {
+                  console.error('Image failed to load:', dogImages[dogId]);
+                  console.error('Error:', e);
+                }}
               />
             </div>
             <CardHeader>
