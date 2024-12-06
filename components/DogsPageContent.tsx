@@ -36,7 +36,7 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src={dogImages[dogId]}
+                src={`/images/dogs/Daisy.jpg?v=${Math.random()}`}
                 alt={t(`${dogId}.name`)}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
