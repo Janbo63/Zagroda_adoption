@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 const activities = [
   {
@@ -63,7 +63,6 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 src={activity.image}
                 alt={t(`${activity.id}.alt`)}
                 fill
-                priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 hover:scale-110"
               />
