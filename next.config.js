@@ -11,7 +11,14 @@ const nextConfig = {
     minimumCacheTTL: 0,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
-    formats: ['image/jpeg', 'image/png']
+    formats: ['image/jpeg', 'image/png'],
+    domains: ['futuresolutionstestbed.eu', 'localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'futuresolutionstestbed.eu'
+      }
+    ]
   },
   typescript: {
     ignoreBuildErrors: true,

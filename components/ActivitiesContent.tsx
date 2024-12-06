@@ -63,6 +63,7 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 src={activity.image}
                 alt={t(`${activity.id}.alt`)}
                 fill
+                priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 hover:scale-110"
               />
