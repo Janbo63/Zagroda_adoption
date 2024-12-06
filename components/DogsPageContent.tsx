@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from 'next/link'
@@ -35,18 +35,14 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
         {dogs.map((dogId) => (
           <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <div className="relative aspect-[4/3] w-full">
-              {console.log(`Attempting to load image for ${dogId}:`, dogImages[dogId])}
               <Image
                 src={dogImages[dogId]}
                 alt={t(`${dogId}.name`)}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 hover:scale-110"
-                onError={(e) => {
-                  console.error(`Error loading image for ${dogId}:`, e);
-                  console.log('Image that failed:', dogImages[dogId]);
-                }}
-                onLoad={() => console.log(`Successfully loaded image for ${dogId}`)}
+                priority={dogId === 'lucy'}
+                unoptimized={true}
               />
             </div>
             <CardHeader>
