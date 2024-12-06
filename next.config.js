@@ -7,11 +7,13 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
-    disableStaticImages: true,
-    minimumCacheTTL: 0,
-    dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    formats: ['image/jpeg', 'image/png']
+    domains: ['futuresolutionstestbed.eu'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'futuresolutionstestbed.eu'
+      }
+    ]
   },
   typescript: {
     ignoreBuildErrors: true,
