@@ -6,7 +6,12 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   images: {
-    unoptimized: true
+    unoptimized: true,
+    disableStaticImages: true,
+    minimumCacheTTL: 0,
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    formats: ['image/jpeg', 'image/png']
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -18,6 +23,11 @@ const nextConfig = {
     outputFileTracingExcludes: {
       '*': [
         'node_modules/**/*'
+      ]
+    },
+    outputFileTracingIncludes: {
+      '/**': [
+        'public/**/*'
       ]
     }
   }
