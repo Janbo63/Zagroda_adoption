@@ -349,7 +349,7 @@
       "name": "Lucy",
       "attributes": {
         "age": "2019",
-        "color": "Czarno-biała",
+        "color": "Czarno-brązowa",
         "breed": "Yorkshire Terrier",
         "role": "Strażnik Farmy"
       },
@@ -363,8 +363,8 @@
       "name": "Daisy",
       "attributes": {
         "age": "2020",
-        "color": "Złota",
-        "breed": "Mieszaniec",
+        "color": "Czarna",
+        "breed": "Labarador Mieszaniec",
         "role": "Przyjaciel Farmy"
       },
       "character": "Daisy to słodki i przyjazny pies, który uwielbia uwagę. Zawsze wita gości machając ogonem.",

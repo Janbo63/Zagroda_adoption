@@ -292,8 +292,8 @@
     "lucy": {
       "name": "Lucy",
       "attributes": {
-        "Born Inage": "2019",
-        "color": "Black and White",
+        "age": "2019",
+        "color": "Black and Tan",
         "breed": "Yorkshire Terrier",
         "role": "Farm Guardian"
       },
