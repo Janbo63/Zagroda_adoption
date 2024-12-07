@@ -11,7 +11,7 @@
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Powrót do zwierząt",
-    "age": "Wiek",
+    "age": "Rok urodzenia",
     "color": "Kolor",
     "birthplace": "Miejsce urodzenia",
     "breed": "Rasa",
@@ -198,7 +198,7 @@
       "attributes": {
         "age": "2018",
         "color": "Brązowy",
-        "birthplace": "Zagroda Alpakoterapii"
+        "birthplace": "Niemcy"
       },
       "character": "Micky jest bardzo nieśmiały, boi się hałasów i krzyków.",
       "stories": {
@@ -211,7 +211,7 @@
       "attributes": {
         "age": "2020",
         "color": "Szaro-biały",
-        "birthplace": "Lokalna Farma, Polska"
+        "birthplace": "Niemcy"
       },
       "character": "Elvis jest uparty i buntowniczy. Jest ciekawy i często zachowuje się jak gwiazda.",
       "stories": {
@@ -224,7 +224,7 @@
       "attributes": {
         "age": "2020",
         "color": "Czerwono-biały",
-        "birthplace": "Zagroda Alpakoterapii"
+        "birthplace": "Niemcy"
       },
       "character": "Ricky jest bardzo nieśmiały, ale jest największym gadułą.",
       "stories": {
@@ -237,7 +237,7 @@
       "attributes": {
         "age": "2018",
         "color": "Karmelowy",
-        "birthplace": "Lokalna Farma, Polska"
+        "birthplace": "Niemcy"
       },
       "character": "Teddy jest liderem stada. Znany jest ze swojego spokojnego usposobienia i przyjaznej natury.",
       "stories": {
@@ -250,7 +250,7 @@
       "attributes": {
         "age": "2018",
         "color": "Czarny",
-        "birthplace": "Farma Alpak, Zachodnia Polska"
+        "birthplace": "Niemcy"
       },
       "character": "Suri jest bardzo odważny, co często prowadzi go do prób dominacji w stadzie.",
       "stories": {
@@ -263,7 +263,7 @@
       "attributes": {
         "age": "2019",
         "color": "Beżowy",
-        "birthplace": "Zagroda Alpakoterapii"
+        "birthplace": "Chile"
       },
       "character": "Freddy ma zmienny charakter - czasami potrafi parskać na gości.",
       "stories": {
@@ -341,7 +341,7 @@
     "attributes": "Atrybuty",
     "character": "Charakter",
     "stories": "Historie",
-    "age": "Wiek",
+    "age": "Rok urodzenia",
     "color": "Kolor",
     "birthplace": "Miejsce urodzenia",
     "years": "lat",
