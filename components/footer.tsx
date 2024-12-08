@@ -2,12 +2,15 @@ import React from 'react'
 import Link from 'next/link'
 import { Facebook, Instagram, Phone, MapPin } from 'lucide-react'
 import Image from 'next/image'
-//lowercase
-interface FooterProps {
-  locale: string;
+import { useTranslations } from 'next-intl'
+
+type FooterProps = {
+  locale: string
 }
 
 export function Footer({ locale }: FooterProps) {
+  const t = useTranslations('footer')
+
   return (
     <footer className="bg-green-800 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-orange-400 opacity-20"></div>
@@ -23,11 +26,11 @@ export function Footer({ locale }: FooterProps) {
             />
             <div>
               <h3 className="text-xl font-bold mb-2">Zagroda Alpakoterapii</h3>
-              <p>Experience the joy of alpaca therapy</p>
+              <p>{t('description')}</p>
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-4">{t('contactUs')}</h3>
             <p className="flex items-center mb-2">
               <Phone className="mr-2" size={18} />
               <a href="tel:+48695545330" className="hover:text-orange-200">+48 695 545 330</a>
@@ -38,7 +41,7 @@ export function Footer({ locale }: FooterProps) {
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <h3 className="text-xl font-bold mb-4">{t('followUs')}</h3>
             <div className="flex space-x-4 mb-4">
               <a href="https://www.facebook.com/zagrodaalpakoterapii/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-200">
                 <Facebook size={24} />
@@ -48,12 +51,12 @@ export function Footer({ locale }: FooterProps) {
               </a>
             </div>
             <Link href={`/${locale}/privacy`} className="text-sm hover:text-orange-200">
-              Privacy Policy
+              {t('privacyPolicy')}
             </Link>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-white/20 text-center">
-          <p>&copy; {new Date().getFullYear()} Zagroda Alpakoterapii. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Zagroda Alpakoterapii. {t('allRightsReserved')}</p>
         </div>
       </div>
     </footer>
