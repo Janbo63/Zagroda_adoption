@@ -365,5 +365,12 @@
       "description": "Schlafen Sie gut in unserem gemütlichen Bauernhaus!",
       "alt": "Gemütliche Bauernhofunterkunft"
     }
+  },
+  "footer": {
+    "description": "Erleben Sie die Freude der Alpaka-Therapie",
+    "contactUs": "Kontaktieren Sie uns",
+    "followUs": "Folgen Sie uns",
+    "privacyPolicy": "Datenschutzerklärung",
+    "allRightsReserved": "Alle Rechte vorbehalten"
   }
 }

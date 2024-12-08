@@ -396,5 +396,12 @@
     "accommodation": "Ubytování",
     "blog": "Blog",
     "contact": "Kontakt"
+  },
+  "footer": {
+    "description": "Zažijte radost z alpakoterapie",
+    "contactUs": "Kontaktujte nás",
+    "followUs": "Sledujte nás",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "allRightsReserved": "Všechna práva vyhrazena"
   }
 }

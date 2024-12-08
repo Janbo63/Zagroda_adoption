@@ -373,5 +373,12 @@
         "1": "Jest znana ze swojej łagodnej natury i cierpliwości wobec dzieci odwiedzających farmę."
       }
     }
+  },
+  "footer": {
+    "description": "Doświadcz radości z alpakoterapii",
+    "contactUs": "Skontaktuj się z nami",
+    "followUs": "Obserwuj nas",
+    "privacyPolicy": "Polityka prywatności",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone"
   }
 }
