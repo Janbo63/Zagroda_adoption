@@ -372,5 +372,44 @@
     "followUs": "Folgen Sie uns",
     "privacyPolicy": "Datenschutzerklärung",
     "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": {
+      "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns, Ihre personenbezogenen Daten zu schützen und Ihre Privatsphäre zu respektieren.",
+      "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und schützen, wie wir diese Informationen verwenden und welche Rechte Sie in Bezug auf Ihre personenbezogenen Daten haben."
+    },
+    "whoWeAre": {
+      "title": "Wer wir sind?",
+      "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com"
+    },
+    "dataCollection": {
+      "title": "Welche personenbezogenen Daten wir erheben und warum wir sie erheben?",
+      "contactForms": {
+        "title": "Kontaktformulare",
+        "content": "Für Kunden, die Zimmer oder Aktivitäten buchen möchten, erheben wir Informationen, um Sie kontaktieren und gegebenenfalls die Zahlung für das Zimmer abwickeln zu können. Bei Nutzern, die sich für Kommunikation von uns entschieden haben, verwenden wir die angegebenen Informationen häufig für Marketing- oder allgemeine Kommunikationskampagnen."
+      },
+      "embeddedContent": {
+        "title": "Eingebettete Inhalte von anderen Websites",
+        "p1": "Artikel auf dieser Website können eingebettete Inhalte enthalten (z.B. Videos, Bilder, Artikel usw.). Eingebettete Inhalte von anderen Websites verhalten sich genauso, als ob der Besucher die andere Website besucht hätte.",
+        "p2": "Diese Websites können Daten über Sie sammeln, Cookies verwenden, zusätzliches Tracking von Dritten einbetten und Ihre Interaktion mit diesem eingebetteten Inhalt überwachen, einschließlich der Verfolgung Ihrer Interaktion mit dem eingebetteten Inhalt, wenn Sie ein Konto haben und auf dieser Website eingeloggt sind."
+      }
+    },
+    "dataSharing": {
+      "title": "Mit wem wir Ihre Daten teilen",
+      "content": "Wir geben Ihre Daten nicht an Dritte weiter."
+    },
+    "dataRetention": {
+      "title": "Wie lange wir Ihre Daten aufbewahren",
+      "content": "Für Nutzer, die eine Buchung oder Anfrage abschließen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf. Normalerweise archivieren wir Informationen innerhalb von 3 Jahren nach einer Buchung oder Anfrage."
+    },
+    "yourRights": {
+      "title": "Welche Rechte Sie über Ihre Daten haben",
+      "content": "Wenn Sie eine Anfrage oder Buchung auf dieser Website gemacht haben, können Sie eine exportierte Datei der personenbezogenen Daten, die wir über Sie gespeichert haben, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben, anfordern. Sie können auch die Löschung aller personenbezogenen Daten, die wir über Sie gespeichert haben, verlangen. Dies umfasst nicht die Daten, die wir aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahren müssen."
+    },
+    "contact": {
+      "title": "Unsere Kontaktinformationen",
+      "content": "Unsere Kontakt-E-Mail-Adresse lautet admin@zagrodaalpakoterapii.com"
+    }
   }
 }

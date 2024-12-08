@@ -403,5 +403,44 @@
     "followUs": "Sledujte nás",
     "privacyPolicy": "Zásady ochrany osobních údajů",
     "allRightsReserved": "Všechna práva vyhrazena"
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "intro": {
+      "p1": "Vítejte v Zagroda Alpakoterapii. Zavazujeme se chránit vaše osobní údaje a respektovat vaše soukromí.",
+      "p2": "Tyto zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, zpracováváme a chráníme vaše osobní údaje, jak tyto informace používáme a jaká práva máte ohledně vašich osobních údajů."
+    },
+    "whoWeAre": {
+      "title": "Kdo jsme?",
+      "content": "Naše webová stránka je: www.zagrodaalpakoterapii.com"
+    },
+    "dataCollection": {
+      "title": "Jaké osobní údaje shromažďujeme a proč je shromažďujeme?",
+      "contactForms": {
+        "title": "Kontaktní formuláře",
+        "content": "Pro zákazníky, kteří si chtějí rezervovat pokoje nebo aktivity, shromažďujeme informace, abychom vás mohli kontaktovat a případně provést platbu za pokoj. U uživatelů, kteří si zvolili přijímat od nás komunikaci, často používáme poskytnuté informace v marketingových nebo obecných komunikačních kampaních."
+      },
+      "embeddedContent": {
+        "title": "Vložený obsah z jiných webů",
+        "p1": "Články na této stránce mohou obsahovat vložený obsah (např. videa, obrázky, články atd.). Vložený obsah z jiných webů se chová stejně, jako kdyby návštěvník navštívil jiný web.",
+        "p2": "Tyto weby mohou o vás shromažďovat údaje, používat soubory cookies, vkládat dodatečné sledování třetích stran a sledovat vaši interakci s tímto vloženým obsahem, včetně sledování vaší interakce s vloženým obsahem, pokud máte účet a jste přihlášeni na daném webu."
+      }
+    },
+    "dataSharing": {
+      "title": "S kým sdílíme vaše údaje",
+      "content": "Nesdílíme vaše údaje s žádnými jinými stranami."
+    },
+    "dataRetention": {
+      "title": "Jak dlouho uchováváme vaše údaje",
+      "content": "Pro uživatele, kteří provedou rezervaci nebo dotaz, uchováváme vaše informace pouze pro účely této transakce. Obvykle archivujeme informace do 3 let od rezervace nebo dotazu."
+    },
+    "yourRights": {
+      "title": "Jaká máte práva k vašim údajům",
+      "content": "Pokud jste provedli dotaz nebo rezervaci na tomto webu, můžete požádat o export souboru s osobními údaji, které o vás máme, včetně všech údajů, které jste nám poskytli. Můžete také požádat o vymazání všech osobních údajů, které o vás máme. To nezahrnuje údaje, které musíme uchovávat z administrativních, právních nebo bezpečnostních důvodů."
+    },
+    "contact": {
+      "title": "Naše kontaktní informace",
+      "content": "Náš kontaktní e-mail je admin@zagrodaalpakoterapii.com"
+    }
   }
 }

@@ -380,5 +380,44 @@
     "followUs": "Obserwuj nas",
     "privacyPolicy": "Polityka prywatności",
     "allRightsReserved": "Wszelkie prawa zastrzeżone"
+  },
+  "privacy": {
+    "title": "Polityka Prywatności",
+    "intro": {
+      "p1": "Witamy w Zagrodzie Alpakoterapii. Zobowiązujemy się do ochrony Twoich danych osobowych i poszanowania Twojej prywatności.",
+      "p2": "Ta polityka prywatności wyjaśnia, w jaki sposób zbieramy, przetwarzamy i chronimy Twoje dane osobowe, jak wykorzystujemy te informacje oraz jakie prawa przysługują Ci w związku z Twoimi danymi osobowymi."
+    },
+    "whoWeAre": {
+      "title": "Kim jesteśmy?",
+      "content": "Nasza strona internetowa to: www.zagrodaalpakoterapii.com"
+    },
+    "dataCollection": {
+      "title": "Jakie dane osobowe zbieramy i dlaczego je zbieramy?",
+      "contactForms": {
+        "title": "Formularze kontaktowe",
+        "content": "W przypadku klientów chcących zarezerwować pokoje lub aktywności, zbieramy informacje umożliwiające nam kontakt z Tobą oraz, w stosownych przypadkach, dokonanie płatności za pokój. W przypadku użytkowników, którzy wyrazili zgodę na otrzymywanie komunikacji od nas, często wykorzystujemy dostarczone informacje w kampaniach marketingowych lub ogólnych komunikatach."
+      },
+      "embeddedContent": {
+        "title": "Treści osadzone z innych witryn",
+        "p1": "Artykuły na tej stronie mogą zawierać osadzone treści (np. filmy, obrazy, artykuły itp.). Osadzone treści z innych witryn zachowują się dokładnie tak samo, jakby użytkownik odwiedził tę witrynę.",
+        "p2": "Te witryny mogą zbierać dane o Tobie, używać plików cookies, osadzać dodatkowe śledzenie stron trzecich i monitorować Twoją interakcję z osadzoną treścią, włączając w to śledzenie Twojej interakcji z osadzoną treścią, jeśli posiadasz konto i jesteś zalogowany w tej witrynie."
+      }
+    },
+    "dataSharing": {
+      "title": "Z kim dzielimy się Twoimi danymi",
+      "content": "Nie udostępniamy Twoich danych żadnym innym stronom."
+    },
+    "dataRetention": {
+      "title": "Jak długo przechowujemy Twoje dane",
+      "content": "W przypadku użytkowników dokonujących rezerwacji lub zapytania, przechowujemy Twoje informacje wyłącznie na potrzeby tej transakcji. Zazwyczaj archiwizujemy informacje w ciągu 3 lat od dokonania rezerwacji lub zapytania."
+    },
+    "yourRights": {
+      "title": "Jakie masz prawa do swoich danych",
+      "content": "Jeśli złożyłeś zapytanie lub dokonałeś rezerwacji na tej stronie, możesz zażądać otrzymania wyeksportowanego pliku z danymi osobowymi, które posiadamy o Tobie, w tym wszelkich danych, które nam dostarczyłeś. Możesz również zażądać usunięcia wszelkich danych osobowych, które o Tobie przechowujemy. Nie dotyczy to danych, które jesteśmy zobowiązani przechowywać ze względów administracyjnych, prawnych lub bezpieczeństwa."
+    },
+    "contact": {
+      "title": "Nasze dane kontaktowe",
+      "content": "Nasz adres e-mail do kontaktu to admin@zagrodaalpakoterapii.com"
+    }
   }
 }
