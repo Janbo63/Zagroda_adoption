@@ -137,11 +137,10 @@
     }
   },
   "dogs": {
-    "title": "Naši psi",
-    "description": "Poznejte naše hravé a milující farmářské psy",
     "pageTitle": "Poznejte naše psy",
     "backToAnimals": "Zpět na zvířata",
-    "nameLabel": "Jméno",
+    "lucyname": "Lucy",
+    "daisyname": "Daisy",
     "attributes": "Vlastnosti",
     "age": "Narozen",
     "color": "Barva",
@@ -202,6 +201,45 @@
       "stories": {
         "0": "Madonna jednou vedla celé stádo na průzkum nového výběhu.",
         "1": "Když přijdou návštěvníci, Madonna je vždy prvé, kdo je přijde pozdravit."
+      }
+    },
+    "ladygaga": {
+      "name": "Lady Gaga",
+      "attributes": {
+        "age": "2016",
+        "color": "Černá a bílá",
+        "birthplace": "Česká republika"
+      },
+      "character": "Lady Gaga je známá svým jedinečným 'módním stylem', často ji najdete s květinami nebo listy v srsti.",
+      "stories": {
+        "0": "Lady Gaga jednou uspořádala 'kozí přehlídku', kdy vedla celé stádo v řadě kolem farmy.",
+        "1": "Má zvláštní talent na hledání nejchutnějších listů a dělí se o ně se svými kozími přáteli."
+      }
+    },
+    "nella": {
+      "name": "Nella",
+      "attributes": {
+        "age": "2020",
+        "color": "Hnědá",
+        "birthplace": "Česká republika"
+      },
+      "character": "Nella je jemná duše skupiny. Je výjimečně dobrá s dětmi a miluje mazlení.",
+      "stories": {
+        "0": "Nella jednou utěšila plačící dítě tím, že se k němu přitulila a zůstala s ním, dokud se neusmálo.",
+        "1": "Má jedinečné přátelství s jednou z farmářských koček a často je najdete, jak spolu spí na sluníčku."
+      }
+    },
+    "baron": {
+      "name": "Baron",
+      "attributes": {
+        "age": "2020",
+        "color": "Černá",
+        "birthplace": "Česká republika"
+      },
+      "character": "Baron je důstojný vůdce kozího stáda. Je klidný, moudrý a chrání ostatní.",
+      "stories": {
+        "0": "Baron jednou upozornil farmáře na rozbitý plot tím, že opakovaně narážel do dveří stodoly, dokud se někdo nepřišel podívat.",
+        "1": "Má jedinečný zvyk 'doprovázet' návštěvníky po farmě jako průvodce."
       }
     }
   },
