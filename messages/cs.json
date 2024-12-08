@@ -1,10 +1,158 @@
 {
-  "heroTitle": "Vítejte v našem farmářském ráji",
-  "heroSubtitle": "Zažijte radost z farmářského života s našimi přátelskými zvířaty",
-  "planVisit": "Naplánovat návštěvu",
-  "animalFriends": "Naši zvířecí přátelé",
-  "stayWithUs": "Zůstaňte s námi",
-  "farmActivities": "Farmářské aktivity",
-  "latestBlog": "Nejnovější z našeho blogu",
-  "readMore": "Číst více"
+  "Common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Zažijte léčivou sílu alpak a přírody"
+  },
+  "common": {
+    "home": "Domů",
+    "animals": "Zvířata",
+    "stay": "Ubytování",
+    "activities": "Aktivity",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "backToAnimals": "Zpět na všechna zvířata",
+    "age": "Narozen",
+    "color": "Barva",
+    "birthplace": "Místo narození",
+    "breed": "Plemeno",
+    "role": "Role",
+    "years": "let",
+    "attributes": "Vlastnosti",
+    "character": "Charakter",
+    "stories": "Příběhy"
+  },
+  "animals": {
+    "title": "Poznejte naše zvířata",
+    "sectionTitle": "Naši zvířecí přátelé",
+    "meetButton": "Poznejte {name}",
+    "alpacas": {
+      "name": "Alpaky",
+      "description": "Naši jemní, huňatí terapeuti se těší na vaši návštěvu!",
+      "alt": "Alpaky na naší farmě"
+    },
+    "goats": {
+      "name": "Kozy",
+      "description": "Hravé a přátelské kozy, které milují pozornost",
+      "alt": "Kozy na naší farmě"
+    },
+    "dogs": {
+      "name": "Psi",
+      "description": "Naši věrní farmářští psi jsou zde, aby vás přivítali a dělali vám společnost.",
+      "alt": "Psi na naší farmě"
+    }
+  },
+  "home": {
+    "title": "Vítejte v Zagroda Alpakoterapii",
+    "subtitle": "Zažijte radost z alpakoterapie",
+    "heroImageAlt": "Pohled na farmu Zagroda Alpakoterapii",
+    "planVisit": "Naplánovat návštěvu",
+    "featuredAnimals": "Naši zvířecí přátelé",
+    "alpacasTitle": "Alpaky",
+    "alpacasDescription": "Poznejte naše přátelské alpaky a zažijte jejich uklidňující přítomnost.",
+    "alpacasAlt": "Alpaky v Zagroda Alpakoterapii",
+    "goatsTitle": "Kozy",
+    "goatsDescription": "Naše hravé kozy jsou vždy připraveny na zábavné interakce.",
+    "goatsAlt": "Kozy v Zagroda Alpakoterapii",
+    "dogsTitle": "Psi",
+    "dogsDescription": "Naši věrní farmářští psi jsou zde, aby vás přivítali.",
+    "dogsAlt": "Psi v Zagroda Alpakoterapii",
+    "meetThem": "Poznat je",
+    "stayTitle": "Ubytujte se u nás",
+    "farmhouseRoomsTitle": "Útulné pokoje na farmě",
+    "farmhouseRoomsDescription": "Zažijte rustikální kouzlo v našem renovovaném statku",
+    "farmhouseRoomsAlt": "Útulné pokoje na farmě v Zagroda Alpakoterapii",
+    "bookStay": "Rezervovat pobyt",
+    "activitiesTitle": "Naše aktivity",
+    "meetAlpacasTitle": "Setkání s alpakami",
+    "meetAlpacasDescription": "Přijďte se setkat s naším stádem alpak",
+    "meetAlpacasAlt": "Setkání s alpakami v Zagroda Alpakoterapii",
+    "alpacaWalksTitle": "Procházky s alpakami",
+    "alpacaWalksDescription": "Vydejte se na procházku s alpačím společníkem",
+    "alpacaWalksAlt": "Procházky s alpakami v Zagroda Alpakoterapii",
+    "weekendHelperTitle": "Víkendový pomocník",
+    "weekendHelperDescription": "Zažijte farmářský život na vlastní kůži",
+    "weekendHelperAlt": "Víkendové pomocnické aktivity v Zagroda Alpakoterapii",
+    "exploreActivities": "Prozkoumat aktivity",
+    "logoAlt": "Logo Zagroda Alpakoterapii",
+    "contactUs": "Kontaktujte nás",
+    "phoneNumber": "695 545 330",
+    "address": "24 Orłowice, Mirsk 59-630, Polsko",
+    "followUs": "Sledujte nás",
+    "imageNotFound": "Obrázek nenalezen"
+  },
+  "stay": {
+    "title": "Možnosti ubytování",
+    "farmhouseRooms": {
+      "title": "Pokoje na farmě",
+      "description": "Zažijte kouzlo našeho renovovaného statku"
+    },
+    "caravanStays": {
+      "title": "Pobyty v karavanu",
+      "description": "Užijte si jedinečný pobyt v našich vintage karavanech"
+    },
+    "bookNow": "Rezervovat nyní",
+    "checkAvailability": "Zkontrolovat dostupnost"
+  },
+  "activities": {
+    "title": "Aktivity",
+    "sectionTitle": "Naše aktivity",
+    "viewDetails": "Zobrazit detaily",
+    "attributes": "Vlastnosti aktivity",
+    "details": "Detaily aktivity",
+    "highlights": "Hlavní body",
+    "requirements": "Požadavky",
+    "price": "Cena",
+    "duration": "Doba trvání",
+    "groupSize": "Velikost skupiny",
+    "minAge": "Minimální věk",
+    "availability": "Dostupnost",
+    "bookNow": "Rezervovat nyní"
+  },
+  "blog": {
+    "title": "Náš blog",
+    "noPosts": "Momentálně nejsou k dispozici žádné příspěvky. Podívejte se brzy znovu!",
+    "readMore": "Číst více",
+    "recentPosts": "Nedávné příspěvky",
+    "viewAll": "Zobrazit všechny příspěvky"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Jméno",
+    "email": "E-mail",
+    "message": "Zpráva",
+    "send": "Odeslat zprávu",
+    "addressTitle": "Naše adresa",
+    "phoneTitle": "Telefon",
+    "emailTitle": "E-mail",
+    "formSuccess": "Děkujeme za vaši zprávu. Brzy se vám ozveme!",
+    "formError": "Při odesílání vaší zprávy došlo k chybě. Prosím zkuste to znovu.",
+    "callOrMessage": "Zavolejte nám nebo napište",
+    "call": "Zavolat",
+    "visitUs": "Navštivte nás",
+    "followUs": "Sledujte nás"
+  },
+  "hero": {
+    "title": "Vítejte v Zagroda Alpakoterapii",
+    "subtitle": "Zažijte magii alpakoterapie v našem klidném farmářském prostředí",
+    "planVisit": "Naplánovat návštěvu",
+    "exploreActivities": "Prozkoumat aktivity",
+    "contactUs": "Kontakt"
+  },
+  "accommodation": {
+    "sectionTitle": "Ubytujte se u nás",
+    "bookNow": "Rezervovat nyní",
+    "cozyfarmhouserooms": {
+      "name": "Útulné pokoje na farmě",
+      "description": "Užijte si pohodlný spánek v našem útulném statku!",
+      "alt": "Útulné ubytování na farmě"
+    }
+  },
+  "navigation": {
+    "home": "Domů",
+    "animals": "Zvířata",
+    "activities": "Aktivity",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "accommodation": "Ubytování"
+  }
 }

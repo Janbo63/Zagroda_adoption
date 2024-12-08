@@ -32,13 +32,13 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex items-center justify-end gap-1">
       {LOCALES.map((locale) => (
         <Button
           key={locale}
           onClick={() => handleLocaleChange(locale)}
           variant={currentLocale === locale ? "default" : "secondary"}
-          className={`text-sm px-2 py-1 h-8 min-w-[60px] ${
+          className={`text-sm h-8 w-[64px] ${
             currentLocale === locale 
               ? 'bg-orange-400 text-white hover:bg-orange-500'
               : 'bg-white/10 text-white hover:bg-white/20'

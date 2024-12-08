@@ -1,5 +1,5 @@
 module.exports = {
-  locales: ['en', 'pl', 'de', 'cs'],
+  locales: ['pl', 'en', 'de', 'cs'],
   defaultLocale: 'pl',
-  localeDetection: true
+  localeDetection: false  // Disable browser-based locale detection
 }

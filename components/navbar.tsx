@@ -32,7 +32,8 @@ export function Navbar({ locale }: NavbarProps) {
       <div className="absolute inset-0 bg-orange-400 opacity-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
-          <div className="flex">
+          {/* Left side - Logo and Navigation */}
+          <div className="flex flex-1">
             <div className="flex-shrink-0 flex items-center">
               <Link href={`/${locale}`} className="flex items-center">
                 <Image
@@ -65,20 +66,24 @@ export function Navbar({ locale }: NavbarProps) {
             </div>
           </div>
 
-          {/* Language Switcher */}
-          <div className="hidden sm:flex sm:items-center">
-            <LanguageSwitcher />
-          </div>
+          {/* Right side - Language Switcher */}
+          <div className="flex items-center justify-end ml-4 min-w-[260px]">
+            <div className="hidden sm:flex">
+              <LanguageSwitcher />
+            </div>
 
-          {/* Mobile menu button and language switcher */}
-          <div className="sm:hidden flex items-center space-x-4">
-            <LanguageSwitcher />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-gray-300"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Mobile menu button and language switcher */}
+            <div className="sm:hidden flex items-center">
+              <div className="mr-2">
+                <LanguageSwitcher />
+              </div>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-300 hover:text-gray-300 p-2"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
       </div>

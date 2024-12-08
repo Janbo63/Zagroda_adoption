@@ -1,10 +1,158 @@
 {
-  "heroTitle": "Willkommen in unserem Bauernhofparadies",
-  "heroSubtitle": "Erleben Sie die Freude des Bauernlebens mit unseren freundlichen Tieren",
-  "planVisit": "Besuch planen",
-  "animalFriends": "Unsere tierischen Freunde",
-  "stayWithUs": "Bleiben Sie bei uns",
-  "farmActivities": "Bauernhof-Aktivitäten",
-  "latestBlog": "Neues aus unserem Blog",
-  "readMore": "Weiterlesen"
+  "Common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Erleben Sie die heilende Kraft von Alpakas und Natur"
+  },
+  "common": {
+    "home": "Startseite",
+    "animals": "Tiere",
+    "stay": "Übernachtung",
+    "activities": "Aktivitäten",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "backToAnimals": "Zurück zu allen Tieren",
+    "age": "Geboren",
+    "color": "Farbe",
+    "birthplace": "Geburtsort",
+    "breed": "Rasse",
+    "role": "Rolle",
+    "years": "Jahre",
+    "attributes": "Eigenschaften",
+    "character": "Charakter",
+    "stories": "Geschichten"
+  },
+  "animals": {
+    "title": "Lernen Sie unsere Tiere kennen",
+    "sectionTitle": "Unsere tierischen Freunde",
+    "meetButton": "Treffen Sie {name}",
+    "alpacas": {
+      "name": "Alpakas",
+      "description": "Unsere sanften, flauschigen Therapeuten freuen sich auf Sie!",
+      "alt": "Alpakas auf unserem Hof"
+    },
+    "goats": {
+      "name": "Ziegen",
+      "description": "Verspielte und freundliche Ziegen, die Aufmerksamkeit lieben",
+      "alt": "Ziegen auf unserem Hof"
+    },
+    "dogs": {
+      "name": "Hunde",
+      "description": "Unsere treuen Hofhunde sind hier, um Sie zu begrüßen und Ihnen Gesellschaft zu leisten.",
+      "alt": "Hunde auf unserem Hof"
+    }
+  },
+  "home": {
+    "title": "Willkommen bei Zagroda Alpakoterapii",
+    "subtitle": "Erleben Sie die Freude der Alpaka-Therapie",
+    "heroImageAlt": "Ansicht des Zagroda Alpakoterapii Hofes",
+    "planVisit": "Besuch planen",
+    "featuredAnimals": "Unsere tierischen Freunde",
+    "alpacasTitle": "Alpakas",
+    "alpacasDescription": "Treffen Sie unsere freundlichen Alpakas und erleben Sie ihre beruhigende Präsenz.",
+    "alpacasAlt": "Alpakas bei Zagroda Alpakoterapii",
+    "goatsTitle": "Ziegen",
+    "goatsDescription": "Unsere verspielten Ziegen sind immer bereit für lustige Interaktionen.",
+    "goatsAlt": "Ziegen bei Zagroda Alpakoterapii",
+    "dogsTitle": "Hunde",
+    "dogsDescription": "Unsere treuen Hofhunde sind hier, um Sie zu begrüßen.",
+    "dogsAlt": "Hunde bei Zagroda Alpakoterapii",
+    "meetThem": "Kennenlernen",
+    "stayTitle": "Übernachten Sie bei uns",
+    "farmhouseRoomsTitle": "Gemütliche Bauernhofzimmer",
+    "farmhouseRoomsDescription": "Erleben Sie rustikalen Charme in unserem renovierten Bauernhaus",
+    "farmhouseRoomsAlt": "Gemütliche Bauernhofzimmer bei Zagroda Alpakoterapii",
+    "bookStay": "Aufenthalt buchen",
+    "activitiesTitle": "Unsere Aktivitäten",
+    "meetAlpacasTitle": "Treffen Sie die Alpakas",
+    "meetAlpacasDescription": "Kommen Sie unserer Alpakaherde ganz nah",
+    "meetAlpacasAlt": "Alpakas treffen bei Zagroda Alpakoterapii",
+    "alpacaWalksTitle": "Alpaka-Spaziergänge",
+    "alpacaWalksDescription": "Machen Sie einen Spaziergang mit einem Alpaka-Begleiter",
+    "alpacaWalksAlt": "Alpaka-Spaziergänge bei Zagroda Alpakoterapii",
+    "weekendHelperTitle": "Wochenend-Helfer",
+    "weekendHelperDescription": "Erleben Sie das Bauernhofleben hautnah",
+    "weekendHelperAlt": "Wochenend-Helfer-Aktivitäten bei Zagroda Alpakoterapii",
+    "exploreActivities": "Aktivitäten erkunden",
+    "logoAlt": "Zagroda Alpakoterapii Logo",
+    "contactUs": "Kontaktieren Sie uns",
+    "phoneNumber": "695 545 330",
+    "address": "24 Orłowice, Mirsk 59-630, Polen",
+    "followUs": "Folgen Sie uns",
+    "imageNotFound": "Bild nicht gefunden"
+  },
+  "stay": {
+    "title": "Übernachtungsmöglichkeiten",
+    "farmhouseRooms": {
+      "title": "Bauernhofzimmer",
+      "description": "Erleben Sie den Charme unseres renovierten Bauernhauses"
+    },
+    "caravanStays": {
+      "title": "Wohnwagen-Aufenthalte",
+      "description": "Genießen Sie einen einzigartigen Aufenthalt in unseren Vintage-Wohnwagen"
+    },
+    "bookNow": "Jetzt buchen",
+    "checkAvailability": "Verfügbarkeit prüfen"
+  },
+  "activities": {
+    "title": "Aktivitäten",
+    "sectionTitle": "Unsere Aktivitäten",
+    "viewDetails": "Details anzeigen",
+    "attributes": "Aktivitätsmerkmale",
+    "details": "Aktivitätsdetails",
+    "highlights": "Höhepunkte",
+    "requirements": "Anforderungen",
+    "price": "Preis",
+    "duration": "Dauer",
+    "groupSize": "Gruppengröße",
+    "minAge": "Mindestalter",
+    "availability": "Verfügbarkeit",
+    "bookNow": "Jetzt buchen"
+  },
+  "blog": {
+    "title": "Unser Blog",
+    "noPosts": "Momentan keine Blogbeiträge verfügbar. Schauen Sie bald wieder vorbei!",
+    "readMore": "Weiterlesen",
+    "recentPosts": "Aktuelle Beiträge",
+    "viewAll": "Alle Beiträge anzeigen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "addressTitle": "Unsere Adresse",
+    "phoneTitle": "Telefon",
+    "emailTitle": "E-Mail",
+    "formSuccess": "Vielen Dank für Ihre Nachricht. Wir melden uns bald bei Ihnen!",
+    "formError": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "callOrMessage": "Rufen Sie uns an oder schreiben Sie uns",
+    "call": "Anrufen",
+    "visitUs": "Besuchen Sie uns",
+    "followUs": "Folgen Sie uns"
+  },
+  "hero": {
+    "title": "Willkommen bei Zagroda Alpakoterapii",
+    "subtitle": "Erleben Sie die Magie der Alpaka-Therapie in unserer friedlichen Hofumgebung",
+    "planVisit": "Besuch planen",
+    "exploreActivities": "Aktivitäten erkunden",
+    "contactUs": "Kontakt"
+  },
+  "accommodation": {
+    "sectionTitle": "Übernachten Sie bei uns",
+    "bookNow": "Jetzt buchen",
+    "cozyfarmhouserooms": {
+      "name": "Gemütliche Bauernhofzimmer",
+      "description": "Schlafen Sie gut in unserem gemütlichen Bauernhaus!",
+      "alt": "Gemütliche Bauernhofunterkunft"
+    }
+  },
+  "navigation": {
+    "home": "Startseite",
+    "animals": "Tiere",
+    "activities": "Aktivitäten",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "accommodation": "Unterkunft"
+  }
 }
