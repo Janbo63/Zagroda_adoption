@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 const navigation = [
   { name: 'home', href: '/' },
@@ -24,7 +25,7 @@ export function Navbar({ locale }: NavbarProps) {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
-  const currentPath = pathname?.replace(/^\/(en|pl)/, '') || ''
+  const currentPath = pathname?.replace(/^\/(en|pl|de|cs)/, '') || ''
 
   return (
     <nav className="bg-green-800 text-white relative overflow-hidden">
@@ -66,22 +67,12 @@ export function Navbar({ locale }: NavbarProps) {
 
           {/* Language Switcher */}
           <div className="hidden sm:flex sm:items-center">
-            <Link
-              href={`/${locale === 'en' ? 'pl' : 'en'}${currentPath}`}
-              className="text-white hover:text-orange-200 font-medium"
-            >
-              {locale === 'en' ? 'PL' : 'EN'}
-            </Link>
+            <LanguageSwitcher />
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button and language switcher */}
           <div className="sm:hidden flex items-center space-x-4">
-            <Link
-              href={`/${locale === 'en' ? 'pl' : 'en'}${currentPath}`}
-              className="text-white hover:text-orange-200 font-medium"
-            >
-              {locale === 'en' ? 'PL' : 'EN'}
-            </Link>
+            <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-gray-300"
@@ -120,4 +111,4 @@ export function Navbar({ locale }: NavbarProps) {
       )}
     </nav>
   )
-} 
+}
