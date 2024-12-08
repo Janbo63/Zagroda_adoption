@@ -3,6 +3,13 @@ import { useLocale } from 'next-intl'
 import { locales } from '@/config/i18n'
 import { Button } from "@/components/ui/button"
 
+const languageNames = {
+  en: 'English',
+  pl: 'Polski',
+  de: 'Deutsch',
+  cs: 'Čeština'
+}
+
 export default function LanguageSwitcher() {
   const router = useRouter()
   const pathname = usePathname()
@@ -32,7 +39,7 @@ export default function LanguageSwitcher() {
           className="text-sm"
           disabled={currentLocale === locale}
         >
-          {locale === 'en' ? 'English' : 'Polski'}
+          {languageNames[locale]}
         </Button>
       ))}
     </div>
