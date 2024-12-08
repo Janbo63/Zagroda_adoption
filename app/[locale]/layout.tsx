@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const messages = await getMessages(params.locale)
   
   return {
-    title: messages.Common.title,
-    description: messages.Common.description,
+    title: messages.common.title,
+    description: messages.common.description,
   }
 }
