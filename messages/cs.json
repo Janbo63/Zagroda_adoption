@@ -50,11 +50,6 @@
   "alpacas": {
     "pageTitle": "Poznejte naše alpaky",
     "backToAnimals": "Zpět na zvířata",
-    "attributes": {
-      "age": "Narozen",
-      "color": "Barva",
-      "birthplace": "Místo narození"
-    },
     "micky": {
       "name": "Micky",
       "attributes": {
