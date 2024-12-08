@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
-import { LanguageSwitcher } from './LanguageSwitcher'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const navigation = [
   { name: 'home', href: '/' },
