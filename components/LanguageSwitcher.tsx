@@ -37,8 +37,12 @@ export default function LanguageSwitcher() {
         <Button
           key={locale}
           onClick={() => handleLocaleChange(locale)}
-          variant={currentLocale === locale ? "default" : "outline"}
-          className="text-sm px-2 py-1 h-8 min-w-[60px]"
+          variant={currentLocale === locale ? "default" : "secondary"}
+          className={`text-sm px-2 py-1 h-8 min-w-[60px] ${
+            currentLocale === locale 
+              ? 'bg-orange-400 text-white hover:bg-orange-500'
+              : 'bg-white/10 text-white hover:bg-white/20'
+          }`}
           disabled={currentLocale === locale}
         >
           {languageNames[locale]}
