@@ -1,7 +1,8 @@
 import { useRouter, usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
-import { locales } from '@/config/i18n'
 import { Button } from "@/components/ui/button"
+
+const LOCALES = ['en', 'pl', 'de', 'cs'] as const
 
 const languageNames = {
   en: 'English',
@@ -31,7 +32,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="flex space-x-2">
-      {locales.map((locale) => (
+      {LOCALES.map((locale) => (
         <Button
           key={locale}
           onClick={() => handleLocaleChange(locale)}
