@@ -2,11 +2,12 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { Button } from "@/components/ui/button"
 
-const LOCALES = ['en', 'pl', 'de', 'cs'] as const
+// Put Polish first as it's the default language
+const LOCALES = ['pl', 'en', 'de', 'cs'] as const
 
 const languageNames = {
-  en: 'English',
   pl: 'Polski',
+  en: 'English',
   de: 'Deutsch',
   cs: 'Čeština'
 }
@@ -31,13 +32,13 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex space-x-2">
+    <div className="flex flex-wrap gap-2">
       {LOCALES.map((locale) => (
         <Button
           key={locale}
           onClick={() => handleLocaleChange(locale)}
           variant={currentLocale === locale ? "default" : "outline"}
-          className="text-sm"
+          className="text-sm px-2 py-1 h-8 min-w-[60px]"
           disabled={currentLocale === locale}
         >
           {languageNames[locale]}
