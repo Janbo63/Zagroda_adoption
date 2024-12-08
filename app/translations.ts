@@ -10,25 +10,15 @@ export const translations = {
       readMore: 'Read More',
     },
     pl: {
-      heroTitle: 'Bienvenido a Nuestro Paraíso de Granja',
-      heroSubtitle: 'Experimenta la alegría de la vida en la granja con nuestros animales amigables',
-      planVisit: 'Planea tu Visita',
-      animalFriends: 'Nuestros Amigos Animales',
-      stayWithUs: 'Quédate con Nosotros',
-      farmActivities: 'Actividades de la Granja',
-      latestBlog: 'Lo Último de Nuestro Blog',
-      readMore: 'Leer Más',
-    },
-    cz: {
-      heroTitle: 'Bienvenue dans Notre Paradis Fermier',
-      heroSubtitle: 'Découvrez la joie de la vie à la ferme avec nos animaux sympathiques',
-      planVisit: 'Planifiez Votre Visite',
-      animalFriends: 'Nos Amis les Animaux',
-      stayWithUs: 'Séjournez Chez Nous',
-      farmActivities: 'Activités à la Ferme',
-      latestBlog: 'Dernières Nouvelles de Notre Blog',
-      readMore: 'Lire la Suite',
-    },
+      heroTitle: 'Witamy w Naszym Raju na Farmie',
+      heroSubtitle: 'Doświadcz radości życia na farmie z naszymi przyjaznymi zwierzętami',
+      planVisit: 'Zaplanuj Wizytę',
+      animalFriends: 'Nasi Przyjaciele Zwierzęta',
+      stayWithUs: 'Zostań z Nami',
+      farmActivities: 'Aktywności na Farmie',
+      latestBlog: 'Najnowsze z Naszego Bloga',
+      readMore: 'Czytaj Więcej',
+    }
   }
   
   export type Locale = keyof typeof translations
