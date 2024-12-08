@@ -58,7 +58,7 @@
       "name": "Elvis",
       "attributes": {
         "age": "2020",
-        "color": "Grau und weiß",
+        "color": "Grau und Weiß",
         "birthplace": "Deutschland"
       },
       "character": "Elvis ist stur und rebellisch. Er ist neugierig und verhält sich oft wie ein Star.",
@@ -71,7 +71,7 @@
       "name": "Ricky",
       "attributes": {
         "age": "2020",
-        "color": "Rot und weiß",
+        "color": "Rot und Weiß",
         "birthplace": "Deutschland"
       },
       "character": "Ricky ist sehr schüchtern, aber er ist der größte Plauderer.",
@@ -89,7 +89,7 @@
       },
       "character": "Teddy ist der Anführer der Herde. Er ist bekannt für sein ruhiges Wesen und seine Freundlichkeit.",
       "stories": {
-        "0": "Teddy ließ sich von einem 2-jährigen Mädchen spazieren führen.",
+        "0": "Teddy ließ sich von einem zweijährigen Mädchen spazieren führen.",
         "1": "In einer stürmischen Nacht wachte Teddy über die jüngeren Alpakas und zeigte seine wahren Führungsqualitäten."
       }
     },
