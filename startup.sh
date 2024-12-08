@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Kill any processes running on port 3001
-echo "Checking for processes on port 3001..."
-npx kill-port 3001
+# Kill any processes running on port 3000
+echo "Checking for processes on port 3000..."
+npx kill-port 3000
 
 # Install dependencies if needed
 echo "Installing dependencies..."
