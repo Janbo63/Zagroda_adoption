@@ -26,206 +26,212 @@
     "sectionTitle": "Unsere tierischen Freunde",
     "meetButton": "Treffen Sie {name}",
     "alpacas": {
-      "pageTitle": "Treffen Sie unsere Alpakas",
-      "backToAnimals": "Zurück zu den Tieren",
-      "mickyname": "Micky",
-      "elvisname": "Elvis",
-      "rickyname": "Ricky",
-      "teddyname": "Teddy",
-      "suriname": "Suri",
-      "freddyname": "Freddy",
-      "attributes": "Eigenschaften",
-      "age": "Geboren",
-      "color": "Farbe",
-      "birthplace": "Geburtsort",
-      "character": "Charakter",
-      "stories": "Geschichten",
-      "years": "Jahre",
-      "micky": {
-        "name": "Micky",
-        "attributes": {
-          "age": "2018",
-          "color": "Braun",
-          "birthplace": "Deutschland"
-        },
-        "character": "Micky ist sehr schüchtern, hat Angst vor Geräuschen und Geschrei.",
-        "stories": {
-          "0": "Als Micky zum ersten Mal eine Maus in der Scheune sah, erschrak er und lief schnell weg.",
-          "1": "Trotz seiner Schüchternheit zeigte Micky unglaublichen Mut, als er während einer Therapie ein nervöses Kind beruhigte, indem er sich sanft näherte und in der Nähe blieb."
-        }
-      },
-      "elvis": {
-        "name": "Elvis",
-        "attributes": {
-          "age": "2020",
-          "color": "Grau und weiß",
-          "birthplace": "Deutschland"
-        },
-        "character": "Elvis ist stur und rebellisch. Er ist neugierig und verhält sich oft wie ein Star.",
-        "stories": {
-          "0": "Elvis kann sehr hoch springen, einmal sprang er über den Zaun und lief in den Wald. Zum Glück kam er nach kurzer Zeit zurück.",
-          "1": "Während einer Therapiesitzung begann Elvis mitzusummen, als ein Besucher sang - ganz der wahre Künstler, wie sein Namensvetter!"
-        }
-      },
-      "ricky": {
-        "name": "Ricky",
-        "attributes": {
-          "age": "2020",
-          "color": "Rot und weiß",
-          "birthplace": "Deutschland"
-        },
-        "character": "Ricky ist sehr schüchtern, aber er ist der größte Plauderer.",
-        "stories": {
-          "0": "Ricky kam als Besucher zu uns, aber er wurde so gute Freunde mit Elvis, dass er blieb.",
-          "1": "An einem regnerischen Tag entdeckte Ricky, dass er es liebt, in Pfützen zu spielen, und jetzt macht er einen Freudentanz, wenn es regnet."
-        }
-      },
-      "teddy": {
-        "name": "Teddy",
-        "attributes": {
-          "age": "2018",
-          "color": "Karamell",
-          "birthplace": "Deutschland"
-        },
-        "character": "Teddy ist der Anführer der Herde. Er ist bekannt für sein ruhiges Wesen und seine Freundlichkeit.",
-        "stories": {
-          "0": "Teddy ließ sich von einem 2-jährigen Mädchen spazieren führen.",
-          "1": "In einer stürmischen Nacht wachte Teddy über die jüngeren Alpakas und zeigte seine wahren Führungsqualitäten."
-        }
-      },
-      "suri": {
-        "name": "Suri",
-        "attributes": {
-          "age": "2018",
-          "color": "Schwarz",
-          "birthplace": "Deutschland"
-        },
-        "character": "Suri ist sehr mutig, was ihn oft dazu bringt, die Herde dominieren zu wollen.",
-        "stories": {
-          "0": "Suri hat vor nichts Angst und spuckte einmal auf Daisy.",
-          "1": "Als wir neue Heufutterstellen einführten, war Suri der erste, der herausfand, wie man sie benutzt, und zeigte es den anderen."
-        }
-      },
-      "freddy": {
-        "name": "Freddy",
-        "attributes": {
-          "age": "2019",
-          "color": "Beige",
-          "birthplace": "Chile"
-        },
-        "character": "Freddy hat einen wechselhaften Charakter - manchmal kann er Gäste anschnauben.",
-        "stories": {
-          "0": "Freddy ist sehr intelligent. Er lernte schnell, mit seinem Fuß nach Futter zu fragen.",
-          "1": "Im Winter entdeckte Freddy, dass er es liebt, Schneeflocken mit seiner Zunge zu fangen, was alle zum Lachen brachte."
-        }
-      }
-    },
-    "goats": {
-      "pageTitle": "Treffen Sie unsere Ziegen",
-      "backToAnimals": "Zurück zu den Tieren",
-      "madonnaname": "Madonna",
-      "ladyganame": "Lady Gaga",
-      "nellaname": "Nella",
-      "baronname": "Baron",
-      "attributes": "Eigenschaften",
-      "age": "Geboren",
-      "color": "Farbe",
-      "birthplace": "Geburtsort",
-      "character": "Charakter",
-      "stories": "Geschichten",
-      "years": "Jahre",
-      "madonna": {
-        "name": "Madonna",
-        "attributes": {
-          "age": "2017",
-          "color": "Weiß",
-          "birthplace": "Tschechien"
-        },
-        "character": "Madonna ist die Diva der Ziegenherde. Sie liebt Aufmerksamkeit und 'singt' oft für Besucher.",
-        "stories": {
-          "0": "Madonna stahl einmal den Hut eines Besuchers und trug ihn einen ganzen Tag lang auf dem Hof herum.",
-          "1": "Sie hat die Angewohnheit, sich auf den höchsten Punkt jeder Struktur zu stellen, als würde sie für ein Fotoshooting posieren."
-        }
-      },
-      "ladygaga": {
-        "name": "Lady Gaga",
-        "attributes": {
-          "age": "2016",
-          "color": "Schwarz und Weiß",
-          "birthplace": "Tschechien"
-        },
-        "character": "Lady Gaga ist bekannt für ihren einzigartigen 'Modestil', oft findet man sie mit Blumen oder Blättern im Fell.",
-        "stories": {
-          "0": "Lady Gaga organisierte einmal eine 'Ziegenparade', bei der sie die gesamte Herde in einer Reihe um den Hof führte.",
-          "1": "Sie hat ein besonderes Talent dafür, die leckersten Blätter zu finden und teilt sie mit ihren Ziegenfreunden."
-        }
-      },
-      "nella": {
-        "name": "Nella",
-        "attributes": {
-          "age": "2020",
-          "color": "Braun",
-          "birthplace": "Tschechien"
-        },
-        "character": "Nella ist die sanfte Seele der Gruppe. Sie ist besonders gut mit Kindern und liebt Kuscheln.",
-        "stories": {
-          "0": "Nella tröstete einmal ein weinendes Kind, indem sie sich an es schmiegte und bei ihm blieb, bis es lächelte.",
-          "1": "Sie hat eine einzigartige Freundschaft mit einer der Hofkatzen und oft findet man sie gemeinsam in der Sonne schlafend."
-        }
-      },
-      "baron": {
-        "name": "Baron",
-        "attributes": {
-          "age": "2020",
-          "color": "Schwarz",
-          "birthplace": "Tschechien"
-        },
-        "character": "Baron ist der würdevolle Anführer der Ziegenherde. Er ist ruhig, weise und beschützt die anderen.",
-        "stories": {
-          "0": "Baron machte die Bauern einmal auf einen kaputten Zaun aufmerksam, indem er wiederholt gegen die Scheunentür stieß, bis jemand nachsehen kam.",
-          "1": "Er hat die einzigartige Angewohnheit, Besucher wie ein Fremdenführer über den Hof zu 'begleiten'."
-        }
-      }
+      "name": "Alpakas",
+      "title": "Unsere Alpakas"
     },
     "dogs": {
-      "pageTitle": "Treffen Sie unsere Hunde",
-      "backToAnimals": "Zurück zu den Tieren",
-      "lucyname": "Lucy",
-      "daisyname": "Daisy",
-      "attributes": "Eigenschaften",
-      "age": "Geboren",
-      "color": "Farbe",
-      "breed": "Rasse",
-      "role": "Rolle",
-      "character": "Charakter",
-      "stories": "Geschichten",
-      "lucy": {
-        "name": "Lucy",
-        "attributes": {
-          "age": "2019",
-          "color": "Gold",
-          "breed": "Yorkshire Terrier",
-          "role": "Hofwächter"
-        },
-        "character": "Lucy ist ein energischer und liebevoller Yorkshire Terrier. Trotz ihrer kleinen Größe hat sie eine große Persönlichkeit und liebt es, den Hof zu bewachen.",
-        "stories": {
-          "0": "Lucy mag zwar winzig sein, aber sie nimmt ihre Aufgabe als Hofwächterin sehr ernst.",
-          "1": "Sie ist unglaublich sanft zu Besuchern und zeigt ihnen gerne den Hof."
-        }
+      "name": "Hunde",
+      "title": "Unsere Hunde"
+    },
+    "goats": {
+      "name": "Ziegen",
+      "title": "Unsere Ziegen"
+    }
+  },
+  "alpacas": {
+    "pageTitle": "Treffen Sie unsere Alpakas",
+    "backToAnimals": "Zurück zu den Tieren",
+    "micky": {
+      "name": "Micky",
+      "attributes": {
+        "age": "2018",
+        "color": "Braun",
+        "birthplace": "Deutschland"
       },
-      "daisy": {
-        "name": "Daisy",
-        "attributes": {
-          "age": "2020",
-          "color": "Schwarz",
-          "breed": "Labrador Mischling",
-          "role": "Hoffreund"
-        },
-        "character": "Daisy ist ein süßer und freundlicher Hund, der Aufmerksamkeit liebt. Sie ist immer bereit, Besucher mit wedelndem Schwanz zu begrüßen.",
-        "stories": {
-          "0": "Daisy hat eine besondere Bindung zu den Ziegenbabys und passt oft auf sie auf.",
-          "1": "Sie ist bekannt für ihr sanftes Wesen und ihre Geduld mit Kindern, die den Hof besuchen."
-        }
+      "character": "Micky ist sehr schüchtern, hat Angst vor Geräuschen und Geschrei.",
+      "stories": {
+        "0": "Als Micky zum ersten Mal eine Maus in der Scheune sah, erschrak er und lief schnell weg.",
+        "1": "Trotz seiner Schüchternheit zeigte Micky unglaublichen Mut, als er während einer Therapie ein nervöses Kind beruhigte, indem er sich sanft näherte und in der Nähe blieb."
+      }
+    },
+    "elvis": {
+      "name": "Elvis",
+      "attributes": {
+        "age": "2020",
+        "color": "Grau und weiß",
+        "birthplace": "Deutschland"
+      },
+      "character": "Elvis ist stur und rebellisch. Er ist neugierig und verhält sich oft wie ein Star.",
+      "stories": {
+        "0": "Elvis kann sehr hoch springen, einmal sprang er über den Zaun und lief in den Wald. Zum Glück kam er nach kurzer Zeit zurück.",
+        "1": "Während einer Therapiesitzung begann Elvis mitzusummen, als ein Besucher sang - ganz der wahre Künstler, wie sein Namensvetter!"
+      }
+    },
+    "ricky": {
+      "name": "Ricky",
+      "attributes": {
+        "age": "2020",
+        "color": "Rot und weiß",
+        "birthplace": "Deutschland"
+      },
+      "character": "Ricky ist sehr schüchtern, aber er ist der größte Plauderer.",
+      "stories": {
+        "0": "Ricky kam als Besucher zu uns, aber er wurde so gute Freunde mit Elvis, dass er blieb.",
+        "1": "An einem regnerischen Tag entdeckte Ricky, dass er es liebt, in Pfützen zu spielen, und jetzt macht er einen Freudentanz, wenn es regnet."
+      }
+    },
+    "teddy": {
+      "name": "Teddy",
+      "attributes": {
+        "age": "2018",
+        "color": "Karamell",
+        "birthplace": "Deutschland"
+      },
+      "character": "Teddy ist der Anführer der Herde. Er ist bekannt für sein ruhiges Wesen und seine Freundlichkeit.",
+      "stories": {
+        "0": "Teddy ließ sich von einem 2-jährigen Mädchen spazieren führen.",
+        "1": "In einer stürmischen Nacht wachte Teddy über die jüngeren Alpakas und zeigte seine wahren Führungsqualitäten."
+      }
+    },
+    "suri": {
+      "name": "Suri",
+      "attributes": {
+        "age": "2018",
+        "color": "Schwarz",
+        "birthplace": "Deutschland"
+      },
+      "character": "Suri ist sehr mutig, was ihn oft dazu bringt, die Herde dominieren zu wollen.",
+      "stories": {
+        "0": "Suri hat vor nichts Angst und spuckte einmal Daisy an.",
+        "1": "Als wir neue Heufutterstationen einführten, war Suri der erste, der herausfand, wie man sie benutzt, und zeigte es den anderen."
+      }
+    },
+    "freddy": {
+      "name": "Freddy",
+      "attributes": {
+        "age": "2019",
+        "color": "Beige",
+        "birthplace": "Chile"
+      },
+      "character": "Freddy hat ein wechselhaftes Temperament - manchmal kann er Gäste anspucken.",
+      "stories": {
+        "0": "Freddy ist sehr intelligent. Er lernte schnell, mit seinem Fuß nach Futter zu fragen.",
+        "1": "Im Winter entdeckte Freddy, dass er es liebt, Schneeflocken mit seiner Zunge zu fangen, was alle zum Lachen brachte."
+      }
+    },
+    "attributes": "Eigenschaften",
+    "age": "Geboren",
+    "color": "Farbe",
+    "birthplace": "Geburtsort",
+    "character": "Charakter",
+    "stories": "Geschichten",
+    "years": "Jahre"
+  },
+  "dogs": {
+    "pageTitle": "Treffen Sie unsere Hunde",
+    "backToAnimals": "Zurück zu den Tieren",
+    "lucyname": "Lucy",
+    "daisyname": "Daisy",
+    "attributes": "Eigenschaften",
+    "age": "Geboren",
+    "color": "Farbe",
+    "breed": "Rasse",
+    "role": "Rolle",
+    "character": "Charakter",
+    "stories": "Geschichten",
+    "lucy": {
+      "name": "Lucy",
+      "attributes": {
+        "age": "2019",
+        "color": "Gold",
+        "breed": "Yorkshire Terrier",
+        "role": "Hofwächter"
+      },
+      "character": "Lucy ist ein energischer und liebevoller Yorkshire Terrier. Trotz ihrer kleinen Größe hat sie eine große Persönlichkeit und liebt es, den Hof zu bewachen.",
+      "stories": {
+        "0": "Lucy mag zwar winzig sein, aber sie nimmt ihre Aufgabe als Hofwächterin sehr ernst.",
+        "1": "Sie ist unglaublich sanft zu Besuchern und zeigt ihnen gerne den Hof."
+      }
+    },
+    "daisy": {
+      "name": "Daisy",
+      "attributes": {
+        "age": "2020",
+        "color": "Schwarz",
+        "breed": "Labrador Mischling",
+        "role": "Hoffreund"
+      },
+      "character": "Daisy ist ein süßer und freundlicher Hund, der Aufmerksamkeit liebt. Sie ist immer bereit, Besucher mit wedelndem Schwanz zu begrüßen.",
+      "stories": {
+        "0": "Daisy hat eine besondere Bindung zu den Ziegenbabys und passt oft auf sie auf.",
+        "1": "Sie ist bekannt für ihr sanftes Wesen und ihre Geduld mit Kindern, die den Hof besuchen."
+      }
+    }
+  },
+  "goats": {
+    "pageTitle": "Treffen Sie unsere Ziegen",
+    "backToAnimals": "Zurück zu den Tieren",
+    "madonnaname": "Madonna",
+    "ladyganame": "Lady Gaga",
+    "nellaname": "Nella",
+    "baronname": "Baron",
+    "attributes": "Eigenschaften",
+    "age": "Geboren",
+    "color": "Farbe",
+    "birthplace": "Geburtsort",
+    "character": "Charakter",
+    "stories": "Geschichten",
+    "years": "Jahre",
+    "madonna": {
+      "name": "Madonna",
+      "attributes": {
+        "age": "2017",
+        "color": "Weiß",
+        "birthplace": "Tschechien"
+      },
+      "character": "Madonna ist die Diva der Ziegenherde. Sie liebt Aufmerksamkeit und 'singt' oft für Besucher.",
+      "stories": {
+        "0": "Madonna stahl einmal den Hut eines Besuchers und trug ihn einen ganzen Tag lang auf dem Hof herum.",
+        "1": "Sie hat die Angewohnheit, sich auf den höchsten Punkt jeder Struktur zu stellen, als würde sie für ein Fotoshooting posieren."
+      }
+    },
+    "ladygaga": {
+      "name": "Lady Gaga",
+      "attributes": {
+        "age": "2016",
+        "color": "Schwarz und Weiß",
+        "birthplace": "Tschechien"
+      },
+      "character": "Lady Gaga ist bekannt für ihren einzigartigen 'Modestil', oft findet man sie mit Blumen oder Blättern im Fell.",
+      "stories": {
+        "0": "Lady Gaga organisierte einmal eine 'Ziegenparade', bei der sie die gesamte Herde in einer Reihe um den Hof führte.",
+        "1": "Sie hat ein besonderes Talent dafür, die leckersten Blätter zu finden und teilt sie mit ihren Ziegenfreunden."
+      }
+    },
+    "nella": {
+      "name": "Nella",
+      "attributes": {
+        "age": "2020",
+        "color": "Braun",
+        "birthplace": "Tschechien"
+      },
+      "character": "Nella ist die sanfte Seele der Gruppe. Sie ist besonders gut mit Kindern und liebt Kuscheln.",
+      "stories": {
+        "0": "Nella tröstete einmal ein weinendes Kind, indem sie sich an es schmiegte und bei ihm blieb, bis es lächelte.",
+        "1": "Sie hat eine einzigartige Freundschaft mit einer der Hofkatzen und oft findet man sie gemeinsam in der Sonne schlafend."
+      }
+    },
+    "baron": {
+      "name": "Baron",
+      "attributes": {
+        "age": "2020",
+        "color": "Schwarz",
+        "birthplace": "Tschechien"
+      },
+      "character": "Baron ist der würdevolle Anführer der Ziegenherde. Er ist ruhig, weise und beschützt die anderen.",
+      "stories": {
+        "0": "Baron machte die Bauern einmal auf einen kaputten Zaun aufmerksam, indem er wiederholt gegen die Scheunentür stieß, bis jemand nachsehen kam.",
+        "1": "Er hat die einzigartige Angewohnheit, Besucher wie ein Fremdenführer über den Hof zu 'begleiten'."
       }
     }
   },
