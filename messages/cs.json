@@ -30,7 +30,7 @@
   "animals": {
     "title": "Poznejte naše zvířata",
     "sectionTitle": "Naši zvířecí přátelé",
-    "meetButton": "Poznejte {animal}",
+    "meetButton": "Poznejte {name}",
     "alpacas": {
       "name": "Alpaky",
       "title": "Naše alpaky",
@@ -50,6 +50,13 @@
   "alpacas": {
     "pageTitle": "Poznejte naše alpaky",
     "backToAnimals": "Zpět na zvířata",
+    "attributes": "Vlastnosti",
+    "age": "Narozen",
+    "color": "Barva",
+    "birthplace": "Místo narození",
+    "character": "Charakter",
+    "stories": "Příběhy",
+    "years": "let",
     "micky": {
       "name": "Micky",
       "attributes": {
@@ -183,6 +190,7 @@
     "birthplace": "Místo narození",
     "character": "Charakter",
     "stories": "Příběhy",
+    "years": "let",
     "madonna": {
       "name": "Madonna",
       "attributes": {

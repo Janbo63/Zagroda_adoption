@@ -6,8 +6,8 @@
   "common": {
     "home": "Strona główna",
     "animals": "Zwierzęta",
-    "stay": "Pobyt",
     "activities": "Aktywności",
+    "accommodation": "Noclegi",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Powrót do zwierząt",
@@ -76,7 +76,7 @@
     },
     "dogs": {
       "name": "Psy",
-      "description": "Nasi wierni czworonożni przyjaciele",
+      "description": "Nasi wierne psy gospodarskie",
       "alt": "Psy w naszym gospodarstwie"
     }
   },
@@ -179,7 +179,7 @@
     "home": "Strona Główna",
     "animals": "Zwierzęta",
     "activities": "Aktywności",
-    "accommodation": "Zakwaterowanie",
+    "accommodation": "Noclegi",
     "blog": "Blog",
     "contact": "Kontakt"
   },
