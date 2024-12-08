@@ -26,11 +26,8 @@
     "sectionTitle": "Unsere tierischen Freunde",
     "meetButton": "Treffen Sie {name}",
     "alpacas": {
-      "name": "Alpakas",
-      "description": "Unsere sanften, flauschigen Therapeuten freuen sich auf Sie!",
-      "alt": "Alpakas auf unserem Hof",
-      "pageTitle": "Treffen Sie unsere Alpaka-Truppe",
-      "backToAnimals": "Zurück zu den Tieren",
+      "title": "Unsere Alpakas",
+      "sectionTitle": "Unsere Alpaka-Familie",
       "attributes": "Eigenschaften",
       "character": "Charakter",
       "stories": "Geschichten",
@@ -118,11 +115,8 @@
       }
     },
     "goats": {
-      "name": "Ziegen",
-      "description": "Verspielte und freundliche Ziegen, die Aufmerksamkeit lieben",
-      "alt": "Ziegen auf unserem Hof",
-      "pageTitle": "Treffen Sie unsere Ziegen-Gang",
-      "backToAnimals": "Zurück zu den Tieren",
+      "title": "Unsere Ziegen",
+      "sectionTitle": "Unsere Ziegen-Familie",
       "attributes": "Eigenschaften",
       "character": "Charakter",
       "stories": "Geschichten",
@@ -184,14 +178,15 @@
       }
     },
     "dogs": {
-      "name": "Hunde",
-      "description": "Unsere treuen Hofhunde sind hier, um Sie zu begrüßen und Ihnen Gesellschaft zu leisten.",
-      "alt": "Hunde auf unserem Hof",
-      "pageTitle": "Treffen Sie unsere Hunde",
-      "backToAnimals": "Zurück zu den Tieren",
+      "title": "Unsere Hunde",
+      "sectionTitle": "Unsere Hunde-Familie",
       "attributes": "Eigenschaften",
       "character": "Charakter",
       "stories": "Geschichten",
+      "age": "Geboren",
+      "color": "Farbe",
+      "breed": "Rasse",
+      "role": "Rolle",
       "lucy": {
         "name": "Lucy",
         "attributes": {

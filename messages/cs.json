@@ -26,11 +26,8 @@
     "sectionTitle": "Naši zvířecí přátelé",
     "meetButton": "Poznejte {name}",
     "alpacas": {
-      "name": "Alpaky",
-      "description": "Naši jemní, huňatí terapeuti se těší na vaši návštěvu!",
-      "alt": "Alpaky na naší farmě",
-      "pageTitle": "Poznejte naše stádo alpak",
-      "backToAnimals": "Zpět na zvířata",
+      "title": "Naše alpaky",
+      "sectionTitle": "Naše alpačí rodina",
       "attributes": "Vlastnosti",
       "character": "Charakter",
       "stories": "Příběhy",
@@ -118,11 +115,8 @@
       }
     },
     "goats": {
-      "name": "Kozy",
-      "description": "Hravé a přátelské kozy, které milují pozornost",
-      "alt": "Kozy na naší farmě",
-      "pageTitle": "Poznejte naši kozí partu",
-      "backToAnimals": "Zpět na zvířata",
+      "title": "Naše kozy",
+      "sectionTitle": "Naše kozí rodina",
       "attributes": "Vlastnosti",
       "character": "Charakter",
       "stories": "Příběhy",
@@ -184,14 +178,15 @@
       }
     },
     "dogs": {
-      "name": "Psi",
-      "description": "Naši věrní farmářští psi jsou zde, aby vás přivítali a dělali vám společnost.",
-      "alt": "Psi na naší farmě",
-      "pageTitle": "Poznejte naše psy",
-      "backToAnimals": "Zpět na zvířata",
+      "title": "Naši psi",
+      "sectionTitle": "Naše psí rodina",
       "attributes": "Vlastnosti",
       "character": "Charakter",
       "stories": "Příběhy",
+      "age": "Narozen",
+      "color": "Barva",
+      "breed": "Plemeno",
+      "role": "Role",
       "lucy": {
         "name": "Lucy",
         "attributes": {
