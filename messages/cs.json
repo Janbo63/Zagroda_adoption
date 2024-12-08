@@ -17,169 +17,188 @@
     "years": "let",
     "attributes": "Vlastnosti",
     "character": "Charakter",
-    "stories": "Příběhy"
+    "stories": "Příběhy",
+    "navigation": {
+      "home": "Domů",
+      "animals": "Zvířata",
+      "activities": "Aktivity",
+      "accommodation": "Ubytování",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    }
   },
   "animals": {
     "title": "Poznejte naše zvířata",
     "sectionTitle": "Naši zvířecí přátelé",
-    "meetButton": "Poznejte {name}",
+    "meetButton": "Poznejte {animal}",
     "alpacas": {
+      "name": "Alpaky",
       "title": "Naše alpaky",
-      "description": "Seznamte se s našimi přátelskými a terapeutickými alpakami",
-      "pageTitle": "Poznejte naše alpaky",
-      "backToAnimals": "Zpět na zvířata",
-      "name": "Jméno",
-      "attributes": "Vlastnosti",
-      "age": "Narozen",
-      "color": "Barva",
-      "birthplace": "Místo narození",
-      "character": "Charakter",
-      "stories": "Příběhy",
-      "micky": {
-        "name": "Micky",
-        "attributes": {
-          "age": "2018",
-          "color": "Hnědá",
-          "birthplace": "Německo"
-        },
-        "character": "Micky je velmi plachý, bojí se hluku a křiku.",
-        "stories": {
-          "0": "Když Micky poprvé uviděl myš ve stodole, vyděsil se a rychle utekl.",
-          "1": "Navzdory své plachosti prokázal Micky neuvěřitelnou odvahu, když během terapie uklidnil nervózní dítě tím, že se k němu jemně přiblížil a zůstal nablízku."
-        }
-      },
-      "elvis": {
-        "name": "Elvis",
-        "attributes": {
-          "age": "2020",
-          "color": "Šedá a bílá",
-          "birthplace": "Německo"
-        },
-        "character": "Elvis je tvrdohlavý a vzpurný. Je zvědavý a často se chová jako hvězda.",
-        "stories": {
-          "0": "Elvis umí skákat velmi vysoko, jednou přeskočil plot a utekl do lesa. Naštěstí se po krátké době vrátil.",
-          "1": "Během jedné terapie začal Elvis broukat, když návštěvník zpíval - jako pravý umělec, stejně jako jeho jmenovec!"
-        }
-      },
-      "ricky": {
-        "name": "Ricky",
-        "attributes": {
-          "age": "2020",
-          "color": "Červená a bílá",
-          "birthplace": "Německo"
-        },
-        "character": "Ricky je velmi plachý, ale je největší povídálek.",
-        "stories": {
-          "0": "Ricky k nám přišel jako návštěvník, ale spřátelil se s Elvisem natolik, že zůstal.",
-          "1": "Jednoho deštivého dne Ricky zjistil, že miluje hrát si v kalužích, a teď tančí radostí, když prší."
-        }
-      },
-      "teddy": {
-        "name": "Teddy",
-        "attributes": {
-          "age": "2018",
-          "color": "Karamelová",
-          "birthplace": "Německo"
-        },
-        "character": "Teddy je vůdce stáda. Je známý svou klidnou povahou a přátelskostí.",
-        "stories": {
-          "0": "Teddy se nechal vodit na procházku dvouletou holčičkou.",
-          "1": "Když je někdo nervózní, Teddy vždy přijde jako prvé a nabídne uklidňující přítomnost."
-        }
-      },
-      "suri": {
-        "name": "Suri",
-        "attributes": {
-          "age": "2019",
-          "color": "Bílá",
-          "birthplace": "Německo"
-        },
-        "character": "Suri je nejzvědavější ze všech alpak. Miluje nové věci a lidi.",
-        "stories": {
-          "0": "Suri jednou strávil celé odpoledne pozorováním malíře, který maloval náš statek.",
-          "1": "Během workshopu s dětmi Suri trpělivě stál a nechal se od každého dítěte učesat."
-        }
-      },
-      "freddy": {
-        "name": "Freddy",
-        "attributes": {
-          "age": "2021",
-          "color": "Černá",
-          "birthplace": "Německo"
-        },
-        "character": "Freddy je nejmladší a nejhravější z našich alpak.",
-        "stories": {
-          "0": "Freddy se naučil otevírat branku svým nosem, takže teď musíme mít speciální zámek.",
-          "1": "Když vidí děti, vždy přiběhne prvé a chce si s nimi hrát."
-        }
-      }
+      "description": "Seznamte se s našimi přátelskými a terapeutickými alpakami"
     },
     "dogs": {
+      "name": "Psi",
       "title": "Naši psi",
-      "description": "Poznejte naše hravé a milující farmářské psy",
-      "pageTitle": "Poznejte naše psy",
-      "backToAnimals": "Zpět na zvířata",
-      "name": "Jméno",
-      "attributes": "Vlastnosti",
-      "age": "Narozen",
-      "color": "Barva",
-      "breed": "Plemeno",
-      "role": "Role",
-      "character": "Charakter",
-      "stories": "Příběhy",
-      "lucy": {
-        "name": "Lucy",
-        "attributes": {
-          "age": "2019",
-          "color": "Černá a bílá",
-          "breed": "Border kolie",
-          "role": "Farmářský pes"
-        },
-        "character": "Lucy je velmi inteligentní a pracovitá. Miluje pomáhat s alpakami.",
-        "stories": {
-          "0": "Lucy se naučila rozeznávat všechna alpaka podle jména a pomáhá je svolávat k jídlu.",
-          "1": "Během jedné terapie Lucy instinktivně věděla, že má zůstat v klidu vedle autistického dítěte."
-        }
-      },
-      "daisy": {
-        "name": "Daisy",
-        "attributes": {
-          "age": "2020",
-          "color": "Zlatá",
-          "breed": "Zlatý retrívr",
-          "role": "Terapeutický pes"
-        },
-        "character": "Daisy je klidná a laskavá. Je perfektní pro terapeutickou práci.",
-        "stories": {
-          "0": "Daisy jednou přinesla své oblíbené hračky nemocnému dítěti, které nás navštívilo.",
-          "1": "Během bouřky Daisy uklidňovala vystrašené alpaky tím, že si k nim lehla."
-        }
-      }
+      "description": "Poznejte naše hravé a milující farmářské psy"
     },
     "goats": {
+      "name": "Kozy",
       "title": "Naše kozy",
-      "description": "Objevte naše charakterní a zábavné kozy",
-      "pageTitle": "Poznejte naše kozy",
-      "backToAnimals": "Zpět na zvířata",
-      "name": "Jméno",
-      "attributes": "Vlastnosti",
+      "description": "Objevte naše charakterní a zábavné kozy"
+    }
+  },
+  "alpacas": {
+    "pageTitle": "Poznejte naše alpaky",
+    "backToAnimals": "Zpět na zvířata",
+    "attributes": {
       "age": "Narozen",
       "color": "Barva",
-      "birthplace": "Místo narození",
-      "character": "Charakter",
-      "stories": "Příběhy",
-      "madonna": {
-        "name": "Madonna",
-        "attributes": {
-          "age": "2019",
-          "color": "Černá a bílá",
-          "birthplace": "Polsko"
-        },
-        "character": "Madonna je vůdkyně kozí skupiny. Je odvážná a zvědavá.",
-        "stories": {
-          "0": "Madonna jednou vedla celé stádo na průzkum nového výběhu.",
-          "1": "Když přijdou návštěvníci, Madonna je vždy prvé, kdo je přijde pozdravit."
-        }
+      "birthplace": "Místo narození"
+    },
+    "micky": {
+      "name": "Micky",
+      "attributes": {
+        "age": "2018",
+        "color": "Hnědá",
+        "birthplace": "Německo"
+      },
+      "character": "Micky je velmi plachý, bojí se hluku a křiku.",
+      "stories": {
+        "0": "Když Micky poprvé uviděl myš ve stodole, vyděsil se a rychle utekl.",
+        "1": "Navzdory své plachosti prokázal Micky neuvěřitelnou odvahu, když během terapie uklidnil nervózní dítě tím, že se k němu jemně přiblížil a zůstal nablízku."
+      }
+    },
+    "elvis": {
+      "name": "Elvis",
+      "attributes": {
+        "age": "2020",
+        "color": "Šedá a bílá",
+        "birthplace": "Německo"
+      },
+      "character": "Elvis je tvrdohlavý a vzpurný. Je zvědavý a často se chová jako hvězda.",
+      "stories": {
+        "0": "Elvis umí skákat velmi vysoko, jednou přeskočil plot a utekl do lesa. Naštěstí se po krátké době vrátil.",
+        "1": "Během jedné terapie začal Elvis broukat, když návštěvník zpíval - jako pravý umělec, stejně jako jeho jmenovec!"
+      }
+    },
+    "ricky": {
+      "name": "Ricky",
+      "attributes": {
+        "age": "2020",
+        "color": "Červená a bílá",
+        "birthplace": "Německo"
+      },
+      "character": "Ricky je velmi plachý, ale je největší povídálek.",
+      "stories": {
+        "0": "Ricky k nám přišel jako návštěvník, ale spřátelil se s Elvisem natolik, že zůstal.",
+        "1": "Jednoho deštivého dne Ricky zjistil, že miluje hrát si v kalužích, a teď tančí radostí, když prší."
+      }
+    },
+    "teddy": {
+      "name": "Teddy",
+      "attributes": {
+        "age": "2018",
+        "color": "Karamelová",
+        "birthplace": "Německo"
+      },
+      "character": "Teddy je vůdce stáda. Je známý svou klidnou povahou a přátelskostí.",
+      "stories": {
+        "0": "Teddy se nechal vodit na procházku dvouletou holčičkou.",
+        "1": "Když je někdo nervózní, Teddy vždy přijde jako prvé a nabídne uklidňující přítomnost."
+      }
+    },
+    "suri": {
+      "name": "Suri",
+      "attributes": {
+        "age": "2019",
+        "color": "Bílá",
+        "birthplace": "Německo"
+      },
+      "character": "Suri je nejzvědavější ze všech alpak. Miluje nové věci a lidi.",
+      "stories": {
+        "0": "Suri jednou strávil celé odpoledne pozorováním malíře, který maloval náš statek.",
+        "1": "Během workshopu s dětmi Suri trpělivě stál a nechal se od každého dítěte učesat."
+      }
+    },
+    "freddy": {
+      "name": "Freddy",
+      "attributes": {
+        "age": "2021",
+        "color": "Černá",
+        "birthplace": "Německo"
+      },
+      "character": "Freddy je nejmladší a nejhravější z našich alpak.",
+      "stories": {
+        "0": "Freddy se naučil otevírat branku svým nosem, takže teď musíme mít speciální zámek.",
+        "1": "Když vidí děti, vždy přiběhne prvé a chce si s nimi hrát."
+      }
+    }
+  },
+  "dogs": {
+    "title": "Naši psi",
+    "description": "Poznejte naše hravé a milující farmářské psy",
+    "pageTitle": "Poznejte naše psy",
+    "backToAnimals": "Zpět na zvířata",
+    "nameLabel": "Jméno",
+    "attributes": "Vlastnosti",
+    "age": "Narozen",
+    "color": "Barva",
+    "breed": "Plemeno",
+    "role": "Role",
+    "character": "Charakter",
+    "stories": "Příběhy",
+    "lucy": {
+      "name": "Lucy",
+      "attributes": {
+        "age": "2019",
+        "color": "Černá a bílá",
+        "breed": "Border kolie",
+        "role": "Farmářský pes"
+      },
+      "character": "Lucy je velmi inteligentní a pracovitá. Miluje pomáhat s alpakami.",
+      "stories": {
+        "0": "Lucy se naučila rozeznávat všechna alpaka podle jména a pomáhá je svolávat k jídlu.",
+        "1": "Během jedné terapie Lucy instinktivně věděla, že má zůstat v klidu vedle autistického dítěte."
+      }
+    },
+    "daisy": {
+      "name": "Daisy",
+      "attributes": {
+        "age": "2020",
+        "color": "Zlatá",
+        "breed": "Zlatý retrívr",
+        "role": "Terapeutický pes"
+      },
+      "character": "Daisy je klidná a laskavá. Je perfektní pro terapeutickou práci.",
+      "stories": {
+        "0": "Daisy jednou přinesla své oblíbené hračky nemocnému dítěti, které nás navštívilo.",
+        "1": "Během bouřky Daisy uklidňovala vystrašené alpaky tím, že si k nim lehla."
+      }
+    }
+  },
+  "goats": {
+    "title": "Naše kozy",
+    "description": "Objevte naše charakterní a zábavné kozy",
+    "pageTitle": "Poznejte naše kozy",
+    "backToAnimals": "Zpět na zvířata",
+    "nameLabel": "Jméno",
+    "attributes": "Vlastnosti",
+    "age": "Narozen",
+    "color": "Barva",
+    "birthplace": "Místo narození",
+    "character": "Charakter",
+    "stories": "Příběhy",
+    "madonna": {
+      "name": "Madonna",
+      "attributes": {
+        "age": "2019",
+        "color": "Černá a bílá",
+        "birthplace": "Polsko"
+      },
+      "character": "Madonna je vůdkyně kozí skupiny. Je odvážná a zvědavá.",
+      "stories": {
+        "0": "Madonna jednou vedla celé stádo na průzkum nového výběhu.",
+        "1": "Když přijdou návštěvníci, Madonna je vždy prvé, kdo je přijde pozdravit."
       }
     }
   },
@@ -197,20 +216,34 @@
     "minAge": "Minimální věk",
     "availability": "Dostupnost",
     "bookNow": "Rezervovat nyní",
+    "meetthealpacas": {
+      "name": "Setkání s alpakami",
+      "title": "Setkání s alpakami",
+      "description": "Přijďte se seznámit s našimi přátelskými alpakami"
+    },
+    "privatealpacasafari": {
+      "name": "Soukromé alpačí safari",
+      "title": "Soukromé alpačí safari",
+      "description": "Exkluzivní prohlídka farmy s alpakami jen pro vás"
+    },
     "alpacawalks": {
       "name": "Procházky s alpakami",
+      "title": "Procházky s alpakami",
       "description": "Užijte si relaxační procházku s našimi jemnými alpakami"
     },
     "alpacatherapy": {
       "name": "Alpakoterapie",
+      "title": "Alpakoterapie",
       "description": "Zažijte léčivé účinky alpakoterapie"
     },
     "workshops": {
       "name": "Workshopy",
+      "title": "Workshopy",
       "description": "Zúčastněte se našich kreativních a vzdělávacích workshopů"
     },
     "events": {
       "name": "Události",
+      "title": "Události",
       "description": "Navštivte naše speciální akce a oslavy na farmě"
     }
   },
