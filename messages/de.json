@@ -1,16 +1,14 @@
 {
-  "Common": {
-    "title": "Zagroda Alpakoterapii",
-    "description": "Erleben Sie die heilende Kraft von Alpakas und Natur"
-  },
   "common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Erleben Sie die heilende Kraft von Alpakas und Natur",
     "home": "Startseite",
     "animals": "Tiere",
     "stay": "Übernachtung",
     "activities": "Aktivitäten",
     "blog": "Blog",
     "contact": "Kontakt",
-    "backToAnimals": "Zurück zu allen Tieren",
+    "backToAnimals": "Zurück zu den Tieren",
     "age": "Geboren",
     "color": "Farbe",
     "birthplace": "Geburtsort",
@@ -27,15 +25,18 @@
     "meetButton": "Treffen Sie {name}",
     "alpacas": {
       "name": "Alpakas",
-      "title": "Unsere Alpakas"
+      "title": "Unsere Alpakas",
+      "description": "Treffen Sie unsere freundlichen und therapeutischen Alpakas"
     },
     "dogs": {
       "name": "Hunde",
-      "title": "Unsere Hunde"
+      "title": "Unsere Hunde",
+      "description": "Lernen Sie unsere verspielten und liebevollen Hofhunde kennen"
     },
     "goats": {
       "name": "Ziegen",
-      "title": "Unsere Ziegen"
+      "title": "Unsere Ziegen",
+      "description": "Entdecken Sie unsere charakterstarken und unterhaltsamen Ziegen"
     }
   },
   "alpacas": {
@@ -289,7 +290,23 @@
   },
   "activities": {
     "title": "Aktivitäten",
-    "sectionTitle": "Unsere Aktivitäten",
+    "sectionTitle": "Was Sie bei uns erleben können",
+    "alpacawalks": {
+      "name": "Alpaka-Spaziergänge",
+      "description": "Genießen Sie einen entspannenden Spaziergang mit unseren sanften Alpakas"
+    },
+    "alpacatherapy": {
+      "name": "Alpaka-Therapie",
+      "description": "Erleben Sie die heilende Wirkung der Alpaka-Therapie"
+    },
+    "workshops": {
+      "name": "Workshops",
+      "description": "Nehmen Sie an unseren kreativen und lehrreichen Workshops teil"
+    },
+    "events": {
+      "name": "Veranstaltungen",
+      "description": "Besuchen Sie unsere speziellen Veranstaltungen und Feste auf dem Hof"
+    },
     "viewDetails": "Details anzeigen",
     "attributes": "Aktivitätsmerkmale",
     "details": "Aktivitätsdetails",
