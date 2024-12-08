@@ -59,10 +59,10 @@
           "color": "Červená a bílá",
           "birthplace": "Německo"
         },
-        "character": "Ricky je velmi plachý, ale je největší mluvka.",
+        "character": "Ricky je velmi plachý, ale je největší povídálek.",
         "stories": {
           "0": "Ricky k nám přišel jako návštěvník, ale spřátelil se s Elvisem natolik, že zůstal.",
-          "1": "Jednoho deštivého dne Ricky zjistil, že miluje hraní v kalužích, a teď tančí radostí pokaždé, když prší."
+          "1": "Jednoho deštivého dne Ricky zjistil, že miluje hrát si v kalužích, a teď tančí radostí, když prší."
         }
       },
       "teddy": {
@@ -72,36 +72,71 @@
           "color": "Karamelová",
           "birthplace": "Německo"
         },
-        "character": "Teddy je vůdce stáda. Je známý svou klidnou povahou a přátelským přístupem.",
+        "character": "Teddy je vůdce stáda. Je známý svou klidnou povahou a přátelskostí.",
         "stories": {
-          "0": "Teddy nechal dvouletou holčičku, aby ho vzala na procházku.",
-          "1": "Během bouřlivé noci hlídal mladší alpaky a ukázal své skutečné vůdčí schopnosti."
+          "0": "Teddy se nechal vodit na procházku dvouletou holčičkou.",
+          "1": "Když je někdo nervózní, Teddy vždy přijde jako první a nabídne uklidňující přítomnost."
         }
       },
       "suri": {
         "name": "Suri",
         "attributes": {
-          "age": "2018",
-          "color": "Černá",
+          "age": "2019",
+          "color": "Bílá",
           "birthplace": "Německo"
         },
-        "character": "Suri je velmi odvážný, což ho často vede k tomu, že se snaží dominovat stádu.",
+        "character": "Suri je nejzvědavější ze všech alpak. Miluje nové věci a lidi.",
         "stories": {
-          "0": "Suri se nebojí ničeho a jednou plivl na Daisy.",
-          "1": "Když jsme zavedli nové krmítka na seno, Suri byl první, kdo přišel na to, jak je používat, a ukázal to ostatním."
+          "0": "Suri jednou strávil celé odpoledne pozorováním malíře, který maloval náš statek.",
+          "1": "Během workshopu s dětmi Suri trpělivě stál a nechal se od každého dítěte učesat."
         }
       },
       "freddy": {
         "name": "Freddy",
         "attributes": {
-          "age": "2019",
-          "color": "Béžová",
-          "birthplace": "Chile"
+          "age": "2021",
+          "color": "Černá",
+          "birthplace": "Německo"
         },
-        "character": "Freddy má proměnlivou povahu - někdy dokáže na hosty frknout.",
+        "character": "Freddy je nejmladší a nejhravější z našich alpak.",
         "stories": {
-          "0": "Freddy je velmi inteligentní. Rychle se naučil žádat o jídlo nohou.",
-          "1": "V zimě Freddy zjistil, že miluje chytání sněhových vloček jazykem, čímž všechny rozesmál."
+          "0": "Freddy se naučil otevírat branku svým nosem, takže teď musíme mít speciální zámek.",
+          "1": "Když vidí děti, vždy přiběhne první a chce si s nimi hrát."
+        }
+      }
+    },
+    "dogs": {
+      "name": "Psi",
+      "title": "Naši psi",
+      "description": "Poznejte naše hravé a milující farmářské psy",
+      "pageTitle": "Poznejte naše psy",
+      "backToAnimals": "Zpět na zvířata",
+      "lucy": {
+        "name": "Lucy",
+        "attributes": {
+          "age": "2019",
+          "color": "Zlatá",
+          "breed": "Yorkshire Teriér",
+          "role": "Strážce farmy"
+        },
+        "character": "Lucy je energický a milující Yorkshire Teriér. Navzdory své malé velikosti má velkou osobnost a ráda hlídá farmu.",
+        "stories": {
+          "0": "Lucy může být maličká, ale svou roli strážce farmy bere velmi vážně.",
+          "1": "Je neuvěřitelně jemná k návštěvníkům a ráda jim ukazuje farmu."
+        }
+      },
+      "daisy": {
+        "name": "Daisy",
+        "attributes": {
+          "age": "2020",
+          "color": "Černá",
+          "breed": "Kříženec labradora",
+          "role": "Farmářský přítel"
+        },
+        "character": "Daisy je sladký a přátelský pes, který miluje pozornost. Je vždy připravena přivítat návštěvníky vrtícím ocasem.",
+        "stories": {
+          "0": "Daisy má zvláštní pouto s kůzlaty a často na ně dohlíží.",
+          "1": "Je známá svou jemnou povahou a trpělivostí s dětmi, které navštěvují farmu."
         }
       }
     },
@@ -161,41 +196,6 @@
         "stories": {
           "0": "Baron jednou upozornil farmáře na rozbitý plot tím, že opakovaně narážel do dveří stodoly, dokud se někdo nepřišel podívat.",
           "1": "Má jedinečný zvyk 'doprovázet' návštěvníky po farmě, chodí vedle nich jako průvodce."
-        }
-      }
-    },
-    "dogs": {
-      "name": "Psi",
-      "title": "Naši psi",
-      "description": "Poznejte naše hravé a milující farmářské psy",
-      "pageTitle": "Poznejte naše psy",
-      "backToAnimals": "Zpět na zvířata",
-      "lucy": {
-        "name": "Lucy",
-        "attributes": {
-          "age": "2019",
-          "color": "Zlatá",
-          "breed": "Yorkshire Teriér",
-          "role": "Strážce farmy"
-        },
-        "character": "Lucy je energický a milující Yorkshire Teriér. Navzdory své malé velikosti má velkou osobnost a ráda hlídá farmu.",
-        "stories": {
-          "0": "Lucy může být maličká, ale svou roli strážce farmy bere velmi vážně.",
-          "1": "Je neuvěřitelně jemná k návštěvníkům a ráda jim ukazuje farmu."
-        }
-      },
-      "daisy": {
-        "name": "Daisy",
-        "attributes": {
-          "age": "2020",
-          "color": "Černá",
-          "breed": "Kříženec labradora",
-          "role": "Farmářský přítel"
-        },
-        "character": "Daisy je sladký a přátelský pes, který miluje pozornost. Je vždy připravena přivítat návštěvníky vrtícím ocasem.",
-        "stories": {
-          "0": "Daisy má zvláštní pouto s kůzlaty a často na ně dohlíží.",
-          "1": "Je známá svou jemnou povahou a trpělivostí s dětmi, které navštěvují farmu."
         }
       }
     }
