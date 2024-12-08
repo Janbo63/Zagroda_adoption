@@ -18,7 +18,27 @@ export const translations = {
       farmActivities: 'Aktywności na Farmie',
       latestBlog: 'Najnowsze z Naszego Bloga',
       readMore: 'Czytaj Więcej',
+    },
+    de: {
+      heroTitle: 'Willkommen in unserem Bauernhofparadies',
+      heroSubtitle: 'Erleben Sie die Freude des Bauernlebens mit unseren freundlichen Tieren',
+      planVisit: 'Besuch planen',
+      animalFriends: 'Unsere tierischen Freunde',
+      stayWithUs: 'Bleiben Sie bei uns',
+      farmActivities: 'Bauernhof-Aktivitäten',
+      latestBlog: 'Neues aus unserem Blog',
+      readMore: 'Weiterlesen',
+    },
+    cs: {
+      heroTitle: 'Vítejte v našem farmářském ráji',
+      heroSubtitle: 'Zažijte radost z farmářského života s našimi přátelskými zvířaty',
+      planVisit: 'Naplánovat návštěvu',
+      animalFriends: 'Naši zvířecí přátelé',
+      stayWithUs: 'Zůstaňte s námi',
+      farmActivities: 'Farmářské aktivity',
+      latestBlog: 'Nejnovější z našeho blogu',
+      readMore: 'Číst více',
     }
   }
-  
+
   export type Locale = keyof typeof translations
