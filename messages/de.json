@@ -17,7 +17,15 @@
     "years": "Jahre",
     "attributes": "Eigenschaften",
     "character": "Charakter",
-    "stories": "Geschichten"
+    "stories": "Geschichten",
+    "navigation": {
+      "home": "Startseite",
+      "animals": "Tiere",
+      "activities": "Aktivitäten",
+      "accommodation": "Übernachtung",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    }
   },
   "animals": {
     "title": "Lernen Sie unsere Tiere kennen",
@@ -357,13 +365,5 @@
       "description": "Schlafen Sie gut in unserem gemütlichen Bauernhaus!",
       "alt": "Gemütliche Bauernhofunterkunft"
     }
-  },
-  "navigation": {
-    "home": "Startseite",
-    "animals": "Tiere",
-    "activities": "Aktivitäten",
-    "blog": "Blog",
-    "contact": "Kontakt",
-    "accommodation": "Unterkunft"
   }
 }

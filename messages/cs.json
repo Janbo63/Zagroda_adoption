@@ -1,13 +1,11 @@
 {
-  "Common": {
-    "title": "Zagroda Alpakoterapii",
-    "description": "Zažijte léčivou sílu alpak a přírody"
-  },
   "common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Zažijte léčivou sílu alpak a přírody",
     "home": "Domů",
     "animals": "Zvířata",
-    "stay": "Ubytování",
     "activities": "Aktivity",
+    "accommodation": "Ubytování",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Zpět na zvířata",
@@ -28,21 +26,6 @@
     "alpacas": {
       "pageTitle": "Poznejte naše alpaky",
       "backToAnimals": "Zpět na zvířata",
-      "mickyname": "Micky",
-      "elvisname": "Elvis",
-      "rickyname": "Ricky",
-      "teddyname": "Teddy",
-      "suriname": "Suri",
-      "freddyname": "Freddy",
-      "title": "Naše alpaky",
-      "sectionTitle": "Naše alpačí rodina",
-      "attributes": "Vlastnosti",
-      "age": "Narozen",
-      "color": "Barva",
-      "birthplace": "Místo narození",
-      "character": "Charakter",
-      "stories": "Příběhy",
-      "years": "let",
       "micky": {
         "name": "Micky",
         "attributes": {
@@ -123,21 +106,11 @@
       }
     },
     "goats": {
+      "name": "Kozy",
+      "title": "Naše kozy",
+      "description": "Objevte naše charakterní a zábavné kozy",
       "pageTitle": "Poznejte naše kozy",
       "backToAnimals": "Zpět na zvířata",
-      "madonnaname": "Madonna",
-      "ladyganame": "Lady Gaga",
-      "nellaname": "Nella",
-      "baronname": "Baron",
-      "title": "Naše kozy",
-      "sectionTitle": "Naše kozí rodina",
-      "attributes": "Vlastnosti",
-      "age": "Narozen",
-      "color": "Barva",
-      "birthplace": "Místo narození",
-      "character": "Charakter",
-      "stories": "Příběhy",
-      "years": "let",
       "madonna": {
         "name": "Madonna",
         "attributes": {
@@ -192,19 +165,11 @@
       }
     },
     "dogs": {
+      "name": "Psi",
+      "title": "Naši psi",
+      "description": "Poznejte naše hravé a milující farmářské psy",
       "pageTitle": "Poznejte naše psy",
       "backToAnimals": "Zpět na zvířata",
-      "lucyname": "Lucy",
-      "daisyname": "Daisy",
-      "title": "Naši psi",
-      "sectionTitle": "Naše psí rodina",
-      "attributes": "Vlastnosti",
-      "age": "Narozen",
-      "color": "Barva",
-      "breed": "Plemeno",
-      "role": "Role",
-      "character": "Charakter",
-      "stories": "Příběhy",
       "lucy": {
         "name": "Lucy",
         "attributes": {
@@ -233,6 +198,37 @@
           "1": "Je známá svou jemnou povahou a trpělivostí s dětmi, které navštěvují farmu."
         }
       }
+    }
+  },
+  "activities": {
+    "title": "Aktivity",
+    "sectionTitle": "Co u nás můžete zažít",
+    "viewDetails": "Zobrazit detaily",
+    "attributes": "Vlastnosti aktivity",
+    "details": "Detaily aktivity",
+    "highlights": "Hlavní body",
+    "requirements": "Požadavky",
+    "price": "Cena",
+    "duration": "Doba trvání",
+    "groupSize": "Velikost skupiny",
+    "minAge": "Minimální věk",
+    "availability": "Dostupnost",
+    "bookNow": "Rezervovat nyní",
+    "alpacawalks": {
+      "name": "Procházky s alpakami",
+      "description": "Užijte si relaxační procházku s našimi jemnými alpakami"
+    },
+    "alpacatherapy": {
+      "name": "Alpakoterapie",
+      "description": "Zažijte léčivé účinky alpakoterapie"
+    },
+    "workshops": {
+      "name": "Workshopy",
+      "description": "Zúčastněte se našich kreativních a vzdělávacích workshopů"
+    },
+    "events": {
+      "name": "Události",
+      "description": "Navštivte naše speciální akce a oslavy na farmě"
     }
   },
   "home": {
@@ -287,21 +283,6 @@
     "bookNow": "Rezervovat nyní",
     "checkAvailability": "Zkontrolovat dostupnost"
   },
-  "activities": {
-    "title": "Aktivity",
-    "sectionTitle": "Naše aktivity",
-    "viewDetails": "Zobrazit detaily",
-    "attributes": "Vlastnosti aktivity",
-    "details": "Detaily aktivity",
-    "highlights": "Hlavní body",
-    "requirements": "Požadavky",
-    "price": "Cena",
-    "duration": "Doba trvání",
-    "groupSize": "Velikost skupiny",
-    "minAge": "Minimální věk",
-    "availability": "Dostupnost",
-    "bookNow": "Rezervovat nyní"
-  },
   "blog": {
     "title": "Náš blog",
     "noPosts": "Momentálně nejsou k dispozici žádné příspěvky. Podívejte se brzy znovu!",
@@ -345,8 +326,8 @@
     "home": "Domů",
     "animals": "Zvířata",
     "activities": "Aktivity",
+    "accommodation": "Ubytování",
     "blog": "Blog",
-    "contact": "Kontakt",
-    "accommodation": "Ubytování"
+    "contact": "Kontakt"
   }
 }

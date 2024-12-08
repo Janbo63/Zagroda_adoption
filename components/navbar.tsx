@@ -9,11 +9,11 @@ import { useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
 
 const navigation = [
-  { name: 'home', href: '/' },
-  { name: 'animals', href: '/animals' },
-  { name: 'activities', href: '/activities' },
-  { name: 'accommodation', href: '/accommodation' },
-  { name: 'contact', href: '/contact' },
+  { key: 'home', href: '/' },
+  { key: 'animals', href: '/animals' },
+  { key: 'activities', href: '/activities' },
+  { key: 'accommodation', href: '/accommodation' },
+  { key: 'contact', href: '/contact' },
 ]
 
 interface NavbarProps {
@@ -21,7 +21,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ locale }: NavbarProps) {
-  const t = useTranslations('navigation')
+  const t = useTranslations('common')
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -51,7 +51,7 @@ export function Navbar({ locale }: NavbarProps) {
                 const isActive = currentPath === item.href
                 return (
                   <Link
-                    key={item.name}
+                    key={item.key}
                     href={`/${locale}${item.href}`}
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                       isActive
@@ -59,7 +59,7 @@ export function Navbar({ locale }: NavbarProps) {
                         : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
                     }`}
                   >
-                    {t(item.name)}
+                    {t(item.key)}
                   </Link>
                 )
               })}
@@ -96,7 +96,7 @@ export function Navbar({ locale }: NavbarProps) {
               const isActive = currentPath === item.href
               return (
                 <Link
-                  key={item.name}
+                  key={item.key}
                   href={`/${locale}${item.href}`}
                   className={`block px-3 py-2 rounded-md text-base font-medium touch-manipulation ${
                     isActive
@@ -107,7 +107,7 @@ export function Navbar({ locale }: NavbarProps) {
                   role="button"
                   tabIndex={0}
                 >
-                  {t(item.name)}
+                  {t(item.key)}
                 </Link>
               )
             })}
