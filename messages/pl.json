@@ -99,58 +99,59 @@
     "viewDetails": "Zobacz Szczegóły",
     "attributes": "Atrybuty Aktywności",
     "details": "Szczegóły Aktywności",
-    "highlights": "Główne Atrakcje",
+    "highlights": "Najważniejsze Informacje",
     "requirements": "Wymagania",
+    "duration": "Czas trwania",
+    "groupSize": "Wielkość grupy",
+    "minAge": "Minimalny wiek",
+    "availability": "Dostępność",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "image": "/images/activities/meet-alpacas.jpg",
-      "description": "Spotkaj się z naszymi przyjaznymi alpakami! Idealne dla rodzin, które chcą dowiedzieć się więcej o tych fascynujących zwierzętach.",
+      "description": "Poznaj z bliska nasze przyjazne alpaki! Idealne dla rodzin, które chcą dowiedzieć się więcej o tych fascynujących zwierzętach.",
       "details": "Skorzystaj z wyjątkowej okazji, aby poznać nasze przyjazne stado alpak.",
-      "highlights": "Poznaj nasze przyjazne alpaki i dowiedz się o ich wyjątkowych osobowościach. Będziesz mieć okazję wejść w interakcję ze stadem, dowiedzieć się o opiece nad alpakami i zrobić wiele zdjęć.",
+      "highlights": "Poznaj nasze przyjazne alpaki i dowiedz się o ich wyjątkowych osobowościach. Będziesz mieć okazję do interakcji ze stadem, nauczysz się opieki nad alpakami i zrobisz wiele zdjęć.",
       "requirements": "Wygodne buty do chodzenia, odpowiednia odzież do pogody. Aparat fotograficzny opcjonalnie. Wymagana wcześniejsza rezerwacja.",
       "attributes": {
         "duration": "Około 1 godziny",
-        "terms": "Brak specjalnych wymagań. Odpowiednie dla wszystkich grup wiekowych."
+        "groupSize": "Do 6 osób",
+        "minAge": "Dla wszystkich grup wiekowych",
+        "availability": "Codziennie, po umówieniu"
       },
       "alt": "Aktywność Poznaj Alpaki"
     },
     "alpacawalks": {
-      "name": "Spacer z Alpakami",
+      "name": "Spacery z Alpakami",
       "image": "/images/activities/alpaca-walks.jpg",
-      "description": "Wybierz się na spokojny spacer po naszym pięknym terenie gospodarstwa w towarzystwie własnej alpaki!",
-      "details": "Dołącz do nas na spokojny spacer po malowniczych szlakach z własnym towarzyszem - alpaką.",
-      "highlights": "Indywidualny spacer z alpaką, malownicze trasy, nauka obsługi alpak, możliwość robienia zdjęć.",
+      "description": "Wybierz się na spokojny spacer po naszym pięknym gospodarstwie w towarzystwie własnej alpaki!",
+      "details": "Dołącz do nas na spokojny spacer malowniczymi szlakami z własnym towarzyszem alpaką.",
+      "highlights": "Indywidualny spacer z alpaką, malownicze trasy, nauka prowadzenia alpak, możliwość robienia zdjęć.",
       "requirements": "Wygodne buty do chodzenia, odpowiednia odzież do pogody, minimalny wiek: 6 lat.",
       "attributes": {
         "duration": "Około 90 minut",
-        "terms": "Odpowiednie dla osób w wieku 6 lat i starszych. Zalecane solidne obuwie."
+        "groupSize": "Do 4 osób",
+        "minAge": "Od 6 lat",
+        "availability": "Codziennie, w zależności od pogody"
       },
-      "alt": "Aktywność Spacer z Alpakami"
+      "alt": "Aktywność Spacery z Alpakami"
     },
     "privatealpacasafari": {
       "name": "Specjalna Oferta Prywatna",
       "image": "/images/zagrodanewlogo.png",
       "description": "Skorzystaj z ekskluzywnej wycieczki po naszym gospodarstwie ze stadem alpak! Idealne dla większych grup lub specjalnych okazji.",
-      "details": "Ciesz się wyjątkowym doświadczeniem z naszymi alpakami w prywatnym otoczeniu. Dostępne opcje obejmują urodziny, romantyczne pikniki, zaręczyny, sesje zdjęciowe itp. Zadzwoń do nas, jeśli masz jakiś specjalny pomysł, który chciałbyś z nami zrealizować?",
-      "highlights": "Prywatny przewodnik, spersonalizowane doświadczenie, wydłużony czas z alpakami, specjalne okazje do zdjęć.",
+      "details": "Ciesz się wyjątkowym doświadczeniem z naszymi alpakami w prywatnym otoczeniu. Dostępne opcje obejmują urodziny, romantyczne pikniki, zaręczyny, sesje zdjęciowe itp. Zadzwoń do nas, jeśli masz jakiś specjalny pomysł, który chciałbyś z nami zrealizować!",
+      "highlights": "Prywatny przewodnik, spersonalizowane doświadczenie, wydłużony czas z alpakami, specjalne możliwości fotograficzne.",
       "requirements": "Wymagana rezerwacja z co najmniej 48-godzinnym wyprzedzeniem. Odpowiednie dla wszystkich grup wiekowych.",
       "attributes": {
-        "duration": "Około 2 godzin",
-        "terms": "Wymagana rezerwacja z co najmniej 48-godzinnym wyprzedzeniem. Odpowiednie dla wszystkich grup wiekowych."
+        "duration": "2-3 godziny",
+        "groupSize": "Grupa prywatna do 8 osób",
+        "minAge": "Dla wszystkich grup wiekowych",
+        "availability": "Po specjalnym umówieniu"
       },
       "alt": "Aktywność Prywatne Safari z Alpakami"
     },
-    "duration": "Czas trwania",
-    "groupSize": "Wielkość grupy",
-    "minAge": "Minimalny wiek",
-    "availability": "Dostępność",
-    "tabLabels": {
-      "activityAttributes": "Atrybuty Aktywności",
-      "activityDetails": "Szczegóły Aktywności",
-      "highlights": "Główne Atrakcje",
-      "requirements": "Wymagania"
-    }
-  },
+    "bookNow": "Zarezerwuj Teraz"
+},
   "contact": {
     "title": "Kontakt",
     "callOrMessage": "Zadzwoń lub napisz",

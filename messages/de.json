@@ -298,37 +298,8 @@
   },
   "activities": {
     "title": "Aktivitäten",
-    "sectionTitle": "Was Sie bei uns erleben können",
-    "alpacawalks": {
-      "name": "Alpaka-Spaziergänge",
-      "description": "Genießen Sie einen entspannenden Spaziergang mit unseren sanften Alpakas"
-    },
-    "alpacatherapy": {
-      "name": "Alpaka-Therapie",
-      "description": "Erleben Sie die heilende Wirkung der Alpaka-Therapie"
-    },
-    "workshops": {
-      "name": "Workshops",
-      "description": "Nehmen Sie an unseren kreativen und lehrreichen Workshops teil"
-    },
-    "events": {
-      "name": "Veranstaltungen",
-      "description": "Besuchen Sie unsere speziellen Veranstaltungen und Feste auf dem Hof"
-    },
-    "privatealpacasafari": {
-      "name": "Spezielles Privatangebot",
-      "image": "/images/zagrodanewlogo.png",
-      "description": "Genießen Sie eine exklusive Tour auf unserem Bauernhof mit einer Herde Alpakas! Perfekt für größere Gruppen oder besondere Anlässe.",
-      "details": "Genießen Sie ein exklusives Erlebnis mit unseren Alpakas in privater Atmosphäre. Zu den verfügbaren Optionen gehören Geburtstage, romantische Picknicks, Verlobungen, Fotoshootings usw. Rufen Sie uns an, wenn Sie eine besondere Idee haben, die wir für Sie umsetzen sollen?",
-      "highlights": "Höhepunkte",
-      "requirements": "Anforderungen",
-      "duration": "Dauer",
-      "groupSize": "Gruppengröße",
-      "minAge": "Mindestalter",
-      "availability": "Verfügbarkeit",
-      "bookNow": "Jetzt buchen"
-    },
-    "viewDetails": "Details anzeigen",
+    "sectionTitle": "Unsere Aktivitäten",
+    "viewDetails": "Details Anzeigen",
     "attributes": "Aktivitätsattribute",
     "details": "Aktivitätsdetails",
     "highlights": "Höhepunkte",
@@ -337,8 +308,53 @@
     "groupSize": "Gruppengröße",
     "minAge": "Mindestalter",
     "availability": "Verfügbarkeit",
-    "bookNow": "Jetzt buchen"
-  },
+    "meetthealpacas": {
+      "name": "Alpakas Kennenlernen",
+      "image": "/images/activities/meet-alpacas.jpg",
+      "description": "Lernen Sie unsere freundlichen Alpakas hautnah kennen! Perfekt für Familien, die mehr über diese faszinierenden Tiere erfahren möchten.",
+      "details": "Erleben Sie eine einzigartige Gelegenheit, unsere freundliche Alpakaherde kennenzulernen.",
+      "highlights": "Treffen Sie unsere freundlichen Alpakas und lernen Sie ihre einzigartigen Persönlichkeiten kennen. Sie können mit der Herde interagieren, lernen etwas über die Alpaka-Pflege und haben viele Fotomöglichkeiten.",
+      "requirements": "Bequeme Wanderschuhe, wetterangepasste Kleidung. Kamera optional. Vorherige Buchung erforderlich.",
+      "attributes": {
+        "duration": "Etwa 1 Stunde",
+        "groupSize": "Bis zu 6 Personen",
+        "minAge": "Für alle Altersgruppen geeignet",
+        "availability": "Täglich, nach Vereinbarung"
+      },
+      "alt": "Alpakas Kennenlernen Aktivität"
+    },
+    "alpacawalks": {
+      "name": "Alpakawanderungen",
+      "image": "/images/activities/alpaca-walks.jpg",
+      "description": "Machen Sie einen gemütlichen Spaziergang durch unser schönes Farmgelände, begleitet von Ihrem eigenen Alpaka-Begleiter!",
+      "details": "Begleiten Sie uns auf einem friedlichen Spaziergang durch malerische Pfade mit Ihrem eigenen Alpaka-Begleiter.",
+      "highlights": "Individueller Spaziergang mit einem Alpaka, malerische Routen, lernen Sie den Umgang mit Alpakas, Fotomöglichkeiten.",
+      "requirements": "Bequeme Wanderschuhe, wetterangepasste Kleidung, Mindestalter: 6 Jahre.",
+      "attributes": {
+        "duration": "Etwa 90 Minuten",
+        "groupSize": "Bis zu 4 Personen",
+        "minAge": "Ab 6 Jahren",
+        "availability": "Täglich, wetterabhängig"
+      },
+      "alt": "Alpakawanderungen Aktivität"
+    },
+    "privatealpacasafari": {
+      "name": "Spezielles Privatangebot",
+      "image": "/images/zagrodanewlogo.png",
+      "description": "Genießen Sie eine exklusive Tour über unseren Bauernhof mit einer Herde von Alpakas! Perfekt für größere Gruppen oder besondere Anlässe.",
+      "details": "Genießen Sie ein exklusives Erlebnis mit unseren Alpakas in privater Atmosphäre. Verfügbare Optionen umfassen Geburtstage, romantische Picknicks, Verlobungen, Fotoshootings etc. Rufen Sie uns an, wenn Sie eine besondere Idee haben, die wir für Sie umsetzen sollen!",
+      "highlights": "Privater Führer, maßgeschneidertes Erlebnis, verlängerte Zeit mit Alpakas, besondere Fotomöglichkeiten.",
+      "requirements": "Buchung mindestens 48 Stunden im Voraus erforderlich. Für alle Altersgruppen geeignet.",
+      "attributes": {
+        "duration": "2-3 Stunden",
+        "groupSize": "Private Gruppe bis zu 8 Personen",
+        "minAge": "Für alle Altersgruppen geeignet",
+        "availability": "Nach besonderer Vereinbarung"
+      },
+      "alt": "Privates Alpaka-Safari Aktivität"
+    },
+    "bookNow": "Jetzt Buchen"
+},
   "blog": {
     "title": "Unser Blog",
     "noPosts": "Momentan keine Blogbeiträge verfügbar. Schauen Sie bald wieder vorbei!",

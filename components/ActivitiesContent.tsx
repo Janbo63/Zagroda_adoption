@@ -76,12 +76,22 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 </TabsList>
                 <TabsContent value="attributes">
                   <dl className="mt-4 space-y-2">
-                    {Object.entries(t(`${activity.id}.attributes`)).map(([key, value]) => (
-                      <div key={key}>
-                        <dt className="font-semibold text-primary-700">{t(key)}:</dt>
-                        <dd>{value}</dd>
-                      </div>
-                    ))}
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('duration')}:</dt>
+                      <dd>{t(`${activity.id}.attributes.duration`)}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('groupSize')}:</dt>
+                      <dd>{t(`${activity.id}.attributes.groupSize`)}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('minAge')}:</dt>
+                      <dd>{t(`${activity.id}.attributes.minAge`)}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary-700">{t('availability')}:</dt>
+                      <dd>{t(`${activity.id}.attributes.availability`)}</dd>
+                    </div>
                   </dl>
                 </TabsContent>
                 <TabsContent value="details">

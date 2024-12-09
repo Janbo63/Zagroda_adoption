@@ -101,6 +101,10 @@
     "details": "Activity Details",
     "highlights": "Highlights",
     "requirements": "Requirements",
+    "duration": "Duration",
+    "groupSize": "Group Size",
+    "minAge": "Minimum Age",
+    "availability": "Availability",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "image": "/images/activities/meet-alpacas.jpg",
@@ -110,7 +114,9 @@
       "requirements": "Comfortable walking shoes, weather-appropriate clothing. Camera optional. Advance booking required.",
       "attributes": {
         "duration": "Approximately 1 hour",
-        "terms": "No special requirements. Suitable for all ages."
+        "groupSize": "Up to 6 people",
+        "minAge": "All ages welcome",
+        "availability": "Daily, by appointment"
       },
       "alt": "Meet the Alpacas Activity"
     },
@@ -123,7 +129,9 @@
       "requirements": "Comfortable walking shoes, weather appropriate clothing, minimum age: 6 years.",
       "attributes": {
         "duration": "Approximately 90 minutes",
-        "terms": "Suitable for ages 6 and up. Sturdy footwear recommended."
+        "groupSize": "Up to 4 people",
+        "minAge": "6 years and older",
+        "availability": "Daily, weather permitting"
       },
       "alt": "Alpaca Walks Activity"
     },
@@ -135,15 +143,13 @@
       "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities.",
       "requirements": "Booking required at least 48 hours in advance. Suitable for all ages.",
       "attributes": {
-        "duration": "Approximately 2 hours",
-        "terms": "Booking required at least 48 hours in advance. Suitable for all ages."
+        "duration": "2-3 hours",
+        "groupSize": "Private group up to 8 people",
+        "minAge": "All ages welcome",
+        "availability": "By special arrangement"
       },
       "alt": "Private Alpaca Safari Activity"
     },
-    "duration": "Duration",
-    "groupSize": "Group Size",
-    "minAge": "Minimum Age",
-    "availability": "Availability",
     "bookNow": "Book Now"
   },
   "blog": {

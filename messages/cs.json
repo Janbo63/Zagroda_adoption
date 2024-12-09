@@ -245,49 +245,62 @@
   },
   "activities": {
     "title": "Aktivity",
-    "sectionTitle": "Co u nás můžete zažít",
-    "viewDetails": "Zobrazit detaily",
-    "attributes": "Vlastnosti aktivity",
-    "details": "Detaily aktivity",
-    "highlights": "Hlavní body",
+    "sectionTitle": "Naše Aktivity",
+    "viewDetails": "Zobrazit Podrobnosti",
+    "attributes": "Atributy Aktivity",
+    "details": "Detaily Aktivity",
+    "highlights": "Hlavní Body",
     "requirements": "Požadavky",
     "duration": "Doba trvání",
     "groupSize": "Velikost skupiny",
     "minAge": "Minimální věk",
     "availability": "Dostupnost",
-    "bookNow": "Rezervovat nyní",
     "meetthealpacas": {
-      "name": "Setkání s alpakami",
-      "title": "Setkání s alpakami",
-      "description": "Přijďte se seznámit s našimi přátelskými alpakami"
-    },
-    "privatealpacasafari": {
-      "name": "Speciální soukromá nabídka",
-      "title": "Speciální soukromá nabídka",
-      "image": "/images/zagrodanewlogo.png",
-      "description": "Užijte si exkluzivní prohlídku naší farmy se stádem alpak! Ideální pro větší skupiny nebo speciální příležitosti.",
-      "details": "Užijte si exkluzivní zážitek s našimi alpakami v soukromém prostředí. Nabízíme možnosti jako narozeninové oslavy, romantické pikniky, zásnuby, fotografické session atd. Zavolejte nám, pokud máte jakýkoliv speciální nápad, který byste s námi chtěli realizovat?"
+      "name": "Seznámení s Alpakami",
+      "image": "/images/activities/meet-alpacas.jpg",
+      "description": "Poznejte zblízka naše přátelské alpaky! Ideální pro rodiny, které se chtějí dozvědět více o těchto fascinujících zvířatech.",
+      "details": "Zažijte jedinečnou příležitost setkat se s naším přátelským stádem alpak.",
+      "highlights": "Poznejte naše přátelské alpaky a jejich jedinečné osobnosti. Budete mít možnost interakce se stádem, naučíte se o péči o alpaky a budete mít spoustu příležitostí k fotografování.",
+      "requirements": "Pohodlná obuv na chození, oblečení odpovídající počasí. Fotoaparát volitelně. Nutná předchozí rezervace.",
+      "attributes": {
+        "duration": "Přibližně 1 hodina",
+        "groupSize": "Až 6 osob",
+        "minAge": "Vhodné pro všechny věkové kategorie",
+        "availability": "Denně, po domluvě"
+      },
+      "alt": "Aktivita Seznámení s Alpakami"
     },
     "alpacawalks": {
-      "name": "Procházky s alpakami",
-      "title": "Procházky s alpakami",
-      "description": "Užijte si relaxační procházku s našimi jemnými alpakami"
+      "name": "Procházky s Alpakami",
+      "image": "/images/activities/alpaca-walks.jpg",
+      "description": "Vydejte se na příjemnou procházku po našem krásném statku v doprovodu vlastní alpaky!",
+      "details": "Připojte se k nám na poklidnou procházku malebnými stezkami s vlastním společníkem alpakou.",
+      "highlights": "Individuální procházka s alpakou, malebné trasy, naučte se zacházet s alpakami, příležitosti k fotografování.",
+      "requirements": "Pohodlná obuv na chození, oblečení odpovídající počasí, minimální věk: 6 let.",
+      "attributes": {
+        "duration": "Přibližně 90 minut",
+        "groupSize": "Až 4 osoby",
+        "minAge": "6 let a starší",
+        "availability": "Denně, podle počasí"
+      },
+      "alt": "Aktivita Procházky s Alpakami"
     },
-    "alpacatherapy": {
-      "name": "Alpakoterapie",
-      "title": "Alpakoterapie",
-      "description": "Zažijte léčivé účinky alpakoterapie"
+    "privatealpacasafari": {
+      "name": "Speciální Soukromá Nabídka",
+      "image": "/images/zagrodanewlogo.png",
+      "description": "Užijte si exkluzivní prohlídku našeho statku se stádem alpak! Ideální pro větší skupiny nebo speciální příležitosti.",
+      "details": "Užijte si výjimečný zážitek s našimi alpakami v soukromém prostředí. Dostupné možnosti zahrnují narozeniny, romantické pikniky, zásnuby, focení atd. Zavolejte nám, pokud máte nějaký speciální nápad, který byste s námi chtěli realizovat!",
+      "highlights": "Soukromý průvodce, přizpůsobený zážitek, prodloužený čas s alpakami, speciální fotografické příležitosti.",
+      "requirements": "Nutná rezervace alespoň 48 hodin předem. Vhodné pro všechny věkové kategorie.",
+      "attributes": {
+        "duration": "2-3 hodiny",
+        "groupSize": "Soukromá skupina až 8 osob",
+        "minAge": "Vhodné pro všechny věkové kategorie",
+        "availability": "Dle zvláštní domluvy"
+      },
+      "alt": "Aktivita Soukromé Safari s Alpakami"
     },
-    "workshops": {
-      "name": "Workshopy",
-      "title": "Workshopy",
-      "description": "Zúčastněte se našich kreativních a vzdělávacích workshopů"
-    },
-    "events": {
-      "name": "Události",
-      "title": "Události",
-      "description": "Navštivte naše speciální akce a oslavy na farmě"
-    }
+    "bookNow": "Rezervovat Nyní"
   },
   "home": {
     "title": "Vítejte v Zagroda Alpakoterapii",
