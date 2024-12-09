@@ -79,7 +79,7 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
 
           {/* Language Switcher */}
-          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0">
+          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0 sm:ml-8">
             <LanguageSwitcher />
           </div>
         </div>
