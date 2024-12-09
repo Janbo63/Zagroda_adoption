@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex items-center justify-end gap-1">
+    <div className="flex flex-col sm:flex-row items-center justify-end gap-1">
       {LOCALES.map((locale) => (
         <Button
           key={locale}
