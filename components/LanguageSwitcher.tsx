@@ -38,14 +38,14 @@ export default function LanguageSwitcher() {
           key={locale}
           onClick={() => handleLocaleChange(locale)}
           variant={currentLocale === locale ? "default" : "secondary"}
-          className={`text-sm h-8 w-[64px] ${
+          className={`text-xs sm:text-sm h-6 sm:h-8 w-[40px] sm:w-[64px] ${
             currentLocale === locale 
               ? 'bg-orange-400 text-white hover:bg-orange-500'
               : 'bg-white/10 text-white hover:bg-white/20'
           }`}
           disabled={currentLocale === locale}
         >
-          {languageNames[locale]}
+          {locale.toUpperCase()}
         </Button>
       ))}
     </div>
