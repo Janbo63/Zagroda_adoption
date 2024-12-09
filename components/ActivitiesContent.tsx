@@ -9,36 +9,15 @@ import Image from 'next/image'
 const activities = [
   {
     id: 'meetthealpacas',
-    image: "/images/activities/meet-alpacas.jpg",
-    attributes: {
-      price: "50 PLN",
-      duration: "1 hour",
-      groupSize: "2-8 people",
-      minAge: "3+",
-      availability: "Daily"
-    }
+    image: "/images/activities/meet-alpacas.jpg"
   },
   {
     id: 'alpacawalks',
-    image: "/images/activities/alpaca-walks.jpg",
-    attributes: {
-      price: "80 PLN",
-      duration: "1.5 hours",
-      groupSize: "2-4 people",
-      minAge: "6+",
-      availability: "Weekends"
-    }
+    image: "/images/activities/alpaca-walks.jpg"
   },
   {
     id: 'privatealpacasafari',
-    image: "/images/activities/alpaca-safari.jpg",
-    attributes: {
-      price: "150 PLN",
-      duration: "2 hours",
-      groupSize: "2-6 people",
-      minAge: "All ages",
-      availability: "By appointment"
-    }
+    image: "/images/activities/alpacaprivateoffer.png"
   }
 ]
 
@@ -97,26 +76,12 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 </TabsList>
                 <TabsContent value="attributes">
                   <dl className="mt-4 space-y-2">
-                    <div>
-                      <dt className="font-semibold text-primary-700">{t('price')}:</dt>
-                      <dd>{activity.attributes.price}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{t('duration')}:</dt>
-                      <dd>{activity.attributes.duration}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{t('groupSize')}:</dt>
-                      <dd>{activity.attributes.groupSize}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{t('minAge')}:</dt>
-                      <dd>{activity.attributes.minAge}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{t('availability')}:</dt>
-                      <dd>{activity.attributes.availability}</dd>
-                    </div>
+                    {Object.entries(t(`${activity.id}.attributes`)).map(([key, value]) => (
+                      <div key={key}>
+                        <dt className="font-semibold text-primary-700">{t(key)}:</dt>
+                        <dd>{value}</dd>
+                      </div>
+                    ))}
                   </dl>
                 </TabsContent>
                 <TabsContent value="details">
@@ -149,4 +114,4 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
       </div>
     </div>
   )
-} 
+}
