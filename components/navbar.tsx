@@ -67,19 +67,19 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
 
           {/* Right side - Language Switcher */}
-          <div className="flex items-center justify-end ml-4 min-w-[260px]">
+          <div className="flex items-center justify-end sm:ml-4 sm:min-w-[260px]">
             <div className="hidden sm:flex">
               <LanguageSwitcher />
             </div>
 
             {/* Mobile menu button and language switcher */}
             <div className="sm:hidden flex items-center">
-              <div className="mr-2">
+              <div className="flex-shrink-0">
                 <LanguageSwitcher />
               </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-300 hover:text-gray-300 p-2"
+                className="ml-2 text-gray-300 hover:text-gray-300 p-2"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
