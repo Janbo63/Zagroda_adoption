@@ -31,7 +31,7 @@ export function Navbar({ locale }: NavbarProps) {
     <nav className="bg-green-800 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-orange-400 opacity-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col sm:flex-row justify-between py-2 sm:py-0">
+        <div className="flex flex-col sm:flex-row justify-between py-2 sm:h-16">
           {/* Left side - Logo and Navigation */}
           <div className="flex flex-1 items-center justify-between sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
