@@ -31,9 +31,9 @@ export function Navbar({ locale }: NavbarProps) {
     <nav className="bg-green-800 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-orange-400 opacity-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex justify-between h-16">
+        <div className="flex flex-col sm:flex-row justify-between py-2 sm:py-0">
           {/* Left side - Logo and Navigation */}
-          <div className="flex flex-1">
+          <div className="flex flex-1 items-center justify-between sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               <Link href={`/${locale}`} className="flex items-center">
                 <Image
@@ -46,44 +46,41 @@ export function Navbar({ locale }: NavbarProps) {
                 <span className="text-xl font-bold">Zagroda Alpakoterapii</span>
               </Link>
             </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {navigation.map((item) => {
-                const isActive = currentPath === item.href
-                return (
-                  <Link
-                    key={item.key}
-                    href={`/${locale}${item.href}`}
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                      isActive
-                        ? 'border-orange-400 text-white'
-                        : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
-                    }`}
-                  >
-                    {t(item.key)}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Right side - Language Switcher */}
-          <div className="flex items-center justify-end sm:ml-4 sm:min-w-[260px]">
-            <div className="hidden sm:flex">
-              <LanguageSwitcher />
-            </div>
-
-            {/* Mobile menu button and language switcher */}
-            <div className="sm:hidden flex items-center">
-              <div className="flex-shrink-0">
-                <LanguageSwitcher />
-              </div>
+            
+            {/* Mobile menu button */}
+            <div className="sm:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="ml-2 text-gray-300 hover:text-gray-300 p-2"
+                className="text-gray-300 hover:text-gray-300 p-2"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+            {navigation.map((item) => {
+              const isActive = currentPath === item.href
+              return (
+                <Link
+                  key={item.key}
+                  href={`/${locale}${item.href}`}
+                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    isActive
+                      ? 'border-orange-400 text-white'
+                      : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
+                  }`}
+                >
+                  {t(item.key)}
+                </Link>
+              )
+            })}
+          </div>
+
+          {/* Language Switcher */}
+          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0">
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
