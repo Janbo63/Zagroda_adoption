@@ -101,7 +101,6 @@
     "details": "Szczegóły Aktywności",
     "highlights": "Główne Atrakcje",
     "requirements": "Wymagania",
-    "price": "Cena",
     "meetthealpacas": {
       "name": "Poznaj Alpaki",
       "image": "/images/activities/meet-alpacas.jpg",
@@ -130,9 +129,9 @@
     },
     "privatealpacasafari": {
       "name": "Specjalna Oferta Prywatna",
-      "image": "/images/activities/alpaca-safari.jpg",
+      "image": "/images/zagrodanewlogo.png",
       "description": "Skorzystaj z ekskluzywnej wycieczki po naszym gospodarstwie ze stadem alpak! Idealne dla większych grup lub specjalnych okazji.",
-      "details": "Ciesz się wyjątkowym doświadczeniem z naszymi alpakami w prywatnym otoczeniu.",
+      "details": "Ciesz się wyjątkowym doświadczeniem z naszymi alpakami w prywatnym otoczeniu. Dostępne opcje obejmują urodziny, romantyczne pikniki, zaręczyny, sesje zdjęciowe itp. Zadzwoń do nas, jeśli masz jakiś specjalny pomysł, który chciałbyś z nami zrealizować?",
       "highlights": "Prywatny przewodnik, spersonalizowane doświadczenie, wydłużony czas z alpakami, specjalne okazje do zdjęć.",
       "requirements": "Wymagana rezerwacja z co najmniej 48-godzinnym wyprzedzeniem. Odpowiednie dla wszystkich grup wiekowych.",
       "attributes": {

@@ -41,9 +41,6 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
               </CardDescription>
               <div className="space-y-2">
                 <p className="font-semibold text-primary-600">
-                  {t('price')}: <span className="font-normal">{t(`${key}.attributes.cost`)}</span>
-                </p>
-                <p className="font-semibold text-primary-600">
                   {t('duration')}: <span className="font-normal">{t(`${key}.attributes.duration`)}</span>
                 </p>
                 <p className="font-semibold text-primary-600">

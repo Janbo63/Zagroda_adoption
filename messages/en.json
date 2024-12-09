@@ -101,7 +101,6 @@
     "details": "Activity Details",
     "highlights": "Highlights",
     "requirements": "Requirements",
-    "price": "Price",
     "meetthealpacas": {
       "name": "Meet the Alpacas",
       "image": "/images/activities/meet-alpacas.jpg",
@@ -130,9 +129,9 @@
     },
     "privatealpacasafari": {
       "name": "Special Private Offer",
-      "image": "/images/activities/alpaca-safari.jpg",
+      "image": "/images/zagrodanewlogo.png",
       "description": "Enjoy an exclusive tour of our farm with a herd of alpacas! Perfect for larger groups or special occasions.",
-      "details": "Enjoy an exclusive experience with our alpacas in a private setting.",
+      "details": "Enjoy an exclusive experience with our alpacas in a private setting. Options available include Birthdays, Romantic Picnics, Engagement, Photo Sessions etc. Please call us if you have any special idea you would like us to work on for you?",
       "highlights": "Private guide, customized experience, extended time with alpacas, special photo opportunities.",
       "requirements": "Booking required at least 48 hours in advance. Suitable for all ages.",
       "attributes": {
@@ -287,6 +286,10 @@
     "pageTitle": "Meet Our Dogs",
     "backToAnimals": "Back to Animals",
     "attributes": "Attributes",
+    "age": "Born In",
+    "color": "Color",
+    "breed": "Breed",
+    "role": "Role",
     "character": "Character",
     "stories": "Stories",
     "lucy": {

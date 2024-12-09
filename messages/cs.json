@@ -152,28 +152,28 @@
       "name": "Lucy",
       "attributes": {
         "age": "2019",
-        "color": "Černá a bílá",
-        "breed": "Border kolie",
-        "role": "Farmářský pes"
+        "color": "Zlatá",
+        "breed": "Yorkshire teriér",
+        "role": "Strážce farmy"
       },
-      "character": "Lucy je velmi inteligentní a pracovitá. Miluje pomáhat s alpakami.",
+      "character": "Lucy je energický a milující Yorkshire teriér. Navzdory své malé velikosti má velkou osobnost a ráda hlídá farmu.",
       "stories": {
-        "0": "Lucy se naučila rozeznávat všechna alpaka podle jména a pomáhá je svolávat k jídlu.",
-        "1": "Během jedné terapie Lucy instinktivně věděla, že má zůstat v klidu vedle autistického dítěte."
+        "0": "Lucy může být maličká, ale svou práci strážce farmy bere velmi vážně.",
+        "1": "Je neuvěřitelně jemná s návštěvníky a ráda jim ukazuje farmu."
       }
     },
     "daisy": {
       "name": "Daisy",
       "attributes": {
         "age": "2020",
-        "color": "Zlatá",
-        "breed": "Zlatý retrívr",
-        "role": "Terapeutický pes"
+        "color": "Černá",
+        "breed": "Kříženec labradora",
+        "role": "Farmářský kamarád"
       },
-      "character": "Daisy je klidná a laskavá. Je perfektní pro terapeutickou práci.",
+      "character": "Daisy je milá a přátelská fenka, která miluje pozornost. Vždy je připravena přivítat návštěvníky vrtícím ocasem.",
       "stories": {
-        "0": "Daisy jednou přinesla své oblíbené hračky nemocnému dítěti, které nás navštívilo.",
-        "1": "Během bouřky Daisy uklidňovala vystrašené alpaky tím, že si k nim lehla."
+        "0": "Daisy má zvláštní pouto s kůzlaty a často na ně dohlíží.",
+        "1": "Je známá svou jemnou povahou a trpělivostí s dětmi, které navštěvují farmu."
       }
     }
   },
@@ -251,7 +251,6 @@
     "details": "Detaily aktivity",
     "highlights": "Hlavní body",
     "requirements": "Požadavky",
-    "price": "Cena",
     "duration": "Doba trvání",
     "groupSize": "Velikost skupiny",
     "minAge": "Minimální věk",
@@ -263,9 +262,11 @@
       "description": "Přijďte se seznámit s našimi přátelskými alpakami"
     },
     "privatealpacasafari": {
-      "name": "Soukromé alpačí safari",
-      "title": "Soukromé alpačí safari",
-      "description": "Exkluzivní prohlídka farmy s alpakami jen pro vás"
+      "name": "Speciální soukromá nabídka",
+      "title": "Speciální soukromá nabídka",
+      "image": "/images/zagrodanewlogo.png",
+      "description": "Užijte si exkluzivní prohlídku naší farmy se stádem alpak! Ideální pro větší skupiny nebo speciální příležitosti.",
+      "details": "Užijte si exkluzivní zážitek s našimi alpakami v soukromém prostředí. Nabízíme možnosti jako narozeninové oslavy, romantické pikniky, zásnuby, fotografické session atd. Zavolejte nám, pokud máte jakýkoliv speciální nápad, který byste s námi chtěli realizovat?"
     },
     "alpacawalks": {
       "name": "Procházky s alpakami",
