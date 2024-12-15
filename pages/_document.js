@@ -14,7 +14,11 @@ export default function Document() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-V9R1JJYYSG');
+            gtag('config', 'G-V9R1JJYYSG', {
+              debug_mode: true,
+              page_location: window.location.href,
+              page_path: window.location.pathname
+            });
           `}
         </Script>
       </Head>
