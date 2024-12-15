@@ -15,23 +15,30 @@ export default function RootLayout({
     script1.async = true;
     document.head.appendChild(script1);
 
-    // Initialize Google Analytics
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
+    script1.onload = () => {
+      // Initialize Google Analytics
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
       gtag('js', new Date());
       gtag('config', 'G-V9R1JJYYSG', {
         debug_mode: true,
         page_path: window.location.pathname,
+        page_location: window.location.href,
+        cookie_domain: 'auto' // This allows GA to work across different domains
       });
-    `;
-    document.head.appendChild(script2);
+
+      // Log for debugging
+      console.log('[GA Debug] Initialized with path:', window.location.pathname);
+      console.log('[GA Debug] Current URL:', window.location.href);
+    };
 
     // Cleanup function
     return () => {
-      document.head.removeChild(script1);
-      document.head.removeChild(script2);
+      if (document.head.contains(script1)) {
+        document.head.removeChild(script1);
+      }
     };
   }, []); // Empty dependency array means this runs once when component mounts
 
