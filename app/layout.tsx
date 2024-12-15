@@ -29,27 +29,30 @@ export default function RootLayout({
       }
       window.gtag = gtag;
       
+      // Convert non-www URL to www URL for GA
+      const currentUrl = window.location.href;
+      const wwwUrl = currentUrl.replace('https://', 'https://www.');
+      const wwwPath = window.location.pathname;
+      
       gtag('js', new Date());
       gtag('config', 'G-V9R1JJYYSG', {
         debug_mode: true,
-        page_path: window.location.pathname,
-        page_location: window.location.href,
-        cookie_domain: '.zagrodaalpakoterapii.com', // This will work for both www and non-www
-        transport_url: 'https://www.google-analytics.com',
-        allow_google_signals: true,
-        allow_ad_personalization_signals: true
+        page_path: wwwPath,
+        page_location: wwwUrl,
+        send_page_view: true
       });
 
       // Log for debugging
-      console.log('[GA Debug] Initialized with path:', window.location.pathname);
-      console.log('[GA Debug] Current URL:', window.location.href);
+      console.log('[GA Debug] Original URL:', currentUrl);
+      console.log('[GA Debug] Modified URL for GA:', wwwUrl);
+      console.log('[GA Debug] Path:', wwwPath);
       console.log('[GA Debug] Sending pageview event');
       
-      // Explicitly send a pageview
+      // Explicitly send a pageview with www URL
       gtag('event', 'page_view', {
         page_title: document.title,
-        page_location: window.location.href,
-        page_path: window.location.pathname
+        page_location: wwwUrl,
+        page_path: wwwPath
       });
     };
 
