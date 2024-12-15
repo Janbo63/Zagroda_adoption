@@ -8,28 +8,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body>
+        {children}
         <Script
-          strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-V9R1JJYYSG`}
-        />
-        <Script
-          id="google-analytics"
           strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-V9R1JJYYSG', {
-                page_path: window.location.pathname,
-                debug_mode: true
-              });
-            `,
-          }}
         />
-      </head>
-      <body>{children}</body>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V9R1JJYYSG', {
+              debug_mode: true,
+              page_location: window.location.href,
+              page_path: window.location.pathname
+            });
+          `}
+        </Script>
+      </body>
     </html>
   )
 }
