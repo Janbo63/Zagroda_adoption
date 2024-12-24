@@ -175,7 +175,7 @@
       },
       "character": "Daisy je milá a přátelská fenka, která miluje pozornost. Vždy je připravena přivítat návštěvníky vrtícím ocasem.",
       "stories": {
-        "0": "Daisy má zvláštní pouto s kůzlaty a často na ně dohlíží.",
+        "0": "Daisy má zvláštní pouto s jednou z farmářských koček a často je najdete, jak spolu spí na sluníčku.",
         "1": "Je známá svou jemnou povahou a trpělivostí s dětmi, které navštěvují farmu."
       }
     }
@@ -213,9 +213,9 @@
         "color": "Černá a bílá",
         "birthplace": "Česká republika"
       },
-      "character": "Lady Gaga je známá svým jedinečným 'módním stylem', často ji najdete s květinami nebo listy v srsti.",
+      "character": "Lady Gaga je známá svým jedinečným \"módním stylem\", často ji najdete s květinami nebo listy v srsti.",
       "stories": {
-        "0": "Lady Gaga jednou uspořádala 'kozí přehlídku', kdy vedla celé stádo v řadě kolem farmy.",
+        "0": "Lady Gaga jednou uspořádala \"kozí přehlídku\", kdy vedla celé stádo v řadě kolem farmy.",
         "1": "Má zvláštní talent na hledání nejchutnějších listů a dělí se o ně se svými kozími přáteli."
       }
     },
@@ -242,7 +242,7 @@
       "character": "Baron je důstojný vůdce kozího stáda. Je klidný, moudrý a chrání ostatní.",
       "stories": {
         "0": "Baron jednou upozornil farmáře na rozbitý plot tím, že opakovaně narážel do dveří stodoly, dokud se někdo nepřišel podívat.",
-        "1": "Má jedinečný zvyk 'doprovázet' návštěvníky po farmě jako průvodce."
+        "1": "Má jedinečný zvyk \"doprovázet\" návštěvníky po farmě jako průvodce."
       }
     }
   },
