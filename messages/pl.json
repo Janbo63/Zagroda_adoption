@@ -382,11 +382,13 @@
     "allRightsReserved": "Wszelkie prawa zastrzeżone"
   },
   "privacy": {
-    "title": "Polityka Prywatności",
-    "intro": {
-      "p1": "Witamy w Zagrodzie Alpakoterapii. Zobowiązujemy się do ochrony Twoich danych osobowych i poszanowania Twojej prywatności.",
-      "p2": "Ta polityka prywatności wyjaśnia, w jaki sposób zbieramy, przetwarzamy i chronimy Twoje dane osobowe, jak wykorzystujemy te informacje oraz jakie prawa przysługują Ci w związku z Twoimi danymi osobowymi."
-    },
+  "title": "Polityka Prywatności",
+  "intro": {
+    "p1": "Witamy w Zagrodzie Alpakoterapii. Zobowiązujemy się do ochrony Twoich danych osobowych i poszanowania Twojej prywatności.",
+    "p2": "Ta polityka prywatności wyjaśnia, w jaki sposób gromadzimy, przetwarzamy i chronimy Twoje dane osobowe, jak wykorzystujemy te informacje oraz jakie prawa przysługują Ci w związku z Twoimi danymi osobowymi.",
+    "p3": "Korzystając z naszej strony internetowej i usług, wyrażasz zgodę na zbieranie i wykorzystywanie Twoich informacji zgodnie z niniejszą polityką prywatności."
+  }
+}
     "whoWeAre": {
       "title": "Kim jesteśmy?",
       "content": "Nasza strona internetowa to: www.zagrodaalpakoterapii.com"

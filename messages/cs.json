@@ -34,19 +34,22 @@
     "alpacas": {
       "name": "Alpaky",
       "title": "Naše alpaky",
-      "description": "Seznamte se s našimi přátelskými a terapeutickými alpakami"
+      "description": "Seznamte se s našimi přátelskými a terapeutickými alpakami",
+      "alt": "Alpaky na naší farmě"
     },
     "dogs": {
       "name": "Psi",
       "title": "Naši psi",
-      "description": "Poznejte naše hravé a milující farmářské psy"
+      "description": "Poznejte naše hravé a milující farmářské psy",
+      "alt": "Psi na naší farmě"
     },
     "goats": {
       "name": "Kozy",
       "title": "Naše kozy",
-      "description": "Objevte naše charakterní a zábavné kozy"
+      "description": "Objevte naše charakterní a zábavné kozy",
+      "alt": "Kozy na naší farmě"
     }
-  },
+  }
   "alpacas": {
     "pageTitle": "Poznejte naše alpaky",
     "backToAnimals": "Zpět na zvířata",
@@ -419,11 +422,13 @@
     "allRightsReserved": "Všechna práva vyhrazena"
   },
   "privacy": {
-    "title": "Zásady ochrany osobních údajů",
-    "intro": {
-      "p1": "Vítejte v Zagroda Alpakoterapii. Zavazujeme se chránit vaše osobní údaje a respektovat vaše soukromí.",
-      "p2": "Tyto zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, zpracováváme a chráníme vaše osobní údaje, jak tyto informace používáme a jaká práva máte ohledně vašich osobních údajů."
-    },
+  "title": "Prohlášení o ochraně osobních údajů",
+  "intro": {
+    "p1": "Vítejte v Zagroda Alpakoterapii. Zavazujeme se chránit vaše osobní údaje a respektovat vaše soukromí.",
+    "p2": "Toto prohlášení o ochraně osobních údajů vysvětluje, jak shromažďujeme, zpracováváme a chráníme vaše osobní údaje, jak tyto informace používáme a jaká máte práva ohledně vašich osobních údajů.",
+    "p3": "Používáním našich webových stránek a služeb souhlasíte se shromažďováním a používáním vašich informací, jak je popsáno v tomto prohlášení o ochraně osobních údajů."
+  }
+}
     "whoWeAre": {
       "title": "Kdo jsme?",
       "content": "Naše webová stránka je: www.zagrodaalpakoterapii.com"

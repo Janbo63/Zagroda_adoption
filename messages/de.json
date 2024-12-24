@@ -27,26 +27,29 @@
       "contact": "Kontakt"
     }
   },
-  "animals": {
+ "animals": {
     "title": "Lernen Sie unsere Tiere kennen",
     "sectionTitle": "Unsere tierischen Freunde",
     "meetButton": "Treffen Sie {name}",
     "alpacas": {
       "name": "Alpakas",
       "title": "Unsere Alpakas",
-      "description": "Treffen Sie unsere freundlichen und therapeutischen Alpakas"
+      "description": "Treffen Sie unsere freundlichen und therapeutischen Alpakas",
+      "alt": "Alpakas auf unserem Bauernhof"
     },
     "dogs": {
       "name": "Hunde",
       "title": "Unsere Hunde",
-      "description": "Lernen Sie unsere verspielten und liebevollen Hofhunde kennen"
+      "description": "Lernen Sie unsere verspielten und liebevollen Hofhunde kennen",
+      "alt": "Hunde auf unserem Bauernhof"
     },
     "goats": {
       "name": "Ziegen",
       "title": "Unsere Ziegen",
-      "description": "Entdecken Sie unsere charakterstarken und unterhaltsamen Ziegen"
+      "description": "Entdecken Sie unsere charakterstarken und unterhaltsamen Ziegen",
+      "alt": "Ziegen auf unserem Bauernhof"
     }
-  },
+  }
   "alpacas": {
     "pageTitle": "Treffen Sie unsere Alpakas",
     "backToAnimals": "Zurück zu den Tieren",
@@ -401,12 +404,14 @@
     "privacyPolicy": "Datenschutzerklärung",
     "allRightsReserved": "Alle Rechte vorbehalten"
   },
-  "privacy": {
-    "title": "Datenschutzerklärung",
-    "intro": {
-      "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns, Ihre personenbezogenen Daten zu schützen und Ihre Privatsphäre zu respektieren.",
-      "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und schützen, wie wir diese Informationen verwenden und welche Rechte Sie in Bezug auf Ihre personenbezogenen Daten haben."
-    },
+ "privacy": {
+  "title": "Datenschutzerklärung",
+  "intro": {
+    "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns zum Schutz Ihrer personenbezogenen Daten und zur Achtung Ihrer Privatsphäre.",
+    "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erfassen, verarbeiten und schützen, wie wir diese Informationen nutzen und welche Rechte Sie bezüglich Ihrer personenbezogenen Daten haben.",
+    "p3": "Durch die Nutzung unserer Website und Dienste stimmen Sie der Erfassung und Verwendung Ihrer Daten gemäß dieser Datenschutzerklärung zu."
+  }
+}
     "whoWeAre": {
       "title": "Wer wir sind?",
       "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com"

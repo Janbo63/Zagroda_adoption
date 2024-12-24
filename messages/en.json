@@ -398,11 +398,13 @@
     "allRightsReserved": "All rights reserved"
   },
   "privacy": {
-    "title": "Privacy Statement",
-    "intro": {
-      "p1": "Welcome to Zagroda Alpakoterapii. We are committed to protecting your personal data and respecting your privacy.",
-      "p2": "This privacy statement explains how we collect, handle, and protect your personal data, how we use this information, and what rights you have regarding your personal data."
-    },
+  "title": "Privacy Statement",
+  "intro": {
+    "p1": "Welcome to Zagroda Alpakoterapii. We are committed to protecting your personal data and respecting your privacy.",
+    "p2": "This privacy statement explains how we collect, handle, and protect your personal data, how we use this information, and what rights you have regarding your personal data.",
+    "p3": "By using our website and services, you consent to the collection and use of your information as described in this privacy statement."
+  }
+}
     "whoWeAre": {
       "title": "Who we are?",
       "content": "Our website address is: www.zagrodaalpakoterapii.com"
