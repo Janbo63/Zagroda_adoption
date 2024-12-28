@@ -30,21 +30,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Facebook App ID */}
-        <meta property="fb:app_id" content="1608105036460297" />
-        
-        {/* Basic Open Graph Meta Tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zagrodaalpakoterapii.com" />
-        <meta property="og:title" content="Zagroda Alpakoterapii" />
-        <meta property="og:description" content="Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie" />
-        <meta property="og:image" content="https://zagrodaalpakoterapii.com/images/hero-banner.png" />
-        <meta property="og:image:alt" content="Alpaki w Zagrodzie Alpakoterapii" />
-        
-        {/* Additional Open Graph Meta Tags */}
-        <meta property="og:locale" content={locale} />
-        <meta property="og:site_name" content="Zagroda Alpakoterapii" />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
@@ -69,5 +54,22 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: messages.common.title,
     description: messages.common.description,
+    openGraph: {
+      title: 'Zagroda Alpakoterapii',
+      description: 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie',
+      url: 'https://zagrodaalpakoterapii.com',
+      siteName: 'Zagroda Alpakoterapii',
+      images: [
+        {
+          url: 'https://zagrodaalpakoterapii.com/images/hero-banner.png',
+          alt: 'Alpaki w Zagrodzie Alpakoterapii',
+        },
+      ],
+      locale: params.locale,
+      type: 'website',
+    },
+    other: {
+      'fb:app_id': '1608105036460297',
+    },
   }
 }
