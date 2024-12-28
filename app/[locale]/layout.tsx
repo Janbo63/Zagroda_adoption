@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const url = 'https://zagrodaalpakoterapii.com'
   const title = 'Zagroda Alpakoterapii'
   const description = 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie'
-  const image = `${url}/images/hero-banner.png`
+  const image = `${url}/images/zagrodanewlogo.png`
   
   return {
     metadataBase: new URL(url),
@@ -70,9 +70,10 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       images: [
         {
           url: image,
-          width: 1200,
-          height: 630,
-          alt: 'Alpaki w Zagrodzie Alpakoterapii',
+          width: 500,
+          height: 500,
+          alt: 'Zagroda Alpakoterapii Logo',
+          type: 'image/png',
         },
       ],
       locale: params.locale,
