@@ -30,6 +30,8 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="fb:app_id" content="1608105036460297" />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
@@ -68,8 +70,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
         },
       ],
       locale: params.locale,
-      type: 'website',
-      fbAppId: '1608105036460297'
+      type: 'website'
     }
   }
 }
