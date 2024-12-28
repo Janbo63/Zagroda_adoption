@@ -31,6 +31,19 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Facebook App ID */}
+        <meta property="fb:app_id" content="YOUR_APP_ID_HERE" />
+        
+        {/* Basic Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zagrodaalpakoterapii.com" />
+        <meta property="og:title" content="Zagroda Alpakoterapii" />
+        <meta property="og:description" content="Experience the healing power of alpacas and nature" />
+        <meta property="og:image" content="https://zagrodaalpakoterapii.com/images/hero.jpg" />
+        
+        {/* Additional Open Graph Meta Tags */}
+        <meta property="og:locale" content={locale} />
+        <meta property="og:site_name" content="Zagroda Alpakoterapii" />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
