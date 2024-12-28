@@ -62,14 +62,14 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       images: [
         {
           url: 'https://zagrodaalpakoterapii.com/images/hero-banner.png',
+          width: 1200,
+          height: 630,
           alt: 'Alpaki w Zagrodzie Alpakoterapii',
         },
       ],
       locale: params.locale,
       type: 'website',
-    },
-    other: {
-      'fb:app_id': '1608105036460297',
-    },
+      fbAppId: '1608105036460297'
+    }
   }
 }
