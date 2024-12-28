@@ -62,9 +62,6 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     title,
     description,
     canonical: url,
-    other: {
-      'fb:app_id': '1608105036460297',
-    },
     openGraph: {
       title,
       description,
@@ -80,7 +77,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       ],
       locale: params.locale,
       type: 'website',
-      'fb:app_id': '1608105036460297',
+      appId: '1608105036460297',
     },
     twitter: {
       card: 'summary_large_image',
@@ -98,6 +95,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
         'de': `${url}/de`,
         'cs': `${url}/cs`,
       },
+    },
+    other: {
+      'fb:app_id': '1608105036460297',
     },
     robots: {
       index: true,
