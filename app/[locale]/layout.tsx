@@ -52,25 +52,61 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const messages = await getMessages(params.locale)
+  const url = 'https://zagrodaalpakoterapii.com'
+  const title = 'Zagroda Alpakoterapii'
+  const description = 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie'
+  const image = `${url}/images/hero-banner.png`
   
   return {
-    title: messages.common.title,
-    description: messages.common.description,
+    metadataBase: new URL(url),
+    title,
+    description,
+    canonical: url,
+    other: {
+      'fb:app_id': '1608105036460297',
+    },
     openGraph: {
-      title: 'Zagroda Alpakoterapii',
-      description: 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie',
-      url: 'https://zagrodaalpakoterapii.com',
-      siteName: 'Zagroda Alpakoterapii',
+      title,
+      description,
+      url,
+      siteName: title,
       images: [
         {
-          url: 'https://zagrodaalpakoterapii.com/images/hero-banner.png',
+          url: image,
           width: 1200,
           height: 630,
           alt: 'Alpaki w Zagrodzie Alpakoterapii',
         },
       ],
       locale: params.locale,
-      type: 'website'
-    }
+      type: 'website',
+      'fb:app_id': '1608105036460297',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+      creator: '@zagrodaalpak',
+      site: '@zagrodaalpak'
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        'en': `${url}/en`,
+        'pl': `${url}/pl`,
+        'de': `${url}/de`,
+        'cs': `${url}/cs`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+      },
+    },
   }
 }
