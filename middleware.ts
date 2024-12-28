@@ -15,6 +15,11 @@ const intlMiddleware = createMiddleware({
 });
 
 export default async function middleware(request: NextRequest) {
+  // Don't redirect messenger-webhook requests
+  if (request.nextUrl.pathname === '/messenger-webhook') {
+    return NextResponse.next();
+  }
+
   const userAgent = request.headers.get('user-agent') || '';
   
   // If it's Facebook's crawler and requesting the root URL, serve the Polish version directly
@@ -28,6 +33,6 @@ export default async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next|_vercel|.*\\..*).*)',
+    '/((?!api|_next|_vercel|.*\\..*|messenger-webhook).*)',
   ]
 };
