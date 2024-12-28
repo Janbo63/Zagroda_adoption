@@ -32,14 +32,15 @@ export default async function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Facebook App ID */}
-        <meta property="fb:app_id" content="YOUR_APP_ID_HERE" />
+        <meta property="fb:app_id" content="1608105036460297" />
         
         {/* Basic Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zagrodaalpakoterapii.com" />
         <meta property="og:title" content="Zagroda Alpakoterapii" />
-        <meta property="og:description" content="Experience the healing power of alpacas and nature" />
-        <meta property="og:image" content="https://zagrodaalpakoterapii.com/images/hero.jpg" />
+        <meta property="og:description" content="Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie" />
+        <meta property="og:image" content="https://zagrodaalpakoterapii.com/images/hero-banner.png" />
+        <meta property="og:image:alt" content="Alpaki w Zagrodzie Alpakoterapii" />
         
         {/* Additional Open Graph Meta Tags */}
         <meta property="og:locale" content={locale} />
