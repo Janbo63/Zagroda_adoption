@@ -407,37 +407,62 @@
 "privacy": {
   "title": "Datenschutzerklärung",
   "intro": {
-    "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns zum Schutz Ihrer personenbezogenen Daten und zur Achtung Ihrer Privatsphäre.",
-    "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erfassen, verarbeiten und schützen, wie wir diese Informationen nutzen und welche Rechte Sie bezüglich Ihrer personenbezogenen Daten haben.",
-    "p3": "Durch die Nutzung unserer Website und Dienste stimmen Sie der Erfassung und Verwendung Ihrer Daten gemäß dieser Datenschutzerklärung zu."
+    "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns zum Schutz Ihrer personenbezogenen Daten und zur Wahrung Ihrer Privatsphäre.",
+    "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und schützen, wie wir diese Informationen verwenden und welche Rechte Sie in Bezug auf Ihre personenbezogenen Daten haben.",
+    "p3": "Durch die Nutzung unserer Website und Dienste stimmen Sie der Erhebung und Nutzung Ihrer Informationen gemäß dieser Datenschutzerklärung zu."
   },
   "whoWeAre": {
-    "title": "Wer wir sind?",
+    "title": "Wer wir sind",
     "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com"
   },
+  "messengerData": {
+    "title": "Facebook Messenger Bot Daten",
+    "content": "Wenn Sie mit unserem Facebook Messenger Bot interagieren, erheben und verarbeiten wir:",
+    "items": [
+      "Nachrichten, die Sie an unseren Bot senden",
+      "Ihre öffentlichen Facebook-Profilinformationen",
+      "Informationen, die für Buchungen und Kundenservice erforderlich sind"
+    ],
+    "purpose": "Wir verwenden diese Informationen für:",
+    "purposeItems": [
+      "Beantwortung Ihrer Anfragen",
+      "Bearbeitung Ihrer Buchungen",
+      "Verbesserung unserer Dienstleistungen",
+      "Bereitstellung von Kundenservice"
+    ]
+  },
   "dataCollection": {
-    "title": "Welche personenbezogenen Daten wir erheben und warum wir sie erheben?",
+    "title": "Welche personenbezogenen Daten wir erheben und warum wir sie erheben",
     "contactForms": {
       "title": "Kontaktformulare",
-      "content": "Für Kunden, die Zimmer oder Aktivitäten buchen möchten, erheben wir Informationen, um Sie kontaktieren und gegebenenfalls die Zahlung für das Zimmer abwickeln zu können. Bei Nutzern, die sich für Kommunikation von uns entschieden haben, verwenden wir die angegebenen Informationen häufig für Marketing- oder allgemeine Kommunikationskampagnen."
+      "content": "Für Kunden, die Zimmer oder Aktivitäten buchen möchten, erheben wir Informationen, die es uns ermöglichen, Sie zu kontaktieren und gegebenenfalls die Zahlung für das Zimmer abzuwickeln. Bei Nutzern, die sich für den Erhalt von Mitteilungen von uns entschieden haben, verwenden wir die bereitgestellten Informationen häufig im Rahmen von Marketing- oder allgemeinen Kommunikationskampagnen."
     },
     "embeddedContent": {
       "title": "Eingebettete Inhalte von anderen Websites",
-      "p1": "Artikel auf dieser Website können eingebettete Inhalte enthalten (z.B. Videos, Bilder, Artikel usw.). Eingebettete Inhalte von anderen Websites verhalten sich genauso, als ob der Besucher die andere Website besucht hätte.",
-      "p2": "Diese Websites können Daten über Sie sammeln, Cookies verwenden, zusätzliches Tracking von Dritten einbetten und Ihre Interaktion mit diesem eingebetteten Inhalt überwachen, einschließlich der Verfolgung Ihrer Interaktion mit dem eingebetteten Inhalt, wenn Sie ein Konto haben und auf dieser Website eingeloggt sind."
+      "p1": "Beiträge auf dieser Website können eingebettete Inhalte enthalten (z.B. Videos, Bilder, Artikel usw.). Eingebettete Inhalte von anderen Websites verhalten sich genauso, als hätte der Besucher die andere Website besucht.",
+      "p2": "Diese Websites können Daten über Sie sammeln, Cookies verwenden, zusätzliche Tracking-Dienste von Dritten einbetten und Ihre Interaktion mit diesem eingebetteten Inhalt aufzeichnen, einschließlich der Verfolgung Ihrer Interaktion mit dem eingebetteten Inhalt, falls Sie ein Konto haben und auf dieser Website eingeloggt sind."
     }
   },
   "dataSharing": {
     "title": "Mit wem wir Ihre Daten teilen",
-    "content": "Wir teilen Ihre Daten mit keinen Dritten."
+    "content": "Wir geben Ihre Daten nicht an Dritte weiter, außer wenn dies für die Bereitstellung unserer Dienste über Facebook Messenger erforderlich ist. Ihre Nachrichten und Informationen werden gemäß den Datenschutzrichtlinien von Facebook und unseren Serviceanforderungen verarbeitet."
   },
   "dataRetention": {
     "title": "Wie lange wir Ihre Daten speichern",
-    "content": "Für Benutzer, die eine Buchung oder Anfrage vornehmen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf. Normalerweise archivieren wir Informationen innerhalb von 3 Jahren nach einer Buchung oder Anfrage."
+    "content": "Für Nutzer, die eine Buchung oder Anfrage vornehmen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf. Wir archivieren Informationen in der Regel innerhalb von 3 Jahren nach einer Buchung oder Anfrage. Bei Messenger-Bot-Interaktionen werden Nachrichten und zugehörige Daten bis zu 3 Jahre lang gespeichert."
+  },
+  "dataDeletion": {
+    "title": "Wie Sie die Löschung Ihrer Daten beantragen können",
+    "content": "Sie können die Löschung Ihrer Daten beantragen durch:",
+    "items": [
+      "E-Mail an admin@zagrodaalpakoterapii.com",
+      "Nutzung unseres Kontaktformulars",
+      "Direkte Nachricht über Facebook Messenger"
+    ]
   },
   "yourRights": {
     "title": "Welche Rechte Sie an Ihren Daten haben",
-    "content": "Wenn Sie eine Anfrage oder Buchung auf dieser Website gemacht haben, können Sie einen Export der personenbezogenen Daten, die wir über Sie gespeichert haben, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben, anfordern. Sie können auch die Löschung aller personenbezogenen Daten, die wir über Sie gespeichert haben, verlangen. Dies umfasst nicht die Daten, die wir aus administrativen, rechtlichen oder sicherheitstechnischen Gründen aufbewahren müssen."
+    "content": "Wenn Sie eine Anfrage oder Buchung auf dieser Website vorgenommen haben, können Sie eine exportierte Datei der personenbezogenen Daten anfordern, die wir über Sie gespeichert haben, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben. Sie können auch die Löschung aller personenbezogenen Daten verlangen, die wir über Sie gespeichert haben. Dies umfasst nicht die Daten, die wir aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahren müssen."
   },
   "contact": {
     "title": "Unsere Kontaktinformationen",

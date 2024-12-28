@@ -21,6 +21,23 @@ export default function PrivacyPolicy() {
           <p>{t('whoWeAre.content')}</p>
         </div>
 
+        {/* Facebook Messenger Bot Section */}
+        <div>
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('messengerData.title')}</h2>
+          <p>{t('messengerData.content')}</p>
+          <ul className="list-disc pl-6 mt-2">
+            {['items.0', 'items.1', 'items.2'].map((key) => (
+              <li key={key}>{t(`messengerData.${key}`)}</li>
+            ))}
+          </ul>
+          <p className="mt-4">{t('messengerData.purpose')}</p>
+          <ul className="list-disc pl-6 mt-2">
+            {['purposeItems.0', 'purposeItems.1', 'purposeItems.2', 'purposeItems.3'].map((key) => (
+              <li key={key}>{t(`messengerData.${key}`)}</li>
+            ))}
+          </ul>
+        </div>
+
         <div>
           <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataCollection.title')}</h2>
           
@@ -40,6 +57,17 @@ export default function PrivacyPolicy() {
         <div>
           <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataRetention.title')}</h2>
           <p>{t('dataRetention.content')}</p>
+        </div>
+
+        {/* Data Deletion Section */}
+        <div>
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataDeletion.title')}</h2>
+          <p>{t('dataDeletion.content')}</p>
+          <ul className="list-disc pl-6 mt-2">
+            {['items.0', 'items.1', 'items.2'].map((key) => (
+              <li key={key}>{t(`dataDeletion.${key}`)}</li>
+            ))}
+          </ul>
         </div>
 
         <div>

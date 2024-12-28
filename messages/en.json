@@ -397,44 +397,69 @@
     "privacyPolicy": "Privacy Policy",
     "allRightsReserved": "All rights reserved"
   },
-"privacy": {
-  "title": "Privacy Statement",
-  "intro": {
-    "p1": "Welcome to Zagroda Alpakoterapii. We are committed to protecting your personal data and respecting your privacy.",
-    "p2": "This privacy statement explains how we collect, handle, and protect your personal data, how we use this information, and what rights you have regarding your personal data.",
-    "p3": "By using our website and services, you consent to the collection and use of your information as described in this privacy statement."
-  },
-  "whoWeAre": {
-    "title": "Who we are?",
-    "content": "Our website address is: www.zagrodaalpakoterapii.com"
-  },
-  "dataCollection": {
-    "title": "What personal data we collect and why we collect it?",
-    "contactForms": {
-      "title": "Contact forms",
-      "content": "For customers wanting to book rooms or activities we will collect information to enable us to contact you and where applicable to pay for the room. For those users that have chosen to receive communications from us we will often use the information supplied within marketing or general communication campaigns."
+  "privacy": {
+    "title": "Privacy Statement",
+    "intro": {
+      "p1": "Welcome to Zagroda Alpakoterapii. We are committed to protecting your personal data and respecting your privacy.",
+      "p2": "This privacy statement explains how we collect, handle, and protect your personal data, how we use this information, and what rights you have regarding your personal data.",
+      "p3": "By using our website and services, you consent to the collection and use of your information as described in this privacy statement."
     },
-    "embeddedContent": {
-      "title": "Embedded content from other websites",
-      "p1": "Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.",
-      "p2": "These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website."
+    "whoWeAre": {
+      "title": "Who we are?",
+      "content": "Our website address is: www.zagrodaalpakoterapii.com"
+    },
+    "messengerData": {
+      "title": "Facebook Messenger Bot Data",
+      "content": "When you interact with our Facebook Messenger bot, we collect and process:",
+      "items": [
+        "Messages you send to our bot",
+        "Your public Facebook profile information",
+        "Information necessary for bookings and customer service"
+      ],
+      "purpose": "We use this information to:",
+      "purposeItems": [
+        "Respond to your inquiries",
+        "Process your bookings",
+        "Improve our services",
+        "Provide customer support"
+      ]
+    },
+    "dataCollection": {
+      "title": "What personal data we collect and why we collect it",
+      "contactForms": {
+        "title": "Contact forms",
+        "content": "For customers wanting to book rooms or activities we will collect information to enable us to contact you and where applicable to pay for the room. For those users that have chosen to receive communications from us we will often use the information supplied within marketing or general communication campaigns."
+      },
+      "embeddedContent": {
+        "title": "Embedded content from other websites",
+        "p1": "Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.",
+        "p2": "These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website."
+      }
+    },
+    "dataSharing": {
+      "title": "Who we share your data with",
+      "content": "We do not share your data with any third parties except as necessary to provide our services through Facebook Messenger. Your messages and information are processed in accordance with Facebook's data policies and our service requirements."
+    },
+    "dataRetention": {
+      "title": "How long we retain your data",
+      "content": "For users completing a booking or enquiry we will keep your information for the purposes of that transaction only. We will typically archive information within 3 years of any booking or enquiry. For Messenger bot interactions, messages and related data are retained for up to 3 years."
+    },
+    "dataDeletion": {
+      "title": "How to request data deletion",
+      "content": "You can request deletion of your data by:",
+      "items": [
+        "Emailing us at admin@zagrodaalpakoterapii.com",
+        "Using our contact form",
+        "Messaging us directly through Facebook Messenger"
+      ]
+    },
+    "yourRights": {
+      "title": "What rights you have over your data",
+      "content": "If you have made an enquiry or booking on this site you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+    },
+    "contact": {
+      "title": "Our contact information",
+      "content": "Our contact email address is admin@zagrodaalpakoterapii.com"
     }
-  },
-  "dataSharing": {
-    "title": "Who we share your data with",
-    "content": "We do not share your data with any other parties."
-  },
-  "dataRetention": {
-    "title": "How long we retain your data",
-    "content": "For users completing a booking or enquiry we will keep your information for the purposes of that transaction only. We will typically archive information within 3 years of any booking or enquiry."
-  },
-  "yourRights": {
-    "title": "What rights you have over your data",
-    "content": "If you have made an enquiry or booking on this site you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
-  },
-  "contact": {
-    "title": "Our contact information",
-    "content": "Our contact email address is admin@zagrodaalpakoterapii.com"
   }
-}
 }
