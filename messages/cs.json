@@ -418,15 +418,15 @@
     "description": "Zažijte radost z alpakoterapie",
     "contactUs": "Kontaktujte nás",
     "followUs": "Sledujte nás",
-    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "privacyPolicy": "Prohlášení o ochraně osobních údajů",
     "allRightsReserved": "Všechna práva vyhrazena"
   },
   "privacy": {
     "title": "Prohlášení o ochraně osobních údajů",
     "intro": {
       "p1": "Vítejte v Zagroda Alpakoterapii. Zavazujeme se chránit vaše osobní údaje a respektovat vaše soukromí.",
-      "p2": "Tyto zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, zpracováváme a chráníme vaše osobní údaje, jak tyto informace používáme a jaká práva máte v souvislosti s vašimi osobními údaji.",
-      "p3": "Používáním našich webových stránek a služeb souhlasíte se shromažďováním a používáním vašich informací, jak je popsáno v těchto zásadách ochrany osobních údajů."
+      "p2": "Toto prohlášení o ochraně osobních údajů vysvětluje, jak shromažďujeme, zpracováváme a chráníme vaše osobní údaje, jak tyto informace používáme a jaká práva máte v souvislosti s vašimi osobními údaji.",
+      "p3": "Používáním našich webových stránek a služeb souhlasíte se shromažďováním a používáním vašich informací, jak je popsáno v tomto prohlášení o ochraně osobních údajů."
     },
     "whoWeAre": {
       "title": "Kdo jsme",
@@ -484,6 +484,23 @@
     "contact": {
       "title": "Naše kontaktní údaje",
       "content": "Náš kontaktní e-mail je admin@zagrodaalpakoterapii.com"
+    },
+    "metaCrawlers": {
+      "title": "Meta Web Crawlery",
+      "content": "Naše webové stránky jsou procházeny crawlery společnosti Meta pro různé účely, včetně:",
+      "items": [
+        "FacebookExternalHit - pro zpracování obsahu sdíleného na platformách Meta (Facebook, Instagram, Messenger)",
+        "Meta-ExternalAgent - pro trénink AI modelů a vylepšování produktů",
+        "Meta-ExternalFetcher - pro uživatelem iniciované načítání obsahu"
+      ],
+      "dataCollection": "Tyto crawlery mohou shromažďovat informace jako:",
+      "dataItems": [
+        "Obsah a struktura webových stránek",
+        "Open Graph vlastnosti",
+        "Náhledy a metadata",
+        "Sdílený obsah a odkazy"
+      ],
+      "security": "Z důvodů bezpečnosti a integrity mohou některé crawlery Meta při provádění bezpečnostních kontrol nebo ověřování obsahu obejít standardní omezení přístupu."
     }
   }
 }

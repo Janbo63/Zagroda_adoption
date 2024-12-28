@@ -394,15 +394,15 @@
     "description": "Experience the joy of alpaca therapy",
     "contactUs": "Contact Us",
     "followUs": "Follow Us",
-    "privacyPolicy": "Privacy Policy",
+    "privacyPolicy": "Privacy Statement",
     "allRightsReserved": "All rights reserved"
   },
   "privacy": {
     "title": "Privacy Statement",
     "intro": {
       "p1": "Welcome to Zagroda Alpakoterapii. We are committed to protecting your personal data and respecting your privacy.",
-      "p2": "This privacy statement explains how we collect, handle, and protect your personal data, how we use this information, and what rights you have regarding your personal data.",
-      "p3": "By using our website and services, you consent to the collection and use of your information as described in this privacy statement."
+      "p2": "This Privacy Statement explains how we collect, handle, and protect your personal data, how we use this information, and what rights you have regarding your personal data.",
+      "p3": "By using our website and services, you consent to the collection and use of your information as described in this Privacy Statement."
     },
     "whoWeAre": {
       "title": "Who we are?",
@@ -460,6 +460,23 @@
     "contact": {
       "title": "Our contact information",
       "content": "Our contact email address is admin@zagrodaalpakoterapii.com"
+    },
+    "metaCrawlers": {
+      "title": "Meta Web Crawlers",
+      "content": "Our website is crawled by Meta's web crawlers for various purposes, including:",
+      "items": [
+        "FacebookExternalHit - for processing content shared on Meta platforms (Facebook, Instagram, Messenger)",
+        "Meta-ExternalAgent - for AI model training and product improvement",
+        "Meta-ExternalFetcher - for user-initiated content fetching"
+      ],
+      "dataCollection": "These crawlers may collect information such as:",
+      "dataItems": [
+        "Website content and structure",
+        "Open Graph properties",
+        "Thumbnails and metadata",
+        "Shared content and links"
+      ],
+      "security": "For security and integrity purposes, some Meta crawlers may bypass standard access restrictions when performing security checks or verifying content."
     }
   }
 }

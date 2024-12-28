@@ -378,15 +378,15 @@
     "description": "Doświadcz radości z alpakoterapii",
     "contactUs": "Skontaktuj się z nami",
     "followUs": "Obserwuj nas",
-    "privacyPolicy": "Polityka prywatności",
+    "privacyPolicy": "Oświadczenie o ochronie prywatności",
     "allRightsReserved": "Wszelkie prawa zastrzeżone"
   },
   "privacy": {
-    "title": "Polityka Prywatności",
+    "title": "Oświadczenie o ochronie prywatności",
     "intro": {
       "p1": "Witamy w Zagrodzie Alpakoterapii. Zobowiązujemy się do ochrony Twoich danych osobowych i poszanowania Twojej prywatności.",
-      "p2": "Ta polityka prywatności wyjaśnia, w jaki sposób gromadzimy, przetwarzamy i chronimy Twoje dane osobowe, jak wykorzystujemy te informacje oraz jakie prawa przysługują Ci w związku z Twoimi danymi osobowymi.",
-      "p3": "Korzystając z naszej strony internetowej i usług, wyrażasz zgodę na gromadzenie i wykorzystywanie Twoich informacji zgodnie z niniejszą polityką prywatności."
+      "p2": "Niniejsze oświadczenie o ochronie prywatności wyjaśnia, w jaki sposób gromadzimy, przetwarzamy i chronimy Twoje dane osobowe, jak wykorzystujemy te informacje oraz jakie prawa przysługują Ci w związku z Twoimi danymi osobowymi.",
+      "p3": "Korzystając z naszej strony internetowej i usług, wyrażasz zgodę na gromadzenie i wykorzystywanie Twoich informacji zgodnie z niniejszym oświadczeniem o ochronie prywatności."
     },
     "whoWeAre": {
       "title": "Kim jesteśmy?",
@@ -444,6 +444,23 @@
     "contact": {
       "title": "Nasze dane kontaktowe",
       "content": "Nasz adres e-mail do kontaktu to admin@zagrodaalpakoterapii.com"
+    },
+    "metaCrawlers": {
+      "title": "Crawlery Meta",
+      "content": "Nasza strona internetowa jest skanowana przez crawlery Meta w różnych celach, w tym:",
+      "items": [
+        "FacebookExternalHit - do przetwarzania treści udostępnianych na platformach Meta (Facebook, Instagram, Messenger)",
+        "Meta-ExternalAgent - do trenowania modeli AI i ulepszania produktów",
+        "Meta-ExternalFetcher - do pobierania treści inicjowanego przez użytkownika"
+      ],
+      "dataCollection": "Te crawlery mogą zbierać informacje takie jak:",
+      "dataItems": [
+        "Zawartość i struktura strony internetowej",
+        "Właściwości Open Graph",
+        "Miniatury i metadane",
+        "Udostępniane treści i linki"
+      ],
+      "security": "Ze względów bezpieczeństwa i integralności niektóre crawlery Meta mogą pomijać standardowe ograniczenia dostępu podczas wykonywania kontroli bezpieczeństwa lub weryfikacji treści."
     }
   }
 }
