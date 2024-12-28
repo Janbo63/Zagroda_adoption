@@ -483,7 +483,18 @@
       "Vorschaubilder und Metadaten",
       "Geteilte Inhalte und Links"
     ],
-    "security": "Aus Sicherheits- und Integritätsgründen können einige Meta-Crawler bei der Durchführung von Sicherheitsprüfungen oder der Überprüfung von Inhalten standardmäßige Zugangsbeschränkungen umgehen."
+    "security": "Aus Sicherheits- und Integritätsgründen können einige Meta-Crawler bei der Durchführung von Sicherheitsprüfungen oder der Überprüfung von Inhalten standardmäßige Zugangsbeschränkungen umgehen.",
+    "technicalRequirements": {
+      "title": "Technische Anforderungen",
+      "content": "Um die ordnungsgemäße Funktionalität mit Meta-Plattformen zu gewährleisten, erfüllt unsere Website folgende Anforderungen:",
+      "items": [
+        "Verwendet gzip- und deflate-Komprimierung für effizienten Datentransfer",
+        "Platziert alle Open Graph-Eigenschaften innerhalb des ersten 1 MB des Inhalts",
+        "Stellt sicher, dass Inhalte für Crawler-Anfragen schnell zugänglich sind",
+        "Verarbeitet bereichsbasierte Inhaltsanfragen ordnungsgemäß",
+        "Pflegt eine Zulassungsliste von Meta-Crawler-User-Agents und IP-Adressen"
+      ]
+    }
   }
 }
 }

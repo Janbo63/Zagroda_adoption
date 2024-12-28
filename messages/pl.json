@@ -460,7 +460,18 @@
         "Miniatury i metadane",
         "Udostępniane treści i linki"
       ],
-      "security": "Ze względów bezpieczeństwa i integralności niektóre crawlery Meta mogą pomijać standardowe ograniczenia dostępu podczas wykonywania kontroli bezpieczeństwa lub weryfikacji treści."
+      "security": "Ze względów bezpieczeństwa i integralności niektóre crawlery Meta mogą pomijać standardowe ograniczenia dostępu podczas wykonywania kontroli bezpieczeństwa lub weryfikacji treści.",
+      "technicalRequirements": {
+        "title": "Wymagania techniczne",
+        "content": "Aby zapewnić prawidłowe funkcjonowanie z platformami Meta, nasza strona:",
+        "items": [
+          "Używa kompresji gzip i deflate do efektywnego przesyłania danych",
+          "Umieszcza wszystkie właściwości Open Graph w pierwszym 1 MB zawartości",
+          "Zapewnia szybki dostęp do treści dla żądań crawlerów",
+          "Prawidłowo obsługuje żądania zakresu treści",
+          "Utrzymuje listę dozwolonych user agents i adresów IP crawlerów Meta"
+        ]
+      }
     }
   }
 }

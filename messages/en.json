@@ -476,7 +476,18 @@
         "Thumbnails and metadata",
         "Shared content and links"
       ],
-      "security": "For security and integrity purposes, some Meta crawlers may bypass standard access restrictions when performing security checks or verifying content."
+      "security": "For security and integrity purposes, some Meta crawlers may bypass standard access restrictions when performing security checks or verifying content.",
+      "technicalRequirements": {
+        "title": "Technical Requirements",
+        "content": "To ensure proper functionality with Meta platforms, our website:",
+        "items": [
+          "Uses gzip and deflate compression for efficient data transfer",
+          "Places all Open Graph properties within the first 1 MB of content",
+          "Ensures content is quickly accessible for crawler requests",
+          "Properly handles range-based content requests",
+          "Maintains an allowlist of Meta crawler user agents and IP addresses"
+        ]
+      }
     }
   }
 }

@@ -32,6 +32,13 @@ export default async function PrivacyPolicy() {
             ))}
           </ul>
           <p className="mb-4">{t('metaCrawlers.security')}</p>
+          <h3 className="text-xl font-semibold mt-6 mb-3">{t('metaCrawlers.technicalRequirements.title')}</h3>
+          <p className="mb-4">{t('metaCrawlers.technicalRequirements.content')}</p>
+          <ul className="list-disc pl-6 mb-4">
+            {t.raw('metaCrawlers.technicalRequirements.items').map((item: string, index: number) => (
+              <li key={index} className="mb-2">{item}</li>
+            ))}
+          </ul>
         </section>
 
         <section>

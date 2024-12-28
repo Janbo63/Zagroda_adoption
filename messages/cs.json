@@ -500,7 +500,18 @@
         "Náhledy a metadata",
         "Sdílený obsah a odkazy"
       ],
-      "security": "Z důvodů bezpečnosti a integrity mohou některé crawlery Meta při provádění bezpečnostních kontrol nebo ověřování obsahu obejít standardní omezení přístupu."
+      "security": "Z důvodů bezpečnosti a integrity mohou některé crawlery Meta při provádění bezpečnostních kontrol nebo ověřování obsahu obejít standardní omezení přístupu.",
+      "technicalRequirements": {
+        "title": "Technické požadavky",
+        "content": "Pro zajištění správné funkčnosti s platformami Meta naše webové stránky:",
+        "items": [
+          "Používají kompresi gzip a deflate pro efektivní přenos dat",
+          "Umisťují všechny Open Graph vlastnosti v prvním 1 MB obsahu",
+          "Zajišťují rychlý přístup k obsahu pro požadavky crawlerů",
+          "Správně zpracovávají požadavky na rozsah obsahu",
+          "Udržují seznam povolených user agentů a IP adres crawlerů Meta"
+        ]
+      }
     }
   }
 }
