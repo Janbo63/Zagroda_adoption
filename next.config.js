@@ -13,21 +13,8 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  // Add security headers to allow Google Analytics
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com;"
-          }
-        ]
-      }
-    ];
   }
+  // CSP headers removed to avoid conflicts with Caddy server configuration
 };
 
 module.exports = withNextIntl(nextConfig);
