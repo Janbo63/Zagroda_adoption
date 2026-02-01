@@ -42,6 +42,9 @@ export function Footer({ locale }: FooterProps) {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">{t('followUs')}</h3>
+            <p className="text-sm text-orange-100 mb-4 opacity-90 leading-relaxed italic">
+              Follow us to get special offers on <span className="font-bold underline decoration-orange-300">stays and events!</span>
+            </p>
             <div className="flex space-x-4 mb-4">
               <a href="https://www.facebook.com/zagrodaalpakoterapii/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-200">
                 <Facebook size={24} />

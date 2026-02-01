@@ -1,0 +1,614 @@
+{
+    "Common": {
+        "title": "Zagroda Alpakoterapii",
+        "description": "Ervaar de helende kracht van alpaca's en natuur"
+    },
+    "common": {
+        "home": "Home",
+        "animals": "Dieren",
+        "accommodation": "Accommodatie",
+        "adoption": "Adopteren",
+        "activities": "Activiteiten",
+        "blog": "Blog",
+        "contact": "Contact",
+        "backToAnimals": "Terug naar alle dieren",
+        "age": "Geboren in",
+        "color": "Kleur",
+        "birthplace": "Geboorteplaats",
+        "breed": "Ras",
+        "role": "Rol",
+        "years": "jaar",
+        "attributes": "Kenmerken",
+        "character": "Karakter",
+        "stories": "Verhalen"
+    },
+    "animals": {
+        "title": "Ontmoet onze dieren",
+        "sectionTitle": "Ontmoet onze dierenvrienden",
+        "meetButton": "Ontmoet {name}",
+        "alpacas": {
+            "name": "Alpaca's",
+            "description": "Onze zachte, pluizige therapeuten staan klaar om je te ontmoeten!",
+            "superpower": "Rust en Zachtheid Uitstralen",
+            "alt": "Alpaca's op onze boerderij"
+        },
+        "goats": {
+            "name": "Geiten",
+            "description": "Speelse en vriendelijke geiten die van aandacht houden",
+            "superpower": "Speelse Energie & Klimmen",
+            "alt": "Geiten op onze boerderij"
+        },
+        "dogs": {
+            "name": "Honden",
+            "description": "Onze trouwe boerderijhonden zijn hier om je te begroeten en gezelschap te houden.",
+            "superpower": "Onvoorwaardelijke Liefde",
+            "alt": "Honden op onze boerderij"
+        }
+    },
+    "home": {
+        "title": "Welkom bij Zagroda Alpakoterapii",
+        "subtitle": "Ervaar het plezier van alpacatherapie",
+        "heroImageAlt": "Uitzicht op Zagroda Alpakoterapii boerderij",
+        "planVisit": "Plan je bezoek",
+        "featuredAnimals": "Onze dierenvrienden",
+        "alpacasTitle": "Alpaca's",
+        "alpacasDescription": "Ontmoet onze vriendelijke alpaca's en ervaar hun kalmerende aanwezigheid.",
+        "alpacasAlt": "Alpaca's bij Zagroda Alpakoterapii",
+        "goatsTitle": "Geiten",
+        "goatsDescription": "Onze speelse geiten zijn altijd in voor plezier.",
+        "goatsAlt": "Geiten bij Zagroda Alpakoterapii",
+        "dogsTitle": "Honden",
+        "dogsDescription": "Onze trouwe boerderijhonden zijn hier om je te begroeten en gezelschap te houden.",
+        "dogsAlt": "Honden bij Zagroda Alpakoterapii",
+        "meetThem": "Ontmoet ze",
+        "stayTitle": "Verblijf bij ons",
+        "farmhouseRoomsTitle": "Gezellige boerderijkamers",
+        "farmhouseRoomsDescription": "Ervaar rustieke charme in onze gerenoveerde boerderij",
+        "farmhouseRoomsAlt": "Gezellige boerderijkamers bij Zagroda Alpakoterapii",
+        "bookStay": "Boek je verblijf",
+        "activitiesTitle": "Onze activiteiten",
+        "meetAlpacasTitle": "Ontmoet de alpaca's",
+        "meetAlpacasDescription": "Kom heel dichtbij onze alpacahud",
+        "meetAlpacasAlt": "Alpaca's ontmoeten bij Zagroda Alpakoterapii",
+        "alpacaWalksTitle": "Alpaca wandelingen",
+        "alpacaWalksDescription": "Maak een wandeling met een alpacamaatje",
+        "alpacaWalksAlt": "Alpaca wandelingen bij Zagroda Alpakoterapii",
+        "weekendHelperTitle": "Weekendhulp",
+        "weekendHelperDescription": "Ervaar het boerderijleven van dichtbij",
+        "weekendHelperAlt": "Weekendhulp activiteiten bij Zagroda Alpakoterapii",
+        "exploreActivities": "Ontdek activiteiten",
+        "logoAlt": "Zagroda Alpakoterapii Logo",
+        "contactUs": "Neem contact op",
+        "phoneNumber": "695 545 330",
+        "address": "24 Orłowice, Mirsk 59-630, Polen",
+        "followUs": "Volg ons",
+        "imageNotFound": "Afbeelding niet gevonden"
+    },
+    "stay": {
+        "title": "Overnachtingsmogelijkheden",
+        "farmhouseRooms": {
+            "title": "Boerderijkamers",
+            "description": "Ervaar de charme van onze gerenoveerde boerderij"
+        },
+        "caravanStays": {
+            "title": "Verblijf in een caravan",
+            "description": "Geniet van een uniek verblijf in onze vintage caravans"
+        },
+        "bookNow": "Boek nu",
+        "checkAvailability": "Check beschikbaarheid"
+    },
+    "activities": {
+        "title": "Activiteiten",
+        "sectionTitle": "Onze activiteiten",
+        "viewDetails": "Bekijk details",
+        "attributes": "Kenmerken van de activiteit",
+        "details": "Details van de activiteit",
+        "highlights": "Hoogtepunten",
+        "requirements": "Vereisten",
+        "duration": "Duur",
+        "groupSize": "Groepsgrootte",
+        "minAge": "Minimumleeftijd",
+        "availability": "Beschikbaarheid",
+        "meetthealpacas": {
+            "name": "Ontmoet de alpaca's",
+            "image": "/images/activities/meet-alpacas.jpg",
+            "description": "Kom heel dichtbij onze vriendelijke alpaca's! Perfect voor gezinnen die meer willen weten over deze fascinerende dieren.",
+            "details": "Ervaar een unieke kans om onze vriendelijke alpacahud te ontmoeten.",
+            "highlights": "Ontmoet onze vriendelijke alpaca's en leer over hun unieke persoonlijkheden. Je krijgt interactie met de kudde, leert over de verzorging van alpaca's en hebt volop fotomogelijkheden.",
+            "requirements": "Comfortabele wandelschoenen, kleding passend bij het weer. Camera optioneel. Vooraf reserveren verplicht.",
+            "attributes": {
+                "duration": "Ongeveer 1 uur",
+                "groupSize": "Maximaal 6 personen",
+                "minAge": "Alle leeftijden welkom",
+                "availability": "Dagelijks, op afspraak"
+            },
+            "alt": "Activiteit Ontmoet de alpaca's"
+        },
+        "alpacawalks": {
+            "name": "Wandelen met alpaca's",
+            "image": "/images/activities/alpaca-walks.jpg",
+            "description": "Maak een ontspannen wandeling over ons prachtige boerderijterrein, vergezeld door je eigen alpacamaatje!",
+            "details": "Ga met ons mee voor een rustige wandeling over schilderachtige paden met je eigen alpacagezelschap.",
+            "highlights": "Individuele wandeling met een alpaca, mooie routes, leer alpaca's te begeleiden, fotomogelijkheden.",
+            "requirements": "Comfortabele wandelschoenen, kleding passend bij het weer, minimumleeftijd: 6 jaar.",
+            "attributes": {
+                "duration": "Ongeveer 90 minuten",
+                "groupSize": "Maximaal 4 personen",
+                "minAge": "6 jaar en ouder",
+                "availability": "Dagelijks, afhankelijk van het weer"
+            },
+            "alt": "Activiteit Wandelen met alpaca's"
+        },
+        "privatealpacasafari": {
+            "name": "Speciale privé-aanbieding",
+            "image": "/images/zagrodanewlogo.png",
+            "description": "Geniet van een exclusieve tour over onze boerderij met een kudde alpaca's! Perfect voor grotere groepen of speciale gelegenheden.",
+            "details": "Geniet van een exclusieve ervaring met onze alpaca's in een privéomgeving. Opties zijn onder andere Verjaardagen, Romantische Picknicks, Verlovingen, Fotosessies etc. Bel ons als je een speciaal idee hebt waar we aan kunnen werken!",
+            "highlights": "Privégids, op maat gemaakte ervaring, extra tijd met de alpaca's, speciale fotomogelijkheden.",
+            "requirements": "Reservering minimaal 48 uur van tevoren vereist. Geschikt voor alle leeftijden.",
+            "attributes": {
+                "duration": "2-3 uur",
+                "groupSize": "Privégroep tot 8 personen",
+                "minAge": "Alle leeftijden welkom",
+                "availability": "Op speciale afspraak"
+            },
+            "alt": "Activiteit Privé Alpaca Safari"
+        },
+        "bookNow": "Boek nu"
+    },
+    "blog": {
+        "title": "Ons Blog",
+        "noPosts": "Momenteel zijn er geen blogartikelen beschikbaar. Kom snel terug!",
+        "readMore": "Lees meer",
+        "recentPosts": "Recente artikelen",
+        "viewAll": "Bekijk alle artikelen"
+    },
+    "contact": {
+        "title": "Neem contact op",
+        "name": "Naam",
+        "email": "E-mail",
+        "message": "Bericht",
+        "send": "Bericht versturen",
+        "addressTitle": "Ons adres",
+        "phoneTitle": "Telefoon",
+        "emailTitle": "E-mail",
+        "formSuccess": "Bedankt voor je bericht. We nemen snel contact met je op!",
+        "formError": "Er is een fout opgetreden bij het versturen van je bericht. Probeer het opnieuw.",
+        "callOrMessage": "Bel of bericht ons",
+        "call": "Bellen",
+        "visitUs": "Bezoek ons",
+        "followUs": "Volg ons"
+    },
+    "hero": {
+        "title": "Welkom bij Zagroda Alpakoterapii",
+        "subtitle": "Ervaar de magie van alpacatherapie in onze rustige boerderijomgeving",
+        "planVisit": "Plan je bezoek",
+        "exploreActivities": "Ontdek activiteiten",
+        "contactUs": "Neem contact op"
+    },
+    "accommodation": {
+        "sectionTitle": "Verblijf bij ons",
+        "bookNow": "Boek nu",
+        "cozyfarmhouserooms": {
+            "name": "Gezellige boerderijkamers",
+            "description": "Slaap heerlijk in onze comfortabele boerderij!",
+            "alt": "Gezellige boerderij accommodatie"
+        }
+    },
+    "adoption": {
+        "title": "Adopteer een alpaca",
+        "sectionTitle": "Jaarlijks Virtueel Adoptieprogramma",
+        "bronze": {
+            "name": "Bronzen Beschermer",
+            "price": "99 PLN",
+            "features": [
+                "Officieel Adoptiecertificaat",
+                "Portret van je alpaca om in te lijsten",
+                "Gepersonaliseerde digitale updates"
+            ]
+        },
+        "silver": {
+            "name": "Zilveren Beschermer",
+            "price": "499 PLN",
+            "features": [
+                "Alle Bronze voordelen",
+                "Ingelijste foto met een plukje alpacawol",
+                "Prioriteit bij het plannen van bezoeken"
+            ]
+        },
+        "gold": {
+            "name": "Gouden Beschermer",
+            "price": "999 PLN",
+            "features": [
+                "Alle Silver voordelen",
+                "15% korting op alle geboekte verblijven & activiteiten",
+                "Persoonlijke begroeting door je alpaca"
+            ]
+        },
+        "chooseAlpaca": "Kies je alpaca",
+        "chooseAlpacaSubtitle": "Selecteer je favoriete protegé",
+        "benefitsTitle": "Alles wat je krijgt",
+        "benefitsSubtitle": "Ontdek de magie die is inbegrepen in onze adoptiepakketten",
+        "bestValue": "Keuze",
+        "annualFeeNote": "Eenmalige jaarlijkse vergoeding",
+        "selectionRequired": "Selecteer je alpacamaatje om af te ronden",
+        "selectButton": "Selecteer pakket",
+        "confirmAdoption": "Bevestig adoptie",
+        "selected": "Geselecteerd",
+        "success": {
+            "title": "Gefeliciteerd!",
+            "message": "Je bent succesvol lid geworden van ons adoptieprogramma!",
+            "benefits": {
+                "certificate": {
+                    "title": "Officieel Certificaat",
+                    "description": "Een prachtig virtueel certificaat ter erkenning van je steun aan onze alpacafamilie."
+                },
+                "portrait": {
+                    "title": "Alpaca Portret",
+                    "description": "Een hoogwaardig portret van de door jou gekozen alpaca, perfect om in te lijsten in je huis."
+                },
+                "fur_lock": {
+                    "title": "Echte Alpacawol",
+                    "description": "Een ingelijste foto vergezeld van een echt plukje van de zachte wol van je alpaca voor een fysieke verbinding."
+                },
+                "updates": {
+                    "title": "Digitale Updates",
+                    "description": "Regelmatige digitale nieuwsbrieven met persoonlijke verhalen en foto's over het leven van je alpaca."
+                },
+                "priority": {
+                    "title": "Prioriteit bij Boeking",
+                    "description": "Geniet van prioriteit bij het plannen van boerderijbezoeken en activiteiten met je geadopteerde favoriet."
+                },
+                "discount": {
+                    "title": "Boerderijkortingen",
+                    "description": "Exclusieve 15% korting op alle accommodatieboekingen en boerderijactiviteiten."
+                },
+                "greetings": {
+                    "title": "Persoonlijke Begroetingen",
+                    "description": "De unieke kans om persoonlijk begroet te worden door je alpaca tijdens verblijven op de boerderij."
+                },
+                "plush": {
+                    "title": "Handgemaakte Knuffel",
+                    "description": "Een speciale, op maat gemaakte zachte knuffel die lijkt op je geadopteerde alpaca."
+                }
+            }
+        },
+        "terms": {
+            "title": "Algemene Voorwaarden",
+            "items": [
+                "Adoptie is voor een periode van 12 maanden vanaf de datum van betaling.",
+                "Kortingen op verblijven zijn afhankelijk van beschikbaarheid en niet combineerbaar met andere aanbiedingen.",
+                "Weekendverblijf in het appartement moet vooraf worden gereserveerd.",
+                "Betaalde activiteiten moeten apart worden geboekt; adoptie garandeert de beschikbaarheid van je alpaca.",
+                "Knuffels en certificaten worden binnen 14 dagen na adoptie verwerkt."
+            ]
+        }
+    },
+    "navigation": {
+        "home": "Home",
+        "animals": "Dieren",
+        "activities": "Activiteiten",
+        "blog": "Blog",
+        "contact": "Contact",
+        "accommodation": "Accommodatie"
+    },
+    "alpacas": {
+        "pageTitle": "Ontmoet onze alpacagroep",
+        "backToAnimals": "Terug naar dieren",
+        "attributes": "Kenmerken",
+        "character": "Karakter",
+        "stories": "Verhalen",
+        "age": "Geboren in",
+        "color": "Kleur",
+        "birthplace": "Geboorteplaats",
+        "years": "jaar",
+        "micky": {
+            "name": "Micky",
+            "attributes": {
+                "age": "2018",
+                "color": "Bruin",
+                "birthplace": "Duitsland"
+            },
+            "superpower": "Zachte Ziel & Camouflage",
+            "character": "Micky is erg schuw en bang voor lawaai en geschreeuw.",
+            "stories": {
+                "0": "Toen Micky voor het eerst een muis in de schuur zag, schrok hij en rende snel weg.",
+                "1": "Ondanks zijn schuwheid toonde Micky ongelooflijke moed toen hij hielp een nerveus kind te kalmeren tijdens een therapie door hem voorzichtig te benaderen en dichtbij te blijven."
+            }
+        },
+        "elvis": {
+            "name": "Elvis",
+            "attributes": {
+                "age": "2020",
+                "color": "Grijs en wit",
+                "birthplace": "Duitsland"
+            },
+            "superpower": "Rockstar Energie & Hoge Sprongen",
+            "character": "Elvis is eigenwijs en rebels. Hij is nieuwsgierig en gedraagt zich vaak als een ster.",
+            "stories": {
+                "0": "Elvis kan heel hoog springen, dus op een keer sprong hij over het hek en rende het bos in. Gelukkig kwam hij na korte tijd weer terug.",
+                "1": "Tijdens een therapiesessie begon Elvis mee te neuriën toen een bezoeker zong, waarmee hij zijn naam als echte artiest eer aandeed!"
+            }
+        },
+        "ricky": {
+            "name": "Ricky",
+            "attributes": {
+                "age": "2020",
+                "color": "Rood en wit",
+                "birthplace": "Duitsland"
+            },
+            "superpower": "Charmante Kwebbelkous & Plassendanser",
+            "character": "Ricky is erg verlegen, maar hij is de grootste kwebbelkous.",
+            "stories": {
+                "0": "Ricky kwam als bezoeker bij ons, maar hij werd zo goed bevriend met Elvis dat hij bleef.",
+                "1": "Op een regenachtige dag ontdekte Ricky dat hij dol is op spelen in plassen en nu doet hij een vreugdedansje wanneer het regent."
+            }
+        },
+        "teddy": {
+            "name": "Teddy",
+            "attributes": {
+                "age": "2018",
+                "color": "Karamel",
+                "birthplace": "Duitsland"
+            },
+            "superpower": "Kalme Leider & Kindvriendelijk",
+            "character": "Teddy is the leader of the herd. He is known for his calm demeanor and friendly nature.",
+            "stories": {
+                "0": "Teddy liet een 2-jarig meisje hem meenemen voor een wandeling.",
+                "1": "Tijdens een stormachtige nacht hield Teddy de wacht over de jongere alpaca's, waarmee hij zijn ware leiderschapskwaliteiten toonde."
+            }
+        },
+        "suri": {
+            "name": "Suri",
+            "attributes": {
+                "age": "2018",
+                "color": "Zwart",
+                "birthplace": "Duitsland"
+            },
+            "superpower": "Dappere Bewaker & Slimme Leerling",
+            "character": "Suri is erg dapper, wat er vaak toe leidt dat hij de kudde probeert te domineren.",
+            "stories": {
+                "0": "Suri is nergens bang voor en heeft ooit op Daisy gespuugd.",
+                "1": "Toen we nieuwe hooiruiven introduceerden, was Suri de eerste die doorhad hoe ze te gebruiken en liet het de anderen zien."
+            }
+        },
+        "freddy": {
+            "name": "Freddy",
+            "attributes": {
+                "age": "2019",
+                "color": "Beige",
+                "birthplace": "Chili"
+            },
+            "superpower": "Veranderlijke Geest & Meester in Bedelen",
+            "character": "Freddy heeft een veranderlijk karakter - soms kan hij naar gasten snuiven.",
+            "stories": {
+                "0": "Freddy is erg intelligent. He quickly learned to ask for food with his foot.",
+                "1": "In de winter ontdekte Freddy dat hij dol is op het vangen van sneeuwvlokken met zijn tong, waarmee iedereen moest lachen om zijn speelse capriolen."
+            }
+        }
+    },
+    "dogs": {
+        "pageTitle": "Ontmoet onze honden",
+        "backToAnimals": "Terug naar dieren",
+        "attributes": "Kenmerken",
+        "age": "Geboren in",
+        "color": "Kleur",
+        "breed": "Ras",
+        "role": "Rol",
+        "character": "Karakter",
+        "stories": "Verhalen",
+        "alwaysWithUs": "Altijd bij ons",
+        "lucy": {
+            "name": "Lucy",
+            "attributes": {
+                "age": "2019",
+                "color": "Goud",
+                "breed": "Yorkshire Terriër",
+                "role": "Boerderijbewaker"
+            },
+            "character": "Lucy is an energetic and loving Yorkshire Terrier. Despite her small size, she has a big personality and loves to keep watch over the farm.",
+            "stories": {
+                "0": "Lucy may be tiny, but she takes her job as farm guardian very seriously.",
+                "1": "She's incredibly gentle with visitors and loves to show them around the farm."
+            }
+        },
+        "daisy": {
+            "name": "Daisy",
+            "status": "memorial",
+            "memoriam": "Altijd in ons hart, ze waakt over de alpaca's vanaf haar favoriete plekje in de tuin.",
+            "attributes": {
+                "age": "2020",
+                "color": "Zwart",
+                "breed": "Labrador Kruising",
+                "role": "Beschermengel"
+            },
+            "character": "Daisy was een lieve en vriendelijke hond die van aandacht hield. Ze is nu onze beschermengel in de tuin.",
+            "stories": {
+                "0": "Daisy had een speciale band met de babygeitjes en waakte vaak over hen.",
+                "1": "Ze wordt door iedereen op de boerderij erg gemist, vooral door haar alpacamaatjes."
+            }
+        },
+        "molly": {
+            "name": "Molly",
+            "attributes": {
+                "age": "2025",
+                "color": "Chocoladebruin",
+                "breed": "Labrador Retriever",
+                "role": "Boerderijpuppy"
+            },
+            "character": "Molly is erg liefdevol en speels. Ze stuitert door de tuin op zoek naar kinderen om mee te spelen.",
+            "stories": {
+                "0": "Hoewel ze nieuw is, heeft Molly al de harten van alle boerderijbezoekers gestolen.",
+                "1": "Ze vindt het heerlijk om bellen na te jagen en verstoppertje te spelen in het hoge gras."
+            }
+        }
+    },
+    "goats": {
+        "pageTitle": "Ontmoet onze geitenbende",
+        "backToAnimals": "Terug naar dieren",
+        "attributes": "Kenmerken",
+        "character": "Karakter",
+        "stories": "Verhalen",
+        "age": "Geboren in",
+        "color": "Kleur",
+        "birthplace": "Geboorteplaats",
+        "years": "jaar",
+        "madonna": {
+            "name": "Madonna",
+            "attributes": {
+                "age": "2017",
+                "color": "Wit",
+                "birthplace": "Tsjechië"
+            },
+            "character": "Madonna is the diva of the goat herd. She loves attention and often 'sings' to visitors.",
+            "stories": {
+                "0": "Madonna once stole a visitor's hat and wore it around the farm for an entire day.",
+                "1": "She has a habit of standing on the highest point of any structure, as if posing for a photo shoot."
+            }
+        },
+        "ladygaga": {
+            "name": "Lady Gaga",
+            "attributes": {
+                "age": "2016",
+                "color": "Zwart and white",
+                "birthplace": "Tsjechië"
+            },
+            "character": "Lady Gaga is known for her unique 'fashion sense', often found wearing flowers or leaves in her fur.",
+            "stories": {
+                "0": "Lady Gaga once organized a 'goat parade' where she led the entire herd in a line around the farm.",
+                "1": "She has a special talent for finding the tastiest leaves and will share them with her goat friends."
+            }
+        },
+        "nella": {
+            "name": "Nella",
+            "attributes": {
+                "age": "2020",
+                "color": "Bruin",
+                "birthplace": "Tsjechië"
+            },
+            "character": "Nella is the gentle soul of the group. She's particularly good with children and loves cuddles.",
+            "stories": {
+                "0": "Nella once comforted a crying child by nuzzling up to them and staying by their side until they smiled.",
+                "1": "She has a unique friendship with one of the farm cats and they can often be found napping together in the sun."
+            }
+        },
+        "baron": {
+            "name": "Baron",
+            "attributes": {
+                "age": "2020",
+                "color": "Zwart",
+                "birthplace": "Tsjechië"
+            },
+            "character": "Baron is the dignified leader of the goat herd. He's calm, wise, and protective of the others.",
+            "stories": {
+                "0": "Baron once alerted the farmers to a broken fence by repeatedly headbutting the barn door until someone came to check.",
+                "1": "He has a unique habit of 'escorting' visitors around the farm, walking beside them like a tour guide."
+            }
+        }
+    },
+    "footer": {
+        "description": "Ervaar het plezier van alpacatherapie",
+        "contactUs": "Neem contact op",
+        "followUs": "Volg ons",
+        "privacyPolicy": "Privacyverklaring",
+        "allRightsReserved": "Alle rechten voorbehouden"
+    },
+    "privacy": {
+        "title": "Privacyverklaring",
+        "intro": {
+            "p1": "Welkom bij Zagroda Alpakoterapii. Wij doen er alles aan om uw persoonlijke gegevens te beschermen en uw privacy te respecteren.",
+            "p2": "Deze privacyverklaring legt uit hoe wij uw persoonlijke gegevens verzamelen, verwerken en beschermen, hoe wij deze informatie gebruiken en welke rechten u heeft met betrekking tot uw persoonlijke gegevens.",
+            "p3": "Door onze website en diensten te gebruiken, stemt u in met het verzamelen en gebruiken van uw informatie zoals beschreven in deze privacyverklaring."
+        },
+        "whoWeAre": {
+            "title": "Wie zijn wij?",
+            "content": "Ons website adres is: www.zagrodaalpakoterapii.com"
+        },
+        "messengerData": {
+            "title": "Facebook Messenger Bot Gegevens",
+            "content": "Wanneer u interactie heeft met onze Facebook Messenger bot, verzamelen en verwerken wij:",
+            "items": [
+                "Berichten die u naar onze bot stuurt",
+                "Uw openbare Facebook-profielinformatie",
+                "Informatie die nodig is voor boekingen en klantenservice"
+            ],
+            "purpose": "Wij gebruiken deze informatie om:",
+            "purposeItems": [
+                "Te reageren op uw vragen",
+                "Uw boekingen te verwerken",
+                "Onze diensten te verbeteren",
+                "Klantenservice te bieden"
+            ]
+        },
+        "dataCollection": {
+            "title": "Welke persoonlijke gegevens we verzamelen en waarom we die verzamelen",
+            "contactForms": {
+                "title": "Contactformulieren",
+                "content": "Voor klanten die kamers of activiteiten willen boeken, verzamelen we informatie om contact met u op te nemen en, indien van toepassing, voor de kamer te betalen. Voor gebruikers die ervoor hebben gekozen om communicatie van ons te ontvangen, gebruiken we de verstrekte informatie vaak binnen marketing- of algemene communicatiecampagnes."
+            },
+            "embeddedContent": {
+                "title": "Ingesloten inhoud van andere websites",
+                "p1": "Artikelen op deze site kunnen ingesloten inhoud bevatten (bijv. video's, afbeeldingen, artikelen, enz.). Ingesloten inhoud van andere websites gedraagt zich op exact dezelfde manier alsof de bezoeker de andere website heeft bezocht.",
+                "p2": "Deze websites kunnen gegevens over u verzamelen, cookies gebruiken, extra tracking van derden insluiten en uw interactie met die ingesloten inhoud monitoren, inclusief het bijhouden van uw interactie met de ingesloten inhoud als u een account heeft en bent ingelogd op die website."
+            }
+        },
+        "dataSharing": {
+            "title": "Met wie we uw gegevens delen",
+            "content": "Wij delen uw gegevens niet met derden, behalve als dat nodig is om onze diensten via Facebook Messenger te leveren. Uw berichten en informatie worden verwerkt in overeenstemming met het gegevensbeleid van Facebook en onze servicevereisten."
+        },
+        "dataRetention": {
+            "title": "Hoe lang we uw gegevens bewaren",
+            "content": "Voor gebruikers die een boeking of aanvraag invullen, bewaren we uw informatie alleen voor de doeleinden van die transactie. We archiveren informatie doorgaans binnen 3 jaar na een boeking of aanvraag. Voor interacties met de Messenger-bot worden berichten en gerelateerde gegevens maximaal 3 jaar bewaard."
+        },
+        "dataDeletion": {
+            "title": "Hoe u kunt verzoeken om gegevensverwijdering",
+            "content": "U kunt verzoeken om verwijdering van uw gegevens door:",
+            "items": [
+                "Een e-mail te sturen naar admin@zagrodaalpakoterapii.com",
+                "Gebruik te maken van ons contactformulier",
+                "Ons rechtstreeks een bericht te sturen via Facebook Messenger"
+            ]
+        },
+        "yourRights": {
+            "title": "Welke rechten u heeft over uw gegevens",
+            "content": "Als u een aanvraag of boeking op deze site heeft gedaan, kunt u verzoeken om een geëxporteerd bestand te ontvangen van de persoonlijke gegevens die wij over u bewaren, inclusief de gegevens die u aan ons heeft verstrekt. U kunt ook verzoeken dat wij alle persoonlijke gegevens die wij over u bewaren wissen. Dit omvat geen gegevens die wij verplicht moeten bewaren voor administratieve, juridische of beveiligingsdoeleinden."
+        },
+        "contact": {
+            "title": "Onze contactgegevens",
+            "content": "Ons contact e-mailadres is admin@zagrodaalpakoterapii.com"
+        },
+        "metaCrawlers": {
+            "title": "Meta Web Crawlers",
+            "content": "Onze website wordt gecrawld door de webcrawlers van Meta voor verschillende doeleinden, waaronder:",
+            "items": [
+                "FacebookExternalHit - voor het verwerken van inhoud die wordt gedeeld op Meta-platforms (Facebook, Instagram, Messenger)",
+                "Meta-ExternalAgent - voor training van AI-modellen en productverbetering",
+                "Meta-ExternalFetcher - voor door gebruikers geïnitieerde inhoudsopvraging"
+            ],
+            "dataCollection": "Deze crawlers kunnen informatie verzamelen zoals:",
+            "dataItems": [
+                "Website-inhoud en -structuur",
+                "Open Graph-eigenschappen",
+                "Thumbnails en metadata",
+                "Gedeelde inhoud en links"
+            ],
+            "security": "Om veiligheids- en integriteitsredenen kunnen sommige Meta-crawlers de standaard toegangsbeperkingen omzeilen bij het uitvoeren van veiligheidscontroles of het verifiëren van inhoud.",
+            "technicalRequirements": {
+                "title": "Technische vereisten",
+                "content": "Om een goede functionaliteit met Meta-platforms te garanderen, doet onze website het volgende:",
+                "items": [
+                    "Gebruikt gzip- en deflate-compressie voor efficiënte gegevensoverdracht",
+                    "Plaatst alle Open Graph-eigenschappen binnen de eerste 1 MB van de inhoud",
+                    "Zorgt ervoor dat de inhoud snel toegankelijk is voor crawlervragen",
+                    "Behandelt range-based content requests op de juiste manier",
+                    "Onderhoudt een allowlist van Meta crawler user agents and IP-adressen"
+                ]
+            }
+        }
+    },
+    "social": {
+        "title": "Mis niets!",
+        "description": "Volg ons op sociale media voor speciale aanbiedingen voor verblijven en evenementen!",
+        "cta": "Bekijk onze profielen"
+    }
+}

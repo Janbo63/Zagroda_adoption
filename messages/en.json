@@ -7,6 +7,7 @@
     "home": "Home",
     "animals": "Animals",
     "accommodation": "Accommodation",
+    "adoption": "Adopt",
     "activities": "Activities",
     "blog": "Blog",
     "contact": "Contact",
@@ -28,16 +29,19 @@
     "alpacas": {
       "name": "Alpacas",
       "description": "Our gentle, fluffy therapists ready to meet you!",
+      "superpower": "Emanating Calm & Softness",
       "alt": "Alpacas at our farm"
     },
     "goats": {
       "name": "Goats",
       "description": "Playful and friendly goats that love attention",
+      "superpower": "Playful Energy & Climbing",
       "alt": "Goats at our farm"
     },
     "dogs": {
       "name": "Dogs",
       "description": "Our loyal farm dogs are here to greet you and keep you company.",
+      "superpower": "Unconditional Love",
       "alt": "Dogs at our farm"
     }
   },
@@ -191,6 +195,98 @@
       "alt": "Cozy farmhouse accommodation"
     }
   },
+  "adoption": {
+    "title": "Adopt an alpaca",
+    "sectionTitle": "One-year Virtual Adoption Program",
+    "bronze": {
+      "name": "Bronze Protector",
+      "price": "99 PLN",
+      "features": [
+        "Official Adoption Certificate",
+        "Portrait of your alpaca for framing",
+        "Personalized digital updates"
+      ]
+    },
+    "silver": {
+      "name": "Silver Protector",
+      "price": "499 PLN",
+      "features": [
+        "All Bronze benefits",
+        "Framed photo with a lock of alpaca fur",
+        "Priority visit scheduling"
+      ]
+    },
+    "gold": {
+      "name": "Gold Protector",
+      "price": "999 PLN",
+      "features": [
+        "All Silver benefits",
+        "15% off all booked farm stays & activities",
+        "Personal greeting by your alpaca"
+      ]
+    },
+    "chooseAlpaca": "Choose your alpaca",
+    "chooseAlpacaSubtitle": "Select your favorite beneficiary",
+    "benefitsTitle": "Everything You Get",
+    "benefitsSubtitle": "Explore the magic included in our adoption packages",
+    "bestValue": "Value",
+    "annualFeeNote": "One-off Annual Fee",
+    "selectionRequired": "Please select your alpaca buddy to finalize",
+    "selectButton": "Select Package",
+    "confirmAdoption": "Confirm Adoption",
+    "selected": "Selected",
+    "success": {
+      "title": "Congratulations!",
+      "message": "You have successfully joined our adoption program!",
+      "details": "You are now a guardian of {alpaca} with the {tier} package.",
+      "description": "Thank you for supporting our herd. A confirmation email and your virtual adoption kit will be sent to you shortly.",
+      "backHome": "Back to Home"
+    },
+    "benefits": {
+      "certificate": {
+        "title": "Official Certificate",
+        "description": "A beautiful virtual certificate recognizing your support of our alpaca family."
+      },
+      "portrait": {
+        "title": "Alpaca Portrait",
+        "description": "A high-quality portrait of your chosen alpaca, perfect for framing in your home."
+      },
+      "fur_lock": {
+        "title": "Genuine Alpaca Fur",
+        "description": "A framed photo accompanied by a real lock of your alpaca's soft wool for a physical connection."
+      },
+      "updates": {
+        "title": "Digital Updates",
+        "description": "Regular digital newsletters with personal stories and photos about your alpaca's life."
+      },
+      "priority": {
+        "title": "Priority Booking",
+        "description": "Enjoy priority when scheduling farm visits and activities with your adopted favorite."
+      },
+      "discount": {
+        "title": "Farm Discounts",
+        "description": "Exlusive 15% discount on all accommodation bookings and farm activities."
+      },
+      "greetings": {
+        "title": "Personal Greetings",
+        "description": "The unique opportunity to be personally greeted by your alpaca during farm stays."
+      },
+      "plush": {
+        "title": "Handmade Plush",
+        "description": "A special, custom-made soft plush toy that matches the likeness of your adopted alpaca."
+      }
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "items": [
+        "Adoption is for a period of 12 months from the date of payment.",
+        "Discounts on stays are subject to availability and cannot be combined with other offers.",
+        "Weekend stayover in the apartment must be booked in advance and is subject to availability.",
+        "Paid activities (like walks) must be booked separately; adoption ensures availability of your alpaca.",
+        "Plush toys and certificates are processed within 14 days of adoption."
+      ]
+    }
+  },
   "navigation": {
     "home": "Home",
     "animals": "Animals",
@@ -216,6 +312,7 @@
         "color": "Brown",
         "birthplace": "Germany"
       },
+      "superpower": "Gentle Soul & Stealth",
       "character": "Micky is very timid, afraid of noises and shouting.",
       "stories": {
         "0": "When Micky saw a mouse in the barn for the first time, he got scared and quickly ran away.",
@@ -229,6 +326,7 @@
         "color": "Gray and white",
         "birthplace": "Germany"
       },
+      "superpower": "Rockstar Energy & High Jumps",
       "character": "Elvis is stubborn and rebellious. He's curious and often acts like a star.",
       "stories": {
         "0": "Elvis can jump very high, so once he jumped over the fence and ran into the forest. Fortunately, he came back after a short time.",
@@ -242,6 +340,7 @@
         "color": "Red and white",
         "birthplace": "Germany"
       },
+      "superpower": "Chatterbox Charm & Puddle Dancer",
       "character": "Ricky is very shy, but he's the biggest chatterbox.",
       "stories": {
         "0": "Ricky came to us as a visitor, but he became such good friends with Elvis that he stayed.",
@@ -255,6 +354,7 @@
         "color": "Caramel",
         "birthplace": "Germany"
       },
+      "superpower": "Calm Leader & Child Friendly",
       "character": "Teddy is the leader of the herd. He is known for his calm demeanor and friendly nature.",
       "stories": {
         "0": "Teddy let a 2-year-old girl take him for a walk.",
@@ -268,6 +368,7 @@
         "color": "Black",
         "birthplace": "Germany"
       },
+      "superpower": "Brave Guardian & Smart Learner",
       "character": "Suri is very brave, which often leads him to try to dominate the herd.",
       "stories": {
         "0": "Suri isn't afraid of anything and once spat on Daisy.",
@@ -281,6 +382,7 @@
         "color": "Beige",
         "birthplace": "Chile"
       },
+      "superpower": "Changeable Spirit & Food Request Master",
       "character": "Freddy has a changeable character - sometimes he can snort at guests.",
       "stories": {
         "0": "Freddy is very intelligent. He quickly learned to ask for food with his foot.",
@@ -298,6 +400,7 @@
     "role": "Role",
     "character": "Character",
     "stories": "Stories",
+    "alwaysWithUs": "Always with us",
     "lucy": {
       "name": "Lucy",
       "attributes": {
@@ -314,16 +417,32 @@
     },
     "daisy": {
       "name": "Daisy",
+      "status": "memorial",
+      "memoriam": "Always in our hearts, watching over the alpacas from her favorite spot in the garden.",
       "attributes": {
         "age": "2020",
         "color": "Black",
         "breed": "Labrador Mixed Breed",
-        "role": "Farm Friend"
+        "role": "Guardian Angel"
       },
-      "character": "Daisy is a sweet and friendly dog who loves attention. She's always ready to greet visitors with a wagging tail.",
+      "character": "Daisy was a sweet and friendly dog who loved attention. She's now our guardian angel in the garden.",
       "stories": {
-        "0": "Daisy has a special bond with the baby goats and often watches over them.",
-        "1": "She's known for her gentle nature and patience with children who visit the farm."
+        "0": "Daisy had a special bond with the baby goats and often watched over them.",
+        "1": "She is deeply missed by everyone at the farm, especially her alpaca friends."
+      }
+    },
+    "molly": {
+      "name": "Molly",
+      "attributes": {
+        "age": "2025",
+        "color": "Chocolate",
+        "breed": "Labrador Retriever",
+        "role": "Farm Puppy"
+      },
+      "character": "Molly is very loving and playful. She bounces around the garden looking for children to play with.",
+      "stories": {
+        "0": "Despite being a newcomer, Molly has already won the hearts of all the farm visitors.",
+        "1": "She loves chasing bubbles and playing hide and seek in the high grass."
       }
     }
   },
@@ -489,5 +608,10 @@
         ]
       }
     }
+  },
+  "social": {
+    "title": "Don't Miss Out!",
+    "description": "Follow us on social media to get special offers on stays and events!",
+    "cta": "See Our Profiles"
   }
 }

@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const title = 'Zagroda Alpakoterapii'
   const description = 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie'
   const image = `${url}/images/zagrodanewlogo.png`
-  
+
   return {
     metadataBase: new URL(url),
     title,

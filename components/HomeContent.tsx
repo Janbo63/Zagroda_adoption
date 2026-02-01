@@ -5,6 +5,7 @@ import { HeroSection } from './HeroSection'
 import { AnimalSection } from './AnimalSection'
 import { ActivitiesSection } from './ActivitiesSection'
 import { AccommodationSection } from './AccommodationSection'
+import { SocialMediaBanner } from './SocialMediaBanner'
 
 interface HomeContentProps {
   locale: string;
@@ -16,6 +17,7 @@ export function HomeContent({ locale }: HomeContentProps) {
       <HeroSection locale={locale} />
       <AnimalSection locale={locale} />
       <ActivitiesSection locale={locale} />
+      <SocialMediaBanner />
       <AccommodationSection locale={locale} />
     </main>
   );

@@ -8,9 +8,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl'
 
-const dogImages = {
+const dogImages: Record<string, string> = {
   lucy: '/images/dogs/Lucy.jpg',
-  daisy: '/images/dogs/Daisy.jpg'
+  daisy: '/images/dogs/Daisy.jpg',
+  molly: '/images/dogs/Molly.jpg'
 }
 
 interface DogsPageContentProps {
@@ -21,7 +22,7 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
   const t = useTranslations('dogs')
   const tc = useTranslations('common')
 
-  const dogs = ['lucy', 'daisy']
+  const dogs = ['lucy', 'daisy', 'molly']
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -32,79 +33,89 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
       </Link>
       <h1 className="text-4xl font-bold text-center mb-8 text-primary-700">{t('pageTitle')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {dogs.map((dogId) => (
-          <Card key={dogId} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
-            <div className="relative aspect-[4/3] w-full">
-              {console.log('dogId:', dogId, 'image path:', dogImages[dogId])}
-              <Image
-                src={dogImages[dogId]}
-                alt={t(`${dogId}.name`)}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-300 hover:scale-110"
-                priority={true}
-                loading="eager"
-                unoptimized={true}
-                onError={(e: any) => {
-                  console.error('Failed to load image:', {
-                    dogId,
-                    src: dogImages[dogId],
-                    error: e.target?.outerHTML
-                  });
-                }}
-                onLoadingComplete={(img) => {
-                  console.log('Image loaded successfully:', {
-                    dogId,
-                    src: dogImages[dogId],
-                    naturalWidth: img.naturalWidth,
-                    naturalHeight: img.naturalHeight
-                  });
-                }}
-              />
-            </div>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary-600">{t(`${dogId}.name`)}</CardTitle>
-            </CardHeader>
-            <CardContent className="p-4">
-              <Tabs defaultValue="attributes">
-                <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="attributes" className="text-primary-600">{tc('attributes')}</TabsTrigger>
-                  <TabsTrigger value="character" className="text-primary-600">{tc('character')}</TabsTrigger>
-                  <TabsTrigger value="stories" className="text-primary-600">{tc('stories')}</TabsTrigger>
-                </TabsList>
-                <TabsContent value="attributes">
-                  <dl className="mt-4 space-y-2">
-                    <div>
-                      <dt className="font-semibold text-primary-700">{tc('age')}:</dt>
-                      <dd>{t(`${dogId}.attributes.age`)}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{tc('color')}:</dt>
-                      <dd>{t(`${dogId}.attributes.color`)}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{tc('breed')}:</dt>
-                      <dd>{t(`${dogId}.attributes.breed`)}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-primary-700">{tc('role')}:</dt>
-                      <dd>{t(`${dogId}.attributes.role`)}</dd>
-                    </div>
-                  </dl>
-                </TabsContent>
-                <TabsContent value="character">
-                  <p className="mt-4 text-primary-700">{t(`${dogId}.character`)}</p>
-                </TabsContent>
-                <TabsContent value="stories">
-                  <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    <li>{t(`${dogId}.stories.0`)}</li>
-                    <li>{t(`${dogId}.stories.1`)}</li>
-                  </ul>
-                </TabsContent>
-              </Tabs>
-            </CardContent>
-          </Card>
-        ))}
+        {dogs.map((dogId) => {
+          const isMemorial = t(`${dogId}.status`) === 'memorial';
+
+          return (
+            <Card key={dogId} className={`overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${isMemorial ? 'bg-stone-50/90' : 'bg-white/80'} backdrop-blur-sm relative`}>
+              {isMemorial && (
+                <div className="absolute top-0 right-0 z-20">
+                  <div className="bg-stone-800/80 text-white text-[10px] uppercase tracking-widest font-black py-1 px-10 rotate-45 translate-x-[30px] translate-y-[10px] shadow-sm backdrop-blur-sm border border-white/20">
+                    In Memoriam
+                  </div>
+                </div>
+              )}
+
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={dogImages[dogId]}
+                  alt={t(`${dogId}.name`)}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className={`object-cover transition-all duration-700 ${isMemorial ? 'grayscale hover:grayscale-0 opacity-80 hover:opacity-100' : 'hover:scale-110'}`}
+                  priority={true}
+                  loading="eager"
+                  unoptimized={true}
+                />
+                {isMemorial && (
+                  <div className="absolute inset-0 bg-stone-900/10 pointer-events-none" />
+                )}
+              </div>
+
+              <CardHeader className="relative">
+                <CardTitle className="text-2xl font-bold text-primary-600 flex items-center gap-2">
+                  {t(`${dogId}.name`)}
+                  {isMemorial && <span className="text-stone-400 text-sm font-normal italic">({t('alwaysWithUs')})</span>}
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="p-4">
+                {isMemorial && (
+                  <div className="mb-6 p-4 bg-stone-100/50 rounded-xl border-l-4 border-stone-400 italic text-stone-600 text-sm leading-relaxed">
+                    "{t(`${dogId}.memoriam`)}"
+                  </div>
+                )}
+
+                <Tabs defaultValue="attributes">
+                  <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="attributes" className="text-primary-600">{tc('attributes')}</TabsTrigger>
+                    <TabsTrigger value="character" className="text-primary-600">{tc('character')}</TabsTrigger>
+                    <TabsTrigger value="stories" className="text-primary-600">{tc('stories')}</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="attributes">
+                    <dl className="mt-4 space-y-2">
+                      <div>
+                        <dt className="font-semibold text-primary-700">{tc('age')}:</dt>
+                        <dd>{t(`${dogId}.attributes.age`)}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-primary-700">{tc('color')}:</dt>
+                        <dd>{t(`${dogId}.attributes.color`)}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-primary-700">{tc('breed')}:</dt>
+                        <dd>{t(`${dogId}.attributes.breed`)}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-primary-700">{tc('role')}:</dt>
+                        <dd>{t(`${dogId}.attributes.role`)}</dd>
+                      </div>
+                    </dl>
+                  </TabsContent>
+                  <TabsContent value="character">
+                    <p className="mt-4 text-primary-700">{t(`${dogId}.character`)}</p>
+                  </TabsContent>
+                  <TabsContent value="stories">
+                    <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
+                      <li>{t(`${dogId}.stories.0`)}</li>
+                      <li>{t(`${dogId}.stories.1`)}</li>
+                    </ul>
+                  </TabsContent>
+                </Tabs>
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
     </div>
   )

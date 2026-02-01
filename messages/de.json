@@ -6,6 +6,7 @@
     "animals": "Tiere",
     "activities": "Aktivitäten",
     "accommodation": "Übernachtung",
+    "adoption": "Adoption",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Zurück zu den Tieren",
@@ -27,7 +28,7 @@
       "contact": "Kontakt"
     }
   },
- "animals": {
+  "animals": {
     "title": "Lernen Sie unsere Tiere kennen",
     "sectionTitle": "Unsere tierischen Freunde",
     "meetButton": "Treffen Sie {name}",
@@ -35,18 +36,21 @@
       "name": "Alpakas",
       "title": "Unsere Alpakas",
       "description": "Treffen Sie unsere freundlichen und therapeutischen Alpakas",
+      "superpower": "Ausstrahlende Ruhe & Sanftheit",
       "alt": "Alpakas auf unserem Bauernhof"
     },
     "dogs": {
       "name": "Hunde",
       "title": "Unsere Hunde",
       "description": "Lernen Sie unsere verspielten und liebevollen Hofhunde kennen",
+      "superpower": "Bedingungslose Liebe",
       "alt": "Hunde auf unserem Bauernhof"
     },
     "goats": {
       "name": "Ziegen",
       "title": "Unsere Ziegen",
       "description": "Entdecken Sie unsere charakterstarken und unterhaltsamen Ziegen",
+      "superpower": "Verspielte Energie & Klettern",
       "alt": "Ziegen auf unserem Bauernhof"
     }
   },
@@ -60,6 +64,7 @@
         "color": "Braun",
         "birthplace": "Deutschland"
       },
+      "superpower": "Sanfte Seele & Tarnung",
       "character": "Micky ist sehr schüchtern, hat Angst vor Geräuschen und Geschrei.",
       "stories": {
         "0": "Als Micky zum ersten Mal eine Maus in der Scheune sah, erschrak er und lief schnell weg.",
@@ -73,6 +78,7 @@
         "color": "Grau und Weiß",
         "birthplace": "Deutschland"
       },
+      "superpower": "Rockstar-Energie & Hochsprung",
       "character": "Elvis ist stur und rebellisch. Er ist neugierig und verhält sich oft wie ein Star.",
       "stories": {
         "0": "Elvis kann sehr hoch springen, einmal sprang er über den Zaun und lief in den Wald. Zum Glück kam er nach kurzer Zeit zurück.",
@@ -86,6 +92,7 @@
         "color": "Rot und Weiß",
         "birthplace": "Deutschland"
       },
+      "superpower": "Plaudertaschen-Charme & Pfützen-Tänzer",
       "character": "Ricky ist sehr schüchtern, aber er ist der größte Plauderer.",
       "stories": {
         "0": "Ricky kam als Besucher zu uns, aber er wurde so gute Freunde mit Elvis, dass er blieb.",
@@ -99,7 +106,8 @@
         "color": "Karamell",
         "birthplace": "Deutschland"
       },
-      "character": "Teddy ist der Anführer der Herde. Er ist bekannt für sein ruhiges Wesen und seine Freundlichkeit.",
+      "superpower": "Ruhiger Anführer & Kinderlieb",
+      "character": "Teddy ist der Anführer der Herde. Er ist bekannt for sein ruhiges Wesen und seine Freundlichkeit.",
       "stories": {
         "0": "Teddy ließ sich von einem zweijährigen Mädchen spazieren führen.",
         "1": "In einer stürmischen Nacht wachte Teddy über die jüngeren Alpakas und zeigte seine wahren Führungsqualitäten."
@@ -112,6 +120,7 @@
         "color": "Schwarz",
         "birthplace": "Deutschland"
       },
+      "superpower": "Mutiger Wächter & Schneller Lerner",
       "character": "Suri ist sehr mutig, was ihn oft dazu bringt, die Herde dominieren zu wollen.",
       "stories": {
         "0": "Suri hat vor nichts Angst und spuckte einmal Daisy an.",
@@ -125,6 +134,7 @@
         "color": "Beige",
         "birthplace": "Chile"
       },
+      "superpower": "Wechselhafter Geist & Futter-Bettel-Profi",
       "character": "Freddy hat ein wechselhaftes Temperament - manchmal kann er Gäste anspucken.",
       "stories": {
         "0": "Freddy ist sehr intelligent. Er lernte schnell, mit seinem Fuß nach Futter zu fragen.",
@@ -151,6 +161,7 @@
     "role": "Rolle",
     "character": "Charakter",
     "stories": "Geschichten",
+    "alwaysWithUs": "Immer bei uns",
     "lucy": {
       "name": "Lucy",
       "attributes": {
@@ -167,16 +178,32 @@
     },
     "daisy": {
       "name": "Daisy",
+      "status": "memorial",
+      "memoriam": "Immer in unseren Herzen, sie wacht von ihrem Lieblingsplatz im Garten über die Alpakas.",
       "attributes": {
         "age": "2020",
         "color": "Schwarz",
-        "breed": "Labrador Mischling",
-        "role": "Hoffreund"
+        "breed": "Labrador-Mischling",
+        "role": "Schutzengel"
       },
-      "character": "Daisy ist ein süßer und freundlicher Hund, der Aufmerksamkeit liebt. Sie ist immer bereit, Besucher mit wedelndem Schwanz zu begrüßen.",
+      "character": "Daisy war ein süßer und freundlicher Hund, der Aufmerksamkeit liebte. Sie ist jetzt unser Schutzengel im Garten.",
       "stories": {
-        "0": "Daisy hat eine besondere Bindung zu den Ziegenbabys und passt oft auf sie auf.",
-        "1": "Sie ist bekannt für ihr sanftes Wesen und ihre Geduld mit Kindern, die den Hof besuchen."
+        "0": "Daisy hatte eine besondere Bindung zu den Babyziegen und passte oft auf sie auf.",
+        "1": "Sie wird von allen auf dem Bauernhof sehr vermisst, besonders von ihren Alpakafreunden."
+      }
+    },
+    "molly": {
+      "name": "Molly",
+      "attributes": {
+        "age": "2025",
+        "color": "Schokoladenbraun",
+        "breed": "Labrador Retriever",
+        "role": "Bauernhofwelpe"
+      },
+      "character": "Molly ist sehr liebevoll und verspielt. Sie hüpft durch den Garten auf der Suche nach Kindern zum Spielen.",
+      "stories": {
+        "0": "Obwohl sie neu ist, hat Molly bereits die Herzen aller Bauernhofbesucher erobert.",
+        "1": "Sie liebt es, Seifenblasen zu jagen und im hohen Gras Verstecken zu spielen."
       }
     }
   },
@@ -357,7 +384,7 @@
       "alt": "Privates Alpaka-Safari Aktivität"
     },
     "bookNow": "Jetzt Buchen"
-},
+  },
   "blog": {
     "title": "Unser Blog",
     "noPosts": "Momentan keine Blogbeiträge verfügbar. Schauen Sie bald wieder vorbei!",
@@ -397,6 +424,98 @@
       "alt": "Gemütliche Bauernhofunterkunft"
     }
   },
+  "adoption": {
+    "title": "Adoptieren Sie ein Alpaka",
+    "sectionTitle": "Einjähriges virtuelles Adoptionsprogramm",
+    "bronze": {
+      "name": "Bronze-Beschützer",
+      "price": "99 PLN",
+      "features": [
+        "Offizielle Adoptionsurkunde",
+        "Porträt deines Alpakas zum Einrahmen",
+        "Personalisierte digitale Updates"
+      ]
+    },
+    "silver": {
+      "name": "Silber-Beschützer",
+      "price": "499 PLN",
+      "features": [
+        "Alle Bronze-Vorteile",
+        "Gerahmtes Foto mit einer Locke Alpakawolle",
+        "Priorität bei der Besuchsplanung"
+      ]
+    },
+    "gold": {
+      "name": "Gold-Beschützer",
+      "price": "999 PLN",
+      "features": [
+        "Alle Silver-Vorteile",
+        "15 % Rabatt auf alle gebuchten Aufenthalte & Aktivitäten",
+        "Persönliche Begrüßung durch dein Alpaka"
+      ]
+    },
+    "chooseAlpaca": "Wählen Sie Ihr Alpaka",
+    "chooseAlpacaSubtitle": "Wählen Sie Ihren Schützling aus",
+    "benefitsTitle": "Alles, was Sie erhalten",
+    "benefitsSubtitle": "Entdecken Sie die Magie unserer Adoptionspakete",
+    "bestValue": "Tipp",
+    "annualFeeNote": "Einmalige Jahresgebühr",
+    "selectionRequired": "Bitte wählen Sie Ihr Alpaka aus, um fortzufahren",
+    "selectButton": "Paket auswählen",
+    "confirmAdoption": "Adoption bestätigen",
+    "selected": "Ausgewählt",
+    "success": {
+      "title": "Herzlichen Glückwunsch!",
+      "message": "Du bist erfolgreich unserem Adoptionsprogramm beigetreten!",
+      "details": "Du bist nun ein Pate von {alpaca} mit dem {tier}-Paket.",
+      "description": "Vielen Dank für die Unterstützung unserer Herde. Eine Bestätigungs-E-Mail und dein virtuelles Adoptions-Kit werden dir in Kürze zugesandt.",
+      "backHome": "Zurück zur Startseite"
+    },
+    "benefits": {
+      "certificate": {
+        "title": "Offizielle Urkunde",
+        "description": "Eine wunderschöne virtuelle Urkunde als Anerkennung für deine Unterstützung unserer Alpakafamilie."
+      },
+      "portrait": {
+        "title": "Alpaka-Porträt",
+        "description": "Ein hochwertiges Porträt deines gewählten Alpakas, perfekt zum Einrahmen in deinem Zuhause."
+      },
+      "fur_lock": {
+        "title": "Echtes Alpakafell",
+        "description": "Ein gerahmtes Foto zusammen mit einer echten Locke der weichen Wolle deines Alpakas für eine physische Verbindung."
+      },
+      "updates": {
+        "title": "Digitale Updates",
+        "description": "Regelmäßige digitale Newsletter mit persönlichen Geschichten und Fotos aus dem Leben deines Alpakas."
+      },
+      "priority": {
+        "title": "Vorrangige Buchung",
+        "description": "Genieße Vorrang bei der Planung von Bauernhofbesuchen und Aktivitäten mit deinem Liebling."
+      },
+      "discount": {
+        "title": "Bauernhof-Rabatte",
+        "description": "Exklusiver Rabatt von 15 % auf alle Unterkunftsrechner und Bauernhofaktivitäten."
+      },
+      "greetings": {
+        "title": "Persönliche Begrüßung",
+        "description": "Die einmalige Gelegenheit, während deines Aufenthalts persönlich von deinem Alpaka begrüßt zu werden."
+      },
+      "plush": {
+        "title": "Handgefertigtes Plüschtier",
+        "description": "Ein spezielles, maßgeschneidertes weiches Plüschtier, das deinem adoptierten Alpaka nachempfunden ist."
+      }
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "items": [
+        "Die Adoption gilt für einen Zeitraum von 12 Monaten ab Zahlungsdatum.",
+        "Rabatte auf Aufenthalte unterliegen der Verfügbarkeit und sind nicht mit anderen Angeboten kombinierbar.",
+        "Wochenendaufenthalte im Apartment müssen im Voraus gebucht werden.",
+        "Kostenpflichtige Aktivitäten müssen separat gebucht werden; die Adoption garantiert die Verfügbarkeit Ihres Alpakas.",
+        "Plüschtiere und Zertifikate werden innerhalb von 14 Tagen nach der Adoption bearbeitet."
+      ]
+    }
+  },
   "footer": {
     "description": "Erleben Sie die Freude an der Alpakatherapie",
     "contactUs": "Kontaktieren Sie uns",
@@ -404,97 +523,102 @@
     "privacyPolicy": "Datenschutzerklärung",
     "allRightsReserved": "Alle Rechte vorbehalten"
   },
-"privacy": {
-  "title": "Datenschutzerklärung",
-  "intro": {
-    "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns zum Schutz Ihrer personenbezogenen Daten und zur Wahrung Ihrer Privatsphäre.",
-    "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und schützen, wie wir diese Informationen verwenden und welche Rechte Sie in Bezug auf Ihre personenbezogenen Daten haben.",
-    "p3": "Durch die Nutzung unserer Website und Dienste stimmen Sie der Erhebung und Nutzung Ihrer Informationen gemäß dieser Datenschutzerklärung zu."
-  },
-  "whoWeAre": {
-    "title": "Wer wir sind",
-    "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com"
-  },
-  "messengerData": {
-    "title": "Facebook Messenger Bot Daten",
-    "content": "Wenn Sie mit unserem Facebook Messenger Bot interagieren, erheben und verarbeiten wir:",
-    "items": [
-      "Nachrichten, die Sie an unseren Bot senden",
-      "Ihre öffentlichen Facebook-Profilinformationen",
-      "Informationen, die für Buchungen und Kundenservice erforderlich sind"
-    ],
-    "purpose": "Wir verwenden diese Informationen für:",
-    "purposeItems": [
-      "Beantwortung Ihrer Anfragen",
-      "Bearbeitung Ihrer Buchungen",
-      "Verbesserung unserer Dienstleistungen",
-      "Bereitstellung von Kundenservice"
-    ]
-  },
-  "dataCollection": {
-    "title": "Welche personenbezogenen Daten wir erheben und warum wir sie erheben",
-    "contactForms": {
-      "title": "Kontaktformulare",
-      "content": "Für Kunden, die Zimmer oder Aktivitäten buchen möchten, erheben wir Informationen, die es uns ermöglichen, Sie zu kontaktieren und gegebenenfalls die Zahlung für das Zimmer abzuwickeln. Bei Nutzern, die sich für den Erhalt von Mitteilungen von uns entschieden haben, verwenden wir die bereitgestellten Informationen häufig im Rahmen von Marketing- oder allgemeinen Kommunikationskampagnen."
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": {
+      "p1": "Willkommen bei Zagroda Alpakoterapii. Wir verpflichten uns zum Schutz Ihrer personenbezogenen Daten und zur Wahrung Ihrer Privatsphäre.",
+      "p2": "Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und schützen, wie wir diese Informationen verwenden und welche Rechte Sie in Bezug auf Ihre personenbezogenen Daten haben.",
+      "p3": "Durch die Nutzung unserer Website und Dienste stimmen Sie der Erhebung und Nutzung Ihrer Informationen gemäß dieser Datenschutzerklärung zu."
     },
-    "embeddedContent": {
-      "title": "Eingebettete Inhalte von anderen Websites",
-      "p1": "Beiträge auf dieser Website können eingebettete Inhalte enthalten (z.B. Videos, Bilder, Artikel usw.). Eingebettete Inhalte von anderen Websites verhalten sich genauso, als hätte der Besucher die andere Website besucht.",
-      "p2": "Diese Websites können Daten über Sie sammeln, Cookies verwenden, zusätzliche Tracking-Dienste von Dritten einbetten und Ihre Interaktion mit diesem eingebetteten Inhalt aufzeichnen, einschließlich der Verfolgung Ihrer Interaktion mit dem eingebetteten Inhalt, falls Sie ein Konto haben und auf dieser Website eingeloggt sind."
-    }
-  },
-  "dataSharing": {
-    "title": "Mit wem wir Ihre Daten teilen",
-    "content": "Wir geben Ihre Daten nicht an Dritte weiter, außer wenn dies für die Bereitstellung unserer Dienste über Facebook Messenger erforderlich ist. Ihre Nachrichten und Informationen werden gemäß den Datenschutzrichtlinien von Facebook und unseren Serviceanforderungen verarbeitet."
-  },
-  "dataRetention": {
-    "title": "Wie lange wir Ihre Daten speichern",
-    "content": "Für Nutzer, die eine Buchung oder Anfrage vornehmen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf. Wir archivieren Informationen in der Regel innerhalb von 3 Jahren nach einer Buchung oder Anfrage. Bei Messenger-Bot-Interaktionen werden Nachrichten und zugehörige Daten bis zu 3 Jahre lang gespeichert."
-  },
-  "dataDeletion": {
-    "title": "Wie Sie die Löschung Ihrer Daten beantragen können",
-    "content": "Sie können die Löschung Ihrer Daten beantragen durch:",
-    "items": [
-      "E-Mail an admin@zagrodaalpakoterapii.com",
-      "Nutzung unseres Kontaktformulars",
-      "Direkte Nachricht über Facebook Messenger"
-    ]
-  },
-  "yourRights": {
-    "title": "Welche Rechte Sie an Ihren Daten haben",
-    "content": "Wenn Sie eine Anfrage oder Buchung auf dieser Website vorgenommen haben, können Sie eine exportierte Datei der personenbezogenen Daten anfordern, die wir über Sie gespeichert haben, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben. Sie können auch die Löschung aller personenbezogenen Daten verlangen, die wir über Sie gespeichert haben. Dies umfasst nicht die Daten, die wir aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahren müssen."
-  },
-  "contact": {
-    "title": "Unsere Kontaktinformationen",
-    "content": "Unsere Kontakt-E-Mail-Adresse lautet admin@zagrodaalpakoterapii.com"
-  },
-  "metaCrawlers": {
-    "title": "Meta Web-Crawler",
-    "content": "Unsere Website wird von Meta-Web-Crawlern für verschiedene Zwecke durchsucht, darunter:",
-    "items": [
-      "FacebookExternalHit - für die Verarbeitung von auf Meta-Plattformen (Facebook, Instagram, Messenger) geteilten Inhalten",
-      "Meta-ExternalAgent - für KI-Modelltraining und Produktverbesserung",
-      "Meta-ExternalFetcher - für benutzerinitiierte Inhaltsabrufe"
-    ],
-    "dataCollection": "Diese Crawler können folgende Informationen sammeln:",
-    "dataItems": [
-      "Website-Inhalte und -Struktur",
-      "Open Graph-Eigenschaften",
-      "Vorschaubilder und Metadaten",
-      "Geteilte Inhalte und Links"
-    ],
-    "security": "Aus Sicherheits- und Integritätsgründen können einige Meta-Crawler bei der Durchführung von Sicherheitsprüfungen oder der Überprüfung von Inhalten standardmäßige Zugangsbeschränkungen umgehen.",
-    "technicalRequirements": {
-      "title": "Technische Anforderungen",
-      "content": "Um die ordnungsgemäße Funktionalität mit Meta-Plattformen zu gewährleisten, erfüllt unsere Website folgende Anforderungen:",
+    "whoWeAre": {
+      "title": "Wer wir sind",
+      "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com"
+    },
+    "messengerData": {
+      "title": "Facebook Messenger Bot Daten",
+      "content": "Wenn Sie mit unserem Facebook Messenger Bot interagieren, erheben und verarbeiten wir:",
       "items": [
-        "Verwendet gzip- und deflate-Komprimierung für effizienten Datentransfer",
-        "Platziert alle Open Graph-Eigenschaften innerhalb des ersten 1 MB des Inhalts",
-        "Stellt sicher, dass Inhalte für Crawler-Anfragen schnell zugänglich sind",
-        "Verarbeitet bereichsbasierte Inhaltsanfragen ordnungsgemäß",
-        "Pflegt eine Zulassungsliste von Meta-Crawler-User-Agents und IP-Adressen"
+        "Nachrichten, die Sie an unseren Bot senden",
+        "Ihre öffentlichen Facebook-Profilinformationen",
+        "Informationen, die für Buchungen und Kundenservice erforderlich sind"
+      ],
+      "purpose": "Wir verwenden diese Informationen für:",
+      "purposeItems": [
+        "Beantwortung Ihrer Anfragen",
+        "Bearbeitung Ihrer Buchungen",
+        "Verbesserung unserer Dienstleistungen",
+        "Bereitstellung von Kundenservice"
       ]
+    },
+    "dataCollection": {
+      "title": "Welche personenbezogenen Daten wir erheben und warum wir sie erheben",
+      "contactForms": {
+        "title": "Kontaktformulare",
+        "content": "Für Kunden, die Zimmer oder Aktivitäten buchen möchten, erheben wir Informationen, die es uns ermöglichen, Sie zu kontaktieren und gegebenenfalls die Zahlung für das Zimmer abzuwickeln. Bei Nutzern, die sich für den Erhalt von Mitteilungen von uns entschieden haben, verwenden wir die bereitgestellten Informationen häufig im Rahmen von Marketing- oder allgemeinen Kommunikationskampagnen."
+      },
+      "embeddedContent": {
+        "title": "Eingebettete Inhalte von anderen Websites",
+        "p1": "Beiträge auf dieser Website können eingebettete Inhalte enthalten (z.B. Videos, Bilder, Artikel usw.). Eingebettete Inhalte von anderen Websites verhalten sich genauso, als hätte der Besucher die andere Website besucht.",
+        "p2": "Diese Websites können Daten über Sie sammeln, Cookies verwenden, zusätzliche Tracking-Dienste von Dritten einbetten und Ihre Interaktion mit diesem eingebetteten Inhalt aufzeichnen, einschließlich der Verfolgung Ihrer Interaktion mit dem eingebetteten Inhalt, falls Sie ein Konto haben und auf dieser Website eingeloggt sind."
+      }
+    },
+    "dataSharing": {
+      "title": "Mit wem wir Ihre Daten teilen",
+      "content": "Wir geben Ihre Daten nicht an Dritte weiter, außer wenn dies für die Bereitstellung unserer Dienste über Facebook Messenger erforderlich ist. Ihre Nachrichten und Informationen werden gemäß den Datenschutzrichtlinien von Facebook und unseren Serviceanforderungen verarbeitet."
+    },
+    "dataRetention": {
+      "title": "Wie lange wir Ihre Daten speichern",
+      "content": "Für Nutzer, die eine Buchung oder Anfrage vornehmen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf. Wir archivieren Informationen in der Regel innerhalb von 3 Jahren nach einer Buchung oder Anfrage. Bei Messenger-Bot-Interaktionen werden Nachrichten und zugehörige Daten bis zu 3 Jahre lang gespeichert."
+    },
+    "dataDeletion": {
+      "title": "Wie Sie die Löschung Ihrer Daten beantragen können",
+      "content": "Sie können die Löschung Ihrer Daten beantragen durch:",
+      "items": [
+        "E-Mail an admin@zagrodaalpakoterapii.com",
+        "Nutzung unseres Kontaktformulars",
+        "Direkte Nachricht über Facebook Messenger"
+      ]
+    },
+    "yourRights": {
+      "title": "Welche Rechte Sie an Ihren Daten haben",
+      "content": "Wenn Sie eine Anfrage oder Buchung auf dieser Website vorgenommen haben, können Sie eine exportierte Datei der personenbezogenen Daten anfordern, die wir über Sie gespeichert haben, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben. Sie können auch die Löschung aller personenbezogenen Daten verlangen, die wir über Sie gespeichert haben. Dies umfasst nicht die Daten, die wir aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahren müssen."
+    },
+    "contact": {
+      "title": "Unsere Kontaktinformationen",
+      "content": "Unsere Kontakt-E-Mail-Adresse lautet admin@zagrodaalpakoterapii.com"
+    },
+    "metaCrawlers": {
+      "title": "Meta Web-Crawler",
+      "content": "Unsere Website wird von Meta-Web-Crawlern für verschiedene Zwecke durchsucht, darunter:",
+      "items": [
+        "FacebookExternalHit - für die Verarbeitung von auf Meta-Plattformen (Facebook, Instagram, Messenger) geteilten Inhalten",
+        "Meta-ExternalAgent - für KI-Modelltraining und Produktverbesserung",
+        "Meta-ExternalFetcher - für benutzerinitiierte Inhaltsabrufe"
+      ],
+      "dataCollection": "Diese Crawler können folgende Informationen sammeln:",
+      "dataItems": [
+        "Website-Inhalte und -Struktur",
+        "Open Graph-Eigenschaften",
+        "Vorschaubilder und Metadaten",
+        "Geteilte Inhalte und Links"
+      ],
+      "security": "Aus Sicherheits- und Integritätsgründen können einige Meta-Crawler bei der Durchführung von Sicherheitsprüfungen oder der Überprüfung von Inhalten standardmäßige Zugangsbeschränkungen umgehen.",
+      "technicalRequirements": {
+        "title": "Technische Anforderungen",
+        "content": "Um die ordnungsgemäße Funktionalität mit Meta-Plattformen zu gewährleisten, erfüllt unsere Website folgende Anforderungen:",
+        "items": [
+          "Verwendet gzip- und deflate-Komprimierung für effizienten Datentransfer",
+          "Platziert alle Open Graph-Eigenschaften innerhalb des ersten 1 MB des Inhalts",
+          "Stellt sicher, dass Inhalte für Crawler-Anfragen schnell zugänglich sind",
+          "Verarbeitet bereichsbasierte Inhaltsanfragen ordnungsgemäß",
+          "Pflegt eine Zulassungsliste von Meta-Crawler-User-Agents und IP-Adressen"
+        ]
+      }
     }
+  },
+  "social": {
+    "title": "Nichts verpassen!",
+    "description": "Folgen Sie uns in de sozialen Medien, um Sonderangebote für Aufenthalte und Veranstaltungen zu erhalten!",
+    "cta": "Unsere Profile ansehen"
   }
-}
 }

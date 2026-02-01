@@ -3,13 +3,14 @@ import { useLocale } from 'next-intl'
 import { Button } from "@/components/ui/button"
 
 // Put Polish first as it's the default language
-const LOCALES = ['pl', 'en', 'de', 'cs'] as const
+const LOCALES = ['pl', 'en', 'de', 'cs', 'nl'] as const
 
 const languageNames = {
   pl: 'Polski',
   en: 'English',
   de: 'Deutsch',
-  cs: 'Čeština'
+  cs: 'Čeština',
+  nl: 'Nederlands'
 }
 
 export default function LanguageSwitcher() {
@@ -38,11 +39,10 @@ export default function LanguageSwitcher() {
           key={locale}
           onClick={() => handleLocaleChange(locale)}
           variant={currentLocale === locale ? "default" : "secondary"}
-          className={`text-[10px] leading-none sm:text-sm h-6 sm:h-8 w-[32px] sm:w-[64px] px-0.5 sm:px-2 ${
-            currentLocale === locale 
+          className={`text-[10px] leading-none sm:text-sm h-6 sm:h-8 w-[32px] sm:w-[64px] px-0.5 sm:px-2 ${currentLocale === locale
               ? 'bg-orange-400 text-white hover:bg-orange-500'
               : 'bg-white/10 text-white hover:bg-white/20'
-          }`}
+            }`}
           disabled={currentLocale === locale}
         >
           {locale.toUpperCase()}

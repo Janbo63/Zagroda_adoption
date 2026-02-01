@@ -8,6 +8,7 @@
     "animals": "Zwierzęta",
     "activities": "Aktywności",
     "accommodation": "Noclegi",
+    "adoption": "Adopcja",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Powrót do zwierząt",
@@ -67,16 +68,19 @@
     "alpacas": {
       "name": "Alpaki",
       "description": "Nasi łagodni, puchaci terapeuci gotowi na spotkanie!",
+      "superpower": "Emanowanie Spokojem i Miękkością",
       "alt": "Alpaki w naszym gospodarstwie"
     },
     "goats": {
       "name": "Kozy",
       "description": "Przyjazne kozy, które uwielbiają zabawę",
+      "superpower": "Radosna Energia i Wspinaczka",
       "alt": "Kozy w naszym gospodarstwie"
     },
     "dogs": {
       "name": "Psy",
       "description": "Nasi wierne psy gospodarskie",
+      "superpower": "Bezwarunkowa Miłość",
       "alt": "Psy w naszym gospodarstwie"
     }
   },
@@ -168,6 +172,101 @@
       "description": "Doświadcz uroku naszego odnowionego gospodarstwa"
     }
   },
+  "adoption": {
+    "title": "Adoptuj alpakę",
+    "sectionTitle": "Roczny Program Wirtualnej Adopcji",
+    "bronze": {
+      "name": "Brązowy Obrońca",
+      "price": "99 PLN",
+      "features": [
+        "Oficjalny Certyfikat Adopcji",
+        "Portret Twojej alpaki do oprawienia",
+        "Personalizowane aktualizacje cyfrowe",
+        "Gwarantowany dostęp podczas zajęć"
+      ]
+    },
+    "silver": {
+      "name": "Srebrny Obrońca",
+      "price": "499 PLN",
+      "features": [
+        "Wszystkie korzyści Bronze",
+        "Oprawione zdjęcie z kosmykiem wełny alpaki",
+        "Priorytetowe umawianie wizyt",
+        "10% zniżki na pobyty i powitania"
+      ]
+    },
+    "gold": {
+      "name": "Złoty Obrońca",
+      "price": "999 PLN",
+      "features": [
+        "Wszystkie korzyści Silver",
+        "15% zniżki na wszystkie pobyty i aktywności",
+        "Osobiste powitanie przez Twoją alpakę",
+        "ręcznie robiony pluszak"
+      ]
+    },
+    "chooseAlpaca": "Wybierz swoją alpakę",
+    "chooseAlpacaSubtitle": "Wybierz swojego ulubionego podopiecznego",
+    "benefitsTitle": "Wszystko, co otrzymujesz",
+    "benefitsSubtitle": "Odkryj magię zawartą w naszych pakietach adopcyjnych",
+    "bestValue": "Wybór",
+    "annualFeeNote": "Jednorazowa opłata roczna",
+    "selectionRequired": "Wybierz alpakę, aby sfinalizować",
+    "selectButton": "Wybierz pakiet",
+    "confirmAdoption": "Potwierdź Adopcję",
+    "selected": "Wybrano",
+    "success": {
+      "title": "Gratulacje!",
+      "message": "Pomyślnie dołączyłeś do naszego programu adopcji!",
+      "details": "Zostałeś opiekunem alpaki {alpaca} w pakiecie {tier}.",
+      "description": "Dziękujemy za wsparcie naszego stada. Potwierdzenie e-mail oraz Twój zestaw wirtualnej adopcji zostaną wysłane wkrótce.",
+      "backHome": "Powrót do strony głównej"
+    },
+    "benefits": {
+      "certificate": {
+        "title": "Oficjalny Certyfikat",
+        "description": "Piękny wirtualny certyfikat potwierdzający Twoje wsparcie dla naszej alpakowej rodziny."
+      },
+      "portrait": {
+        "title": "Portret Alpaki",
+        "description": "Wysokiej jakości portret wybranej alpaki, idealny do oprawienia w Twoim domu."
+      },
+      "fur_lock": {
+        "title": "Prawdziwa Wełna",
+        "description": "Oprawione zdjęcie wraz z kosmykiem prawdziwej, miękkiej wełny Twojej alpaki."
+      },
+      "updates": {
+        "title": "Aktualizacje Cyfrowe",
+        "description": "Regularne cyfrowe biuletyny z osobistymi historiami i zdjęciami z życia Twojej alpaki."
+      },
+      "priority": {
+        "title": "Priorytetowa Rezerwacja",
+        "description": "Ciesz się priorytetem podczas planowania wizyt na farmie i zajęć z Twoją alpaką."
+      },
+      "discount": {
+        "title": "Zniżki na Farmie",
+        "description": "Ekskluzywne 15% zniżki na wszystkie noclegi i aktywności na farmie."
+      },
+      "greetings": {
+        "title": "Osobiste Powitania",
+        "description": "Wyjątkowa okazja do osobistego powitania przez Twoją alpakę podczas pobytu."
+      },
+      "plush": {
+        "title": "Ręcznie Robiony Pluszak",
+        "description": "Specjalna, wykonana na zamówienie miękka pluszowa zabawka odzwierciedlająca Twoją alpakę."
+      }
+    },
+    "terms": {
+      "title": "Regulamin i Warunki",
+      "items": [
+        "Adopcja trwa przez 12 miesięcy od daty zakupu.",
+        "Zniżki na pobyty zależą od dostępności i nie łączą się z innymi ofertami.",
+        "Pobyt weekendowy w apartamencie musi być zarezerwowany z wyprzedzeniem.",
+        "Płatne aktywności muszą być rezerwowane osobno; adopcja gwarantuje dostępność Twojej alpaki.",
+        "Pluszaki i certyfikaty są wysyłane w ciągu 14 dni od adopcji."
+      ]
+    }
+  },
   "hero": {
     "title": "Witamy w Zagrodzie Alpakoterapii",
     "subtitle": "Doświadcz magii alpakoterapii w naszym spokojnym gospodarstwie",
@@ -180,6 +279,7 @@
     "animals": "Zwierzęta",
     "activities": "Aktywności",
     "accommodation": "Noclegi",
+    "adoption": "Adopcja",
     "blog": "Blog",
     "contact": "Kontakt"
   },
@@ -200,6 +300,7 @@
         "color": "Brązowy",
         "birthplace": "Niemcy"
       },
+      "superpower": "Łagodna Dusza i Kamuflaż",
       "character": "Micky jest bardzo nieśmiały, boi się hałasów i krzyków.",
       "stories": {
         "0": "Kiedy Micky po raz pierwszy zobaczył mysz w stodole, przestraszył się i szybko uciekł.",
@@ -213,6 +314,7 @@
         "color": "Szaro-biały",
         "birthplace": "Niemcy"
       },
+      "superpower": "Energia Gwiazdy i Wysokie Skoki",
       "character": "Elvis jest uparty i buntowniczy. Jest ciekawy i często zachowuje się jak gwiazda.",
       "stories": {
         "0": "Elvis potrafi bardzo wysoko skakać, więc pewnego razu przeskoczył przez płot i pobiegł do lasu. Na szczęście wrócił po krótkim czasie.",
@@ -226,6 +328,7 @@
         "color": "Czerwono-biały",
         "birthplace": "Niemcy"
       },
+      "superpower": "Urok Gaduły i Taniec w Kałużach",
       "character": "Ricky jest bardzo nieśmiały, ale jest największym gadułą.",
       "stories": {
         "0": "Ricky przyszedł do nas jako gość, ale zaprzyjaźnił się tak dobrze z Elvisem, że został.",
@@ -239,6 +342,7 @@
         "color": "Karmelowy",
         "birthplace": "Niemcy"
       },
+      "superpower": "Spokojny Lider i Przyjaciel Dzieci",
       "character": "Teddy jest liderem stada. Znany jest ze swojego spokojnego usposobienia i przyjaznej natury.",
       "stories": {
         "0": "Teddy pozwolił 2-letniej dziewczynce zabrać się na spacer.",
@@ -252,6 +356,7 @@
         "color": "Czarny",
         "birthplace": "Niemcy"
       },
+      "superpower": "Odważny Strażnik i Szybki Uczeń",
       "character": "Suri jest bardzo odważny, co często prowadzi go do prób dominacji w stadzie.",
       "stories": {
         "0": "Suri niczego się nie boi i kiedyś napluł na Daisy.",
@@ -265,6 +370,7 @@
         "color": "Beżowy",
         "birthplace": "Chile"
       },
+      "superpower": "Zmienny Duch i Mistrz Proszenia o Jedzenie",
       "character": "Freddy ma zmienny charakter - czasami potrafi parskać na gości.",
       "stories": {
         "0": "Freddy jest bardzo inteligentny. Szybko nauczył się prosić o jedzenie łapką.",
@@ -345,6 +451,7 @@
     "color": "Kolor",
     "birthplace": "Miejsce urodzenia",
     "years": "lat",
+    "alwaysWithUs": "Zawsze z nami",
     "lucy": {
       "name": "Lucy",
       "attributes": {
@@ -361,16 +468,32 @@
     },
     "daisy": {
       "name": "Daisy",
+      "status": "memorial",
+      "memoriam": "Zawsze w naszych sercach, czuwa nad alpakami ze swojego ulubionego miejsca w ogrodzie.",
       "attributes": {
-        "age": "2020",
+        "age": "2017",
         "color": "Czarna",
-        "breed": "Labarador Mieszaniec",
-        "role": "Przyjaciel Farmy"
+        "breed": "Mieszaniec Labradora",
+        "role": "Anioł Stróż"
       },
-      "character": "Daisy to słodki i przyjazny pies, który uwielbia uwagę. Zawsze wita gości machając ogonem.",
+      "character": "Daisy była słodkim i przyjaznym psem, który kochał uwagę. Teraz jest naszym aniołem stróżem w ogrodzie.",
       "stories": {
-        "0": "Daisy ma szczególną więź z małymi kózkami i często się nimi opiekuje.",
-        "1": "Jest znana ze swojej łagodnej natury i cierpliwości wobec dzieci odwiedzających farmę."
+        "0": "Daisy miała wyjątkową więź z małymi kózkami i często się nimi opiekowała.",
+        "1": "Wszyscy w gospodarstwie bardzo za nią tęsknią, szczególnie jej przyjaciele alpaki."
+      }
+    },
+    "molly": {
+      "name": "Molly",
+      "attributes": {
+        "age": "2025",
+        "color": "Czekoladowa",
+        "breed": "Labrador Retriever",
+        "role": "Szczeniak Gospodarski"
+      },
+      "character": "Molly jest bardzo kochająca i zabawna. Biega po ogrodzie szukając dzieci do zabawy.",
+      "stories": {
+        "0": "Mimo że jest nowa, Molly już zdobyła serca wszystkich odwiedzających gospodarstwo.",
+        "1": "Uwielbia gonić bańki mydlane i bawić się w chowanego w wysokiej trawie."
       }
     }
   },
@@ -473,5 +596,10 @@
         ]
       }
     }
+  },
+  "social": {
+    "title": "Nie przegap okazji!",
+    "description": "Obserwuj nas w mediach społecznościowych, aby otrzymywać specjalne oferty na pobyty i wydarzenia!",
+    "cta": "Zobacz nasze profile"
   }
 }

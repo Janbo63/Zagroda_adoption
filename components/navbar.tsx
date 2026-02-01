@@ -7,12 +7,14 @@ import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
+import { AmbientSoundToggle } from './AmbientSoundToggle'
 
 const navigation = [
   { key: 'home', href: '/' },
   { key: 'animals', href: '/animals' },
   { key: 'activities', href: '/activities' },
   { key: 'accommodation', href: '/accommodation' },
+  { key: 'adoption', href: '/adopt' },
   { key: 'contact', href: '/contact' },
 ]
 
@@ -46,7 +48,7 @@ export function Navbar({ locale }: NavbarProps) {
                 <span className="text-xl font-bold">Zagroda Alpakoterapii</span>
               </Link>
             </div>
-            
+
             {/* Mobile menu button */}
             <div className="sm:hidden">
               <button
@@ -66,11 +68,10 @@ export function Navbar({ locale }: NavbarProps) {
                 <Link
                   key={item.key}
                   href={`/${locale}${item.href}`}
-                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                    isActive
-                      ? 'border-orange-400 text-white'
-                      : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
-                  }`}
+                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive
+                    ? 'border-orange-400 text-white'
+                    : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
+                    }`}
                 >
                   {t(item.key)}
                 </Link>
@@ -78,8 +79,9 @@ export function Navbar({ locale }: NavbarProps) {
             })}
           </div>
 
-          {/* Language Switcher */}
-          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0 sm:ml-8">
+          {/* Language Switcher & Sound Toggle */}
+          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0 sm:ml-8 gap-4">
+            <AmbientSoundToggle />
             <LanguageSwitcher />
           </div>
         </div>
@@ -95,11 +97,10 @@ export function Navbar({ locale }: NavbarProps) {
                 <Link
                   key={item.key}
                   href={`/${locale}${item.href}`}
-                  className={`block px-3 py-2 rounded-md text-base font-medium touch-manipulation ${
-                    isActive
-                      ? 'bg-orange-400 text-white'
-                      : 'text-gray-200 hover:bg-orange-400 hover:text-white active:bg-orange-500'
-                  }`}
+                  className={`block px-3 py-2 rounded-md text-base font-medium touch-manipulation ${isActive
+                    ? 'bg-orange-400 text-white'
+                    : 'text-gray-200 hover:bg-orange-400 hover:text-white active:bg-orange-500'
+                    }`}
                   onClick={() => setIsOpen(false)}
                   role="button"
                   tabIndex={0}

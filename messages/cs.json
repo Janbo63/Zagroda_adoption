@@ -6,6 +6,7 @@
     "animals": "Zvířata",
     "activities": "Aktivity",
     "accommodation": "Ubytování",
+    "adoption": "Adopce",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Zpět na zvířata",
@@ -35,18 +36,21 @@
       "name": "Alpaky",
       "title": "Naše alpaky",
       "description": "Seznamte se s našimi přátelskými a terapeutickými alpakami",
+      "superpower": "Vyzařování Klidu a Jemnosti",
       "alt": "Alpaky na naší farmě"
     },
     "dogs": {
       "name": "Psi",
       "title": "Naši psi",
       "description": "Poznejte naše hravé a milující farmářské psy",
+      "superpower": "Bezpodmínečná Láska",
       "alt": "Psi na naší farmě"
     },
     "goats": {
       "name": "Kozy",
       "title": "Naše kozy",
       "description": "Objevte naše charakterní a zábavné kozy",
+      "superpower": "Hravá Energie a Šplhání",
       "alt": "Kozy na naší farmě"
     }
   },
@@ -67,6 +71,7 @@
         "color": "Hnědá",
         "birthplace": "Německo"
       },
+      "superpower": "Jemná Duše a Maskování",
       "character": "Micky je velmi plachý, bojí se hluku a křiku.",
       "stories": {
         "0": "Když Micky poprvé uviděl myš ve stodole, vyděsil se a rychle utekl.",
@@ -80,6 +85,7 @@
         "color": "Šedá a bílá",
         "birthplace": "Německo"
       },
+      "superpower": "Rockstar Energie a Vysoké Skoky",
       "character": "Elvis je tvrdohlavý a vzpurný. Je zvědavý a často se chová jako hvězda.",
       "stories": {
         "0": "Elvis umí skákat velmi vysoko, jednou přeskočil plot a utekl do lesa. Naštěstí se po krátké době vrátil.",
@@ -93,6 +99,7 @@
         "color": "Červená a bílá",
         "birthplace": "Německo"
       },
+      "superpower": "Upovídané Kouzlo a Tanečník v Kalužích",
       "character": "Ricky je velmi plachý, ale je největší povídálek.",
       "stories": {
         "0": "Ricky k nám přišel jako návštěvník, ale spřátelil se s Elvisem natolik, že zůstal.",
@@ -106,6 +113,7 @@
         "color": "Karamelová",
         "birthplace": "Německo"
       },
+      "superpower": "Klidný Vůdce a Přítel Dětí",
       "character": "Teddy je vůdce stáda. Je známý svou klidnou povahou a přátelskostí.",
       "stories": {
         "0": "Teddy se nechal vodit na procházku dvouletou holčičkou.",
@@ -119,6 +127,7 @@
         "color": "Bílá",
         "birthplace": "Německo"
       },
+      "superpower": "Odvážný Strážce a Bystrý Žák",
       "character": "Suri je nejzvědavější ze všech alpak. Miluje nové věci a lidi.",
       "stories": {
         "0": "Suri jednou strávil celé odpoledne pozorováním malíře, který maloval náš statek.",
@@ -132,7 +141,8 @@
         "color": "Černá",
         "birthplace": "Německo"
       },
-      "character": "Freddy je nejmladší a nejhravější z našich alpak.",
+      "superpower": "Proměnlivý Duch a Mistr v Žebrání o Jídlo",
+      "character": "Freddy je nejmladší and nejhravější z našich alpak.",
       "stories": {
         "0": "Freddy se naučil otevírat branku svým nosem, takže teď musíme mít speciální zámek.",
         "1": "Když vidí děti, vždy přiběhne prvé a chce si s nimi hrát."
@@ -151,6 +161,7 @@
     "role": "Role",
     "character": "Charakter",
     "stories": "Příběhy",
+    "alwaysWithUs": "Vždy s námi",
     "lucy": {
       "name": "Lucy",
       "attributes": {
@@ -167,16 +178,32 @@
     },
     "daisy": {
       "name": "Daisy",
+      "status": "memorial",
+      "memoriam": "Navždy v našich srdcích, dohlíží na alpaky ze svého oblíbeného místa v zahradě.",
       "attributes": {
         "age": "2020",
         "color": "Černá",
-        "breed": "Kříženec labradora",
-        "role": "Farmářský kamarád"
+        "breed": "Kříženec Labradora",
+        "role": "Anděl strážný"
       },
-      "character": "Daisy je milá a přátelská fenka, která miluje pozornost. Vždy je připravena přivítat návštěvníky vrtícím ocasem.",
+      "character": "Daisy byla sladký a přátelský pes, který miloval pozornost. Nyní je naším andělem strážným v zahradě.",
       "stories": {
-        "0": "Daisy má zvláštní pouto s jednou z farmářských koček a často je najdete, jak spolu spí na sluníčku.",
-        "1": "Je známá svou jemnou povahou a trpělivostí s dětmi, které navštěvují farmu."
+        "0": "Daisy měla zvláštní pouto s kůzlaty a často na ně dohlížela.",
+        "1": "Všem na farmě velmi chybí, zejména jejím alpačím přátelům."
+      }
+    },
+    "molly": {
+      "name": "Molly",
+      "attributes": {
+        "age": "2025",
+        "color": "Čokoládová",
+        "breed": "Labradorský retrívr",
+        "role": "Farmářské štěně"
+      },
+      "character": "Molly je velmi milující a hravá. Poskakuje po zahradě a hledá děti, se kterými by si mohla hrát.",
+      "stories": {
+        "0": "Přestože je nováčkem, Molly si již získala srdce všech návštěvníků farmy.",
+        "1": "Miluje honění mýdlových bublin a hraní na schovávanou ve vysoké trávě."
       }
     }
   },
@@ -414,6 +441,100 @@
     "blog": "Blog",
     "contact": "Kontakt"
   },
+  "adoption": {
+    "title": "Adoptujte alpaku",
+    "sectionTitle": "Jednoletý virtuální adopční program",
+    "bronze": {
+      "name": "Bronzový Ochrance",
+      "price": "99 PLN",
+      "features": [
+        "Oficiální adopční certifikát",
+        "Portrét vaší alpaky k orámování",
+        "Personalizované digitální aktualizace",
+        "Garantovaný přístup při aktivitách"
+      ]
+    },
+    "silver": {
+      "name": "Stříbrný Ochrance",
+      "price": "499 PLN",
+      "features": [
+        "Všechny výhody Bronze",
+        "Rámovaná fotografie s pramenem alpačí vlny",
+        "Prioritní plánování návštěv",
+        "10% sleva na pobyty a uvítání"
+      ]
+    },
+    "gold": {
+      "name": "Zlatý Ochrance",
+      "price": "2000 PLN / rok",
+      "features": [
+        "Všechny výhody stříbra",
+        "Víkendový pobyt zdarma",
+        "20% sleva a ručně vyráběný plyšák"
+      ]
+    },
+    "chooseAlpaca": "Vyberte si svou alpaku",
+    "chooseAlpacaSubtitle": "Vyberte si svého favorita",
+    "benefitsTitle": "Vše, co získáte",
+    "benefitsSubtitle": "Objevte kouzlo zahrnuté v našich adopčních balíčcích",
+    "bestValue": "Tip",
+    "annualFeeNote": "Jednorázový roční poplatek",
+    "selectionRequired": "Pro dokončení si prosím vyberte svou alpaku",
+    "selectButton": "Vybrat balíček",
+    "confirmAdoption": "Potvrdit adopci",
+    "selected": "Vybráno",
+    "success": {
+      "title": "Gratulujeme!",
+      "message": "Úspěšně jste se zapojili do našeho adopčního programu!",
+      "details": "Nyní jste strážcem alpaky {alpaca} s balíčkem {tier}.",
+      "description": "Děkujeme za podporu našeho stáda. Potvrzovací e-mail a váš virtuální adopční balíček vám budou brzy zaslány.",
+      "backHome": "Zpět na úvod"
+    },
+    "benefits": {
+      "certificate": {
+        "title": "Oficiální certifikát",
+        "description": "Krásný virtuální certifikát potvrzující vaši podporu naší alpačí rodině."
+      },
+      "portrait": {
+        "title": "Portrét alpaky",
+        "description": "Vysoce kvalitní portrét vaší vybrané alpaky, ideální k orámování u vás doma."
+      },
+      "fur_lock": {
+        "title": "Pravá alpačí vlna",
+        "description": "Rámovaná fotografie doplněná skutečným pramenem měkké vlny vaší alpaky pro fyzické spojení."
+      },
+      "updates": {
+        "title": "Digitální aktualizace",
+        "description": "Pravidelné digitální zpravodaje s osobními příběhy a fotografiemi ze života vaší alpaky."
+      },
+      "priority": {
+        "title": "Prioritní rezervace",
+        "description": "Užijte si prioritu při plánování návštěv farmy a aktivit s vaším adoptovaným oblíbencem."
+      },
+      "discount": {
+        "title": "Slevy na farmě",
+        "description": "Exkluzivní 15% sleva na všechna ubytování a farmářské aktivity."
+      },
+      "greetings": {
+        "title": "Osobní přivítání",
+        "description": "Jedinečná příležitost nechat se osobně přivítat vaší alpakou během pobytu na farmě."
+      },
+      "plush": {
+        "title": "Ručně vyráběný plyšák",
+        "description": "Speciální, na zakázku vyrobená měkká plyšová hračka, která odpovídá podobě vaší adoptované alpaky."
+      }
+    },
+    "terms": {
+      "title": "Obchodní Podmínky",
+      "items": [
+        "Adopce je na dobu 12 měsíců od data zaplacení.",
+        "Slevy na pobyty závisí na dostupnosti a nelze je kombinovat s jinými nabídkami.",
+        "Víkendový pobyt v apartmánu je nutné rezervovat předem.",
+        "Placené aktivity se musí rezervovat samostatně; adopce zaručuje dostupnost vaší alpaky.",
+        "Plyšáci a certifikáty jsou zpracovány do 14 dnů od adopcji."
+      ]
+    }
+  },
   "footer": {
     "description": "Zažijte radost z alpakoterapie",
     "contactUs": "Kontaktujte nás",
@@ -513,5 +634,10 @@
         ]
       }
     }
+  },
+  "social": {
+    "title": "Nenechte si nic ujít!",
+    "description": "Sledujte nás na sociálních sítích a získejte speciální nabídky na pobyty a akce!",
+    "cta": "Zobrazit naše profily"
   }
 }
