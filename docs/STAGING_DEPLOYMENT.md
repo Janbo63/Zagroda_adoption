@@ -58,4 +58,4 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
 Press `Ctrl+O`, `Enter`, then `Ctrl+X` to save.
 
 ## 6. Access Your Site
-The site will be available on port `3000` of your VPS IP address (e.g., `http://[VPS_IP]:3000`).
+The site will be available on port `3001` of your VPS IP address (e.g., `http://[VPS_IP]:3001`).
