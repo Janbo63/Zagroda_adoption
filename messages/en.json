@@ -403,6 +403,7 @@
     "alwaysWithUs": "Always with us",
     "lucy": {
       "name": "Lucy",
+      "status": "active",
       "attributes": {
         "age": "2019",
         "color": "Gold",
@@ -433,6 +434,7 @@
     },
     "molly": {
       "name": "Molly",
+      "status": "active",
       "attributes": {
         "age": "2025",
         "color": "Chocolate",
