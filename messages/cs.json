@@ -164,6 +164,7 @@
     "alwaysWithUs": "Vždy s námi",
     "lucy": {
       "name": "Lucy",
+      "status": "active",
       "attributes": {
         "age": "2019",
         "color": "Zlatá",
@@ -194,6 +195,7 @@
     },
     "molly": {
       "name": "Molly",
+      "status": "active",
       "attributes": {
         "age": "2025",
         "color": "Čokoládová",

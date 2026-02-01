@@ -400,6 +400,7 @@
         "alwaysWithUs": "Altijd bij ons",
         "lucy": {
             "name": "Lucy",
+            "status": "active",
             "attributes": {
                 "age": "2019",
                 "color": "Goud",
@@ -415,7 +416,7 @@
         "daisy": {
             "name": "Daisy",
             "status": "memorial",
-            "memoriam": "Altijd in ons hart, ze waakt over de alpaca's vanaf haar favoriete plekje in de tuin.",
+            "memoriam": "Altijd in ons hart, wakend over de alpaca's vanuit haar favoriete plekje in de tuin.",
             "attributes": {
                 "age": "2020",
                 "color": "Zwart",
@@ -430,6 +431,7 @@
         },
         "molly": {
             "name": "Molly",
+            "status": "active",
             "attributes": {
                 "age": "2025",
                 "color": "Chocoladebruin",
