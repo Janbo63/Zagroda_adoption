@@ -12,7 +12,7 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ locale }: HeroSectionProps) {
-  const t = useTranslations('hero')
+  const t = useTranslations('home')
   const containerRef = useRef<HTMLElement>(null)
 
   // Parallax effect: Text moves slower than scroll
@@ -21,14 +21,14 @@ export function HeroSection({ locale }: HeroSectionProps) {
     offset: ["start start", "end start"]
   })
 
-  const yText = useTransform(scrollYProgress, [0, 1], [0, 100])
-  const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const yText = useTransform(scrollYProgress, [0, 1], [0, 50])
+  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 
   return (
     <>
       {/* Title section above hero */}
-      <div className="w-full py-4 relative z-10 bg-gradient-to-br from-green-100/50 to-blue-100/50 backdrop-blur-sm">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-center text-primary-700">
+      <div className="w-full py-8 md:py-12 bg-white">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-center text-[#1a73e8] tracking-tight">
           {t('title')}
         </h1>
       </div>
@@ -36,43 +36,32 @@ export function HeroSection({ locale }: HeroSectionProps) {
       {/* Living Hero section */}
       <section
         ref={containerRef}
-        className="relative w-full aspect-[16/9] md:aspect-[21/9] mb-8 md:mb-12 rounded-3xl overflow-hidden shadow-2xl group"
+        className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] mb-8 md:mb-12 overflow-hidden group shadow-md"
       >
-        {/* Poster / Fallback Image */}
+        {/* Mosaic Hero Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-video-poster.png"
-            alt="Alpacas in the mist"
+            src="/images/hero-banner.png"
+            alt={t('heroImageAlt')}
             fill
             className="object-cover"
             priority
           />
         </div>
 
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-10 opacity-90 transition-opacity duration-1000"
-        >
-          <source src="/hero-background.mp4" type="video/mp4" />
-        </video>
+        {/* Subtle Gradient Overlay for text readability */}
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 to-transparent z-10" />
 
-        {/* Cinematic Gradient Overlay */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-
-        {/* Content with Parallax */}
+        {/* Content Positioned Bottom-Left to match live site */}
         <motion.div
           style={{ y: yText, opacity: opacityText }}
-          className="absolute inset-0 flex flex-col items-center justify-center p-4 z-30"
+          className="absolute bottom-[5%] left-[5%] md:bottom-[10%] md:left-[8%] w-[85%] md:w-[45%] flex flex-col items-start justify-end p-4 z-30 pointer-events-none"
         >
-          <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl mb-6 md:mb-10 text-center px-4 text-white font-serif tracking-wide drop-shadow-xl max-w-4xl leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6 text-left text-white font-medium drop-shadow-lg leading-snug">
             {t('subtitle')}
           </p>
 
-          <Link href={`/${locale}/contact`}>
+          <Link href={`/${locale}/contact`} className="pointer-events-auto">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -80,16 +69,13 @@ export function HeroSection({ locale }: HeroSectionProps) {
               <Button
                 variant="default"
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 text-lg rounded-full shadow-orange-500/30 shadow-lg border-2 border-white/20 backdrop-blur-sm"
+                className="bg-[#2196f3] hover:bg-[#1976d2] text-white font-bold py-3 px-8 text-lg rounded-full shadow-lg transition-colors"
               >
                 {t('planVisit')}
               </Button>
             </motion.div>
           </Link>
         </motion.div>
-
-        {/* Subtle decorative bottom curve */}
-        <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-black/40 to-transparent z-20" />
       </section>
     </>
   )
