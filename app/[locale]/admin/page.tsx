@@ -3,6 +3,9 @@ import prisma from '@/lib/prisma';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, Ticket, TrendingUp, Users } from 'lucide-react';
 
+// Force dynamic rendering (don't pre-render at build time)
+export const dynamic = 'force-dynamic';
+
 async function getStats() {
     const adoptionCount = await prisma.adoption.count({ where: { status: 'paid' } });
     const pendingAdoptions = await prisma.adoption.count({ where: { status: 'pending' } });

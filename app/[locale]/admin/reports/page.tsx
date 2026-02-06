@@ -3,6 +3,9 @@ import prisma from '@/lib/prisma';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart3, PieChart, TrendingUp } from 'lucide-react';
 
+// Force dynamic rendering (don't pre-render at build time)
+export const dynamic = 'force-dynamic';
+
 async function getReportData() {
     const adoptions = await prisma.adoption.findMany({ where: { status: 'paid' } });
     const vouchers = await prisma.voucher.findMany({ where: { status: 'active' } });

@@ -1,5 +1,8 @@
 import React from 'react';
 import prisma from '@/lib/prisma';
+
+// Force dynamic rendering (don't pre-render at build time)
+export const dynamic = 'force-dynamic';
 import {
     Table,
     TableBody,

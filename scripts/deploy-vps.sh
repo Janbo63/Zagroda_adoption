@@ -1,5 +1,5 @@
 #!/bin/bash
-# Last updated: 2026-02-06 (21:35) - Testing auto-deployment
+# Last updated: 2026-02-06 (21:41) - Admin pages fixed
 
 # Exit on any error
 set -e
