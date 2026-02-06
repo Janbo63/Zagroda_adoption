@@ -1,4 +1,5 @@
 #!/bin/bash
+# Last updated: 2026-02-06
 
 # Exit on any error
 set -e
