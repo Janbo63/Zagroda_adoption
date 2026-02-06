@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
 import Stripe from 'stripe';
 import { generateVoucherCode, calculateExpirationDate, VOUCHER_AMOUNTS } from '@/lib/voucher-utils';
 
-const prisma = new PrismaClient();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2026-01-28.clover' as any,
 });
@@ -24,40 +22,12 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Invalid currency' }, { status: 400 });
         }
 
-        // Generate unique voucher code
-        let voucherCode = generateVoucherCode();
-        let isUnique = false;
-
-        // Ensure uniqueness
-        while (!isUnique) {
-            const existing = await prisma.voucher.findUnique({
-                where: { code: voucherCode }
-            });
-            if (!existing) {
-                isUnique = true;
-            } else {
-                voucherCode = generateVoucherCode();
-            }
-        }
-
-        // Calculate expiration (12 months from now)
+        // Generate voucher code (uniqueness will be handled by Zoho later)
+        const voucherCode = generateVoucherCode();
         const expiresAt = calculateExpirationDate();
 
-        // Create voucher in database (status: pending until payment succeeds)
-        const voucher = await prisma.voucher.create({
-            data: {
-                code: voucherCode,
-                originalAmount: amount,
-                remainingAmount: amount,
-                currency,
-                buyerEmail,
-                recipientEmail: recipientEmail || null,
-                recipientName: recipientName || null,
-                personalMessage: personalMessage || null,
-                status: 'pending',
-                expiresAt,
-            },
-        });
+        // TODO: Transition database persistence to Zoho CRM
+        console.log(`Preparing voucher ${voucherCode} for purchase. Sync will happen on payment.`);
 
         // Origin for redirect URLs
         const origin = request.headers.get('origin');
@@ -82,12 +52,15 @@ export async function POST(request: Request) {
                 },
             ],
             mode: 'payment',
-            success_url: `${origin}/${locale}/vouchers/success?session_id={CHECKOUT_SESSION_ID}&voucher_id=${voucher.id}`,
+            success_url: `${origin}/${locale}/vouchers/success?session_id={CHECKOUT_SESSION_ID}&voucher_code=${voucherCode}`,
             cancel_url: `${origin}/${locale}/vouchers`,
             metadata: {
                 voucherCode,
-                voucherId: voucher.id,
                 recipientEmail: recipientEmail || '',
+                recipientName: recipientName || '',
+                personalMessage: personalMessage || '',
+                amount: amount.toString(),
+                currency
             },
         });
 

@@ -1,20 +1,21 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { zoho } from '@/lib/zoho';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2026-01-28.clover' as any,
 });
 
 const TIER_PRICES: Record<string, number> = {
-    bronze: 9900, // 99.00 PLN
-    silver: 49900, // 499.00 PLN
+    bronze: 14900, // 149.00 PLN
+    silver: 34900, // 349.00 PLN
     gold: 99900, // 999.00 PLN
 };
 
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { tier, alpaca, locale, campaign } = body;
+        const { tier, alpaca, locale, campaign, email } = body;
 
         if (!tier || !alpaca) {
             return NextResponse.json({ error: 'Missing tier or alpaca' }, { status: 400 });
@@ -25,11 +26,15 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Invalid tier' }, { status: 400 });
         }
 
+        // TODO: The adoption record will be created in Zoho CRM via the session results
+        console.log(`Initiating checkout for ${alpaca} - ${tier}. Ready for Zoho sync.`);
+
         // Origin for redirect URLs
         const origin = request.headers.get('origin');
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
+            customer_email: email, // If we have it
             line_items: [
                 {
                     price_data: {
@@ -53,6 +58,21 @@ export async function POST(request: Request) {
                 campaign: campaign || "winter-vol-liefde"
             },
         });
+
+        // Push initial adoption to Zoho CRM (Pending)
+        try {
+            await zoho.syncAdoption({
+                email: email || 'pending@stripe.com',
+                alpaca,
+                tier,
+                amount: price,
+                status: 'Pending',
+                stripeSessionId: session.id,
+                campaign: campaign || "winter-vol-liefde"
+            });
+        } catch (zohoError) {
+            console.error('Failed to sync to Zoho:', zohoError);
+        }
 
         return NextResponse.json({ url: session.url });
     } catch (err: any) {

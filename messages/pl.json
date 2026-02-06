@@ -9,6 +9,7 @@
     "activities": "Aktywności",
     "accommodation": "Noclegi",
     "adoption": "Adopcja",
+    "vouchers": "Vouchery",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Powrót do zwierząt",
@@ -190,6 +191,18 @@
         "hook": "Elegancka diwa",
         "description": "Suri to ucieleśnienie elegancji i 'slow travel'. Bez pośpiechu, tylko czysta więź. Idealna dla tych, którzy wybierają piękno i głęboki kontakt z naturą."
       },
+      "Teddy": {
+        "hook": "Spokojny lider",
+        "description": "Teddy to ostoja naszego stada. Jest niezwykle cierpliwy, szczególnie wobec dzieci. Idealny kompan dla rodzin szukających spokoju i stabilności."
+      },
+      "Ricky": {
+        "hook": "Uroczy gaduła",
+        "description": "Ricky może być nieco nieśmiały, ale gdy już zacznie mruczeć, nie przestaje. Jest idealnym towarzyszem dla osób kochających przytulny klimat i ciekawe historie."
+      },
+      "Freddy": {
+        "hook": "Bystry czaruś",
+        "description": "Freddy dokładnie wie, jak prosić o smakołyki podnosząc nóżkę. Skrada serce każdego i wnosi radość w każde spotkanie."
+      },
       "General": {
         "hook": "Nasza przyjazna alpaka",
         "description": "Wszystkie nasze alpaki mają swój unikalny charakter. Wybierz swoją ulubioną i stań się częścią naszej farmowej rodziny."
@@ -197,32 +210,30 @@
     },
     "bronze": {
       "name": "Brązowy Obrońca",
-      "price": "99 PLN",
+      "price": "149 PLN",
       "features": [
-        "Oficjalny Certyfikat Adopcji",
-        "Portret Twojej alpaki do oprawienia",
-        "Personalizowane aktualizacje cyfrowe",
-        "Gwarantowany dostęp podczas zajęć"
+        "Certyfikat adopcji",
+        "Zdjęcie Twojej alpaki",
+        "Spotkanie z Twoją alpaką (dla jednej rodziny)"
       ]
     },
     "silver": {
-      "name": "Srebrny Obrońca",
-      "price": "499 PLN",
+      "name": "Srebrny Przyjaciel",
+      "price": "349 PLN",
       "features": [
-        "Wszystkie korzyści Bronze",
-        "Oprawione zdjęcie z kosmykiem wełny alpaki",
-        "Priorytetowe umawianie wizyt",
-        "10% zniżki na pobyty i powitania"
+        "Wszystkie korzyści pakietu Bronze",
+        "10% zniżki na pobyt w Guesthouse Zagroda Alpako Terapii",
+        "Spacer z alpaką i jej najlepszym przyjacielem do lasu"
       ]
     },
     "gold": {
       "name": "Złoty Obrońca",
       "price": "999 PLN",
       "features": [
-        "Wszystkie korzyści Silver",
-        "15% zniżki na wszystkie pobyty i aktywności",
-        "Osobiste powitanie przez Twoją alpakę",
-        "ręcznie robiony pluszak"
+        "Wszystkie korzyści pakietu Silver",
+        "Weekendowy pobyt w apartamencie",
+        "Pomoc w opiece nad alpaką (budzenie i kładzenie spać)",
+        "Ręcznie wykończona mini wersja Twojej alpaki"
       ]
     },
     "chooseAlpaca": "Wybierz swoją alpakę",
@@ -244,36 +255,36 @@
     },
     "benefits": {
       "certificate": {
-        "title": "Oficjalny Certyfikat",
-        "description": "Piękny wirtualny certyfikat potwierdzający Twoje wsparcie dla naszej alpakowej rodziny."
+        "title": "Certyfikat Adopcji",
+        "description": "Oficjalny wirtualny certyfikat potwierdzający Twoje wsparcie dla naszej alpakowej rodziny."
       },
-      "portrait": {
-        "title": "Portret Alpaki",
-        "description": "Wysokiej jakości portret wybranej alpaki, idealny do oprawienia w Twoim domu."
+      "meet": {
+        "title": "Spotkanie z Alpaką",
+        "description": "Osobiste spotkanie z wybraną alpaką na farmie (wejście dla jednej osoby)."
       },
       "fur_lock": {
-        "title": "Prawdziwa Wełna",
-        "description": "Oprawione zdjęcie wraz z kosmykiem prawdziwej, miękkiej wełny Twojej alpaki."
-      },
-      "updates": {
-        "title": "Aktualizacje Cyfrowe",
-        "description": "Regularne cyfrowe biuletyny z osobistymi historiami i zdjęciami z życia Twojej alpaki."
-      },
-      "priority": {
-        "title": "Priorytetowa Rezerwacja",
-        "description": "Ciesz się priorytetem podczas planowania wizyt na farmie i zajęć z Twoją alpaką."
+        "title": "Zdjęcie z Kosmykiem",
+        "description": "Piękne oprawione zdjęcie z prawdziwym kosmykiem miękkiej wełny Twojej alpaki."
       },
       "discount": {
-        "title": "Zniżki na Farmie",
-        "description": "Ekskluzywne 15% zniżki na wszystkie noclegi i aktywności na farmie."
+        "title": "Zniżka na Guesthouse",
+        "description": "Ciesz się 10% zniżką na pobyty w Guesthouse Zagroda Alpako Terapii."
       },
-      "greetings": {
-        "title": "Osobiste Powitania",
-        "description": "Wyjątkowa okazja do osobistego powitania przez Twoją alpakę podczas pobytu."
+      "forest_walk": {
+        "title": "Spacer do Lasu",
+        "description": "Wybierz się na niezapomniany spacer do lasu ze swoją alpaką i jej najlepszym przyjacielem."
       },
-      "plush": {
-        "title": "Ręcznie Robiony Pluszak",
-        "description": "Specjalna, wykonana na zamówienie miękka pluszowa zabawka odzwierciedlająca Twoją alpakę."
+      "weekend": {
+        "title": "Pobyt Weekendowy",
+        "description": "Pełny weekendowy pobyt w naszym przytulnym apartamencie tuż obok alpak."
+      },
+      "care": {
+        "title": "Pomoc w Opiece",
+        "description": "Doświadcz życia na farmie, pomagając w budzeniu i kładzeniu spać Twojej alpaki."
+      },
+      "mini_me": {
+        "title": "Mini-Wersja Alpaki",
+        "description": "Ręcznie wykończona mini-wersja (pluszak), która wygląda dokładnie jak Twoja adoptowana alpaka."
       }
     },
     "terms": {
@@ -339,6 +350,18 @@
       "suri": {
         "personality": "Delikatna dusza. Aksamitnie miękka sierść i spokojny charakter Suri są terapeutyczne. Czysta pogoda ducha.",
         "idealFor": "Par romantycznych i rodzin"
+      },
+      "teddy": {
+        "personality": "Spokojny lider. Teddy to opoka naszego stada. Jest niezwykle cierpliwy, szczególnie wobec dzieci.",
+        "idealFor": "Rodziny z małymi dziećmi i osoby szukające spokoju"
+      },
+      "ricky": {
+        "personality": "Uroczy gaduła. Ricky może być nieco nieśmiały, ale gdy zacznie nucić, nie przestaje.",
+        "idealFor": "Osoby kochające przytulny klimat i opowieści"
+      },
+      "freddy": {
+        "personality": "Inteligentny czaruś. Freddy dokładnie wie, jak prosić o smakołyki podnosząc nogę. Podbija serce każdego.",
+        "idealFor": "Goście, którzy potrzebują dodatkowej dawki radości"
       }
     },
     "comparison": {
@@ -355,13 +378,13 @@
         "point1": "Autentyczne pocałunki",
         "point2": "Całkowita prywatność",
         "point3": "Bezwarunkowa miłość alpak",
-        "point4": "Przystępne pakiety"
+        "point4": "Wyjątkowe doświadczenia"
       },
       "cta": "Omiń Dramat"
     },
     "packages": {
       "title": "Wybierz Swoją Przygodę",
-      "subtitle": "Niezapomniane chwile na każdą kieszeń",
+      "subtitle": "Niezapomniane chwile dla każdego",
       "cta": "Kup Bon Upominkowy",
       "lite": {
         "name": "Alpaka Meet & Greet",
@@ -731,5 +754,24 @@
     "title": "Nie przegap okazji!",
     "description": "Obserwuj nas w mediach społecznościowych, aby otrzymywać specjalne oferty na pobyty i wydarzenia!",
     "cta": "Zobacz nasze profile"
+  },
+  "admin": {
+    "dashboard": "Panel",
+    "adoptions": "Adopcje",
+    "vouchers": "Vouchery",
+    "reports": "Raporty",
+    "backToSite": "Powrót",
+    "appTitle": "Alpaca Admin",
+    "overview": "Przegląd Statystyk",
+    "welcome": "Witaj ponownie! Oto co słychać w zagrodzie.",
+    "paidAdoptions": "Opłacone Adopcje",
+    "activeVouchers": "Aktywne Vouchery",
+    "totalRevenue": "Całkowity Przychód",
+    "customerReach": "Zasięg Klientów",
+    "recentAdoptions": "Ostatnie Adopcje",
+    "recentVouchers": "Ostatnie Vouchery",
+    "manageAdoptions": "Zarządzaj Adopcjami",
+    "manageVouchers": "Zarządzaj Voucherami",
+    "analytics": "Analityka i Raporty"
   }
 }

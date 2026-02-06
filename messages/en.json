@@ -214,6 +214,18 @@
         "hook": "The Elegant Diva",
         "description": "Suri is the embodiment of elegance and 'slow travel'. No rush, only pure connection. Ideal for those who choose beauty and a deep bond with nature."
       },
+      "Teddy": {
+        "hook": "The Calm Leader",
+        "description": "Teddy is the rock of our herd. He is incredibly patient, especially with children. The ideal match for families seeking peace and stability."
+      },
+      "Ricky": {
+        "hook": "The Charming Hummer",
+        "description": "Ricky might be a little shy, but once he starts humming, he doesn't stop. He's the perfect companion for those who love cozy vibes and stories."
+      },
+      "Freddy": {
+        "hook": "The Smart Charmer",
+        "description": "Freddy knows exactly how to beg for treats with his little foot. He steals everyone's heart and brings cheer to every encounter."
+      },
       "General": {
         "hook": "Our Friendly Alpaca",
         "description": "All our alpacas have their own unique character. Choose your favorite and become part of our farm family."
@@ -221,20 +233,20 @@
     },
     "bronze": {
       "name": "Bronze Protector",
-      "price": "99 PLN",
+      "price": "149 PLN",
       "features": [
-        "Official Adoption Certificate",
-        "Portrait of your alpaca for framing",
-        "Personalized digital updates"
+        "Digital Adoption Certificate",
+        "Personal photo of your alpaca",
+        "Meet your alpaca (for one family)"
       ]
     },
     "silver": {
-      "name": "Silver Protector",
-      "price": "499 PLN",
+      "name": "Silver Friend",
+      "price": "349 PLN",
       "features": [
         "All Bronze benefits",
-        "Framed photo with a lock of alpaca fur",
-        "Priority visit scheduling"
+        "10% discount on stays at the Zagroda Alpako Terapii Guesthouse",
+        "A walk with your Alpaca and his best friend to the forest"
       ]
     },
     "gold": {
@@ -242,8 +254,9 @@
       "price": "999 PLN",
       "features": [
         "All Silver benefits",
-        "15% off all booked farm stays & activities",
-        "Personal greeting by your alpaca"
+        "Weekend stay in the apartment",
+        "Help look after your Alpaca (Waking him and putting him to Bed)",
+        "A hand finished mini version of your Alpaca"
       ]
     },
     "chooseAlpaca": "Choose your alpaca",
@@ -265,46 +278,46 @@
     },
     "benefits": {
       "certificate": {
-        "title": "Official Certificate",
-        "description": "A beautiful virtual certificate recognizing your support of our alpaca family."
+        "title": "Adoption Certificate",
+        "description": "An official virtual certificate recognizing your support of our alpaca family."
       },
-      "portrait": {
-        "title": "Alpaca Portrait",
-        "description": "A high-quality portrait of your chosen alpaca, perfect for framing in your home."
+      "meet": {
+        "title": "Meet your Alpaca",
+        "description": "A personal meeting with your chosen alpaca at the farm (single person entry)."
       },
       "fur_lock": {
-        "title": "Genuine Alpaca Fur",
-        "description": "A framed photo accompanied by a real lock of your alpaca's soft wool for a physical connection."
-      },
-      "updates": {
-        "title": "Digital Updates",
-        "description": "Regular digital newsletters with personal stories and photos about your alpaca's life."
-      },
-      "priority": {
-        "title": "Priority Booking",
-        "description": "Enjoy priority when scheduling farm visits and activities with your adopted favorite."
+        "title": "Photo with Fur Lock",
+        "description": "A beautiful framed photo accompanied by a real lock of your alpaca's soft wool."
       },
       "discount": {
-        "title": "Farm Discounts",
-        "description": "Exlusive 15% discount on all accommodation bookings and farm activities."
+        "title": "Guesthouse Discount",
+        "description": "Enjoy a 10% discount on stays at the Zagroda Alpako Terapii Guesthouse."
       },
-      "greetings": {
-        "title": "Personal Greetings",
-        "description": "The unique opportunity to be personally greeted by your alpaca during farm stays."
+      "forest_walk": {
+        "title": "Forest Walk",
+        "description": "Take an unforgettable walk to the forest with your alpaca and his best friend."
       },
-      "plush": {
-        "title": "Handmade Plush",
-        "description": "A special, custom-made soft plush toy that matches the likeness of your adopted alpaca."
+      "weekend": {
+        "title": "Weekend Stay",
+        "description": "A full weekend stay in our cozy apartment right next to the alpacas."
+      },
+      "care": {
+        "title": "Help Look After",
+        "description": "Experience farm life by helping wake up and put your alpaca to bed."
+      },
+      "mini_me": {
+        "title": "Mini-Alpaca Version",
+        "description": "A hand-finished mini version (plush) that matches the likeness of your adopted alpaca."
       }
     },
     "terms": {
       "title": "Terms & Conditions",
       "items": [
         "Adoption is for a period of 12 months from the date of payment.",
-        "Discounts on stays are subject to availability and cannot be combined with other offers.",
-        "Weekend stayover in the apartment must be booked in advance and is subject to availability.",
+        "Discounts on stays are subject to availability and must be booked in advance.",
+        "Weekend stayover in the apartment is subject to availability and must be booked in advance.",
         "Paid activities (like walks) must be booked separately; adoption ensures availability of your alpaca.",
-        "Plush toys and certificates are processed within 14 days of adoption."
+        "Mini-alpacas and certificates are processed within 14 days of adoption."
       ]
     }
   },
@@ -360,6 +373,18 @@
       "suri": {
         "personality": "Gentle soul. Suri's velvety soft coat and calm character are therapeutic. Pure serenity.",
         "idealFor": "Romantic couples and families"
+      },
+      "teddy": {
+        "personality": "The calm leader. Teddy is the rock of our herd. He is incredibly patient, especially with children.",
+        "idealFor": "Families with young children and peace seekers"
+      },
+      "ricky": {
+        "personality": "The charming hummer. Ricky might be a little shy, but once he starts humming, he doesn't stop.",
+        "idealFor": "People who love cozy vibes and stories"
+      },
+      "freddy": {
+        "personality": "The smart charmer. Freddy knows exactly how to beg for treats with his little foot. He steals everyone's heart.",
+        "idealFor": "Visitors who could use some extra cheer"
       }
     },
     "comparison": {
@@ -376,13 +401,13 @@
         "point1": "Authentic cuddles",
         "point2": "Pure privacy",
         "point3": "Unconditional alpaca love",
-        "point4": "Affordable packages"
+        "point4": "Unique experiences"
       },
       "cta": "Skip The Drama"
     },
     "packages": {
       "title": "Choose Your Adventure",
-      "subtitle": "Unforgettable moments for every budget",
+      "subtitle": "Unforgettable moments for everyone",
       "cta": "Buy Gift Voucher",
       "lite": {
         "name": "Alpaca Meet & Greet",
@@ -743,5 +768,24 @@
     "title": "Don't Miss Out!",
     "description": "Follow us on social media to get special offers on stays and events!",
     "cta": "See Our Profiles"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "adoptions": "Adoptions",
+    "vouchers": "Vouchers",
+    "reports": "Reports",
+    "backToSite": "Back to Site",
+    "appTitle": "Alpaca Admin",
+    "overview": "Dashboard Overview",
+    "welcome": "Welcome back! Here's what's happening on the farm.",
+    "paidAdoptions": "Paid Adoptions",
+    "activeVouchers": "Active Vouchers",
+    "totalRevenue": "Total Revenue",
+    "customerReach": "Customer Reach",
+    "recentAdoptions": "Recent Adoptions",
+    "recentVouchers": "Recent Vouchers",
+    "manageAdoptions": "Manage Adoptions",
+    "manageVouchers": "Manage Vouchers",
+    "analytics": "Analytics & Reports"
   }
 }

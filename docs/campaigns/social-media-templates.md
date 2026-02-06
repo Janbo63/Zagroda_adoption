@@ -19,9 +19,17 @@
 **Text Overlay**: "MICKY, 2 jaar 🧡"  
 **Sub**: "De Avonturier"
 
-**Slide 3**: Suri portrait  
-**Text Overlay**: "SURI, 4 jaar 💖"  
-**Sub**: "De Zachte Ziel"
+**Slide 4**: Teddy portrait  
+**Text Overlay**: "TEDDY, 6 jaar 💙"  
+**Sub**: "De Kalme Leider"
+
+**Slide 5**: Ricky portrait  
+**Text Overlay**: "RICKY, 4 jaar 💛"  
+**Sub**: "De Charmante Kwebbelkous"
+
+**Slide 6**: Freddy portrait  
+**Text Overlay**: "FREDDY, 5 jaar 💜"  
+**Sub**: "De Slimme Charmeur"
 
 **Caption**:
 ```
@@ -32,8 +40,12 @@ Vind je perfecte match... met vacht! 🦙💕
 Elvis oordeelt niet over je red flags 🚩
 Micky maakt elke wandeling een avontuur 🌲
 Suri biedt pure sereniteit 🧘‍♀️
+Teddy waakt over je met geduld ⚓
+Ricky neuriët je de oren van het hoofd 🎶
+Freddy bedelt zijn weg naar je hart 🥕
 
 Wie is jouw Valentine's match? 
+👈 Swipe om ze allemaal te ontmoeten!
 👉 Link in bio voor de volledige dating profiles
 
 #wintervolliefde #valentijnsdag #alpacafarm #liefdezonderdrama #visitpoland #alpacatherapie

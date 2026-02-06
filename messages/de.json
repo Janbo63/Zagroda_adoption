@@ -453,11 +453,11 @@
     },
     "bronze": {
       "name": "Bronze-Beschützer",
-      "price": "99 PLN",
+      "price": "199 PLN",
       "features": [
         "Offizielle Adoptionsurkunde",
-        "Porträt deines Alpakas zum Einrahmen",
-        "Personalisierte digitale Updates"
+        "Triff dein Alpaka (Eintritt für 1 Person)",
+        "Gerahmtes Foto mit einer Locke Wolle"
       ]
     },
     "silver": {
@@ -465,8 +465,8 @@
       "price": "499 PLN",
       "features": [
         "Alle Bronze-Vorteile",
-        "Gerahmtes Foto mit einer Locke Alpakawolle",
-        "Priorität bei der Besuchsplanung"
+        "10% Rabatt auf Aufenthalte im Guesthouse Zagroda Alpako Terapii",
+        "Ein Waldspaziergang mit deinem Alpaka und seinem besten Freund"
       ]
     },
     "gold": {
@@ -474,8 +474,9 @@
       "price": "999 PLN",
       "features": [
         "Alle Silver-Vorteile",
-        "15 % Rabatt auf alle gebuchten Aufenthalte & Aktivitäten",
-        "Persönliche Begrüßung durch dein Alpaka"
+        "Weekend-Aufenthalt im Appartement",
+        "Hilf bei der Pflege deines Alpakas (Wecken und Schlafenlegen)",
+        "Eine handgefertigte Mini-Version deines Alpakas"
       ]
     },
     "chooseAlpaca": "Wählen Sie Ihr Alpaka",
@@ -497,36 +498,36 @@
     },
     "benefits": {
       "certificate": {
-        "title": "Offizielle Urkunde",
-        "description": "Eine wunderschöne virtuelle Urkunde als Anerkennung für deine Unterstützung unserer Alpakafamilie."
+        "title": "Adoptionsurkunde",
+        "description": "Eine offizielle virtuelle Urkunde als Anerkennung für deine Unterstützung unserer Alpakafamilie."
       },
-      "portrait": {
-        "title": "Alpaka-Porträt",
-        "description": "Ein hochwertiges Porträt deines gewählten Alpakas, perfekt zum Einrahmen in deinem Zuhause."
+      "meet": {
+        "title": "Triff dein Alpaka",
+        "description": "Ein persönliches Treffen mit deinem gewählten Alpaka auf dem Bauernhof (Eintritt für 1 Person)."
       },
       "fur_lock": {
-        "title": "Echtes Alpakafell",
-        "description": "Ein gerahmtes Foto zusammen mit einer echten Locke der weichen Wolle deines Alpakas für eine physische Verbindung."
-      },
-      "updates": {
-        "title": "Digitale Updates",
-        "description": "Regelmäßige digitale Newsletter mit persönlichen Geschichten und Fotos aus dem Leben deines Alpakas."
-      },
-      "priority": {
-        "title": "Vorrangige Buchung",
-        "description": "Genieße Vorrang bei der Planung von Bauernhofbesuchen und Aktivitäten mit deinem Liebling."
+        "title": "Foto mit Wolllocke",
+        "description": "Ein wunderschönes gerahmtes Foto, begleitet von einer echten Locke der weichen Wolle deines Alpakas."
       },
       "discount": {
-        "title": "Bauernhof-Rabatte",
-        "description": "Exklusiver Rabatt von 15 % auf alle Unterkunftsrechner und Bauernhofaktivitäten."
+        "title": "Pension-Rabatt",
+        "description": "Genieße 10 % Rabatt auf Übernachtungen im Zagroda Alpako Terapii Guesthouse."
       },
-      "greetings": {
-        "title": "Persönliche Begrüßung",
-        "description": "Die einmalige Gelegenheit, während deines Aufenthalts persönlich von deinem Alpaka begrüßt zu werden."
+      "forest_walk": {
+        "title": "Waldspaziergang",
+        "description": "Unternimm einen unvergesslichen Waldspaziergang mit deinem Alpaka und seinem besten Freund."
       },
-      "plush": {
-        "title": "Handgefertigtes Plüschtier",
-        "description": "Ein spezielles, maßgeschneidertes weiches Plüschtier, das deinem adoptierten Alpaka nachempfunden ist."
+      "weekend": {
+        "title": "Wochenendaufenthalt",
+        "description": "Ein komplettes Wochenende in unserem gemütlichen Appartement direkt bei den Alpakas."
+      },
+      "care": {
+        "title": "Hilf bei der Pflege",
+        "description": "Erlebe das Farmleben hautnah, indem du hilfst, dein Alpaka zu wecken und schlafen zu legen."
+      },
+      "mini_me": {
+        "title": "Mini-Alpaka-Version",
+        "description": "Eine handgefertigte Mini-Version (Plüsch), die genau wie dein adoptiertes Alpaka aussieht."
       }
     },
     "terms": {
@@ -665,6 +666,18 @@
       "suri": {
         "personality": "Sanfte Seele. Suris samtweiche Wolle und ruhiger Charakter sind therapeutisch. Pure Gelassenheit.",
         "idealFor": "Romantische Paare und Familien"
+      },
+      "teddy": {
+        "personality": "Der ruhige Anführer. Teddy ist der Fels in der Brandung unserer Herde. Er ist unglaublich geduldig, besonders mit Kindern.",
+        "idealFor": "Familien mit kleinen Kindern und Ruhesuchende"
+      },
+      "ricky": {
+        "personality": "Der charmante Plauderer. Ricky mag ein wenig schüchtern sein, aber wenn er erst einmal anfängt zu summen, hört er nicht mehr auf.",
+        "idealFor": "Menschen, die Gemütlichkeit und Geschichten lieben"
+      },
+      "freddy": {
+        "personality": "Der schlaue Charmeur. Freddy weiß genau, wie er mit seinem Fuß um Leckerlis betteln kann. Er stiehlt jedem das Herz.",
+        "idealFor": "Besucher, die ein wenig extra Fröhlichkeit gebrauchen können"
       }
     },
     "comparison": {

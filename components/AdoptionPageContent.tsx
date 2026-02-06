@@ -11,13 +11,13 @@ import { useRouter, useParams } from 'next/navigation'
 
 const BENEFIT_IMAGES = {
     certificate: '/images/adoption/certificate.png',
-    portrait: '/images/adoption/photo.png',
-    fur_lock: '/images/adoption/plush.png', // Temporary, will guide user to add better image if needed
-    updates: '/images/adoption/email.png',
-    priority: '/images/activities/meet-alpacas.jpg',
+    meet: '/images/adoption/photo.png',
+    fur_lock: '/images/adoption/plush.png',
     discount: '/images/Farmhouse-rooms.jpg',
-    greetings: '/images/adoption/greetings.png',
-    plush: '/images/adoption/plush.png'
+    forest_walk: '/images/activities/meet-alpacas.jpg',
+    weekend: '/images/Farmhouse-rooms.jpg',
+    care: '/images/adoption/greetings.png',
+    mini_me: '/images/adoption/plush.png'
 }
 
 export function AdoptionPageContent() {
@@ -32,7 +32,7 @@ export function AdoptionPageContent() {
 
     const tiers = ['bronze', 'silver', 'gold']
     const alpacas = ['Micky', 'Elvis', 'Ricky', 'Teddy', 'Suri', 'Freddy']
-    const benefitsKeys = ['certificate', 'portrait', 'fur_lock', 'updates', 'priority', 'discount', 'greetings', 'plush']
+    const benefitsKeys = ['certificate', 'meet', 'fur_lock', 'discount', 'forest_walk', 'weekend', 'care', 'mini_me']
 
     const handleAdoption = async () => {
         if (!selectedAlpaca || !selectedTier) return
@@ -117,13 +117,13 @@ export function AdoptionPageContent() {
 
                             <CardContent className="pt-6">
                                 <ul className="space-y-4">
-                                    {['0', '1', '2'].map((key) => (
-                                        <li key={key} className="flex items-start gap-3">
+                                    {(t.raw(`${tier}.features`) as string[]).map((feature, featureIdx) => (
+                                        <li key={featureIdx} className="flex items-start gap-3">
                                             <div className="bg-green-100 rounded-full p-1 mt-0.5">
                                                 <Check className="w-3 h-3 text-green-600 stroke-[4px]" />
                                             </div>
                                             <span className="text-stone-700 text-sm font-semibold leading-relaxed">
-                                                {t(`${tier}.features.${key}` as any)}
+                                                {feature}
                                             </span>
                                         </li>
                                     ))}

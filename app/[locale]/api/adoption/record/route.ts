@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import prisma from '@/lib/prisma';
+import { zoho } from '@/lib/zoho';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2026-01-28.clover' as any,
@@ -21,28 +21,24 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Payment not completed' }, { status: 400 });
         }
 
-        const tier = session.metadata?.tier;
-        const alpaca = session.metadata?.alpaca;
+        const adoptionId = session.metadata?.adoptionId;
         const email = session.customer_details?.email;
-        const price = session.amount_total;
 
-        if (!tier || !alpaca || !email) {
+        if (!adoptionId || !email) {
             return NextResponse.json({ error: 'Incomplete session metadata' }, { status: 400 });
         }
 
-        // Record the adoption in the database
-        const adoption = await prisma.adoption.create({
-            data: {
-                email,
-                alpaca,
-                tier,
-                price: price || 0,
-                status: 'completed',
-                notes: `Adopted via Stripe Checkout Session: ${sessionId}`,
-            },
-        });
+        // The primary sync happens in the Webhook, but we can verify here for the UI
+        try {
+            const adoption = await zoho.findAdoptionBySessionId(sessionId);
+            if (adoption && adoption.Status !== 'Paid') {
+                await zoho.updateRecord('Adoptions', adoption.id, { "Status": "Paid" });
+            }
+        } catch (error) {
+            console.error('Zoho Verification Error in record route:', error);
+        }
 
-        return NextResponse.json({ success: true, adoption });
+        return NextResponse.json({ success: true, status: 'paid' });
     } catch (err: any) {
         console.error('Adoption Recording Error:', err);
         return NextResponse.json({ error: err.message }, { status: 500 });

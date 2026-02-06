@@ -214,6 +214,18 @@
                 "hook": "De Elegante Diva",
                 "description": "Suri is de belichaming van elegantie en 'slow travel'. Geen haast, alleen pure verbinding. Ideaal voor wie kiest voor schoonheid en een diepe band met de natuur."
             },
+            "Teddy": {
+                "hook": "De Kalme Leider",
+                "description": "Teddy is de rots in de branding van onze kudde. Hij is ontzettend geduldig, vooral met kinderen. De ideale match voor gezinnen die rust en stabiliteit zoeken."
+            },
+            "Ricky": {
+                "hook": "De Charmante Kwebbelkous",
+                "description": "Ricky is misschien een beetje verlegen, maar als hij eenmaal begint te neuriën, houdt hij niet meer op. Hij is de perfecte metgezel voor wie van gezelligheid en verhalen houdt."
+            },
+            "Freddy": {
+                "hook": "De Slimme Charmeur",
+                "description": "Freddy weet precies hoe hij met zijn voetje om wat lekkers moet bedelen. Hij steelt ieders hart en brengt vrolijkheid in elke ontmoeting."
+            },
             "General": {
                 "hook": "Onze Vriendelijke Alpaca",
                 "description": "Al onze alpaca's hebben hun eigen unieke karakter. Kies je favoriet en word onderdeel van onze boerderijfamilie."
@@ -221,20 +233,20 @@
         },
         "bronze": {
             "name": "Bronzen Beschermer",
-            "price": "99 PLN",
+            "price": "149 PLN",
             "features": [
-                "Officieel Adoptiecertificaat",
-                "Portret van je alpaca om in te lijsten",
-                "Gepersonaliseerde digitale updates"
+                "Adoptiecertificaat",
+                "Persoonlijke foto van je alpaca",
+                "Ontmoet je alpaca (voor één gezin)"
             ]
         },
         "silver": {
-            "name": "Zilveren Beschermer",
-            "price": "499 PLN",
+            "name": "Zilveren Vriend",
+            "price": "349 PLN",
             "features": [
                 "Alle Bronze voordelen",
-                "Ingelijste foto met een plukje alpacawol",
-                "Prioriteit bij het plannen van bezoeken"
+                "10% korting op verblijf in het Guesthouse",
+                "Een boswandeling met je alpaca en zijn beste vriend"
             ]
         },
         "gold": {
@@ -242,8 +254,9 @@
             "price": "999 PLN",
             "features": [
                 "Alle Silver voordelen",
-                "15% korting op alle geboekte verblijven & activiteiten",
-                "Persoonlijke begroeting door je alpaca"
+                "Weekendverblijf in het appartement",
+                "Help mee met de verzorging (wakker maken en naar bed brengen)",
+                "Een met de hand afgewerkte mini-versie van je alpaca"
             ]
         },
         "chooseAlpaca": "Kies je alpaca",
@@ -259,49 +272,52 @@
         "success": {
             "title": "Gefeliciteerd!",
             "message": "Je bent succesvol lid geworden van ons adoptieprogramma!",
-            "benefits": {
-                "certificate": {
-                    "title": "Officieel Certificaat",
-                    "description": "Een prachtig virtueel certificaat ter erkenning van je steun aan onze alpacafamilie."
-                },
-                "portrait": {
-                    "title": "Alpaca Portret",
-                    "description": "Een hoogwaardig portret van de door jou gekozen alpaca, perfect om in te lijsten in je huis."
-                },
-                "fur_lock": {
-                    "title": "Echte Alpacawol",
-                    "description": "Een ingelijste foto vergezeld van een echt plukje van de zachte wol van je alpaca voor een fysieke verbinding."
-                },
-                "updates": {
-                    "title": "Digitale Updates",
-                    "description": "Regelmatige digitale nieuwsbrieven met persoonlijke verhalen en foto's over het leven van je alpaca."
-                },
-                "priority": {
-                    "title": "Prioriteit bij Boeking",
-                    "description": "Geniet van prioriteit bij het plannen van boerderijbezoeken en activiteiten met je geadopteerde favoriet."
-                },
-                "discount": {
-                    "title": "Boerderijkortingen",
-                    "description": "Exclusieve 15% korting op alle accommodatieboekingen en boerderijactiviteiten."
-                },
-                "greetings": {
-                    "title": "Persoonlijke Begroetingen",
-                    "description": "De unieke kans om persoonlijk begroet te worden door je alpaca tijdens verblijven op de boerderij."
-                },
-                "plush": {
-                    "title": "Handgemaakte Knuffel",
-                    "description": "Een speciale, op maat gemaakte zachte knuffel die lijkt op je geadopteerde alpaca."
-                }
+            "details": "Je bent nu een beschermer van {alpaca} met het {tier} pakket.",
+            "description": "Bedankt voor het steunen van onze kudde. Je ontvangt binnenkort een bevestigingsmail en je virtuele adoptiekit.",
+            "backHome": "Terug naar Home"
+        },
+        "benefits": {
+            "certificate": {
+                "title": "Adoptie Certificaat",
+                "description": "Een officieel certificaat als bewijs van je adoptie en steun aan onze alpacafamilie."
+            },
+            "meet": {
+                "title": "Ontmoet je Alpaca",
+                "description": "Een persoonlijke ontmoeting met je gekozen alpaca op de boerderij (toegang voor 1 persoon)."
+            },
+            "fur_lock": {
+                "title": "Foto met Wol-lokje",
+                "description": "Een prachtige ingelijste foto van je alpaca samen met een echt plukje van zijn zachte wol."
+            },
+            "discount": {
+                "title": "Guesthouse Korting",
+                "description": "Geniet van 10% korting op al je verblijven in het Zagroda Alpako Terapii Guesthouse."
+            },
+            "forest_walk": {
+                "title": "Boswandeling",
+                "description": "Maak een onvergetelijke wandeling naar het bos met je alpaca en zijn beste vriend."
+            },
+            "weekend": {
+                "title": "Weekendverblijf",
+                "description": "Een compleet weekendverblijf in ons sfeervolle appartement direct bij de alpaca's."
+            },
+            "care": {
+                "title": "Help met Verzorging",
+                "description": "Ervaar het leven op de boerderij door je alpaca mee te helpen wekken en naar bed te brengen."
+            },
+            "mini_me": {
+                "title": "Mini-Alpaca Versie",
+                "description": "Een met de hand afgewerkte mini-versie (knuffel) die precies lijkt op jouw geadopteerde alpaca."
             }
         },
         "terms": {
             "title": "Algemene Voorwaarden",
             "items": [
                 "Adoptie is voor een periode van 12 maanden vanaf de datum van betaling.",
-                "Kortingen op verblijven zijn afhankelijk van beschikbaarheid en niet combineerbaar met andere aanbiedingen.",
-                "Weekendverblijf in het appartement moet vooraf worden gereserveerd.",
-                "Betaalde activiteiten moeten apart worden geboekt; adoptie garandeert de beschikbaarheid van je alpaca.",
-                "Knuffels en certificaten worden binnen 14 dagen na adoptie verwerkt."
+                "Kortingen op verblijven zijn afhankelijk van beschikbaarheid en moeten vooraf worden gereserveerd.",
+                "Het weekendverblijf in het appartement is onder voorbehoud van beschikbaarheid.",
+                "Activiteiten zoals wandelingen moeten apart worden ingepland; adoptie garandeert de deelname van je alpaca.",
+                "De mini-alpaca en certificaten worden binnen 14 dagen na adoptie verwerkt."
             ]
         }
     },
@@ -357,6 +373,18 @@
             "suri": {
                 "personality": "Zachte ziel. Suri's fluweelzachte vacht en kalme karakter zijn therapeutisch. Pure sereniteit.",
                 "idealFor": "Romantische koppels en gezinnen"
+            },
+            "teddy": {
+                "personality": "De kalme leider. Teddy is de rots in de branding van onze kudde. Hij is ontzettend geduldig, vooral met kinderen.",
+                "idealFor": "Gezinnen met jonge kinderen en rustzoekers"
+            },
+            "ricky": {
+                "personality": "De charmante kwebbelkous. Ricky is misschien een beetje verlegen, maar als hij eenmaal begint te neuriën, houdt hij niet meer op.",
+                "idealFor": "Mensen die houden van gezelligheid en verhalen"
+            },
+            "freddy": {
+                "personality": "De slimme charmeur. Freddy weet precies hoe hij met zijn voetje om wat lekkers moet bedelen. Hij steelt ieders hart.",
+                "idealFor": "Bezoekers die wel wat extra vrolijkheid kunnen gebruiken"
             }
         },
         "comparison": {
@@ -373,13 +401,13 @@
                 "point1": "Authentieke knuffels",
                 "point2": "Pure privacy",
                 "point3": "Onvoorwaardelijke alpaca liefde",
-                "point4": "Betaalbare pakketten"
+                "point4": "Unieke ervaringen"
             },
             "cta": "Skip Het Drama"
         },
         "packages": {
             "title": "Kies Jouw Avontuur",
-            "subtitle": "Onvergetelijke momenten voor elke portemonnee",
+            "subtitle": "Onvergetelijke momenten voor iedereen",
             "cta": "Koop Cadeaubon",
             "lite": {
                 "name": "Alpaca Meet & Greet",

@@ -10,7 +10,7 @@
 ### **Vrijdag 7 Feb** - Campaign Launch
 **Theme**: De Zoektocht Begint (The Search Begins)  
 **Content**: Launch post introducing the campaign  
-- **Instagram/Facebook**: Carousel post featuring Elvis, Micky, and Suri with "dating profiles"
+- **Instagram/Facebook**: Carousel post featuring Elvis, Micky, Suri, Teddy, Ricky, and Freddy with "dating profiles"
 - **Hook**: "Vergeet Tinder. Vergeet Winter vol Liefde. Vind je perfecte match... met vacht! 🦙💕"
 - **CTA**: Link to landing page `/nl/winter-vol-liefde`
 - **Ad Spend**: €50 (test targeting 25-45, NL/BE, interests: reality TV, wellness, travel)

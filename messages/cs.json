@@ -470,12 +470,11 @@
     },
     "bronze": {
       "name": "Bronzový Ochrance",
-      "price": "99 PLN",
+      "price": "199 PLN",
       "features": [
-        "Oficiální adopční certifikát",
-        "Portrét vaší alpaky k orámování",
-        "Personalizované digitální aktualizace",
-        "Garantovaný přístup při aktivitách"
+        "Oficiální Adoptivní Certifikát",
+        "Setkání s alpakou (vstup pro 1 osobu)",
+        "Rámovaná fotografie s chomáčkem vlny"
       ]
     },
     "silver": {
@@ -483,18 +482,18 @@
       "price": "499 PLN",
       "features": [
         "Všechny výhody Bronze",
-        "Rámovaná fotografie s pramenem alpačí vlny",
-        "Prioritní plánování návštěv",
-        "10% sleva na pobyty a uvítání"
+        "10% sleva na pobyt v Guesthouse Zagroda Alpako Terapii",
+        "Procházka s alpakou a jejím nejlepším přítelem do lesa"
       ]
     },
     "gold": {
       "name": "Zlatý Ochrance",
-      "price": "2000 PLN / rok",
+      "price": "999 PLN",
       "features": [
-        "Všechny výhody stříbra",
-        "Víkendový pobyt zdarma",
-        "20% sleva a ručně vyráběný plyšák"
+        "Všechny výhody Silver",
+        "Víkendový pobyt v apartmánu",
+        "Pomoc s péčí o alpaku (probouzení a ukládání ke spánku)",
+        "Ručně dokončená mini verze vaší alpaky"
       ]
     },
     "chooseAlpaca": "Vyberte si svou alpaku",
@@ -516,36 +515,36 @@
     },
     "benefits": {
       "certificate": {
-        "title": "Oficiální certifikát",
-        "description": "Krásný virtuální certifikát potvrzující vaši podporu naší alpačí rodině."
+        "title": "Adoptivní certifikát",
+        "description": "Oficiální virtuální certifikát potvrzující vaši podporu naší alpačí rodině."
       },
-      "portrait": {
-        "title": "Portrét alpaky",
-        "description": "Vysoce kvalitní portrét vaší vybrané alpaky, ideální k orámování u vás doma."
+      "meet": {
+        "title": "Setkání s alpakou",
+        "description": "Osobní setkání s vaší vybranou alpakou na farmě (vstup pro jednu osobu)."
       },
       "fur_lock": {
-        "title": "Pravá alpačí vlna",
-        "description": "Rámovaná fotografie doplněná skutečným pramenem měkké vlny vaší alpaky pro fyzické spojení."
-      },
-      "updates": {
-        "title": "Digitální aktualizace",
-        "description": "Pravidelné digitální zpravodaje s osobními příběhy a fotografiemi ze života vaší alpaky."
-      },
-      "priority": {
-        "title": "Prioritní rezervace",
-        "description": "Užijte si prioritu při plánování návštěv farmy a aktivit s vaším adoptovaným oblíbencem."
+        "title": "Foto s chomáčkem vlny",
+        "description": "Krásná rámovaná fotografie doplněná skutečným pramenem měkké vlny vaší alpaky pro fyzické spojení."
       },
       "discount": {
-        "title": "Slevy na farmě",
-        "description": "Exkluzivní 15% sleva na všechna ubytování a farmářské aktivity."
+        "title": "Sleva na Guesthouse",
+        "description": "Užijte si 10% slevu na pobyty v Guesthouse Zagroda Alpako Terapii."
       },
-      "greetings": {
-        "title": "Osobní přivítání",
-        "description": "Jedinečná příležitost nechat se osobně přivítat vaší alpakou během pobytu na farmě."
+      "forest_walk": {
+        "title": "Procházka do lesa",
+        "description": "Podnikněte nezapomenutelnou procházku do lesa se svou alpakou a jejím nejlepším přítelem."
       },
-      "plush": {
-        "title": "Ručně vyráběný plyšák",
-        "description": "Speciální, na zakázku vyrobená měkká plyšová hračka, která odpovídá podobě vaší adoptované alpaky."
+      "weekend": {
+        "title": "Víkendový pobyt",
+        "description": "Kompletní víkendový pobyt v našem útulném apartmánu přímo u alpak."
+      },
+      "care": {
+        "title": "Pomoc s péčí",
+        "description": "Zažijte život na farmě zblízka tím, že pomůžete svou alpaku budit a ukládat ke spánku."
+      },
+      "mini_me": {
+        "title": "Mini verze alpaky",
+        "description": "Ručně dokončená mini verze (plyšák), která vypadá přesně jako vaše adoptovaná alpaka."
       }
     },
     "terms": {
@@ -684,6 +683,18 @@
       "suri": {
         "personality": "Jemná duše. Suriho hedvábně měkká srst a klidná povaha jsou terapeutické. Čistý klid.",
         "idealFor": "Romantické páry a rodiny"
+      },
+      "teddy": {
+        "personality": "Klidný vůdce. Teddy je oporou našeho stáda. Je neuvěřitelně trpělivý, zejména s dětmi.",
+        "idealFor": "Rodiny s malými dětmi a hledači klidu"
+      },
+      "ricky": {
+        "personality": "Okouzlující mluvka. Ricky může být trochu plachý, ale jakmile začne broukat, nepřestane.",
+        "idealFor": "Lidé, kteří milují útulnou atmosféru a příběhy"
+      },
+      "freddy": {
+        "personality": "Chytrý švihák. Freddy přesně ví, jak si nožičkou říct o pamlsek. Ukradne srdce každému.",
+        "idealFor": "Návštěvníci, kteří by užili trochu extra radosti"
       }
     },
     "comparison": {

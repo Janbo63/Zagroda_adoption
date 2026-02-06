@@ -38,8 +38,8 @@ export const CURRENCY_RATES = {
  * Preset voucher amounts in cents
  */
 export const VOUCHER_AMOUNTS = {
-    EUR: [500, 1000, 2500, 5000, 10000], // 5, 10, 25, 50, 100 EUR
-    PLN: [2000, 4000, 10000, 20000, 40000], // 20, 40, 100, 200, 400 PLN
+    EUR: [2000, 5000, 10000], // 20, 50, 100 EUR
+    PLN: [10000, 20000, 50000], // 100, 200, 500 PLN
 } as const;
 
 /**

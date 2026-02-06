@@ -30,6 +30,24 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
             personality: t('stars.suri.personality'),
             idealFor: t('stars.suri.idealFor'),
         },
+        {
+            name: 'Teddy',
+            image: '/images/Alpacas/Teddy.jpg',
+            personality: t('stars.teddy.personality'),
+            idealFor: t('stars.teddy.idealFor'),
+        },
+        {
+            name: 'Ricky',
+            image: '/images/Alpacas/Ricky.jpg',
+            personality: t('stars.ricky.personality'),
+            idealFor: t('stars.ricky.idealFor'),
+        },
+        {
+            name: 'Freddy',
+            image: '/images/Alpacas/Freddy.jpg',
+            personality: t('stars.freddy.personality'),
+            idealFor: t('stars.freddy.idealFor'),
+        },
     ];
 
     return (
@@ -143,7 +161,13 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
                                         </p>
                                     </div>
 
-                                    <Button className="w-full" variant="outline">
+                                    <Button
+                                        className="w-full"
+                                        variant="outline"
+                                        onClick={() => {
+                                            document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                                        }}
+                                    >
                                         {t('stars.chooseCta')} {star.name}
                                     </Button>
                                 </Card>
@@ -154,7 +178,7 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
             </section>
 
             {/* Pricing Packages Section */}
-            <section className="py-20 bg-rose-50/30">
+            <section id="pricing" className="py-20 bg-rose-50/30">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-extrabold text-stone-900 mb-4">
@@ -173,10 +197,7 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
                             viewport={{ once: true }}
                             className="bg-white p-8 rounded-3xl border-2 border-stone-100 shadow-sm flex flex-col h-full"
                         >
-                            <h3 className="text-2xl font-bold mb-2">{t('packages.lite.name')}</h3>
-                            <div className="text-4xl font-black text-stone-900 mb-6">
-                                {locale === 'pl' || locale === 'cs' ? '100 zł' : '€25'}
-                            </div>
+                            <h3 className="text-2xl font-bold mb-6">{t('packages.lite.name')}</h3>
                             <ul className="space-y-4 mb-8 flex-grow">
                                 {[1, 2, 3].map((i) => (
                                     <li key={i} className="flex gap-3 text-stone-600">
@@ -200,10 +221,7 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-orange-600 text-xs font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-lg">
                                 {t('packages.popular.badge')}
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">{t('packages.popular.name')}</h3>
-                            <div className="text-4xl font-black mb-6">
-                                {locale === 'pl' || locale === 'cs' ? '200 zł' : '€50'}
-                            </div>
+                            <h3 className="text-2xl font-bold mb-6">{t('packages.popular.name')}</h3>
                             <ul className="space-y-4 mb-8 flex-grow">
                                 {[1, 2, 3, 4].map((i) => (
                                     <li key={i} className="flex gap-3 text-white/90">
@@ -224,10 +242,7 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
                             viewport={{ once: true }}
                             className="bg-white p-8 rounded-3xl border-2 border-stone-100 shadow-sm flex flex-col h-full"
                         >
-                            <h3 className="text-2xl font-bold mb-2">{t('packages.vip.name')}</h3>
-                            <div className="text-4xl font-black text-stone-900 mb-6">
-                                {locale === 'pl' || locale === 'cs' ? '400 zł' : '€100'}
-                            </div>
+                            <h3 className="text-2xl font-bold mb-6">{t('packages.vip.name')}</h3>
                             <ul className="space-y-4 mb-8 flex-grow">
                                 {[1, 2, 3, 4, 5].map((i) => (
                                     <li key={i} className="flex gap-3 text-stone-600">
