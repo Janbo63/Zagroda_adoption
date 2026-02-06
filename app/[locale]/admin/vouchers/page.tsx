@@ -9,7 +9,7 @@ import {
     TableRow
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { AdminActionButton } from '@/components/AdminActionButton';
+// import { AdminActionButton } from '@/components/AdminActionButton'; // TODO: Create this component
 
 async function getVouchers() {
     return await prisma.voucher.findMany({
@@ -82,23 +82,12 @@ export default async function VouchersAdmin() {
                                         </Badge>
                                     </TableCell>
                                     <TableCell className="text-right flex items-center justify-end gap-3">
+                                        {/* TODO: Add AdminActionButton component */}
                                         {status === 'pending' && (
-                                            <AdminActionButton
-                                                type="voucher"
-                                                id={voucher.id}
-                                                action="active"
-                                                label="Confirm Paid"
-                                                variant="secondary"
-                                            />
+                                            <span className="text-xs text-stone-400">Pending</span>
                                         )}
                                         {status === 'active' && (
-                                            <AdminActionButton
-                                                type="voucher"
-                                                id={voucher.id}
-                                                action="used"
-                                                label="Mark Used"
-                                                variant="outline"
-                                            />
+                                            <span className="text-xs text-green-600">Active</span>
                                         )}
                                         <button className="text-[10px] font-black uppercase text-orange-500 hover:text-orange-600 tracking-widest underline decoration-2 underline-offset-4">
                                             Edit
