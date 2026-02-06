@@ -17,7 +17,25 @@ model Adoption {
   tier      String
   price     Int      // in cents
   status    String   @default("pending") // pending, completed, failed
+  campaign  String?  // e.g. "winter-vol-liefde"
+  metadata  String?  // JSON string for additional info
   notes     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Voucher {
+  id              String   @id @default(cuid())
+  code            String   @unique // e.g., "ALPACA-XYZ123"
+  originalAmount  Int      // in cents (e.g., 5000 = 50 EUR/PLN)
+  remainingAmount Int      // tracks balance after partial redemptions
+  currency        String   // "EUR" or "PLN"
+  buyerEmail      String
+  recipientEmail  String?
+  recipientName   String?
+  personalMessage String?
+  status          String   @default("active") // active, fully_redeemed, expired
+  expiresAt       DateTime // 12 months from purchase
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }

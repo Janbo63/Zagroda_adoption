@@ -47,7 +47,8 @@ export function AdoptionPageContent() {
                 body: JSON.stringify({
                     tier: selectedTier,
                     alpaca: selectedAlpaca,
-                    locale: locale
+                    locale: locale,
+                    campaign: "winter-vol-liefde"
                 }),
             })
 
@@ -72,11 +73,14 @@ export function AdoptionPageContent() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center mb-12"
             >
-                <h1 className="text-4xl md:text-5xl font-extrabold text-primary-900 mb-4 tracking-tight">
-                    {t('title')}
+                <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-orange-100 text-orange-600 text-xs font-black uppercase tracking-[0.2em] shadow-sm">
+                    {t('campaignTitle')}
+                </div>
+                <h1 className="text-4xl md:text-6xl font-extrabold text-primary-900 mb-6 tracking-tight leading-tight">
+                    {t('campaignTitle')}
                 </h1>
-                <p className="text-xl text-stone-600 max-w-2xl mx-auto font-medium">
-                    {t('sectionTitle')}
+                <p className="text-xl md:text-2xl text-stone-600 max-w-3xl mx-auto font-medium leading-relaxed">
+                    {t('campaignSubtitle')}
                 </p>
             </motion.div>
 
@@ -241,6 +245,31 @@ export function AdoptionPageContent() {
                                     </motion.div>
                                 ))}
                             </div>
+
+                            {/* Dynamic Star Profile Display */}
+                            <AnimatePresence mode="wait">
+                                {selectedAlpaca && (
+                                    <motion.div
+                                        key={selectedAlpaca}
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="mt-12 max-w-2xl mx-auto overflow-hidden"
+                                    >
+                                        <div className="p-8 bg-stone-50 rounded-[2rem] border border-stone-100 relative group transition-all duration-500 hover:shadow-inner">
+                                            <div className="absolute top-4 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                                                <Heart className="w-16 h-16 text-orange-500" />
+                                            </div>
+                                            <h4 className="text-orange-600 font-black uppercase tracking-widest text-sm mb-3 text-center">
+                                                {t(`starProfiles.${selectedAlpaca}.hook`) || t('starProfiles.General.hook')}
+                                            </h4>
+                                            <p className="text-stone-700 font-medium text-lg leading-relaxed italic text-center">
+                                                "{t(`starProfiles.${selectedAlpaca}.description`) || t('starProfiles.General.description')}"
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
 
                             <div className="mt-16 flex flex-col items-center">
                                 <Button

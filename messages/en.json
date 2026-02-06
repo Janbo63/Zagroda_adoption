@@ -8,6 +8,7 @@
     "animals": "Animals",
     "accommodation": "Accommodation",
     "adoption": "Adopt",
+    "vouchers": "Gift Vouchers",
     "activities": "Activities",
     "blog": "Blog",
     "contact": "Contact",
@@ -198,6 +199,26 @@
   "adoption": {
     "title": "Adopt an alpaca",
     "sectionTitle": "One-year Virtual Adoption Program",
+    "campaignTitle": "Winter vol Liefde Special",
+    "campaignSubtitle": "Find your perfect match among our soft stars. No drama, just unconditional love.",
+    "starProfiles": {
+      "Elvis": {
+        "hook": "The Ultimate Listener",
+        "description": "Elvis doesn't judge your drama. While emotions run high in 'Winter vol Liefde', he remains calm. He's the ideal partner for a winter walk to find your inner peace."
+      },
+      "Micky": {
+        "hook": "The Curious Adventurer",
+        "description": "Micky is the 'lead actor' of our herd. He's curious and pokes his nose into everything. The perfect match for those who love a bit of action and humor."
+      },
+      "Suri": {
+        "hook": "The Elegant Diva",
+        "description": "Suri is the embodiment of elegance and 'slow travel'. No rush, only pure connection. Ideal for those who choose beauty and a deep bond with nature."
+      },
+      "General": {
+        "hook": "Our Friendly Alpaca",
+        "description": "All our alpacas have their own unique character. Choose your favorite and become part of our farm family."
+      }
+    },
     "bronze": {
       "name": "Bronze Protector",
       "price": "99 PLN",
@@ -285,6 +306,113 @@
         "Paid activities (like walks) must be booked separately; adoption ensures availability of your alpaca.",
         "Plush toys and certificates are processed within 14 days of adoption."
       ]
+    }
+  },
+  "vouchers": {
+    "title": "Gift Vouchers",
+    "subtitle": "Give the gift of alpaca magic",
+    "description": "Each voucher can be used for activities, stays, or alpaca adoption.",
+    "selectAmount": "Select Amount",
+    "currency": "Currency",
+    "recipientDetails": "Recipient Details",
+    "recipientEmail": "Recipient Email",
+    "recipientName": "Recipient Name (optional)",
+    "personalMessage": "Personal Message (optional)",
+    "buyerEmail": "Your Email",
+    "buyNow": "Purchase Voucher",
+    "howItWorks": "How It Works",
+    "step1": "Choose your amount",
+    "step2": "Add recipient details",
+    "step3": "They receive an email with a unique code",
+    "step4": "Code can be used for any farm experience",
+    "validFor": "Valid for 12 months",
+    "redeemCode": "Redeem Code",
+    "enterCode": "Enter voucher code",
+    "applyVoucher": "Apply",
+    "voucherApplied": "Voucher applied",
+    "voucherBalance": "Voucher balance",
+    "invalidCode": "Invalid voucher code",
+    "expired": "Voucher has expired",
+    "fullyRedeemed": "Voucher has been fully redeemed"
+  },
+  "campaign": {
+    "badge": "Winter vol Liefde Special",
+    "hero": {
+      "title": "Find Your Perfect Match",
+      "subtitle": "No drama. Just unconditional love.",
+      "socialProof": "4.9/5 stars · 400+ visitors",
+      "primaryCta": "Meet Your Match",
+      "secondaryCta": "Adopt an Alpaca"
+    },
+    "stars": {
+      "title": "Meet Our Stars",
+      "subtitle": "Each with their own unique personality. Which one is perfect for you?",
+      "idealForLabel": "Ideal for",
+      "chooseCta": "Choose",
+      "elvis": {
+        "personality": "The perfect listener. Elvis doesn't judge your drama. He stays calm while emotions run high.",
+        "idealFor": "Stressed professionals seeking peace"
+      },
+      "micky": {
+        "personality": "Curious adventurer. Micky wants to discover everything and turns every walk into an expedition.",
+        "idealFor": "Adventurous spirits and nature lovers"
+      },
+      "suri": {
+        "personality": "Gentle soul. Suri's velvety soft coat and calm character are therapeutic. Pure serenity.",
+        "idealFor": "Romantic couples and families"
+      }
+    },
+    "comparison": {
+      "title": "Why Choose Alpacas?",
+      "tv": {
+        "title": "Winter vol Liefde (TV)",
+        "point1": "Fake drama & tears",
+        "point2": "Cameras everywhere",
+        "point3": "Relationship uncertainty",
+        "point4": "Expensive dates"
+      },
+      "us": {
+        "title": "Zagroda Alpakoterapii",
+        "point1": "Authentic cuddles",
+        "point2": "Pure privacy",
+        "point3": "Unconditional alpaca love",
+        "point4": "Affordable packages"
+      },
+      "cta": "Skip The Drama"
+    },
+    "packages": {
+      "title": "Choose Your Adventure",
+      "subtitle": "Unforgettable moments for every budget",
+      "cta": "Buy Gift Voucher",
+      "lite": {
+        "name": "Alpaca Meet & Greet",
+        "point1": "30 minutes of interaction",
+        "point2": "Feed the alpacas",
+        "point3": "Fun photo opportunities"
+      },
+      "popular": {
+        "name": "Winter Walk",
+        "badge": "Most Popular",
+        "point1": "60-minute scenic walk",
+        "point2": "Hot chocolate included",
+        "point3": "Digital photo package",
+        "point4": "Private guide"
+      },
+      "vip": {
+        "name": "VIP Alpaca Experience",
+        "point1": "90-minute private session",
+        "point2": "Alpaca souvenir pack",
+        "point3": "Local snacks & drinks",
+        "point4": "Focus on therapy & peace",
+        "point5": "Exclusive bonding time"
+      }
+    },
+    "finalCta": {
+      "title": "Ready for Real Love?",
+      "subtitle": "Book your winter experience today",
+      "primaryBtn": "Buy Gift Voucher",
+      "secondaryBtn": "More Information",
+      "urgency": "⏰ Winter discount ends soon"
     }
   },
   "navigation": {

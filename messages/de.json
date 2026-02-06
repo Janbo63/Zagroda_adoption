@@ -7,6 +7,7 @@
     "activities": "Aktivitäten",
     "accommodation": "Übernachtung",
     "adoption": "Adoption",
+    "vouchers": "Gutscheine",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Zurück zu den Tieren",
@@ -24,6 +25,7 @@
       "animals": "Tiere",
       "activities": "Aktivitäten",
       "accommodation": "Übernachtung",
+      "vouchers": "Gutscheine",
       "blog": "Blog",
       "contact": "Kontakt"
     }
@@ -429,6 +431,26 @@
   "adoption": {
     "title": "Adoptieren Sie ein Alpaka",
     "sectionTitle": "Einjähriges virtuelles Adoptionsprogramm",
+    "campaignTitle": "Winter vol Liefde Special",
+    "campaignSubtitle": "Finde dein perfektes Match unter unseren sanften Stars. Kein Drama, nur bedingungslose Liebe.",
+    "starProfiles": {
+      "Elvis": {
+        "hook": "Der ultimative Zuhörer",
+        "description": "Elvis urteilt nicht über dein Drama. Während bei 'Winter vol Liefde' die Emotionen hochkochen, bleibt er gelassen. Er ist der ideale Partner für einen Winterspaziergang, um den Kopf frei zu bekommen."
+      },
+      "Micky": {
+        "hook": "Der neugierige Abenteurer",
+        "description": "Micky ist der Hauptdarsteller unserer Herde. Er ist neugierig und steckt seine Nase überall hinein. Das perfekte Match für alle, die ein bisschen Action und Humor lieben."
+      },
+      "Suri": {
+        "hook": "Die elegante Diva",
+        "description": "Suri ist die Verkörperung von Eleganz und 'Slow Travel'. Keine Eile, nur pure Verbindung. Ideal für alle, die Schönheit und eine tiefe Bindung zur Natur suchen."
+      },
+      "General": {
+        "hook": "Unser freundliches Alpaka",
+        "description": "Alle unsere Alpakas haben ihren eigenen einzigartigen Charakter. Wähle deinen Favoriten und werde Teil unserer Farmfamilie."
+      }
+    },
     "bronze": {
       "name": "Bronze-Beschützer",
       "price": "99 PLN",
@@ -616,6 +638,86 @@
           "Pflegt eine Zulassungsliste von Meta-Crawler-User-Agents und IP-Adressen"
         ]
       }
+    }
+  },
+  "campaign": {
+    "badge": "Winter vol Liefde Special",
+    "hero": {
+      "title": "Finde Dein Perfektes Match",
+      "subtitle": "Kein Drama. Nur bedingungslose Liebe. Das perfekte Valentinstag-Date. 💕",
+      "socialProof": "4.9/5 Sterne · 400+ Besucher",
+      "primaryCta": "Triff Dein Match",
+      "secondaryCta": "Adoptiere Ein Alpaka"
+    },
+    "stars": {
+      "title": "Triff Unsere Stars",
+      "subtitle": "Jeder mit seiner eigenen Persönlichkeit. Welcher passt perfekt zu dir?",
+      "idealForLabel": "Ideal für",
+      "chooseCta": "Wähle",
+      "elvis": {
+        "personality": "Der perfekte Zuhörer. Elvis urteilt nicht über dein Drama. Er bleibt ruhig, während Emotionen kochen.",
+        "idealFor": "Gestresste Profis, die Ruhe suchen"
+      },
+      "micky": {
+        "personality": "Neugieriger Abenteurer. Micky will alles entdecken und macht jeden Spaziergang zu einer Expedition.",
+        "idealFor": "Abenteuerlustige und Naturliebhaber"
+      },
+      "suri": {
+        "personality": "Sanfte Seele. Suris samtweiche Wolle und ruhiger Charakter sind therapeutisch. Pure Gelassenheit.",
+        "idealFor": "Romantische Paare und Familien"
+      }
+    },
+    "comparison": {
+      "title": "Warum Alpakas Wählen?",
+      "tv": {
+        "title": "Winter vol Liefde (TV)",
+        "point1": "Falsches Drama & Tränen",
+        "point2": "Kameras überall",
+        "point3": "Beziehungsunsicherheit",
+        "point4": "Teure Dates"
+      },
+      "us": {
+        "title": "Zagroda Alpakoterapii",
+        "point1": "Echte Umarmungen",
+        "point2": "Pure Privatsphäre",
+        "point3": "Bedingungslose Alpaka-Liebe",
+        "point4": "Erschwingliche Pakete"
+      },
+      "cta": "Überspringe Das Drama"
+    },
+    "packages": {
+      "title": "Wähle Dein Abenteuer",
+      "subtitle": "Unvergessliche Momente für jedes Budget",
+      "cta": "Gutschein Kaufen",
+      "lite": {
+        "name": "Alpaka Meet & Greet",
+        "point1": "30 Minuten Interaktion",
+        "point2": "Fütterung der Alpakas",
+        "point3": "Tolle Fotomöglichkeiten"
+      },
+      "popular": {
+        "name": "Winterspaziergang",
+        "badge": "Beliebtest",
+        "point1": "60-minütiger Spaziergang",
+        "point2": "Heiße Schokolade inklusive",
+        "point3": "Digitales Fotopaket",
+        "point4": "Privater Guide"
+      },
+      "vip": {
+        "name": "VIP Alpaka Experience",
+        "point1": "90-minütige privater Termin",
+        "point2": "Alpaka-Souvenirpaket",
+        "point3": "Lokale Snacks & Getränke",
+        "point4": "Fokus auf Therapie & Ruhe",
+        "point5": "Exklusive Kuschelzeit"
+      }
+    },
+    "finalCta": {
+      "title": "Bereit Für Echte Liebe?",
+      "subtitle": "Buche dein Valentinstag-Erlebnis heute",
+      "primaryBtn": "Gutschein Kaufen",
+      "secondaryBtn": "Mehr Informationen",
+      "urgency": "⏰ Valentinstag-Special: bis 14. Februar"
     }
   },
   "social": {

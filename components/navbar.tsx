@@ -15,6 +15,7 @@ const navigation = [
   { key: 'activities', href: '/activities' },
   { key: 'accommodation', href: '/accommodation' },
   { key: 'adoption', href: '/adopt' },
+  { key: 'vouchers', href: '/vouchers' },
   { key: 'contact', href: '/contact' },
 ]
 

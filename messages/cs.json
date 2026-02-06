@@ -7,6 +7,7 @@
     "activities": "Aktivity",
     "accommodation": "Ubytování",
     "adoption": "Adopce",
+    "vouchers": "Dárkové poukazy",
     "blog": "Blog",
     "contact": "Kontakt",
     "backToAnimals": "Zpět na zvířata",
@@ -24,6 +25,7 @@
       "animals": "Zvířata",
       "activities": "Aktivity",
       "accommodation": "Ubytování",
+      "vouchers": "Poukaz",
       "blog": "Blog",
       "contact": "Kontakt"
     }
@@ -446,6 +448,26 @@
   "adoption": {
     "title": "Adoptujte alpaku",
     "sectionTitle": "Jednoletý virtuální adopční program",
+    "campaignTitle": "Speciál Winter vol Liefde",
+    "campaignSubtitle": "Najděte svůj ideální protějšek mezi našimi hebkými hvězdami. Žádné drama, jen bezpodmínečná láska.",
+    "starProfiles": {
+      "Elvis": {
+        "hook": "Dokonalý posluchač",
+        "description": "Elvis nesoudí vaše drama. Zatímco v 'Winter vol Liefde' emoce vřou, on zůstává klidný. Je to ideální partner pro zimní procházku k nalezení vnitřního klidu."
+      },
+      "Micky": {
+        "hook": "Zvědavý dobrodruh",
+        "description": "Micky je 'hlavní herec' našeho stáda. Je zvědavý a všude strká nos. Ideální parťák pro ty, kteří mají rádi trochu akce a humoru."
+      },
+      "Suri": {
+        "hook": "Elegantní diva",
+        "description": "Suri je ztělesněním elegance a 'slow travel'. Žádný spěch, jen čisté spojení. Ideální pro ty, kteří volí krásu a hluboké pouto s přírodou."
+      },
+      "General": {
+        "hook": "Naše přátelská alpaka",
+        "description": "Každá z našich alpak v naší farmě má svůj jedinečný charakter. Vyberte si svou oblíbenou a staňte se součástí naší farmářské rodiny."
+      }
+    },
     "bronze": {
       "name": "Bronzový Ochrance",
       "price": "99 PLN",
@@ -635,6 +657,86 @@
           "Udržují seznam povolených user agentů a IP adres crawlerů Meta"
         ]
       }
+    }
+  },
+  "campaign": {
+    "badge": "Winter vol Liefde Speciál",
+    "hero": {
+      "title": "Najdi Svůj Perfektní Match",
+      "subtitle": "Žádné drama. Jen bezpodmínečná láska. Perfektní Valentýnské rande. 💕",
+      "socialProof": "4.9/5 hvězdiček · 400+ návštěvníků",
+      "primaryCta": "Poznej Svůj Match",
+      "secondaryCta": "Adoptuj Alpaku"
+    },
+    "stars": {
+      "title": "Poznej Naše Hvězdy",
+      "subtitle": "Každá s vlastní osobností. Která je perfektní pro tebe?",
+      "idealForLabel": "Ideální pro",
+      "chooseCta": "Vyber",
+      "elvis": {
+        "personality": "Perfektní posluchač. Elvis nesoudí tvoje drama. Zůstává klidný, když emoce vřou.",
+        "idealFor": "Stresované profesionály hledající klid"
+      },
+      "micky": {
+        "personality": "Zvědavý dobrodruh. Micky chce objevit všechno a každou procházku udělá expedicí.",
+        "idealFor": "Dobrodružné duše a milovníky přírody"
+      },
+      "suri": {
+        "personality": "Jemná duše. Suriho hedvábně měkká srst a klidná povaha jsou terapeutické. Čistý klid.",
+        "idealFor": "Romantické páry a rodiny"
+      }
+    },
+    "comparison": {
+      "title": "Proč Zvolit Alpaky?",
+      "tv": {
+        "title": "Winter vol Liefde (TV)",
+        "point1": "Falešné drama & slzy",
+        "point2": "Kamery všude",
+        "point3": "Nejistota vztahu",
+        "point4": "Drahá rande"
+      },
+      "us": {
+        "title": "Zagroda Alpakoterapii",
+        "point1": "Autentické objetí",
+        "point2": "Čisté soukromí",
+        "point3": "Bezpodmínečná alpaka láska",
+        "point4": "Cenově dostupné balíčky"
+      },
+      "cta": "Přeskoč Drama"
+    },
+    "packages": {
+      "title": "Vyberte si Své Dobrodružství",
+      "subtitle": "Nezapomenutelné momenty pro každý rozpočet",
+      "cta": "Koupit Dárkový Poukaz",
+      "lite": {
+        "name": "Alpaka Meet & Greet",
+        "point1": "30 minut interakce",
+        "point2": "Krmení alpak",
+        "point3": "Skvělé fotopříležitosti"
+      },
+      "popular": {
+        "name": "Zimní Procházka",
+        "badge": "Nejoblíbenější",
+        "point1": "60minutová procházka",
+        "point2": "Horká čokoláda v ceně",
+        "point3": "Digitální balíček fotografií",
+        "point4": "Soukromý průvodce"
+      },
+      "vip": {
+        "name": "VIP Alpaka Experience",
+        "point1": "90minutové soukromé setkání",
+        "point2": "Balíček suvenýrů s alpakou",
+        "point3": "Lokální občerstvení a nápoje",
+        "point4": "Zaměření na terapii a klid",
+        "point5": "Exkluzivní čas pro mazlení"
+      }
+    },
+    "finalCta": {
+      "title": "Připraven Na Skutečnou Lásku?",
+      "subtitle": "Rezervuj svůj Valentýnský zážitek dnes",
+      "primaryBtn": "Koupit Dárkový Poukaz",
+      "secondaryBtn": "Více Informací",
+      "urgency": "⏰ Valentýnská Speciálka: do 14. února"
     }
   },
   "social": {

@@ -14,7 +14,7 @@ const TIER_PRICES: Record<string, number> = {
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { tier, alpaca, locale } = body;
+        const { tier, alpaca, locale, campaign } = body;
 
         if (!tier || !alpaca) {
             return NextResponse.json({ error: 'Missing tier or alpaca' }, { status: 400 });
@@ -50,6 +50,7 @@ export async function POST(request: Request) {
             metadata: {
                 tier,
                 alpaca,
+                campaign: campaign || "winter-vol-liefde"
             },
         });
 

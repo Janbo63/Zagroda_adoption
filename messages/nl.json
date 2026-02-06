@@ -8,6 +8,7 @@
         "animals": "Dieren",
         "accommodation": "Accommodatie",
         "adoption": "Adopteren",
+        "vouchers": "Cadeaubonnen",
         "activities": "Activiteiten",
         "blog": "Blog",
         "contact": "Contact",
@@ -198,6 +199,26 @@
     "adoption": {
         "title": "Adopteer een alpaca",
         "sectionTitle": "Jaarlijks Virtueel Adoptieprogramma",
+        "campaignTitle": "Winter vol Liefde Special",
+        "campaignSubtitle": "Vind je perfecte match tussen onze zachte sterren. Geen drama, alleen onvoorwaardelijke liefde.",
+        "starProfiles": {
+            "Elvis": {
+                "hook": "De Ultieme Luisteraar",
+                "description": "Elvis oordeelt niet over jouw drama. Terwijl de emoties in 'Winter vol Liefde' hoog oplopen, blijft hij de rust zelve. Hij is de ideale partner voor een winterwandeling om je hoofd leeg te maken."
+            },
+            "Micky": {
+                "hook": "De Nieuwsgierige Avonturier",
+                "description": "Micky is de 'hoofdrolspeler' van onze kudde. Hij is nieuwsgierig en steekt zijn neus overal in. De perfecte match voor wie houdt van een beetje actie en humor."
+            },
+            "Suri": {
+                "hook": "De Elegante Diva",
+                "description": "Suri is de belichaming van elegantie en 'slow travel'. Geen haast, alleen pure verbinding. Ideaal voor wie kiest voor schoonheid en een diepe band met de natuur."
+            },
+            "General": {
+                "hook": "Onze Vriendelijke Alpaca",
+                "description": "Al onze alpaca's hebben hun eigen unieke karakter. Kies je favoriet en word onderdeel van onze boerderijfamilie."
+            }
+        },
         "bronze": {
             "name": "Bronzen Beschermer",
             "price": "99 PLN",
@@ -282,6 +303,113 @@
                 "Betaalde activiteiten moeten apart worden geboekt; adoptie garandeert de beschikbaarheid van je alpaca.",
                 "Knuffels en certificaten worden binnen 14 dagen na adoptie verwerkt."
             ]
+        }
+    },
+    "vouchers": {
+        "title": "Cadeaubonnen",
+        "subtitle": "Geef het cadeau van alpaca-magie",
+        "description": "Elke bon kan worden gebruikt voor activiteiten, verblijven of alpaca-adoptie.",
+        "selectAmount": "Selecteer Bedrag",
+        "currency": "Valuta",
+        "recipientDetails": "Gegevens Ontvanger",
+        "recipientEmail": "E-mail Ontvanger",
+        "recipientName": "Naam Ontvanger (optioneel)",
+        "personalMessage": "Persoonlijk Bericht (optioneel)",
+        "buyerEmail": "Jouw e-mail",
+        "buyNow": "Koop Bon",
+        "howItWorks": "Hoe Het Werkt",
+        "step1": "Kies je bedrag",
+        "step2": "Voeg gegevens ontvanger toe",
+        "step3": "Ontvanger krijgt een e-mail met een unieke code",
+        "step4": "Code kan worden gebruikt voor elke boerderij-ervaring",
+        "validFor": "Geldig voor 12 maanden",
+        "redeemCode": "Verzilver Code",
+        "enterCode": "Voer boncode in",
+        "applyVoucher": "Toepassen",
+        "voucherApplied": "Bon toegepast",
+        "voucherBalance": "Bonsaldo",
+        "invalidCode": "Ongeldige boncode",
+        "expired": "Bon is verlopen",
+        "fullyRedeemed": "Bon is volledig verzilverd"
+    },
+    "campaign": {
+        "badge": "Winter vol Liefde Speciaal",
+        "hero": {
+            "title": "Vind Jouw Perfecte Match",
+            "subtitle": "Geen drama. Alleen onvoorwaardelijke liefde. De perfecte Valentine's date. 💕",
+            "socialProof": "4.9/5 sterren · 400+ bezoekers",
+            "primaryCta": "Ontmoet Je Match",
+            "secondaryCta": "Adopteer Een Alpaca"
+        },
+        "stars": {
+            "title": "Ontmoet Onze Sterren",
+            "subtitle": "Elk met hun eigen persoonlijkheid. Welke past perfect bij jou?",
+            "idealForLabel": "Ideaal voor",
+            "chooseCta": "Kies",
+            "elvis": {
+                "personality": "De perfecte luisteraar. Elvis oordeelt niet over je drama. Hij blijft kalm terwijl emoties koken.",
+                "idealFor": "Gestresste professionals die rust zoeken"
+            },
+            "micky": {
+                "personality": "Nieuwsgierige avonturier. Micky wil alles ontdekken en maakt elke wandeling tot een expeditie.",
+                "idealFor": "Avontuurlijke geesten en natuurliefhebbers"
+            },
+            "suri": {
+                "personality": "Zachte ziel. Suri's fluweelzachte vacht en kalme karakter zijn therapeutisch. Pure sereniteit.",
+                "idealFor": "Romantische koppels en gezinnen"
+            }
+        },
+        "comparison": {
+            "title": "Waarom Kiezen Voor Alpaca's?",
+            "tv": {
+                "title": "Winter vol Liefde (TV)",
+                "point1": "Nep drama & tranen",
+                "point2": "Camera's overal",
+                "point3": "Relatie onzekerheid",
+                "point4": "Dure dates"
+            },
+            "us": {
+                "title": "Zagroda Alpakoterapii",
+                "point1": "Authentieke knuffels",
+                "point2": "Pure privacy",
+                "point3": "Onvoorwaardelijke alpaca liefde",
+                "point4": "Betaalbare pakketten"
+            },
+            "cta": "Skip Het Drama"
+        },
+        "packages": {
+            "title": "Kies Jouw Avontuur",
+            "subtitle": "Onvergetelijke momenten voor elke portemonnee",
+            "cta": "Koop Cadeaubon",
+            "lite": {
+                "name": "Alpaca Meet & Greet",
+                "point1": "30 minuten interactie",
+                "point2": "Voeren van de alpaca's",
+                "point3": "Leuke fotomomenten"
+            },
+            "popular": {
+                "name": "Winter Wandeling",
+                "badge": "Populairst",
+                "point1": "60 minuten wandeling",
+                "point2": "Warme chocolademelk",
+                "point3": "Digitale fotopakket",
+                "point4": "Gepersonaliseerde gids"
+            },
+            "vip": {
+                "name": "VIP Alpaca Experience",
+                "point1": "90 minuten privé sessie",
+                "point2": "Alpaca souvenir pakket",
+                "point3": "Lokale snacks & drankjes",
+                "point4": "Focus op therapie & rust",
+                "point5": "Exclusieve knuffeltijd"
+            }
+        },
+        "finalCta": {
+            "title": "Klaar voor Echte Liefde?",
+            "subtitle": "Boek je Valentine's ervaring vandaag nog",
+            "primaryBtn": "Koop Cadeaubon",
+            "secondaryBtn": "Meer Informatie",
+            "urgency": "⏰ Valentine's Special: tot 14 februari"
         }
     },
     "navigation": {

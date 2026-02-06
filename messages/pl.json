@@ -175,6 +175,26 @@
   "adoption": {
     "title": "Adoptuj alpakę",
     "sectionTitle": "Roczny Program Wirtualnej Adopcji",
+    "campaignTitle": "Specjał Winter vol Liefde",
+    "campaignSubtitle": "Znajdź swoją idealną parę wśród naszych puszystych gwiazd. Bez dramatu, tylko bezwarunkowa miłość.",
+    "starProfiles": {
+      "Elvis": {
+        "hook": "Najlepszy słuchacz",
+        "description": "Elvis nie ocenia Twoich dramatów. Podczas gdy emocje w 'Winter vol Liefde' sięgają zenitu, on pozostaje spokojny. Jest idealnym partnerem na zimowy spacer, by odnaleźć wewnętrzny spokój."
+      },
+      "Micky": {
+        "hook": "Ciekawski poszukiwacz przygód",
+        "description": "Micky to 'główny aktor' naszego stada. Jest ciekawski i wszędzie wsadza swój nos. Idealnie pasuje do tych, którzy lubią trochę akcji i humoru."
+      },
+      "Suri": {
+        "hook": "Elegancka diwa",
+        "description": "Suri to ucieleśnienie elegancji i 'slow travel'. Bez pośpiechu, tylko czysta więź. Idealna dla tych, którzy wybierają piękno i głęboki kontakt z naturą."
+      },
+      "General": {
+        "hook": "Nasza przyjazna alpaka",
+        "description": "Wszystkie nasze alpaki mają swój unikalny charakter. Wybierz swoją ulubioną i stań się częścią naszej farmowej rodziny."
+      }
+    },
     "bronze": {
       "name": "Brązowy Obrońca",
       "price": "99 PLN",
@@ -267,6 +287,113 @@
       ]
     }
   },
+  "vouchers": {
+    "title": "Vouchery Podarunkowe",
+    "subtitle": "Podaruj magię alpak",
+    "description": "Każdy voucher może być wykorzystany na aktywności, pobyty lub adopcję alpaki.",
+    "selectAmount": "Wybierz kwotę",
+    "currency": "Waluta",
+    "recipientDetails": "Dane obdarowanego",
+    "recipientEmail": "Email obdarowanego",
+    "recipientName": "Imię obdarowanego (opcjonalnie)",
+    "personalMessage": "Osobista wiadomość (opcjonalnie)",
+    "buyerEmail": "Twój email",
+    "buyNow": "Kup Voucher",
+    "howItWorks": "Jak to działa",
+    "step1": "Wybierz kwotę",
+    "step2": "Dodaj dane obdarowanego",
+    "step3": "Obdarowany otrzyma email z unikalnym kodem",
+    "step4": "Kod można wykorzystać na dowolne doświadczenie na farmie",
+    "validFor": "Ważny przez 12 miesięcy",
+    "redeemCode": "Wykorzystaj Kod",
+    "enterCode": "Wpisz kod vouchera",
+    "applyVoucher": "Zastosuj",
+    "voucherApplied": "Voucher zastosowany",
+    "voucherBalance": "Saldo vouchera",
+    "invalidCode": "Nieprawidłowy kod vouchera",
+    "expired": "Voucher wygasł",
+    "fullyRedeemed": "Voucher został już w pełni wykorzystany"
+  },
+  "campaign": {
+    "badge": "Winter vol Liefde Specjal",
+    "hero": {
+      "title": "Znajdź Swojego Idealnego Partnera",
+      "subtitle": "Bez dramatu. Tylko bezwarunkowa miłość.",
+      "socialProof": "4.9/5 gwiazdek · 400+ odwiedzających",
+      "primaryCta": "Poznaj Swojego Partnera",
+      "secondaryCta": "Adoptuj Alpakę"
+    },
+    "stars": {
+      "title": "Poznaj Nasze Gwiazdy",
+      "subtitle": "Każda z unikalną osobowością. Która jest idealna dla Ciebie?",
+      "idealForLabel": "Idealna dla",
+      "chooseCta": "Wybierz",
+      "elvis": {
+        "personality": "Idealny słuchacz. Elvis nie sądzi Twojego dramatu. Pozostaje spokojny, gdy emocje wrzą.",
+        "idealFor": "Zestresowanych profesjonalistów szukających spokoju"
+      },
+      "micky": {
+        "personality": "Ciekawski poszukiwacz przygód. Micky chce odkryć wszystko i zamienia każdą spacer w ekspedycję.",
+        "idealFor": "Poszukiwaczy przygód i miłośników natury"
+      },
+      "suri": {
+        "personality": "Delikatna dusza. Aksamitnie miękka sierść i spokojny charakter Suri są terapeutyczne. Czysta pogoda ducha.",
+        "idealFor": "Par romantycznych i rodzin"
+      }
+    },
+    "comparison": {
+      "title": "Dlaczego Wybrać Alpaki?",
+      "tv": {
+        "title": "Winter vol Liefde (TV)",
+        "point1": "Sztuczny dramat i łzy",
+        "point2": "Kamery wszędzie",
+        "point3": "Niepewność związku",
+        "point4": "Drogie randki"
+      },
+      "us": {
+        "title": "Zagroda Alpakoterapii",
+        "point1": "Autentyczne pocałunki",
+        "point2": "Całkowita prywatność",
+        "point3": "Bezwarunkowa miłość alpak",
+        "point4": "Przystępne pakiety"
+      },
+      "cta": "Omiń Dramat"
+    },
+    "packages": {
+      "title": "Wybierz Swoją Przygodę",
+      "subtitle": "Niezapomniane chwile na każdą kieszeń",
+      "cta": "Kup Bon Upominkowy",
+      "lite": {
+        "name": "Alpaka Meet & Greet",
+        "point1": "30 minut interakcji",
+        "point2": "Karmienie alpak",
+        "point3": "Fajne okazje do zdjęć"
+      },
+      "popular": {
+        "name": "Zimowy Spacer",
+        "badge": "Najpopularniejszy",
+        "point1": "60-minutowy spacer",
+        "point2": "Gorąca czekolada w cenie",
+        "point3": "Cyfrowy pakiet zdjęć",
+        "point4": "Prywatny przewodnik"
+      },
+      "vip": {
+        "name": "VIP Alpaca Experience",
+        "point1": "90-minutowa prywatna sesja",
+        "point2": "Pakiet pamiątek z alpaką",
+        "point3": "Lokalne przekąski i napoje",
+        "point4": "Skupienie na terapii i spokoju",
+        "point5": "Ekskluzywny czas na bliskość"
+      }
+    },
+    "finalCta": {
+      "title": "Gotowy Na Prawdziwą Miłość?",
+      "subtitle": "Zarezerwuj swoje zimowe doświadczenie już dziś",
+      "primaryBtn": "Kup Voucher Podarunkowy",
+      "secondaryBtn": "Więcej Informacji",
+      "urgency": "⏰ Zimowa zniżka kończy się wkrótce"
+    }
+  },
   "hero": {
     "title": "Witamy w Zagrodzie Alpakoterapii",
     "subtitle": "Doświadcz magii alpakoterapii w naszym spokojnym gospodarstwie",
@@ -280,6 +407,7 @@
     "activities": "Aktywności",
     "accommodation": "Noclegi",
     "adoption": "Adopcja",
+    "vouchers": "Vouchery",
     "blog": "Blog",
     "contact": "Kontakt"
   },
