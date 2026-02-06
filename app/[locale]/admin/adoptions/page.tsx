@@ -9,7 +9,7 @@ import {
     TableRow
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { AdminActionButton } from '@/components/AdminActionButton';
+// import { AdminActionButton } from '@/components/AdminActionButton'; // TODO: Create this component
 
 async function getAdoptions() {
     return await prisma.adoption.findMany({
@@ -77,14 +77,9 @@ export default async function AdoptionsAdmin() {
                                     </Badge>
                                 </TableCell>
                                 <TableCell className="text-right flex items-center justify-end gap-3">
+                                    {/* TODO: Add AdminActionButton component */}
                                     {adoption.status === 'pending' && (
-                                        <AdminActionButton
-                                            type="adoption"
-                                            id={adoption.id}
-                                            action="paid"
-                                            label="Confirm Paid"
-                                            variant="secondary"
-                                        />
+                                        <span className="text-xs text-stone-400">Pending</span>
                                     )}
                                     <button className="text-[10px] font-black uppercase text-orange-500 hover:text-orange-600 tracking-widest underline decoration-2 underline-offset-4">
                                         Details
