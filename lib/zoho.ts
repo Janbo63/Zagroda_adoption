@@ -76,11 +76,24 @@ export class ZohoCRM {
         }
 
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(`Zoho API Error (${response.status}): ${JSON.stringify(errorData)}`);
+            const text = await response.text();
+            if (text) {
+                try {
+                    const errorData = JSON.parse(text);
+                    throw new Error(`Zoho API Error (${response.status}): ${JSON.stringify(errorData)}`);
+                } catch {
+                    throw new Error(`Zoho API Error (${response.status}): ${text}`);
+                }
+            }
+            throw new Error(`Zoho API Error (${response.status}): Empty response`);
         }
 
-        return await response.json();
+        const text = await response.text();
+        if (!text || text.trim() === '') {
+            return { data: [] }; // Return empty data array for no results
+        }
+
+        return JSON.parse(text);
     }
 
     /**
