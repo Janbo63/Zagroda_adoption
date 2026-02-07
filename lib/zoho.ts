@@ -201,7 +201,7 @@ export class ZohoCRM {
 
         // Link to contact if found/created
         if (contactId) {
-            recordData.Contact_Name = contactId;
+            recordData.Client = contactId;
         }
 
         return this.createRecord('Adoptions', recordData);
@@ -240,7 +240,7 @@ export class ZohoCRM {
 
         // Link to contact if found/created
         if (contactId) {
-            recordData.Contact_Name = contactId;
+            recordData.Buyer = contactId;
         }
 
         return this.createRecord('Vouchers', recordData);
