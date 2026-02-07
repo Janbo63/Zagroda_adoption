@@ -145,10 +145,10 @@ export class ZohoCRM {
             // Create new contact if not found
             const contactData: any = {
                 Email: data.email,
+                Last_Name: data.lastName || data.firstName || data.email.split('@')[0] // Last_Name is required by Zoho
             };
 
             if (data.firstName) contactData.First_Name = data.firstName;
-            if (data.lastName) contactData.Last_Name = data.lastName;
             if (data.phone) contactData.Phone = data.phone;
 
             const createResult = await this.createRecord('Contacts', contactData);
@@ -159,7 +159,20 @@ export class ZohoCRM {
             }
 
             return null;
-        } catch (error) {
+        } catch (error: any) {
+            // Handle duplicate Contact error - extract existing Contact ID
+            if (error.message && error.message.includes('DUPLICATE_DATA')) {
+                try {
+                    const errorJson = JSON.parse(error.message.match(/\{.*\}/)?.[0] || '{}');
+                    const duplicateId = errorJson.data?.[0]?.details?.duplicate_record?.id;
+                    if (duplicateId) {
+                        console.log(`Found duplicate contact for ${data.email}, using existing ID: ${duplicateId}`);
+                        return duplicateId;
+                    }
+                } catch (parseError) {
+                    console.error('Failed to parse duplicate contact ID:', parseError);
+                }
+            }
             console.error('Error creating/finding contact:', error);
             return null;
         }
