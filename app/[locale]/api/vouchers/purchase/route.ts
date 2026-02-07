@@ -35,6 +35,7 @@ export async function POST(request: Request) {
         // Create Stripe Checkout session
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
+            billing_address_collection: 'required', // Collect billing details including name
             line_items: [
                 {
                     price_data: {

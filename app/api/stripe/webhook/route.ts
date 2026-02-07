@@ -34,6 +34,13 @@ export async function POST(req: Request) {
             // 1. Handle Adoptions
             if (session.metadata?.alpaca) {
                 try {
+                    // Extract customer details
+                    const customerName = session.customer_details?.name || '';
+                    const nameParts = customerName.split(' ');
+                    const firstName = nameParts[0] || '';
+                    const lastName = nameParts.slice(1).join(' ') || '';
+                    const phone = session.customer_details?.phone || undefined;
+
                     const adoption = await zoho.findAdoptionBySessionId(session.id);
                     if (adoption) {
                         await zoho.updateRecord('Adoptions', adoption.id, {
@@ -47,7 +54,10 @@ export async function POST(req: Request) {
                             tier: session.metadata.tier,
                             amount: session.amount_total || 0,
                             status: 'Paid',
-                            stripeSessionId: session.id
+                            stripeSessionId: session.id,
+                            firstName: firstName,
+                            lastName: lastName,
+                            phone: phone
                         });
                     }
                 } catch (zohoErr) {
@@ -58,14 +68,24 @@ export async function POST(req: Request) {
             // 2. Handle Vouchers
             if (session.metadata?.voucherCode) {
                 try {
+                    // Extract customer details
+                    const customerName = session.customer_details?.name || '';
+                    const nameParts = customerName.split(' ');
+                    const firstName = nameParts[0] || '';
+                    const lastName = nameParts.slice(1).join(' ') || '';
+                    const phone = session.customer_details?.phone || undefined;
+
                     await zoho.syncVoucher({
                         code: session.metadata.voucherCode,
                         amount: session.amount_total || 0,
                         currency: session.currency?.toUpperCase() || 'PLN',
                         status: 'Active',
                         buyerEmail: session.customer_details?.email || 'pending@stripe.com',
+                        buyerFirstName: firstName,
+                        buyerLastName: lastName,
                         recipientName: session.metadata.recipientName,
-                        expirationDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+                        expirationDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+                        phone: phone
                     });
                 } catch (zohoErr) {
                     console.error('Zoho Voucher Sync Error:', zohoErr);

@@ -111,6 +111,48 @@ export class ZohoCRM {
     }
 
     /**
+     * Create or find a Contact in Zoho CRM
+     * Returns the Contact ID
+     */
+    public async createOrFindContact(data: {
+        email: string;
+        firstName?: string;
+        lastName?: string;
+        phone?: string;
+    }): Promise<string | null> {
+        try {
+            // Search for existing contact by email
+            const searchResult = await this.searchRecord('Contacts', `(Email:equals:${data.email})`);
+
+            if (searchResult.data && searchResult.data.length > 0) {
+                console.log(`Found existing contact for ${data.email}`);
+                return searchResult.data[0].id;
+            }
+
+            // Create new contact if not found
+            const contactData: any = {
+                Email: data.email,
+            };
+
+            if (data.firstName) contactData.First_Name = data.firstName;
+            if (data.lastName) contactData.Last_Name = data.lastName;
+            if (data.phone) contactData.Phone = data.phone;
+
+            const createResult = await this.createRecord('Contacts', contactData);
+
+            if (createResult.data && createResult.data[0].details.id) {
+                console.log(`Created new contact for ${data.email}`);
+                return createResult.data[0].details.id;
+            }
+
+            return null;
+        } catch (error) {
+            console.error('Error creating/finding contact:', error);
+            return null;
+        }
+    }
+
+    /**
      * Specialized: Find Adoption by Stripe Session ID
      */
     public async findAdoptionBySessionId(sessionId: string) {
@@ -134,8 +176,19 @@ export class ZohoCRM {
         status: string;
         stripeSessionId: string;
         campaign?: string;
+        firstName?: string;
+        lastName?: string;
+        phone?: string;
     }) {
-        const recordData = {
+        // Create or find contact
+        const contactId = await this.createOrFindContact({
+            email: data.email,
+            firstName: data.firstName,
+            lastName: data.lastName,
+            phone: data.phone
+        });
+
+        const recordData: any = {
             "Name": `Adoption - ${data.alpaca}`,
             "Email": data.email,
             "Alpaca": data.alpaca,
@@ -145,6 +198,11 @@ export class ZohoCRM {
             "Stripe_Session_ID": data.stripeSessionId,
             "Date_Started": new Date().toISOString().split('T')[0]
         };
+
+        // Link to contact if found/created
+        if (contactId) {
+            recordData.Contact_Name = contactId;
+        }
 
         return this.createRecord('Adoptions', recordData);
     }
@@ -158,16 +216,32 @@ export class ZohoCRM {
         currency: string;
         status: string;
         buyerEmail: string;
+        buyerFirstName?: string;
+        buyerLastName?: string;
         recipientName?: string;
         expirationDate: string;
+        phone?: string;
     }) {
-        const recordData = {
+        // Create or find contact for buyer
+        const contactId = await this.createOrFindContact({
+            email: data.buyerEmail,
+            firstName: data.buyerFirstName,
+            lastName: data.buyerLastName,
+            phone: data.phone
+        });
+
+        const recordData: any = {
             "Email": data.buyerEmail,
             "Recipient_Name": data.recipientName || "",
             "Expiration_Date": data.expirationDate,
             "Status": data.status,
             "Description": `Voucher Code: ${data.code}`
         };
+
+        // Link to contact if found/created
+        if (contactId) {
+            recordData.Contact_Name = contactId;
+        }
 
         return this.createRecord('Vouchers', recordData);
     }
