@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { headers } from 'next/headers';
 import { zoho } from '@/lib/zoho';
+import { voucherGenerator } from '@/lib/voucher-generator';
+import { emailService } from '@/lib/email-service';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2026-01-28.clover' as any,
@@ -89,6 +91,35 @@ export async function POST(req: Request) {
                     });
                 } catch (zohoErr) {
                     console.error('Zoho Voucher Sync Error:', zohoErr);
+                }
+
+                // Generate PDF and Email Admin
+                try {
+                    const expiryDate = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+                    const buyerEmail = session.customer_details?.email || 'pending@stripe.com';
+
+                    const { filePath } = await voucherGenerator.generateVoucher({
+                        code: session.metadata.voucherCode,
+                        amount: session.amount_total || 0,
+                        currency: (session.currency?.toUpperCase() || 'PLN') as 'EUR' | 'PLN',
+                        buyerName: session.customer_details?.name || 'Unknown Buyer',
+                        recipientName: session.metadata.recipientName,
+                        personalMessage: session.metadata.personalMessage,
+                        expiryDate: expiryDate
+                    });
+
+                    await emailService.sendVoucherToAdmin({
+                        adminEmail: process.env.CONTACT_EMAIL || 'info@zagrodaalpakoterapii.com',
+                        voucherCode: session.metadata.voucherCode,
+                        amount: session.amount_total || 0,
+                        currency: session.currency?.toUpperCase() || 'PLN',
+                        buyerName: session.customer_details?.name || 'Unknown Buyer',
+                        buyerEmail: buyerEmail,
+                        pdfPath: filePath
+                    });
+
+                } catch (genError) {
+                    console.error('Voucher Generation/Email Warning:', genError);
                 }
             }
             break;

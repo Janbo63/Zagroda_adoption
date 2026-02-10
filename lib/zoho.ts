@@ -271,6 +271,85 @@ export class ZohoCRM {
 
         return this.createRecord('Vouchers', recordData);
     }
+    /**
+     * Specialized: Upload certificate as attachment to Adoption record
+     */
+    public async uploadCertificateAttachment(
+        recordId: string,
+        pdfBuffer: Buffer,
+        fileName: string
+    ): Promise<boolean> {
+        try {
+            const FormData = (await import('form-data')).default;
+            const form = new FormData();
+
+            form.append('file', pdfBuffer, {
+                filename: fileName,
+                contentType: 'application/pdf'
+            });
+
+            // Upload attachment to Zoho CRM
+            const url = `${this.apiDomain}/crm/v3/Adoptions/${recordId}/Attachments`;
+
+            if (!this.accessToken) {
+                await this.refreshAccessToken();
+            }
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Zoho-oauthtoken ${this.accessToken}`,
+                    ...form.getHeaders()
+                },
+                body: form as any
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('Zoho attachment upload failed:', errorText);
+                return false;
+            }
+
+            console.log('Certificate uploaded to Zoho CRM successfully');
+            return true;
+        } catch (error) {
+            console.error('Error uploading certificate to Zoho:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Specialized: Update Adoption record with certificate URL and sent date
+     */
+    public async updateAdoptionCertificate(
+        recordId: string,
+        certificateUrl: string,
+        sentDate: string
+    ): Promise<any> {
+        try {
+            return await this.updateRecord('Adoptions', recordId, {
+                'Certificate_URL': certificateUrl,
+                'Certificate_Sent_Date': sentDate
+            });
+        } catch (error) {
+            console.error('Error updating adoption certificate info:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Specialized: Get Adoption record by ID
+     */
+    public async getAdoptionById(recordId: string): Promise<any> {
+        try {
+            const response = await this.request(`Adoptions/${recordId}`);
+            return response.data?.[0];
+        } catch (error) {
+            console.error('Error fetching adoption record:', error);
+            return null;
+        }
+    }
 }
 
 export const zoho = new ZohoCRM();
+

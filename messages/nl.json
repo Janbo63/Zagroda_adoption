@@ -198,6 +198,14 @@
     },
     "adoption": {
         "title": "Adopteer een alpaca",
+        "legal": {
+            "terms_title": "Conditions",
+            "privacy_title": "Privacy",
+            "accept_terms": "Ik accepteer de Algemene Voorwaarden en de Privacyverklaring",
+            "marketing_opt_in": "Ik wil graag updates over de alpaca's en speciale aanbiedingen ontvangen",
+            "required_error": "Accepteer de voorwaarden om door te gaan",
+            "footer_link": "Voorwaarden"
+        },
         "sectionTitle": "Jaarlijks Virtueel Adoptieprogramma",
         "campaignTitle": "Winter vol Liefde Special",
         "campaignSubtitle": "Vind je perfecte match tussen onze zachte sterren. Geen drama, alleen onvoorwaardelijke liefde.",
@@ -312,17 +320,52 @@
         },
         "terms": {
             "title": "Algemene Voorwaarden",
+            "summary": "Snelle Samenvatting",
             "items": [
                 "Adoptie is voor een periode van 12 maanden vanaf de datum van betaling.",
                 "Kortingen op verblijven zijn afhankelijk van beschikbaarheid en moeten vooraf worden gereserveerd.",
                 "Het weekendverblijf in het appartement is onder voorbehoud van beschikbaarheid.",
                 "Activiteiten zoals wandelingen moeten apart worden ingepland; adoptie garandeert de deelname van je alpaca.",
                 "De mini-alpaca en certificaten worden binnen 14 dagen na adoptie verwerkt."
-            ]
+            ],
+            "viewFull": "Bekijk volledige Algemene Voorwaarden"
+        }
+    },
+    "terms_full": {
+        "title": "Terms & Conditions of Business",
+        "last_updated": "Last updated: February 2026",
+        "intro": "These Terms & Conditions govern the use of our website and the purchase of any services, adoptions, or vouchers from Zagroda Alpakoterapii.",
+        "identity": {
+            "title": "1. Business Identity",
+            "content": "The website and services are operated by Future Solutions Jan Fura. Address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678, REGON: 383008039."
+        },
+        "vouchers": {
+            "title": "2. Gift Vouchers",
+            "content": "Gift Vouchers are non-refundable and cannot be exchanged for cash. Vouchers are valid for 12 months from the date of purchase. If a service booked with a voucher is cancelled by the client with less than 48 hours' notice, the voucher shall be considered redeemed."
+        },
+        "adoptions": {
+            "title": "3. Virtual Adoptions",
+            "content": "Virtual Adoption is a symbolic supporting contribution. It does not grant ownership rights over the animal. Adoption benefits (visits, walks, stays) are subject to availability and must be booked in advance within the 12-month period."
+        },
+        "availability": {
+            "title": "4. Availability & Animal Welfare",
+            "content": "As our services involve live animals and outdoor activities, we reserve the right to reschedule any booking at short notice due to adverse weather or animal welfare concerns. In such cases, a new date will be provided. No refunds are issued for rescheduling due to these factors."
+        },
+        "governing_law": {
+            "title": "5. Governing Law",
+            "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
         }
     },
     "vouchers": {
         "title": "Cadeaubonnen",
+        "legal": {
+            "terms_title": "Conditions",
+            "privacy_title": "Privacy",
+            "accept_terms": "Ik accepteer de Algemene Voorwaarden en de Privacyverklaring",
+            "marketing_opt_in": "Ik wil graag updates over de alpaca's en speciale aanbiedingen ontvangen",
+            "required_error": "Accepteer de voorwaarden om door te gaan",
+            "footer_link": "Voorwaarden"
+        },
         "subtitle": "Geef het cadeau van alpaca-magie",
         "description": "Elke bon kan worden gebruikt voor activiteiten, verblijven of alpaca-adoptie.",
         "selectAmount": "Selecteer Bedrag",
@@ -669,6 +712,7 @@
         "contactUs": "Neem contact op",
         "followUs": "Volg ons",
         "privacyPolicy": "Privacyverklaring",
+        "termsAndConditions": "Algemene Voorwaarden",
         "allRightsReserved": "Alle rechten voorbehouden"
     },
     "privacy": {
@@ -680,7 +724,7 @@
         },
         "whoWeAre": {
             "title": "Wie zijn wij?",
-            "content": "Ons website adres is: www.zagrodaalpakoterapii.com"
+            "content": "Ons website adres is: www.zagrodaalpakoterapii.com. De beheerder van de gegevens is Future Solutions Jan Fura, adres: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678."
         },
         "messengerData": {
             "title": "Facebook Messenger Bot Gegevens",

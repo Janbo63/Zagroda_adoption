@@ -29,6 +29,9 @@ export function AdoptionPageContent() {
     const [selectedAlpaca, setSelectedAlpaca] = useState<string | null>(null)
     const [isProcessing, setIsProcessing] = useState(false)
     const [showTerms, setShowTerms] = useState(false)
+    const [termsAccepted, setTermsAccepted] = useState(false)
+    const [marketingConsent, setMarketingConsent] = useState(false)
+    const [showError, setShowError] = useState(false)
 
     const tiers = ['bronze', 'silver', 'gold']
     const alpacas = ['Micky', 'Elvis', 'Ricky', 'Teddy', 'Suri', 'Freddy']
@@ -36,6 +39,11 @@ export function AdoptionPageContent() {
 
     const handleAdoption = async () => {
         if (!selectedAlpaca || !selectedTier) return
+
+        if (!termsAccepted) {
+            setShowError(true)
+            return
+        }
 
         setIsProcessing(true)
         try {
@@ -48,7 +56,8 @@ export function AdoptionPageContent() {
                     tier: selectedTier,
                     alpaca: selectedAlpaca,
                     locale: locale,
-                    campaign: "winter-vol-liefde"
+                    campaign: "winter-vol-liefde",
+                    marketingConsent: marketingConsent
                 }),
             })
 
@@ -271,7 +280,56 @@ export function AdoptionPageContent() {
                                 )}
                             </AnimatePresence>
 
-                            <div className="mt-16 flex flex-col items-center">
+                            <div className="mt-16 flex flex-col items-center max-w-lg mx-auto w-full">
+                                {/* Legal Checkboxes */}
+                                <div className="mb-8 space-y-4 text-left w-full">
+                                    <label className="flex items-start gap-3 cursor-pointer group">
+                                        <div className="relative flex items-center mt-1">
+                                            <input
+                                                type="checkbox"
+                                                checked={termsAccepted}
+                                                onChange={(e) => {
+                                                    setTermsAccepted(e.target.checked)
+                                                    if (e.target.checked) setShowError(false)
+                                                }}
+                                                className="peer h-5 w-5 cursor-pointer appearance-none rounded border-2 border-stone-200 transition-all checked:bg-orange-500 checked:border-orange-500"
+                                            />
+                                            <Check className="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 transition-opacity left-0.5" strokeWidth={4} />
+                                        </div>
+                                        <span className="text-sm font-semibold text-stone-600 group-hover:text-stone-800 transition-colors">
+                                            {t.rich('legal.accept_terms', {
+                                                terms: (chunks) => <a href={`/${locale}/terms`} target="_blank" className="text-orange-600 underline hover:text-orange-700">{chunks}</a>,
+                                                privacy: (chunks) => <a href={`/${locale}/privacy`} target="_blank" className="text-orange-600 underline hover:text-orange-700">{chunks}</a>
+                                            })}
+                                        </span>
+                                    </label>
+
+                                    <label className="flex items-start gap-3 cursor-pointer group">
+                                        <div className="relative flex items-center mt-1">
+                                            <input
+                                                type="checkbox"
+                                                checked={marketingConsent}
+                                                onChange={(e) => setMarketingConsent(e.target.checked)}
+                                                className="peer h-5 w-5 cursor-pointer appearance-none rounded border-2 border-stone-200 transition-all checked:bg-orange-500 checked:border-orange-500"
+                                            />
+                                            <Check className="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 transition-opacity left-0.5" strokeWidth={4} />
+                                        </div>
+                                        <span className="text-sm font-semibold text-stone-500 group-hover:text-stone-700 transition-colors">
+                                            {t('legal.marketing_opt_in')}
+                                        </span>
+                                    </label>
+
+                                    {showError && (
+                                        <motion.p
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            className="text-red-500 text-xs font-bold uppercase tracking-wider mt-2"
+                                        >
+                                            {t('legal.required_error')}
+                                        </motion.p>
+                                    )}
+                                </div>
+
                                 <Button
                                     size="lg"
                                     disabled={!selectedAlpaca || !selectedTier || isProcessing}

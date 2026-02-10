@@ -198,6 +198,14 @@
   },
   "adoption": {
     "title": "Adopt an alpaca",
+    "legal": {
+      "terms_title": "Terms & Conditions",
+      "privacy_title": "Privacy Policy",
+      "accept_terms": "I accept the Terms & Conditions and Privacy Policy",
+      "marketing_opt_in": "I would like to receive updates about the alpacas and special offers",
+      "required_error": "Please accept the terms to continue",
+      "footer_link": "Terms & Conditions"
+    },
     "sectionTitle": "One-year Virtual Adoption Program",
     "campaignTitle": "Winter vol Liefde Special",
     "campaignSubtitle": "Find your perfect match among our soft stars. No drama, just unconditional love.",
@@ -312,17 +320,52 @@
     },
     "terms": {
       "title": "Terms & Conditions",
+      "summary": "Quick Summary of Terms",
       "items": [
         "Adoption is for a period of 12 months from the date of payment.",
         "Discounts on stays are subject to availability and must be booked in advance.",
         "Weekend stayover in the apartment is subject to availability and must be booked in advance.",
         "Paid activities (like walks) must be booked separately; adoption ensures availability of your alpaca.",
         "Mini-alpacas and certificates are processed within 14 days of adoption."
-      ]
+      ],
+      "viewFull": "View Full Terms & Conditions"
+    }
+  },
+  "terms_full": {
+    "title": "Terms & Conditions of Business",
+    "last_updated": "Last updated: February 2026",
+    "intro": "These Terms & Conditions govern the use of our website and the purchase of any services, adoptions, or vouchers from Zagroda Alpakoterapii.",
+    "identity": {
+      "title": "1. Business Identity",
+      "content": "The website and services are operated by Future Solutions Jan Fura. Address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678, REGON: 383008039."
+    },
+    "vouchers": {
+      "title": "2. Gift Vouchers",
+      "content": "Gift Vouchers are non-refundable and cannot be exchanged for cash. Vouchers are valid for 12 months from the date of purchase. If a service booked with a voucher is cancelled by the client with less than 48 hours' notice, the voucher shall be considered redeemed."
+    },
+    "adoptions": {
+      "title": "3. Virtual Adoptions",
+      "content": "Virtual Adoption is a symbolic supporting contribution. It does not grant ownership rights over the animal. Adoption benefits (visits, walks, stays) are subject to availability and must be booked in advance within the 12-month period."
+    },
+    "availability": {
+      "title": "4. Availability & Animal Welfare",
+      "content": "As our services involve live animals and outdoor activities, we reserve the right to reschedule any booking at short notice due to adverse weather or animal welfare concerns. In such cases, a new date will be provided. No refunds are issued for rescheduling due to these factors."
+    },
+    "governing_law": {
+      "title": "5. Governing Law",
+      "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
     }
   },
   "vouchers": {
     "title": "Gift Vouchers",
+    "legal": {
+      "terms_title": "Terms & Conditions",
+      "privacy_title": "Privacy Policy",
+      "accept_terms": "I accept the Terms & Conditions and Privacy Policy",
+      "marketing_opt_in": "I would like to receive updates about the alpacas and special offers",
+      "required_error": "Please accept the terms to continue",
+      "footer_link": "Terms & Conditions"
+    },
     "subtitle": "Give the gift of alpaca magic",
     "description": "Each voucher can be used for activities, stays, or alpaca adoption.",
     "selectAmount": "Select Amount",
@@ -669,6 +712,7 @@
     "contactUs": "Contact Us",
     "followUs": "Follow Us",
     "privacyPolicy": "Privacy Statement",
+    "termsAndConditions": "Terms & Conditions",
     "allRightsReserved": "All rights reserved"
   },
   "privacy": {
@@ -679,8 +723,8 @@
       "p3": "By using our website and services, you consent to the collection and use of your information as described in this Privacy Statement."
     },
     "whoWeAre": {
-      "title": "Who we are?",
-      "content": "Our website address is: www.zagrodaalpakoterapii.com"
+      "title": "1. Who we are?",
+      "content": "Our website address is: www.zagrodaalpakoterapii.com. The data administrator is Future Solutions Jan Fura, address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678."
     },
     "messengerData": {
       "title": "Facebook Messenger Bot Data",
@@ -711,8 +755,13 @@
       }
     },
     "dataSharing": {
-      "title": "Who we share your data with",
-      "content": "We do not share your data with any third parties except as necessary to provide our services through Facebook Messenger. Your messages and information are processed in accordance with Facebook's data policies and our service requirements."
+      "title": "5. Who we share your data with",
+      "content": "We do not sell your data. We share your personal data with trusted third-party service providers to fulfill your orders and manage our relationship. These include:",
+      "items": [
+        "Zoho Corporation (CRM for order management and communication)",
+        "Stripe Payments (Secure payment processing)",
+        "WhatsApp/Meta (For communication if you use these channels)"
+      ]
     },
     "dataRetention": {
       "title": "How long we retain your data",

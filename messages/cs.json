@@ -447,6 +447,14 @@
   },
   "adoption": {
     "title": "Adoptujte alpaku",
+    "legal": {
+      "terms_title": "Podmínky",
+      "privacy_title": "Ochrana údajů",
+      "accept_terms": "Souhlasím s obchodními podmínkami a zásadami ochrany osobních údajů",
+      "marketing_opt_in": "Chci zasílat novinky o alpakách a speciální nabídky",
+      "required_error": "Pro pokračování musíte souhlasit s podmínkami",
+      "footer_link": "Podmínky"
+    },
     "sectionTitle": "Jednoletý virtuální adopční program",
     "campaignTitle": "Speciál Winter vol Liefde",
     "campaignSubtitle": "Najděte svůj ideální protějšek mezi našimi hebkými hvězdami. Žádné drama, jen bezpodmínečná láska.",
@@ -549,13 +557,48 @@
     },
     "terms": {
       "title": "Obchodní Podmínky",
+      "summary": "Stručné shrnutí",
       "items": [
         "Adopce je na dobu 12 měsíců od data zaplacení.",
         "Slevy na pobyty závisí na dostupnosti a nelze je kombinovat s jinými nabídkami.",
         "Víkendový pobyt v apartmánu je nutné rezervovat předem.",
         "Placené aktivity se musí rezervovat samostatně; adopce zaručuje dostupnost vaší alpaky.",
-        "Plyšáci a certifikáty jsou zpracovány do 14 dnů od adopcji."
-      ]
+        "Plyšáci a certifikáty jsou zpracovány do 14 dnů od adopce."
+      ],
+      "viewFull": "Zobrazit úplné obchodní podmínky"
+    }
+  },
+  "terms_full": {
+    "title": "Terms & Conditions of Business",
+    "last_updated": "Last updated: February 2026",
+    "intro": "These Terms & Conditions govern the use of our website and the purchase of any services, adoptions, or vouchers from Zagroda Alpakoterapii.",
+    "identity": {
+      "title": "1. Business Identity",
+      "content": "The website and services are operated by Future Solutions Jan Fura. Address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678, REGON: 383008039."
+    },
+    "vouchers": {
+      "title": "2. Gift Vouchers",
+      "legal": {
+        "terms_title": "Podmínky",
+        "privacy_title": "Ochrana údajů",
+        "accept_terms": "Souhlasím s obchodními podmínkami a zásadami ochrany osobních údajů",
+        "marketing_opt_in": "Chci zasílat novinky o alpakách a speciální nabídky",
+        "required_error": "Pro pokračování musíte souhlasit s podmínkami",
+        "footer_link": "Podmínky"
+      },
+      "content": "Gift Vouchers are non-refundable and cannot be exchanged for cash. Vouchers are valid for 12 months from the date of purchase. If a service booked with a voucher is cancelled by the client with less than 48 hours' notice, the voucher shall be considered redeemed."
+    },
+    "adoptions": {
+      "title": "3. Virtual Adoptions",
+      "content": "Virtual Adoption is a symbolic supporting contribution. It does not grant ownership rights over the animal. Adoption benefits (visits, walks, stays) are subject to availability and must be booked in advance within the 12-month period."
+    },
+    "availability": {
+      "title": "4. Availability & Animal Welfare",
+      "content": "As our services involve live animals and outdoor activities, we reserve the right to reschedule any booking at short notice due to adverse weather or animal welfare concerns. In such cases, a new date will be provided. No refunds are issued for rescheduling due to these factors."
+    },
+    "governing_law": {
+      "title": "5. Governing Law",
+      "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
     }
   },
   "footer": {
@@ -563,6 +606,7 @@
     "contactUs": "Kontaktujte nás",
     "followUs": "Sledujte nás",
     "privacyPolicy": "Prohlášení o ochraně osobních údajů",
+    "termsAndConditions": "Obchodní podmínky",
     "allRightsReserved": "Všechna práva vyhrazena"
   },
   "privacy": {

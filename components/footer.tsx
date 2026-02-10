@@ -53,8 +53,11 @@ export function Footer({ locale }: FooterProps) {
                 <Instagram size={24} />
               </a>
             </div>
-            <Link href={`/${locale}/privacy`} className="text-sm hover:text-orange-200">
+            <Link href={`/${locale}/privacy`} className="text-sm hover:text-orange-200 block mb-1">
               {t('privacyPolicy')}
+            </Link>
+            <Link href={`/${locale}/terms`} className="text-sm hover:text-orange-200 block">
+              {t('termsAndConditions')}
             </Link>
           </div>
         </div>

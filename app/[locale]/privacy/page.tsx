@@ -2,107 +2,125 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
+import { motion } from 'framer-motion'
+import { Shield, Lock, Eye, Share2, Trash2, Mail } from 'lucide-react'
 
-export default async function PrivacyPolicy() {
-  const t = await useTranslations('privacy')
+export default function PrivacyPolicy() {
+  const t = useTranslations('privacy')
+
+  const sections = [
+    { key: 'whoWeAre', icon: <Eye className="w-6 h-6" /> },
+    { key: 'messengerData', icon: <Shield className="w-6 h-6" /> },
+    { key: 'dataCollection', icon: <Lock className="w-6 h-6" /> },
+    { key: 'dataSharing', icon: <Share2 className="w-6 h-6" /> },
+    { key: 'dataRetention', icon: <CalendarIcon className="w-6 h-6" /> },
+    { key: 'dataDeletion', icon: <Trash2 className="w-6 h-6" /> },
+    { key: 'yourRights', icon: <Shield className="w-6 h-6" /> },
+    { key: 'contact', icon: <Mail className="w-6 h-6" /> }
+  ]
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">{t('title')}</h1>
-      
-      <div className="space-y-6">
-        <section>
-          <p className="mb-4">{t('intro.p1')}</p>
-          <p className="mb-4">{t('intro.p2')}</p>
-          <p className="mb-4">{t('intro.p3')}</p>
-        </section>
+    <div className="bg-stone-50 min-h-screen pb-20">
+      {/* Header */}
+      <div className="bg-white border-b border-stone-200 py-12 md:py-20 mb-12">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-5xl font-black text-primary-900 mb-4"
+          >
+            {t('title')}
+          </motion.h1>
+          <div className="w-20 h-1.5 bg-orange-400 mx-auto rounded-full" />
+        </div>
+      </div>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">{t('metaCrawlers.title')}</h2>
-          <p className="mb-4">{t('metaCrawlers.content')}</p>
-          <ul className="list-disc pl-6 mb-4">
-            {t.raw('metaCrawlers.items').map((item: string, index: number) => (
-              <li key={index} className="mb-2">{item}</li>
-            ))}
-          </ul>
-          <p className="mb-4">{t('metaCrawlers.dataCollection')}</p>
-          <ul className="list-disc pl-6 mb-4">
-            {t.raw('metaCrawlers.dataItems').map((item: string, index: number) => (
-              <li key={index} className="mb-2">{item}</li>
-            ))}
-          </ul>
-          <p className="mb-4">{t('metaCrawlers.security')}</p>
-          <h3 className="text-xl font-semibold mt-6 mb-3">{t('metaCrawlers.technicalRequirements.title')}</h3>
-          <p className="mb-4">{t('metaCrawlers.technicalRequirements.content')}</p>
-          <ul className="list-disc pl-6 mb-4">
-            {t.raw('metaCrawlers.technicalRequirements.items').map((item: string, index: number) => (
-              <li key={index} className="mb-2">{item}</li>
-            ))}
-          </ul>
-        </section>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <div className="bg-white rounded-[2.5rem] shadow-sm border border-stone-100 p-8 md:p-12 space-y-16">
+          <section className="space-y-4">
+            <p className="text-xl text-stone-600 leading-relaxed font-semibold italic">
+              {t('intro.p1')}
+            </p>
+            <p className="text-stone-500 font-medium">
+              {t('intro.p2')}
+            </p>
+          </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">{t('whoWeAre.title')}</h2>
-          <p className="mb-4">{t('whoWeAre.content')}</p>
-        </section>
+          {sections.map((section, idx) => (
+            <motion.section
+              key={section.key}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="space-y-6"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
+                  {section.icon}
+                </div>
+                <h2 className="text-2xl font-black text-primary-800">
+                  {t(`${section.key}.title`)}
+                </h2>
+              </div>
 
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('messengerData.title')}</h2>
-          <p>{t('messengerData.content')}</p>
-          <ul className="list-disc pl-6 mt-2">
-            {['items.0', 'items.1', 'items.2'].map((key) => (
-              <li key={key}>{t(`messengerData.${key}`)}</li>
-            ))}
-          </ul>
-          <p className="mt-4">{t('messengerData.purpose')}</p>
-          <ul className="list-disc pl-6 mt-2">
-            {['purposeItems.0', 'purposeItems.1', 'purposeItems.2', 'purposeItems.3'].map((key) => (
-              <li key={key}>{t(`messengerData.${key}`)}</li>
-            ))}
-          </ul>
-        </section>
+              <div className="pl-0 md:pl-16 space-y-4">
+                <p className="text-stone-600 leading-relaxed text-lg font-medium">
+                  {t(`${section.key}.content`)}
+                </p>
 
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataCollection.title')}</h2>
-          
-          <h3 className="text-xl font-semibold mt-6 mb-3 text-primary-500">{t('dataCollection.contactForms.title')}</h3>
-          <p>{t('dataCollection.contactForms.content')}</p>
+                {/* Render items if they exist as an array */}
+                {renderItems(t, section.key)}
+              </div>
+            </motion.section>
+          ))}
+        </div>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3 text-primary-500">{t('dataCollection.embeddedContent.title')}</h3>
-          <p>{t('dataCollection.embeddedContent.p1')}</p>
-          <p>{t('dataCollection.embeddedContent.p2')}</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataSharing.title')}</h2>
-          <p>{t('dataSharing.content')}</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataRetention.title')}</h2>
-          <p>{t('dataRetention.content')}</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('dataDeletion.title')}</h2>
-          <p>{t('dataDeletion.content')}</p>
-          <ul className="list-disc pl-6 mt-2">
-            {['items.0', 'items.1', 'items.2'].map((key) => (
-              <li key={key}>{t(`dataDeletion.${key}`)}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('yourRights.title')}</h2>
-          <p>{t('yourRights.content')}</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mt-8 mb-4 text-primary-600">{t('contact.title')}</h2>
-          <p>{t('contact.content')}</p>
-        </section>
+        <div className="mt-12 text-center text-stone-400 text-sm font-medium italic">
+          Zagroda Alpakoterapii &copy; {new Date().getFullYear()}
+        </div>
       </div>
     </div>
   )
+}
+
+function CalendarIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M8 2v4" />
+      <path d="M16 2v4" />
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <path d="M3 10h18" />
+    </svg>
+  )
+}
+
+function renderItems(t: any, key: string) {
+  try {
+    const items = t.raw(`${key}.items`)
+    if (items && Array.isArray(items)) {
+      return (
+        <ul className="space-y-3 list-none">
+          {items.map((item: string, i: number) => (
+            <li key={i} className="flex items-start gap-3 text-stone-600 font-medium">
+              <div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2.5 flex-shrink-0" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  } catch (e) { }
+  return null
 }

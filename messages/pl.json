@@ -175,6 +175,14 @@
   },
   "adoption": {
     "title": "Adoptuj alpakę",
+    "legal": {
+      "terms_title": "Regulamin",
+      "privacy_title": "Polityka Prywatności",
+      "accept_terms": "Akceptuję Regulamin i Politykę Prywatności",
+      "marketing_opt_in": "Chcę otrzymywać informacje o alpakach i ofertach specjalnych",
+      "required_error": "Proszę zaakceptować regulamin, aby kontynuować",
+      "footer_link": "Regulamin"
+    },
     "sectionTitle": "Roczny Program Wirtualnej Adopcji",
     "campaignTitle": "Specjał Winter vol Liefde",
     "campaignSubtitle": "Znajdź swoją idealną parę wśród naszych puszystych gwiazd. Bez dramatu, tylko bezwarunkowa miłość.",
@@ -289,17 +297,52 @@
     },
     "terms": {
       "title": "Regulamin i Warunki",
+      "summary": "Krótki wybór warunków",
       "items": [
         "Adopcja trwa przez 12 miesięcy od daty zakupu.",
-        "Zniżki na pobyty zależą od dostępności i nie łączą się z innymi ofertami.",
+        "Zniżki na pobyty zależą od dostępności i muszą być rezerwowane z wyprzedzeniem.",
         "Pobyt weekendowy w apartamencie musi być zarezerwowany z wyprzedzeniem.",
         "Płatne aktywności muszą być rezerwowane osobno; adopcja gwarantuje dostępność Twojej alpaki.",
         "Pluszaki i certyfikaty są wysyłane w ciągu 14 dni od adopcji."
-      ]
+      ],
+      "viewFull": "Zobacz pełny Regulamin"
+    }
+  },
+  "terms_full": {
+    "title": "Regulamin Świadczenia Usług",
+    "last_updated": "Ostatnia aktualizacja: luty 2026",
+    "intro": "Niniejszy Regulamin określa zasady korzystania z serwisu oraz zakupu usług, adopcji i voucherów w Zagrodzie Alpakoterapii.",
+    "identity": {
+      "title": "1. Tożsamość Przedsiębiorstwa",
+      "content": "Strona internetowa i usługi są prowadzone przez Future Solutions Jan Fura. Adres: Orłowice 24, 59-630 Mirsk, Polska. NIP: 6161566678, REGON: 383008039."
+    },
+    "vouchers": {
+      "title": "2. Vouchery Podarunkowe",
+      "content": "Vouchery podarunkowe nie podlegają zwrotowi ani wymianie na gotówkę. Vouchery są ważne przez 12 miesięcy od daty zakupu. W przypadku odwołania usługi zarezerwowanej voucherem przez klienta z wyprzedzeniem mniejszym niż 48 godzin, voucher uważa się za zrealizowany."
+    },
+    "adoptions": {
+      "title": "3. Wirtualne Adopcje",
+      "content": "Wirtualna Adopcja jest symbolicznym wkładem wspierającym i nie daje praw własności do zwierzęcia. Korzyści adopcyjne (wizyty, spacery, pobyty) zależą od dostępności i muszą być rezerwowane z wyprzedzeniem w ciągu 12-miesięcznego okresu adopcji."
+    },
+    "availability": {
+      "title": "4. Dostępność i Dobrostan Zwierząt",
+      "content": "Ponieważ nasze usługi obejmują pracę z żywymi zwierzętami i aktywności na świeżym powietrzu, zastrzegamy sobie prawo do zmiany terminu rezerwacji z krótkim wyprzedzeniem ze względu na niekorzystne warunki pogodowe lub dobrostan zwierząt. W takich przypadkach zaproponowany zostanie nowy termin. Nie dokonujemy zwrotów pieniędzy za zmiany terminów wynikające z tych czynników."
+    },
+    "governing_law": {
+      "title": "5. Prawo Właściwe",
+      "content": "Niniejszy regulamin podlega prawu polskiemu. Wszelkie spory będą rozstrzygane przez sądy właściwe dla siedziby właściciela w Polsce. W przypadku rozbieżności między wersjami językowymi, wersja polska jest rozstrzygająca."
     }
   },
   "vouchers": {
     "title": "Vouchery Podarunkowe",
+    "legal": {
+      "terms_title": "Regulamin",
+      "privacy_title": "Polityka Prywatności",
+      "accept_terms": "Akceptuję Regulamin i Politykę Prywatności",
+      "marketing_opt_in": "Chcę otrzymywać informacje o alpakach i ofertach specjalnych",
+      "required_error": "Proszę zaakceptować regulamin, aby kontynuować",
+      "footer_link": "Regulamin"
+    },
     "subtitle": "Podaruj magię alpak",
     "description": "Każdy voucher może być wykorzystany na aktywności, pobyty lub adopcję alpaki.",
     "selectAmount": "Wybierz kwotę",
@@ -655,6 +698,7 @@
     "contactUs": "Skontaktuj się z nami",
     "followUs": "Obserwuj nas",
     "privacyPolicy": "Oświadczenie o ochronie prywatności",
+    "termsAndConditions": "Regulamin",
     "allRightsReserved": "Wszelkie prawa zastrzeżone"
   },
   "privacy": {
@@ -665,8 +709,8 @@
       "p3": "Korzystając z naszej strony internetowej i usług, wyrażasz zgodę na gromadzenie i wykorzystywanie Twoich informacji zgodnie z niniejszym oświadczeniem o ochronie prywatności."
     },
     "whoWeAre": {
-      "title": "Kim jesteśmy?",
-      "content": "Nasza strona internetowa to: www.zagrodaalpakoterapii.com"
+      "title": "1. Kim jesteśmy?",
+      "content": "Nasza strona to: www.zagrodaalpakoterapii.com. Administratorem danych jest Future Solutions Jan Fura, adres: Orłowice 24, 59-630 Mirsk, Polska. NIP: 6161566678."
     },
     "messengerData": {
       "title": "Dane z Bota Facebook Messenger",
@@ -697,8 +741,13 @@
       }
     },
     "dataSharing": {
-      "title": "Z kim dzielimy się Twoimi danymi",
-      "content": "Nie udostępniamy Twoich danych żadnym stronom trzecim, z wyjątkiem sytuacji niezbędnych do świadczenia naszych usług przez Facebook Messenger. Twoje wiadomości i informacje są przetwarzane zgodnie z polityką danych Facebooka i naszymi wymogami serwisowymi."
+      "title": "5. Z kim dzielimy się Twoimi danymi",
+      "content": "Nie sprzedajemy Twoich danych. Udostępniamy Twoje dane osobowe zaufanym partnerom w celu realizacji zamówień i obsługi klienta. Są to:",
+      "items": [
+        "Zoho Corporation (System CRM do zarządzania zamówieniami i komunikacji)",
+        "Stripe Payments (Bezpieczne płatności online)",
+        "WhatsApp/Meta (Do komunikacji, jeśli korzystasz z tych kanałów)"
+      ]
     },
     "dataRetention": {
       "title": "Jak długo przechowujemy Twoje dane",

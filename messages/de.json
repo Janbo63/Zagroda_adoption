@@ -429,7 +429,15 @@
     }
   },
   "adoption": {
-    "title": "Adoptieren Sie ein Alpaka",
+    "title": "Adoption von Alpakas",
+    "legal": {
+      "terms_title": "AGB",
+      "privacy_title": "Datenschutz",
+      "accept_terms": "Ich akzeptiere die AGB und die Datenschutzerklärung",
+      "marketing_opt_in": "Ich möchte Neuigkeiten über die Alpakas und Sonderangebote erhalten",
+      "required_error": "Bitte akzeptieren Sie die Bedingungen, um fortzufahren",
+      "footer_link": "AGB"
+    },
     "sectionTitle": "Einjähriges virtuelles Adoptionsprogramm",
     "campaignTitle": "Winter vol Liefde Special",
     "campaignSubtitle": "Finde dein perfektes Match unter unseren sanften Stars. Kein Drama, nur bedingungslose Liebe.",
@@ -532,13 +540,48 @@
     },
     "terms": {
       "title": "Allgemeine Geschäftsbedingungen",
+      "summary": "Kurze Zusammenfassung",
       "items": [
         "Die Adoption gilt für einen Zeitraum von 12 Monaten ab Zahlungsdatum.",
         "Rabatte auf Aufenthalte unterliegen der Verfügbarkeit und sind nicht mit anderen Angeboten kombinierbar.",
         "Wochenendaufenthalte im Apartment müssen im Voraus gebucht werden.",
         "Kostenpflichtige Aktivitäten müssen separat gebucht werden; die Adoption garantiert die Verfügbarkeit Ihres Alpakas.",
         "Plüschtiere und Zertifikate werden innerhalb von 14 Tagen nach der Adoption bearbeitet."
-      ]
+      ],
+      "viewFull": "Vollständige AGB anzeigen"
+    }
+  },
+  "terms_full": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "last_updated": "Zuletzt aktualisiert: Februar 2026",
+    "intro": "Diese AGB regeln die Nutzung unserer Website und den Kauf von Dienstleistungen, Adoptionen oder Gutscheinen bei Zagroda Alpakoterapii.",
+    "identity": {
+      "title": "1. Identität des Unternehmens",
+      "content": "Die Website und die Dienstleistungen werden betrieben von Future Solutions Jan Fura. Adresse: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678, REGON: 383008039."
+    },
+    "vouchers": {
+      "title": "2. Geschenkgutscheine",
+      "legal": {
+        "terms_title": "AGB",
+        "privacy_title": "Datenschutz",
+        "accept_terms": "Ich akzeptiere die AGB und die Datenschutzerklärung",
+        "marketing_opt_in": "Ich möchte Neuigkeiten über die Alpakas und Sonderangebote erhalten",
+        "required_error": "Bitte akzeptieren Sie die Bedingungen, um fortzufahren",
+        "footer_link": "AGB"
+      },
+      "content": "Geschenkgutscheine sind nicht erstattungsfähig und können nicht gegen Bargeld umgetauscht werden. Gutscheine sind ab Kaufdatum 12 Monate gültig. Wird eine mit einem Gutschein gebuchte Leistung vom Kunden weniger als 48 Stunden vorher abgesagt, gilt der Gutschein als eingelöst."
+    },
+    "adoptions": {
+      "title": "3. Virtuelle Adoptionen",
+      "content": "Die virtuelle Adoption ist ein symbolischer Förderbeitrag. Sie gewährt keine Eigentumsrechte an dem Tier. Adoptionsleistungen (Besuche, Alpakatouren, Übernachtungen) unterliegen der Verfügbarkeit und müssen innerhalb des 12-Monats-Zeitraums im Voraus gebucht werden."
+    },
+    "availability": {
+      "title": "4. Verfügbarkeit & Tierwohl",
+      "content": "Da unsere Dienstleistungen lebende Tiere und Outdoor-Aktivitäten beinhalten, behalten wir uns das Recht vor, Buchungen aufgrund schlechter Witterung oder aus Gründen des Tierwohls kurzfristig zu verschieben. In solchen Fällen wird ein Ersatztermin vereinbart. Bei Verschiebungen aus diesen Gründen erfolgt keine Rückerstattung."
+    },
+    "governing_law": {
+      "title": "5. Anwendbares Recht",
+      "content": "Diese AGB unterliegen dem polnischen Recht. Gerichtsstand ist Polen. Bei Abweichungen zwischen den Sprachversionen ist die polnische Fassung maßgebend."
     }
   },
   "footer": {
@@ -546,6 +589,7 @@
     "contactUs": "Kontaktieren Sie uns",
     "followUs": "Folgen Sie uns",
     "privacyPolicy": "Datenschutzerklärung",
+    "termsAndConditions": "AGB",
     "allRightsReserved": "Alle Rechte vorbehalten"
   },
   "privacy": {
