@@ -51,7 +51,7 @@ export async function POST(request: Request) {
                 },
             ],
             mode: 'payment',
-            success_url: `${origin}/${locale}/adopt/success?session_id={CHECKOUT_SESSION_ID}&tier=${tier}&alpaca=${alpaca}`,
+            success_url: `${origin}/${locale}/adopt/success?session_id={CHECKOUT_SESSION_ID}&tier=${tier}&alpaca=${alpaca}&amount=${price}`,
             cancel_url: `${origin}/${locale}/adopt`,
             metadata: {
                 tier,

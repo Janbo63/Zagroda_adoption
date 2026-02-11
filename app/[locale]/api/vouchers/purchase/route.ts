@@ -53,7 +53,7 @@ export async function POST(request: Request) {
                 },
             ],
             mode: 'payment',
-            success_url: `${origin}/${locale}/vouchers/success?session_id={CHECKOUT_SESSION_ID}&voucher_code=${voucherCode}`,
+            success_url: `${origin}/${locale}/vouchers/success?session_id={CHECKOUT_SESSION_ID}&voucher_code=${voucherCode}&amount=${amount}&currency=${currency}`,
             cancel_url: `${origin}/${locale}/vouchers`,
             metadata: {
                 voucherCode,

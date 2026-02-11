@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import './globals.css';
+import FacebookPixel from '@/components/FacebookPixel';
 
 declare global {
   interface Window {
@@ -28,12 +29,12 @@ export default function RootLayout({
         window.dataLayer.push(arguments);
       }
       window.gtag = gtag;
-      
+
       // Convert non-www URL to www URL for GA
       const currentUrl = window.location.href;
       const wwwUrl = currentUrl.replace('https://', 'https://www.');
       const wwwPath = window.location.pathname;
-      
+
       gtag('js', new Date());
       gtag('config', 'G-V9R1JJYYSG', {
         debug_mode: true,
@@ -47,7 +48,7 @@ export default function RootLayout({
       console.log('[GA Debug] Modified URL for GA:', wwwUrl);
       console.log('[GA Debug] Path:', wwwPath);
       console.log('[GA Debug] Sending pageview event');
-      
+
       // Explicitly send a pageview with www URL
       gtag('event', 'page_view', {
         page_title: document.title,
