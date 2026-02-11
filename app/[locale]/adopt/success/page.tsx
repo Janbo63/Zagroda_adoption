@@ -40,9 +40,10 @@ export default function AdoptionSuccessPage({ params: { locale } }: { params: { 
                         // Track Purchase Event
                         if (amount) {
                             import('@/lib/fpixel').then((fpixel) => {
+                                const value = parseInt(amount, 10);
                                 fpixel.event('Purchase', {
                                     currency: 'PLN',
-                                    value: amount / 100, // Stripe amount is in cents
+                                    value: isNaN(value) ? 0 : value / 100, // Stripe amount is in cents
                                     content_name: `Adoption - ${alpaca} (${tier})`,
                                     content_category: 'Adoption',
                                     content_ids: [alpaca],

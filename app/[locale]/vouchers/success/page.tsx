@@ -14,8 +14,8 @@ export default function VoucherSuccessPage() {
     const [voucherCode, setVoucherCode] = useState<string | null>(null);
     const [copied, setCopied] = useState(false);
 
-    const amount = searchParams.get('amount');
-    const currency = searchParams.get('currency');
+    const amount = searchParams?.get('amount');
+    const currency = searchParams?.get('currency');
 
     useEffect(() => {
         // In a real implementation, you'd fetch voucher details from your database
