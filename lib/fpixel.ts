@@ -1,5 +1,11 @@
 export const FB_PIXEL_ID = '1608105036460297';
 
+declare global {
+    interface Window {
+        fbq: any;
+    }
+}
+
 export const pageview = () => {
     window.fbq('track', 'PageView');
 };
