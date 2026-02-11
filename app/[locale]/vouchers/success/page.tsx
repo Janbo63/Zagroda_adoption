@@ -14,11 +14,26 @@ export default function VoucherSuccessPage() {
     const [voucherCode, setVoucherCode] = useState<string | null>(null);
     const [copied, setCopied] = useState(false);
 
+    const amount = searchParams.get('amount');
+    const currency = searchParams.get('currency');
+
     useEffect(() => {
         // In a real implementation, you'd fetch voucher details from your database
         // For now, we'll show a generic success message
         // The actual voucher code will be sent via email
-    }, [voucherId]);
+
+        if (voucherId && amount && currency) {
+            import('@/lib/fpixel').then((fpixel) => {
+                fpixel.event('Purchase', {
+                    currency: currency,
+                    value: amount,
+                    content_name: 'Alpaca Voucher',
+                    content_ids: [voucherId],
+                    content_type: 'product'
+                });
+            });
+        }
+    }, [voucherId, amount, currency]);
 
     const copyCode = () => {
         if (voucherCode) {

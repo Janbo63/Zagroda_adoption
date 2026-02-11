@@ -19,6 +19,8 @@ export default function AdoptionSuccessPage({ params: { locale } }: { params: { 
     const tier = searchParams?.get('tier') || 'bronze'
     const alpaca = searchParams?.get('alpaca') || 'Micky'
 
+    const amount = searchParams?.get('amount');
+
     useEffect(() => {
         if (sessionId) {
             const recordAdoption = async () => {
@@ -34,6 +36,20 @@ export default function AdoptionSuccessPage({ params: { locale } }: { params: { 
                     const data = await response.json()
                     if (!data.success) {
                         console.error('Failed to record adoption:', data.error)
+                    } else {
+                        // Track Purchase Event
+                        if (amount) {
+                            import('@/lib/fpixel').then((fpixel) => {
+                                fpixel.event('Purchase', {
+                                    currency: 'PLN',
+                                    value: amount / 100, // Stripe amount is in cents
+                                    content_name: `Adoption - ${alpaca} (${tier})`,
+                                    content_category: 'Adoption',
+                                    content_ids: [alpaca],
+                                    content_type: 'product'
+                                });
+                            });
+                        }
                     }
                 } catch (error) {
                     console.error('Error recording adoption:', error)
@@ -43,7 +59,7 @@ export default function AdoptionSuccessPage({ params: { locale } }: { params: { 
             }
             recordAdoption()
         }
-    }, [sessionId, locale])
+    }, [sessionId, locale, amount, alpaca, tier])
 
     return (
         <div className="min-h-[70vh] flex items-center justify-center py-12 px-4 bg-stone-50/50">
