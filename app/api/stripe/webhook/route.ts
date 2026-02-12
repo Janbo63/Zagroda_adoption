@@ -3,6 +3,7 @@ import Stripe from 'stripe';
 import { headers } from 'next/headers';
 import { zoho } from '@/lib/zoho';
 import { voucherGenerator } from '@/lib/voucher-generator';
+import { adoptionGenerator } from '@/lib/adoption-generator';
 import { emailService } from '@/lib/email-service';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -37,21 +38,25 @@ export async function POST(req: Request) {
             if (session.metadata?.alpaca) {
                 try {
                     // Extract customer details
-                    const customerName = session.customer_details?.name || '';
+                    const customerName = session.customer_details?.name || 'Unknown Adopter';
                     const nameParts = customerName.split(' ');
                     const firstName = nameParts[0] || '';
                     const lastName = nameParts.slice(1).join(' ') || '';
                     const phone = session.customer_details?.phone || undefined;
+                    const email = session.customer_details?.email || 'pending@stripe.com';
+
+                    let adoptionId: string | undefined;
 
                     const adoption = await zoho.findAdoptionBySessionId(session.id);
                     if (adoption) {
                         await zoho.updateRecord('Adoptions', adoption.id, {
                             "Status": "Paid"
                         });
+                        adoptionId = adoption.id;
                     } else {
                         // Create if it didn't exist for some reason
-                        await zoho.syncAdoption({
-                            email: session.customer_details?.email || 'pending@stripe.com',
+                        const result = await zoho.syncAdoption({
+                            email: email,
                             alpaca: session.metadata.alpaca,
                             tier: session.metadata.tier,
                             amount: session.amount_total || 0,
@@ -61,7 +66,27 @@ export async function POST(req: Request) {
                             lastName: lastName,
                             phone: phone
                         });
+                        adoptionId = result.data?.[0]?.details?.id;
                     }
+
+                    // Generate Certificate and Attach to Zoho
+                    if (adoptionId) {
+                        try {
+                            const { filePath } = await adoptionGenerator.generateCertificate({
+                                adoptionId: adoptionId,
+                                alpacaName: session.metadata.alpaca,
+                                customerName: customerName,
+                                tier: session.metadata.tier,
+                                startDate: new Date().toISOString().split('T')[0]
+                            });
+
+                            await zoho.uploadAttachment('Adoptions', adoptionId, filePath);
+                            console.log(`Certificate attached to Adoption ${adoptionId}`);
+                        } catch (certError) {
+                            console.error('Certificate Generation/Upload Error:', certError);
+                        }
+                    }
+
                 } catch (zohoErr) {
                     console.error('Zoho Adoption Update Error:', zohoErr);
                 }
@@ -71,55 +96,64 @@ export async function POST(req: Request) {
             if (session.metadata?.voucherCode) {
                 try {
                     // Extract customer details
-                    const customerName = session.customer_details?.name || '';
+                    const customerName = session.customer_details?.name || 'Unknown Buyer';
                     const nameParts = customerName.split(' ');
                     const firstName = nameParts[0] || '';
                     const lastName = nameParts.slice(1).join(' ') || '';
                     const phone = session.customer_details?.phone || undefined;
+                    const buyerEmail = session.customer_details?.email || 'pending@stripe.com';
 
-                    await zoho.syncVoucher({
+                    const result = await zoho.syncVoucher({
                         code: session.metadata.voucherCode,
                         amount: session.amount_total || 0,
                         currency: session.currency?.toUpperCase() || 'PLN',
                         status: 'Active',
-                        buyerEmail: session.customer_details?.email || 'pending@stripe.com',
+                        buyerEmail: buyerEmail,
                         buyerFirstName: firstName,
                         buyerLastName: lastName,
                         recipientName: session.metadata.recipientName,
                         expirationDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
                         phone: phone
                     });
-                } catch (zohoErr) {
-                    console.error('Zoho Voucher Sync Error:', zohoErr);
-                }
 
-                // Generate PDF and Email Admin
-                try {
+                    const voucherRecordId = result.data?.[0]?.details?.id;
+
+                    // Generate PDF
                     const expiryDate = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
-                    const buyerEmail = session.customer_details?.email || 'pending@stripe.com';
 
                     const { filePath } = await voucherGenerator.generateVoucher({
                         code: session.metadata.voucherCode,
                         amount: session.amount_total || 0,
                         currency: (session.currency?.toUpperCase() || 'PLN') as 'EUR' | 'PLN',
-                        buyerName: session.customer_details?.name || 'Unknown Buyer',
+                        buyerName: customerName,
                         recipientName: session.metadata.recipientName,
                         personalMessage: session.metadata.personalMessage,
                         expiryDate: expiryDate
                     });
 
+                    // Attach to Zoho
+                    if (voucherRecordId) {
+                        try {
+                            await zoho.uploadAttachment('Vouchers', voucherRecordId, filePath);
+                            console.log(`Voucher PDF attached to Voucher Record ${voucherRecordId}`);
+                        } catch (uploadError) {
+                            console.error('Voucher Attachment Upload Error:', uploadError);
+                        }
+                    }
+
+                    // Email Admin (Legacy/Backup)
                     await emailService.sendVoucherToAdmin({
                         adminEmail: process.env.CONTACT_EMAIL || 'info@zagrodaalpakoterapii.com',
                         voucherCode: session.metadata.voucherCode,
                         amount: session.amount_total || 0,
                         currency: session.currency?.toUpperCase() || 'PLN',
-                        buyerName: session.customer_details?.name || 'Unknown Buyer',
+                        buyerName: customerName,
                         buyerEmail: buyerEmail,
                         pdfPath: filePath
                     });
 
-                } catch (genError) {
-                    console.error('Voucher Generation/Email Warning:', genError);
+                } catch (zohoErr) {
+                    console.error('Zoho Voucher Sync/Gen Error:', zohoErr);
                 }
             }
             break;

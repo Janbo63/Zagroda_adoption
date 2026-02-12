@@ -272,30 +272,35 @@ export class ZohoCRM {
         return this.createRecord('Vouchers', recordData);
     }
     /**
-     * Specialized: Upload certificate as attachment to Adoption record
+     * Upload an attachment to a record
      */
-    public async uploadCertificateAttachment(
+    public async uploadAttachment(
+        moduleName: string,
         recordId: string,
-        pdfBuffer: Buffer,
-        fileName: string
+        filePath: string
     ): Promise<boolean> {
         try {
-            const FormData = (await import('form-data')).default;
-            const form = new FormData();
+            const fs = require('fs');
+            if (!fs.existsSync(filePath)) {
+                console.error(`File not found: ${filePath}`);
+                return false;
+            }
 
-            form.append('file', pdfBuffer, {
+            const FormData = require('form-data');
+            const form = new FormData();
+            const fileName = filePath.split(/[/\\]/).pop();
+
+            form.append('file', fs.createReadStream(filePath), {
                 filename: fileName,
-                contentType: 'application/pdf'
             });
 
-            // Upload attachment to Zoho CRM
-            const url = `${this.apiDomain}/crm/v3/Adoptions/${recordId}/Attachments`;
+            const url = `${this.apiDomain}/crm/v3/${moduleName}/${recordId}/Attachments`;
 
             if (!this.accessToken) {
                 await this.refreshAccessToken();
             }
 
-            const response = await fetch(url, {
+            let response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Zoho-oauthtoken ${this.accessToken}`,
@@ -304,49 +309,31 @@ export class ZohoCRM {
                 body: form as any
             });
 
+            if (response.status === 401) {
+                await this.refreshAccessToken();
+                response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Zoho-oauthtoken ${this.accessToken}`,
+                        ...form.getHeaders()
+                    },
+                    body: form as any
+                });
+            }
+
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error('Zoho attachment upload failed:', errorText);
                 return false;
             }
 
-            console.log('Certificate uploaded to Zoho CRM successfully');
-            return true;
+            const data = await response.json();
+            // console.log('Attachment upload response:', JSON.stringify(data));
+            return data.data?.[0]?.status === 'success';
+
         } catch (error) {
-            console.error('Error uploading certificate to Zoho:', error);
+            console.error('Error uploading attachment to Zoho:', error);
             return false;
-        }
-    }
-
-    /**
-     * Specialized: Update Adoption record with certificate URL and sent date
-     */
-    public async updateAdoptionCertificate(
-        recordId: string,
-        certificateUrl: string,
-        sentDate: string
-    ): Promise<any> {
-        try {
-            return await this.updateRecord('Adoptions', recordId, {
-                'Certificate_URL': certificateUrl,
-                'Certificate_Sent_Date': sentDate
-            });
-        } catch (error) {
-            console.error('Error updating adoption certificate info:', error);
-            throw error;
-        }
-    }
-
-    /**
-     * Specialized: Get Adoption record by ID
-     */
-    public async getAdoptionById(recordId: string): Promise<any> {
-        try {
-            const response = await this.request(`Adoptions/${recordId}`);
-            return response.data?.[0];
-        } catch (error) {
-            console.error('Error fetching adoption record:', error);
-            return null;
         }
     }
 }
