@@ -3,6 +3,7 @@ import Stripe from 'stripe';
 import { headers } from 'next/headers';
 import { zoho } from '@/lib/zoho';
 import { voucherGenerator } from '@/lib/voucher-generator';
+import { certificateGenerator } from '@/lib/certificate-generator';
 import { emailService } from '@/lib/email-service';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -43,14 +44,16 @@ export async function POST(req: Request) {
                     const lastName = nameParts.slice(1).join(' ') || '';
                     const phone = session.customer_details?.phone || undefined;
 
+                    let zohoRecordId = '';
                     const adoption = await zoho.findAdoptionBySessionId(session.id);
                     if (adoption) {
+                        zohoRecordId = adoption.id;
                         await zoho.updateRecord('Adoptions', adoption.id, {
                             "Status": "Paid"
                         });
                     } else {
                         // Create if it didn't exist for some reason
-                        await zoho.syncAdoption({
+                        const createResult = await zoho.syncAdoption({
                             email: session.customer_details?.email || 'pending@stripe.com',
                             alpaca: session.metadata.alpaca,
                             tier: session.metadata.tier,
@@ -61,6 +64,33 @@ export async function POST(req: Request) {
                             lastName: lastName,
                             phone: phone
                         });
+                        zohoRecordId = createResult.data?.[0]?.details?.id;
+                    }
+
+                    // 1.5 Generate and Attach Certificate
+                    if (zohoRecordId) {
+                        try {
+                            const { filePath, publicUrl } = await certificateGenerator.generateCertificate({
+                                adoptionId: session.id.slice(-8), // Using short session ID as adoption ID
+                                adopterName: customerName || 'Valued Adopter',
+                                alpacaName: session.metadata.alpaca,
+                                adoptionDate: new Date().toISOString().split('T')[0],
+                                tier: (session.metadata.tier?.toLowerCase() as any) || 'bronze',
+                                locale: 'en' // Default to en for now
+                            });
+
+                            // Read as buffer for Zoho upload
+                            const fs = await import('fs');
+                            const pdfBuffer = fs.readFileSync(filePath);
+
+                            // Upload to Zoho
+                            await zoho.uploadCertificateAttachment(zohoRecordId, pdfBuffer, `Adoption_${session.metadata.alpaca}.pdf`);
+
+                            // Update URL in Zoho
+                            await zoho.updateAdoptionCertificate(zohoRecordId, publicUrl, new Date().toISOString().split('T')[0]);
+                        } catch (certErr) {
+                            console.error('Certificate Automation Error:', certErr);
+                        }
                     }
                 } catch (zohoErr) {
                     console.error('Zoho Adoption Update Error:', zohoErr);
