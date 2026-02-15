@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { HeroSection } from './HeroSection'
+import { Hero } from './home/Hero'
 import { AnimalSection } from './AnimalSection'
 import { ActivitiesSection } from './ActivitiesSection'
 import { AccommodationSection } from './AccommodationSection'
@@ -14,7 +14,7 @@ interface HomeContentProps {
 export function HomeContent({ locale }: HomeContentProps) {
   return (
     <main>
-      <HeroSection locale={locale} />
+      <Hero />
       <AnimalSection locale={locale} />
       <ActivitiesSection locale={locale} />
       <SocialMediaBanner />

@@ -1,8 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import './globals.css';
 import FacebookPixel from '@/components/FacebookPixel';
+import { Navbar } from '@/components/layout/Navbar';
+import { AlpacaGuide } from '@/components/ai/AlpacaGuide';
+import { Inter, Nunito } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' });
 
 declare global {
   interface Window {
@@ -67,9 +74,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className={`${inter.variable} ${nunito.variable} font-sans`}>
         <FacebookPixel />
+        <Navbar />
         {children}
+        <AlpacaGuide />
       </body>
     </html>
   );

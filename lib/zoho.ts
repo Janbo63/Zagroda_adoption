@@ -261,7 +261,9 @@ export class ZohoCRM {
             "Recipient_Name": data.recipientName || "",
             "Expiration_Date": data.expirationDate,
             "Status": data.status,
-            "Description": `Voucher Code: ${data.code}`
+            "Description": `Voucher Code: ${data.code}`,
+            "Discount_Value": data.amount / 100,
+            "Discount_Currency": data.currency,
         };
 
         // Link to contact if found/created
