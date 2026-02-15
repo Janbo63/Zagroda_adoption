@@ -9,9 +9,10 @@ echo "--- 🔄 Starting Auto-Deployment ---"
 # Navigate to the project directory
 cd /var/www/Zagroda_adoption
 
-# Pull the latest changes from GitHub
-echo "--- 📥 Pulling latest code ---"
-git pull origin main
+# Force the local server branch to match the remote branch (handles rollbacks/force pushes)
+echo "--- 📥 Resetting to latest code ---"
+git fetch origin main
+git reset --hard origin/main
 
 # Rebuild and restart the Docker container
 echo "--- 🏗️ Rebuilding and restarting Docker ---"
