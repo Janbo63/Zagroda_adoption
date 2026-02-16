@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-//a new line for testing
+# Zagroda Alpakoterapii — zagrodaalpakoterapii.com
+
+Customer-facing website for the alpaca therapy farm. Features animal profiles, activities, accommodation, alpaca adoption with Stripe payments, gift vouchers with PDF generation, blog, and marketing campaigns.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 + React 18 + TypeScript
+- **Styling**: Tailwind CSS + Radix UI + Framer Motion
+- **i18n**: `next-intl` — Polish (default), English, German, Czech, Dutch
+- **Payments**: Stripe (adoption sponsorships, voucher purchases)
+- **CRM**: Zoho CRM (contacts, records)
+- **Email**: Nodemailer (confirmations, certificates)
+- **PDF**: pdfkit (adoption certificates, voucher PDFs)
+- **Analytics**: Facebook Pixel + Google Tag Manager
+
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.local.example .env.local
+# Edit .env.local with your Stripe and Zoho keys
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) — default language is Polish (`/pl/`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Production**: Docker Compose on Hostinger VPS (port 3001), auto-deployed via GitHub Actions on push to `main`.
 
-## Learn More
+```bash
+# Manual Docker deployment
+docker-compose up --build -d
+```
 
-To learn more about Next.js, take a look at the following resources:
+See [docs/STAGING_DEPLOYMENT.md](docs/STAGING_DEPLOYMENT.md) for staging setup.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/
+  [locale]/        # Locale-based routing (pl, en, de, cs, nl)
+    about/         # About the farm
+    accommodation/ # Room listings
+    activities/    # Farm activities
+    adopt/         # Alpaca adoption program
+    animals/       # Animal profiles
+    blog/          # Blog posts
+    contact/       # Contact form
+    vouchers/      # Gift voucher shop
+  api/             # API routes (Stripe, certificates, posts)
+components/        # React components
+lib/               # Business logic (Zoho, email, PDF generation)
+messages/          # i18n translation files (pl, en, de, cs, nl)
+public/            # Static assets and images
+```

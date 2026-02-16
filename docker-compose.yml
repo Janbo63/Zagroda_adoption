@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build:
@@ -8,9 +6,7 @@ services:
     ports:
       - "3001:3000"
     environment:
-      - DATABASE_URL=file:./dev.db
       - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
       - NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
-    volumes:
-      - ./dev.db:/app/dev.db
     restart: always
+
