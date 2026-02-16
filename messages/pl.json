@@ -710,7 +710,12 @@
     },
     "whoWeAre": {
       "title": "1. Kim jesteśmy?",
-      "content": "Nasza strona to: www.zagrodaalpakoterapii.com. Administratorem danych jest Future Solutions Jan Fura, adres: Orłowice 24, 59-630 Mirsk, Polska. NIP: 6161566678."
+      "content": "Nasza strona to: www.zagrodaalpakoterapii.com. Administratorem danych jest Future Solutions Jan Fura, adres: Orłowice 24, 59-630 Mirsk, Polska. NIP: 6161566678.",
+      "items": [
+        "Nazwa firmy: Future Solutions Jan Fura",
+        "Adres: Orłowice 24, 59-630 Mirsk, Polska",
+        "NIP: 6161566678"
+      ]
     },
     "messengerData": {
       "title": "Dane z Bota Facebook Messenger",
@@ -730,6 +735,12 @@
     },
     "dataCollection": {
       "title": "Jakie dane osobowe zbieramy i dlaczego je zbieramy",
+      "content": "Zbieramy dane osobowe w następujących celach:",
+      "items": [
+        "Formularze kontaktowe: informacje umożliwiające kontakt i dokonanie płatności za pokój lub aktywności",
+        "Komunikacja marketingowa: dane użytkowników, którzy wyrazili zgodę na otrzymywanie informacji",
+        "Osadzone treści z innych witryn: mogą zbierać dane o Tobie i używać plików cookie"
+      ],
       "contactForms": {
         "title": "Formularze kontaktowe",
         "content": "W przypadku klientów chcących zarezerwować pokoje lub aktywności, zbieramy informacje umożliwiające nam kontakt z Tobą oraz, w stosownych przypadkach, dokonanie płatności za pokój. W przypadku użytkowników, którzy wyrazili zgodę na otrzymywanie komunikacji od nas, często wykorzystujemy dostarczone informacje w kampaniach marketingowych lub ogólnych komunikatach."
@@ -751,7 +762,11 @@
     },
     "dataRetention": {
       "title": "Jak długo przechowujemy Twoje dane",
-      "content": "W przypadku użytkowników dokonujących rezerwacji lub zapytania, przechowujemy Twoje informacje wyłącznie na potrzeby tej transakcji. Zazwyczaj archiwizujemy informacje w ciągu 3 lat od dokonania rezerwacji lub zapytania. W przypadku interakcji z botem Messenger, wiadomości i powiązane dane są przechowywane do 3 lat."
+      "content": "W przypadku użytkowników dokonujących rezerwacji lub zapytania, przechowujemy Twoje informacje wyłącznie na potrzeby tej transakcji.",
+      "items": [
+        "Rezerwacje i zapytania: archiwizujemy informacje w ciągu 3 lat",
+        "Interakcje z botem Messenger: wiadomości i powiązane dane przechowywane do 3 lat"
+      ]
     },
     "dataDeletion": {
       "title": "Jak zażądać usunięcia danych",
@@ -764,11 +779,22 @@
     },
     "yourRights": {
       "title": "Jakie prawa przysługują Ci w związku z Twoimi danymi",
-      "content": "Jeśli dokonałeś zapytania lub rezerwacji na tej stronie, możesz zażądać otrzymania pliku wyeksportowanego z danymi osobowymi, które posiadamy na Twój temat, w tym wszelkich danych, które nam dostarczyłeś. Możesz również zażądać usunięcia wszelkich danych osobowych, które posiadamy na Twój temat. Nie dotyczy to danych, które jesteśmy zobowiązani przechowywać ze względów administracyjnych, prawnych lub bezpieczeństwa."
+      "content": "Zgodnie z RODO przysługują Ci następujące prawa:",
+      "items": [
+        "Prawo dostępu do danych — możesz zażądać kopii swoich danych osobowych",
+        "Prawo do sprostowania — możesz poprosić o poprawienie nieprawidłowych danych",
+        "Prawo do usunięcia — możesz zażądać usunięcia swoich danych osobowych",
+        "Dane przechowywane ze względów administracyjnych, prawnych lub bezpieczeństwa nie podlegają usunięciu"
+      ]
     },
     "contact": {
       "title": "Nasze dane kontaktowe",
-      "content": "Nasz adres e-mail do kontaktu to admin@zagrodaalpakoterapii.com"
+      "content": "W sprawach dotyczących danych osobowych prosimy o kontakt:",
+      "items": [
+        "Email: admin@zagrodaalpakoterapii.com",
+        "Adres: Orłowice 24, 59-630 Mirsk, Polska",
+        "Telefon: 695 545 330"
+      ]
     },
     "metaCrawlers": {
       "title": "Crawlery Meta",

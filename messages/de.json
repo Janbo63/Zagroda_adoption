@@ -592,6 +592,41 @@
     "termsAndConditions": "AGB",
     "allRightsReserved": "Alle Rechte vorbehalten"
   },
+  "vouchers": {
+    "title": "Geschenkgutscheine",
+    "legal": {
+      "terms_title": "AGB",
+      "privacy_title": "Datenschutz",
+      "accept_terms": "Ich akzeptiere die AGB und die Datenschutzerklärung",
+      "marketing_opt_in": "Ich möchte Neuigkeiten über die Alpakas und Sonderangebote erhalten",
+      "required_error": "Bitte akzeptieren Sie die Bedingungen, um fortzufahren",
+      "footer_link": "AGB"
+    },
+    "subtitle": "Verschenken Sie Alpaka-Magie",
+    "description": "Jeder Gutschein kann für Aktivitäten, Aufenthalte oder Alpaka-Adoption verwendet werden.",
+    "selectAmount": "Betrag auswählen",
+    "currency": "Währung",
+    "recipientDetails": "Empfängerdetails",
+    "recipientEmail": "E-Mail des Empfängers",
+    "recipientName": "Name des Empfängers (optional)",
+    "personalMessage": "Persönliche Nachricht (optional)",
+    "buyerEmail": "Ihre E-Mail",
+    "buyNow": "Gutschein kaufen",
+    "howItWorks": "So funktioniert's",
+    "step1": "Betrag auswählen",
+    "step2": "Empfängerdetails eingeben",
+    "step3": "Der Empfänger erhält eine E-Mail mit einem einzigartigen Code",
+    "step4": "Der Code kann für jedes Bauernhof-Erlebnis eingelöst werden",
+    "validFor": "12 Monate gültig",
+    "redeemCode": "Code einlösen",
+    "enterCode": "Gutscheincode eingeben",
+    "applyVoucher": "Anwenden",
+    "voucherApplied": "Gutschein angewendet",
+    "voucherBalance": "Gutscheinguthaben",
+    "invalidCode": "Ungültiger Gutscheincode",
+    "expired": "Gutschein ist abgelaufen",
+    "fullyRedeemed": "Gutschein wurde bereits vollständig eingelöst"
+  },
   "privacy": {
     "title": "Datenschutzerklärung",
     "intro": {
@@ -601,7 +636,12 @@
     },
     "whoWeAre": {
       "title": "Wer wir sind",
-      "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com"
+      "content": "Unsere Website-Adresse lautet: www.zagrodaalpakoterapii.com. Der Datenadministrator ist Future Solutions Jan Fura, Adresse: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678.",
+      "items": [
+        "Unternehmen: Future Solutions Jan Fura",
+        "Adresse: 24 Orłowice, Mirsk 59-630, Polen",
+        "NIP: 6161566678"
+      ]
     },
     "messengerData": {
       "title": "Facebook Messenger Bot Daten",
@@ -621,6 +661,12 @@
     },
     "dataCollection": {
       "title": "Welche personenbezogenen Daten wir erheben und warum wir sie erheben",
+      "content": "Wir erheben personenbezogene Daten für folgende Zwecke:",
+      "items": [
+        "Kontaktformulare: Informationen, um Sie zu kontaktieren und Zahlungen für Zimmer oder Aktivitäten abzuwickeln",
+        "Marketingkommunikation: Daten von Nutzern, die sich für den Erhalt von Informationen entschieden haben",
+        "Eingebettete Inhalte von anderen Websites: können Daten über Sie sammeln und Cookies verwenden"
+      ],
       "contactForms": {
         "title": "Kontaktformulare",
         "content": "Für Kunden, die Zimmer oder Aktivitäten buchen möchten, erheben wir Informationen, die es uns ermöglichen, Sie zu kontaktieren und gegebenenfalls die Zahlung für das Zimmer abzuwickeln. Bei Nutzern, die sich für den Erhalt von Mitteilungen von uns entschieden haben, verwenden wir die bereitgestellten Informationen häufig im Rahmen von Marketing- oder allgemeinen Kommunikationskampagnen."
@@ -633,11 +679,20 @@
     },
     "dataSharing": {
       "title": "Mit wem wir Ihre Daten teilen",
-      "content": "Wir geben Ihre Daten nicht an Dritte weiter, außer wenn dies für die Bereitstellung unserer Dienste über Facebook Messenger erforderlich ist. Ihre Nachrichten und Informationen werden gemäß den Datenschutzrichtlinien von Facebook und unseren Serviceanforderungen verarbeitet."
+      "content": "Wir verkaufen Ihre Daten nicht. Wir teilen Ihre personenbezogenen Daten mit vertrauenswürdigen Drittanbietern, um Ihre Bestellungen zu erfüllen und unsere Beziehung zu verwalten. Dazu gehören:",
+      "items": [
+        "Zoho Corporation (CRM für Bestellungsmanagement und Kommunikation)",
+        "Stripe Payments (Sichere Zahlungsabwicklung)",
+        "WhatsApp/Meta (Für Kommunikation, wenn Sie diese Kanäle nutzen)"
+      ]
     },
     "dataRetention": {
       "title": "Wie lange wir Ihre Daten speichern",
-      "content": "Für Nutzer, die eine Buchung oder Anfrage vornehmen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf. Wir archivieren Informationen in der Regel innerhalb von 3 Jahren nach einer Buchung oder Anfrage. Bei Messenger-Bot-Interaktionen werden Nachrichten und zugehörige Daten bis zu 3 Jahre lang gespeichert."
+      "content": "Für Nutzer, die eine Buchung oder Anfrage vornehmen, bewahren wir Ihre Informationen nur für die Zwecke dieser Transaktion auf.",
+      "items": [
+        "Buchungen und Anfragen: Informationen werden innerhalb von 3 Jahren archiviert",
+        "Messenger-Bot-Interaktionen: Nachrichten und zugehörige Daten werden bis zu 3 Jahre lang gespeichert"
+      ]
     },
     "dataDeletion": {
       "title": "Wie Sie die Löschung Ihrer Daten beantragen können",
@@ -650,11 +705,22 @@
     },
     "yourRights": {
       "title": "Welche Rechte Sie an Ihren Daten haben",
-      "content": "Wenn Sie eine Anfrage oder Buchung auf dieser Website vorgenommen haben, können Sie eine exportierte Datei der personenbezogenen Daten anfordern, die wir über Sie gespeichert haben, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben. Sie können auch die Löschung aller personenbezogenen Daten verlangen, die wir über Sie gespeichert haben. Dies umfasst nicht die Daten, die wir aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahren müssen."
+      "content": "Gemäß DSGVO haben Sie folgende Rechte:",
+      "items": [
+        "Recht auf Auskunft — Sie können eine Kopie Ihrer personenbezogenen Daten anfordern",
+        "Recht auf Berichtigung — Sie können uns bitten, ungenaue Daten zu korrigieren",
+        "Recht auf Löschung — Sie können die Löschung Ihrer personenbezogenen Daten verlangen",
+        "Daten, die aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahrt werden, sind von der Löschung ausgenommen"
+      ]
     },
     "contact": {
       "title": "Unsere Kontaktinformationen",
-      "content": "Unsere Kontakt-E-Mail-Adresse lautet admin@zagrodaalpakoterapii.com"
+      "content": "Für datenschutzrelevante Angelegenheiten kontaktieren Sie uns bitte:",
+      "items": [
+        "E-Mail: admin@zagrodaalpakoterapii.com",
+        "Adresse: 24 Orłowice, 59-630 Mirsk, Polen",
+        "Telefon: +48 695 545 330"
+      ]
     },
     "metaCrawlers": {
       "title": "Meta Web-Crawler",

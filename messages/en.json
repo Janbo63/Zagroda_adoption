@@ -724,7 +724,12 @@
     },
     "whoWeAre": {
       "title": "1. Who we are?",
-      "content": "Our website address is: www.zagrodaalpakoterapii.com. The data administrator is Future Solutions Jan Fura, address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678."
+      "content": "Our website address is: www.zagrodaalpakoterapii.com. The data administrator is Future Solutions Jan Fura, address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678.",
+      "items": [
+        "Company: Future Solutions Jan Fura",
+        "Address: 24 Orłowice, Mirsk 59-630, Poland",
+        "NIP: 6161566678"
+      ]
     },
     "messengerData": {
       "title": "Facebook Messenger Bot Data",
@@ -744,6 +749,12 @@
     },
     "dataCollection": {
       "title": "What personal data we collect and why we collect it",
+      "content": "We collect personal data for the following purposes:",
+      "items": [
+        "Contact forms: information to enable us to contact you and process payments for rooms or activities",
+        "Marketing communications: data from users who opted in to receive information",
+        "Embedded content from other websites: may collect data about you and use cookies"
+      ],
       "contactForms": {
         "title": "Contact forms",
         "content": "For customers wanting to book rooms or activities we will collect information to enable us to contact you and where applicable to pay for the room. For those users that have chosen to receive communications from us we will often use the information supplied within marketing or general communication campaigns."
@@ -765,7 +776,11 @@
     },
     "dataRetention": {
       "title": "How long we retain your data",
-      "content": "For users completing a booking or enquiry we will keep your information for the purposes of that transaction only. We will typically archive information within 3 years of any booking or enquiry. For Messenger bot interactions, messages and related data are retained for up to 3 years."
+      "content": "For users completing a booking or enquiry we will keep your information for the purposes of that transaction only.",
+      "items": [
+        "Bookings and enquiries: information archived within 3 years",
+        "Messenger bot interactions: messages and related data retained for up to 3 years"
+      ]
     },
     "dataDeletion": {
       "title": "How to request data deletion",
@@ -778,11 +793,22 @@
     },
     "yourRights": {
       "title": "What rights you have over your data",
-      "content": "If you have made an enquiry or booking on this site you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+      "content": "Under GDPR, you have the following rights:",
+      "items": [
+        "Right of access — you can request a copy of your personal data",
+        "Right to rectification — you can ask us to correct inaccurate data",
+        "Right to erasure — you can request deletion of your personal data",
+        "Data kept for administrative, legal, or security purposes is exempt from deletion"
+      ]
     },
     "contact": {
       "title": "Our contact information",
-      "content": "Our contact email address is admin@zagrodaalpakoterapii.com"
+      "content": "For data privacy related matters, please contact us:",
+      "items": [
+        "Email: admin@zagrodaalpakoterapii.com",
+        "Address: 24 Orłowice, 59-630 Mirsk, Poland",
+        "Phone: +48 695 545 330"
+      ]
     },
     "metaCrawlers": {
       "title": "Meta Web Crawlers",

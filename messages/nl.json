@@ -724,7 +724,12 @@
         },
         "whoWeAre": {
             "title": "Wie zijn wij?",
-            "content": "Ons website adres is: www.zagrodaalpakoterapii.com. De beheerder van de gegevens is Future Solutions Jan Fura, adres: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678."
+            "content": "Ons website adres is: www.zagrodaalpakoterapii.com. De beheerder van de gegevens is Future Solutions Jan Fura, adres: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678.",
+            "items": [
+                "Bedrijf: Future Solutions Jan Fura",
+                "Adres: 24 Orłowice, Mirsk 59-630, Polen",
+                "NIP: 6161566678"
+            ]
         },
         "messengerData": {
             "title": "Facebook Messenger Bot Gegevens",
@@ -744,6 +749,12 @@
         },
         "dataCollection": {
             "title": "Welke persoonlijke gegevens we verzamelen en waarom we die verzamelen",
+            "content": "Wij verzamelen persoonlijke gegevens voor de volgende doeleinden:",
+            "items": [
+                "Contactformulieren: informatie om contact met u op te nemen en betalingen voor kamers of activiteiten te verwerken",
+                "Marketingcommunicatie: gegevens van gebruikers die ervoor hebben gekozen om informatie te ontvangen",
+                "Ingesloten inhoud van andere websites: kan gegevens over u verzamelen en cookies gebruiken"
+            ],
             "contactForms": {
                 "title": "Contactformulieren",
                 "content": "Voor klanten die kamers of activiteiten willen boeken, verzamelen we informatie om contact met u op te nemen en, indien van toepassing, voor de kamer te betalen. Voor gebruikers die ervoor hebben gekozen om communicatie van ons te ontvangen, gebruiken we de verstrekte informatie vaak binnen marketing- of algemene communicatiecampagnes."
@@ -756,11 +767,20 @@
         },
         "dataSharing": {
             "title": "Met wie we uw gegevens delen",
-            "content": "Wij delen uw gegevens niet met derden, behalve als dat nodig is om onze diensten via Facebook Messenger te leveren. Uw berichten en informatie worden verwerkt in overeenstemming met het gegevensbeleid van Facebook en onze servicevereisten."
+            "content": "Wij verkopen uw gegevens niet. Wij delen uw persoonlijke gegevens met vertrouwde externe dienstverleners om uw bestellingen te verwerken en onze relatie te beheren. Dit zijn onder andere:",
+            "items": [
+                "Zoho Corporation (CRM voor orderbeheer en communicatie)",
+                "Stripe Payments (Veilige betalingsverwerking)",
+                "WhatsApp/Meta (Voor communicatie als u deze kanalen gebruikt)"
+            ]
         },
         "dataRetention": {
             "title": "Hoe lang we uw gegevens bewaren",
-            "content": "Voor gebruikers die een boeking of aanvraag invullen, bewaren we uw informatie alleen voor de doeleinden van die transactie. We archiveren informatie doorgaans binnen 3 jaar na een boeking of aanvraag. Voor interacties met de Messenger-bot worden berichten en gerelateerde gegevens maximaal 3 jaar bewaard."
+            "content": "Voor gebruikers die een boeking of aanvraag invullen, bewaren we uw informatie alleen voor de doeleinden van die transactie.",
+            "items": [
+                "Boekingen en aanvragen: informatie wordt binnen 3 jaar gearchiveerd",
+                "Messenger-bot interacties: berichten en gerelateerde gegevens worden maximaal 3 jaar bewaard"
+            ]
         },
         "dataDeletion": {
             "title": "Hoe u kunt verzoeken om gegevensverwijdering",
@@ -773,11 +793,22 @@
         },
         "yourRights": {
             "title": "Welke rechten u heeft over uw gegevens",
-            "content": "Als u een aanvraag of boeking op deze site heeft gedaan, kunt u verzoeken om een geëxporteerd bestand te ontvangen van de persoonlijke gegevens die wij over u bewaren, inclusief de gegevens die u aan ons heeft verstrekt. U kunt ook verzoeken dat wij alle persoonlijke gegevens die wij over u bewaren wissen. Dit omvat geen gegevens die wij verplicht moeten bewaren voor administratieve, juridische of beveiligingsdoeleinden."
+            "content": "Onder de AVG heeft u de volgende rechten:",
+            "items": [
+                "Recht op inzage — u kunt een kopie van uw persoonlijke gegevens opvragen",
+                "Recht op rectificatie — u kunt ons vragen om onjuiste gegevens te corrigeren",
+                "Recht op wissing — u kunt verzoeken om verwijdering van uw persoonlijke gegevens",
+                "Gegevens die voor administratieve, juridische of beveiligingsdoeleinden worden bewaard, zijn uitgezonderd van verwijdering"
+            ]
         },
         "contact": {
             "title": "Onze contactgegevens",
-            "content": "Ons contact e-mailadres is admin@zagrodaalpakoterapii.com"
+            "content": "Voor privacygerelateerde zaken kunt u contact met ons opnemen:",
+            "items": [
+                "E-mail: admin@zagrodaalpakoterapii.com",
+                "Adres: 24 Orłowice, 59-630 Mirsk, Polen",
+                "Telefoon: +48 695 545 330"
+            ]
         },
         "metaCrawlers": {
             "title": "Meta Web Crawlers",

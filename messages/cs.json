@@ -609,6 +609,41 @@
     "termsAndConditions": "Obchodní podmínky",
     "allRightsReserved": "Všechna práva vyhrazena"
   },
+  "vouchers": {
+    "title": "Dárkové poukazy",
+    "legal": {
+      "terms_title": "Podmínky",
+      "privacy_title": "Ochrana údajů",
+      "accept_terms": "Souhlasím s obchodními podmínkami a zásadami ochrany osobních údajů",
+      "marketing_opt_in": "Chci zasílat novinky o alpakách a speciální nabídky",
+      "required_error": "Pro pokračování musíte souhlasit s podmínkami",
+      "footer_link": "Podmínky"
+    },
+    "subtitle": "Darujte kouzlo alpak",
+    "description": "Každý poukaz lze využít na aktivity, pobyty nebo adopci alpaky.",
+    "selectAmount": "Vyberte částku",
+    "currency": "Měna",
+    "recipientDetails": "Údaje obdarovaného",
+    "recipientEmail": "E-mail obdarovaného",
+    "recipientName": "Jméno obdarovaného (volitelné)",
+    "personalMessage": "Osobní zpráva (volitelné)",
+    "buyerEmail": "Váš e-mail",
+    "buyNow": "Koupit poukaz",
+    "howItWorks": "Jak to funguje",
+    "step1": "Vyberte částku",
+    "step2": "Přidejte údaje obdarovaného",
+    "step3": "Obdarovaný obdrží e-mail s unikátním kódem",
+    "step4": "Kód lze využít na jakýkoli zážitek na farmě",
+    "validFor": "Platnost 12 měsíců",
+    "redeemCode": "Uplatnit kód",
+    "enterCode": "Zadejte kód poukazu",
+    "applyVoucher": "Použít",
+    "voucherApplied": "Poukaz uplatněn",
+    "voucherBalance": "Zůstatek poukazu",
+    "invalidCode": "Neplatný kód poukazu",
+    "expired": "Poukaz vypršel",
+    "fullyRedeemed": "Poukaz byl již plně využit"
+  },
   "privacy": {
     "title": "Prohlášení o ochraně osobních údajů",
     "intro": {
@@ -618,7 +653,12 @@
     },
     "whoWeAre": {
       "title": "Kdo jsme",
-      "content": "Naše webová adresa je: www.zagrodaalpakoterapii.com"
+      "content": "Naše webová adresa je: www.zagrodaalpakoterapii.com. Správcem osobních údajů je Future Solutions Jan Fura, adresa: 24 Orłowice, Mirsk 59-630, Polsko. NIP: 6161566678.",
+      "items": [
+        "Společnost: Future Solutions Jan Fura",
+        "Adresa: 24 Orłowice, Mirsk 59-630, Polsko",
+        "NIP: 6161566678"
+      ]
     },
     "messengerData": {
       "title": "Data z Facebook Messenger Bota",
@@ -638,6 +678,12 @@
     },
     "dataCollection": {
       "title": "Jaké osobní údaje shromažďujeme a proč je shromažďujeme",
+      "content": "Osobní údaje shromažďujeme pro následující účely:",
+      "items": [
+        "Kontaktní formuláře: informace, které nám umožní vás kontaktovat a zpracovat platby za pokoje nebo aktivity",
+        "Marketingová komunikace: údaje od uživatelů, kteří se přihlásili k odběru informací",
+        "Vložený obsah z jiných webů: může o vás shromažďovat údaje a používat soubory cookie"
+      ],
       "contactForms": {
         "title": "Kontaktní formuláře",
         "content": "Pro zákazníky, kteří si chtějí rezervovat pokoje nebo aktivity, shromažďujeme informace, které nám umožňují vás kontaktovat a případně provést platbu za pokoj. U uživatelů, kteří se rozhodli přijímat od nás komunikaci, často používáme poskytnuté informace v marketingových nebo obecných komunikačních kampaních."
@@ -650,11 +696,20 @@
     },
     "dataSharing": {
       "title": "S kým sdílíme vaše údaje",
-      "content": "Nesdílíme vaše údaje s žádnými třetími stranami, kromě případů nezbytných pro poskytování našich služeb prostřednictvím Facebook Messengeru. Vaše zprávy a informace jsou zpracovávány v souladu se zásadami ochrany osobních údajů Facebooku a našimi servisními požadavky."
+      "content": "Vaše údaje neprodáváme. Vaše osobní údaje sdílíme s důvěryhodnými poskytovateli služeb třetích stran za účelem plnění vašich objednávek a správy našeho vztahu. Patří mezi ně:",
+      "items": [
+        "Zoho Corporation (CRM pro správu objednávek a komunikaci)",
+        "Stripe Payments (Bezpečné zpracování plateb)",
+        "WhatsApp/Meta (Pro komunikaci, pokud tyto kanály používáte)"
+      ]
     },
     "dataRetention": {
       "title": "Jak dlouho uchováváme vaše údaje",
-      "content": "Pro uživatele, kteří provedli rezervaci nebo dotaz, uchováváme vaše informace pouze pro účely této transakce. Obvykle archivujeme informace do 3 let od provedení rezervace nebo dotazu. U interakcí s Messenger botem jsou zprávy a související údaje uchovávány až 3 roky."
+      "content": "Pro uživatele, kteří provedli rezervaci nebo dotaz, uchováváme vaše informace pouze pro účely této transakce.",
+      "items": [
+        "Rezervace a dotazy: informace archivovány do 3 let",
+        "Interakce s Messenger botem: zprávy a související údaje uchovávány až 3 roky"
+      ]
     },
     "dataDeletion": {
       "title": "Jak požádat o vymazání údajů",
@@ -667,11 +722,22 @@
     },
     "yourRights": {
       "title": "Jaká máte práva ke svým údajům",
-      "content": "Pokud jste provedli dotaz nebo rezervaci na tomto webu, můžete požádat o exportovaný soubor osobních údajů, které o vás máme, včetně všech údajů, které jste nám poskytli. Můžete také požádat o vymazání veškerých osobních údajů, které o vás máme. To nezahrnuje údaje, které musíme uchovávat z administrativních, právních nebo bezpečnostních důvodů."
+      "content": "Podle GDPR máte následující práva:",
+      "items": [
+        "Právo na přístup — můžete požádat o kopii svých osobních údajů",
+        "Právo na opravu — můžete nás požádat o opravu nepřesných údajů",
+        "Právo na výmaz — můžete požádat o smazání svých osobních údajů",
+        "Údaje uchovávané z administrativních, právních nebo bezpečnostních důvodů jsou z výmazu vyloučeny"
+      ]
     },
     "contact": {
       "title": "Naše kontaktní údaje",
-      "content": "Náš kontaktní e-mail je admin@zagrodaalpakoterapii.com"
+      "content": "V záležitostech ochrany osobních údajů nás prosím kontaktujte:",
+      "items": [
+        "E-mail: admin@zagrodaalpakoterapii.com",
+        "Adresa: 24 Orłowice, 59-630 Mirsk, Polsko",
+        "Telefon: +48 695 545 330"
+      ]
     },
     "metaCrawlers": {
       "title": "Meta Web Crawlery",

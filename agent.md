@@ -22,6 +22,15 @@ Polish (default), English, German, Czech, Dutch — via `next-intl` with locale-
 - **Docker deployment** — Containerized via Docker Compose, deployed to Hostinger VPS at port 3001 behind Caddy
 - **Stripe for payments** — Adoption sponsorships and voucher purchases, with automated email confirmations
 - **next-intl for i18n** — Locale detection disabled, Polish as default, Facebook crawler handling in middleware
+
+## i18n Rules (Critical)
+
+> **Every translation change MUST touch all 5 locale files**: `pl.json`, `en.json`, `de.json`, `cs.json`, `nl.json`.
+
+- When adding or modifying any key in `messages/*.json`, update **all 5 files** in the same commit — never assume the other locales already have it
+- After i18n changes, run `npm run build` and grep for `MISSING_MESSAGE` — the build will succeed but log errors for missing keys
+- The privacy page component (`app/[locale]/privacy/page.tsx`) calls `renderItems()` on all sections, expecting `title`, `content`, and `items` for each
+- Translation structure must be consistent: if one locale has an `items` array, all must have it
 - **PDF generation** — pdfkit for adoption certificates and voucher PDFs
 
 ## Tech Stack
