@@ -55,9 +55,7 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-rose-50 via-orange-50 to-amber-50 py-20 overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-10 left-10">
-                        <Heart className="w-32 h-32 text-rose-400 animate-pulse" />
-                    </div>
+
                     <div className="absolute bottom-10 right-10">
                         <Star className="w-40 h-40 text-orange-400" />
                     </div>

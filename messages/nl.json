@@ -392,12 +392,12 @@
         "fullyRedeemed": "Bon is volledig verzilverd"
     },
     "campaign": {
-        "badge": "Winter vol Liefde Speciaal",
+        "badge": "Winter Experience Speciaal",
         "hero": {
-            "title": "Vind Jouw Perfecte Match",
-            "subtitle": "Geen drama. Alleen onvoorwaardelijke liefde. De perfecte Valentine's date. 💕",
+            "title": "Vind Jouw Winteravontuur",
+            "subtitle": "Geen drama. Alleen onvoorwaardelijke vriendschap. De perfecte winterse ontsnapping. ✨",
             "socialProof": "4.9/5 sterren · 400+ bezoekers",
-            "primaryCta": "Ontmoet Je Match",
+            "primaryCta": "Ontdek Meer",
             "secondaryCta": "Adopteer Een Alpaca"
         },
         "stars": {
@@ -476,11 +476,11 @@
             }
         },
         "finalCta": {
-            "title": "Klaar voor Echte Liefde?",
-            "subtitle": "Boek je Valentine's ervaring vandaag nog",
+            "title": "Klaar voor Een Uniek Avontuur?",
+            "subtitle": "Boek je winterse ervaring vandaag nog",
             "primaryBtn": "Koop Cadeaubon",
             "secondaryBtn": "Meer Informatie",
-            "urgency": "⏰ Valentine's Special: tot 14 februari"
+            "urgency": "⏰ Winter Special: beperkt beschikbaar"
         }
     },
     "navigation": {

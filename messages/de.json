@@ -752,12 +752,12 @@
     }
   },
   "campaign": {
-    "badge": "Winter vol Liefde Special",
+    "badge": "Winter Experience Special",
     "hero": {
-      "title": "Finde Dein Perfektes Match",
-      "subtitle": "Kein Drama. Nur bedingungslose Liebe. Das perfekte Valentinstag-Date. 💕",
+      "title": "Finde Dein Winterabenteuer",
+      "subtitle": "Kein Drama. Nur bedingungslose Freundschaft. Die perfekte Winterflucht. ✨",
       "socialProof": "4.9/5 Sterne · 400+ Besucher",
-      "primaryCta": "Triff Dein Match",
+      "primaryCta": "Mehr Entdecken",
       "secondaryCta": "Adoptiere Ein Alpaka"
     },
     "stars": {
@@ -836,11 +836,11 @@
       }
     },
     "finalCta": {
-      "title": "Bereit Für Echte Liebe?",
-      "subtitle": "Buche dein Valentinstag-Erlebnis heute",
+      "title": "Bereit für ein Abenteuer?",
+      "subtitle": "Buche dein Winter-Erlebnis heute",
       "primaryBtn": "Gutschein Kaufen",
       "secondaryBtn": "Mehr Informationen",
-      "urgency": "⏰ Valentinstag-Special: bis 14. Februar"
+      "urgency": "⏰ Winter Special: begrenzt verfügbar"
     }
   },
   "social": {

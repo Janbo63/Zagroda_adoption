@@ -769,12 +769,12 @@
     }
   },
   "campaign": {
-    "badge": "Winter vol Liefde Speciál",
+    "badge": "Winter Experience Special",
     "hero": {
-      "title": "Najdi Svůj Perfektní Match",
-      "subtitle": "Žádné drama. Jen bezpodmínečná láska. Perfektní Valentýnské rande. 💕",
+      "title": "Najdi Své Zimní Dobrodružství",
+      "subtitle": "Žádné drama. Jen bezpodmínečné přátelství. Perfektní zimní útěk. ✨",
       "socialProof": "4.9/5 hvězdiček · 400+ návštěvníků",
-      "primaryCta": "Poznej Svůj Match",
+      "primaryCta": "Objevte Více",
       "secondaryCta": "Adoptuj Alpaku"
     },
     "stars": {
@@ -853,11 +853,11 @@
       }
     },
     "finalCta": {
-      "title": "Připraven Na Skutečnou Lásku?",
-      "subtitle": "Rezervuj svůj Valentýnský zážitek dnes",
+      "title": "Připraveni na dobrodružství?",
+      "subtitle": "Rezervuj svůj zimní zážitek dnes",
       "primaryBtn": "Koupit Dárkový Poukaz",
-      "secondaryBtn": "Více Informací",
-      "urgency": "⏰ Valentýnská Speciálka: do 14. února"
+      "secondaryBtn": "Více Informacji",
+      "urgency": "⏰ Zimní speciál: omezená dostupnost"
     }
   },
   "social": {

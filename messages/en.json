@@ -392,12 +392,12 @@
     "fullyRedeemed": "Voucher has been fully redeemed"
   },
   "campaign": {
-    "badge": "Winter vol Liefde Special",
+    "badge": "Winter Experience Special",
     "hero": {
-      "title": "Find Your Perfect Match",
+      "title": "Find Your Winter Adventure",
       "subtitle": "No drama. Just unconditional love.",
       "socialProof": "4.9/5 stars · 400+ visitors",
-      "primaryCta": "Meet Your Match",
+      "primaryCta": "Discover More",
       "secondaryCta": "Adopt an Alpaca"
     },
     "stars": {
@@ -476,11 +476,11 @@
       }
     },
     "finalCta": {
-      "title": "Ready for Real Love?",
+      "title": "Ready for a Unique Adventure?",
       "subtitle": "Book your winter experience today",
       "primaryBtn": "Buy Gift Voucher",
       "secondaryBtn": "More Information",
-      "urgency": "⏰ Winter discount ends soon"
+      "urgency": "⏰ Winter Special: limited availability"
     }
   },
   "navigation": {

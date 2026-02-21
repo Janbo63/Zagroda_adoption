@@ -369,12 +369,12 @@
     "fullyRedeemed": "Voucher został już w pełni wykorzystany"
   },
   "campaign": {
-    "badge": "Winter vol Liefde Specjal",
+    "badge": "Winter Experience Special",
     "hero": {
-      "title": "Znajdź Swojego Idealnego Partnera",
+      "title": "Znajdź Swoją Zimową Przygodę",
       "subtitle": "Bez dramatu. Tylko bezwarunkowa miłość.",
       "socialProof": "4.9/5 gwiazdek · 400+ odwiedzających",
-      "primaryCta": "Poznaj Swojego Partnera",
+      "primaryCta": "Odkryj Więcej",
       "secondaryCta": "Adoptuj Alpakę"
     },
     "stars": {
@@ -453,11 +453,11 @@
       }
     },
     "finalCta": {
-      "title": "Gotowy Na Prawdziwą Miłość?",
+      "title": "Gotowy Na Wyjątkową Przygodę?",
       "subtitle": "Zarezerwuj swoje zimowe doświadczenie już dziś",
       "primaryBtn": "Kup Voucher Podarunkowy",
       "secondaryBtn": "Więcej Informacji",
-      "urgency": "⏰ Zimowa zniżka kończy się wkrótce"
+      "urgency": "⏰ Zimowy Specjał: ograniczona dostępność"
     }
   },
   "hero": {
