@@ -109,6 +109,35 @@ export function CampaignLandingPage({ locale }: { locale: string }) {
                 </div>
             </section>
 
+            {/* Video Section */}
+            <section className="py-20 bg-white overflow-hidden">
+                <div className="max-w-4xl mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-orange-100"
+                    >
+                        <video
+                            className="w-full h-auto"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            poster="/hero-video-poster.png"
+                        >
+                            <source src="/campaigns/kissing.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+                            <p className="text-white text-xl font-bold italic text-center">
+                                {t('video.caption')}
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Star Lineup Section */}
             <section className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4">
