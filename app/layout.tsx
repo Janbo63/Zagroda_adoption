@@ -8,8 +8,14 @@ declare global {
   interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
+    clarity: (...args: any[]) => void;
   }
 }
+
+// ─── Analytics IDs ────────────────────────────────────────────────────
+const GA4_ID = 'G-V9R1JJYYSG';
+const CLARITY_ID = 'vlllu29qxu';
+// ──────────────────────────────────────────────────────────────────────
 
 export default function RootLayout({
   children,
@@ -17,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    // Load the Google Analytics script
+    // ── 1. Google Analytics (GA4) ──────────────────────────────────────
     const script1 = document.createElement('script');
-    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-V9R1JJYYSG';
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
     script1.async = true;
     document.head.appendChild(script1);
 
@@ -30,26 +36,18 @@ export default function RootLayout({
       }
       window.gtag = gtag;
 
-      // Convert non-www URL to www URL for GA
       const currentUrl = window.location.href;
       const wwwUrl = currentUrl.replace('https://', 'https://www.');
       const wwwPath = window.location.pathname;
 
       gtag('js', new Date());
-      gtag('config', 'G-V9R1JJYYSG', {
+      gtag('config', GA4_ID, {
         debug_mode: true,
         page_path: wwwPath,
         page_location: wwwUrl,
         send_page_view: true
       });
 
-      // Log for debugging
-      console.log('[GA Debug] Original URL:', currentUrl);
-      console.log('[GA Debug] Modified URL for GA:', wwwUrl);
-      console.log('[GA Debug] Path:', wwwPath);
-      console.log('[GA Debug] Sending pageview event');
-
-      // Explicitly send a pageview with www URL
       gtag('event', 'page_view', {
         page_title: document.title,
         page_location: wwwUrl,
@@ -57,13 +55,24 @@ export default function RootLayout({
       });
     };
 
-    // Cleanup function
+    // ── 2. Microsoft Clarity ───────────────────────────────────────────
+    const clarityScript = document.createElement('script');
+    clarityScript.async = true;
+    clarityScript.innerHTML = `
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "${CLARITY_ID}");
+    `;
+    document.head.appendChild(clarityScript);
+
+    // ── Cleanup ────────────────────────────────────────────────────────
     return () => {
-      if (document.head.contains(script1)) {
-        document.head.removeChild(script1);
-      }
+      if (document.head.contains(script1)) document.head.removeChild(script1);
+      if (document.head.contains(clarityScript)) document.head.removeChild(clarityScript);
     };
-  }, []); // Empty dependency array means this runs once when component mounts
+  }, []);
 
   return (
     <html lang="en">
