@@ -34,7 +34,7 @@ const SHARED_PHOTOS = [
 ];
 
 // Apartment room photos (separate room — not common areas)
-const _APARTMENT_PHOTOS = [
+const APARTMENT_PHOTOS = [
     '/images/Rooms/apartment2.jpg',
     '/images/Rooms/apartment3-1.jpg',
 ];
@@ -317,6 +317,52 @@ export function StayPageContent({ locale }: { locale: string }) {
                             </div>
                         </motion.div>
                     </div>
+
+                    {/* Forest Apartment — full width, premium card */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        className="rounded-2xl overflow-hidden border-2 border-emerald-200 hover:shadow-xl transition-shadow mt-10"
+                    >
+                        <div className="grid md:grid-cols-2">
+                            <div className="relative min-h-[300px]">
+                                <PhotoGallery photos={APARTMENT_PHOTOS} roomName={t('rooms.forest.name')} />
+                            </div>
+                            <div className="p-8 flex flex-col justify-between bg-emerald-50">
+                                <div>
+                                    <div className="inline-block bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
+                                        🏠 Apartment
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('rooms.forest.name')}</h3>
+                                    <p className="text-gray-600 mb-5">{t('rooms.forest.desc')}</p>
+
+                                    <div className="bg-white border border-emerald-200 rounded-xl p-4 mb-4">
+                                        <div className="text-2xl font-bold text-emerald-700">{t('rooms.forest.price')}</div>
+                                        <div className="text-sm text-emerald-600">{t('rooms.forest.priceSub')}</div>
+                                    </div>
+
+                                    <div className="text-sm text-gray-500 mb-4">👥 {t('rooms.forest.capacity')}</div>
+
+                                    <ul className="space-y-2">
+                                        {(t.raw('rooms.forest.included') as string[]).map((item, i) => (
+                                            <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                                                <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <a href="#booking" className="block mt-6">
+                                    <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl py-3 font-semibold">
+                                        {t('booking.cta')}
+                                    </Button>
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
 
                     {/* Shared areas */}
                     <motion.div

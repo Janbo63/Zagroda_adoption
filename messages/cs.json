@@ -1,4 +1,4 @@
-{
+﻿{
   "common": {
     "title": "Zagroda Alpakoterapii",
     "description": "Zažijte léčivou sílu alpak a přírody",
@@ -925,6 +925,19 @@
           "Poznejte alpaky",
           "Jedinečně navržený pokoj s charakterem",
           "Přístup do zahrady"
+        ]
+      },
+      "forest": {
+        "name": "Lesní apartmán",
+        "desc": "Samostatný apartmán s výhledem na alpacíí zahradu. Jediné ubytování s vlastní kuchyňkou — ideální pro delší pobyty a rodiny, které chtějí vlastní prostor.",
+        "capacity": "Až 4 hosté",
+        "price": "od 593 PLN / ~€138",
+        "priceSub": "za 2 noci, vč. Poznejte alpaky",
+        "included": [
+          "Vlastní kuchyňka",
+          "Poznejte alpaky",
+          "Výhled na alpacíí zahradu",
+          "Vlastní koupelna"
         ]
       },
       "sharedAreas": "Sdílené prostory",

@@ -910,6 +910,19 @@
           "Gartenzugang"
         ]
       },
+      "forest": {
+        "name": "Waldapartement",
+        "desc": "Ein eigenständiges Apartment mit Blick auf den Alpakagarten. Der einzige Bereich mit einer eigenen Kochecke — perfekt für längere Aufenthalte und Familien, die ihren eigenen Raum möchten.",
+        "capacity": "Bis zu 4 Gäste",
+        "price": "ab 593 PLN / ~€138",
+        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
+        "included": [
+          "Eigene Kochecke",
+          "Alpaka-Erlebnis",
+          "Blick auf den Alpakagarten",
+          "Eigenes Bad"
+        ]
+      },
       "sharedAreas": "Gemeinschaftsbereiche",
       "sharedDesc": "Küche, gemütliche Lounge, Garten — alles gehört Ihnen."
     },

@@ -911,6 +911,19 @@
           "Dostęp do ogrodu"
         ]
       },
+      "forest": {
+        "name": "Leśny Apartament",
+        "desc": "Samodzielny apartament z widokiem na ogród alpak. Jedyne miejsce z własną strefą kuchenną — idealne na dłuższe pobyty i rodziny, które chcą mieć własną przestrzeń.",
+        "capacity": "Do 4 osób",
+        "price": "od 593 PLN",
+        "priceSub": "za 2 noce, wliczając Poznaj Alpaki",
+        "included": [
+          "Prywatna strefa kuchenna",
+          "Poznaj Alpaki",
+          "Widok na ogród alpak",
+          "Prywatna łazienka"
+        ]
+      },
       "sharedAreas": "Przestrzenie wspólne",
       "sharedDesc": "Kuchnia, przytulny salon, ogród — do Twojej dyspozycji."
     },
