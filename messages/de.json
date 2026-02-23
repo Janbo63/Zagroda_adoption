@@ -850,5 +850,135 @@
     "title": "Nichts verpassen!",
     "description": "Folgen Sie uns in de sozialen Medien, um Sonderangebote für Aufenthalte und Veranstaltungen zu erhalten!",
     "cta": "Unsere Profile ansehen"
+  },
+  "stay": {
+    "meta": {
+      "title": "Übernachten bei den Alpakas — Zagroda Alpakoterapii",
+      "description": "Schlafen Sie auf einer Alpaka-Farm im Riesengebirge. Zwei einzigartige Zimmer, morgendliche Alpaka-Spaziergänge inklusive. Ab 493 PLN / ~€115 für 2 Nächte."
+    },
+    "hero": {
+      "badge": "Übernachtung",
+      "headline": "Schlafen Sie bei den Alpakas. Wandern Sie mit ihnen im Morgengrauen.",
+      "subheadline": "Zwei einzigartige Zimmer auf einer echten Alpaka-Farm tief im Riesengebirge. Wachen Sie auf zu frischer Luft, Stille und Ihrer eigenen persönlichen Alpaka-Eskorte.",
+      "cta": "Verfügbarkeit prüfen",
+      "socialProof": "4,9/5 Sterne · 400+ Besucher"
+    },
+    "experience": {
+      "title": "Was Sie erwartet",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Nur Sie und die Farm",
+        "desc": "Klein und intim — kein Hotel. Sie teilen die Farm mit den Alpakas, den Ziegen und der Bergstille."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Morgendlicher Alpaka-Spaziergang",
+        "desc": "Inklusive für alle Übernachtungsgäste. Führen Sie Ihr Alpaka durch neblige Bergpfade bei Sonnenaufgang."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Riesengebirge",
+        "desc": "Wald, frische Luft, Stille. Kein Verkehr. Keine Menschenmassen. Natur, die wirklich erholt."
+      }
+    },
+    "rooms": {
+      "title": "Wählen Sie Ihr Zimmer",
+      "subtitle": "Zwei Zimmer. Beide einzigartig. Beide unvergesslich.",
+      "garden": {
+        "name": "Gartenzimmer",
+        "desc": "Helles Zimmer mit direktem Gartenzugang. Wachen Sie auf, während Alpakas direkt vor Ihrem Fenster grasen.",
+        "capacity": "Bis zu 3 Gäste",
+        "price": "ab 493 PLN / ~€115",
+        "priceSub": "für 2 Nächte, inkl. Morgenspaziergang",
+        "included": [
+          "Eigenes Bad",
+          "Farm-Frühstück",
+          "Morgendlicher Alpaka-Spaziergang",
+          "Gartenzugang"
+        ]
+      },
+      "jungle": {
+        "name": "Dschungelzimmer",
+        "desc": "Üppiges, grünes Zimmer mit gemütlichem Flair. Ein privater Rückzugsort umgeben von botanischem Charakter.",
+        "capacity": "Bis zu 3 Gäste",
+        "price": "ab 493 PLN / ~€115",
+        "priceSub": "für 2 Nächte, inkl. Morgenspaziergang",
+        "included": [
+          "Eigenes Bad",
+          "Farm-Frühstück",
+          "Morgendlicher Alpaka-Spaziergang",
+          "Einzigartiges Dschungel-Dekor"
+        ]
+      },
+      "sharedAreas": "Gemeinschaftsbereiche",
+      "sharedDesc": "Küche, gemütliche Lounge, Garten — alles gehört Ihnen."
+    },
+    "packages": {
+      "title": "Wählen Sie Ihren Aufenthalt",
+      "weekend": {
+        "name": "Wochenende mit Alpakas",
+        "nights": "2 Nächte",
+        "highlights": [
+          "2× morgendliche Alpaka-Spaziergänge",
+          "Farm-Frühstück an beiden Tagen",
+          "Voller Farm-Zugang",
+          "Alpaka-Fütterung"
+        ]
+      },
+      "extended": {
+        "name": "Längerer Aufenthalt",
+        "nights": "3+ Nächte",
+        "badge": "Bestes Preis-Leistungs-Verhältnis",
+        "highlights": [
+          "Alle Wochenendevorteile",
+          "Preisnachlass ab Nacht 3",
+          "Mehr Flexibilität",
+          "Kontaktieren Sie uns für Termine"
+        ]
+      }
+    },
+    "booking": {
+      "title": "Verfügbarkeit prüfen",
+      "subtitle": "Wählen Sie Ihre Daten unten aus",
+      "cta": "Jetzt buchen",
+      "note": "Fragen? Rufen Sie uns an: +48 695 545 330"
+    },
+    "distance": {
+      "title": "Anreise",
+      "subtitle": "Planen Sie Ihre Reise",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brüssel",
+        "drive": "~9h Fahrt",
+        "fly": "Flug nach Breslau (TUI Direktflug) → 2h Fahrt"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h Fahrt",
+        "fly": "Flug nach Breslau → 2h Fahrt"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warschau",
+        "drive": "~4,5h Fahrt",
+        "fly": "Breslau: 2h Fahrt"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polen"
+    },
+    "reviews": {
+      "title": "Was Gäste sagen",
+      "q1": "Wir wachten auf, als Alpakas durch unser Fenster schauten. Nichts bereitet Sie darauf vor. Pure Magie.",
+      "a1": "Gast aus den Niederlanden",
+      "q2": "Der Morgenspaziergang bei Sonnenaufgang war der Höhepunkt unserer gesamten Reise nach Polen. Wir kommen wieder.",
+      "a2": "Gast aus Belgien",
+      "q3": "So ein intimer, friedlicher Ort. Völlig anders als ein Hotel. Wirklich besonders.",
+      "a3": "Gast aus Deutschland"
+    },
+    "cta": {
+      "title": "Bereit, mit den Alpakas aufzuwachen?",
+      "subtitle": "Begrenzte Zimmer — buchen Sie Ihre Daten bevor sie weg sind.",
+      "btn": "Verfügbarkeit prüfen"
+    }
   }
 }

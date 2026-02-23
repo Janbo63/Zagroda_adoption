@@ -867,5 +867,135 @@
     "title": "Nenechte si nic ujít!",
     "description": "Sledujte nás na sociálních sítích a získejte speciální nabídky na pobyty a akce!",
     "cta": "Zobrazit naše profily"
+  },
+  "stay": {
+    "meta": {
+      "title": "Přenocování u alpak — Zagroda Alpakoterapii",
+      "description": "Spěte na farmě alpak v Krkonoších. Dva jedinečné pokoje, ranní procházky s alpakami v ceně. Od 493 PLN / ~€115 za 2 noci."
+    },
+    "hero": {
+      "badge": "Přenocování",
+      "headline": "Spěte u alpak. Procházejte se s nimi za svítání.",
+      "subheadline": "Dva jedinečné pokoje na fungující farmě alpak hluboko v Krkonoších. Probuďte se do čerstvého vzduchu, ticha a vlastní osobní alpaky průvodce.",
+      "cta": "Zkontrolovat dostupnost",
+      "socialProof": "4,9/5 hvězd · 400+ návštěvníků"
+    },
+    "experience": {
+      "title": "Co vás čeká",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Jen vy a farma",
+        "desc": "Malé, intimní místo — ne hotel. Sdílíte farmu s alpakami, kozami a horským tichem."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Ranní procházka s alpakou",
+        "desc": "V ceně pro všechny hosty s přenocováním. Provádějte svou alpaku mlhavými horskými stezkami při východu slunce."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Krkonoše",
+        "desc": "Les, čerstvý vzduch, ticho. Žádný provoz. Žádné davy. Příroda, která vás skutečně obnoví."
+      }
+    },
+    "rooms": {
+      "title": "Vyberte si svůj pokoj",
+      "subtitle": "Dva pokoje. Oba jedinečné. Oba nezapomenutelné.",
+      "garden": {
+        "name": "Zahradní pokoj",
+        "desc": "Světlý pokoj s přímým přístupem do zahrady. Probuďte se, když alpaky pasou přímo za oknem.",
+        "capacity": "Až 3 hosté",
+        "price": "od 493 PLN / ~€115",
+        "priceSub": "za 2 noci, vč. ranní procházky",
+        "included": [
+          "Vlastní koupelna",
+          "Snídaně na farmě",
+          "Ranní procházka s alpakou",
+          "Přístup do zahrady"
+        ]
+      },
+      "jungle": {
+        "name": "Džunglový pokoj",
+        "desc": "Bujný, zelený pokoj s útulnou atmosférou. Soukromý úkryt obklopený botanickým charakterem.",
+        "capacity": "Až 3 hosté",
+        "price": "od 493 PLN / ~€115",
+        "priceSub": "za 2 noci, vč. ranní procházky",
+        "included": [
+          "Vlastní koupelna",
+          "Snídaně na farmě",
+          "Ranní procházka s alpakou",
+          "Jedinečná džunglová dekorace"
+        ]
+      },
+      "sharedAreas": "Sdílené prostory",
+      "sharedDesc": "Kuchyně, útulný salon, zahrada — vše je vaše."
+    },
+    "packages": {
+      "title": "Vyberte si pobyt",
+      "weekend": {
+        "name": "Víkend s alpakami",
+        "nights": "2 noci",
+        "highlights": [
+          "2× ranní procházky s alpakami",
+          "Snídaně na farmě oba dny",
+          "Plný přístup na farmu",
+          "Krmení alpak"
+        ]
+      },
+      "extended": {
+        "name": "Delší pobyt",
+        "nights": "3+ noci",
+        "badge": "Nejlepší hodnota",
+        "highlights": [
+          "Všechny víkendové výhody",
+          "Sleva od 3. noci",
+          "Větší flexibilita",
+          "Kontaktujte nás ohledně termínů"
+        ]
+      }
+    },
+    "booking": {
+      "title": "Zkontrolovat dostupnost",
+      "subtitle": "Vyberte svá data níže",
+      "cta": "Zarezervovat",
+      "note": "Otázky? Zavolejte nám: +48 695 545 330"
+    },
+    "distance": {
+      "title": "Jak se k nám dostat",
+      "subtitle": "Naplánujte svou cestu",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brusel",
+        "drive": "~9h jízdy",
+        "fly": "Let do Wrocławi (TUI přímý) → 2h jízdy"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h jízdy",
+        "fly": "Let do Wrocławi → 2h jízdy"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Varšava",
+        "drive": "~4,5h jízdy",
+        "fly": "Wrocław: 2h jízdy"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polsko"
+    },
+    "reviews": {
+      "title": "Co říkají hosté",
+      "q1": "Probudili jsme se s alpakami, které se dívaly našim oknem. Nic vás na to nepřipraví. Čistá magie.",
+      "a1": "Host z Nizozemska",
+      "q2": "Ranní procházka při východu slunce byla vrcholem celé naší cesty do Polska. Vrátíme se.",
+      "a2": "Host z Belgie",
+      "q3": "Takové intimní, klidné místo. Úplně jiné než hotel. Skutečně výjimečné.",
+      "a3": "Host z Německa"
+    },
+    "cta": {
+      "title": "Připraveni probudit se u alpak?",
+      "subtitle": "Omezený počet pokojů — zarezervujte si termín dříve, než bude pozdě.",
+      "btn": "Zkontrolovat dostupnost"
+    }
   }
 }

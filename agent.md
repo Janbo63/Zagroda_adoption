@@ -59,6 +59,21 @@ Polish (default), English, German, Czech, Dutch — via `next-intl` with locale-
 - ⬜ Production Stripe keys (currently test mode)
 - ⬜ Component refactoring (large monolith components need splitting)
 
+## Marketing & Analytics IDs
+
+| Service | ID / Value |
+|---|---|
+| **GA4 Measurement ID** | `G-V9R1JJYYSG` |
+| **GA4 Property ID** | `properties/422468308` |
+| **Meta Pixel ID** | `1608105036460297` |
+| **Meta Ad Account ID** | `act_2424973274198583` |
+| **Beds24 Property** | Zagroda Alpakoterapii |
+| **GA4 Service Account** | `zagroda-ga4-reader@gen-lang-client-0459745068.iam.gserviceaccount.com` |
+
+> These IDs are used in `lib/gtag.js`, `lib/fpixel.ts`, and `.agent/scripts/.env`.
+> GA4 auto-pull script: `node "f:\New Alpaca Site\ZAPnew2\.agent\scripts\ga4-pull.js"`
+> Meta data: export CSV from Ads Manager → share with agent for analysis.
+
 ## Cross-Project Links
 
 - **Beds25** (`F:\Git Hub Projects\Beds25\`): The internal booking admin system. When room booking is added to this site, it will call the same Zoho CRM modules (Bookings, Rooms) that Beds25 manages. The `zoho.ts` clients in both projects should eventually converge.

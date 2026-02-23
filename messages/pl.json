@@ -851,5 +851,135 @@
     "manageAdoptions": "Zarządzaj Adopcjami",
     "manageVouchers": "Zarządzaj Voucherami",
     "analytics": "Analityka i Raporty"
+  },
+  "stay": {
+    "meta": {
+      "title": "Nocleg przy alpakach — Zagroda Alpakoterapii",
+      "description": "Śpij na farmie alpak w Karkonoszach. Dwa wyjątkowe pokoje, poranne spacery z alpakami w cenie. Od 493 PLN za 2 noce."
+    },
+    "hero": {
+      "badge": "Noclegi",
+      "headline": "Śpij wśród alpak. Spaceruj z nimi o świcie.",
+      "subheadline": "Dwa wyjątkowe pokoje na działającej farmie alpak głęboko w Karkonoszach. Obudź się z świeżym powietrzem, ciszą i własną alpaką do porannego spaceru.",
+      "cta": "Sprawdź dostępność",
+      "socialProof": "4,9/5 gwiazdek · 400+ gości"
+    },
+    "experience": {
+      "title": "Co Cię czeka",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Tylko Ty i farma",
+        "desc": "Małe, kameralne miejsce — nie hotel. Dzielisz farmę z alpakami, kozami i górską ciszą."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Poranny spacer z alpaką",
+        "desc": "W cenie dla wszystkich gości noclegowych. Prowadź swoją alpakę przez mglistą górską ścieżkę o wschodzie słońca."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Karkonosze",
+        "desc": "Las, świeże powietrze, cisza. Bez hałasu. Bez tłumów. Natura, która naprawdę regeneruje."
+      }
+    },
+    "rooms": {
+      "title": "Wybierz swój pokój",
+      "subtitle": "Dwa pokoje. Oba wyjątkowe. Oba niezapomniane.",
+      "garden": {
+        "name": "Pokój Ogrodowy",
+        "desc": "Jasny pokój z bezpośrednim dostępem do ogrodu. Obudź się z widokiem na pasące się alpaki za oknem.",
+        "capacity": "Do 3 osób",
+        "price": "od 493 PLN",
+        "priceSub": "za 2 noce, wliczając poranny spacer",
+        "included": [
+          "Prywatna łazienka",
+          "Śniadanie na farmie",
+          "Poranny spacer z alpaką",
+          "Dostęp do ogrodu"
+        ]
+      },
+      "jungle": {
+        "name": "Pokój Dżunglowy",
+        "desc": "Bujny, zielony pokój z przytulnym klimatem. Prywatny azyl otoczony botanicznym charakterem.",
+        "capacity": "Do 3 osób",
+        "price": "od 493 PLN",
+        "priceSub": "za 2 noce, wliczając poranny spacer",
+        "included": [
+          "Prywatna łazienka",
+          "Śniadanie na farmie",
+          "Poranny spacer z alpaką",
+          "Unikalna dekoracja dżunglowa"
+        ]
+      },
+      "sharedAreas": "Przestrzenie wspólne",
+      "sharedDesc": "Kuchnia, przytulny salon, ogród — do Twojej dyspozycji."
+    },
+    "packages": {
+      "title": "Wybierz swój pobyt",
+      "weekend": {
+        "name": "Weekend z Alpakami",
+        "nights": "2 noce",
+        "highlights": [
+          "2× poranne spacery z alpakami",
+          "Śniadanie na farmie przez oba dni",
+          "Pełny dostęp do farmy",
+          "Karmienie alpak"
+        ]
+      },
+      "extended": {
+        "name": "Dłuższy Pobyt",
+        "nights": "3+ noce",
+        "badge": "Najlepsza cena",
+        "highlights": [
+          "Wszystkie korzyści weekendowe",
+          "Rabat od 3. nocy",
+          "Większa elastyczność",
+          "Skontaktuj się z nami w sprawie terminów"
+        ]
+      }
+    },
+    "booking": {
+      "title": "Sprawdź dostępność",
+      "subtitle": "Wybierz daty poniżej",
+      "cta": "Zarezerwuj teraz",
+      "note": "Pytania? Zadzwoń: +48 695 545 330"
+    },
+    "distance": {
+      "title": "Jak do nas trafić",
+      "subtitle": "Zaplanuj podróż",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Bruksela",
+        "drive": "~9h jazdy",
+        "fly": "Lot do Wrocławia (TUI bezpośredni) → 2h jazdy"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h jazdy",
+        "fly": "Lot do Wrocławia → 2h jazdy"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warszawa",
+        "drive": "~4,5h jazdy",
+        "fly": "Wrocław: 2h jazdy"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polska"
+    },
+    "reviews": {
+      "title": "Co mówią goście",
+      "q1": "Obudziliśmy się z alpakami patrzącymi przez nasze okno. Nic cię na to nie przygotuje. Czysta magia.",
+      "a1": "Gość z Holandii",
+      "q2": "Poranny spacer o wschodzie słońca był kulminacją całej naszej podróży do Polski. Wrócimy.",
+      "a2": "Gość z Belgii",
+      "q3": "Takie kameralne, spokojne miejsce. Zupełnie inne niż hotel. Naprawdę wyjątkowe.",
+      "a3": "Gość z Niemiec"
+    },
+    "cta": {
+      "title": "Gotowy obudzić się przy alpakach?",
+      "subtitle": "Ograniczona liczba pokoi — zarezerwuj daty zanim znikną.",
+      "btn": "Sprawdź dostępność"
+    }
   }
 }

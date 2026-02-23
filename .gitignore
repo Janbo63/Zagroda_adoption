@@ -40,3 +40,6 @@ yarn-error.log*
 next-env.d.ts
 
 /generated/prisma
+
+# Agent scripts (contains node_modules with sensitive data)
+.agent/scripts/node_modules/

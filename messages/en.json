@@ -85,19 +85,6 @@
     "followUs": "Follow Us",
     "imageNotFound": "Image not found"
   },
-  "stay": {
-    "title": "Accommodation Options",
-    "farmhouseRooms": {
-      "title": "Farmhouse Rooms",
-      "description": "Experience the charm of our renovated farmhouse"
-    },
-    "caravanStays": {
-      "title": "Caravan Stays",
-      "description": "Enjoy a unique stay in our vintage caravans"
-    },
-    "bookNow": "Book Now",
-    "checkAvailability": "Check Availability"
-  },
   "activities": {
     "title": "Activities",
     "sectionTitle": "Our Activities",
@@ -399,6 +386,9 @@
       "socialProof": "4.9/5 stars · 400+ visitors",
       "primaryCta": "Discover More",
       "secondaryCta": "Adopt an Alpaca"
+    },
+    "video": {
+      "caption": "Pure joy and alpaca kisses!"
     },
     "stars": {
       "title": "Meet Our Stars",
@@ -862,5 +852,135 @@
     "manageAdoptions": "Manage Adoptions",
     "manageVouchers": "Manage Vouchers",
     "analytics": "Analytics & Reports"
+  },
+  "stay": {
+    "meta": {
+      "title": "Stay with the Alpacas — Zagroda Alpakoterapii",
+      "description": "Sleep at an alpaca farm in the Karkonosze mountains. Two unique rooms, morning alpaca walks included. From 493 PLN / ~€115 per 2 nights."
+    },
+    "hero": {
+      "badge": "Overnight Stay",
+      "headline": "Sleep with the alpacas. Walk with them at dawn.",
+      "subheadline": "Two unique rooms on a working alpaca farm deep in the Karkonosze mountains. Wake up to fresh air, silence, and your own personal alpaca escort.",
+      "cta": "Check availability",
+      "socialProof": "4.9/5 stars · 400+ visitors"
+    },
+    "experience": {
+      "title": "What awaits you",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Just you and the farm",
+        "desc": "Small, intimate — not a hotel. You share the farm with the alpacas, the goats, and the mountain silence."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Morning alpaca walk",
+        "desc": "Included for all overnight guests. Lead your alpaca through the misty mountain trails at sunrise."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Karkonosze mountains",
+        "desc": "Forest, fresh air, silence. No traffic. No crowds. Just the kind of nature that actually restores you."
+      }
+    },
+    "rooms": {
+      "title": "Choose your room",
+      "subtitle": "Two rooms. Both unique. Both unforgettable.",
+      "garden": {
+        "name": "Garden Room",
+        "desc": "Light-filled room with direct garden access. Wake up to alpacas grazing just outside your window.",
+        "capacity": "Up to 3 guests",
+        "price": "from 493 PLN / ~€115",
+        "priceSub": "per 2 nights, incl. morning walk",
+        "included": [
+          "Private bathroom",
+          "Farm breakfast",
+          "Morning alpaca walk",
+          "Garden access"
+        ]
+      },
+      "jungle": {
+        "name": "Jungle Room",
+        "desc": "Lush, green-themed room with a cozy feel. A private retreat surrounded by botanical character.",
+        "capacity": "Up to 3 guests",
+        "price": "from 493 PLN / ~€115",
+        "priceSub": "per 2 nights, incl. morning walk",
+        "included": [
+          "Private bathroom",
+          "Farm breakfast",
+          "Morning alpaca walk",
+          "Unique jungle décor"
+        ]
+      },
+      "sharedAreas": "Shared areas",
+      "sharedDesc": "Kitchen, cozy lounge, garden — all yours to enjoy."
+    },
+    "packages": {
+      "title": "Choose your stay",
+      "weekend": {
+        "name": "Weekend with Alpacas",
+        "nights": "2 nights",
+        "highlights": [
+          "2× morning alpaca walks",
+          "Farm breakfast both days",
+          "Full farm access",
+          "Alpaca feeding session"
+        ]
+      },
+      "extended": {
+        "name": "Extended Retreat",
+        "nights": "3+ nights",
+        "badge": "Best value",
+        "highlights": [
+          "All weekend benefits",
+          "Price break from night 3",
+          "Greater flexibility",
+          "Contact us for dates"
+        ]
+      }
+    },
+    "booking": {
+      "title": "Check availability",
+      "subtitle": "Select your dates below",
+      "cta": "Book now",
+      "note": "Questions? Call us: +48 695 545 330"
+    },
+    "distance": {
+      "title": "Getting here",
+      "subtitle": "Plan your journey",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brussels",
+        "drive": "~9h drive",
+        "fly": "Fly to Wrocław (TUI direct) → 2h drive"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h drive",
+        "fly": "Fly to Wrocław → 2h drive"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warsaw",
+        "drive": "~4.5h drive",
+        "fly": "Wrocław: 2h drive"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Poland"
+    },
+    "reviews": {
+      "title": "What guests say",
+      "q1": "We woke up to alpacas looking through our window. Nothing prepares you for that. Pure magic.",
+      "a1": "Guest from the Netherlands",
+      "q2": "The morning walk at sunrise was the highlight of our entire trip to Poland. We will be back.",
+      "a2": "Guest from Belgium",
+      "q3": "Such an intimate, peaceful place. Completely different from any hotel. Truly special.",
+      "a3": "Guest from Germany"
+    },
+    "cta": {
+      "title": "Ready to wake up with the alpacas?",
+      "subtitle": "Limited rooms — book your dates before they're gone.",
+      "btn": "Check availability"
+    }
   }
 }

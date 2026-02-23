@@ -846,5 +846,135 @@
         "title": "Mis niets!",
         "description": "Volg ons op sociale media voor speciale aanbiedingen voor verblijven en evenementen!",
         "cta": "Bekijk onze profielen"
+    },
+    "stay": {
+        "meta": {
+            "title": "Overnachten bij de alpaca's — Zagroda Alpakoterapii",
+            "description": "Slaap op een alpacaboerderij in de Karkonosze-bergen. Twee unieke kamers, ochtendwandelingen met alpaca's inbegrepen. Vanaf 493 PLN / ~€115 per 2 nachten."
+        },
+        "hero": {
+            "badge": "Overnachting",
+            "headline": "Slaap bij de alpaca's. Wandel met ze bij het ochtendgloren.",
+            "subheadline": "Twee unieke kamers op een werkende alpacaboerderij diep in de Karkonosze-bergen. Word wakker met frisse lucht, stilte en je eigen persoonlijke alpaca-escorte.",
+            "cta": "Controleer beschikbaarheid",
+            "socialProof": "4.9/5 sterren · 400+ bezoekers"
+        },
+        "experience": {
+            "title": "Wat je te wachten staat",
+            "intimacy": {
+                "icon": "🌙",
+                "title": "Alleen jij en de boerderij",
+                "desc": "Klein en intiem — geen hotel. Je deelt de boerderij met de alpaca's, de geiten en de bergstilte."
+            },
+            "walk": {
+                "icon": "🦙",
+                "title": "Ochtendwandeling met alpaca's",
+                "desc": "Inbegrepen voor alle overnachtingsgasten. Leid jouw alpaca door de mistige bergpaden bij zonsopgang."
+            },
+            "nature": {
+                "icon": "🏔️",
+                "title": "Karkonosze-bergen",
+                "desc": "Bos, frisse lucht, stilte. Geen verkeer. Geen drukte. Gewoon de natuur die je echt herstelt."
+            }
+        },
+        "rooms": {
+            "title": "Kies jouw kamer",
+            "subtitle": "Twee kamers. Beide uniek. Beide onvergetelijk.",
+            "garden": {
+                "name": "Tuinkamer",
+                "desc": "Lichte kamer met directe toegang tot de tuin. Word wakker met alpaca's die buiten je raam grazen.",
+                "capacity": "Tot 3 gasten",
+                "price": "vanaf 493 PLN / ~€115",
+                "priceSub": "per 2 nachten, incl. ochtendwandeling",
+                "included": [
+                    "Eigen badkamer",
+                    "Boerderijontbijt",
+                    "Ochtendwandeling met alpaca's",
+                    "Toegang tot tuin"
+                ]
+            },
+            "jungle": {
+                "name": "Junglekamer",
+                "desc": "Weelderige, groene kamer met een gezellig gevoel. Een privéretraite omringd door botanisch karakter.",
+                "capacity": "Tot 3 gasten",
+                "price": "vanaf 493 PLN / ~€115",
+                "priceSub": "per 2 nachten, incl. ochtendwandeling",
+                "included": [
+                    "Eigen badkamer",
+                    "Boerderijontbijt",
+                    "Ochtendwandeling met alpaca's",
+                    "Unieke jungledecoratie"
+                ]
+            },
+            "sharedAreas": "Gedeelde ruimtes",
+            "sharedDesc": "Keuken, gezellige lounge, tuin — allemaal voor jou."
+        },
+        "packages": {
+            "title": "Kies jouw verblijf",
+            "weekend": {
+                "name": "Weekend bij de alpaca's",
+                "nights": "2 nachten",
+                "highlights": [
+                    "2× ochtendwandelingen met alpaca's",
+                    "Boerderijontbijt beide dagen",
+                    "Volledige toegang tot boerderij",
+                    "Alpaca's voeren"
+                ]
+            },
+            "extended": {
+                "name": "Extended Retreat",
+                "nights": "3+ nachten",
+                "badge": "Beste prijs",
+                "highlights": [
+                    "Alle weekendvoordelen",
+                    "Prijskorting vanaf nacht 3",
+                    "Meer flexibiliteit",
+                    "Neem contact op voor data"
+                ]
+            }
+        },
+        "booking": {
+            "title": "Controleer beschikbaarheid",
+            "subtitle": "Selecteer jouw data hieronder",
+            "cta": "Boek nu",
+            "note": "Vragen? Bel ons: +48 695 545 330"
+        },
+        "distance": {
+            "title": "Hier naartoe",
+            "subtitle": "Plan je reis",
+            "brussels": {
+                "flag": "🇧🇪",
+                "label": "Brussel",
+                "drive": "~9u rijden",
+                "fly": "Vlieg naar Wrocław (TUI direct) → 2u rijden"
+            },
+            "amsterdam": {
+                "flag": "🇳🇱",
+                "label": "Amsterdam",
+                "drive": "~10u rijden",
+                "fly": "Vlieg naar Wrocław → 2u rijden"
+            },
+            "warsaw": {
+                "flag": "🇵🇱",
+                "label": "Warschau",
+                "drive": "~4,5u rijden",
+                "fly": "Wrocław: 2u rijden"
+            },
+            "address": "24 Orłowice, Mirsk 59-630, Polen"
+        },
+        "reviews": {
+            "title": "Wat gasten zeggen",
+            "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
+            "a1": "Gast uit Nederland",
+            "q2": "De ochtendwandeling bij zonsopgang was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
+            "a2": "Gast uit België",
+            "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
+            "a3": "Gast uit Duitsland"
+        },
+        "cta": {
+            "title": "Klaar om wakker te worden met de alpaca's?",
+            "subtitle": "Beperkt aantal kamers — boek jouw data voor ze weg zijn.",
+            "btn": "Controleer beschikbaarheid"
+        }
     }
 }
