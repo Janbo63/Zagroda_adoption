@@ -868,13 +868,13 @@
             },
             "walk": {
                 "icon": "🦙",
-                "title": "Ochtendwandeling met alpaca's",
-                "desc": "Inbegrepen voor alle overnachtingsgasten. Leid jouw alpaca door de mistige bergpaden bij zonsopgang."
+                "title": "Maak kennis met de alpaca's",
+                "desc": "Kom dichtbij onze kudde — voer ze, wandel met ze en maak echt contact met deze zachte dieren."
             },
             "nature": {
                 "icon": "🏔️",
                 "title": "Karkonosze-bergen",
-                "desc": "Bos, frisse lucht, stilte. Geen verkeer. Geen drukte. Gewoon de natuur die je echt herstelt."
+                "desc": "Bos, frisse berglucht en weidse vergezichten. Stap naar buiten en ontdek een van de mooiste landschappen van Polen."
             }
         },
         "rooms": {
@@ -885,11 +885,11 @@
                 "desc": "Lichte kamer met directe toegang tot de tuin. Word wakker met alpaca's die buiten je raam grazen.",
                 "capacity": "Tot 3 gasten",
                 "price": "vanaf 493 PLN / ~€115",
-                "priceSub": "per 2 nachten, incl. ochtendwandeling",
+                "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
                 "included": [
                     "Eigen badkamer",
-                    "Boerderijontbijt",
-                    "Ochtendwandeling met alpaca's",
+                    "Maak kennis met de alpaca's",
+                    "Uniek ontworpen kamer",
                     "Toegang tot tuin"
                 ]
             },
@@ -898,12 +898,12 @@
                 "desc": "Weelderige, groene kamer met een gezellig gevoel. Een privéretraite omringd door botanisch karakter.",
                 "capacity": "Tot 3 gasten",
                 "price": "vanaf 493 PLN / ~€115",
-                "priceSub": "per 2 nachten, incl. ochtendwandeling",
+                "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
                 "included": [
                     "Eigen badkamer",
-                    "Boerderijontbijt",
-                    "Ochtendwandeling met alpaca's",
-                    "Unieke jungledecoratie"
+                    "Maak kennis met de alpaca's",
+                    "Uniek ontworpen kamer met karakter",
+                    "Toegang tot tuin"
                 ]
             },
             "sharedAreas": "Gedeelde ruimtes",
@@ -915,10 +915,10 @@
                 "name": "Weekend bij de alpaca's",
                 "nights": "2 nachten",
                 "highlights": [
-                    "2× ochtendwandelingen met alpaca's",
-                    "Boerderijontbijt beide dagen",
+                    "Maak kennis met de alpaca's (beide dagen)",
                     "Volledige toegang tot boerderij",
-                    "Alpaca's voeren"
+                    "Alpaca's voeren",
+                    "Uniek ontworpen kamer vol karakter"
                 ]
             },
             "extended": {
@@ -966,7 +966,7 @@
             "title": "Wat gasten zeggen",
             "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
             "a1": "Gast uit Nederland",
-            "q2": "De ochtendwandeling bij zonsopgang was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
+            "q2": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
             "a2": "Gast uit België",
             "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
             "a3": "Gast uit Duitsland"

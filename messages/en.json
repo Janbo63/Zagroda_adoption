@@ -874,13 +874,13 @@
       },
       "walk": {
         "icon": "🦙",
-        "title": "Morning alpaca walk",
-        "desc": "Included for all overnight guests. Lead your alpaca through the misty mountain trails at sunrise."
+        "title": "Meet the Alpacas",
+        "desc": "Get up close with our herd — feed them, walk with them, and form a real connection with these gentle animals."
       },
       "nature": {
         "icon": "🏔️",
         "title": "Karkonosze mountains",
-        "desc": "Forest, fresh air, silence. No traffic. No crowds. Just the kind of nature that actually restores you."
+        "desc": "Forest, fresh mountain air, and sweeping views. Step outside and find yourself surrounded by some of the best scenery in Poland."
       }
     },
     "rooms": {
@@ -891,11 +891,11 @@
         "desc": "Light-filled room with direct garden access. Wake up to alpacas grazing just outside your window.",
         "capacity": "Up to 3 guests",
         "price": "from 493 PLN / ~€115",
-        "priceSub": "per 2 nights, incl. morning walk",
+        "priceSub": "per 2 nights, incl. Meet the Alpacas experience",
         "included": [
           "Private bathroom",
-          "Farm breakfast",
-          "Morning alpaca walk",
+          "Meet the Alpacas experience",
+          "Uniquely designed room",
           "Garden access"
         ]
       },
@@ -904,12 +904,12 @@
         "desc": "Lush, green-themed room with a cozy feel. A private retreat surrounded by botanical character.",
         "capacity": "Up to 3 guests",
         "price": "from 493 PLN / ~€115",
-        "priceSub": "per 2 nights, incl. morning walk",
+        "priceSub": "per 2 nights, incl. Meet the Alpacas experience",
         "included": [
           "Private bathroom",
-          "Farm breakfast",
-          "Morning alpaca walk",
-          "Unique jungle décor"
+          "Meet the Alpacas experience",
+          "Uniquely designed room with character",
+          "Garden access"
         ]
       },
       "sharedAreas": "Shared areas",
@@ -921,10 +921,10 @@
         "name": "Weekend with Alpacas",
         "nights": "2 nights",
         "highlights": [
-          "2× morning alpaca walks",
-          "Farm breakfast both days",
+          "Meet the Alpacas experience (both days)",
           "Full farm access",
-          "Alpaca feeding session"
+          "Alpaca feeding session",
+          "Uniquely designed room full of character"
         ]
       },
       "extended": {
@@ -972,7 +972,7 @@
       "title": "What guests say",
       "q1": "We woke up to alpacas looking through our window. Nothing prepares you for that. Pure magic.",
       "a1": "Guest from the Netherlands",
-      "q2": "The morning walk at sunrise was the highlight of our entire trip to Poland. We will be back.",
+      "q2": "The Meet the Alpacas experience was the highlight of our entire trip to Poland. We will be back.",
       "a2": "Guest from Belgium",
       "q3": "Such an intimate, peaceful place. Completely different from any hotel. Truly special.",
       "a3": "Guest from Germany"

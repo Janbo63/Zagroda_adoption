@@ -889,13 +889,13 @@
       },
       "walk": {
         "icon": "🦙",
-        "title": "Ranní procházka s alpakou",
-        "desc": "V ceně pro všechny hosty s přenocováním. Provádějte svou alpaku mlhavými horskými stezkami při východu slunce."
+        "title": "Poznejte alpaky",
+        "desc": "Poznejte naše stádo zínka — nakrmte je, projděte se s nimi a navižťe skutečný vztah s těmito něnými zvířaty."
       },
       "nature": {
         "icon": "🏔️",
         "title": "Krkonoše",
-        "desc": "Les, čerstvý vzduch, ticho. Žádný provoz. Žádné davy. Příroda, která vás skutečně obnoví."
+        "desc": "Les, čerstvý horský vzduch a široké výhledy. Vyjděte ven a objevěte jednu z nejkrásnějších krajin v Polsku."
       }
     },
     "rooms": {
@@ -906,11 +906,11 @@
         "desc": "Světlý pokoj s přímým přístupem do zahrady. Probuďte se, když alpaky pasou přímo za oknem.",
         "capacity": "Až 3 hosté",
         "price": "od 493 PLN / ~€115",
-        "priceSub": "za 2 noci, vč. ranní procházky",
+        "priceSub": "za 2 noci, vč. Poznejte alpaky",
         "included": [
           "Vlastní koupelna",
-          "Snídaně na farmě",
-          "Ranní procházka s alpakou",
+          "Poznejte alpaky",
+          "Jedinečně navržený pokoj",
           "Přístup do zahrady"
         ]
       },
@@ -919,12 +919,12 @@
         "desc": "Bujný, zelený pokoj s útulnou atmosférou. Soukromý úkryt obklopený botanickým charakterem.",
         "capacity": "Až 3 hosté",
         "price": "od 493 PLN / ~€115",
-        "priceSub": "za 2 noci, vč. ranní procházky",
+        "priceSub": "za 2 noci, vč. Poznejte alpaky",
         "included": [
           "Vlastní koupelna",
-          "Snídaně na farmě",
-          "Ranní procházka s alpakou",
-          "Jedinečná džunglová dekorace"
+          "Poznejte alpaky",
+          "Jedinečně navržený pokoj s charakterem",
+          "Přístup do zahrady"
         ]
       },
       "sharedAreas": "Sdílené prostory",
@@ -936,10 +936,10 @@
         "name": "Víkend s alpakami",
         "nights": "2 noci",
         "highlights": [
-          "2× ranní procházky s alpakami",
-          "Snídaně na farmě oba dny",
+          "Poznejte alpaky (oba dny)",
           "Plný přístup na farmu",
-          "Krmení alpak"
+          "Krmení alpak",
+          "Jedinečně navržený pokoj plný charakteru"
         ]
       },
       "extended": {
@@ -987,7 +987,7 @@
       "title": "Co říkají hosté",
       "q1": "Probudili jsme se s alpakami, které se dívaly našim oknem. Nic vás na to nepřipraví. Čistá magie.",
       "a1": "Host z Nizozemska",
-      "q2": "Ranní procházka při východu slunce byla vrcholem celé naší cesty do Polska. Vrátíme se.",
+      "q2": "Zážitek Poznejte alpaky byl vrcholem celé naší cesty do Polska. Vrátíme se.",
       "a2": "Host z Belgie",
       "q3": "Takové intimní, klidné místo. Úplně jiné než hotel. Skutečně výjimečné.",
       "a3": "Host z Německa"

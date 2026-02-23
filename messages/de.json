@@ -872,13 +872,13 @@
       },
       "walk": {
         "icon": "🦙",
-        "title": "Morgendlicher Alpaka-Spaziergang",
-        "desc": "Inklusive für alle Übernachtungsgäste. Führen Sie Ihr Alpaka durch neblige Bergpfade bei Sonnenaufgang."
+        "title": "Alpaka-Erlebnis",
+        "desc": "Kommen Sie unserer Herde näher — füttern Sie sie, spazieren Sie mit ihnen und knüpfen Sie eine echte Verbindung mit diesen sanften Tieren."
       },
       "nature": {
         "icon": "🏔️",
         "title": "Riesengebirge",
-        "desc": "Wald, frische Luft, Stille. Kein Verkehr. Keine Menschenmassen. Natur, die wirklich erholt."
+        "desc": "Wald, frische Bergluft und weite Ausblicke. Treten Sie vor die Tür und entdecken Sie eine der schönsten Landschaften Polens."
       }
     },
     "rooms": {
@@ -889,11 +889,11 @@
         "desc": "Helles Zimmer mit direktem Gartenzugang. Wachen Sie auf, während Alpakas direkt vor Ihrem Fenster grasen.",
         "capacity": "Bis zu 3 Gäste",
         "price": "ab 493 PLN / ~€115",
-        "priceSub": "für 2 Nächte, inkl. Morgenspaziergang",
+        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
         "included": [
           "Eigenes Bad",
-          "Farm-Frühstück",
-          "Morgendlicher Alpaka-Spaziergang",
+          "Alpaka-Erlebnis",
+          "Einzigartig gestaltetes Zimmer",
           "Gartenzugang"
         ]
       },
@@ -902,12 +902,12 @@
         "desc": "Üppiges, grünes Zimmer mit gemütlichem Flair. Ein privater Rückzugsort umgeben von botanischem Charakter.",
         "capacity": "Bis zu 3 Gäste",
         "price": "ab 493 PLN / ~€115",
-        "priceSub": "für 2 Nächte, inkl. Morgenspaziergang",
+        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
         "included": [
           "Eigenes Bad",
-          "Farm-Frühstück",
-          "Morgendlicher Alpaka-Spaziergang",
-          "Einzigartiges Dschungel-Dekor"
+          "Alpaka-Erlebnis",
+          "Einzigartig gestaltetes Zimmer mit Charakter",
+          "Gartenzugang"
         ]
       },
       "sharedAreas": "Gemeinschaftsbereiche",
@@ -919,10 +919,10 @@
         "name": "Wochenende mit Alpakas",
         "nights": "2 Nächte",
         "highlights": [
-          "2× morgendliche Alpaka-Spaziergänge",
-          "Farm-Frühstück an beiden Tagen",
+          "Alpaka-Erlebnis (beide Tage)",
           "Voller Farm-Zugang",
-          "Alpaka-Fütterung"
+          "Alpaka-Fütterung",
+          "Einzigartig gestaltetes Zimmer voller Charakter"
         ]
       },
       "extended": {
@@ -970,7 +970,7 @@
       "title": "Was Gäste sagen",
       "q1": "Wir wachten auf, als Alpakas durch unser Fenster schauten. Nichts bereitet Sie darauf vor. Pure Magie.",
       "a1": "Gast aus den Niederlanden",
-      "q2": "Der Morgenspaziergang bei Sonnenaufgang war der Höhepunkt unserer gesamten Reise nach Polen. Wir kommen wieder.",
+      "q2": "Das Alpaka-Erlebnis war der Höhepunkt unserer gesamten Reise nach Polen. Wir kommen wieder.",
       "a2": "Gast aus Belgien",
       "q3": "So ein intimer, friedlicher Ort. Völlig anders als ein Hotel. Wirklich besonders.",
       "a3": "Gast aus Deutschland"
