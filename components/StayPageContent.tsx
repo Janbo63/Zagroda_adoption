@@ -31,6 +31,10 @@ const SHARED_PHOTOS = [
     '/images/Rooms/Corridor-scaled.jpg',
     '/images/Rooms/table-tennis-table.jpg',
     '/images/Rooms/table-football.jpg',
+];
+
+// Apartment room photos (separate room — not common areas)
+const _APARTMENT_PHOTOS = [
     '/images/Rooms/apartment2.jpg',
     '/images/Rooms/apartment3-1.jpg',
 ];
