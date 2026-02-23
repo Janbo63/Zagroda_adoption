@@ -10,29 +10,29 @@ import { Button } from '@/components/ui/button';
 
 // ─── Room gallery images ──────────────────────────────────────────────────────
 const GARDEN_PHOTOS = [
-    '/images/rooms/Garden Room1.jpg',
-    '/images/rooms/Garden Room 3.jpg',
-    '/images/rooms/Garden Room 4.jpg',
-    '/images/rooms/GardenRoom 2.jpg',
-    '/images/rooms/Garden-1.jpg',
+    '/images/Rooms/Garden Room1.jpg',
+    '/images/Rooms/Garden Room 3.jpg',
+    '/images/Rooms/Garden Room 4.jpg',
+    '/images/Rooms/GardenRoom 2.jpg',
+    '/images/Rooms/Garden-1.jpg',
 ];
 
 const JUNGLE_PHOTOS = [
-    '/images/rooms/Jungle Room 1.jpg',
-    '/images/rooms/Jungle Room 2.jpg',
-    '/images/rooms/Jungle Room 3.jpg',
-    '/images/rooms/Jungle-Room-5-edited.jpg',
+    '/images/Rooms/Jungle Room 1.jpg',
+    '/images/Rooms/Jungle Room 2.jpg',
+    '/images/Rooms/Jungle Room 3.jpg',
+    '/images/Rooms/Jungle-Room-5-edited.jpg',
 ];
 
 const SHARED_PHOTOS = [
-    '/images/rooms/lounge-1.jpg',
-    '/images/rooms/Lounge 2.jpg',
-    '/images/rooms/kitchen.jpg',
-    '/images/rooms/Corridor-scaled.jpg',
-    '/images/rooms/table-tennis-table.jpg',
-    '/images/rooms/table-football.jpg',
-    '/images/rooms/apartment2.jpg',
-    '/images/rooms/apartment3-1.jpg',
+    '/images/Rooms/lounge-1.jpg',
+    '/images/Rooms/Lounge 2.jpg',
+    '/images/Rooms/kitchen.jpg',
+    '/images/Rooms/Corridor-scaled.jpg',
+    '/images/Rooms/table-tennis-table.jpg',
+    '/images/Rooms/table-football.jpg',
+    '/images/Rooms/apartment2.jpg',
+    '/images/Rooms/apartment3-1.jpg',
 ];
 
 // ─── Mini photo gallery component ────────────────────────────────────────────
@@ -123,7 +123,7 @@ export function StayPageContent({ locale }: { locale: string }) {
                 {/* Background image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/rooms/Garden-1.jpg"
+                        src="/images/Rooms/Garden-1.jpg"
                         alt="Alpaca farm at sunrise"
                         fill
                         className="object-cover"
@@ -502,7 +502,7 @@ export function StayPageContent({ locale }: { locale: string }) {
                                             <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                                         ))}
                                     </div>
-                                    <p className="text-gray-700 italic mb-4 leading-relaxed">"{t(`reviews.${q}`)}"</p>
+                                    <p className="text-gray-700 italic mb-4 leading-relaxed">&ldquo;{t(`reviews.${q}`)}&rdquo;</p>
                                     <p className="text-sm text-gray-500 font-medium">— {t(`reviews.${a}`)}</p>
                                 </motion.div>
                             ))}
