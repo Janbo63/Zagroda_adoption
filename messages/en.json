@@ -995,5 +995,79 @@
       "subtitle": "Limited rooms — book your dates before they're gone.",
       "btn": "Check availability"
     }
+  },
+  "discover": {
+    "meta": {
+      "title": "Discover an alpaca farm in the Polish mountains — Zagroda Alpakoterapii",
+      "description": "A unique alpaca farm in the Giant Mountains, Poland. Meet the alpacas, hike the mountains, and discover a place where time stands still."
+    },
+    "hero": {
+      "badge": "🇵🇱 Giant Mountains, Poland",
+      "headline": "An alpaca farm\nin the Polish mountains",
+      "subheadline": "Six alpacas, one farm, endless mountains. A place where kids laugh, parents relax, and everyone forgets the world for a while.",
+      "socialProof": "4.9/5 stars · 400+ visitors"
+    },
+    "story": {
+      "title": "What makes it so special?",
+      "subtitle": "Three things visitors never forget",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Meet the alpacas",
+        "desc": "Six alpacas, each with their own personality. Feed them, walk with them, sit with them in the grass. No rush, no schedule — just being together.",
+        "image": "/images/activities/meet-alpacas.jpg"
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Into the mountains",
+        "desc": "The farm sits at the foot of the Giant Mountains. Forests, fresh air, waterfalls — and at night, nothing but stars.",
+        "image": "/images/Alpacas/Suri.jpg"
+      },
+      "farm": {
+        "icon": "🏡",
+        "title": "Life on the farm",
+        "desc": "Not a hotel. Not tourism. A real working farm where you help out, pet the dog, and wake up to alpacas looking through your window.",
+        "image": "/images/Rooms/Garden-1.jpg"
+      }
+    },
+    "gallery": {
+      "title": "A day on the farm"
+    },
+    "reviews": {
+      "title": "What visitors say",
+      "q1": "We woke up to alpacas looking through our window. Nothing prepares you for that. Pure magic.",
+      "a1": "Guest from the Netherlands",
+      "q2": "The alpaca experience was the highlight of our entire trip to Poland. We will be back.",
+      "a2": "Guest from Belgium",
+      "q3": "Such an intimate, peaceful place. Completely different from any hotel. Truly special.",
+      "a3": "Guest from Germany"
+    },
+    "distance": {
+      "title": "How to get here",
+      "subtitle": "Closer than you think",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brussels",
+        "drive": "~9h drive",
+        "fly": "Fly to Wrocław (TUI direct) → 2h drive"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h drive",
+        "fly": "Fly to Wrocław → 2h drive"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warsaw",
+        "drive": "~4.5h drive",
+        "fly": "Wrocław: 2h drive"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Poland"
+    },
+    "cta": {
+      "title": "Curious about staying?",
+      "subtitle": "Two unique rooms on the farm. Morning alpaca walk included. See when there's availability.",
+      "btn": "See the rooms →"
+    }
   }
 }

@@ -989,5 +989,79 @@
             "subtitle": "Beperkt aantal kamers — boek jouw data voor ze weg zijn.",
             "btn": "Controleer beschikbaarheid"
         }
+    },
+    "discover": {
+        "meta": {
+            "title": "Ontdek een alpacaboerderij in de Poolse bergen — Zagroda Alpakoterapii",
+            "description": "Een unieke alpacaboerderij in het Reuzengebergte, Polen. Ontmoet de alpaca's, wandel in de bergen, en ontdek een plek waar de tijd stilstaat."
+        },
+        "hero": {
+            "badge": "🇵🇱 Reuzengebergte, Polen",
+            "headline": "Een alpacaboerderij\nin de Poolse bergen",
+            "subheadline": "Zes alpaca's, een boerderij, eindeloze bergen. Een plek waar kinderen lachen, ouders ontspannen, en iedereen even de wereld vergeet.",
+            "socialProof": "4.9/5 sterren · 400+ bezoekers"
+        },
+        "story": {
+            "title": "Wat maakt het zo bijzonder?",
+            "subtitle": "Drie dingen die bezoekers nooit vergeten",
+            "alpacas": {
+                "icon": "🦙",
+                "title": "De alpaca's ontmoeten",
+                "desc": "Zes alpaca's met elk hun eigen karakter. Voer ze, loop met ze, zit bij ze in het gras. Geen haast, geen schema — gewoon samen zijn.",
+                "image": "/images/activities/meet-alpacas.jpg"
+            },
+            "nature": {
+                "icon": "🏔️",
+                "title": "De bergen in",
+                "desc": "De boerderij ligt aan de voet van het Reuzengebergte. Bossen, frisse lucht, watervallen — en 's avonds niets dan sterren.",
+                "image": "/images/Alpacas/Suri.jpg"
+            },
+            "farm": {
+                "icon": "🏡",
+                "title": "Leven op de boerderij",
+                "desc": "Geen hotel. Geen toerisme. Een echte boerderij waar je meehelpt, de hond aait, en 's ochtends wakker wordt met alpaca's voor je raam.",
+                "image": "/images/Rooms/Garden-1.jpg"
+            }
+        },
+        "gallery": {
+            "title": "Een dag op de boerderij"
+        },
+        "reviews": {
+            "title": "Wat bezoekers zeggen",
+            "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
+            "a1": "Gast uit Nederland",
+            "q2": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
+            "a2": "Gast uit België",
+            "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
+            "a3": "Gast uit Duitsland"
+        },
+        "distance": {
+            "title": "Hoe kom je er?",
+            "subtitle": "Dichter dan je denkt",
+            "brussels": {
+                "flag": "🇧🇪",
+                "label": "Brussel",
+                "drive": "~9u rijden",
+                "fly": "Vlieg naar Wrocław (TUI direct) → 2u rijden"
+            },
+            "amsterdam": {
+                "flag": "🇳🇱",
+                "label": "Amsterdam",
+                "drive": "~10u rijden",
+                "fly": "Vlieg naar Wrocław → 2u rijden"
+            },
+            "warsaw": {
+                "flag": "🇵🇱",
+                "label": "Warschau",
+                "drive": "~4,5u rijden",
+                "fly": "Wrocław: 2u rijden"
+            },
+            "address": "24 Orłowice, Mirsk 59-630, Polen"
+        },
+        "cta": {
+            "title": "Benieuwd naar een verblijf?",
+            "subtitle": "Twee unieke kamers op de boerderij. Ochtendwandeling met alpaca's inbegrepen. Kijk wanneer er plek is.",
+            "btn": "Bekijk de kamers →"
+        }
     }
 }
