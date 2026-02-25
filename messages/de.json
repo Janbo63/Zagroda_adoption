@@ -993,5 +993,79 @@
       "subtitle": "Begrenzte Zimmer — buchen Sie Ihre Daten bevor sie weg sind.",
       "btn": "Verfügbarkeit prüfen"
     }
+  },
+  "discover": {
+    "meta": {
+      "title": "Entdecke eine Alpakafarm im polnischen Riesengebirge — Zagroda Alpakoterapii",
+      "description": "Eine einzigartige Alpakafarm im Riesengebirge, Polen. Triff die Alpakas, wandere in den Bergen und entdecke einen Ort, an dem die Zeit stillsteht."
+    },
+    "hero": {
+      "badge": "🇵🇱 Riesengebirge, Polen",
+      "headline": "Eine Alpakafarm\nin den polnischen Bergen",
+      "subheadline": "Sechs Alpakas, ein Bauernhof, unendliche Berge. Ein Ort, an dem Kinder lachen, Eltern sich entspannen und alle für eine Weile die Welt vergessen.",
+      "socialProof": "4,9/5 Sterne · 400+ Besucher"
+    },
+    "story": {
+      "title": "Was macht es so besonders?",
+      "subtitle": "Drei Dinge, die Besucher nie vergessen",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Triff die Alpakas",
+        "desc": "Sechs Alpakas, jedes mit seiner eigenen Persönlichkeit. Füttere sie, gehe mit ihnen spazieren, sitze mit ihnen im Gras. Keine Eile, kein Zeitplan — einfach nur zusammen sein.",
+        "image": "/images/activities/meet-alpacas.jpg"
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "In die Berge",
+        "desc": "Der Hof liegt am Fuße des Riesengebirges. Wälder, frische Luft, Wasserfälle — und nachts nichts als Sterne.",
+        "image": "/images/Alpacas/Suri.jpg"
+      },
+      "farm": {
+        "icon": "🏡",
+        "title": "Leben auf dem Bauernhof",
+        "desc": "Kein Hotel. Kein Tourismus. Ein echter Bauernhof, auf dem man mithelfen, den Hund streicheln und morgens mit Alpakas vor dem Fenster aufwachen kann.",
+        "image": "/images/Rooms/Garden-1.jpg"
+      }
+    },
+    "gallery": {
+      "title": "Ein Tag auf der Farm"
+    },
+    "reviews": {
+      "title": "Was Besucher sagen",
+      "q1": "Wir sind aufgewacht und Alpakas schauten durch unser Fenster. Nichts bereitet einen darauf vor. Reine Magie.",
+      "a1": "Gast aus den Niederlanden",
+      "q2": "Das Alpaka-Erlebnis war das Highlight unserer gesamten Polenreise. Wir kommen wieder.",
+      "a2": "Gast aus Belgien",
+      "q3": "Solch ein intimer, friedlicher Ort. Völlig anders als jedes Hotel. Wirklich besonders.",
+      "a3": "Gast aus Deutschland"
+    },
+    "distance": {
+      "title": "Wie man hierher kommt",
+      "subtitle": "Näher als du denkst",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brüssel",
+        "drive": "~9 Std. Fahrt",
+        "fly": "Flug nach Breslau (TUI) → 2 Std. Fahrt"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10 Std. Fahrt",
+        "fly": "Flug nach Breslau → 2 Std. Fahrt"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warschau",
+        "drive": "~4,5 Std. Fahrt",
+        "fly": "Breslau: 2 Std. Fahrt"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polen"
+    },
+    "cta": {
+      "title": "Neugierig auf einen Aufenthalt?",
+      "subtitle": "Zwei einzigartige Zimmer auf dem Bauernhof. Morgendlicher Alpakaspaziergang inbegriffen. Siehe Verfügbarkeit.",
+      "btn": "Zimmer ansehen →"
+    }
   }
 }

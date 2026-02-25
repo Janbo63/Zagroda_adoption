@@ -1010,5 +1010,79 @@
       "subtitle": "Omezený počet pokojů — zarezervujte si termín dříve, než bude pozdě.",
       "btn": "Zkontrolovat dostupnost"
     }
+  },
+  "discover": {
+    "meta": {
+      "title": "Objevte alpačí farmu v polských horách — Zagroda Alpakoterapii",
+      "description": "Jedinečná alpačí farma v Krkonoších. Poznejte alpaky, vydejte se do hor a objevte místo, kde se zastavil čas."
+    },
+    "hero": {
+      "badge": "🇵🇱 Krkonoše, Polsko",
+      "headline": "Alpačí farma\nv polských horách",
+      "subheadline": "Šest alpak, jedna farma, nekonečné hory. Místo, kde se děti smějí, rodiče relaxují a všichni na chvíli zapomenou na svět.",
+      "socialProof": "4.9/5 hvězdiček · Více než 400 návštěvníků"
+    },
+    "story": {
+      "title": "Co dělá toto místo tak zvláštním?",
+      "subtitle": "Tři věci, na které návštěvníci nikdy nezapomínají",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Poznejte alpaky",
+        "desc": "Šest alpak, každá s vlastní osobností. Nakrmte je, projděte se s nimi, posaďte se k nim do trávy. Žádný spěch, žádný harmonogram — prostě být spolu.",
+        "image": "/images/activities/meet-alpacas.jpg"
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Do hor",
+        "desc": "Farma leží na úpatí Krkonoš. Lesy, čerstvý vzduch, vodopády — a v noci jen hvězdy.",
+        "image": "/images/Alpacas/Suri.jpg"
+      },
+      "farm": {
+        "icon": "🏡",
+        "title": "Život na farmě",
+        "desc": "Není to hotel. Není to turistika. Skutečná farma, kde můžete pomáhat, pohladit si psa a probudit se s alpakami zírajícími do vašeho okna.",
+        "image": "/images/Rooms/Garden-1.jpg"
+      }
+    },
+    "gallery": {
+      "title": "Den na farmě"
+    },
+    "reviews": {
+      "title": "Co říkají návštěvníci",
+      "q1": "Probudili jsme se a do okna nám nahlížely alpaky. Na tohle vás nic nepřipraví. Čistá magie.",
+      "a1": "Host z Nizozemska",
+      "q2": "Zážitek s alpakami byl vrcholem naší cesty do Polska. Určitě se vrátíme.",
+      "a2": "Host z Belgie",
+      "q3": "Takové intimní, klidné místo. Úplně jiné než jakýkoli hotel. Opravdu speciální.",
+      "a3": "Host z Německa"
+    },
+    "distance": {
+      "title": "Jak se sem dostat",
+      "subtitle": "Blíže, než si myslíte",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brusel",
+        "drive": "~9 hodin jízdy",
+        "fly": "Let do Vratislavi (přímý TUI) → 2h autem"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10 hodin jízdy",
+        "fly": "Let do Vratislavi → 2h autem"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Varšava",
+        "drive": "~4.5 hodin jízdy",
+        "fly": "Z Vratislavi: 2h autem"
+      },
+      "address": "Orłowice 24, Mirsk 59-630, Polsko"
+    },
+    "cta": {
+      "title": "Zvědaví na pobyt?",
+      "subtitle": "Dva jedinečné pokoje na farmě. Ranní procházka s alpakami zahrnuta v ceně. Podívejte se na dostupnost.",
+      "btn": "Pokoje k dispozici →"
+    }
   }
 }
