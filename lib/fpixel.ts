@@ -7,10 +7,14 @@ declare global {
 }
 
 export const pageview = () => {
-    window.fbq('track', 'PageView');
+    if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        window.fbq('track', 'PageView');
+    }
 };
 
 // https://developers.facebook.com/docs/facebook-pixel/advanced/
 export const event = (name: string, options = {}) => {
-    window.fbq('track', name, options);
+    if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        window.fbq('track', name, options);
+    }
 };

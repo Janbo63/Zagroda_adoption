@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect } from 'react';
 import './globals.css';
 import FacebookPixel from '@/components/FacebookPixel';
+import Script from 'next/script';
 
 declare global {
   interface Window {
@@ -22,62 +22,55 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // ── 1. Google Analytics (GA4) ──────────────────────────────────────
-    const script1 = document.createElement('script');
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
-    script1.async = true;
-    document.head.appendChild(script1);
-
-    script1.onload = () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(arguments);
-      }
-      window.gtag = gtag;
-
-      const currentUrl = window.location.href;
-      const wwwUrl = currentUrl.replace('https://', 'https://www.');
-      const wwwPath = window.location.pathname;
-
-      gtag('js', new Date());
-      gtag('config', GA4_ID, {
-        debug_mode: true,
-        page_path: wwwPath,
-        page_location: wwwUrl,
-        send_page_view: true
-      });
-
-      gtag('event', 'page_view', {
-        page_title: document.title,
-        page_location: wwwUrl,
-        page_path: wwwPath
-      });
-    };
-
-    // ── 2. Microsoft Clarity ───────────────────────────────────────────
-    const clarityScript = document.createElement('script');
-    clarityScript.async = true;
-    clarityScript.innerHTML = `
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "${CLARITY_ID}");
-    `;
-    document.head.appendChild(clarityScript);
-
-    // ── Cleanup ────────────────────────────────────────────────────────
-    return () => {
-      if (document.head.contains(script1)) document.head.removeChild(script1);
-      if (document.head.contains(clarityScript)) document.head.removeChild(clarityScript);
-    };
-  }, []);
-
   return (
     <html lang="en">
       <body>
         <FacebookPixel />
+
+        {/* ── 1. Google Analytics (GA4) ── */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              
+              // We use replace to ensure tracking matches www domain
+              var currentUrl = window.location.href;
+              var wwwUrl = currentUrl.replace('https://', 'https://www.');
+              
+              gtag('config', '${GA4_ID}', {
+                debug_mode: true,
+                page_path: window.location.pathname,
+                page_location: wwwUrl,
+                send_page_view: true
+              });
+            `,
+          }}
+        />
+
+        {/* ── 2. Microsoft Clarity ── */}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${CLARITY_ID}");
+            `,
+          }}
+        />
+
         {children}
       </body>
     </html>
