@@ -7,6 +7,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Check, MapPin, Phone, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import dynamic from 'next/dynamic';
+
+const BookingWidget = dynamic(() => import('@/components/BookingWidget'), { ssr: false });
 
 // ─── Room gallery images ──────────────────────────────────────────────────────
 const GARDEN_PHOTOS = [
@@ -108,7 +111,9 @@ function SharedAreasStrip({ title, desc }: { title: string; desc: string }) {
 export function StayPageContent({ locale }: { locale: string }) {
     const t = useTranslations('stay');
 
-    const beds24Url = `https://beds24.com/booking2.php?propid=98031&referer=iFrame&lang=${locale}&utm_source=website&utm_medium=booking_cta&utm_campaign=direct`;
+    // Fallback to English for Beds24 if Dutch is not configured on their end yet
+    const beds24Lang = locale === 'nl' ? 'en' : locale;
+    const beds24Url = `https://beds24.com/booking2.php?propid=98031&referer=iFrame&lang=${beds24Lang}&utm_source=website&utm_medium=booking_cta&utm_campaign=direct`;
 
     const fadeUp = {
         hidden: { opacity: 0, y: 30 },
@@ -443,7 +448,7 @@ export function StayPageContent({ locale }: { locale: string }) {
                 </div>
             </section>
 
-            {/* ── BOOKING WIDGET ───────────────────────────────────────── */}
+            {/* ── BOOKING WIDGET (OLD IFRAME) ──────────────────────────── */}
             <section id="booking" className="py-20 bg-white">
                 <div className="max-w-5xl mx-auto px-4">
                     <motion.div
@@ -525,10 +530,10 @@ export function StayPageContent({ locale }: { locale: string }) {
                         </motion.div>
                     </motion.div>
                 </div>
-            </section>
+            </section >
 
             {/* ── REVIEWS ──────────────────────────────────────────────── */}
-            <section className="py-20 bg-white">
+            < section className="py-20 bg-white" >
                 <div className="max-w-5xl mx-auto px-4">
                     <motion.div
                         initial="hidden"
@@ -559,7 +564,7 @@ export function StayPageContent({ locale }: { locale: string }) {
                         </div>
                     </motion.div>
                 </div>
-            </section>
+            </section >
 
             {/* ── FINAL CTA ────────────────────────────────────────────── */}
             <section className="py-20 bg-emerald-900 text-white text-center">
@@ -591,6 +596,6 @@ export function StayPageContent({ locale }: { locale: string }) {
                 </div>
             </section>
 
-        </div>
+        </div >
     );
 }
