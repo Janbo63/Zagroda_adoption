@@ -9,7 +9,7 @@ import { Check, MapPin, Phone, Star, ChevronLeft, ChevronRight } from 'lucide-re
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 
-const BookingWidget = dynamic(() => import('@/components/BookingWidget'), { ssr: false });
+// BookingWidget removed temporarily
 
 // ─── Room gallery images ──────────────────────────────────────────────────────
 const GARDEN_PHOTOS = [
