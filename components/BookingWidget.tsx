@@ -124,6 +124,15 @@ const ROOM_NAME_OVERRIDES: Record<string, string> = {
     '884394000000884002': 'Caravan',
 };
 
+// ─── Amenity overrides per room ID ────────────────────────────────────────────
+// Uses our AMENITY_LABELS codes. Overrides whatever Booking.com/Beds25 sends.
+const ROOM_AMENITY_OVERRIDES: Record<string, string[]> = {
+    '884394000000897001': ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW', 'HEATING', 'TV'],      // Garden Room
+    '884394000000894006': ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW', 'HEATING', 'TV'],      // Jungle Room
+    '884394000000896001': ['WIFI', 'PRIVATE_BATHROOM', 'KITCHEN', 'SEPARATE_BEDROOM', 'MOUNTAIN_VIEW', 'WASHING_MACHINE', 'TV'], // Forest Apartment
+    '884394000000884002': ['WIFI', 'PARKING', 'HEATING', 'PETS_ALLOWED', 'TERRACE'],         // Caravan
+};
+
 // ─── Local image overrides per room ID ────────────────────────────────────────
 // High-res photos hosted on this site. Keys are the real Beds24/Beds25 room IDs.
 // Images from the Beds25 API media[] field are used as fallback.
@@ -383,9 +392,8 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                     maxChildren: r.maxChildren,
                     minNights: r.minNights,
                     basePrice: r.basePrice,
-                    amenities: (() => {
+                    amenities: ROOM_AMENITY_OVERRIDES[r.id] || (() => {
                         const raw = typeof r.amenities === 'string' ? JSON.parse(r.amenities) : (r.amenities || []);
-                        // Flatten nested arrays e.g. [["WIFI"], ["PARKING"]] → ["WIFI", "PARKING"]
                         return Array.isArray(raw) ? raw.flat(Infinity).filter((a: any) => typeof a === 'string') : [];
                     })(),
                     totalPrice: r.pricing?.totalPrice ?? 0,
