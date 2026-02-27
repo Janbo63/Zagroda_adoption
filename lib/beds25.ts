@@ -44,12 +44,25 @@ export interface RoomPricing {
 export interface AvailableRoom {
     id: string;           // Beds25 room ID
     name: string;
+    description?: string;
+    roomType?: string;
     capacity: number;     // max guests
     maxAdults: number;
     maxChildren: number;
+    maxOccupancy?: number;
     minNights: number;
+    maxStay?: number;
     basePrice: number;    // per-night base
+    rackRate?: number;
+    size?: number;
+    sizeUnit?: string;
+    cleaningFee?: number;
+    securityDeposit?: number;
     amenities: string[];
+    sortOrder?: number;
+    bedConfig?: string | null;
+    viewType?: string | null;
+    media?: { id: string; url: string; alt?: string }[];
     pricing: RoomPricing;
 }
 
@@ -66,6 +79,33 @@ export interface RoomImage {
     type: 'HERO' | 'GALLERY' | 'THUMBNAIL' | 'PROPERTY';
     altText?: string;
     sortOrder: number;
+}
+
+/** Full room data from /api/public/rooms — used to enrich widget display */
+export interface Beds25Room {
+    id: string;
+    name: string;
+    number?: string;
+    description?: string;
+    roomType?: string;
+    capacity: number;
+    maxAdults: number;
+    maxChildren: number;
+    maxOccupancy?: number;
+    minNights: number;
+    maxStay?: number;
+    basePrice: number;
+    rackRate?: number;
+    size?: number;
+    sizeUnit?: string;
+    cleaningFee?: number;
+    securityDeposit?: number | null;
+    quantity?: number;
+    amenities: string[];  // e.g. ["WIFI", "PARKING", "KITCHEN"]
+    sortOrder?: number;
+    bedConfig?: string | null;
+    viewType?: string | null;
+    media?: { id: string; url: string; alt?: string }[];
 }
 
 export interface CreateBookingPayload {
@@ -124,34 +164,37 @@ export async function getAvailability(
                 {
                     id: 'room-garden',
                     name: 'Garden Room',
+                    description: 'Ground-floor room with garden views of the alpaca paddock and cosy natural decor.',
                     capacity: 3,
                     maxAdults: 2,
                     maxChildren: 1,
                     minNights: 2,
                     basePrice: 330,
-                    amenities: ['WiFi', 'Breakfast', 'Private bathroom'],
+                    amenities: ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW'],
                     pricing: { nights, totalPrice: 330 * nights, averagePerNight: 330, currency: 'PLN', nightlyBreakdown: [] },
                 },
                 {
                     id: 'room-jungle',
                     name: 'Jungle Room',
+                    description: 'Tropical-themed room with lush plant decor, private bathroom, and garden views.',
                     capacity: 3,
                     maxAdults: 2,
                     maxChildren: 1,
                     minNights: 2,
                     basePrice: 330,
-                    amenities: ['WiFi', 'Breakfast', 'Private bathroom'],
+                    amenities: ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW'],
                     pricing: { nights, totalPrice: 330 * nights, averagePerNight: 330, currency: 'PLN', nightlyBreakdown: [] },
                 },
                 {
                     id: 'room-forest',
                     name: 'Forest Apartment',
+                    description: 'Spacious apartment with mountain views, separate bedroom, fully equipped kitchen — perfect for families.',
                     capacity: 5,
                     maxAdults: 2,
                     maxChildren: 3,
                     minNights: 2,
                     basePrice: 410,
-                    amenities: ['WiFi', 'Breakfast', 'Kitchen', 'Separate bedroom'],
+                    amenities: ['WIFI', 'PRIVATE_BATHROOM', 'KITCHEN', 'SEPARATE_BEDROOM', 'MOUNTAIN_VIEW'],
                     pricing: { nights, totalPrice: 410 * nights, averagePerNight: 410, currency: 'PLN', nightlyBreakdown: [] },
                 },
             ],
@@ -159,6 +202,40 @@ export async function getAvailability(
     }
 
     return beds25Fetch(`/api/public/availability?checkIn=${checkIn}&checkOut=${checkOut}`);
+}
+
+/**
+ * Get full room catalogue from Beds25.
+ * Returns all rooms with descriptions, amenities, sizes, fees, and media.
+ */
+export async function getRooms(): Promise<Beds25Room[]> {
+    if (!BEDS25_API_KEY) {
+        // Stub rooms for development
+        return [
+            {
+                id: 'room-garden', name: 'Garden Room', description: 'Ground-floor room with garden views.',
+                roomType: 'room', capacity: 3, maxAdults: 2, maxChildren: 1, minNights: 2, basePrice: 330,
+                amenities: ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW'], sortOrder: 1,
+            },
+            {
+                id: 'room-jungle', name: 'Jungle Room', description: 'Tropical-themed room with lush plant decor.',
+                roomType: 'room', capacity: 3, maxAdults: 2, maxChildren: 1, minNights: 2, basePrice: 330,
+                amenities: ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW'], sortOrder: 2,
+            },
+            {
+                id: 'room-forest', name: 'Forest Apartment', description: 'Spacious apartment with mountain views.',
+                roomType: 'apartment', capacity: 5, maxAdults: 2, maxChildren: 3, minNights: 2, basePrice: 410,
+                amenities: ['WIFI', 'PRIVATE_BATHROOM', 'KITCHEN', 'SEPARATE_BEDROOM', 'MOUNTAIN_VIEW'], sortOrder: 3,
+            },
+        ];
+    }
+
+    const rooms = await beds25Fetch('/api/public/rooms');
+    // Beds25 returns amenities as a JSON string — parse if needed
+    return rooms.map((room: any) => ({
+        ...room,
+        amenities: typeof room.amenities === 'string' ? JSON.parse(room.amenities) : (room.amenities || []),
+    }));
 }
 
 /**

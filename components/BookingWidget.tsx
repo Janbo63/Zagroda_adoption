@@ -1,0 +1,1007 @@
+'use client';
+
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+interface Room {
+    roomId: string;
+    name: string;
+    description: string;
+    capacity: string;
+    maxAdults: number;
+    maxChildren: number;
+    minNights: number;
+    basePrice: number;
+    amenities: string[];
+    totalPrice: number;
+    pricePerNight: number;
+    currency: string;
+    nights: number;
+    size?: number;
+    sizeUnit?: string;
+    cleaningFee?: number;
+}
+
+interface Child { age: number }
+
+interface BookingState {
+    checkIn: string;
+    checkOut: string;
+    nights: number;
+    selectedRoom: Room | null;
+    guestName: string;
+    guestEmail: string;
+    guestPhone: string;
+    adults: number;
+    children: Child[];
+    specialRequests: string;
+    nipNumber: string;
+    voucherCode: string;
+    voucherValid: boolean;
+    voucherDiscount: number;
+    voucherDiscountType: 'PERCENT' | 'FIXED';
+    voucherError: string;
+    depositAmount: number;
+    balanceAmount: number;
+    totalAmount: number;
+}
+
+interface Props { locale: string; }
+
+// ─── Error Boundary ──────────────────────────────────────────────────────────
+
+class BookingErrorBoundary extends React.Component<
+    { children: React.ReactNode },
+    { hasError: boolean; error: string }
+> {
+    constructor(props: { children: React.ReactNode }) {
+        super(props);
+        this.state = { hasError: false, error: '' };
+    }
+    static getDerivedStateFromError(error: Error) {
+        return { hasError: true, error: error.message };
+    }
+    componentDidCatch(error: Error, info: React.ErrorInfo) {
+        console.error('[BookingWidget] Crash:', error, info.componentStack);
+    }
+    render() {
+        if (this.state.hasError) {
+            return (
+                <div className="rounded-2xl border border-red-800 bg-red-950/30 p-6 text-red-300 max-w-xl mx-auto">
+                    <h3 className="text-white font-bold mb-2">⚠️ Something went wrong</h3>
+                    <p className="text-sm break-words">{this.state.error}</p>
+                </div>
+            );
+        }
+        return this.props.children;
+    }
+}
+
+// ─── Amenity code → display label mapping ────────────────────────────────────
+// Codes come from Beds25 API (e.g. "WIFI", "PARKING", "KITCHEN")
+const AMENITY_LABELS: Record<string, { label: string; icon: string }> = {
+    WIFI: { label: 'WiFi', icon: '📶' },
+    PARKING: { label: 'Free parking', icon: '🅿️' },
+    PRIVATE_BATHROOM: { label: 'Private bathroom', icon: '🚿' },
+    SHARED_BATHROOM: { label: 'Shared bathroom', icon: '🚿' },
+    KITCHEN: { label: 'Full kitchen', icon: '🍳' },
+    KITCHENETTE: { label: 'Kitchenette', icon: '🍳' },
+    SEPARATE_BEDROOM: { label: 'Separate bedroom', icon: '🛏️' },
+    GARDEN_VIEW: { label: 'Garden view', icon: '🌿' },
+    MOUNTAIN_VIEW: { label: 'Mountain view', icon: '⛰️' },
+    AIR_CONDITIONING: { label: 'Air conditioning', icon: '❄️' },
+    HEATING: { label: 'Heating', icon: '🔥' },
+    TV: { label: 'TV', icon: '📺' },
+    PETS_ALLOWED: { label: 'Pets welcome', icon: '🐾' },
+    BALCONY: { label: 'Balcony', icon: '🏞️' },
+    TERRACE: { label: 'Terrace', icon: '☀️' },
+    FIREPLACE: { label: 'Fireplace', icon: '🔥' },
+    WASHING_MACHINE: { label: 'Washing machine', icon: '🧺' },
+};
+
+function formatAmenity(code: string): string {
+    return AMENITY_LABELS[code]?.label || code.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
+}
+
+// ─── Local image overrides per room ID ────────────────────────────────────────
+// High-res photos hosted on this site. Keys are the real Beds24/Beds25 room IDs.
+// Images from the Beds25 API media[] field are used as fallback.
+const LOCAL_ROOM_IMAGES: Record<string, string[]> = {
+    // Real Beds24 room IDs
+    '884394000000897001': [ // Garden Room
+        '/images/Rooms/Garden Room1.jpg',
+        '/images/Rooms/Garden Room 3.jpg',
+        '/images/Rooms/Garden Room 4.jpg',
+        '/images/Rooms/GardenRoom 2.jpg',
+        '/images/Rooms/Garden-1.jpg',
+    ],
+    '884394000000894006': [ // Jungle Room
+        '/images/Rooms/Jungle Room 1.jpg',
+        '/images/Rooms/Jungle Room 2.jpg',
+        '/images/Rooms/Jungle Room 3.jpg',
+        '/images/Rooms/Jungle-Room-5-edited.jpg',
+    ],
+    '884394000000896001': [ // Forest Apartment
+        '/images/Rooms/apartment2.jpg',
+        '/images/Rooms/apartment3-1.jpg',
+        '/images/Rooms/kitchen.jpg',
+    ],
+    '884394000000884002': [ // Caravan
+        '/images/Rooms/lounge-1.jpg',
+        '/images/Rooms/Lounge 2.jpg',
+        '/images/Rooms/Garden-1.jpg',
+    ],
+    // Dev stubs
+    'room-garden': [
+        '/images/Rooms/Garden Room1.jpg',
+        '/images/Rooms/Garden Room 3.jpg',
+        '/images/Rooms/Garden Room 4.jpg',
+        '/images/Rooms/GardenRoom 2.jpg',
+        '/images/Rooms/Garden-1.jpg',
+    ],
+    'room-jungle': [
+        '/images/Rooms/Jungle Room 1.jpg',
+        '/images/Rooms/Jungle Room 2.jpg',
+        '/images/Rooms/Jungle Room 3.jpg',
+        '/images/Rooms/Jungle-Room-5-edited.jpg',
+    ],
+    'room-forest': [
+        '/images/Rooms/apartment2.jpg',
+        '/images/Rooms/apartment3-1.jpg',
+        '/images/Rooms/kitchen.jpg',
+    ],
+};
+
+// ─── Mini Photo Gallery (mirrors StayPageContent PhotoGallery) ────────────────
+
+function RoomPhotoGallery({ photos, roomName }: { photos: string[]; roomName: string }) {
+    const [current, setCurrent] = useState(0);
+    return (
+        <div className="relative aspect-[4/3] overflow-hidden bg-stone-800 group">
+            <Image
+                src={photos[current]}
+                alt={`${roomName} photo ${current + 1}`}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 600px"
+            />
+            {photos.length > 1 && (
+                <>
+                    <button
+                        onClick={e => { e.stopPropagation(); setCurrent(c => (c - 1 + photos.length) % photos.length); }}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-label="Previous photo"
+                    >
+                        <ChevronLeft className="w-4 h-4" />
+                    </button>
+                    <button
+                        onClick={e => { e.stopPropagation(); setCurrent(c => (c + 1) % photos.length); }}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-label="Next photo"
+                    >
+                        <ChevronRight className="w-4 h-4" />
+                    </button>
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                        {photos.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={e => { e.stopPropagation(); setCurrent(i); }}
+                                className={`w-1.5 h-1.5 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/50'}`}
+                                aria-label={`Photo ${i + 1}`}
+                            />
+                        ))}
+                    </div>
+                </>
+            )}
+        </div>
+    );
+}
+
+// ─── Shared UI primitives ─────────────────────────────────────────────────────
+
+const inputCls = "w-full bg-stone-800 border border-stone-600 text-white placeholder-stone-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors";
+const labelCls = "block text-stone-300 text-sm font-medium mb-1.5";
+const stepTitleCls = "text-2xl font-bold text-white mb-1";
+const stepSubCls = "text-stone-400 text-sm mb-6";
+
+// ─── Progress bar ─────────────────────────────────────────────────────────────
+
+const STEPS = ['Dates', 'Room', 'Guests', 'Extras', 'Summary', 'Payment', 'Done'];
+
+function ProgressBar({ step }: { step: number }) {
+    if (step >= 6) return null;
+    const pct = ((step + 1) / 7) * 100;
+    return (
+        <div className="mb-8" role="progressbar" aria-valuenow={step + 1} aria-valuemax={7}>
+            <div className="flex justify-between items-center mb-2">
+                <span className="text-xs text-stone-400 uppercase tracking-wider font-semibold">
+                    Step {step + 1} of 7 — {STEPS[step]}
+                </span>
+                <span className="text-xs text-emerald-400 font-medium">{Math.round(pct)}%</span>
+            </div>
+            <div className="h-1.5 bg-stone-700 rounded-full overflow-hidden">
+                <div
+                    className="h-full bg-emerald-500 rounded-full transition-all duration-500 ease-out"
+                    style={{ width: `${pct}%` }}
+                />
+            </div>
+        </div>
+    );
+}
+
+// ─── Step nav row ─────────────────────────────────────────────────────────────
+
+function StepNav({ onBack, onNext, nextLabel = 'Continue →', disabled = false, showBack = true }: {
+    onBack?: () => void;
+    onNext?: () => void;
+    nextLabel?: string;
+    disabled?: boolean;
+    showBack?: boolean;
+}) {
+    return (
+        <div className="flex justify-between items-center mt-8 gap-3">
+            {showBack && onBack ? (
+                <Button
+                    type="button"
+                    variant="outline"
+                    onClick={onBack}
+                    className="border-stone-600 text-stone-300 hover:bg-stone-700 hover:text-white bg-transparent rounded-xl px-5"
+                >
+                    ← Back
+                </Button>
+            ) : <div />}
+            {onNext && (
+                <Button
+                    type="button"
+                    onClick={onNext}
+                    disabled={disabled}
+                    className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl px-6 py-2.5 disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                    {nextLabel}
+                </Button>
+            )}
+        </div>
+    );
+}
+
+// ─── Step 1: Date Picker ──────────────────────────────────────────────────────
+
+function StepDates({ state, onChange, onNext }: {
+    state: BookingState;
+    onChange: (k: keyof BookingState, v: any) => void;
+    onNext: () => void;
+}) {
+    const today = new Date().toISOString().split('T')[0];
+
+    const handleCheckIn = (v: string) => {
+        onChange('checkIn', v);
+        if (state.checkOut && v >= state.checkOut) onChange('checkOut', '');
+    };
+
+    const calcNights = (ci: string, co: string) => {
+        if (!ci || !co) return 0;
+        return Math.round((new Date(co).getTime() - new Date(ci).getTime()) / 86400000);
+    };
+
+    const handleCheckOut = (v: string) => {
+        onChange('checkOut', v);
+        onChange('nights', calcNights(state.checkIn, v));
+    };
+
+    const canNext = state.checkIn && state.checkOut && state.nights >= 1;
+
+    return (
+        <div>
+            <h2 className={stepTitleCls}>When are you visiting?</h2>
+            <p className={stepSubCls}>Minimum 2 nights. All stays include the Meet the Alpacas experience.</p>
+
+            <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label className={labelCls}>Check-in</label>
+                    <input
+                        type="date"
+                        className={inputCls}
+                        min={today}
+                        value={state.checkIn}
+                        onChange={e => handleCheckIn(e.target.value)}
+                    />
+                </div>
+                <div>
+                    <label className={labelCls}>Check-out</label>
+                    <input
+                        type="date"
+                        className={inputCls}
+                        min={state.checkIn || today}
+                        value={state.checkOut}
+                        onChange={e => handleCheckOut(e.target.value)}
+                    />
+                </div>
+            </div>
+
+            {state.nights > 0 && (
+                <div className="inline-flex items-center gap-2 bg-emerald-900/50 border border-emerald-700 text-emerald-300 rounded-full px-4 py-1.5 text-sm mb-6">
+                    🌙 {state.nights} night{state.nights !== 1 ? 's' : ''}
+                </div>
+            )}
+
+            <StepNav showBack={false} onNext={onNext} nextLabel="Check Availability →" disabled={!canNext} />
+        </div>
+    );
+}
+
+// ─── Step 2: Room Selector ────────────────────────────────────────────────────
+
+function StepRoom({ state, onChange, onNext, onBack }: {
+    state: BookingState;
+    onChange: (k: keyof BookingState, v: any) => void;
+    onNext: () => void;
+    onBack: () => void;
+}) {
+    const [rooms, setRooms] = useState<Room[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        setLoading(true);
+        fetch(`/api/booking/availability?checkIn=${state.checkIn}&checkOut=${state.checkOut}`)
+            .then(r => r.json())
+            .then(data => {
+                const mapped: Room[] = (data.availableRooms || []).map((r: any) => ({
+                    roomId: r.id,
+                    name: r.name,
+                    description: r.description || '',
+                    capacity: `${r.maxAdults} adult${r.maxAdults !== 1 ? 's' : ''}${r.maxChildren > 0 ? ` + ${r.maxChildren} child${r.maxChildren !== 1 ? 'ren' : ''}` : ''}`,
+                    maxAdults: r.maxAdults,
+                    maxChildren: r.maxChildren,
+                    minNights: r.minNights,
+                    basePrice: r.basePrice,
+                    amenities: typeof r.amenities === 'string' ? JSON.parse(r.amenities) : (r.amenities || []),
+                    totalPrice: r.pricing?.totalPrice ?? 0,
+                    pricePerNight: r.pricing?.averagePerNight ?? r.basePrice,
+                    currency: r.pricing?.currency ?? 'PLN',
+                    nights: r.pricing?.nights ?? state.nights,
+                    size: r.size,
+                    sizeUnit: r.sizeUnit,
+                    cleaningFee: r.cleaningFee,
+                }));
+                setRooms(mapped);
+                setLoading(false);
+            })
+            .catch(() => { setError('Unable to check availability. Please try again.'); setLoading(false); });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state.checkIn, state.checkOut]);
+
+    const selectRoom = (room: Room) => {
+        onChange('selectedRoom', room);
+        // Use totalPrice from API; fall back to basePrice * nights if API returns 0
+        const effectiveTotal = room.totalPrice > 0
+            ? room.totalPrice
+            : room.basePrice * room.nights;
+        const deposit = Math.round(effectiveTotal * 0.3);
+        onChange('depositAmount', deposit);
+        onChange('balanceAmount', effectiveTotal - deposit);
+        onChange('totalAmount', effectiveTotal);
+        // Patch the room object so summary/payment steps show the correct price
+        onChange('selectedRoom', { ...room, totalPrice: effectiveTotal, pricePerNight: Math.round(effectiveTotal / room.nights) });
+    };
+
+    return (
+        <div>
+            <h2 className={stepTitleCls}>Choose your room</h2>
+            <p className={stepSubCls}>{state.checkIn} → {state.checkOut} · {state.nights} night{state.nights !== 1 ? 's' : ''}</p>
+
+            {loading && (
+                <div className="flex items-center justify-center gap-3 py-12 text-stone-400">
+                    <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+                    Checking availability…
+                </div>
+            )}
+            {error && (
+                <div className="rounded-xl border border-red-800 bg-red-950/30 text-red-300 p-4 text-sm mb-4">{error}</div>
+            )}
+            {!loading && !error && rooms.length === 0 && (
+                <div className="text-center py-10">
+                    <p className="text-stone-400 mb-4">No rooms available for these dates.</p>
+                    <Button variant="outline" onClick={onBack} className="border-stone-600 text-stone-300 hover:bg-stone-700 bg-transparent rounded-xl">
+                        Try different dates
+                    </Button>
+                </div>
+            )}
+
+            <div className="flex flex-col gap-5">
+                {rooms.map(room => {
+                    const images = LOCAL_ROOM_IMAGES[room.roomId];
+                    const isSelected = state.selectedRoom?.roomId === room.roomId;
+                    return (
+                        <button
+                            key={room.roomId}
+                            onClick={() => selectRoom(room)}
+                            className={`rounded-2xl overflow-hidden border text-left transition-all duration-300 w-full
+                                ${isSelected
+                                    ? 'border-emerald-500 shadow-[0_0_0_2px_rgba(16,185,129,0.3)] shadow-emerald-500/20'
+                                    : 'border-stone-700 hover:border-stone-500 hover:shadow-xl'
+                                }`}
+                        >
+                            {/* Photo gallery */}
+                            {images && (
+                                <RoomPhotoGallery photos={images} roomName={room.name} />
+                            )}
+
+                            {/* Info panel */}
+                            <div className="bg-stone-900 p-5">
+                                <div className="flex justify-between items-start mb-2">
+                                    <h3 className="text-lg font-bold text-white">{room.name}</h3>
+                                    <div className="flex items-center gap-2">
+                                        {isSelected && (
+                                            <span className="inline-flex items-center gap-1 bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                                                <Check className="w-3 h-3" /> Selected
+                                            </span>
+                                        )}
+                                        <span className="text-xs text-stone-400 bg-stone-800 px-2.5 py-1 rounded-full border border-stone-700">
+                                            👥 {room.capacity}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {room.description && (
+                                    <p className="text-stone-400 text-sm mb-4 leading-relaxed">{room.description}</p>
+                                )}
+
+                                {/* Room size */}
+                                {room.size && (
+                                    <p className="text-stone-500 text-xs mb-3">
+                                        📐 {room.size} {room.sizeUnit || 'sqm'}
+                                    </p>
+                                )}
+
+                                {/* Amenities from API */}
+                                {room.amenities.length > 0 && (
+                                    <ul className="space-y-1.5 mb-4">
+                                        {room.amenities.map((code: string) => (
+                                            <li key={code} className="flex items-center gap-2 text-sm text-stone-300">
+                                                <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" />
+                                                {formatAmenity(code)}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+
+                                {/* Pricing — emerald callout matching site pattern */}
+                                {(() => {
+                                    const effectiveTotal = room.totalPrice > 0
+                                        ? room.totalPrice
+                                        : room.basePrice * room.nights;
+                                    const effectivePPN = Math.round(effectiveTotal / room.nights);
+                                    return (
+                                        <div className="bg-emerald-950/60 border border-emerald-800/50 rounded-xl p-4 flex justify-between items-end">
+                                            <div>
+                                                <div className="text-2xl font-bold text-emerald-400">
+                                                    {effectiveTotal.toLocaleString('pl-PL')} PLN
+                                                </div>
+                                                <div className="text-sm text-emerald-600">
+                                                    {room.nights} nights · {effectivePPN} PLN/night
+                                                </div>
+                                                {room.cleaningFee && room.cleaningFee > 0 && (
+                                                    <div className="text-xs text-stone-500 mt-1">
+                                                        + {room.cleaningFee} PLN cleaning fee
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="text-right">
+                                                <div className="text-xs text-stone-400">Deposit today</div>
+                                                <div className="text-lg font-bold text-white">
+                                                    {Math.round(effectiveTotal * 0.3).toLocaleString('pl-PL')} PLN
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })()}
+                            </div>
+                        </button>
+                    );
+                })}
+            </div>
+
+            <StepNav onBack={onBack} onNext={onNext} disabled={!state.selectedRoom} />
+        </div>
+    );
+}
+
+// ─── Step 3: Guest Details ────────────────────────────────────────────────────
+
+function Counter({ value, onChange, min = 1, max = 6 }: { value: number; onChange: (v: number) => void; min?: number; max?: number }) {
+    return (
+        <div className="flex items-center gap-3">
+            <button
+                type="button"
+                onClick={() => onChange(Math.max(min, value - 1))}
+                className="w-9 h-9 rounded-full border border-stone-600 text-stone-300 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-lg font-bold transition-colors"
+            >
+                −
+            </button>
+            <span className="text-white font-semibold w-6 text-center">{value}</span>
+            <button
+                type="button"
+                onClick={() => onChange(Math.min(max, value + 1))}
+                className="w-9 h-9 rounded-full border border-stone-600 text-stone-300 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-lg font-bold transition-colors"
+            >
+                +
+            </button>
+        </div>
+    );
+}
+
+function StepGuests({ state, onChange, onNext, onBack }: {
+    state: BookingState;
+    onChange: (k: keyof BookingState, v: any) => void;
+    onNext: () => void;
+    onBack: () => void;
+}) {
+    const updateChildAge = (index: number, age: number) => {
+        const next = [...state.children];
+        next[index] = { age };
+        onChange('children', next);
+    };
+
+    const addChild = () => {
+        if (state.children.length < 4) onChange('children', [...state.children, { age: 0 }]);
+    };
+
+    const removeChild = (i: number) => {
+        onChange('children', state.children.filter((_, idx) => idx !== i));
+    };
+
+    const ageValid = state.children.every(c => c.age >= 0 && c.age <= 15);
+    const canNext = state.guestName && state.guestEmail && state.guestPhone && state.adults >= 1 && ageValid;
+
+    return (
+        <div>
+            <h2 className={stepTitleCls}>Guest details</h2>
+            <p className={stepSubCls}>We&apos;ll use this to send your confirmation email.</p>
+
+            <div className="space-y-4">
+                <div>
+                    <label className={labelCls}>Full name *</label>
+                    <input className={inputCls} value={state.guestName} onChange={e => onChange('guestName', e.target.value)} placeholder="Anna Kowalski" />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                    <div>
+                        <label className={labelCls}>Email *</label>
+                        <input className={inputCls} type="email" value={state.guestEmail} onChange={e => onChange('guestEmail', e.target.value)} placeholder="anna@example.com" />
+                    </div>
+                    <div>
+                        <label className={labelCls}>Phone *</label>
+                        <input className={inputCls} type="tel" value={state.guestPhone} onChange={e => onChange('guestPhone', e.target.value)} placeholder="+48 123 456 789" />
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                    <div>
+                        <label className={labelCls}>Adults *</label>
+                        <Counter value={state.adults} onChange={v => onChange('adults', v)} min={1} max={6} />
+                    </div>
+                    <div>
+                        <label className={labelCls}>Children under 16</label>
+                        <button
+                            type="button"
+                            onClick={addChild}
+                            disabled={state.children.length >= 4}
+                            className="text-sm text-emerald-400 hover:text-emerald-300 border border-emerald-700 hover:border-emerald-500 rounded-lg px-3 py-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                        >
+                            + Add child
+                        </button>
+                    </div>
+                </div>
+
+                {state.children.map((child, i) => (
+                    <div key={i} className="flex items-center gap-3 bg-stone-800 rounded-xl p-3 border border-stone-700">
+                        <span className="text-stone-300 text-sm flex-1">Child {i + 1} age</span>
+                        <input
+                            type="number"
+                            className="w-20 bg-stone-700 border border-stone-600 text-white rounded-lg px-3 py-2 text-sm text-center focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            min={0} max={15}
+                            value={child.age}
+                            onChange={e => updateChildAge(i, Number(e.target.value))}
+                            placeholder="Age"
+                        />
+                        {child.age > 15 && <span className="text-red-400 text-xs">Must be under 16</span>}
+                        <button type="button" onClick={() => removeChild(i)} className="text-stone-500 hover:text-red-400 text-sm transition-colors">Remove</button>
+                    </div>
+                ))}
+            </div>
+
+            <StepNav onBack={onBack} onNext={onNext} disabled={!canNext} />
+        </div>
+    );
+}
+
+// ─── Step 4: Extras / Voucher ─────────────────────────────────────────────────
+
+function StepExtras({ state, onChange, onNext, onBack }: {
+    state: BookingState;
+    onChange: (k: keyof BookingState, v: any) => void;
+    onNext: () => void;
+    onBack: () => void;
+}) {
+    const [validating, setValidating] = useState(false);
+
+    const validateVoucher = async () => {
+        if (!state.voucherCode) return;
+        setValidating(true);
+        onChange('voucherError', '');
+        try {
+            const res = await fetch('/api/booking/voucher', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code: state.voucherCode }),
+            });
+            const data = await res.json();
+            if (data.valid) {
+                onChange('voucherValid', true);
+                onChange('voucherDiscountType', data.discountType);
+                const discountAmount = data.discountType === 'PERCENT'
+                    ? Math.round(state.totalAmount * data.discountValue / 100)
+                    : data.discountValue;
+                onChange('voucherDiscount', discountAmount);
+                const discountedTotal = Math.max(0, state.totalAmount - discountAmount);
+                const newDeposit = Math.round(discountedTotal * 0.3);
+                onChange('depositAmount', newDeposit);
+                onChange('balanceAmount', discountedTotal - newDeposit);
+            } else {
+                onChange('voucherValid', false);
+                onChange('voucherDiscount', 0);
+                onChange('voucherError', data.error || 'Invalid voucher code');
+            }
+        } catch {
+            onChange('voucherError', 'Unable to validate voucher. Please try again.');
+        } finally {
+            setValidating(false);
+        }
+    };
+
+    return (
+        <div>
+            <h2 className={stepTitleCls}>Any extras?</h2>
+            <p className={stepSubCls}>Voucher codes or special requests — all optional.</p>
+
+            <div className="space-y-5">
+                <div>
+                    <label className={labelCls}>Voucher / promo code</label>
+                    <div className="flex gap-2">
+                        <input
+                            className={`${inputCls} flex-1 ${state.voucherValid ? 'border-emerald-500' : state.voucherError ? 'border-red-600' : ''}`}
+                            value={state.voucherCode}
+                            onChange={e => {
+                                onChange('voucherCode', e.target.value.toUpperCase());
+                                onChange('voucherValid', false);
+                                onChange('voucherError', '');
+                                onChange('voucherDiscount', 0);
+                            }}
+                            placeholder="Enter code"
+                        />
+                        <Button
+                            type="button"
+                            variant="outline"
+                            onClick={validateVoucher}
+                            disabled={!state.voucherCode || validating}
+                            className="border-stone-600 text-stone-300 hover:bg-stone-700 bg-transparent rounded-xl px-5 disabled:opacity-40"
+                        >
+                            {validating ? 'Checking…' : 'Apply'}
+                        </Button>
+                    </div>
+                    {state.voucherValid && (
+                        <p className="text-emerald-400 text-sm mt-2 flex items-center gap-1">
+                            <Check className="w-4 h-4" /> {state.voucherDiscount.toLocaleString('pl-PL')} PLN discount applied
+                        </p>
+                    )}
+                    {state.voucherError && <p className="text-red-400 text-sm mt-2">{state.voucherError}</p>}
+                </div>
+
+                <div>
+                    <label className={labelCls}>Special requests <span className="text-stone-500 font-normal">(optional)</span></label>
+                    <textarea
+                        className={inputCls}
+                        value={state.specialRequests}
+                        onChange={e => onChange('specialRequests', e.target.value)}
+                        placeholder="Dietary requirements, bed preferences, accessibility needs…"
+                        rows={3}
+                    />
+                </div>
+
+                <div>
+                    <label className={labelCls}>NIP number <span className="text-stone-500 font-normal">(optional — VAT invoice)</span></label>
+                    <input
+                        className={inputCls}
+                        value={state.nipNumber}
+                        onChange={e => onChange('nipNumber', e.target.value)}
+                        placeholder="1234567890"
+                        maxLength={10}
+                    />
+                    <p className="text-stone-500 text-xs mt-1.5">Only required if you need a VAT invoice.</p>
+                </div>
+            </div>
+
+            <StepNav onBack={onBack} onNext={onNext} />
+        </div>
+    );
+}
+
+// ─── Step 5: Summary ──────────────────────────────────────────────────────────
+
+function StepSummary({ state, onNext, onBack }: {
+    state: BookingState;
+    onNext: () => void;
+    onBack: () => void;
+}) {
+    const room = state.selectedRoom!;
+
+    const SummaryRow = ({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) => (
+        <div className={`flex justify-between items-center py-3 border-b border-stone-700/50 ${highlight ? 'text-white' : ''}`}>
+            <span className={highlight ? 'font-semibold text-white' : 'text-stone-400 text-sm'}>{label}</span>
+            <strong className={highlight ? 'text-emerald-400 text-lg' : 'text-white'}>{value}</strong>
+        </div>
+    );
+
+    return (
+        <div>
+            <h2 className={stepTitleCls}>Booking summary</h2>
+            <p className={stepSubCls}>Please review before payment.</p>
+
+            <div className="bg-stone-900 border border-stone-700 rounded-2xl overflow-hidden mb-5">
+                <div className="px-5 py-4">
+                    <SummaryRow label="Room" value={room.name} />
+                    <SummaryRow label="Dates" value={`${state.checkIn} → ${state.checkOut} (${state.nights} nights)`} />
+                    <SummaryRow
+                        label="Guests"
+                        value={`${state.adults} adult${state.adults !== 1 ? 's' : ''}${state.children.length > 0 ? `, ${state.children.length} child${state.children.length !== 1 ? 'ren' : ''}` : ''}`}
+                    />
+                    {state.voucherDiscount > 0 && (
+                        <div className="flex justify-between items-center py-3 border-b border-stone-700/50">
+                            <span className="text-stone-400 text-sm">Voucher ({state.voucherCode})</span>
+                            <strong className="text-emerald-400">−{state.voucherDiscount.toLocaleString('pl-PL')} PLN</strong>
+                        </div>
+                    )}
+                </div>
+                <div className="bg-emerald-950/50 border-t border-emerald-800/50 px-5 py-4">
+                    <SummaryRow label="Deposit due today" value={`${state.depositAmount.toLocaleString('pl-PL')} PLN`} highlight />
+                    <div className="flex justify-between items-center pt-3">
+                        <span className="text-stone-500 text-xs">Balance due 3 days before arrival</span>
+                        <span className="text-stone-400 text-sm font-semibold">{state.balanceAmount.toLocaleString('pl-PL')} PLN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-stone-800/50 border border-stone-700 rounded-xl p-4 text-sm text-stone-400 leading-relaxed">
+                <strong className="text-stone-300 block mb-1">Cancellation policy</strong>
+                The deposit is non-refundable. Your remaining balance will be charged automatically 3 days before arrival. You may reschedule or cancel for free up to 3 days before arrival.
+            </div>
+
+            <StepNav onBack={onBack} onNext={onNext} nextLabel="Proceed to Payment →" />
+        </div>
+    );
+}
+
+// ─── Step 6: Payment (Stripe Elements) ───────────────────────────────────────
+
+function PaymentForm({ state, onSuccess }: { state: BookingState; onSuccess: (ref: string) => void }) {
+    const stripe = useStripe();
+    const elements = useElements();
+    const [error, setError] = useState('');
+    const [processing, setProcessing] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!stripe || !elements) return;
+        setProcessing(true);
+        setError('');
+
+        const { error: submitError, paymentIntent } = await stripe.confirmPayment({
+            elements,
+            confirmParams: { return_url: `${window.location.origin}/${state.selectedRoom?.roomId}` },
+            redirect: 'if_required',
+        });
+
+        if (submitError) {
+            setError(submitError.message || 'Payment failed. Your card was not charged.');
+            setProcessing(false);
+            return;
+        }
+
+        if (paymentIntent?.status === 'succeeded') {
+            onSuccess(paymentIntent.id);
+        } else {
+            setError('Payment was not completed. Your card was not charged.');
+            setProcessing(false);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="bg-emerald-950/50 border border-emerald-800/50 rounded-xl p-4 text-sm">
+                <strong className="text-white block mb-0.5">Charging deposit: {state.depositAmount?.toLocaleString('pl-PL')} PLN</strong>
+                <p className="text-emerald-400/80">Your card details are saved securely for the balance charge 3 days before arrival.</p>
+            </div>
+            <PaymentElement />
+            {error && (
+                <div className="bg-red-950/40 border border-red-800 text-red-300 rounded-xl p-4 text-sm" role="alert">
+                    <strong>⚠ {error}</strong>
+                </div>
+            )}
+            <Button
+                type="submit"
+                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-3 text-base disabled:opacity-40"
+                disabled={!stripe || processing}
+            >
+                {processing ? 'Processing…' : `Pay ${state.depositAmount?.toLocaleString('pl-PL')} PLN deposit`}
+            </Button>
+        </form>
+    );
+}
+
+function StepPayment({ state, onSuccess, onBack }: {
+    state: BookingState;
+    onSuccess: (ref: string) => void;
+    onBack: () => void;
+}) {
+    const [clientSecret, setClientSecret] = useState('');
+    const [intentError, setIntentError] = useState('');
+    const stateRef = useRef(state);
+
+    useEffect(() => {
+        const s = stateRef.current;
+        fetch('/api/booking/intent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                roomId: s.selectedRoom?.roomId,
+                roomName: s.selectedRoom?.name,
+                checkIn: s.checkIn,
+                checkOut: s.checkOut,
+                nights: s.nights,
+                depositAmount: s.depositAmount,
+                balanceAmount: s.balanceAmount,
+                totalAmount: s.totalAmount,
+                adults: s.adults,
+                children: s.children,
+                guestName: s.guestName,
+                guestEmail: s.guestEmail,
+                guestPhone: s.guestPhone,
+                specialRequests: s.specialRequests,
+                nipNumber: s.nipNumber,
+                voucherCode: s.voucherValid ? s.voucherCode : undefined,
+                voucherAmount: s.voucherValid ? s.voucherDiscount : undefined,
+                locale: 'en',
+            }),
+        })
+            .then(r => r.json())
+            .then(data => {
+                if (data.clientSecret) setClientSecret(data.clientSecret);
+                else setIntentError('Unable to initiate payment. Please try again.');
+            })
+            .catch(() => setIntentError('Unable to initiate payment. Please try again.'));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    return (
+        <div>
+            <h2 className={stepTitleCls}>Payment</h2>
+            <p className={stepSubCls}>Secure card payment via Stripe.</p>
+
+            {intentError && (
+                <div className="bg-red-950/40 border border-red-800 text-red-300 rounded-xl p-4 text-sm mb-4">{intentError}</div>
+            )}
+            {!clientSecret && !intentError && (
+                <div className="flex items-center justify-center gap-3 py-12 text-stone-400">
+                    <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+                    Preparing payment…
+                </div>
+            )}
+            {clientSecret && (
+                <Elements
+                    stripe={stripePromise}
+                    options={{ clientSecret, appearance: { theme: 'night', variables: { colorPrimary: '#10b981' } } }}
+                >
+                    <PaymentForm state={state} onSuccess={onSuccess} />
+                </Elements>
+            )}
+
+            <button
+                onClick={onBack}
+                className="mt-4 text-stone-500 hover:text-stone-300 text-sm transition-colors"
+            >
+                ← Back to summary
+            </button>
+        </div>
+    );
+}
+
+// ─── Step 7: Confirmation ─────────────────────────────────────────────────────
+
+function StepConfirmation({ state }: { state: BookingState }) {
+    return (
+        <div className="text-center py-6">
+            <div className="text-6xl mb-4">🦙</div>
+            <h2 className="text-3xl font-bold text-white mb-2">Booking confirmed!</h2>
+            <p className="text-stone-400 mb-8">We can&apos;t wait to welcome you to the alpaca farm.</p>
+
+            <div className="bg-stone-900 border border-stone-700 rounded-2xl text-left px-5 py-4 space-y-3 mb-6">
+                <div className="flex justify-between text-sm">
+                    <span className="text-stone-400">Room</span>
+                    <strong className="text-white">{state.selectedRoom?.name}</strong>
+                </div>
+                <div className="flex justify-between text-sm">
+                    <span className="text-stone-400">Dates</span>
+                    <strong className="text-white">{state.checkIn} → {state.checkOut}</strong>
+                </div>
+                <div className="flex justify-between text-sm">
+                    <span className="text-stone-400">Deposit paid</span>
+                    <strong className="text-emerald-400">{state.depositAmount.toLocaleString('pl-PL')} PLN</strong>
+                </div>
+                <div className="flex justify-between text-sm">
+                    <span className="text-stone-400">Balance due T-3</span>
+                    <strong className="text-white">{state.balanceAmount.toLocaleString('pl-PL')} PLN</strong>
+                </div>
+            </div>
+
+            <p className="text-stone-400 text-sm">
+                A confirmation email is on its way to <strong className="text-white">{state.guestEmail}</strong>.<br />
+                Your balance will be charged automatically 3 days before arrival — no action needed.
+            </p>
+        </div>
+    );
+}
+
+// ─── Main Widget ──────────────────────────────────────────────────────────────
+
+function BookingWidgetInner({ locale: _locale }: Props) {
+    const [step, setStep] = useState(0);
+    const [_bookingRef, setBookingRef] = useState('');
+    const [state, setState] = useState<BookingState>({
+        checkIn: '', checkOut: '', nights: 0,
+        selectedRoom: null,
+        guestName: '', guestEmail: '', guestPhone: '', adults: 2, children: [],
+        specialRequests: '', nipNumber: '',
+        voucherCode: '', voucherValid: false, voucherDiscount: 0, voucherDiscountType: 'FIXED', voucherError: '',
+        depositAmount: 0, balanceAmount: 0, totalAmount: 0,
+    });
+
+    const set = useCallback((k: keyof BookingState, v: any) => {
+        setState(prev => ({ ...prev, [k]: v }));
+    }, []);
+
+    const next = () => setStep(s => Math.min(s + 1, 6));
+    const back = () => setStep(s => Math.max(s - 1, 0));
+
+    const handlePaymentSuccess = (ref: string) => {
+        setBookingRef(ref);
+        setStep(6);
+    };
+
+    return (
+        <div>
+            <ProgressBar step={step} />
+            {step === 0 && <StepDates state={state} onChange={set} onNext={next} />}
+            {step === 1 && <StepRoom state={state} onChange={set} onNext={next} onBack={back} />}
+            {step === 2 && <StepGuests state={state} onChange={set} onNext={next} onBack={back} />}
+            {step === 3 && <StepExtras state={state} onChange={set} onNext={next} onBack={back} />}
+            {step === 4 && <StepSummary state={state} onNext={next} onBack={back} />}
+            {step === 5 && <StepPayment state={state} onSuccess={handlePaymentSuccess} onBack={back} />}
+            {step === 6 && <StepConfirmation state={state} />}
+        </div>
+    );
+}
+
+export default function BookingWidget(props: Props) {
+    return (
+        <BookingErrorBoundary>
+            <BookingWidgetInner {...props} />
+        </BookingErrorBoundary>
+    );
+}
