@@ -1063,5 +1063,102 @@
             "subtitle": "Twee unieke kamers op de boerderij. Ochtendwandeling met alpaca's inbegrepen. Kijk wanneer er plek is.",
             "btn": "Bekijk de kamers →"
         }
+    },
+    "booking": {
+        "steps": {
+            "dates": "Data",
+            "room": "Kamer",
+            "guests": "Gasten",
+            "extras": "Extra's",
+            "summary": "Overzicht",
+            "payment": "Betaling",
+            "confirmed": "Bevestigd"
+        },
+        "dates": {
+            "title": "Wanneer kom je op bezoek?",
+            "subtitle": "Minimaal 2 nachten. Alle verblijven inclusief de Maak kennis met de alpaca's ervaring.",
+            "checkIn": "Check-in",
+            "checkOut": "Check-out",
+            "nights": "{count} nacht",
+            "nights_plural": "{count} nachten",
+            "minNights": "Minimaal {count} nachten"
+        },
+        "rooms": {
+            "title": "Kies je kamer",
+            "dateRange": "{checkIn} → {checkOut} · {nights} nacht(en)",
+            "checking": "Beschikbaarheid controleren…",
+            "noRooms": "Geen kamers beschikbaar voor deze data.",
+            "tryDifferent": "Probeer andere data",
+            "selected": "Geselecteerd",
+            "perNight": "{price} PLN/nacht",
+            "totalStay": "{nights} nachten · {price} PLN/nacht",
+            "depositToday": "Aanbetaling vandaag",
+            "cleaningFee": "+ {amount} PLN schoonmaakkosten"
+        },
+        "guests": {
+            "title": "Wie komen er?",
+            "subtitle": "Vertel ons over je groep.",
+            "adults": "Volwassenen",
+            "children": "Kinderen",
+            "childAge": "Leeftijd kind {number}",
+            "addChild": "Kind toevoegen",
+            "removeChild": "Verwijderen"
+        },
+        "details": {
+            "title": "Gastgegevens",
+            "subtitle": "We gebruiken dit om je boeking te bevestigen.",
+            "fullName": "Volledige naam",
+            "email": "E-mailadres",
+            "phone": "Telefoonnummer",
+            "specialRequests": "Speciale verzoeken (optioneel)",
+            "nipNumber": "BTW-nummer (optioneel voor factuur)"
+        },
+        "voucher": {
+            "title": "Heb je een bon?",
+            "subtitle": "Pas een cadeaubon toe om de prijs van je verblijf te verlagen.",
+            "placeholder": "Voer boncode in",
+            "apply": "Toepassen",
+            "applied": "Bon toegepast!",
+            "discount": "Korting: {amount} PLN",
+            "invalid": "Ongeldige of verlopen boncode",
+            "skip": "Overslaan — ik heb geen bon"
+        },
+        "summary": {
+            "title": "Controleer je boeking",
+            "room": "Kamer",
+            "dates": "Data",
+            "guests": "Gasten",
+            "totalStay": "Totaal verblijf",
+            "voucherDiscount": "Bonkorting",
+            "depositNow": "Aanbetaling nu (30%)",
+            "balanceDue": "Restbedrag 3 dagen voor aankomst",
+            "cancellation": "Annuleringsbeleid",
+            "cancellationText": "De aanbetaling is niet-restitueerbaar. Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven. Je kunt gratis wijzigen of annuleren tot 3 dagen voor aankomst.",
+            "proceedToPayment": "Doorgaan naar betaling →"
+        },
+        "payment": {
+            "title": "Betaling",
+            "subtitle": "Veilige kaartbetaling via Stripe.",
+            "preparing": "Betaling voorbereiden…",
+            "chargingDeposit": "Aanbetaling: {amount} PLN",
+            "cardSaved": "Je kaartgegevens worden veilig opgeslagen voor de resterende betaling 3 dagen voor aankomst.",
+            "payButton": "Betaal {amount} PLN aanbetaling",
+            "processing": "Verwerken…",
+            "error": "Betaling kon niet worden gestart. Probeer het opnieuw.",
+            "backToSummary": "← Terug naar overzicht"
+        },
+        "confirmation": {
+            "title": "Boeking bevestigd!",
+            "thankYou": "Bedankt, {name}!",
+            "ref": "Boekingsref",
+            "depositPaid": "Aanbetaling betaald",
+            "balanceDue": "Restbedrag T-3",
+            "emailSent": "Er is een bevestigingsmail onderweg naar",
+            "balanceNote": "Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven — geen actie nodig."
+        },
+        "nav": {
+            "back": "← Terug",
+            "next": "Volgende →"
+        }
     }
 }

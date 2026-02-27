@@ -1067,5 +1067,102 @@
       "subtitle": "Zwei einzigartige Zimmer auf dem Bauernhof. Morgendlicher Alpakaspaziergang inbegriffen. Siehe Verfügbarkeit.",
       "btn": "Zimmer ansehen →"
     }
+  },
+  "booking": {
+    "steps": {
+      "dates": "Termine",
+      "room": "Zimmer",
+      "guests": "Gäste",
+      "extras": "Extras",
+      "summary": "Zusammenfassung",
+      "payment": "Zahlung",
+      "confirmed": "Bestätigt"
+    },
+    "dates": {
+      "title": "Wann besuchen Sie uns?",
+      "subtitle": "Mindestens 2 Nächte. Alle Aufenthalte beinhalten das Alpaka-Erlebnis.",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "{count} Nacht",
+      "nights_plural": "{count} Nächte",
+      "minNights": "Mindestens {count} Nächte"
+    },
+    "rooms": {
+      "title": "Wählen Sie Ihr Zimmer",
+      "dateRange": "{checkIn} → {checkOut} · {nights} Nacht/Nächte",
+      "checking": "Verfügbarkeit wird geprüft…",
+      "noRooms": "Keine Zimmer für diese Daten verfügbar.",
+      "tryDifferent": "Andere Daten versuchen",
+      "selected": "Ausgewählt",
+      "perNight": "{price} PLN/Nacht",
+      "totalStay": "{nights} Nächte · {price} PLN/Nacht",
+      "depositToday": "Anzahlung heute",
+      "cleaningFee": "+ {amount} PLN Reinigungsgebühr"
+    },
+    "guests": {
+      "title": "Wer kommt?",
+      "subtitle": "Erzählen Sie uns von Ihrer Gruppe.",
+      "adults": "Erwachsene",
+      "children": "Kinder",
+      "childAge": "Alter Kind {number}",
+      "addChild": "Kind hinzufügen",
+      "removeChild": "Entfernen"
+    },
+    "details": {
+      "title": "Gastdaten",
+      "subtitle": "Wir verwenden diese Daten zur Buchungsbestätigung.",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "specialRequests": "Besondere Wünsche (optional)",
+      "nipNumber": "USt-Nr. (optional für Rechnung)"
+    },
+    "voucher": {
+      "title": "Haben Sie einen Gutschein?",
+      "subtitle": "Lösen Sie einen Geschenkgutschein ein, um den Preis Ihres Aufenthalts zu senken.",
+      "placeholder": "Gutscheincode eingeben",
+      "apply": "Anwenden",
+      "applied": "Gutschein angewendet!",
+      "discount": "Rabatt: {amount} PLN",
+      "invalid": "Ungültiger oder abgelaufener Gutscheincode",
+      "skip": "Überspringen — ich habe keinen Gutschein"
+    },
+    "summary": {
+      "title": "Buchung überprüfen",
+      "room": "Zimmer",
+      "dates": "Termine",
+      "guests": "Gäste",
+      "totalStay": "Gesamtaufenthalt",
+      "voucherDiscount": "Gutscheinrabatt",
+      "depositNow": "Anzahlung jetzt (30%)",
+      "balanceDue": "Restbetrag 3 Tage vor Ankunft",
+      "cancellation": "Stornierungsbedingungen",
+      "cancellationText": "Die Anzahlung ist nicht erstattungsfähig. Ihr Restbetrag wird automatisch 3 Tage vor Ankunft abgebucht. Sie können bis 3 Tage vor Ankunft kostenlos umbuchen oder stornieren.",
+      "proceedToPayment": "Weiter zur Zahlung →"
+    },
+    "payment": {
+      "title": "Zahlung",
+      "subtitle": "Sichere Kartenzahlung über Stripe.",
+      "preparing": "Zahlung wird vorbereitet…",
+      "chargingDeposit": "Anzahlung: {amount} PLN",
+      "cardSaved": "Ihre Kartendaten werden sicher für die Restzahlung 3 Tage vor Ankunft gespeichert.",
+      "payButton": "{amount} PLN Anzahlung bezahlen",
+      "processing": "Verarbeitung…",
+      "error": "Zahlung konnte nicht initiiert werden. Bitte versuchen Sie es erneut.",
+      "backToSummary": "← Zurück zur Zusammenfassung"
+    },
+    "confirmation": {
+      "title": "Buchung bestätigt!",
+      "thankYou": "Vielen Dank, {name}!",
+      "ref": "Buchungsref",
+      "depositPaid": "Anzahlung bezahlt",
+      "balanceDue": "Restbetrag T-3",
+      "emailSent": "Eine Bestätigungs-E-Mail ist unterwegs an",
+      "balanceNote": "Ihr Restbetrag wird automatisch 3 Tage vor Ankunft abgebucht — keine Aktion erforderlich."
+    },
+    "nav": {
+      "back": "← Zurück",
+      "next": "Weiter →"
+    }
   }
 }

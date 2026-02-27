@@ -1084,5 +1084,102 @@
       "subtitle": "Dva jedinečné pokoje na farmě. Ranní procházka s alpakami zahrnuta v ceně. Podívejte se na dostupnost.",
       "btn": "Pokoje k dispozici →"
     }
+  },
+  "booking": {
+    "steps": {
+      "dates": "Termíny",
+      "room": "Pokoj",
+      "guests": "Hosté",
+      "extras": "Doplňky",
+      "summary": "Shrnutí",
+      "payment": "Platba",
+      "confirmed": "Potvrzeno"
+    },
+    "dates": {
+      "title": "Kdy nás navštívíte?",
+      "subtitle": "Minimálně 2 noci. Každý pobyt zahrnuje Poznejte alpaky.",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "{count} noc",
+      "nights_plural": "{count} nocí",
+      "minNights": "Minimálně {count} nocí"
+    },
+    "rooms": {
+      "title": "Vyberte si pokoj",
+      "dateRange": "{checkIn} → {checkOut} · {nights} nocí",
+      "checking": "Kontrola dostupnosti…",
+      "noRooms": "Pro vybraná data nejsou dostupné žádné pokoje.",
+      "tryDifferent": "Zkuste jiná data",
+      "selected": "Vybráno",
+      "perNight": "{price} PLN/noc",
+      "totalStay": "{nights} nocí · {price} PLN/noc",
+      "depositToday": "Záloha dnes",
+      "cleaningFee": "+ {amount} PLN poplatek za úklid"
+    },
+    "guests": {
+      "title": "Kdo přijede?",
+      "subtitle": "Řekněte nám o své skupině.",
+      "adults": "Dospělí",
+      "children": "Děti",
+      "childAge": "Věk dítěte {number}",
+      "addChild": "Přidat dítě",
+      "removeChild": "Odebrat"
+    },
+    "details": {
+      "title": "Údaje hosta",
+      "subtitle": "Použijeme je k potvrzení vaší rezervace.",
+      "fullName": "Celé jméno",
+      "email": "E-mailová adresa",
+      "phone": "Telefonní číslo",
+      "specialRequests": "Zvláštní přání (volitelné)",
+      "nipNumber": "DIČ (volitelné pro fakturu)"
+    },
+    "voucher": {
+      "title": "Máte poukaz?",
+      "subtitle": "Uplatněte dárkový poukaz ke snížení ceny pobytu.",
+      "placeholder": "Zadejte kód poukazu",
+      "apply": "Uplatnit",
+      "applied": "Poukaz uplatněn!",
+      "discount": "Sleva: {amount} PLN",
+      "invalid": "Neplatný nebo prošlý kód poukazu",
+      "skip": "Přeskočit — nemám poukaz"
+    },
+    "summary": {
+      "title": "Zkontrolujte rezervaci",
+      "room": "Pokoj",
+      "dates": "Termín",
+      "guests": "Hosté",
+      "totalStay": "Celková cena pobytu",
+      "voucherDiscount": "Sleva z poukazu",
+      "depositNow": "Záloha nyní (30%)",
+      "balanceDue": "Doplatek 3 dny před příjezdem",
+      "cancellation": "Podmínky zrušení",
+      "cancellationText": "Záloha je nevratná. Zbývající částka bude automaticky stržena 3 dny před příjezdem. Můžete změnit termín nebo zrušit zdarma do 3 dnů před příjezdem.",
+      "proceedToPayment": "Pokračovat k platbě →"
+    },
+    "payment": {
+      "title": "Platba",
+      "subtitle": "Bezpečná platba kartou přes Stripe.",
+      "preparing": "Příprava platby…",
+      "chargingDeposit": "Záloha: {amount} PLN",
+      "cardSaved": "Údaje vaší karty jsou bezpečně uloženy pro doplatek 3 dny před příjezdem.",
+      "payButton": "Zaplatit {amount} PLN zálohu",
+      "processing": "Zpracovávání…",
+      "error": "Platbu se nepodařilo iniciovat. Zkuste to prosím znovu.",
+      "backToSummary": "← Zpět na shrnutí"
+    },
+    "confirmation": {
+      "title": "Rezervace potvrzena!",
+      "thankYou": "Děkujeme, {name}!",
+      "ref": "Č. rezervace",
+      "depositPaid": "Záloha zaplacena",
+      "balanceDue": "Doplatek T-3",
+      "emailSent": "Potvrzovací e-mail je na cestě na adresu",
+      "balanceNote": "Zbývající částka bude automaticky stržena 3 dny před příjezdem — nemusíte nic dělat."
+    },
+    "nav": {
+      "back": "← Zpět",
+      "next": "Další →"
+    }
   }
 }

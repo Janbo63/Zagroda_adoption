@@ -1069,5 +1069,102 @@
       "subtitle": "Two unique rooms on the farm. Morning alpaca walk included. See when there's availability.",
       "btn": "See the rooms →"
     }
+  },
+  "booking": {
+    "steps": {
+      "dates": "Dates",
+      "room": "Room",
+      "guests": "Guests",
+      "extras": "Extras",
+      "summary": "Summary",
+      "payment": "Payment",
+      "confirmed": "Confirmed"
+    },
+    "dates": {
+      "title": "When are you visiting?",
+      "subtitle": "Minimum 2 nights. All stays include the Meet the Alpacas experience.",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "{count} night",
+      "nights_plural": "{count} nights",
+      "minNights": "Minimum {count} nights"
+    },
+    "rooms": {
+      "title": "Choose your room",
+      "dateRange": "{checkIn} → {checkOut} · {nights} night(s)",
+      "checking": "Checking availability…",
+      "noRooms": "No rooms available for these dates.",
+      "tryDifferent": "Try different dates",
+      "selected": "Selected",
+      "perNight": "{price} PLN/night",
+      "totalStay": "{nights} nights · {price} PLN/night",
+      "depositToday": "Deposit today",
+      "cleaningFee": "+ {amount} PLN cleaning fee"
+    },
+    "guests": {
+      "title": "Who's coming?",
+      "subtitle": "Tell us about your group.",
+      "adults": "Adults",
+      "children": "Children",
+      "childAge": "Child {number} age",
+      "addChild": "Add child",
+      "removeChild": "Remove"
+    },
+    "details": {
+      "title": "Guest details",
+      "subtitle": "We'll use this to confirm your booking.",
+      "fullName": "Full name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "specialRequests": "Special requests (optional)",
+      "nipNumber": "NIP / Tax number (optional for invoice)"
+    },
+    "voucher": {
+      "title": "Have a voucher?",
+      "subtitle": "Apply a gift voucher to reduce your stay price.",
+      "placeholder": "Enter voucher code",
+      "apply": "Apply",
+      "applied": "Voucher applied!",
+      "discount": "Discount: {amount} PLN",
+      "invalid": "Invalid or expired voucher code",
+      "skip": "Skip — I don't have a voucher"
+    },
+    "summary": {
+      "title": "Review your booking",
+      "room": "Room",
+      "dates": "Dates",
+      "guests": "Guests",
+      "totalStay": "Total stay",
+      "voucherDiscount": "Voucher discount",
+      "depositNow": "Deposit now (30%)",
+      "balanceDue": "Balance due 3 days before arrival",
+      "cancellation": "Cancellation policy",
+      "cancellationText": "The deposit is non-refundable. Your remaining balance will be charged automatically 3 days before arrival. You may reschedule or cancel for free up to 3 days before arrival.",
+      "proceedToPayment": "Proceed to Payment →"
+    },
+    "payment": {
+      "title": "Payment",
+      "subtitle": "Secure card payment via Stripe.",
+      "preparing": "Preparing payment…",
+      "chargingDeposit": "Charging deposit: {amount} PLN",
+      "cardSaved": "Your card details are saved securely for the balance charge 3 days before arrival.",
+      "payButton": "Pay {amount} PLN deposit",
+      "processing": "Processing…",
+      "error": "Unable to initiate payment. Please try again.",
+      "backToSummary": "← Back to summary"
+    },
+    "confirmation": {
+      "title": "Booking confirmed!",
+      "thankYou": "Thank you, {name}!",
+      "ref": "Booking ref",
+      "depositPaid": "Deposit paid",
+      "balanceDue": "Balance due T-3",
+      "emailSent": "A confirmation email is on its way to",
+      "balanceNote": "Your balance will be charged automatically 3 days before arrival — no action needed."
+    },
+    "nav": {
+      "back": "← Back",
+      "next": "Next →"
+    }
   }
 }

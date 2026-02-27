@@ -1068,5 +1068,102 @@
       "subtitle": "Dwa unikalne pokoje na farmie. Poranny spacer z alpakami w cenie. Zobacz dostępność.",
       "btn": "Zobacz pokoje →"
     }
+  },
+  "booking": {
+    "steps": {
+      "dates": "Terminy",
+      "room": "Pokój",
+      "guests": "Goście",
+      "extras": "Dodatki",
+      "summary": "Podsumowanie",
+      "payment": "Płatność",
+      "confirmed": "Potwierdzono"
+    },
+    "dates": {
+      "title": "Kiedy nas odwiedzisz?",
+      "subtitle": "Minimum 2 noce. Każdy pobyt obejmuje Spotkanie z Alpakami.",
+      "checkIn": "Zameldowanie",
+      "checkOut": "Wymeldowanie",
+      "nights": "{count} noc",
+      "nights_plural": "{count} nocy",
+      "minNights": "Minimum {count} nocy"
+    },
+    "rooms": {
+      "title": "Wybierz pokój",
+      "dateRange": "{checkIn} → {checkOut} · {nights} nocy",
+      "checking": "Sprawdzanie dostępności…",
+      "noRooms": "Brak dostępnych pokoi w wybranym terminie.",
+      "tryDifferent": "Spróbuj innych dat",
+      "selected": "Wybrany",
+      "perNight": "{price} PLN/noc",
+      "totalStay": "{nights} nocy · {price} PLN/noc",
+      "depositToday": "Zaliczka dziś",
+      "cleaningFee": "+ {amount} PLN opłata za sprzątanie"
+    },
+    "guests": {
+      "title": "Kto przyjeżdża?",
+      "subtitle": "Opowiedz nam o swojej grupie.",
+      "adults": "Dorośli",
+      "children": "Dzieci",
+      "childAge": "Wiek dziecka {number}",
+      "addChild": "Dodaj dziecko",
+      "removeChild": "Usuń"
+    },
+    "details": {
+      "title": "Dane gościa",
+      "subtitle": "Użyjemy ich do potwierdzenia rezerwacji.",
+      "fullName": "Imię i nazwisko",
+      "email": "Adres email",
+      "phone": "Numer telefonu",
+      "specialRequests": "Specjalne życzenia (opcjonalnie)",
+      "nipNumber": "NIP (opcjonalnie, do faktury)"
+    },
+    "voucher": {
+      "title": "Masz voucher?",
+      "subtitle": "Zastosuj voucher podarunkowy, aby obniżyć cenę pobytu.",
+      "placeholder": "Wpisz kod vouchera",
+      "apply": "Zastosuj",
+      "applied": "Voucher zastosowany!",
+      "discount": "Zniżka: {amount} PLN",
+      "invalid": "Nieprawidłowy lub wygasły kod vouchera",
+      "skip": "Pomiń — nie mam vouchera"
+    },
+    "summary": {
+      "title": "Sprawdź rezerwację",
+      "room": "Pokój",
+      "dates": "Termin",
+      "guests": "Goście",
+      "totalStay": "Łączna kwota pobytu",
+      "voucherDiscount": "Zniżka z vouchera",
+      "depositNow": "Zaliczka teraz (30%)",
+      "balanceDue": "Reszta do zapłaty 3 dni przed przyjazdem",
+      "cancellation": "Polityka anulowania",
+      "cancellationText": "Zaliczka jest bezzwrotna. Pozostała kwota zostanie pobrana automatycznie 3 dni przed przyjazdem. Możesz zmienić termin lub anulować bezpłatnie do 3 dni przed przyjazdem.",
+      "proceedToPayment": "Przejdź do płatności →"
+    },
+    "payment": {
+      "title": "Płatność",
+      "subtitle": "Bezpieczna płatność kartą przez Stripe.",
+      "preparing": "Przygotowywanie płatności…",
+      "chargingDeposit": "Kwota zaliczki: {amount} PLN",
+      "cardSaved": "Dane karty są bezpiecznie zapisane do pobrania pozostałej kwoty 3 dni przed przyjazdem.",
+      "payButton": "Zapłać {amount} PLN zaliczki",
+      "processing": "Przetwarzanie…",
+      "error": "Nie udało się zainicjować płatności. Spróbuj ponownie.",
+      "backToSummary": "← Powrót do podsumowania"
+    },
+    "confirmation": {
+      "title": "Rezerwacja potwierdzona!",
+      "thankYou": "Dziękujemy, {name}!",
+      "ref": "Nr rezerwacji",
+      "depositPaid": "Zaliczka zapłacona",
+      "balanceDue": "Reszta do zapłaty T-3",
+      "emailSent": "Potwierdzenie email zostanie wysłane na adres",
+      "balanceNote": "Pozostała kwota zostanie pobrana automatycznie 3 dni przed przyjazdem — nie musisz nic robić."
+    },
+    "nav": {
+      "back": "← Wstecz",
+      "next": "Dalej →"
+    }
   }
 }

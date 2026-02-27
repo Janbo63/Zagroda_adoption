@@ -296,7 +296,7 @@ function StepDates({ state, onChange, onNext }: {
         onChange('nights', calcNights(state.checkIn, v));
     };
 
-    const canNext = state.checkIn && state.checkOut && state.nights >= 1;
+    const canNext = state.checkIn && state.checkOut && state.nights >= 2;
 
     return (
         <div>
@@ -790,7 +790,7 @@ function StepSummary({ state, onNext, onBack }: {
 
 // ─── Step 6: Payment (Stripe Elements) ───────────────────────────────────────
 
-function PaymentForm({ state, onSuccess }: { state: BookingState; onSuccess: (ref: string) => void }) {
+function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSuccess: (ref: string) => void; locale: string }) {
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('');
@@ -804,7 +804,7 @@ function PaymentForm({ state, onSuccess }: { state: BookingState; onSuccess: (re
 
         const { error: submitError, paymentIntent } = await stripe.confirmPayment({
             elements,
-            confirmParams: { return_url: `${window.location.origin}/${state.selectedRoom?.roomId}` },
+            confirmParams: { return_url: `${window.location.origin}/${locale}/stay?booking=confirmed` },
             redirect: 'if_required',
         });
 
@@ -845,10 +845,11 @@ function PaymentForm({ state, onSuccess }: { state: BookingState; onSuccess: (re
     );
 }
 
-function StepPayment({ state, onSuccess, onBack }: {
+function StepPayment({ state, onSuccess, onBack, locale }: {
     state: BookingState;
     onSuccess: (ref: string) => void;
     onBack: () => void;
+    locale: string;
 }) {
     const [clientSecret, setClientSecret] = useState('');
     const [intentError, setIntentError] = useState('');
@@ -877,7 +878,7 @@ function StepPayment({ state, onSuccess, onBack }: {
                 nipNumber: s.nipNumber,
                 voucherCode: s.voucherValid ? s.voucherCode : undefined,
                 voucherAmount: s.voucherValid ? s.voucherDiscount : undefined,
-                locale: 'en',
+                locale,
             }),
         })
             .then(r => r.json())
@@ -908,7 +909,7 @@ function StepPayment({ state, onSuccess, onBack }: {
                     stripe={stripePromise}
                     options={{ clientSecret, appearance: { theme: 'night', variables: { colorPrimary: '#10b981' } } }}
                 >
-                    <PaymentForm state={state} onSuccess={onSuccess} />
+                    <PaymentForm state={state} onSuccess={onSuccess} locale={locale} />
                 </Elements>
             )}
 
@@ -960,7 +961,7 @@ function StepConfirmation({ state }: { state: BookingState }) {
 
 // ─── Main Widget ──────────────────────────────────────────────────────────────
 
-function BookingWidgetInner({ locale: _locale }: Props) {
+function BookingWidgetInner({ locale }: Props) {
     const [step, setStep] = useState(0);
     const [_bookingRef, setBookingRef] = useState('');
     const [state, setState] = useState<BookingState>({
@@ -992,7 +993,7 @@ function BookingWidgetInner({ locale: _locale }: Props) {
             {step === 2 && <StepGuests state={state} onChange={set} onNext={next} onBack={back} />}
             {step === 3 && <StepExtras state={state} onChange={set} onNext={next} onBack={back} />}
             {step === 4 && <StepSummary state={state} onNext={next} onBack={back} />}
-            {step === 5 && <StepPayment state={state} onSuccess={handlePaymentSuccess} onBack={back} />}
+            {step === 5 && <StepPayment state={state} onSuccess={handlePaymentSuccess} onBack={back} locale={locale} />}
             {step === 6 && <StepConfirmation state={state} />}
         </div>
     );
