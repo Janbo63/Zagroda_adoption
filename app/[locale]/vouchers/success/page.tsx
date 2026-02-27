@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 export default function VoucherSuccessPage() {
     const t = useTranslations('vouchers');
     const searchParams = useSearchParams();
-    const voucherId = searchParams.get('voucher_id');
+    const voucherId = searchParams?.get('voucher_id');
     const [voucherCode, setVoucherCode] = useState<string | null>(null);
     const [copied, setCopied] = useState(false);
 

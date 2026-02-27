@@ -6,6 +6,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -214,16 +215,17 @@ const stepSubCls = "text-stone-400 text-sm mb-6";
 
 // ─── Progress bar ─────────────────────────────────────────────────────────────
 
-const STEPS = ['Dates', 'Room', 'Guests', 'Extras', 'Summary', 'Payment', 'Done'];
+const STEPS = ['dates', 'room', 'guests', 'extras', 'summary', 'payment', 'confirmed'] as const;
 
 function ProgressBar({ step }: { step: number }) {
+    const t = useTranslations('booking');
     if (step >= 6) return null;
     const pct = ((step + 1) / 7) * 100;
     return (
         <div className="mb-8" role="progressbar" aria-valuenow={step + 1} aria-valuemax={7}>
             <div className="flex justify-between items-center mb-2">
                 <span className="text-xs text-stone-400 uppercase tracking-wider font-semibold">
-                    Step {step + 1} of 7 — {STEPS[step]}
+                    Step {step + 1} of 7 — {t(`steps.${STEPS[step]}`)}
                 </span>
                 <span className="text-xs text-emerald-400 font-medium">{Math.round(pct)}%</span>
             </div>
@@ -239,13 +241,16 @@ function ProgressBar({ step }: { step: number }) {
 
 // ─── Step nav row ─────────────────────────────────────────────────────────────
 
-function StepNav({ onBack, onNext, nextLabel = 'Continue →', disabled = false, showBack = true }: {
+function StepNav({ onBack, onNext, nextLabel, disabled = false, showBack = true }: {
     onBack?: () => void;
     onNext?: () => void;
     nextLabel?: string;
     disabled?: boolean;
     showBack?: boolean;
 }) {
+    const t = useTranslations('booking');
+    const finalNextLabel = nextLabel || t('nav.next');
+
     return (
         <div className="flex justify-between items-center mt-8 gap-3">
             {showBack && onBack ? (
@@ -255,7 +260,7 @@ function StepNav({ onBack, onNext, nextLabel = 'Continue →', disabled = false,
                     onClick={onBack}
                     className="border-stone-600 text-stone-300 hover:bg-stone-700 hover:text-white bg-transparent rounded-xl px-5"
                 >
-                    ← Back
+                    {t('nav.back')}
                 </Button>
             ) : <div />}
             {onNext && (
@@ -265,7 +270,7 @@ function StepNav({ onBack, onNext, nextLabel = 'Continue →', disabled = false,
                     disabled={disabled}
                     className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl px-6 py-2.5 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                    {nextLabel}
+                    {finalNextLabel}
                 </Button>
             )}
         </div>
@@ -279,6 +284,7 @@ function StepDates({ state, onChange, onNext }: {
     onChange: (k: keyof BookingState, v: any) => void;
     onNext: () => void;
 }) {
+    const t = useTranslations('booking');
     const today = new Date().toISOString().split('T')[0];
 
     const handleCheckIn = (v: string) => {
@@ -300,12 +306,12 @@ function StepDates({ state, onChange, onNext }: {
 
     return (
         <div>
-            <h2 className={stepTitleCls}>When are you visiting?</h2>
-            <p className={stepSubCls}>Minimum 2 nights. All stays include the Meet the Alpacas experience.</p>
+            <h2 className={stepTitleCls}>{t('dates.title')}</h2>
+            <p className={stepSubCls}>{t('dates.subtitle')}</p>
 
             <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
-                    <label className={labelCls}>Check-in</label>
+                    <label className={labelCls}>{t('dates.checkIn')}</label>
                     <input
                         type="date"
                         className={inputCls}
@@ -315,7 +321,7 @@ function StepDates({ state, onChange, onNext }: {
                     />
                 </div>
                 <div>
-                    <label className={labelCls}>Check-out</label>
+                    <label className={labelCls}>{t('dates.checkOut')}</label>
                     <input
                         type="date"
                         className={inputCls}
@@ -328,11 +334,11 @@ function StepDates({ state, onChange, onNext }: {
 
             {state.nights > 0 && (
                 <div className="inline-flex items-center gap-2 bg-emerald-900/50 border border-emerald-700 text-emerald-300 rounded-full px-4 py-1.5 text-sm mb-6">
-                    🌙 {state.nights} night{state.nights !== 1 ? 's' : ''}
+                    🌙 {t(state.nights === 1 ? 'dates.nights' : 'dates.nights_plural', { count: state.nights })}
                 </div>
             )}
 
-            <StepNav showBack={false} onNext={onNext} nextLabel="Check Availability →" disabled={!canNext} />
+            <StepNav showBack={false} onNext={onNext} nextLabel={t('nav.next')} disabled={!canNext} />
         </div>
     );
 }
@@ -345,6 +351,7 @@ function StepRoom({ state, onChange, onNext, onBack }: {
     onNext: () => void;
     onBack: () => void;
 }) {
+    const t = useTranslations('booking');
     const [rooms, setRooms] = useState<Room[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
@@ -395,13 +402,13 @@ function StepRoom({ state, onChange, onNext, onBack }: {
 
     return (
         <div>
-            <h2 className={stepTitleCls}>Choose your room</h2>
-            <p className={stepSubCls}>{state.checkIn} → {state.checkOut} · {state.nights} night{state.nights !== 1 ? 's' : ''}</p>
+            <h2 className={stepTitleCls}>{t('rooms.title')}</h2>
+            <p className={stepSubCls}>{t('rooms.dateRange', { checkIn: state.checkIn, checkOut: state.checkOut, nights: state.nights })}</p>
 
             {loading && (
                 <div className="flex items-center justify-center gap-3 py-12 text-stone-400">
                     <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
-                    Checking availability…
+                    {t('rooms.checking')}
                 </div>
             )}
             {error && (
@@ -409,9 +416,9 @@ function StepRoom({ state, onChange, onNext, onBack }: {
             )}
             {!loading && !error && rooms.length === 0 && (
                 <div className="text-center py-10">
-                    <p className="text-stone-400 mb-4">No rooms available for these dates.</p>
+                    <p className="text-stone-400 mb-4">{t('rooms.noRooms')}</p>
                     <Button variant="outline" onClick={onBack} className="border-stone-600 text-stone-300 hover:bg-stone-700 bg-transparent rounded-xl">
-                        Try different dates
+                        {t('rooms.tryDifferent')}
                     </Button>
                 </div>
             )}
@@ -442,7 +449,7 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                                     <div className="flex items-center gap-2">
                                         {isSelected && (
                                             <span className="inline-flex items-center gap-1 bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                                                <Check className="w-3 h-3" /> Selected
+                                                <Check className="w-3 h-3" /> {t('rooms.selected')}
                                             </span>
                                         )}
                                         <span className="text-xs text-stone-400 bg-stone-800 px-2.5 py-1 rounded-full border border-stone-700">
@@ -487,16 +494,16 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                                                     {effectiveTotal.toLocaleString('pl-PL')} PLN
                                                 </div>
                                                 <div className="text-sm text-emerald-600">
-                                                    {room.nights} nights · {effectivePPN} PLN/night
+                                                    {t('rooms.totalStay', { nights: room.nights, price: effectivePPN })}
                                                 </div>
                                                 {room.cleaningFee && room.cleaningFee > 0 && (
                                                     <div className="text-xs text-stone-500 mt-1">
-                                                        + {room.cleaningFee} PLN cleaning fee
+                                                        {t('rooms.cleaningFee', { amount: room.cleaningFee })}
                                                     </div>
                                                 )}
                                             </div>
                                             <div className="text-right">
-                                                <div className="text-xs text-stone-400">Deposit today</div>
+                                                <div className="text-xs text-stone-400">{t('rooms.depositToday')}</div>
                                                 <div className="text-lg font-bold text-white">
                                                     {Math.round(effectiveTotal * 0.3).toLocaleString('pl-PL')} PLN
                                                 </div>
@@ -545,6 +552,7 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     onNext: () => void;
     onBack: () => void;
 }) {
+    const t = useTranslations('booking');
     const updateChildAge = (index: number, age: number) => {
         const next = [...state.children];
         next[index] = { age };
@@ -564,31 +572,31 @@ function StepGuests({ state, onChange, onNext, onBack }: {
 
     return (
         <div>
-            <h2 className={stepTitleCls}>Guest details</h2>
-            <p className={stepSubCls}>We&apos;ll use this to send your confirmation email.</p>
+            <h2 className={stepTitleCls}>{t('details.title')}</h2>
+            <p className={stepSubCls}>{t('details.subtitle')}</p>
 
             <div className="space-y-4">
                 <div>
-                    <label className={labelCls}>Full name *</label>
+                    <label className={labelCls}>{t('details.fullName')} *</label>
                     <input className={inputCls} value={state.guestName} onChange={e => onChange('guestName', e.target.value)} placeholder="Anna Kowalski" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <div>
-                        <label className={labelCls}>Email *</label>
+                        <label className={labelCls}>{t('details.email')} *</label>
                         <input className={inputCls} type="email" value={state.guestEmail} onChange={e => onChange('guestEmail', e.target.value)} placeholder="anna@example.com" />
                     </div>
                     <div>
-                        <label className={labelCls}>Phone *</label>
+                        <label className={labelCls}>{t('details.phone')} *</label>
                         <input className={inputCls} type="tel" value={state.guestPhone} onChange={e => onChange('guestPhone', e.target.value)} placeholder="+48 123 456 789" />
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <div>
-                        <label className={labelCls}>Adults *</label>
+                        <label className={labelCls}>{t('guests.adults')} *</label>
                         <Counter value={state.adults} onChange={v => onChange('adults', v)} min={1} max={6} />
                     </div>
                     <div>
-                        <label className={labelCls}>Children under 16</label>
+                        <label className={labelCls}>{t('guests.children')}</label>
                         <button
                             type="button"
                             onClick={addChild}
@@ -630,6 +638,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
     onNext: () => void;
     onBack: () => void;
 }) {
+    const t = useTranslations('booking');
     const [validating, setValidating] = useState(false);
 
     const validateVoucher = async () => {
@@ -668,8 +677,8 @@ function StepExtras({ state, onChange, onNext, onBack }: {
 
     return (
         <div>
-            <h2 className={stepTitleCls}>Any extras?</h2>
-            <p className={stepSubCls}>Voucher codes or special requests — all optional.</p>
+            <h2 className={stepTitleCls}>{t('voucher.title')}</h2>
+            <p className={stepSubCls}>{t('voucher.subtitle')}</p>
 
             <div className="space-y-5">
                 <div>
@@ -684,7 +693,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                                 onChange('voucherError', '');
                                 onChange('voucherDiscount', 0);
                             }}
-                            placeholder="Enter code"
+                            placeholder={t('voucher.placeholder')}
                         />
                         <Button
                             type="button"
@@ -693,19 +702,19 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                             disabled={!state.voucherCode || validating}
                             className="border-stone-600 text-stone-300 hover:bg-stone-700 bg-transparent rounded-xl px-5 disabled:opacity-40"
                         >
-                            {validating ? 'Checking…' : 'Apply'}
+                            {validating ? t('payment.processing') : t('voucher.apply')}
                         </Button>
                     </div>
                     {state.voucherValid && (
                         <p className="text-emerald-400 text-sm mt-2 flex items-center gap-1">
-                            <Check className="w-4 h-4" /> {state.voucherDiscount.toLocaleString('pl-PL')} PLN discount applied
+                            <Check className="w-4 h-4" /> {t('voucher.discount', { amount: state.voucherDiscount.toLocaleString('pl-PL') })}
                         </p>
                     )}
                     {state.voucherError && <p className="text-red-400 text-sm mt-2">{state.voucherError}</p>}
                 </div>
 
                 <div>
-                    <label className={labelCls}>Special requests <span className="text-stone-500 font-normal">(optional)</span></label>
+                    <label className={labelCls}>{t('details.specialRequests')}</label>
                     <textarea
                         className={inputCls}
                         value={state.specialRequests}
@@ -716,7 +725,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                 </div>
 
                 <div>
-                    <label className={labelCls}>NIP number <span className="text-stone-500 font-normal">(optional — VAT invoice)</span></label>
+                    <label className={labelCls}>{t('details.nipNumber')}</label>
                     <input
                         className={inputCls}
                         value={state.nipNumber}
@@ -740,6 +749,7 @@ function StepSummary({ state, onNext, onBack }: {
     onNext: () => void;
     onBack: () => void;
 }) {
+    const t = useTranslations('booking');
     const room = state.selectedRoom!;
 
     const SummaryRow = ({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) => (
@@ -751,39 +761,38 @@ function StepSummary({ state, onNext, onBack }: {
 
     return (
         <div>
-            <h2 className={stepTitleCls}>Booking summary</h2>
-            <p className={stepSubCls}>Please review before payment.</p>
+            <h2 className={stepTitleCls}>{t('summary.title')}</h2>
 
-            <div className="bg-stone-900 border border-stone-700 rounded-2xl overflow-hidden mb-5">
+            <div className="bg-stone-900 border border-stone-700 rounded-2xl overflow-hidden mb-5 mt-4">
                 <div className="px-5 py-4">
-                    <SummaryRow label="Room" value={room.name} />
-                    <SummaryRow label="Dates" value={`${state.checkIn} → ${state.checkOut} (${state.nights} nights)`} />
+                    <SummaryRow label={t('summary.room')} value={room.name} />
+                    <SummaryRow label={t('summary.dates')} value={`${state.checkIn} → ${state.checkOut} (${t(state.nights === 1 ? 'dates.nights' : 'dates.nights_plural', { count: state.nights })})`} />
                     <SummaryRow
-                        label="Guests"
+                        label={t('summary.guests')}
                         value={`${state.adults} adult${state.adults !== 1 ? 's' : ''}${state.children.length > 0 ? `, ${state.children.length} child${state.children.length !== 1 ? 'ren' : ''}` : ''}`}
                     />
                     {state.voucherDiscount > 0 && (
                         <div className="flex justify-between items-center py-3 border-b border-stone-700/50">
-                            <span className="text-stone-400 text-sm">Voucher ({state.voucherCode})</span>
+                            <span className="text-stone-400 text-sm">{t('summary.voucherDiscount')} ({state.voucherCode})</span>
                             <strong className="text-emerald-400">−{state.voucherDiscount.toLocaleString('pl-PL')} PLN</strong>
                         </div>
                     )}
                 </div>
                 <div className="bg-emerald-950/50 border-t border-emerald-800/50 px-5 py-4">
-                    <SummaryRow label="Deposit due today" value={`${state.depositAmount.toLocaleString('pl-PL')} PLN`} highlight />
+                    <SummaryRow label={t('summary.depositNow')} value={`${state.depositAmount.toLocaleString('pl-PL')} PLN`} highlight />
                     <div className="flex justify-between items-center pt-3">
-                        <span className="text-stone-500 text-xs">Balance due 3 days before arrival</span>
+                        <span className="text-stone-500 text-xs">{t('summary.balanceDue')}</span>
                         <span className="text-stone-400 text-sm font-semibold">{state.balanceAmount.toLocaleString('pl-PL')} PLN</span>
                     </div>
                 </div>
             </div>
 
             <div className="bg-stone-800/50 border border-stone-700 rounded-xl p-4 text-sm text-stone-400 leading-relaxed">
-                <strong className="text-stone-300 block mb-1">Cancellation policy</strong>
-                The deposit is non-refundable. Your remaining balance will be charged automatically 3 days before arrival. You may reschedule or cancel for free up to 3 days before arrival.
+                <strong className="text-stone-300 block mb-1">{t('summary.cancellation')}</strong>
+                {t('summary.cancellationText')}
             </div>
 
-            <StepNav onBack={onBack} onNext={onNext} nextLabel="Proceed to Payment →" />
+            <StepNav onBack={onBack} onNext={onNext} nextLabel={t('summary.proceedToPayment')} />
         </div>
     );
 }
@@ -791,6 +800,7 @@ function StepSummary({ state, onNext, onBack }: {
 // ─── Step 6: Payment (Stripe Elements) ───────────────────────────────────────
 
 function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSuccess: (ref: string) => void; locale: string }) {
+    const t = useTranslations('booking');
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('');
@@ -825,8 +835,8 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
             <div className="bg-emerald-950/50 border border-emerald-800/50 rounded-xl p-4 text-sm">
-                <strong className="text-white block mb-0.5">Charging deposit: {state.depositAmount?.toLocaleString('pl-PL')} PLN</strong>
-                <p className="text-emerald-400/80">Your card details are saved securely for the balance charge 3 days before arrival.</p>
+                <strong className="text-white block mb-0.5">{t('payment.chargingDeposit', { amount: state.depositAmount?.toLocaleString('pl-PL') })}</strong>
+                <p className="text-emerald-400/80">{t('payment.cardSaved')}</p>
             </div>
             <PaymentElement />
             {error && (
@@ -839,7 +849,7 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
                 className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-3 text-base disabled:opacity-40"
                 disabled={!stripe || processing}
             >
-                {processing ? 'Processing…' : `Pay ${state.depositAmount?.toLocaleString('pl-PL')} PLN deposit`}
+                {processing ? t('payment.processing') : t('payment.payButton', { amount: state.depositAmount?.toLocaleString('pl-PL') })}
             </Button>
         </form>
     );
@@ -851,6 +861,7 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
     onBack: () => void;
     locale: string;
 }) {
+    const t = useTranslations('booking');
     const [clientSecret, setClientSecret] = useState('');
     const [intentError, setIntentError] = useState('');
     const stateRef = useRef(state);
@@ -884,16 +895,16 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
             .then(r => r.json())
             .then(data => {
                 if (data.clientSecret) setClientSecret(data.clientSecret);
-                else setIntentError('Unable to initiate payment. Please try again.');
+                else setIntentError(t('payment.error'));
             })
-            .catch(() => setIntentError('Unable to initiate payment. Please try again.'));
+            .catch(() => setIntentError(t('payment.error')));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <div>
-            <h2 className={stepTitleCls}>Payment</h2>
-            <p className={stepSubCls}>Secure card payment via Stripe.</p>
+            <h2 className={stepTitleCls}>{t('payment.title')}</h2>
+            <p className={stepSubCls}>{t('payment.subtitle')}</p>
 
             {intentError && (
                 <div className="bg-red-950/40 border border-red-800 text-red-300 rounded-xl p-4 text-sm mb-4">{intentError}</div>
@@ -901,7 +912,7 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
             {!clientSecret && !intentError && (
                 <div className="flex items-center justify-center gap-3 py-12 text-stone-400">
                     <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
-                    Preparing payment…
+                    {t('payment.preparing')}
                 </div>
             )}
             {clientSecret && (
@@ -917,7 +928,7 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
                 onClick={onBack}
                 className="mt-4 text-stone-500 hover:text-stone-300 text-sm transition-colors"
             >
-                ← Back to summary
+                {t('payment.backToSummary')}
             </button>
         </div>
     );
@@ -926,34 +937,35 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
 // ─── Step 7: Confirmation ─────────────────────────────────────────────────────
 
 function StepConfirmation({ state }: { state: BookingState }) {
+    const t = useTranslations('booking');
     return (
         <div className="text-center py-6">
             <div className="text-6xl mb-4">🦙</div>
-            <h2 className="text-3xl font-bold text-white mb-2">Booking confirmed!</h2>
-            <p className="text-stone-400 mb-8">We can&apos;t wait to welcome you to the alpaca farm.</p>
+            <h2 className="text-3xl font-bold text-white mb-2">{t('confirmation.title')}</h2>
+            <p className="text-stone-400 mb-8">{t('confirmation.thankYou', { name: state.guestName.split(' ')[0] })} We can&apos;t wait to welcome you to the alpaca farm.</p>
 
             <div className="bg-stone-900 border border-stone-700 rounded-2xl text-left px-5 py-4 space-y-3 mb-6">
                 <div className="flex justify-between text-sm">
-                    <span className="text-stone-400">Room</span>
+                    <span className="text-stone-400">{t('summary.room')}</span>
                     <strong className="text-white">{state.selectedRoom?.name}</strong>
                 </div>
                 <div className="flex justify-between text-sm">
-                    <span className="text-stone-400">Dates</span>
+                    <span className="text-stone-400">{t('summary.dates')}</span>
                     <strong className="text-white">{state.checkIn} → {state.checkOut}</strong>
                 </div>
                 <div className="flex justify-between text-sm">
-                    <span className="text-stone-400">Deposit paid</span>
+                    <span className="text-stone-400">{t('confirmation.depositPaid')}</span>
                     <strong className="text-emerald-400">{state.depositAmount.toLocaleString('pl-PL')} PLN</strong>
                 </div>
                 <div className="flex justify-between text-sm">
-                    <span className="text-stone-400">Balance due T-3</span>
+                    <span className="text-stone-400">{t('confirmation.balanceDue')}</span>
                     <strong className="text-white">{state.balanceAmount.toLocaleString('pl-PL')} PLN</strong>
                 </div>
             </div>
 
             <p className="text-stone-400 text-sm">
-                A confirmation email is on its way to <strong className="text-white">{state.guestEmail}</strong>.<br />
-                Your balance will be charged automatically 3 days before arrival — no action needed.
+                {t('confirmation.emailSent')} <strong className="text-white">{state.guestEmail}</strong>.<br />
+                {t('confirmation.balanceNote')}
             </p>
         </div>
     );

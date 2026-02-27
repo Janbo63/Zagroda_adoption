@@ -49,26 +49,26 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
             <CardContent className="p-4">
               <Tabs defaultValue="attributes">
                 <TabsList className="grid w-full grid-cols-4 h-auto min-h-[2.5rem]">
-                  <TabsTrigger 
-                    value="attributes" 
+                  <TabsTrigger
+                    value="attributes"
                     className="px-1 py-1 text-xs whitespace-normal h-full flex items-center justify-center"
                   >
                     {t('attributes')}
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="details" 
+                  <TabsTrigger
+                    value="details"
                     className="px-1 py-1 text-xs whitespace-normal h-full flex items-center justify-center"
                   >
                     {t('details')}
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="highlights" 
+                  <TabsTrigger
+                    value="highlights"
                     className="px-1 py-1 text-xs whitespace-normal h-full flex items-center justify-center"
                   >
                     {t('highlights')}
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="requirements" 
+                  <TabsTrigger
+                    value="requirements"
                     className="px-1 py-1 text-xs whitespace-normal h-full flex items-center justify-center"
                   >
                     {t('requirements')}
@@ -99,20 +99,20 @@ export function ActivitiesContent({ locale: _locale }: { locale: string }) {
                 </TabsContent>
                 <TabsContent value="highlights">
                   <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    {Array.isArray(t(`${activity.id}.highlights`)) 
-                      ? t(`${activity.id}.highlights`).map((highlight: string, index: number) => (
-                          <li key={index}>{highlight}</li>
-                        ))
+                    {Array.isArray(t.raw(`${activity.id}.highlights`))
+                      ? (t.raw(`${activity.id}.highlights`) as string[]).map((highlight: string, index: number) => (
+                        <li key={index}>{highlight}</li>
+                      ))
                       : <li>{t(`${activity.id}.highlights`)}</li>
                     }
                   </ul>
                 </TabsContent>
                 <TabsContent value="requirements">
                   <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
-                    {Array.isArray(t(`${activity.id}.requirements`))
-                      ? t(`${activity.id}.requirements`).map((requirement: string, index: number) => (
-                          <li key={index}>{requirement}</li>
-                        ))
+                    {Array.isArray(t.raw(`${activity.id}.requirements`))
+                      ? (t.raw(`${activity.id}.requirements`) as string[]).map((requirement: string, index: number) => (
+                        <li key={index}>{requirement}</li>
+                      ))
                       : <li>{t(`${activity.id}.requirements`)}</li>
                     }
                   </ul>
