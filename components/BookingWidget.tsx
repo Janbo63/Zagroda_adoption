@@ -306,7 +306,15 @@ function StepDates({ state, onChange, onNext }: {
     onNext: () => void;
 }) {
     const t = useTranslations('booking');
-    const today = new Date().toISOString().split('T')[0];
+
+    // Booking cutoff: if it's past 1 PM, earliest check-in is day after tomorrow
+    // (gives the team time to prepare rooms)
+    const now = new Date();
+    const isPastCutoff = now.getHours() >= 13;
+    const minCheckInDate = new Date(now);
+    // Tomorrow = +1 day. If past 1 PM, push to day after tomorrow = +2 days
+    minCheckInDate.setDate(minCheckInDate.getDate() + (isPastCutoff ? 2 : 1));
+    const today = minCheckInDate.toISOString().split('T')[0];
 
     const handleCheckIn = (v: string) => {
         onChange('checkIn', v);
