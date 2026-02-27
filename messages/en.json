@@ -1099,7 +1099,8 @@
       "perNight": "{price} PLN/night",
       "totalStay": "{nights} nights · {price} PLN/night",
       "depositToday": "Deposit today",
-      "cleaningFee": "+ {amount} PLN cleaning fee"
+      "cleaningFee": "+ {amount} PLN cleaning fee",
+      "priceOnRequest": "Price on request"
     },
     "guests": {
       "title": "Who's coming?",
@@ -1136,7 +1137,7 @@
       "guests": "Guests",
       "totalStay": "Total stay",
       "voucherDiscount": "Voucher discount",
-      "depositNow": "Deposit now (30%)",
+      "depositNow": "Deposit now (10%)",
       "balanceDue": "Balance due 3 days before arrival",
       "cancellation": "Cancellation policy",
       "cancellationText": "The deposit is non-refundable. Your remaining balance will be charged automatically 3 days before arrival. You may reschedule or cancel for free up to 3 days before arrival.",

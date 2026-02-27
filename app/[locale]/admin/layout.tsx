@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { LayoutDashboard, Heart, Ticket, BarChart3, Settings, LogOut } from 'lucide-react';
+import { LayoutDashboard, Heart, Ticket, BarChart3, Settings, LogOut, Megaphone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { redirect } from 'next/navigation';
 
@@ -36,6 +36,13 @@ export default function AdminLayout({
                     >
                         <LayoutDashboard className="w-5 h-5" />
                         {t('dashboard')}
+                    </Link>
+                    <Link
+                        href={`/${locale}/admin/campaigns`}
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-50 transition-colors font-bold text-stone-600 hover:text-orange-700"
+                    >
+                        <Megaphone className="w-5 h-5 text-orange-500" />
+                        Campaigns
                     </Link>
                     <Link
                         href={`/${locale}/admin/adoptions`}

@@ -9,7 +9,7 @@ import { Check, MapPin, Phone, Star, ChevronLeft, ChevronRight } from 'lucide-re
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 
-// BookingWidget removed temporarily
+const BookingWidget = dynamic(() => import('@/components/BookingWidget'), { ssr: false });
 
 // ─── Room gallery images ──────────────────────────────────────────────────────
 const GARDEN_PHOTOS = [
@@ -465,13 +465,19 @@ export function StayPageContent({ locale }: { locale: string }) {
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
-                            <iframe
-                                src={beds24Url}
-                                width="100%"
-                                height="800"
-                                style={{ border: 'none', maxWidth: '100%', overflow: 'auto' }}
-                                title="Booking System"
-                            />
+                            {process.env.NEXT_PUBLIC_BOOKING_WIDGET === '1' ? (
+                                <div className="bg-stone-950 p-6 rounded-2xl">
+                                    <BookingWidget locale={locale} />
+                                </div>
+                            ) : (
+                                <iframe
+                                    src={beds24Url}
+                                    width="100%"
+                                    height="800"
+                                    style={{ border: 'none', maxWidth: '100%', overflow: 'auto' }}
+                                    title="Booking System"
+                                />
+                            )}
                         </motion.div>
 
                         <motion.p variants={fadeUp} className="text-center text-gray-500 mt-6 flex items-center justify-center gap-2">

@@ -1098,7 +1098,8 @@
       "perNight": "{price} PLN/noc",
       "totalStay": "{nights} nocy · {price} PLN/noc",
       "depositToday": "Zaliczka dziś",
-      "cleaningFee": "+ {amount} PLN opłata za sprzątanie"
+      "cleaningFee": "+ {amount} PLN opłata za sprzątanie",
+      "priceOnRequest": "Cena na zapytanie"
     },
     "guests": {
       "title": "Kto przyjeżdża?",
@@ -1135,7 +1136,7 @@
       "guests": "Goście",
       "totalStay": "Łączna kwota pobytu",
       "voucherDiscount": "Zniżka z vouchera",
-      "depositNow": "Zaliczka teraz (30%)",
+      "depositNow": "Zaliczka teraz (10%)",
       "balanceDue": "Reszta do zapłaty 3 dni przed przyjazdem",
       "cancellation": "Polityka anulowania",
       "cancellationText": "Zaliczka jest bezzwrotna. Pozostała kwota zostanie pobrana automatycznie 3 dni przed przyjazdem. Możesz zmienić termin lub anulować bezpłatnie do 3 dni przed przyjazdem.",

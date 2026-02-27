@@ -1093,7 +1093,8 @@
             "perNight": "{price} PLN/nacht",
             "totalStay": "{nights} nachten · {price} PLN/nacht",
             "depositToday": "Aanbetaling vandaag",
-            "cleaningFee": "+ {amount} PLN schoonmaakkosten"
+            "cleaningFee": "+ {amount} PLN schoonmaakkosten",
+      "priceOnRequest": "Prijs op aanvraag"
         },
         "guests": {
             "title": "Wie komen er?",
@@ -1130,7 +1131,7 @@
             "guests": "Gasten",
             "totalStay": "Totaal verblijf",
             "voucherDiscount": "Bonkorting",
-            "depositNow": "Aanbetaling nu (30%)",
+            "depositNow": "Aanbetaling nu (10%)",
             "balanceDue": "Restbedrag 3 dagen voor aankomst",
             "cancellation": "Annuleringsbeleid",
             "cancellationText": "De aanbetaling is niet-restitueerbaar. Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven. Je kunt gratis wijzigen of annuleren tot 3 dagen voor aankomst.",

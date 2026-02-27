@@ -74,9 +74,18 @@ Polish (default), English, German, Czech, Dutch — via `next-intl` with locale-
 > GA4 auto-pull script: `node "f:\New Alpaca Site\ZAPnew2\.agent\scripts\ga4-pull.js"`
 > Meta data: export CSV from Ads Manager → share with agent for analysis.
 
+## Product Roadmap
+
+> **`docs/roadmap.md`** is the single source of truth for all planned releases.
+> Always check it before starting new feature work, and update it when releases are completed or reprioritised.
+
+Current release order: **R0 (Staging) → R0.5 (Booking Alignment) → R1 (Booking Live) → R2/R3/R4 (parallel) → R5**
+
 ## Cross-Project Links
 
-- **Beds25** (`F:\Git Hub Projects\Beds25\`): The internal booking admin system. When room booking is added to this site, it will call the same Zoho CRM modules (Bookings, Rooms) that Beds25 manages. The `zoho.ts` clients in both projects should eventually converge.
+- **Roadmap**: [`docs/roadmap.md`](docs/roadmap.md) — full release plan with priorities and dependencies
+- **Master plan**: `c:\Users\jan\.gemini\antigravity\CONTEXT.md` — cross-project overview
+- **Beds25** (`F:\Git Hub Projects\Beds25\`): The internal booking admin system. The alpaca site calls Beds25 APIs for availability, booking creation and voucher validation. Room/property attribute definitions are owned by Beds25.
 - **Marketing Strategy**: Research and campaigns managed in the "Alpaca Farm Marketing Strategy" NotebookLM notebook.
 
 ## Known Issues

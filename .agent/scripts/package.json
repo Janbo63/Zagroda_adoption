@@ -1,0 +1,15 @@
+{
+  "name": "zagroda-marketing-scripts",
+  "version": "1.0.0",
+  "description": "Meta Ads & GA4 data pull scripts for Zagroda Alpakoterapii",
+  "type": "module",
+  "scripts": {
+    "meta": "node meta-ads-pull.js",
+    "ga4": "node ga4-pull.js",
+    "pull-all": "node meta-ads-pull.js && node ga4-pull.js"
+  },
+  "dependencies": {
+    "@google-analytics/data": "^4.6.0",
+    "dotenv": "^16.4.5"
+  }
+}

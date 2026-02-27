@@ -1097,7 +1097,8 @@
       "perNight": "{price} PLN/Nacht",
       "totalStay": "{nights} Nächte · {price} PLN/Nacht",
       "depositToday": "Anzahlung heute",
-      "cleaningFee": "+ {amount} PLN Reinigungsgebühr"
+      "cleaningFee": "+ {amount} PLN Reinigungsgebühr",
+      "priceOnRequest": "Preis auf Anfrage"
     },
     "guests": {
       "title": "Wer kommt?",
@@ -1134,7 +1135,7 @@
       "guests": "Gäste",
       "totalStay": "Gesamtaufenthalt",
       "voucherDiscount": "Gutscheinrabatt",
-      "depositNow": "Anzahlung jetzt (30%)",
+      "depositNow": "Anzahlung jetzt (10%)",
       "balanceDue": "Restbetrag 3 Tage vor Ankunft",
       "cancellation": "Stornierungsbedingungen",
       "cancellationText": "Die Anzahlung ist nicht erstattungsfähig. Ihr Restbetrag wird automatisch 3 Tage vor Ankunft abgebucht. Sie können bis 3 Tage vor Ankunft kostenlos umbuchen oder stornieren.",

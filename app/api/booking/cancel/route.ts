@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { cancelBeds25Booking } from '@/lib/beds25';
-import { updateBookingDealStatus } from '@/lib/zoho-booking';
+import { updateBookingStatus } from '@/lib/zoho-booking';
 
 export async function POST(req: Request) {
     try {
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         await cancelBeds25Booking(beds25BookingRef);
 
         // 2. Update Deal in Zoho CRM
-        await updateBookingDealStatus(zohoDealId, 'CANCELLED');
+        await updateBookingStatus(zohoDealId, 'CANCELLED');
 
         return NextResponse.json({ success: true, message: 'Booking cancelled successfully' });
 

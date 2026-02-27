@@ -30,7 +30,9 @@ export default async function AccommodationPage({ params: { locale } }: Accommod
   const t = await getTranslations({ locale, namespace: 'stay' });
 
   // Fixed URL: no tab character, with lang + UTM params
-  const beds24Url = `https://beds24.com/booking2.php?propid=98031&referer=iFrame&lang=${locale}&utm_source=website&utm_medium=booking_cta&utm_campaign=direct`;
+  // Fallback to English for Beds24 if Dutch is not configured on their end yet
+  const beds24Lang = locale === 'nl' ? 'en' : locale;
+  const beds24Url = `https://beds24.com/booking2.php?propid=98031&referer=iFrame&lang=${beds24Lang}&utm_source=website&utm_medium=booking_cta&utm_campaign=direct`;
 
   return (
     <div className="flex flex-col min-h-screen">

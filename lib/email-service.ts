@@ -117,6 +117,36 @@ export class EmailService {
     }
 
     /**
+     * Send system alert to admin
+     */
+    async sendAdminAlert(subject: string, message: string): Promise<boolean> {
+        try {
+            const html = `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <h1 style="color: #dc2626;">System Alert ⚠️</h1>
+                    <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border: 1px solid #fecaca; color: #991b1b;">
+                        <pre style="white-space: pre-wrap; font-family: monospace; font-size: 14px;">${message}</pre>
+                    </div>
+                </div>
+            `;
+
+            const mailOptions = {
+                from: process.env.EMAIL_FROM || 'Alpaca Farm <noreply@alpacafarm.com>',
+                to: process.env.ADMIN_EMAIL || 'admin@zagrodaalpakoterapii.com',
+                subject: `[SYSTEM ALERT] ${subject}`,
+                html: html
+            };
+
+            const info = await this.transporter.sendMail(mailOptions);
+            console.log('Admin alert email sent:', info.messageId);
+            return true;
+        } catch (error) {
+            console.error('Error sending admin alert email:', error);
+            return false;
+        }
+    }
+
+    /**
      * Get localized email content
      */
     private getEmailContent(data: CertificateEmailData): { subject: string; html: string } {

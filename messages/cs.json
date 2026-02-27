@@ -1114,7 +1114,8 @@
       "perNight": "{price} PLN/noc",
       "totalStay": "{nights} nocí · {price} PLN/noc",
       "depositToday": "Záloha dnes",
-      "cleaningFee": "+ {amount} PLN poplatek za úklid"
+      "cleaningFee": "+ {amount} PLN poplatek za úklid",
+      "priceOnRequest": "Cena na vyžádání"
     },
     "guests": {
       "title": "Kdo přijede?",
@@ -1151,7 +1152,7 @@
       "guests": "Hosté",
       "totalStay": "Celková cena pobytu",
       "voucherDiscount": "Sleva z poukazu",
-      "depositNow": "Záloha nyní (30%)",
+      "depositNow": "Záloha nyní (10%)",
       "balanceDue": "Doplatek 3 dny před příjezdem",
       "cancellation": "Podmínky zrušení",
       "cancellationText": "Záloha je nevratná. Zbývající částka bude automaticky stržena 3 dny před příjezdem. Můžete změnit termín nebo zrušit zdarma do 3 dnů před příjezdem.",

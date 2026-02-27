@@ -6,7 +6,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -29,6 +29,7 @@ interface Room {
     size?: number;
     sizeUnit?: string;
     cleaningFee?: number;
+    rackRate?: number;
 }
 
 interface Child { age: number }
@@ -108,9 +109,20 @@ const AMENITY_LABELS: Record<string, { label: string; icon: string }> = {
     WASHING_MACHINE: { label: 'Washing machine', icon: '🧺' },
 };
 
-function formatAmenity(code: string): string {
+function formatAmenity(code: unknown): string {
+    if (Array.isArray(code)) return code.flat(Infinity).map(formatAmenity).join(', ');
+    if (typeof code !== 'string') return String(code);
     return AMENITY_LABELS[code]?.label || code.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
 }
+
+// ─── Friendly room name overrides ─────────────────────────────────────────────
+// Keys are the real Beds25 room IDs. These override whatever name the API returns.
+const ROOM_NAME_OVERRIDES: Record<string, string> = {
+    '884394000000897001': 'Garden Room',
+    '884394000000894006': 'Jungle Room',
+    '884394000000896001': 'Forest Apartment',
+    '884394000000884002': 'Caravan',
+};
 
 // ─── Local image overrides per room ID ────────────────────────────────────────
 // High-res photos hosted on this site. Keys are the real Beds24/Beds25 room IDs.
@@ -352,6 +364,7 @@ function StepRoom({ state, onChange, onNext, onBack }: {
     onBack: () => void;
 }) {
     const t = useTranslations('booking');
+    const locale = useLocale();
     const [rooms, setRooms] = useState<Room[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
@@ -363,14 +376,18 @@ function StepRoom({ state, onChange, onNext, onBack }: {
             .then(data => {
                 const mapped: Room[] = (data.availableRooms || []).map((r: any) => ({
                     roomId: r.id,
-                    name: r.name,
+                    name: ROOM_NAME_OVERRIDES[r.id] || r.name,
                     description: r.description || '',
                     capacity: `${r.maxAdults} adult${r.maxAdults !== 1 ? 's' : ''}${r.maxChildren > 0 ? ` + ${r.maxChildren} child${r.maxChildren !== 1 ? 'ren' : ''}` : ''}`,
                     maxAdults: r.maxAdults,
                     maxChildren: r.maxChildren,
                     minNights: r.minNights,
                     basePrice: r.basePrice,
-                    amenities: typeof r.amenities === 'string' ? JSON.parse(r.amenities) : (r.amenities || []),
+                    amenities: (() => {
+                        const raw = typeof r.amenities === 'string' ? JSON.parse(r.amenities) : (r.amenities || []);
+                        // Flatten nested arrays e.g. [["WIFI"], ["PARKING"]] → ["WIFI", "PARKING"]
+                        return Array.isArray(raw) ? raw.flat(Infinity).filter((a: any) => typeof a === 'string') : [];
+                    })(),
                     totalPrice: r.pricing?.totalPrice ?? 0,
                     pricePerNight: r.pricing?.averagePerNight ?? r.basePrice,
                     currency: r.pricing?.currency ?? 'PLN',
@@ -378,7 +395,8 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                     size: r.size,
                     sizeUnit: r.sizeUnit,
                     cleaningFee: r.cleaningFee,
-                }));
+                    rackRate: r.rackRate,
+                })).filter((room: Room) => room.totalPrice > 0);
                 setRooms(mapped);
                 setLoading(false);
             })
@@ -388,11 +406,13 @@ function StepRoom({ state, onChange, onNext, onBack }: {
 
     const selectRoom = (room: Room) => {
         onChange('selectedRoom', room);
-        // Use totalPrice from API; fall back to basePrice * nights if API returns 0
-        const effectiveTotal = room.totalPrice > 0
-            ? room.totalPrice
-            : room.basePrice * room.nights;
-        const deposit = Math.round(effectiveTotal * 0.3);
+        // Use totalPrice from API; fall back to basePrice * nights, then rackRate * nights
+        const nights = room.nights || state.nights || 1;
+        let effectiveTotal = room.totalPrice > 0 ? room.totalPrice : 0;
+        if (!effectiveTotal && room.basePrice > 0) effectiveTotal = room.basePrice * nights;
+        if (!effectiveTotal && room.rackRate && room.rackRate > 0) effectiveTotal = room.rackRate * nights;
+        if (!effectiveTotal || isNaN(effectiveTotal)) effectiveTotal = 0;
+        const deposit = Math.round(effectiveTotal * 0.1);
         onChange('depositAmount', deposit);
         onChange('balanceAmount', effectiveTotal - deposit);
         onChange('totalAmount', effectiveTotal);
@@ -469,45 +489,57 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                                     </p>
                                 )}
 
-                                {/* Amenities from API */}
+                                {/* Amenities — collapsible 2-col grid */}
                                 {room.amenities.length > 0 && (
-                                    <ul className="space-y-1.5 mb-4">
-                                        {room.amenities.map((code: string) => (
-                                            <li key={code} className="flex items-center gap-2 text-sm text-stone-300">
-                                                <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" />
-                                                {formatAmenity(code)}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <details className="mb-4 group">
+                                        <summary className="cursor-pointer text-sm text-stone-400 hover:text-stone-200 transition-colors select-none list-none flex items-center gap-1.5">
+                                            <span className="text-xs transition-transform group-open:rotate-90">▶</span>
+                                            {room.amenities.length} amenities included
+                                        </summary>
+                                        <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 mt-3">
+                                            {room.amenities.map((code: string) => (
+                                                <li key={code} className="flex items-center gap-2 text-sm text-stone-300">
+                                                    <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" />
+                                                    {formatAmenity(code)}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </details>
                                 )}
 
                                 {/* Pricing — emerald callout matching site pattern */}
                                 {(() => {
-                                    const effectiveTotal = room.totalPrice > 0
-                                        ? room.totalPrice
-                                        : room.basePrice * room.nights;
-                                    const effectivePPN = Math.round(effectiveTotal / room.nights);
+                                    const nights = room.nights || state.nights || 1;
+                                    let effectiveTotal = room.totalPrice > 0 ? room.totalPrice : 0;
+                                    if (!effectiveTotal && room.basePrice > 0) effectiveTotal = room.basePrice * nights;
+                                    if (!effectiveTotal && room.rackRate && room.rackRate > 0) effectiveTotal = room.rackRate * nights;
+                                    if (!effectiveTotal || isNaN(effectiveTotal)) effectiveTotal = 0;
+                                    const effectivePPN = nights > 0 ? Math.round(effectiveTotal / nights) : 0;
                                     return (
                                         <div className="bg-emerald-950/60 border border-emerald-800/50 rounded-xl p-4 flex justify-between items-end">
                                             <div>
                                                 <div className="text-2xl font-bold text-emerald-400">
-                                                    {effectiveTotal.toLocaleString('pl-PL')} PLN
+                                                    {effectiveTotal > 0 ? `${effectiveTotal.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN` : t('rooms.priceOnRequest')}
                                                 </div>
-                                                <div className="text-sm text-emerald-600">
-                                                    {t('rooms.totalStay', { nights: room.nights, price: effectivePPN })}
-                                                </div>
+                                                {effectiveTotal > 0 && (
+                                                    <div className="text-sm text-emerald-600">
+                                                        {t('rooms.totalStay', { nights, price: effectivePPN })}
+                                                    </div>
+                                                )}
                                                 {room.cleaningFee && room.cleaningFee > 0 && (
                                                     <div className="text-xs text-stone-500 mt-1">
                                                         {t('rooms.cleaningFee', { amount: room.cleaningFee })}
                                                     </div>
                                                 )}
                                             </div>
-                                            <div className="text-right">
-                                                <div className="text-xs text-stone-400">{t('rooms.depositToday')}</div>
-                                                <div className="text-lg font-bold text-white">
-                                                    {Math.round(effectiveTotal * 0.3).toLocaleString('pl-PL')} PLN
+                                            {effectiveTotal > 0 && (
+                                                <div className="text-right">
+                                                    <div className="text-xs text-stone-400">{t('rooms.depositToday')}</div>
+                                                    <div className="text-lg font-bold text-white">
+                                                        {Math.round(effectiveTotal * 0.1).toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            )}
                                         </div>
                                     );
                                 })()}
@@ -553,6 +585,11 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     onBack: () => void;
 }) {
     const t = useTranslations('booking');
+    const _locale = useLocale();
+
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.guestEmail);
+    const phoneValid = /^\+?[\d\s\-()]{7,20}$/.test(state.guestPhone.trim());
+
     const updateChildAge = (index: number, age: number) => {
         const next = [...state.children];
         next[index] = { age };
@@ -568,7 +605,7 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     };
 
     const ageValid = state.children.every(c => c.age >= 0 && c.age <= 15);
-    const canNext = state.guestName && state.guestEmail && state.guestPhone && state.adults >= 1 && ageValid;
+    const canNext = state.guestName && emailValid && phoneValid && state.adults >= 1 && ageValid;
 
     return (
         <div>
@@ -583,11 +620,17 @@ function StepGuests({ state, onChange, onNext, onBack }: {
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className={labelCls}>{t('details.email')} *</label>
-                        <input className={inputCls} type="email" value={state.guestEmail} onChange={e => onChange('guestEmail', e.target.value)} placeholder="anna@example.com" />
+                        <input className={`${inputCls} ${state.guestEmail && !emailValid ? 'border-red-500 focus:ring-red-500' : ''}`} type="email" value={state.guestEmail} onChange={e => onChange('guestEmail', e.target.value)} placeholder="anna@example.com" />
+                        {state.guestEmail && !emailValid && (
+                            <p className="text-red-400 text-xs mt-1">Please enter a valid email address</p>
+                        )}
                     </div>
                     <div>
                         <label className={labelCls}>{t('details.phone')} *</label>
-                        <input className={inputCls} type="tel" value={state.guestPhone} onChange={e => onChange('guestPhone', e.target.value)} placeholder="+48 123 456 789" />
+                        <input className={`${inputCls} ${state.guestPhone && !phoneValid ? 'border-red-500 focus:ring-red-500' : ''}`} type="tel" value={state.guestPhone} onChange={e => onChange('guestPhone', e.target.value)} placeholder="+48 123 456 789" />
+                        {state.guestPhone && !phoneValid && (
+                            <p className="text-red-400 text-xs mt-1">Please enter a valid phone number</p>
+                        )}
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -639,6 +682,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
     onBack: () => void;
 }) {
     const t = useTranslations('booking');
+    const locale = useLocale();
     const [validating, setValidating] = useState(false);
 
     const validateVoucher = async () => {
@@ -707,7 +751,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                     </div>
                     {state.voucherValid && (
                         <p className="text-emerald-400 text-sm mt-2 flex items-center gap-1">
-                            <Check className="w-4 h-4" /> {t('voucher.discount', { amount: state.voucherDiscount.toLocaleString('pl-PL') })}
+                            <Check className="w-4 h-4" /> {t('voucher.discount', { amount: state.voucherDiscount.toLocaleString(locale === 'en' ? 'en-US' : locale) })}
                         </p>
                     )}
                     {state.voucherError && <p className="text-red-400 text-sm mt-2">{state.voucherError}</p>}
@@ -750,6 +794,7 @@ function StepSummary({ state, onNext, onBack }: {
     onBack: () => void;
 }) {
     const t = useTranslations('booking');
+    const locale = useLocale();
     const room = state.selectedRoom!;
 
     const SummaryRow = ({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) => (
@@ -774,15 +819,15 @@ function StepSummary({ state, onNext, onBack }: {
                     {state.voucherDiscount > 0 && (
                         <div className="flex justify-between items-center py-3 border-b border-stone-700/50">
                             <span className="text-stone-400 text-sm">{t('summary.voucherDiscount')} ({state.voucherCode})</span>
-                            <strong className="text-emerald-400">−{state.voucherDiscount.toLocaleString('pl-PL')} PLN</strong>
+                            <strong className="text-emerald-400">−{state.voucherDiscount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
                         </div>
                     )}
                 </div>
                 <div className="bg-emerald-950/50 border-t border-emerald-800/50 px-5 py-4">
-                    <SummaryRow label={t('summary.depositNow')} value={`${state.depositAmount.toLocaleString('pl-PL')} PLN`} highlight />
+                    <SummaryRow label={t('summary.depositNow')} value={`${state.depositAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`} highlight />
                     <div className="flex justify-between items-center pt-3">
                         <span className="text-stone-500 text-xs">{t('summary.balanceDue')}</span>
-                        <span className="text-stone-400 text-sm font-semibold">{state.balanceAmount.toLocaleString('pl-PL')} PLN</span>
+                        <span className="text-stone-400 text-sm font-semibold">{state.balanceAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</span>
                     </div>
                 </div>
             </div>
@@ -801,6 +846,7 @@ function StepSummary({ state, onNext, onBack }: {
 
 function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSuccess: (ref: string) => void; locale: string }) {
     const t = useTranslations('booking');
+
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('');
@@ -835,7 +881,7 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
             <div className="bg-emerald-950/50 border border-emerald-800/50 rounded-xl p-4 text-sm">
-                <strong className="text-white block mb-0.5">{t('payment.chargingDeposit', { amount: state.depositAmount?.toLocaleString('pl-PL') })}</strong>
+                <strong className="text-white block mb-0.5">{t('payment.chargingDeposit', { amount: state.depositAmount?.toLocaleString(locale === 'en' ? 'en-US' : locale) })}</strong>
                 <p className="text-emerald-400/80">{t('payment.cardSaved')}</p>
             </div>
             <PaymentElement />
@@ -849,7 +895,7 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
                 className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-3 text-base disabled:opacity-40"
                 disabled={!stripe || processing}
             >
-                {processing ? t('payment.processing') : t('payment.payButton', { amount: state.depositAmount?.toLocaleString('pl-PL') })}
+                {processing ? t('payment.processing') : t('payment.payButton', { amount: state.depositAmount?.toLocaleString(locale === 'en' ? 'en-US' : locale) })}
             </Button>
         </form>
     );
@@ -938,6 +984,7 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
 
 function StepConfirmation({ state }: { state: BookingState }) {
     const t = useTranslations('booking');
+    const locale = useLocale();
     return (
         <div className="text-center py-6">
             <div className="text-6xl mb-4">🦙</div>
@@ -955,11 +1002,11 @@ function StepConfirmation({ state }: { state: BookingState }) {
                 </div>
                 <div className="flex justify-between text-sm">
                     <span className="text-stone-400">{t('confirmation.depositPaid')}</span>
-                    <strong className="text-emerald-400">{state.depositAmount.toLocaleString('pl-PL')} PLN</strong>
+                    <strong className="text-emerald-400">{state.depositAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
                 </div>
                 <div className="flex justify-between text-sm">
                     <span className="text-stone-400">{t('confirmation.balanceDue')}</span>
-                    <strong className="text-white">{state.balanceAmount.toLocaleString('pl-PL')} PLN</strong>
+                    <strong className="text-white">{state.balanceAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
                 </div>
             </div>
 
