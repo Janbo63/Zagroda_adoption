@@ -13,7 +13,7 @@ const navigation = [
   { key: 'home', href: '/' },
   { key: 'animals', href: '/animals' },
   { key: 'activities', href: '/activities' },
-  { key: 'accommodation', href: '/accommodation' },
+  { key: 'accommodation', href: '/stay' },
   { key: 'adoption', href: '/adopt' },
   { key: 'vouchers', href: '/vouchers' },
   { key: 'contact', href: '/contact' },

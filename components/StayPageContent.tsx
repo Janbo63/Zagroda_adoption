@@ -111,10 +111,6 @@ function SharedAreasStrip({ title, desc }: { title: string; desc: string }) {
 export function StayPageContent({ locale }: { locale: string }) {
     const t = useTranslations('stay');
 
-    // Fallback to English for Beds24 if Dutch is not configured on their end yet
-    const beds24Lang = locale === 'nl' ? 'en' : locale;
-    const beds24Url = `https://beds24.com/booking2.php?propid=98031&referer=iFrame&lang=${beds24Lang}&utm_source=website&utm_medium=booking_cta&utm_campaign=direct`;
-
     const fadeUp = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -464,20 +460,10 @@ export function StayPageContent({ locale }: { locale: string }) {
                             {t('booking.subtitle')}
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
-                            {process.env.NEXT_PUBLIC_BOOKING_WIDGET === '1' ? (
-                                <div className="bg-stone-950 p-6 rounded-2xl">
-                                    <BookingWidget locale={locale} />
-                                </div>
-                            ) : (
-                                <iframe
-                                    src={beds24Url}
-                                    width="100%"
-                                    height="800"
-                                    style={{ border: 'none', maxWidth: '100%', overflow: 'auto' }}
-                                    title="Booking System"
-                                />
-                            )}
+                        <motion.div variants={fadeUp} className="rounded-2xl overflow-hidden">
+                            <div className="bg-stone-950 p-6 rounded-2xl">
+                                <BookingWidget locale={locale} />
+                            </div>
                         </motion.div>
 
                         <motion.p variants={fadeUp} className="text-center text-gray-500 mt-6 flex items-center justify-center gap-2">
