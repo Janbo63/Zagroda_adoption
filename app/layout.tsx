@@ -47,7 +47,6 @@ export default function RootLayout({
               var wwwUrl = currentUrl.replace('https://', 'https://www.');
               
               gtag('config', '${GA4_ID}', {
-                debug_mode: true,
                 page_path: window.location.pathname,
                 page_location: wwwUrl,
                 send_page_view: true

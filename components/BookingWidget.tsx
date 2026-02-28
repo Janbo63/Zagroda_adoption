@@ -7,6 +7,10 @@ import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
+import {
+    trackBeginCheckout, trackSelectRoom, trackAddToCart,
+    trackAddPaymentInfo, trackBookingConfirmed, trackPaymentFailed, trackVoucherApplied,
+} from '@/lib/analytics';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -422,6 +426,8 @@ function StepRoom({ state, onChange, onNext, onBack }: {
 
     const selectRoom = (room: Room) => {
         onChange('selectedRoom', room);
+        // Track room selection into GA4
+        trackSelectRoom({ roomId: room.roomId, roomName: room.name, price: room.totalPrice, nights: room.nights || state.nights });
         // Use totalPrice from API; fall back to basePrice * nights, then rackRate * nights
         const nights = room.nights || state.nights || 1;
         let effectiveTotal = room.totalPrice > 0 ? room.totalPrice : 0;
@@ -719,6 +725,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                     ? Math.round(state.totalAmount * data.discountValue / 100)
                     : data.discountValue;
                 onChange('voucherDiscount', discountAmount);
+                trackVoucherApplied({ code: state.voucherCode, discount: discountAmount });
                 const discountedTotal = Math.max(0, state.totalAmount - discountAmount);
                 const newDeposit = Math.round(discountedTotal * 0.3);
                 onChange('depositAmount', newDeposit);
@@ -1052,12 +1059,63 @@ function BookingWidgetInner({ locale }: Props) {
         setState(prev => ({ ...prev, [k]: v }));
     }, []);
 
-    const next = () => setStep(s => Math.min(s + 1, 6));
+    // Step-aware next — fires the appropriate GA4 event when moving forward
+    const next = () => {
+        const s = state;
+        switch (step) {
+            case 0: // Dates → Rooms
+                trackBeginCheckout({ checkIn: s.checkIn, checkOut: s.checkOut, nights: s.nights });
+                break;
+            case 1: // Room selected → Guest details
+                if (s.selectedRoom) {
+                    trackAddToCart({
+                        roomId: s.selectedRoom.roomId,
+                        roomName: s.selectedRoom.name,
+                        totalPrice: s.selectedRoom.totalPrice,
+                        depositAmount: s.depositAmount,
+                        nights: s.nights,
+                    });
+                }
+                break;
+            case 3: // Extras → Summary (voucher may have been applied already)
+                break;
+            case 4: // Summary → Payment
+                if (s.selectedRoom) {
+                    trackAddPaymentInfo({
+                        roomId: s.selectedRoom.roomId,
+                        roomName: s.selectedRoom.name,
+                        totalPrice: s.totalAmount,
+                        depositAmount: s.depositAmount,
+                    });
+                }
+                break;
+        }
+        setStep(prev => Math.min(prev + 1, 6));
+    };
     const back = () => setStep(s => Math.max(s - 1, 0));
 
     const handlePaymentSuccess = (ref: string) => {
         setBookingRef(ref);
         setStep(6);
+        // Fire GA4 purchase event on confirmed booking
+        if (state.selectedRoom) {
+            trackBookingConfirmed({
+                bookingRef: ref,
+                roomId: state.selectedRoom.roomId,
+                roomName: state.selectedRoom.name,
+                totalPrice: state.totalAmount,
+                depositAmount: state.depositAmount,
+                nights: state.nights,
+                checkIn: state.checkIn,
+                checkOut: state.checkOut,
+            });
+        }
+    };
+
+    const _handlePaymentError = (error: string) => {
+        if (state.selectedRoom) {
+            trackPaymentFailed({ roomName: state.selectedRoom.name, error });
+        }
     };
 
     return (
