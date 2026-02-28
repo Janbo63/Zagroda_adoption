@@ -874,12 +874,21 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
     const elements = useElements();
     const [error, setError] = useState('');
     const [processing, setProcessing] = useState(false);
+    const [elementReady, setElementReady] = useState(false); // true once Stripe iframe has mounted
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!stripe || !elements) return;
+        if (!stripe || !elements || !elementReady) return;
         setProcessing(true);
         setError('');
+
+        // Stripe best practice: call elements.submit() first to validate fields
+        const { error: submitValidationError } = await elements.submit();
+        if (submitValidationError) {
+            setError(submitValidationError.message || 'Please check your card details.');
+            setProcessing(false);
+            return;
+        }
 
         const { error: submitError, paymentIntent } = await stripe.confirmPayment({
             elements,
@@ -907,7 +916,13 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
                 <strong className="text-white block mb-0.5">{t('payment.chargingDeposit', { amount: state.depositAmount?.toLocaleString(locale === 'en' ? 'en-US' : locale) })}</strong>
                 <p className="text-emerald-400/80">{t('payment.cardSaved')}</p>
             </div>
-            <PaymentElement />
+            <PaymentElement onReady={() => setElementReady(true)} />
+            {!elementReady && (
+                <div className="flex items-center gap-2 text-stone-500 text-sm">
+                    <div className="w-4 h-4 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin flex-shrink-0" />
+                    Loading secure payment form…
+                </div>
+            )}
             {error && (
                 <div className="bg-red-950/40 border border-red-800 text-red-300 rounded-xl p-4 text-sm" role="alert">
                     <strong>⚠ {error}</strong>
@@ -916,7 +931,7 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
             <Button
                 type="submit"
                 className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-3 text-base disabled:opacity-40"
-                disabled={!stripe || processing}
+                disabled={!stripe || processing || !elementReady}
             >
                 {processing ? t('payment.processing') : t('payment.payButton', { amount: state.depositAmount?.toLocaleString(locale === 'en' ? 'en-US' : locale) })}
             </Button>
@@ -937,9 +952,13 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
 
     useEffect(() => {
         const s = stateRef.current;
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000); // 20s timeout
+
         fetch('/api/booking/intent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            signal: controller.signal,
             body: JSON.stringify({
                 roomId: s.selectedRoom?.roomId,
                 roomName: s.selectedRoom?.name,
@@ -963,10 +982,19 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
         })
             .then(r => r.json())
             .then(data => {
+                clearTimeout(timeout);
                 if (data.clientSecret) setClientSecret(data.clientSecret);
-                else setIntentError(t('payment.error'));
+                else setIntentError(data.error || t('payment.error'));
             })
-            .catch(() => setIntentError(t('payment.error')));
+            .catch(err => {
+                clearTimeout(timeout);
+                if (err.name === 'AbortError') {
+                    setIntentError('Payment setup timed out. Please go back and try again.');
+                } else {
+                    setIntentError(t('payment.error'));
+                }
+            });
+        return () => { clearTimeout(timeout); controller.abort(); };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
