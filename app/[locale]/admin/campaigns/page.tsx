@@ -35,6 +35,19 @@ interface CampaignRow {
     last_event: string | null;
 }
 
+interface BookingFunnel {
+    exported_from?: string;
+    begin_checkout: number;
+    select_item: number;
+    add_to_cart: number;
+    add_payment_info: number;
+    purchase: number;
+    voucher_applied: number;
+    payment_failed: number;
+    help_chat_clicks: number;
+    conversion_rate: number;
+}
+
 interface OutreachData {
     exported_at?: string;
     summary?: {
@@ -48,6 +61,7 @@ interface OutreachData {
         traffic?: { total_sessions: number; channels: TrafficChannel[] };
         countries?: CountryData[];
     };
+    booking_funnel?: BookingFunnel;
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -183,6 +197,12 @@ export default async function CampaignsDashboard() {
     const countries = ga4.countries || [];
     const outreach = data.summary || { total: 0, by_status: {}, by_lang: {}, by_category: {} };
     const campaigns: CampaignRow[] = data.campaigns || [];
+    const funnel: BookingFunnel = data.booking_funnel || {
+        begin_checkout: 0, select_item: 0, add_to_cart: 0,
+        add_payment_info: 0, purchase: 0, voucher_applied: 0,
+        payment_failed: 0, help_chat_clicks: 0, conversion_rate: 0,
+    };
+    const hasFunnelData = funnel.begin_checkout > 0;
 
     const exportedAt = data.exported_at
         ? new Date(data.exported_at).toLocaleString('en-GB', {
@@ -413,30 +433,70 @@ export default async function CampaignsDashboard() {
                         </div>
                     )}
 
-                    {/* Booking Widget Funnel (static, from book_logs analysis) */}
+                    {/* Booking Widget Funnel — Live GA4 data */}
                     <div>
-                        <SectionTitle>Booking Widget — Bottom of Funnel (Feb 2026)</SectionTitle>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
-                            {[
-                                { label: 'Widget Sessions', value: 24, icon: '📲' },
-                                { label: 'Unique Visitors', value: 21, icon: '👤' },
-                                { label: 'Countries', value: 9, icon: '🌍' },
-                                { label: 'Viewed Prices', value: 9, icon: '💰' },
-                                { label: 'High Engagement (>3 events)', value: 5, icon: '🔥' },
-                                { label: 'NL/BE Sessions', value: 3, icon: '🇳🇱' },
-                            ].map((item, i) => (
-                                <div key={i} style={{ background: '#0f1117', border: '1px solid #2a2d3a', borderRadius: 8, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 10 }}>
-                                    <span style={{ fontSize: 18 }}>{item.icon}</span>
-                                    <div>
-                                        <div style={{ fontSize: 20, fontWeight: 800, color: '#4fb8a0', lineHeight: 1.1 }}>{item.value}</div>
-                                        <div style={{ fontSize: 11, color: '#6b7280', lineHeight: 1.3 }}>{item.label}</div>
+                        <SectionTitle>🛒 Booking Funnel — Live GA4 Signal</SectionTitle>
+                        {hasFunnelData ? (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                {/* Funnel bars */}
+                                {[
+                                    { label: '1. Dates selected → viewed rooms', value: funnel.begin_checkout, color: '#6b7280', icon: '📅' },
+                                    { label: '2. Room clicked', value: funnel.select_item, color: '#3b82f6', icon: '🏡' },
+                                    { label: '3. Room confirmed → guest details', value: funnel.add_to_cart, color: '#8b5cf6', icon: '👤' },
+                                    { label: '4. Reached payment step', value: funnel.add_payment_info, color: '#f59e0b', icon: '💳' },
+                                    { label: '5. Booking completed ✅', value: funnel.purchase, color: '#22c55e', icon: '🎉' },
+                                ].map((step, i) => (
+                                    <div key={i}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, fontSize: 12 }}>
+                                            <span style={{ color: '#d1d5db' }}>{step.icon} {step.label}</span>
+                                            <span style={{ color: step.color, fontWeight: 700 }}>
+                                                {step.value}
+                                                {funnel.begin_checkout > 0 && (
+                                                    <span style={{ color: '#6b7280', fontWeight: 400, marginLeft: 6 }}>
+                                                        ({Math.round(step.value / funnel.begin_checkout * 100)}%)
+                                                    </span>
+                                                )}
+                                            </span>
+                                        </div>
+                                        <div style={{ background: '#2a2d3a', borderRadius: 4, height: 8, overflow: 'hidden' }}>
+                                            <div style={{
+                                                background: step.color,
+                                                height: '100%',
+                                                width: `${funnel.begin_checkout > 0 ? Math.round(step.value / funnel.begin_checkout * 100) : 0}%`,
+                                                borderRadius: 4,
+                                                transition: 'width 0.4s'
+                                            }} />
+                                        </div>
                                     </div>
+                                ))}
+
+                                {/* KPI row */}
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, marginTop: 4 }}>
+                                    {[
+                                        { label: 'Conversion', value: `${funnel.conversion_rate}%`, color: '#22c55e', icon: '📈' },
+                                        { label: 'Vouchers', value: funnel.voucher_applied, color: '#f59e0b', icon: '🎟️' },
+                                        { label: 'Pay Failed', value: funnel.payment_failed, color: '#ef4444', icon: '❌' },
+                                        { label: 'Help Clicks', value: funnel.help_chat_clicks, color: '#0099FF', icon: '💬' },
+                                    ].map((kpi, i) => (
+                                        <div key={i} style={{ background: '#0f1117', border: '1px solid #2a2d3a', borderRadius: 8, padding: '8px 10px', textAlign: 'center' }}>
+                                            <div style={{ fontSize: 16 }}>{kpi.icon}</div>
+                                            <div style={{ fontSize: 18, fontWeight: 800, color: kpi.color, lineHeight: 1.2 }}>{kpi.value}</div>
+                                            <div style={{ fontSize: 10, color: '#6b7280' }}>{kpi.label}</div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
-                        <div style={{ fontSize: 11, color: '#4b5563', marginTop: 10 }}>
-                            📄 Source: book_logs_20260225.csv · Use Microsoft Clarity + Meta Events Manager for live data
-                        </div>
+                                {funnel.exported_from && (
+                                    <div style={{ fontSize: 11, color: '#4b5563' }}>
+                                        📄 GA4 data from {funnel.exported_from} · Drop ga4_events_YYYYMMDD.csv in .agent/data then re-run export
+                                    </div>
+                                )}
+                            </div>
+                        ) : (
+                            <div style={{ color: '#4b5563', fontSize: 12, padding: '16px 0', lineHeight: 1.8 }}>
+                                <div style={{ marginBottom: 8 }}>No GA4 funnel data yet. Tracking is live — events will appear once guests interact with the widget.</div>
+                                <div>To import: GA4 → Reports → Engagement → Events → Export CSV → save as <code style={{ background: '#2a2d3a', padding: '2px 6px', borderRadius: 4 }}>ga4_events_YYYYMMDD.csv</code> in <code style={{ background: '#2a2d3a', padding: '2px 6px', borderRadius: 4 }}>.agent/data/</code></div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
