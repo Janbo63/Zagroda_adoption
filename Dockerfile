@@ -24,6 +24,11 @@ RUN npx prisma generate
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
+# NEXT_PUBLIC vars must be available at BUILD TIME — Next.js bakes them into the JS bundle.
+# Pass via: docker build --build-arg NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_...
+ARG NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+ENV NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+
 RUN npm run build
 
 # Production image, copy all the files and run next
