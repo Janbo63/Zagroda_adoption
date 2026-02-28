@@ -956,7 +956,8 @@
       "title": "Check availability",
       "subtitle": "Select your dates below",
       "cta": "Book now",
-      "note": "Questions? Call us: +48 695 545 330"
+      "note": "Questions? Call us: +48 695 545 330",
+      "needHelp": "Need help with your booking?"
     },
     "distance": {
       "title": "Getting here",

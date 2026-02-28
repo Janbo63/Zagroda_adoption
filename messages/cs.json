@@ -971,7 +971,8 @@
       "title": "Zkontrolovat dostupnost",
       "subtitle": "Vyberte svá data níže",
       "cta": "Zarezervovat",
-      "note": "Otázky? Zavolejte nám: +48 695 545 330"
+      "note": "Otázky? Zavolejte nám: +48 695 545 330",
+      "needHelp": "Potřebujete pomoc s rezervací?"
     },
     "distance": {
       "title": "Jak se k nám dostat",

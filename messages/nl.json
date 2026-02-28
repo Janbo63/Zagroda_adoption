@@ -950,7 +950,8 @@
             "title": "Controleer beschikbaarheid",
             "subtitle": "Selecteer jouw data hieronder",
             "cta": "Boek nu",
-            "note": "Vragen? Bel ons: +48 695 545 330"
+            "note": "Vragen? Bel ons: +48 695 545 330",
+            "needHelp": "Hulp nodig bij uw boeking?"
         },
         "distance": {
             "title": "Hier naartoe",
@@ -1094,7 +1095,7 @@
             "totalStay": "{nights} nachten · {price} PLN/nacht",
             "depositToday": "Aanbetaling vandaag",
             "cleaningFee": "+ {amount} PLN schoonmaakkosten",
-      "priceOnRequest": "Prijs op aanvraag"
+            "priceOnRequest": "Prijs op aanvraag"
         },
         "guests": {
             "title": "Wie komen er?",

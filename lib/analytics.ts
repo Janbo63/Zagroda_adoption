@@ -3,12 +3,7 @@
  * Used throughout the booking funnel and key conversion points.
  */
 
-declare global {
-    interface Window {
-        gtag: (...args: any[]) => void;
-    }
-}
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function gtag(...args: any[]) {
     if (typeof window === 'undefined' || !window.gtag) return;
     window.gtag(...args);

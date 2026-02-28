@@ -954,7 +954,8 @@
       "title": "Verfügbarkeit prüfen",
       "subtitle": "Wählen Sie Ihre Daten unten aus",
       "cta": "Jetzt buchen",
-      "note": "Fragen? Rufen Sie uns an: +48 695 545 330"
+      "note": "Fragen? Rufen Sie uns an: +48 695 545 330",
+      "needHelp": "Brauchen Sie Hilfe bei Ihrer Buchung?"
     },
     "distance": {
       "title": "Anreise",

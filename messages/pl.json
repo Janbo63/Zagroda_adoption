@@ -955,7 +955,8 @@
       "title": "Sprawdź dostępność",
       "subtitle": "Wybierz daty poniżej",
       "cta": "Zarezerwuj teraz",
-      "note": "Pytania? Zadzwoń: +48 695 545 330"
+      "note": "Pytania? Zadzwoń: +48 695 545 330",
+      "needHelp": "Potrzebujesz pomocy przy rezerwacji?"
     },
     "distance": {
       "title": "Jak do nas trafić",
