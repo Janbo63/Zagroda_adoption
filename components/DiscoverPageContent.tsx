@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, Star } from 'lucide-react';
+import { MapPin, Star, ExternalLink, Camera } from 'lucide-react';
+import { RegionMap } from '@/components/RegionMap';
 import { Button } from '@/components/ui/button';
 
 // ─── Photo grid images ──────────────────────────────────────────────────────
@@ -17,9 +19,24 @@ const GALLERY_PHOTOS = [
     '/images/Alpacas/Micky.jpg',
 ];
 
+const INITIATIVE_URL = 'https://stacjakultury.swieradowzdroj.pl/izerska_laka/izerski-pakiet-turystyczny/';
+
+interface Attraction {
+    icon: string;
+    name: string;
+    desc: string;
+    distance: string;
+    type: string;
+}
+
 // ─── Main component ──────────────────────────────────────────────────────────
 export function DiscoverPageContent({ locale }: { locale: string }) {
     const t = useTranslations('discover');
+    const [activeTab, setActiveTab] = useState<'near' | 'far'>('near');
+
+    const nearAttractions = t.raw('attractions.near') as Attraction[];
+    const farAttractions = t.raw('attractions.far') as Attraction[];
+    const currentAttractions = activeTab === 'near' ? nearAttractions : farAttractions;
 
     const fadeUp = {
         hidden: { opacity: 0, y: 30 },
@@ -210,6 +227,145 @@ export function DiscoverPageContent({ locale }: { locale: string }) {
                                 </motion.div>
                             ))}
                         </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* ── LOCAL ATTRACTIONS ───────────────────────────────────── */}
+            <section className="py-20 bg-stone-50" id="explore">
+                <div className="max-w-6xl mx-auto px-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={stagger}
+                    >
+                        {/* Heading */}
+                        <motion.div variants={fadeUp} className="text-center mb-10">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                                {t('attractions.title')}
+                            </h2>
+                            <p className="text-gray-500 text-lg max-w-xl mx-auto">
+                                {t('attractions.subtitle')}
+                            </p>
+                        </motion.div>
+
+                        {/* Initiative banner */}
+                        <motion.div variants={fadeUp} className="mb-8">
+                            <a
+                                href={INITIATIVE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-between gap-4 bg-emerald-700 text-white rounded-2xl px-6 py-4 hover:bg-emerald-800 transition-colors group shadow-lg"
+                            >
+                                <div className="flex items-center gap-3">
+                                    <span className="text-2xl">🏔️</span>
+                                    <div>
+                                        <p className="font-bold text-sm uppercase tracking-wide text-emerald-200 mb-0.5">Local Initiative — We&apos;re a Partner</p>
+                                        <p className="font-semibold text-base leading-tight">Izerski Pakiet Turystyczny — Explore the Izera region together</p>
+                                    </div>
+                                </div>
+                                <ExternalLink className="w-5 h-5 text-emerald-300 group-hover:text-white flex-shrink-0 transition-colors" />
+                            </a>
+                        </motion.div>
+
+                        {/* Tab buttons */}
+                        <motion.div variants={fadeUp} className="flex gap-3 justify-center mb-10">
+                            <button
+                                onClick={() => setActiveTab('near')}
+                                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all shadow-sm ${activeTab === 'near'
+                                    ? 'bg-emerald-700 text-white shadow-emerald-200'
+                                    : 'bg-white text-gray-600 border border-gray-200 hover:border-emerald-300 hover:text-emerald-700'
+                                    }`}
+                            >
+                                <span>⏱</span> {t('attractions.tab15')}
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('far')}
+                                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all shadow-sm ${activeTab === 'far'
+                                    ? 'bg-emerald-700 text-white shadow-emerald-200'
+                                    : 'bg-white text-gray-600 border border-gray-200 hover:border-emerald-300 hover:text-emerald-700'
+                                    }`}
+                            >
+                                <span>🚗</span> {t('attractions.tab60')}
+                            </button>
+                        </motion.div>
+
+                        {/* Hub diagram */}
+                        <motion.div variants={fadeUp} className="mb-10">
+                            <RegionMap
+                                tab15Label={t('attractions.tab15')}
+                                tab60Label={t('attractions.tab60')}
+                            />
+                        </motion.div>
+
+                        {/* Cards grid */}
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.35 }}
+                            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+                        >
+                            {currentAttractions.map((attraction, i) => {
+                                const isMine = ['mine', 'kopalnia', 'krobica', 'důl', 'mijn', 'stříbrný'].some(
+                                    kw => attraction.name.toLowerCase().includes(kw)
+                                );
+                                const cardClass = `bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col gap-3 ${isMine
+                                    ? 'ring-2 ring-emerald-400 hover:ring-emerald-600 transition-all cursor-pointer'
+                                    : 'hover:shadow-md transition-shadow'
+                                    }`;
+                                const cardContent = (
+                                    <>
+                                        <div className="flex items-start justify-between gap-2">
+                                            <span className="text-3xl">{attraction.icon}</span>
+                                            <div className="flex flex-col items-end gap-1">
+                                                <span className="bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-full">
+                                                    {attraction.distance}
+                                                </span>
+                                                {isMine && (
+                                                    <span className="bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                                        <ExternalLink className="w-3 h-3" /> Izerski Package
+                                                    </span>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-gray-900 text-base mb-1 leading-tight">{attraction.name}</h3>
+                                            <p className="text-gray-500 text-sm leading-relaxed">{attraction.desc}</p>
+                                        </div>
+                                        <span className="inline-block mt-auto bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full self-start">
+                                            {attraction.type}
+                                        </span>
+                                    </>
+                                );
+                                return isMine ? (
+                                    <a
+                                        key={i}
+                                        href={INITIATIVE_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={cardClass}
+                                    >
+                                        {cardContent}
+                                    </a>
+                                ) : (
+                                    <div key={i} className={cardClass}>
+                                        {cardContent}
+                                    </div>
+                                );
+                            })}
+                        </motion.div>
+
+                        {/* Gallery CTA */}
+                        <motion.div variants={fadeUp} className="mt-12 text-center">
+                            <Link href={`/${locale}/discover#gallery`}
+                                className="inline-flex items-center gap-2 text-emerald-700 font-semibold hover:text-emerald-900 transition-colors border-b-2 border-emerald-200 hover:border-emerald-500 pb-0.5"
+                            >
+                                <Camera className="w-4 h-4" />
+                                See our farm photo gallery
+                            </Link>
+                        </motion.div>
                     </motion.div>
                 </div>
             </section>

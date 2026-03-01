@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { DiscoverPageContent } from '@/components/DiscoverPageContent';
+import { JsonLd } from '@/components/JsonLd';
+import { discoverSchema, farmSchema } from '@/lib/schema';
 
 // Generate static params for all supported locales
 export async function generateStaticParams() {
@@ -23,9 +25,21 @@ export async function generateMetadata({
     return {
         title: t('meta.title'),
         description: t('meta.description'),
+        openGraph: {
+            title: t('meta.title'),
+            description: t('meta.description'),
+            images: ['/images/Alpacas/Suri.jpg'],
+            type: 'website',
+        },
     };
 }
 
 export default function DiscoverPage({ params: { locale } }: { params: { locale: string } }) {
-    return <DiscoverPageContent locale={locale} />;
+    return (
+        <>
+            <JsonLd data={discoverSchema} />
+            <JsonLd data={farmSchema} />
+            <DiscoverPageContent locale={locale} />
+        </>
+    );
 }

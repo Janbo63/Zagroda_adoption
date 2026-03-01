@@ -6,6 +6,8 @@
     "animals": "Tiere",
     "activities": "Aktivitäten",
     "accommodation": "Übernachtung",
+    "stayWithUs": "Bei uns übernachten",
+    "exploreTheArea": "Region entdecken",
     "adoption": "Adoption",
     "vouchers": "Gutscheine",
     "blog": "Blog",
@@ -1067,6 +1069,93 @@
       "title": "Neugierig auf einen Aufenthalt?",
       "subtitle": "Zwei einzigartige Zimmer auf dem Bauernhof. Morgendlicher Alpakaspaziergang inbegriffen. Siehe Verfügbarkeit.",
       "btn": "Zimmer ansehen →"
+    },
+    "attractions": {
+      "title": "Die Region entdecken",
+      "subtitle": "Ihre Basis für das Beste im Riesengebirge",
+      "tab15": "⏱ Bis 15 Minuten",
+      "tab60": "🚗 Bis 1 Stunde",
+      "near": [
+        {
+          "icon": "🏔️",
+          "name": "Riesengebirge-Nationalpark",
+          "desc": "Weltklasse-Wanderrouten beginnen nur Minuten vom Hof entfernt. Atemberaubende Grate, Alpenwiesen und Schluchten.",
+          "distance": "5 Min.",
+          "type": "Wandern"
+        },
+        {
+          "icon": "🌊",
+          "name": "Queis-Tal",
+          "desc": "Ein wunderschönes Flusstal — ideal für Familienausflüge und Picknicks am Ufer.",
+          "distance": "5 Min.",
+          "type": "Naturspaziergang"
+        },
+        {
+          "icon": "🏖️",
+          "name": "Singiel-Trail",
+          "desc": "Ein legendärer Singletrack durch den Sudetischen Wald — ideal für Abenteuer-Familien und Mountainbiker.",
+          "distance": "10 Min.",
+          "type": "Trail"
+        },
+        {
+          "icon": "💎",
+          "name": "Silbermine Krobica",
+          "desc": "Betreten Sie eine historische unterirdische Silbermine. Ein faszinierendes Erlebnis für Kinder und Erwachsene.",
+          "distance": "10 Min.",
+          "type": "Grubenführung"
+        },
+        {
+          "icon": "🛁",
+          "name": "Świeradów-Zdrój",
+          "desc": "Ein charmantes Kurort mit Thermalquellen und Mineralwässern — ideal nach einem aktiven Tag im Freien.",
+          "distance": "10 Min.",
+          "type": "Kurstadt"
+        }
+      ],
+      "far": [
+        {
+          "icon": "💧",
+          "name": "Kamieńczyk-Wasserfall",
+          "desc": "Der höchste Wasserfall im polnischen Sudetengebirge in einer dramatischen Schlucht bei Szklarska Poręba.",
+          "distance": "25 Min.",
+          "type": "Wasserfall"
+        },
+        {
+          "icon": "🏰",
+          "name": "Burg Tzschocha (Czocha)",
+          "desc": "Eine atemberaubende mittelalterliche Burg über einem See. Erkunden Sie Türme, Verliese und die reiche Geschichte einer der stimmungsvollsten Festungen Polens.",
+          "distance": "25 Min.",
+          "type": "Burg"
+        },
+        {
+          "icon": "🏙️",
+          "name": "Jelenia Góra (Hirschberg)",
+          "desc": "Eine charmante Barockstadt mit farbenfrohem Rathauskomplex, Museen und tollen Restaurants.",
+          "distance": "30 Min.",
+          "type": "Historische Stadt"
+        },
+        {
+          "icon": "🌍",
+          "name": "Liberec (Tschechien)",
+          "desc": "Direkt hinter der Grenze — eine lebhafte tschechische Stadt mit Zoo, dem Ještěd-Turm und einem wunderschönen Rathaus. Ein großer Tagesausflug!",
+          "distance": "45 Min.",
+          "type": "Stadt"
+        },
+        {
+          "icon": "⛰️",
+          "name": "Schneekoppe (1.602 m)",
+          "desc": "Der höchste Gipfel des Sudetengebirges. Nehmen Sie die Seilbahn aus Karpacz für atemberaubende 360°-Aussicht über Polen und Tschechien.",
+          "distance": "40 Min.",
+          "type": "Berggipfel"
+        },
+        {
+          "icon": "♨️",
+          "name": "Thermalbäder Lądek-Zdrój",
+          "desc": "Eines der ältesten Kurorte Polens. Entspannen Sie in natürlichen Mineralthermalquellen — Glückseligkeit nach Wanderungen.",
+          "distance": "55 Min.",
+          "type": "Thermalbad"
+        }
+      ]
     }
   },
   "booking": {

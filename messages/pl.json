@@ -8,6 +8,8 @@
     "animals": "Zwierzęta",
     "activities": "Aktywności",
     "accommodation": "Noclegi",
+    "stayWithUs": "Noclegi na farmie",
+    "exploreTheArea": "Odkryj okolicę",
     "adoption": "Adopcja",
     "vouchers": "Vouchery",
     "blog": "Blog",
@@ -1068,6 +1070,93 @@
       "title": "Ciekawi pobytu?",
       "subtitle": "Dwa unikalne pokoje na farmie. Poranny spacer z alpakami w cenie. Zobacz dostępność.",
       "btn": "Zobacz pokoje →"
+    },
+    "attractions": {
+      "title": "Odkryj okolicę",
+      "subtitle": "Twoja baza wypadowa w sercu Karkonoszy",
+      "tab15": "⏱ Do 15 minut",
+      "tab60": "🚗 Do 1 godziny",
+      "near": [
+        {
+          "icon": "🏔️",
+          "name": "Karkonoski Park Narodowy",
+          "desc": "Szlaki turystyczne klasy światowej zaczynają się zaledwie kilka minut od farmy. Grzbiety, łąki alpejskie i wąwozy.",
+          "distance": "5 min",
+          "type": "Piesze wędrówki"
+        },
+        {
+          "icon": "🌊",
+          "name": "Dolina Kwisy",
+          "desc": "Piękna dolina rzeki Kwisy — idealna na rodzinne spacery i pikniki nad brzegiem rzeki.",
+          "distance": "5 min",
+          "type": "Spacer w naturze"
+        },
+        {
+          "icon": "🏖️",
+          "name": "Trasa Singiel",
+          "desc": "Legendarny singletrack przez sudecki las — idealne dla aktywnych rodzin i miłośników rowerów górskich.",
+          "distance": "10 min",
+          "type": "Trasa"
+        },
+        {
+          "icon": "💎",
+          "name": "Kopalnia Srebra Krobica",
+          "desc": "Wejdź do historycznej kopalni srebra pod ziemią. Fascynujące doświadczenie dla dzieci i dorosłych.",
+          "distance": "10 min",
+          "type": "Zwiedzanie kopalni"
+        },
+        {
+          "icon": "🛁",
+          "name": "Świeradów-Zdrój",
+          "desc": "Urokliwe miasto uzdrowiskowe z gorącymi źródłami i wodami mineralnymi — idealne po aktywnym dniu na świeżym powietrzu.",
+          "distance": "10 min",
+          "type": "Uzdrowisko"
+        }
+      ],
+      "far": [
+        {
+          "icon": "💧",
+          "name": "Wodospad Kamieńczyk",
+          "desc": "Najwyższy wodospad w polskich Sudetach, otoczony dramatycznym wąwozem koło Szklarskiej Poręby.",
+          "distance": "25 min",
+          "type": "Wodospad"
+        },
+        {
+          "icon": "🏰",
+          "name": "Zamek Czocha",
+          "desc": "Zachwycający średniowieczny zamek nad jeziorem. Zwiedzaj wieże, lochy i bogatą historię jednej z najbardziej klimatycznych twierdz Polski.",
+          "distance": "25 min",
+          "type": "Zamek"
+        },
+        {
+          "icon": "🏙️",
+          "name": "Jelenia Góra",
+          "desc": "Urokliwe barokowe stare miasto z kolorowymi podcieniami, muzeami i świetnymi restauracjami.",
+          "distance": "30 min",
+          "type": "Zabytkowe miasto"
+        },
+        {
+          "icon": "🌍",
+          "name": "Liberec (Republika Czeska)",
+          "desc": "Tuż za granicą — tętniące życiem czeskie miasto z zoo, górą Ještěd i pięknym ratuszem. Świetna wycieczka!",
+          "distance": "45 min",
+          "type": "Miasto"
+        },
+        {
+          "icon": "⛰️",
+          "name": "Śnieżka (1602 m n.p.m.)",
+          "desc": "Najwyższy szczyt Sudetów. Wjedź kolejką z Karpacza i ciesz się widokiem na 360° — Polska i Czechy u Twoich stóp.",
+          "distance": "40 min",
+          "type": "Szczyt górski"
+        },
+        {
+          "icon": "♨️",
+          "name": "Termy w Lądku-Zdroju",
+          "desc": "Jeden z najstarszych polskich kurortów. Moczenie w naturalnych mineralnych basenach termalnych — błogość po górskich wędrówkach.",
+          "distance": "55 min",
+          "type": "Termy"
+        }
+      ]
     }
   },
   "booking": {

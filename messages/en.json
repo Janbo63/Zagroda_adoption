@@ -7,6 +7,8 @@
     "home": "Home",
     "animals": "Animals",
     "accommodation": "Accommodation",
+    "stayWithUs": "Stay with us",
+    "exploreTheArea": "Explore the area",
     "adoption": "Adopt",
     "vouchers": "Gift Vouchers",
     "activities": "Activities",
@@ -1069,6 +1071,93 @@
       "title": "Curious about staying?",
       "subtitle": "Two unique rooms on the farm. Morning alpaca walk included. See when there's availability.",
       "btn": "See the rooms →"
+    },
+    "attractions": {
+      "title": "Explore the region",
+      "subtitle": "Your base for the best of the Karkonosze mountains",
+      "tab15": "⏱ Within 15 min",
+      "tab60": "🚗 Within 1 hour",
+      "near": [
+        {
+          "icon": "🏔️",
+          "name": "Karkonosze National Park",
+          "desc": "World-class hiking trails begin just minutes from the farm. Stunning ridgelines, alpine meadows, and gorges.",
+          "distance": "5 min",
+          "type": "Hiking"
+        },
+        {
+          "icon": "🌊",
+          "name": "Kwisa River Valley",
+          "desc": "A beautiful river valley perfect for family walks and picnics along the riverbanks.",
+          "distance": "5 min",
+          "type": "Nature Walk"
+        },
+        {
+          "icon": "🏖️",
+          "name": "Singiel Trail",
+          "desc": "A legendary single-track mountain trail winding through the Sudeten forest — perfect for adventurous families and bikers.",
+          "distance": "10 min",
+          "type": "Trail"
+        },
+        {
+          "icon": "💎",
+          "name": "Silver Mine Krobica",
+          "desc": "Step inside a historic underground silver mine. A fascinating experience for kids and adults alike.",
+          "distance": "10 min",
+          "type": "Mine Tour"
+        },
+        {
+          "icon": "🛁",
+          "name": "Świeradów-Zdrój Spa Town",
+          "desc": "A charming spa town with thermal springs and mineral-rich waters — ideal after an active day outdoors.",
+          "distance": "10 min",
+          "type": "Spa Town"
+        }
+      ],
+      "far": [
+        {
+          "icon": "💧",
+          "name": "Kamieńczyk Waterfall",
+          "desc": "The highest waterfall in the Polish Sudeten mountains, set inside a dramatic gorge near Szklarska Poręba.",
+          "distance": "25 min",
+          "type": "Waterfall"
+        },
+        {
+          "icon": "🏰",
+          "name": "Czocha Castle",
+          "desc": "A stunning medieval castle perched above a lake. Explore the towers, dungeons, and rich history of one of Poland's most atmospheric fortresses.",
+          "distance": "25 min",
+          "type": "Castle"
+        },
+        {
+          "icon": "🏙️",
+          "name": "Jelenia Góra",
+          "desc": "A charming baroque old town with colourful arcaded market square, museums, and great restaurants.",
+          "distance": "30 min",
+          "type": "Historic Town"
+        },
+        {
+          "icon": "🌍",
+          "name": "Liberec (Czech Republic)",
+          "desc": "Just across the border — a vibrant Czech city with a zoo, Ještěd mountain tower, and a beautiful town hall. A great day trip!",
+          "distance": "45 min",
+          "type": "City"
+        },
+        {
+          "icon": "⛰️",
+          "name": "Śnieżka Summit (1,602m)",
+          "desc": "The highest peak in the Sudeten mountains. Take the cable car from Karpacz for breathtaking 360° views over Poland and Czechia.",
+          "distance": "40 min",
+          "type": "Mountain Peak"
+        },
+        {
+          "icon": "♨️",
+          "name": "Lądek-Zdrój Thermal Baths",
+          "desc": "One of Poland's oldest spa resorts. Soak in natural mineral thermal pools — bliss after hiking in the mountains.",
+          "distance": "55 min",
+          "type": "Thermal Baths"
+        }
+      ]
     }
   },
   "booking": {

@@ -7,6 +7,8 @@
         "home": "Home",
         "animals": "Dieren",
         "accommodation": "Accommodatie",
+        "stayWithUs": "Verblijf bij ons",
+        "exploreTheArea": "Ontdek de omgeving",
         "adoption": "Adopteren",
         "vouchers": "Cadeaubonnen",
         "activities": "Activiteiten",
@@ -1063,6 +1065,93 @@
             "title": "Benieuwd naar een verblijf?",
             "subtitle": "Twee unieke kamers op de boerderij. Ochtendwandeling met alpaca's inbegrepen. Kijk wanneer er plek is.",
             "btn": "Bekijk de kamers →"
+        },
+        "attractions": {
+            "title": "Ontdek de omgeving",
+            "subtitle": "Uw uitvalsbasis voor het beste van het Reuzengebergte",
+            "tab15": "⏱ Binnen 15 min",
+            "tab60": "🚗 Binnen 1 uur",
+            "near": [
+                {
+                    "icon": "🏔️",
+                    "name": "Nationaal Park Reuzengebergte",
+                    "desc": "Wandelroutes van wereldklasse beginnen op slechts enkele minuten van de boerderij. Spectaculaire bergkammen, alpenweides en ravijnen.",
+                    "distance": "5 min",
+                    "type": "Wandelen"
+                },
+                {
+                    "icon": "🌊",
+                    "name": "Kwisa-dal",
+                    "desc": "Een prachtig rivierdal — ideaal voor gezinswandelingen en picknicks langs de oever.",
+                    "distance": "5 min",
+                    "type": "Natuurwandeling"
+                },
+                {
+                    "icon": "🏖️",
+                    "name": "Singiel Trail",
+                    "desc": "Een legendarisch singletrack door het Sudetisch bos — perfect voor avontuurlijke gezinnen en mountainbikers.",
+                    "distance": "10 min",
+                    "type": "Trail"
+                },
+                {
+                    "icon": "💎",
+                    "name": "Zilvermijn Krobica",
+                    "desc": "Bezoek een historische ondergrondse zilvermijn. Een fascinerend uitje voor kinderen en volwassenen.",
+                    "distance": "10 min",
+                    "type": "Mijnbezoek"
+                },
+                {
+                    "icon": "🛁",
+                    "name": "Świeradów-Zdrój",
+                    "desc": "Een charmant kuuroord met thermale bronnen en mineraalwaters — ideaal na een actieve dag buiten.",
+                    "distance": "10 min",
+                    "type": "Kuuroord"
+                }
+            ],
+            "far": [
+                {
+                    "icon": "💧",
+                    "name": "Kamieńczyk Waterval",
+                    "desc": "De hoogste waterval van de Poolse Sudeten in een dramatische kloof bij Szklarska Poręba.",
+                    "distance": "25 min",
+                    "type": "Waterval"
+                },
+                {
+                    "icon": "🏰",
+                    "name": "Kasteel Czocha",
+                    "desc": "Een prachtig middeleeuws kasteel boven een meer. Verken torens, kerkers en de rijke geschiedenis van een van Polen's meest sfeervolle burchten.",
+                    "distance": "25 min",
+                    "type": "Kasteel"
+                },
+                {
+                    "icon": "🏙️",
+                    "name": "Jelenia Góra",
+                    "desc": "Een charmante barokke binnenstad met kleurrijke arcades, musea en geweldige restaurants.",
+                    "distance": "30 min",
+                    "type": "Historische stad"
+                },
+                {
+                    "icon": "🌍",
+                    "name": "Liberec (Tsjechische Republiek)",
+                    "desc": "Net over de grens — een levendige Tsjechische stad met een dierentuin, de Ještěd-toren en een prachtig stadhuis. Een geweldig dagje uit!",
+                    "distance": "45 min",
+                    "type": "Stad"
+                },
+                {
+                    "icon": "⛰️",
+                    "name": "Śnieżka (1.602 m)",
+                    "desc": "De hoogste bergtop van de Sudeten. Neem de kabelbaan vanuit Karpacz voor een adembenemend 360°-uitzicht over Polen en Tsjechië.",
+                    "distance": "40 min",
+                    "type": "Bergtop"
+                },
+                {
+                    "icon": "♨️",
+                    "name": "Thermische Baden Lądek-Zdrój",
+                    "desc": "Een van Polen's oudste kuuroorden. Ontspan in natuurlijke minerale thermische baden — zaligheid na bergwandelingen.",
+                    "distance": "55 min",
+                    "type": "Thermisch bad"
+                }
+            ]
         }
     },
     "booking": {

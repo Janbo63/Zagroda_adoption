@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { HeroSection } from './HeroSection'
+import { VideoSection } from './VideoSection'
 import { AnimalSection } from './AnimalSection'
 import { ActivitiesSection } from './ActivitiesSection'
 import { AccommodationSection } from './AccommodationSection'
@@ -15,6 +16,7 @@ export function HomeContent({ locale }: HomeContentProps) {
   return (
     <main>
       <HeroSection locale={locale} />
+      <VideoSection />
       <AnimalSection locale={locale} />
       <ActivitiesSection locale={locale} />
       <SocialMediaBanner />

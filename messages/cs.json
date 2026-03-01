@@ -6,6 +6,8 @@
     "animals": "Zvířata",
     "activities": "Aktivity",
     "accommodation": "Ubytování",
+    "stayWithUs": "Ubytování u nás",
+    "exploreTheArea": "Prozkoumejte region",
     "adoption": "Adopce",
     "vouchers": "Dárkové poukazy",
     "blog": "Blog",
@@ -1084,6 +1086,93 @@
       "title": "Zvědaví na pobyt?",
       "subtitle": "Dva jedinečné pokoje na farmě. Ranní procházka s alpakami zahrnuta v ceně. Podívejte se na dostupnost.",
       "btn": "Pokoje k dispozici →"
+    },
+    "attractions": {
+      "title": "Prozkoumejte region",
+      "subtitle": "Vaše základna pro to nejlepší z Krkonoš",
+      "tab15": "⏱ Do 15 minut",
+      "tab60": "🚗 Do 1 hodiny",
+      "near": [
+        {
+          "icon": "🏔️",
+          "name": "Krkonošský národní park",
+          "desc": "Turistické stezky světové třídy začínají jen pár minut od farmy. Úchvatné hřebeny, alpínské louky a soutěsky.",
+          "distance": "5 min",
+          "type": "Turistika"
+        },
+        {
+          "icon": "🌊",
+          "name": "Údolí Kvizy",
+          "desc": "Krásné říční údolí ideální pro rodinné procházky a piknik u řeky.",
+          "distance": "5 min",
+          "type": "Procházka v přírodě"
+        },
+        {
+          "icon": "🏖️",
+          "name": "Singiel trail",
+          "desc": "Legendární singletrack sudetskými lesy — ideální pro dobrodružné rodiny a milovníky horských kol.",
+          "distance": "10 min",
+          "type": "Stezka"
+        },
+        {
+          "icon": "💎",
+          "name": "Stříbrný důl Krobica",
+          "desc": "Vstupte do historického podzemního stříbrného dolu. Fascinující zážitek pro děti i dospělé.",
+          "distance": "10 min",
+          "type": "Důlní prohlídka"
+        },
+        {
+          "icon": "🛁",
+          "name": "Świeradów-Zdrój",
+          "desc": "Okouzlující lázeňské město s termálními prameny a minerálními vodami — ideální po aktivním dni venku.",
+          "distance": "10 min",
+          "type": "Lázeňské město"
+        }
+      ],
+      "far": [
+        {
+          "icon": "💧",
+          "name": "Vodopád Kamieńczyk",
+          "desc": "Nejvyšší vodopád polských Sudet v dramatické soutěsce u Szklarské Poręby.",
+          "distance": "25 min",
+          "type": "Vodopád"
+        },
+        {
+          "icon": "🏰",
+          "name": "Hrad Czocha",
+          "desc": "Překrásný středověký hrad u jezera. Prozkoumejte věže, žaláře a bohatou historii jedné z nejatmosféričtějších tvrzi Polska.",
+          "distance": "25 min",
+          "type": "Hrad"
+        },
+        {
+          "icon": "🏙️",
+          "name": "Jelení Hora",
+          "desc": "Půvabné barokní staré město s barevnými podloubími, muzei a skvělými restauracemi.",
+          "distance": "30 min",
+          "type": "Historické město"
+        },
+        {
+          "icon": "🌍",
+          "name": "Liberec (Česká republika)",
+          "desc": "Přímo za hranicí — živé české město se ZOO, věží Ještěd a nádhernou radnicí. Skvělý výlet!",
+          "distance": "45 min",
+          "type": "Město"
+        },
+        {
+          "icon": "⛰️",
+          "name": "Sněžka (1 602 m n.m.)",
+          "desc": "Nejvyšší vrchol Sudet. Jeďte lanovkou z Karpacze a užijte si výhled 360° na Polsko a Česko.",
+          "distance": "40 min",
+          "type": "Horský vrchol"
+        },
+        {
+          "icon": "♨️",
+          "name": "Termální lázně Lądek-Zdrój",
+          "desc": "Jeden z nejstarších polských lázeňských měst. Odpočinek v přírodních minerálních termálních bazénech — blaženost po horských túrách.",
+          "distance": "55 min",
+          "type": "Termální lázně"
+        }
+      ]
     }
   },
   "booking": {

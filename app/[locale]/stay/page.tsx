@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { StayPageContent } from '@/components/StayPageContent';
+import { JsonLd } from '@/components/JsonLd';
+import { accommodationSchema, farmSchema } from '@/lib/schema';
 
 // Generate static params for all supported locales
 export async function generateStaticParams() {
@@ -23,9 +25,21 @@ export async function generateMetadata({
     return {
         title: t('meta.title'),
         description: t('meta.description'),
+        openGraph: {
+            title: t('meta.title'),
+            description: t('meta.description'),
+            images: ['/images/Rooms/Garden-1.jpg'],
+            type: 'website',
+        },
     };
 }
 
 export default function StayPage({ params: { locale } }: { params: { locale: string } }) {
-    return <StayPageContent locale={locale} />;
+    return (
+        <>
+            <JsonLd data={accommodationSchema} />
+            <JsonLd data={farmSchema} />
+            <StayPageContent locale={locale} />
+        </>
+    );
 }
