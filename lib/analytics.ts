@@ -145,3 +145,81 @@ export function trackPaymentFailed(params: {
         error_message: params.error,
     });
 }
+
+// ─── Campaign / Landing Page Events ────────────────────────────────────────────
+
+/** Generic custom event */
+export function trackEvent(
+    name: string,
+    params?: Record<string, string | number | boolean>,
+) {
+    gtag('event', name, params);
+}
+
+// ── Scroll Depth ───────────────────────────────────────────────────────────────
+
+const firedThresholds = new Set<number>();
+
+/**
+ * Call once on mount. Tracks scroll depth at 25 / 50 / 75 / 100 %.
+ * Returns a cleanup function for useEffect.
+ */
+export function initScrollDepthTracking(pageName: string): () => void {
+    firedThresholds.clear();
+
+    const handler = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+
+        const pct = Math.round((scrollTop / docHeight) * 100);
+
+        for (const threshold of [25, 50, 75, 100]) {
+            if (pct >= threshold && !firedThresholds.has(threshold)) {
+                firedThresholds.add(threshold);
+                trackEvent('scroll_depth', {
+                    page: pageName,
+                    percent: threshold,
+                });
+            }
+        }
+    };
+
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+}
+
+// ── CTA Click ──────────────────────────────────────────────────────────────────
+
+/** Track which CTA was clicked and in which section */
+export function trackCTAClick(ctaName: string, section: string) {
+    trackEvent('cta_click', { cta_name: ctaName, section });
+}
+
+// ── Section View (Intersection Observer) ───────────────────────────────────────
+
+const viewedSections = new Set<string>();
+
+/**
+ * Observe a DOM element. Fires `section_view` once when ≥ 30% visible.
+ * Returns a cleanup function.
+ */
+export function observeSection(
+    element: HTMLElement | null,
+    sectionName: string,
+): () => void {
+    if (!element || typeof IntersectionObserver === 'undefined') return () => { };
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting && !viewedSections.has(sectionName)) {
+                viewedSections.add(sectionName);
+                trackEvent('section_view', { section: sectionName });
+            }
+        },
+        { threshold: 0.3 },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+}
