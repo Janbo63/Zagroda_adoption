@@ -14,8 +14,10 @@ echo "--- 📥 Resetting to latest code ---"
 git fetch origin main
 git reset --hard origin/main
 
-# Rebuild and restart the Docker container
+# Rebuild and restart the Docker container (--no-cache ensures fresh build)
 echo "--- 🏗️ Rebuilding and restarting Docker ---"
-docker compose up --build -d
+docker compose build --no-cache
+docker compose up -d
+docker image prune -f
 
 echo "--- ✅ Deployment Complete! ---"
