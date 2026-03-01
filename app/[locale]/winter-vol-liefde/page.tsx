@@ -1,5 +1,4 @@
-import { CampaignLandingPage } from '@/components/CampaignLandingPage';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 
 type CampaignPageProps = {
     params: { locale: string };
@@ -16,11 +15,5 @@ export function generateStaticParams() {
 }
 
 export default function WinterVolLiefdePage({ params: { locale } }: CampaignPageProps) {
-    unstable_setRequestLocale(locale);
-
-    return (
-        <div className="flex flex-col min-h-screen">
-            <CampaignLandingPage locale={locale} />
-        </div>
-    );
+    redirect(`/${locale}/welkom`);
 }
