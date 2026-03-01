@@ -6,3 +6,5 @@ Allow: /
 
 User-agent: Facebot
 Allow: /
+
+Sitemap: https://zagrodaalpakoterapii.com/sitemap.xml
