@@ -1251,5 +1251,96 @@
             "back": "← Terug",
             "next": "Volgende →"
         }
+    },
+    "welkom": {
+        "meta": {
+            "title": "Ontdek de alpaca's — Zagroda Alpakoterapii",
+            "description": "Een alpacaboerderij in de Poolse bergen. Ontmoet Elvis, Micky en de hele kudde. Plan een bezoek of geef een unieke ervaring cadeau."
+        },
+        "hero": {
+            "badge": "🦙 Alpacaboerderij · Reuzengebergte",
+            "title": "Ontmoet Elvis en zijn kudde",
+            "subtitle": "Zes alpaca's, een boerderij in de bergen, en een ervaring die je nooit vergeet.",
+            "socialProof": "4.9/5 sterren · 400+ bezoekers",
+            "cta": "Ontdek de boerderij",
+            "imageAlt": "Elvis de alpaca kijkt je aan op de boerderij"
+        },
+        "story": {
+            "title": "Wat maakt het zo bijzonder?",
+            "subtitle": "Drie dingen die bezoekers nooit vergeten",
+            "alpacas": {
+                "icon": "🦙",
+                "title": "De alpaca's ontmoeten",
+                "desc": "Zes alpaca's met elk hun eigen karakter. Voer ze, loop met ze, zit bij ze in het gras. Geen haast — gewoon samen zijn."
+            },
+            "nature": {
+                "icon": "🏔️",
+                "title": "De bergen in",
+                "desc": "De boerderij ligt aan de voet van het Reuzengebergte. Bossen, frisse lucht, watervallen — en 's avonds niets dan sterren."
+            },
+            "rooms": {
+                "icon": "🏡",
+                "title": "Slapen op de boerderij",
+                "desc": "Geen hotel. Een echte boerderij waar je 's ochtends wakker wordt met alpaca's voor je raam."
+            }
+        },
+        "alpacas": {
+            "title": "Ontmoet de sterren",
+            "subtitle": "Elk met een eigen karakter. Wie is jouw favoriet?",
+            "elvis": "De perfecte luisteraar. Elvis blijft kalm als de emoties hoog oplopen.",
+            "micky": "Nieuwsgierige ontdekker. Micky maakt van elke wandeling een avontuur.",
+            "suri": "Zachte ziel. Suri's fluwelen vacht en rustige karakter zijn therapeutisch.",
+            "teddy": "De kalme leider. Teddy is ongelooflijk geduldig, vooral met kinderen.",
+            "ricky": "De charmante brommer. Verlegen, maar als hij eenmaal begint te neuriën...",
+            "freddy": "De slimme charmeur. Freddy weet precies hoe hij je hart steelt."
+        },
+        "reviews": {
+            "title": "Wat bezoekers zeggen",
+            "r1": {
+                "text": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
+                "author": "Gast uit Nederland"
+            },
+            "r2": {
+                "text": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen zeker terug.",
+                "author": "Gast uit België"
+            },
+            "r3": {
+                "text": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
+                "author": "Gast uit Duitsland"
+            }
+        },
+        "cta": {
+            "title": "Benieuwd geworden?",
+            "subtitle": "Ontdek de kamers op de boerderij of geef een alpaca-ervaring cadeau aan iemand die je lief hebt.",
+            "stayBtn": "Bekijk de kamers",
+            "giftBtn": "Geef een cadeaubon"
+        },
+        "packages": {
+            "title": "Kies jouw ervaring",
+            "subtitle": "Onvergetelijke momenten voor iedereen",
+            "cta": "Koop cadeaubon",
+            "lite": {
+                "name": "Alpaca Meet & Greet",
+                "p1": "30 minuten interactie met de kudde",
+                "p2": "De alpaca's voeren",
+                "p3": "Leuke fotomomenten"
+            },
+            "popular": {
+                "name": "Alpaca Wandeling",
+                "badge": "Populairst",
+                "p1": "60 minuten wandeling door de bergen",
+                "p2": "Warme chocolademelk inbegrepen",
+                "p3": "Digitale foto's van de wandeling",
+                "p4": "Eigen gids voor jouw groep"
+            },
+            "vip": {
+                "name": "VIP Alpaca Ervaring",
+                "p1": "90 minuten privétijd met de alpaca's",
+                "p2": "Alpaca-souvenirpakket",
+                "p3": "Lokale snacks en drankjes",
+                "p4": "Focus op rust en therapie",
+                "p5": "Exclusieve knuffeltijd"
+            }
+        }
     }
 }

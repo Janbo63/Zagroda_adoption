@@ -1255,5 +1255,96 @@
       "back": "← Zurück",
       "next": "Weiter →"
     }
+  },
+  "welkom": {
+    "meta": {
+      "title": "Entdecke die Alpakas — Zagroda Alpakoterapii",
+      "description": "Eine Alpakafarm in den polnischen Bergen. Lerne Elvis, Micky und die ganze Herde kennen. Plane einen Besuch oder verschenke ein einzigartiges Erlebnis."
+    },
+    "hero": {
+      "badge": "🦙 Alpakafarm · Riesengebirge",
+      "title": "Lerne Elvis und seine Herde kennen",
+      "subtitle": "Sechs Alpakas, eine Farm in den Bergen und ein Erlebnis, das du nie vergisst.",
+      "socialProof": "4,9/5 Sterne · 400+ Besucher",
+      "cta": "Entdecke die Farm",
+      "imageAlt": "Elvis das Alpaka schaut dich auf der Farm an"
+    },
+    "story": {
+      "title": "Was macht es so besonders?",
+      "subtitle": "Drei Dinge, die Besucher nie vergessen",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Die Alpakas kennenlernen",
+        "desc": "Sechs Alpakas, jedes mit eigenem Charakter. Füttere sie, lauf mit ihnen, sitz mit ihnen im Gras. Keine Eile — einfach zusammen sein."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Ab in die Berge",
+        "desc": "Die Farm liegt am Fuß des Riesengebirges. Wälder, frische Luft, Wasserfälle — und abends nichts als Sterne."
+      },
+      "rooms": {
+        "icon": "🏡",
+        "title": "Übernachten auf der Farm",
+        "desc": "Kein Hotel. Eine echte Farm, auf der du morgens mit Alpakas vor deinem Fenster aufwachst."
+      }
+    },
+    "alpacas": {
+      "title": "Triff die Stars",
+      "subtitle": "Jedes mit eigenem Charakter. Wer ist dein Favorit?",
+      "elvis": "Der perfekte Zuhörer. Elvis bleibt ruhig, wenn die Emotionen hochkochen.",
+      "micky": "Neugieriger Entdecker. Micky macht jeden Spaziergang zum Abenteuer.",
+      "suri": "Sanfte Seele. Suris samtiges Fell und ruhiger Charakter sind therapeutisch.",
+      "teddy": "Der ruhige Anführer. Teddy ist unglaublich geduldig, besonders mit Kindern.",
+      "ricky": "Der charmante Brummer. Anfangs schüchtern, aber wenn er erst anfängt zu summen...",
+      "freddy": "Der kluge Charmeur. Freddy weiß genau, wie er dein Herz stiehlt."
+    },
+    "reviews": {
+      "title": "Was Besucher sagen",
+      "r1": {
+        "text": "Wir wachten mit Alpakas auf, die durch unser Fenster schauten. Nichts bereitet dich darauf vor. Pure Magie.",
+        "author": "Gast aus den Niederlanden"
+      },
+      "r2": {
+        "text": "Das Alpaka-Erlebnis war der Höhepunkt unserer gesamten Reise nach Polen. Wir kommen wieder.",
+        "author": "Gast aus Belgien"
+      },
+      "r3": {
+        "text": "So ein intimer, friedlicher Ort. Komplett anders als ein Hotel. Wirklich besonders.",
+        "author": "Gast aus Deutschland"
+      }
+    },
+    "cta": {
+      "title": "Neugierig geworden?",
+      "subtitle": "Entdecke die Zimmer auf der Farm oder verschenke ein Alpaka-Erlebnis an jemanden, den du liebst.",
+      "stayBtn": "Zimmer ansehen",
+      "giftBtn": "Gutschein verschenken"
+    },
+    "packages": {
+      "title": "Wähle dein Erlebnis",
+      "subtitle": "Unvergessliche Momente für alle",
+      "cta": "Gutschein kaufen",
+      "lite": {
+        "name": "Alpaka Meet & Greet",
+        "p1": "30 Minuten Interaktion mit der Herde",
+        "p2": "Die Alpakas füttern",
+        "p3": "Tolle Fotogelegenheiten"
+      },
+      "popular": {
+        "name": "Alpaka-Spaziergang",
+        "badge": "Am beliebtesten",
+        "p1": "60-minütiger Spaziergang durch die Berge",
+        "p2": "Heiße Schokolade inklusive",
+        "p3": "Digitale Fotos vom Spaziergang",
+        "p4": "Privater Guide für deine Gruppe"
+      },
+      "vip": {
+        "name": "VIP Alpaka-Erlebnis",
+        "p1": "90 Minuten private Zeit mit den Alpakas",
+        "p2": "Alpaka-Souvenirpaket",
+        "p3": "Lokale Snacks und Getränke",
+        "p4": "Fokus auf Ruhe und Therapie",
+        "p5": "Exklusive Kuschelzeit"
+      }
+    }
   }
 }

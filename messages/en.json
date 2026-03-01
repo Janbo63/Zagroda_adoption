@@ -1257,5 +1257,96 @@
       "back": "← Back",
       "next": "Next →"
     }
+  },
+  "welkom": {
+    "meta": {
+      "title": "Discover the alpacas — Zagroda Alpakoterapii",
+      "description": "An alpaca farm in the Polish mountains. Meet Elvis, Micky and the whole herd. Plan a visit or gift a unique experience."
+    },
+    "hero": {
+      "badge": "🦙 Alpaca Farm · Giant Mountains",
+      "title": "Meet Elvis and his herd",
+      "subtitle": "Six alpacas, a farm in the mountains, and an experience you'll never forget.",
+      "socialProof": "4.9/5 stars · 400+ visitors",
+      "cta": "Explore the farm",
+      "imageAlt": "Elvis the alpaca looking at you on the farm"
+    },
+    "story": {
+      "title": "What makes it so special?",
+      "subtitle": "Three things visitors never forget",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Meet the alpacas",
+        "desc": "Six alpacas, each with their own personality. Feed them, walk with them, sit with them in the grass. No rush — just being together."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Into the mountains",
+        "desc": "The farm sits at the foot of the Giant Mountains. Forests, fresh air, waterfalls — and nothing but stars at night."
+      },
+      "rooms": {
+        "icon": "🏡",
+        "title": "Sleep on the farm",
+        "desc": "No hotel. A real farm where you wake up with alpacas outside your window."
+      }
+    },
+    "alpacas": {
+      "title": "Meet the stars",
+      "subtitle": "Each with their own personality. Who's your favourite?",
+      "elvis": "The perfect listener. Elvis stays calm when emotions run high.",
+      "micky": "Curious explorer. Micky turns every walk into an adventure.",
+      "suri": "Gentle soul. Suri's velvety coat and calm character are therapeutic.",
+      "teddy": "The calm leader. Teddy is incredibly patient, especially with children.",
+      "ricky": "The charming hummer. Shy at first, but once he starts humming...",
+      "freddy": "The smart charmer. Freddy knows exactly how to steal your heart."
+    },
+    "reviews": {
+      "title": "What visitors say",
+      "r1": {
+        "text": "We woke up with alpacas looking through our window. Nothing prepares you. Pure magic.",
+        "author": "Guest from the Netherlands"
+      },
+      "r2": {
+        "text": "The alpaca experience was the highlight of our entire trip to Poland. We'll be back.",
+        "author": "Guest from Belgium"
+      },
+      "r3": {
+        "text": "Such an intimate, peaceful place. Completely different from a hotel. Truly special.",
+        "author": "Guest from Germany"
+      }
+    },
+    "cta": {
+      "title": "Curious to see more?",
+      "subtitle": "Explore the rooms on the farm or gift an alpaca experience to someone you love.",
+      "stayBtn": "See the rooms",
+      "giftBtn": "Give a gift voucher"
+    },
+    "packages": {
+      "title": "Choose your experience",
+      "subtitle": "Unforgettable moments for everyone",
+      "cta": "Buy gift voucher",
+      "lite": {
+        "name": "Alpaca Meet & Greet",
+        "p1": "30 minutes of interaction with the herd",
+        "p2": "Feed the alpacas",
+        "p3": "Fun photo opportunities"
+      },
+      "popular": {
+        "name": "Alpaca Walk",
+        "badge": "Most Popular",
+        "p1": "60-minute walk through the mountains",
+        "p2": "Hot chocolate included",
+        "p3": "Digital photos of your walk",
+        "p4": "Private guide for your group"
+      },
+      "vip": {
+        "name": "VIP Alpaca Experience",
+        "p1": "90 minutes of private time with the alpacas",
+        "p2": "Alpaca souvenir pack",
+        "p3": "Local snacks and drinks",
+        "p4": "Focus on calm and therapy",
+        "p5": "Exclusive cuddle time"
+      }
+    }
   }
 }

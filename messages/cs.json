@@ -1272,5 +1272,96 @@
       "back": "← Zpět",
       "next": "Další →"
     }
+  },
+  "welkom": {
+    "meta": {
+      "title": "Objevte alpaky — Zagroda Alpakoterapii",
+      "description": "Alpačí farma v polských horách. Poznejte Elvise, Mickyho a celé stádo. Naplánujte návštěvu nebo darujte jedinečný zážitek."
+    },
+    "hero": {
+      "badge": "🦙 Alpačí farma · Krkonoše",
+      "title": "Poznejte Elvise a jeho stádo",
+      "subtitle": "Šest alpak, farma v horách a zážitek, na který nikdy nezapomenete.",
+      "socialProof": "4,9/5 hvězd · 400+ návštěvníků",
+      "cta": "Objevte farmu",
+      "imageAlt": "Elvis alpaka se na vás dívá na farmě"
+    },
+    "story": {
+      "title": "Co to dělá tak výjimečným?",
+      "subtitle": "Tři věci, na které návštěvníci nikdy nezapomenou",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Poznejte alpaky",
+        "desc": "Šest alpak, každá s vlastní povahou. Nakrmte je, choďte s nimi, sedněte si s nimi do trávy. Žádný spěch — prostě spolu být."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Do hor",
+        "desc": "Farma leží na úpatí Krkonoš. Lesy, čerstvý vzduch, vodopády — a večer jen hvězdy."
+      },
+      "rooms": {
+        "icon": "🏡",
+        "title": "Přespání na farmě",
+        "desc": "Žádný hotel. Skutečná farma, kde se ráno probudíte s alpakami za oknem."
+      }
+    },
+    "alpacas": {
+      "title": "Poznejte hvězdy",
+      "subtitle": "Každá s vlastní povahou. Kdo je váš oblíbenec?",
+      "elvis": "Dokonalý posluchač. Elvis zůstává klidný, i když emoce běží vysoko.",
+      "micky": "Zvědavý průzkumník. Micky promění každou procházku v dobrodružství.",
+      "suri": "Jemná duše. Sametová srst a klidná povaha Suri jsou terapeutické.",
+      "teddy": "Klidný vůdce. Teddy je neuvěřitelně trpělivý, zejména s dětmi.",
+      "ricky": "Okouzlující brouček. Zpočátku plachý, ale jakmile začne broukat...",
+      "freddy": "Chytrý šarmér. Freddy přesně ví, jak vám ukrást srdce."
+    },
+    "reviews": {
+      "title": "Co říkají návštěvníci",
+      "r1": {
+        "text": "Probudili jsme se s alpakami, které se dívaly naším oknem. Nic vás na to nepřipraví. Čistá magie.",
+        "author": "Host z Nizozemska"
+      },
+      "r2": {
+        "text": "Zážitek s alpakami byl vrcholem celé naší cesty do Polska. Určitě se vrátíme.",
+        "author": "Host z Belgie"
+      },
+      "r3": {
+        "text": "Tak intimní, klidné místo. Úplně jiné než hotel. Opravdu výjimečné.",
+        "author": "Host z Německa"
+      }
+    },
+    "cta": {
+      "title": "Máte zájem?",
+      "subtitle": "Prohlédněte si pokoje na farmě nebo darujte zážitek s alpakami někomu, koho milujete.",
+      "stayBtn": "Zobrazit pokoje",
+      "giftBtn": "Darovat voucher"
+    },
+    "packages": {
+      "title": "Vyberte si svůj zážitek",
+      "subtitle": "Nezapomenutelné chvíle pro každého",
+      "cta": "Koupit voucher",
+      "lite": {
+        "name": "Setkání s Alpakami",
+        "p1": "30 minut interakce se stádem",
+        "p2": "Krmení alpak",
+        "p3": "Zábavné fotopříležitosti"
+      },
+      "popular": {
+        "name": "Procházka s Alpakami",
+        "badge": "Nejoblíbenější",
+        "p1": "60minutová procházka horami",
+        "p2": "Horká čokoláda v ceně",
+        "p3": "Digitální fotky z procházky",
+        "p4": "Soukromý průvodce pro vaši skupinu"
+      },
+      "vip": {
+        "name": "VIP Alpačí Zážitek",
+        "p1": "90 minut soukromého času s alpakami",
+        "p2": "Alpačí suvenýrový balíček",
+        "p3": "Místní občerstvení a nápoje",
+        "p4": "Zaměření na klid a terapii",
+        "p5": "Exkluzivní mazlení"
+      }
+    }
   }
 }

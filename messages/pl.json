@@ -1256,5 +1256,96 @@
       "back": "← Wstecz",
       "next": "Dalej →"
     }
+  },
+  "welkom": {
+    "meta": {
+      "title": "Odkryj alpaki — Zagroda Alpakoterapii",
+      "description": "Alpakowa farma w polskich górach. Poznaj Elvisa, Micky'ego i całe stado. Zaplanuj wizytę lub podaruj wyjątkowe przeżycie."
+    },
+    "hero": {
+      "badge": "🦙 Farma Alpak · Karkonosze",
+      "title": "Poznaj Elvisa i jego stado",
+      "subtitle": "Sześć alpak, farma w górach i przeżycie, którego nigdy nie zapomnisz.",
+      "socialProof": "4.9/5 gwiazdek · 400+ odwiedzających",
+      "cta": "Odkryj farmę",
+      "imageAlt": "Elvis alpaka patrzy na ciebie na farmie"
+    },
+    "story": {
+      "title": "Co sprawia, że jest tak wyjątkowo?",
+      "subtitle": "Trzy rzeczy, których goście nigdy nie zapominają",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "Poznaj alpaki",
+        "desc": "Sześć alpak, każda z własną osobowością. Nakarm je, spaceruj z nimi, usiądź z nimi na trawie. Bez pośpiechu — po prostu bycie razem."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "W góry",
+        "desc": "Farma leży u stóp Karkonoszy. Lasy, świeże powietrze, wodospady — a wieczorem tylko gwiazdy."
+      },
+      "rooms": {
+        "icon": "🏡",
+        "title": "Nocleg na farmie",
+        "desc": "Żaden hotel. Prawdziwa farma, w której budzisz się z alpakami za oknem."
+      }
+    },
+    "alpacas": {
+      "title": "Poznaj gwiazdy",
+      "subtitle": "Każda z własnym charakterem. Kto jest twoim ulubieńcem?",
+      "elvis": "Doskonały słuchacz. Elvis zachowuje spokój, gdy emocje sięgają zenitu.",
+      "micky": "Ciekawski odkrywca. Micky zamienia każdy spacer w przygodę.",
+      "suri": "Delikatna dusza. Aksamitna sierść i spokojny charakter Suri działają terapeutycznie.",
+      "teddy": "Spokojny lider. Teddy jest niesamowicie cierpliwy, zwłaszcza z dziećmi.",
+      "ricky": "Uroczy pomrukiwacz. Na początku nieśmiały, ale kiedy zaczyna mruczeć...",
+      "freddy": "Sprytny uroczysko. Freddy dokładnie wie, jak ukraść twoje serce."
+    },
+    "reviews": {
+      "title": "Co mówią goście",
+      "r1": {
+        "text": "Obudziliśmy się z alpakami zaglądającymi przez okno. Nic cię na to nie przygotuje. Czysta magia.",
+        "author": "Gość z Holandii"
+      },
+      "r2": {
+        "text": "Doświadczenie z alpakami było szczytem naszej podróży do Polski. Na pewno wrócimy.",
+        "author": "Gość z Belgii"
+      },
+      "r3": {
+        "text": "Takie kameralne, spokojne miejsce. Zupełnie inne niż hotel. Naprawdę wyjątkowe.",
+        "author": "Gość z Niemiec"
+      }
+    },
+    "cta": {
+      "title": "Ciekawi Cię więcej?",
+      "subtitle": "Odkryj pokoje na farmie lub podaruj przeżycie z alpakami komuś, kogo kochasz.",
+      "stayBtn": "Zobacz pokoje",
+      "giftBtn": "Podaruj voucher"
+    },
+    "packages": {
+      "title": "Wybierz swoje przeżycie",
+      "subtitle": "Niezapomniane chwile dla każdego",
+      "cta": "Kup voucher",
+      "lite": {
+        "name": "Spotkanie z Alpakami",
+        "p1": "30 minut interakcji ze stadem",
+        "p2": "Karmienie alpak",
+        "p3": "Świetne okazje do zdjęć"
+      },
+      "popular": {
+        "name": "Spacer z Alpakami",
+        "badge": "Najpopularniejszy",
+        "p1": "60-minutowy spacer po górach",
+        "p2": "Gorąca czekolada w cenie",
+        "p3": "Cyfrowe zdjęcia ze spaceru",
+        "p4": "Prywatny przewodnik dla twojej grupy"
+      },
+      "vip": {
+        "name": "VIP Alpaka Doświadczenie",
+        "p1": "90 minut prywatnego czasu z alpakami",
+        "p2": "Alpakowy pakiet-pamiątka",
+        "p3": "Lokalne przekąski i napoje",
+        "p4": "Skupienie na spokoju i terapii",
+        "p5": "Ekskluzywne przytulanie"
+      }
+    }
   }
 }
