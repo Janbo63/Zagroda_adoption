@@ -252,11 +252,18 @@ export default async function CampaignsDashboard() {
                     <p style={{ fontSize: 13, color: '#6b7280', margin: 0 }}>Both funnels in one place — direct & partner channels</p>
                 </div>
                 {exportedAt && (
-                    <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#6b7280', background: '#1a1d27', border: '1px solid #2a2d3a', padding: '6px 12px', borderRadius: 8 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#6b7280', background: '#1a1d27', border: '1px solid #2a2d3a', padding: '6px 12px', borderRadius: 8 }}>
                         <RefreshCw size={12} />
                         Updated {exportedAt}
                     </div>
                 )}
+                <RunScriptButton
+                    baseCommand="python refresh_ga4.py"
+                    description="Pull latest GA4 data + rebuild dashboard"
+                    icon="📊"
+                    requireInput={false}
+                    highlight={false}
+                />
             </div>
 
             {/* ── Top KPI Strip ── */}
@@ -269,6 +276,12 @@ export default async function CampaignsDashboard() {
                 <KpiCard label="Opened" value={totalOpened} sub={totalSent ? `${pct(totalOpened, totalSent)} open rate` : '—'} color="#f59e0b" />
                 <KpiCard label="Clicked" value={totalClicked} sub={totalSent ? `${pct(totalClicked, totalSent)} CTR` : '—'} color="#ec4899" />
                 <KpiCard label="Engaged" value={engaged} sub="Replied / Interested / Listed" color="#22c55e" />
+                {funnel.begin_checkout > 0 && (
+                    <KpiCard label="Booking Conv." value={`${funnel.conversion_rate}%`} sub={`${funnel.purchase} bookings · ${funnel.begin_checkout} started`} color="#22c55e" />
+                )}
+                {funnel.purchase > 0 && (
+                    <KpiCard label="Help Clicks" value={funnel.help_chat_clicks} sub="WhatsApp + Messenger" color="#0099FF" />
+                )}
             </div>
 
             {/* ── Pipeline Operations Flow ── */}
