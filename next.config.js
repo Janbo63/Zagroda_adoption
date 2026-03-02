@@ -31,6 +31,11 @@ const nextConfig = {
       { source: '/adopt', destination: '/en/adopt', permanent: false },
       { source: '/vouchers', destination: '/en/vouchers', permanent: false },
       { source: '/blog', destination: '/en/blog', permanent: false },
+      // Typo redirects found in GA4 analytics
+      { source: '/:locale/welcom', destination: '/:locale/welkom', permanent: false },
+      { source: '/:locale/welc', destination: '/:locale/welkom', permanent: false },
+      { source: '/:locale/welkum', destination: '/:locale/welkom', permanent: false },
+      { source: '/:locale/stay.', destination: '/:locale/stay', permanent: false },
     ];
   },
   async headers() {
