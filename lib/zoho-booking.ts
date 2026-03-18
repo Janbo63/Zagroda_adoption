@@ -77,7 +77,7 @@ export async function createBookingDeal(
         // ─── Fields that ALREADY EXIST in your Bookings module ───
         Check_In: params.checkIn,
         Check_Out: params.checkOut,
-        Booking_status: 'DEPOSIT_PAID',
+        Booking_status: 'Deposit Paid',
         Payment_status: 'Deposit Paid',
         Channel: 'Website',
         Payment_Method: 'Stripe',
@@ -130,7 +130,7 @@ export async function createBookingDeal(
 
 export async function updateBookingStatus(
     bookingId: string,
-    status: 'DEPOSIT_PAID' | 'BALANCE_PENDING' | 'FULLY_PAID' | 'PAYMENT_FAILED' | 'CANCELLED',
+    status: 'Deposit Paid' | 'Balance Pending' | 'Fully Paid' | 'Payment Failed' | 'Cancelled',
     extraFields?: Record<string, any>
 ): Promise<void> {
     await zoho.updateRecord(ZOHO_BOOKINGS_MODULE, bookingId, {

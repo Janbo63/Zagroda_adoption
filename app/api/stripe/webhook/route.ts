@@ -152,9 +152,9 @@ export async function POST(req: Request) {
             }
 
             try {
-                // 1. Update Zoho Deal → DEPOSIT_PAID
-                await updateBookingStatus(zohoDealId, 'DEPOSIT_PAID');
-                console.log(`[Booking] Zoho Deal ${zohoDealId} → DEPOSIT_PAID (${bookingRef})`);
+                // 1. Update Zoho Deal → Deposit Paid
+                await updateBookingStatus(zohoDealId, 'Deposit Paid');
+                console.log(`[Booking] Zoho Deal ${zohoDealId} → Deposit Paid (${bookingRef})`);
 
                 // 2. Redeem voucher in Zoho (non-fatal)
                 if (meta.voucherCode) {

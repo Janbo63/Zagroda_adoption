@@ -230,7 +230,6 @@ function RoomPhotoGallery({ photos, roomName }: { photos: string[]; roomName: st
         </div>
     );
 }
-
 // ─── Shared UI primitives ─────────────────────────────────────────────────────
 
 const inputCls = "w-full bg-stone-800 border border-stone-600 text-white placeholder-stone-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors";
@@ -347,7 +346,7 @@ function StepDates({ state, onChange, onNext }: {
                     <label className={labelCls}>{t('dates.checkIn')}</label>
                     <input
                         type="date"
-                        className={inputCls}
+                        className={`${inputCls} [color-scheme:dark]`}
                         min={today}
                         value={state.checkIn}
                         onChange={e => handleCheckIn(e.target.value)}
@@ -357,7 +356,7 @@ function StepDates({ state, onChange, onNext }: {
                     <label className={labelCls}>{t('dates.checkOut')}</label>
                     <input
                         type="date"
-                        className={inputCls}
+                        className={`${inputCls} [color-scheme:dark]`}
                         min={state.checkIn || today}
                         value={state.checkOut}
                         onChange={e => handleCheckOut(e.target.value)}
@@ -1074,6 +1073,7 @@ function StepConfirmation({ state }: { state: BookingState }) {
 function BookingWidgetInner({ locale }: Props) {
     const [step, setStep] = useState(0);
     const [_bookingRef, setBookingRef] = useState('');
+    const widgetRef = useRef<HTMLDivElement>(null);
     const [state, setState] = useState<BookingState>({
         checkIn: '', checkOut: '', nights: 0,
         selectedRoom: null,
@@ -1082,6 +1082,11 @@ function BookingWidgetInner({ locale }: Props) {
         voucherCode: '', voucherValid: false, voucherDiscount: 0, voucherDiscountType: 'FIXED', voucherError: '',
         depositAmount: 0, balanceAmount: 0, totalAmount: 0,
     });
+
+    // Scroll the widget into view whenever the step changes
+    useEffect(() => {
+        widgetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, [step]);
 
     const set = useCallback((k: keyof BookingState, v: any) => {
         setState(prev => ({ ...prev, [k]: v }));
@@ -1147,7 +1152,7 @@ function BookingWidgetInner({ locale }: Props) {
     };
 
     return (
-        <div>
+        <div ref={widgetRef}>
             <ProgressBar step={step} />
             {step === 0 && <StepDates state={state} onChange={set} onNext={next} />}
             {step === 1 && <StepRoom state={state} onChange={set} onNext={next} onBack={back} />}

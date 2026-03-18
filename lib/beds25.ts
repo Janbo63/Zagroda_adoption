@@ -276,7 +276,7 @@ export async function createBeds25Booking(
         return {
             bookingRef: payload.bookingRef,
             beds24BookingId: 'STUB-99999',
-            status: 'DEPOSIT_PAID',
+            status: 'Deposit Paid',
             nights,
             balanceDueDate: balanceDate.toISOString().split('T')[0],
         };

@@ -84,7 +84,8 @@ export function Navbar({ locale }: NavbarProps) {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button
+              <Link
+                href={`/${locale}/stay`}
                 className={`inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium ${isAccomActive
                     ? 'border-orange-400 text-white'
                     : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
@@ -97,7 +98,7 @@ export function Navbar({ locale }: NavbarProps) {
                   size={14}
                   className={`transition-transform duration-150 ${dropdownOpen ? 'rotate-180' : ''}`}
                 />
-              </button>
+              </Link>
 
               {dropdownOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 bg-white rounded-xl shadow-xl ring-1 ring-black/5 overflow-hidden z-50">
