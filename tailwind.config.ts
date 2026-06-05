@@ -25,16 +25,6 @@ module.exports = {
 		  primary: {
 			DEFAULT: "hsl(var(--primary))",
 			foreground: "hsl(var(--primary-foreground))",
-			100: "#E6F7FF",
-			200: "#BAE7FF",
-			300: "#91D5FF",
-			400: "#69C0FF",
-			500: "#40A9FF",
-			
-			600: "#1890FF",
-			700: "#096DD9",
-			800: "#0050B3",
-			900: "#003A8C",
 		  },
 		  secondary: {
 			DEFAULT: "hsl(var(--secondary))",
@@ -60,11 +50,39 @@ module.exports = {
 			DEFAULT: "hsl(var(--card))",
 			foreground: "hsl(var(--card-foreground))",
 		  },
+		  /* Concept C named colors */
+		  terracotta: {
+			DEFAULT: '#C67B5C',
+			light: '#D4967E',
+			dark: '#A8614A',
+			50: '#FDF5F1',
+		  },
+		  moss: {
+			DEFAULT: '#5B7C5A',
+			light: '#7A9B79',
+			dark: '#456344',
+			50: '#F2F7F2',
+		  },
+		  wood: {
+			DEFAULT: '#8B7355',
+			light: '#A89274',
+			dark: '#6E5A41',
+		  },
+		  warmWhite: '#FAF7F2',
+		  warmCream: '#F0EBE1',
+		  warmCharcoal: '#3D3529',
 		},
 		borderRadius: {
+		  'bento': '1rem',
+		  'bento-lg': '1.5rem',
 		  lg: "var(--radius)",
 		  md: "calc(var(--radius) - 2px)",
 		  sm: "calc(var(--radius) - 4px)",
+		},
+		fontFamily: {
+		  display: ['Playfair Display', 'Georgia', 'serif'],
+		  body: ['Inter', 'system-ui', 'sans-serif'],
+		  handwritten: ['Caveat', 'cursive'],
 		},
 		keyframes: {
 		  "accordion-down": {
@@ -75,10 +93,20 @@ module.exports = {
 			from: { height: "var(--radix-accordion-content-height)" },
 			to: { height: 0 },
 		  },
+		  "fade-up": {
+			from: { opacity: 0, transform: "translateY(20px)" },
+			to: { opacity: 1, transform: "translateY(0)" },
+		  },
+		  "fade-in": {
+			from: { opacity: 0 },
+			to: { opacity: 1 },
+		  },
 		},
 		animation: {
 		  "accordion-down": "accordion-down 0.2s ease-out",
 		  "accordion-up": "accordion-up 0.2s ease-out",
+		  "fade-up": "fade-up 0.6s ease-out forwards",
+		  "fade-in": "fade-in 0.5s ease-out forwards",
 		},
 	  },
 	},

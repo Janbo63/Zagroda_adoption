@@ -320,17 +320,148 @@
     "imageNotFound": "Bild nicht gefunden"
   },
   "stay": {
-    "title": "Übernachtungsmöglichkeiten",
-    "farmhouseRooms": {
-      "title": "Bauernhofzimmer",
-      "description": "Erleben Sie den Charme unseres renovierten Bauernhauses"
+    "meta": {
+      "title": "Übernachten bei den Alpakas — Zagroda Alpakoterapii",
+      "description": "Schlafen Sie auf einer Alpaka-Farm im Riesengebirge. Zwei einzigartige Zimmer, morgendliche Alpaka-Spaziergänge inklusive. Ab 493 PLN / ~€115 für 2 Nächte."
     },
-    "caravanStays": {
-      "title": "Wohnwagen-Aufenthalte",
-      "description": "Genießen Sie einen einzigartigen Aufenthalt in unseren Vintage-Wohnwagen"
+    "hero": {
+      "badge": "Übernachtung",
+      "headline": "Schlafen Sie bei den Alpakas. Wandern Sie mit ihnen im Morgengrauen.",
+      "subheadline": "Zwei einzigartige Zimmer auf einer echten Alpaka-Farm tief im Riesengebirge. Wachen Sie auf zu frischer Luft, Stille und Ihrer eigenen persönlichen Alpaka-Eskorte.",
+      "cta": "Verfügbarkeit prüfen",
+      "socialProof": "4,9/5 Sterne · 400+ Besucher"
     },
-    "bookNow": "Jetzt buchen",
-    "checkAvailability": "Verfügbarkeit prüfen"
+    "experience": {
+      "title": "Was Sie erwartet",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Nur Sie und die Farm",
+        "desc": "Klein und intim — kein Hotel. Sie teilen die Farm mit den Alpakas, den Ziegen und der Bergstille."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Alpaka-Erlebnis",
+        "desc": "Ein im Aufenthalt enthaltenes, organisiertes Erlebnis: füttern Sie Ihr Alpaka, setzen Sie sich zu ihm, kommen Sie für Fotos nah heran und genießen Sie Kuscheln. Eine echte Begegnung mit diesen sanften Tieren."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Riesengebirge",
+        "desc": "Wald, frische Bergluft und weite Ausblicke. Treten Sie vor die Tür und entdecken Sie eine der schönsten Landschaften Polens."
+      }
+    },
+    "rooms": {
+      "title": "Wählen Sie Ihr Zimmer",
+      "subtitle": "Zwei Zimmer. Beide einzigartig. Beide unvergesslich.",
+      "garden": {
+        "name": "Gartenzimmer",
+        "desc": "Wachen Sie nah bei den Alpakas auf. Ein einzigartig gestaltetes Zimmer voller Charakter — ein besonderer Ort zum Entspannen nach einem Tag auf dem Bauernhof.",
+        "capacity": "Bis zu 3 Gäste",
+        "price": "ab 493 PLN / ~€115",
+        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
+        "included": [
+          "Eigenes Bad",
+          "Alpaka-Erlebnis",
+          "Einzigartig gestaltetes Zimmer",
+          "Gartenzugang"
+        ]
+      },
+      "jungle": {
+        "name": "Dschungelzimmer",
+        "desc": "Üppiges, grünes Zimmer mit gemütlichem Flair. Ein privater Rückzugsort umgeben von botanischem Charakter.",
+        "capacity": "Bis zu 3 Gäste",
+        "price": "ab 493 PLN / ~€115",
+        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
+        "included": [
+          "Eigenes Bad",
+          "Alpaka-Erlebnis",
+          "Einzigartig gestaltetes Zimmer mit Charakter",
+          "Gartenzugang"
+        ]
+      },
+      "forest": {
+        "name": "Waldapartement",
+        "desc": "Ein eigenständiges Apartment mit Blick auf den Alpakagarten. Der einzige Bereich mit einer eigenen Kochecke — perfekt für längere Aufenthalte und Familien, die ihren eigenen Raum möchten.",
+        "capacity": "2 Erwachsene + 2 Kinder",
+        "price": "ab 593 PLN / ~€138",
+        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
+        "included": [
+          "Eigene Kochecke",
+          "Alpaka-Erlebnis",
+          "Blick auf den Alpakagarten",
+          "Eigenes Bad"
+        ]
+      },
+      "sharedAreas": "Gemeinschaftsbereiche",
+      "sharedDesc": "Küche, gemütliche Lounge, Garten — alles gehört Ihnen."
+    },
+    "packages": {
+      "title": "Wählen Sie Ihren Aufenthalt",
+      "weekend": {
+        "name": "Wochenende mit Alpakas",
+        "nights": "2 Nächte",
+        "highlights": [
+          "Alpaka-Erlebnis (beide Tage)",
+          "Voller Farm-Zugang",
+          "Alpaka-Fütterung",
+          "Einzigartig gestaltetes Zimmer voller Charakter"
+        ]
+      },
+      "extended": {
+        "name": "Längerer Aufenthalt",
+        "nights": "3+ Nächte",
+        "badge": "Bestes Preis-Leistungs-Verhältnis",
+        "highlights": [
+          "Alle Wochenendevorteile",
+          "Preisnachlass ab Nacht 3",
+          "Mehr Flexibilität",
+          "Kontaktieren Sie uns für Termine"
+        ]
+      }
+    },
+    "booking": {
+      "title": "Verfügbarkeit prüfen",
+      "subtitle": "Wählen Sie Ihre Daten unten aus",
+      "cta": "Jetzt buchen",
+      "note": "Fragen? Rufen Sie uns an: +48 695 545 330",
+      "needHelp": "Brauchen Sie Hilfe bei Ihrer Buchung?"
+    },
+    "distance": {
+      "title": "Anreise",
+      "subtitle": "Planen Sie Ihre Reise",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brüssel",
+        "drive": "~9h Fahrt",
+        "fly": "Flug nach Breslau (TUI Direktflug) → 2h Fahrt"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h Fahrt",
+        "fly": "Flug nach Breslau → 2h Fahrt"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warschau",
+        "drive": "~4,5h Fahrt",
+        "fly": "Breslau: 2h Fahrt"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polen"
+    },
+    "reviews": {
+      "title": "Was Gäste sagen",
+      "q1": "Wir wachten auf, als Alpakas durch unser Fenster schauten. Nichts bereitet Sie darauf vor. Pure Magie.",
+      "a1": "Gast aus den Niederlanden",
+      "q2": "Das Alpaka-Erlebnis war der Höhepunkt unserer gesamten Reise nach Polen. Wir kommen wieder.",
+      "a2": "Gast aus Belgien",
+      "q3": "So ein intimer, friedlicher Ort. Völlig anders als ein Hotel. Wirklich besonders.",
+      "a3": "Gast aus Deutschland"
+    },
+    "cta": {
+      "title": "Bereit, mit den Alpakas aufzuwachen?",
+      "subtitle": "Begrenzte Zimmer — buchen Sie Ihre Daten bevor sie weg sind.",
+      "btn": "Verfügbarkeit prüfen"
+    }
   },
   "activities": {
     "title": "Aktivitäten",
@@ -853,150 +984,6 @@
     "description": "Folgen Sie uns in de sozialen Medien, um Sonderangebote für Aufenthalte und Veranstaltungen zu erhalten!",
     "cta": "Unsere Profile ansehen"
   },
-  "stay": {
-    "meta": {
-      "title": "Übernachten bei den Alpakas — Zagroda Alpakoterapii",
-      "description": "Schlafen Sie auf einer Alpaka-Farm im Riesengebirge. Zwei einzigartige Zimmer, morgendliche Alpaka-Spaziergänge inklusive. Ab 493 PLN / ~€115 für 2 Nächte."
-    },
-    "hero": {
-      "badge": "Übernachtung",
-      "headline": "Schlafen Sie bei den Alpakas. Wandern Sie mit ihnen im Morgengrauen.",
-      "subheadline": "Zwei einzigartige Zimmer auf einer echten Alpaka-Farm tief im Riesengebirge. Wachen Sie auf zu frischer Luft, Stille und Ihrer eigenen persönlichen Alpaka-Eskorte.",
-      "cta": "Verfügbarkeit prüfen",
-      "socialProof": "4,9/5 Sterne · 400+ Besucher"
-    },
-    "experience": {
-      "title": "Was Sie erwartet",
-      "intimacy": {
-        "icon": "🌙",
-        "title": "Nur Sie und die Farm",
-        "desc": "Klein und intim — kein Hotel. Sie teilen die Farm mit den Alpakas, den Ziegen und der Bergstille."
-      },
-      "walk": {
-        "icon": "🦙",
-        "title": "Alpaka-Erlebnis",
-        "desc": "Ein im Aufenthalt enthaltenes, organisiertes Erlebnis: füttern Sie Ihr Alpaka, setzen Sie sich zu ihm, kommen Sie für Fotos nah heran und genießen Sie Kuscheln. Eine echte Begegnung mit diesen sanften Tieren."
-      },
-      "nature": {
-        "icon": "🏔️",
-        "title": "Riesengebirge",
-        "desc": "Wald, frische Bergluft und weite Ausblicke. Treten Sie vor die Tür und entdecken Sie eine der schönsten Landschaften Polens."
-      }
-    },
-    "rooms": {
-      "title": "Wählen Sie Ihr Zimmer",
-      "subtitle": "Zwei Zimmer. Beide einzigartig. Beide unvergesslich.",
-      "garden": {
-        "name": "Gartenzimmer",
-        "desc": "Wachen Sie nah bei den Alpakas auf. Ein einzigartig gestaltetes Zimmer voller Charakter — ein besonderer Ort zum Entspannen nach einem Tag auf dem Bauernhof.",
-        "capacity": "Bis zu 3 Gäste",
-        "price": "ab 493 PLN / ~€115",
-        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
-        "included": [
-          "Eigenes Bad",
-          "Alpaka-Erlebnis",
-          "Einzigartig gestaltetes Zimmer",
-          "Gartenzugang"
-        ]
-      },
-      "jungle": {
-        "name": "Dschungelzimmer",
-        "desc": "Üppiges, grünes Zimmer mit gemütlichem Flair. Ein privater Rückzugsort umgeben von botanischem Charakter.",
-        "capacity": "Bis zu 3 Gäste",
-        "price": "ab 493 PLN / ~€115",
-        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
-        "included": [
-          "Eigenes Bad",
-          "Alpaka-Erlebnis",
-          "Einzigartig gestaltetes Zimmer mit Charakter",
-          "Gartenzugang"
-        ]
-      },
-      "forest": {
-        "name": "Waldapartement",
-        "desc": "Ein eigenständiges Apartment mit Blick auf den Alpakagarten. Der einzige Bereich mit einer eigenen Kochecke — perfekt für längere Aufenthalte und Familien, die ihren eigenen Raum möchten.",
-        "capacity": "2 Erwachsene + 2 Kinder",
-        "price": "ab 593 PLN / ~€138",
-        "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
-        "included": [
-          "Eigene Kochecke",
-          "Alpaka-Erlebnis",
-          "Blick auf den Alpakagarten",
-          "Eigenes Bad"
-        ]
-      },
-      "sharedAreas": "Gemeinschaftsbereiche",
-      "sharedDesc": "Küche, gemütliche Lounge, Garten — alles gehört Ihnen."
-    },
-    "packages": {
-      "title": "Wählen Sie Ihren Aufenthalt",
-      "weekend": {
-        "name": "Wochenende mit Alpakas",
-        "nights": "2 Nächte",
-        "highlights": [
-          "Alpaka-Erlebnis (beide Tage)",
-          "Voller Farm-Zugang",
-          "Alpaka-Fütterung",
-          "Einzigartig gestaltetes Zimmer voller Charakter"
-        ]
-      },
-      "extended": {
-        "name": "Längerer Aufenthalt",
-        "nights": "3+ Nächte",
-        "badge": "Bestes Preis-Leistungs-Verhältnis",
-        "highlights": [
-          "Alle Wochenendevorteile",
-          "Preisnachlass ab Nacht 3",
-          "Mehr Flexibilität",
-          "Kontaktieren Sie uns für Termine"
-        ]
-      }
-    },
-    "booking": {
-      "title": "Verfügbarkeit prüfen",
-      "subtitle": "Wählen Sie Ihre Daten unten aus",
-      "cta": "Jetzt buchen",
-      "note": "Fragen? Rufen Sie uns an: +48 695 545 330",
-      "needHelp": "Brauchen Sie Hilfe bei Ihrer Buchung?"
-    },
-    "distance": {
-      "title": "Anreise",
-      "subtitle": "Planen Sie Ihre Reise",
-      "brussels": {
-        "flag": "🇧🇪",
-        "label": "Brüssel",
-        "drive": "~9h Fahrt",
-        "fly": "Flug nach Breslau (TUI Direktflug) → 2h Fahrt"
-      },
-      "amsterdam": {
-        "flag": "🇳🇱",
-        "label": "Amsterdam",
-        "drive": "~10h Fahrt",
-        "fly": "Flug nach Breslau → 2h Fahrt"
-      },
-      "warsaw": {
-        "flag": "🇵🇱",
-        "label": "Warschau",
-        "drive": "~4,5h Fahrt",
-        "fly": "Breslau: 2h Fahrt"
-      },
-      "address": "24 Orłowice, Mirsk 59-630, Polen"
-    },
-    "reviews": {
-      "title": "Was Gäste sagen",
-      "q1": "Wir wachten auf, als Alpakas durch unser Fenster schauten. Nichts bereitet Sie darauf vor. Pure Magie.",
-      "a1": "Gast aus den Niederlanden",
-      "q2": "Das Alpaka-Erlebnis war der Höhepunkt unserer gesamten Reise nach Polen. Wir kommen wieder.",
-      "a2": "Gast aus Belgien",
-      "q3": "So ein intimer, friedlicher Ort. Völlig anders als ein Hotel. Wirklich besonders.",
-      "a3": "Gast aus Deutschland"
-    },
-    "cta": {
-      "title": "Bereit, mit den Alpakas aufzuwachen?",
-      "subtitle": "Begrenzte Zimmer — buchen Sie Ihre Daten bevor sie weg sind.",
-      "btn": "Verfügbarkeit prüfen"
-    }
-  },
   "discover": {
     "meta": {
       "title": "Entdecke eine Alpakafarm im polnischen Riesengebirge — Zagroda Alpakoterapii",
@@ -1346,5 +1333,38 @@
         "p5": "Exklusive Kuschelzeit"
       }
     }
+  },
+  "guestReviews": {
+    "exceptional": "Hervorragend",
+    "basedOn": "Basierend auf 83+ Bewertungen · Booking.com",
+    "review1": {
+      "text": "Fantastische Atmosphäre, gemütlich wie zu Hause. Die Alpakas sind wunderbar und die Kinder wollten gar nicht mehr weg!",
+      "author": "Katarzyna, Polen"
+    },
+    "review2": {
+      "text": "Perfektes Familienwochenende. Friedliche Landschaft, freundliche Besitzer, und die Kinder liebten es, jeden Morgen die Alpakas zu füttern.",
+      "author": "Marta & Tom, Niederlande"
+    },
+    "review3": {
+      "text": "Ein Ort mit echtem Charakter — Kamin, Billard, wunderschöne Berge. Wir kommen definitiv wieder!",
+      "author": "Familie Schmidt, Deutschland"
+    }
+  },
+  "farmLife": {
+    "title": "Mehr als ein Hotel",
+    "subtitle": "Was Gäste an ihrem Aufenthalt bei uns lieben",
+    "fireplace": "Abend am Kamin",
+    "mountains": "Bergblick",
+    "garden": "Garten & Grillplatz",
+    "kitchen": "Voll ausgestattete Küche",
+    "games": "Billard & Tischfußball",
+    "playground": "Kinderspielplatz"
+  },
+  "discoverTeaser": {
+    "label": "Die Umgebung erkunden",
+    "title": "Entdecken Sie das Riesengebirge",
+    "castles": "Historische Burgen",
+    "spaTown": "Kurort 10 Min.",
+    "hiking": "Familienwanderwege"
   }
 }

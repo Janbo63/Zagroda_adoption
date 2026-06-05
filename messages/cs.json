@@ -1,4 +1,4 @@
-﻿{
+{
   "common": {
     "title": "Zagroda Alpakoterapii",
     "description": "Zažijte léčivou sílu alpak a přírody",
@@ -388,17 +388,148 @@
     }
   },
   "stay": {
-    "title": "Možnosti ubytování",
-    "farmhouseRooms": {
-      "title": "Pokoje na farmě",
-      "description": "Zažijte kouzlo našeho renovovaného statku"
+    "meta": {
+      "title": "Přenocování u alpak — Zagroda Alpakoterapii",
+      "description": "Spěte na farmě alpak v Krkonoších. Dva jedinečné pokoje, ranní procházky s alpakami v ceně. Od 493 PLN / ~€115 za 2 noci."
     },
-    "caravanStays": {
-      "title": "Pobyty v karavanu",
-      "description": "Užijte si jedinečný pobyt v našich vintage karavanech"
+    "hero": {
+      "badge": "Přenocování",
+      "headline": "Spěte u alpak. Procházejte se s nimi za svítání.",
+      "subheadline": "Dva jedinečné pokoje na fungující farmě alpak hluboko v Krkonoších. Probuďte se do čerstvého vzduchu, ticha a vlastní osobní alpaky průvodce.",
+      "cta": "Zkontrolovat dostupnost",
+      "socialProof": "4,9/5 hvězd · 400+ návštěvníků"
     },
-    "bookNow": "Rezervovat nyní",
-    "checkAvailability": "Zkontrolovat dostupnost"
+    "experience": {
+      "title": "Co vás čeká",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Jen vy a farma",
+        "desc": "Malé, intimní místo — ne hotel. Sdílíte farmu s alpakami, kozami a horským tichem."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Poznejte alpaky",
+        "desc": "Zahrnuta organizávaná aktivita: nakrmte svou alpaku, seděte s ní, přibližte se na fotky a užijte si mažlování. Skutečný kontakt s těmito něnými zvířaty."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Krkonoše",
+        "desc": "Les, čerstvý horský vzduch a široké výhledy. Vyjděte ven a objevěte jednu z nejkrásnějších krajin v Polsku."
+      }
+    },
+    "rooms": {
+      "title": "Vyberte si svůj pokoj",
+      "subtitle": "Dva pokoje. Oba jedinečné. Oba nezapomenutelné.",
+      "garden": {
+        "name": "Zahradní pokoj",
+        "desc": "Probuďte se blízko alpak. Jedinečně navržený pokoj plný charakteru — výjimečné místo k odpočinku po dni na farmě.",
+        "capacity": "Až 3 hosté",
+        "price": "od 493 PLN / ~€115",
+        "priceSub": "za 2 noci, vč. Poznejte alpaky",
+        "included": [
+          "Vlastní koupelna",
+          "Poznejte alpaky",
+          "Jedinečně navržený pokoj",
+          "Přístup do zahrady"
+        ]
+      },
+      "jungle": {
+        "name": "Džunglový pokoj",
+        "desc": "Bujný, zelený pokoj s útulnou atmosférou. Soukromý úkryt obklopený botanickým charakterem.",
+        "capacity": "Až 3 hosté",
+        "price": "od 493 PLN / ~€115",
+        "priceSub": "za 2 noci, vč. Poznejte alpaky",
+        "included": [
+          "Vlastní koupelna",
+          "Poznejte alpaky",
+          "Jedinečně navržený pokoj s charakterem",
+          "Přístup do zahrady"
+        ]
+      },
+      "forest": {
+        "name": "Lesní apartmán",
+        "desc": "Samostatný apartmán s výhledem na alpacíí zahradu. Jediné ubytování s vlastní kuchyňkou — ideální pro delší pobyty a rodiny, které chtějí vlastní prostor.",
+        "capacity": "2 dospělí + 2 děti",
+        "price": "od 593 PLN / ~€138",
+        "priceSub": "za 2 noci, vč. Poznejte alpaky",
+        "included": [
+          "Vlastní kuchyňka",
+          "Poznejte alpaky",
+          "Výhled na alpacíí zahradu",
+          "Vlastní koupelna"
+        ]
+      },
+      "sharedAreas": "Sdílené prostory",
+      "sharedDesc": "Kuchyně, útulný salon, zahrada — vše je vaše."
+    },
+    "packages": {
+      "title": "Vyberte si pobyt",
+      "weekend": {
+        "name": "Víkend s alpakami",
+        "nights": "2 noci",
+        "highlights": [
+          "Poznejte alpaky (oba dny)",
+          "Plný přístup na farmu",
+          "Krmení alpak",
+          "Jedinečně navržený pokoj plný charakteru"
+        ]
+      },
+      "extended": {
+        "name": "Delší pobyt",
+        "nights": "3+ noci",
+        "badge": "Nejlepší hodnota",
+        "highlights": [
+          "Všechny víkendové výhody",
+          "Sleva od 3. noci",
+          "Větší flexibilita",
+          "Kontaktujte nás ohledně termínů"
+        ]
+      }
+    },
+    "booking": {
+      "title": "Zkontrolovat dostupnost",
+      "subtitle": "Vyberte svá data níže",
+      "cta": "Zarezervovat",
+      "note": "Otázky? Zavolejte nám: +48 695 545 330",
+      "needHelp": "Potřebujete pomoc s rezervací?"
+    },
+    "distance": {
+      "title": "Jak se k nám dostat",
+      "subtitle": "Naplánujte svou cestu",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brusel",
+        "drive": "~9h jízdy",
+        "fly": "Let do Wrocławi (TUI přímý) → 2h jízdy"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10h jízdy",
+        "fly": "Let do Wrocławi → 2h jízdy"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Varšava",
+        "drive": "~4,5h jízdy",
+        "fly": "Wrocław: 2h jízdy"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polsko"
+    },
+    "reviews": {
+      "title": "Co říkají hosté",
+      "q1": "Probudili jsme se s alpakami, které se dívaly našim oknem. Nic vás na to nepřipraví. Čistá magie.",
+      "a1": "Host z Nizozemska",
+      "q2": "Zážitek Poznejte alpaky byl vrcholem celé naší cesty do Polska. Vrátíme se.",
+      "a2": "Host z Belgie",
+      "q3": "Takové intimní, klidné místo. Úplně jiné než hotel. Skutečně výjimečné.",
+      "a3": "Host z Německa"
+    },
+    "cta": {
+      "title": "Připraveni probudit se u alpak?",
+      "subtitle": "Omezený počet pokojů — zarezervujte si termín dříve, než bude pozdě.",
+      "btn": "Zkontrolovat dostupnost"
+    }
   },
   "blog": {
     "title": "Náš blog",
@@ -870,150 +1001,6 @@
     "description": "Sledujte nás na sociálních sítích a získejte speciální nabídky na pobyty a akce!",
     "cta": "Zobrazit naše profily"
   },
-  "stay": {
-    "meta": {
-      "title": "Přenocování u alpak — Zagroda Alpakoterapii",
-      "description": "Spěte na farmě alpak v Krkonoších. Dva jedinečné pokoje, ranní procházky s alpakami v ceně. Od 493 PLN / ~€115 za 2 noci."
-    },
-    "hero": {
-      "badge": "Přenocování",
-      "headline": "Spěte u alpak. Procházejte se s nimi za svítání.",
-      "subheadline": "Dva jedinečné pokoje na fungující farmě alpak hluboko v Krkonoších. Probuďte se do čerstvého vzduchu, ticha a vlastní osobní alpaky průvodce.",
-      "cta": "Zkontrolovat dostupnost",
-      "socialProof": "4,9/5 hvězd · 400+ návštěvníků"
-    },
-    "experience": {
-      "title": "Co vás čeká",
-      "intimacy": {
-        "icon": "🌙",
-        "title": "Jen vy a farma",
-        "desc": "Malé, intimní místo — ne hotel. Sdílíte farmu s alpakami, kozami a horským tichem."
-      },
-      "walk": {
-        "icon": "🦙",
-        "title": "Poznejte alpaky",
-        "desc": "Zahrnuta organizávaná aktivita: nakrmte svou alpaku, seděte s ní, přibližte se na fotky a užijte si mažlování. Skutečný kontakt s těmito něnými zvířaty."
-      },
-      "nature": {
-        "icon": "🏔️",
-        "title": "Krkonoše",
-        "desc": "Les, čerstvý horský vzduch a široké výhledy. Vyjděte ven a objevěte jednu z nejkrásnějších krajin v Polsku."
-      }
-    },
-    "rooms": {
-      "title": "Vyberte si svůj pokoj",
-      "subtitle": "Dva pokoje. Oba jedinečné. Oba nezapomenutelné.",
-      "garden": {
-        "name": "Zahradní pokoj",
-        "desc": "Probuďte se blízko alpak. Jedinečně navržený pokoj plný charakteru — výjimečné místo k odpočinku po dni na farmě.",
-        "capacity": "Až 3 hosté",
-        "price": "od 493 PLN / ~€115",
-        "priceSub": "za 2 noci, vč. Poznejte alpaky",
-        "included": [
-          "Vlastní koupelna",
-          "Poznejte alpaky",
-          "Jedinečně navržený pokoj",
-          "Přístup do zahrady"
-        ]
-      },
-      "jungle": {
-        "name": "Džunglový pokoj",
-        "desc": "Bujný, zelený pokoj s útulnou atmosférou. Soukromý úkryt obklopený botanickým charakterem.",
-        "capacity": "Až 3 hosté",
-        "price": "od 493 PLN / ~€115",
-        "priceSub": "za 2 noci, vč. Poznejte alpaky",
-        "included": [
-          "Vlastní koupelna",
-          "Poznejte alpaky",
-          "Jedinečně navržený pokoj s charakterem",
-          "Přístup do zahrady"
-        ]
-      },
-      "forest": {
-        "name": "Lesní apartmán",
-        "desc": "Samostatný apartmán s výhledem na alpacíí zahradu. Jediné ubytování s vlastní kuchyňkou — ideální pro delší pobyty a rodiny, které chtějí vlastní prostor.",
-        "capacity": "2 dospělí + 2 děti",
-        "price": "od 593 PLN / ~€138",
-        "priceSub": "za 2 noci, vč. Poznejte alpaky",
-        "included": [
-          "Vlastní kuchyňka",
-          "Poznejte alpaky",
-          "Výhled na alpacíí zahradu",
-          "Vlastní koupelna"
-        ]
-      },
-      "sharedAreas": "Sdílené prostory",
-      "sharedDesc": "Kuchyně, útulný salon, zahrada — vše je vaše."
-    },
-    "packages": {
-      "title": "Vyberte si pobyt",
-      "weekend": {
-        "name": "Víkend s alpakami",
-        "nights": "2 noci",
-        "highlights": [
-          "Poznejte alpaky (oba dny)",
-          "Plný přístup na farmu",
-          "Krmení alpak",
-          "Jedinečně navržený pokoj plný charakteru"
-        ]
-      },
-      "extended": {
-        "name": "Delší pobyt",
-        "nights": "3+ noci",
-        "badge": "Nejlepší hodnota",
-        "highlights": [
-          "Všechny víkendové výhody",
-          "Sleva od 3. noci",
-          "Větší flexibilita",
-          "Kontaktujte nás ohledně termínů"
-        ]
-      }
-    },
-    "booking": {
-      "title": "Zkontrolovat dostupnost",
-      "subtitle": "Vyberte svá data níže",
-      "cta": "Zarezervovat",
-      "note": "Otázky? Zavolejte nám: +48 695 545 330",
-      "needHelp": "Potřebujete pomoc s rezervací?"
-    },
-    "distance": {
-      "title": "Jak se k nám dostat",
-      "subtitle": "Naplánujte svou cestu",
-      "brussels": {
-        "flag": "🇧🇪",
-        "label": "Brusel",
-        "drive": "~9h jízdy",
-        "fly": "Let do Wrocławi (TUI přímý) → 2h jízdy"
-      },
-      "amsterdam": {
-        "flag": "🇳🇱",
-        "label": "Amsterdam",
-        "drive": "~10h jízdy",
-        "fly": "Let do Wrocławi → 2h jízdy"
-      },
-      "warsaw": {
-        "flag": "🇵🇱",
-        "label": "Varšava",
-        "drive": "~4,5h jízdy",
-        "fly": "Wrocław: 2h jízdy"
-      },
-      "address": "24 Orłowice, Mirsk 59-630, Polsko"
-    },
-    "reviews": {
-      "title": "Co říkají hosté",
-      "q1": "Probudili jsme se s alpakami, které se dívaly našim oknem. Nic vás na to nepřipraví. Čistá magie.",
-      "a1": "Host z Nizozemska",
-      "q2": "Zážitek Poznejte alpaky byl vrcholem celé naší cesty do Polska. Vrátíme se.",
-      "a2": "Host z Belgie",
-      "q3": "Takové intimní, klidné místo. Úplně jiné než hotel. Skutečně výjimečné.",
-      "a3": "Host z Německa"
-    },
-    "cta": {
-      "title": "Připraveni probudit se u alpak?",
-      "subtitle": "Omezený počet pokojů — zarezervujte si termín dříve, než bude pozdě.",
-      "btn": "Zkontrolovat dostupnost"
-    }
-  },
   "discover": {
     "meta": {
       "title": "Objevte alpačí farmu v polských horách — Zagroda Alpakoterapii",
@@ -1363,5 +1350,38 @@
         "p5": "Exkluzivní mazlení"
       }
     }
+  },
+  "guestReviews": {
+    "exceptional": "Výjimečné",
+    "basedOn": "Na základě 83+ hodnocení · Booking.com",
+    "review1": {
+      "text": "Fantastická atmosféra, útulné jako doma. Alpaky jsou úžasné a děti nechtěly odjet!",
+      "author": "Katarzyna, Polsko"
+    },
+    "review2": {
+      "text": "Perfektní rodinný víkend. Klidný venkov, přátelští majitelé a děti milovaly každodenní krmení alpak.",
+      "author": "Marta a Tom, Nizozemsko"
+    },
+    "review3": {
+      "text": "Místo s opravdovým charakterem — krb, kulečník, krásné hory. Určitě se vrátíme!",
+      "author": "Familie Schmidt, Německo"
+    }
+  },
+  "farmLife": {
+    "title": "Více než hotel",
+    "subtitle": "Co hosté na pobytu u nás milují",
+    "fireplace": "Večer u krbu",
+    "mountains": "Výhled na hory",
+    "garden": "Zahrada a gril",
+    "kitchen": "Plně vybavená kuchyně",
+    "games": "Kulečník a stolní fotbal",
+    "playground": "Dětské hřiště"
+  },
+  "discoverTeaser": {
+    "label": "Prozkoumejte okolí",
+    "title": "Objevte Krkonoše",
+    "castles": "Historické hrady",
+    "spaTown": "Lázně 10 min",
+    "hiking": "Rodinné stezky"
   }
 }

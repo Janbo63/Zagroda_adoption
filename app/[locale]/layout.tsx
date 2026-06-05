@@ -1,12 +1,10 @@
 import '../globals.css'
-import { Inter } from 'next/font/google'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
+import { BottomNav } from '@/components/layout/BottomNav'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server';
-
-const inter = Inter({ subsets: ['latin'] })
 
 async function getMessages(locale: string) {
   try {
@@ -25,21 +23,22 @@ export default async function RootLayout({
 }) {
   unstable_setRequestLocale(locale);
 
-  const messages = await getMessages(locale)
+  const messages = await getMessages(locale);
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta property="fb:app_id" content="1608105036460297" />
       </head>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className="font-body flex flex-col min-h-screen bg-warmWhite text-warmCharcoal">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar locale={locale} />
-          <main className="flex-grow bg-gradient-to-br from-green-100 to-blue-100 pt-16">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer locale={locale} />
+          <BottomNav locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
@@ -47,7 +46,7 @@ export default async function RootLayout({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'pl' }, { locale: 'de' }, { locale: 'cs' }]
+  return [{ locale: 'en' }, { locale: 'pl' }, { locale: 'de' }, { locale: 'cs' }, { locale: 'nl' }]
 }
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -95,6 +94,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
         'pl': `${url}/pl`,
         'de': `${url}/de`,
         'cs': `${url}/cs`,
+        'nl': `${url}/nl`,
       },
     },
     other: {

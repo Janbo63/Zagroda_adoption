@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zagroda — Website Redesign Style Board</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; background:#FAF7F2; color:#2D2D2D; }
+  .hero { background:linear-gradient(135deg,#2D4A3E 0%,#3A5F4F 100%); color:#FAF7F2; text-align:center; padding:80px 40px; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:3rem; margin-bottom:12px; }
+  .hero p { font-size:1.1rem; opacity:.85; max-width:700px; margin:0 auto; line-height:1.7; }
+  .section { max-width:1100px; margin:0 auto; padding:60px 24px; }
+  .section-title { font-family:'Playfair Display',serif; font-size:2.2rem; margin-bottom:8px; }
+  .section-sub { font-size:1rem; color:#666; margin-bottom:32px; line-height:1.6; }
+  .concept { background:#fff; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.08); margin-bottom:48px; overflow:hidden; }
+  .concept-header { padding:32px 36px 16px; }
+  .concept-header h2 { font-family:'Playfair Display',serif; font-size:1.8rem; }
+  .concept-header .tagline { font-style:italic; color:#666; margin:6px 0 16px; font-size:1.05rem; }
+  .mockup-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  .mockup-grid img { width:100%; display:block; cursor:pointer; transition:transform .2s; }
+  .mockup-grid img:hover { transform:scale(1.02); }
+  .mockup-label { text-align:center; font-size:.85rem; color:#888; padding:8px 0; background:#f9f9f9; }
+  .details { padding:24px 36px 32px; }
+  .details table { width:100%; border-collapse:collapse; margin-bottom:20px; }
+  .details th { text-align:left; padding:8px 12px; background:#f4f1eb; font-size:.85rem; color:#555; }
+  .details td { padding:8px 12px; border-bottom:1px solid #eee; font-size:.9rem; line-height:1.5; }
+  .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .pros h4, .cons h4 { margin-bottom:8px; font-size:.95rem; }
+  .pros li, .cons li { font-size:.88rem; line-height:1.6; margin-left:18px; }
+  .badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:.8rem; font-weight:600; margin-right:8px; }
+  .badge-green { background:#d4edda; color:#155724; }
+  .badge-amber { background:#fff3cd; color:#856404; }
+  .badge-red { background:#f8d7da; color:#721c24; }
+  .mobile-section img { max-width:900px; width:100%; display:block; margin:0 auto; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.1); }
+  .comparison { overflow-x:auto; }
+  .comparison table { min-width:700px; }
+  .comparison th:first-child { width:180px; }
+  .rec-box { background:linear-gradient(135deg,#2D4A3E,#3A5F4F); color:#FAF7F2; border-radius:16px; padding:40px; margin-top:48px; }
+  .rec-box h3 { font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:16px; }
+  .rec-box p, .rec-box li { font-size:.95rem; line-height:1.7; }
+  .rec-box ul { margin-left:20px; margin-top:12px; }
+  @media(max-width:768px) {
+    .mockup-grid { grid-template-columns:1fr; }
+    .pros-cons { grid-template-columns:1fr; }
+    .hero h1 { font-size:2rem; }
+  }
+  /* Lightbox */
+  .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); z-index:1000; justify-content:center; align-items:center; cursor:zoom-out; }
+  .lightbox.active { display:flex; }
+  .lightbox img { max-width:95vw; max-height:95vh; border-radius:8px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🦙 Zagroda — Website Redesign</h1>
+  <p>Three design concepts for you and Agnieszka to review. Click any mockup to zoom in. Pick a direction — A, B, C, or mix elements you love from each.</p>
+</div>
+
+<!-- CONCEPT A -->
+<div class="section">
+  <div class="concept">
+    <div class="concept-header">
+      <h2>📖 Concept A: "Storybook Journey"</h2>
+      <p class="tagline">"The website feels like opening a beautiful picture book about your family's countryside escape."</p>
+      <span class="badge badge-red">Build effort: High</span>
+      <span class="badge badge-green">Uniqueness: Very High</span>
+      <span class="badge badge-amber">SEO: Needs care</span>
+    </div>
+    <div class="mockup-grid">
+      <div>
+        <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/concept_a_storybook_1777893275596.png" alt="Concept A Homepage" onclick="openLightbox(this)">
+        <div class="mockup-label">Homepage — cinematic hero, floating icon nav, chapter-based scroll</div>
+      </div>
+      <div>
+        <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/concept_a_inner_1777893343685.png" alt="Concept A Discover Page" onclick="openLightbox(this)">
+        <div class="mockup-label">Discover the Area — illustrated map, storybook narrative</div>
+      </div>
+    </div>
+    <div class="details">
+      <table>
+        <tr><th>Navigation</th><td>Minimal floating pill with icons — no traditional menu. Content unfolds as you scroll like chapters.</td></tr>
+        <tr><th>Content Flow</th><td>Vertical storytelling — "Chapter 1: Meet the Alpacas", "Chapter 2: Your Room", "Chapter 3: Explore"</td></tr>
+        <tr><th>Photography</th><td>Cinematic, golden-hour, full-bleed images with hand-drawn botanical borders</td></tr>
+        <tr><th>Colors</th><td>🟠 Warm amber · 🟢 Forest green · ⬜ Cream · 🟫 Soft browns</td></tr>
+        <tr><th>Booking CTA</th><td>Floating wooden-badge "Book Your Stay" follows the scroll</td></tr>
+        <tr><th>Social Proof</th><td>Guest quotes woven naturally into the story narrative</td></tr>
+        <tr><th>Discover Page</th><td>Illustrated watercolor map with clickable points of interest</td></tr>
+      </table>
+      <div class="pros-cons">
+        <div class="pros"><h4>✅ Strengths</h4><ul>
+          <li>Strongest emotional impact — visitors feel the magic immediately</li>
+          <li>Unique and memorable — no competitor looks like this</li>
+          <li>Perfect for the "more than a holiday" message</li>
+          <li>Reduces menu overload — content flows naturally</li>
+        </ul></div>
+        <div class="cons"><h4>⚠️ Trade-offs</h4><ul>
+          <li>Navigation can feel hidden for returning visitors</li>
+          <li>Higher design/dev effort (illustrations, parallax)</li>
+          <li>Long scrolling pages need careful SEO structure</li>
+          <li>Mobile scroll-based nav needs careful touch optimization</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCEPT B -->
+  <div class="concept">
+    <div class="concept-header">
+      <h2>📰 Concept B: "Alpine Editorial"</h2>
+      <p class="tagline">"The website feels like reading a premium travel magazine about a mountain retreat."</p>
+      <span class="badge badge-green">Build effort: Moderate</span>
+      <span class="badge badge-amber">Uniqueness: Medium</span>
+      <span class="badge badge-green">SEO: Excellent</span>
+    </div>
+    <div class="mockup-grid">
+      <div>
+        <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/concept_b_editorial_1777893289418.png" alt="Concept B Homepage" onclick="openLightbox(this)">
+        <div class="mockup-label">Homepage — split hero, magazine grid, trust bar</div>
+      </div>
+      <div>
+        <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/concept_b_inner_1777893357116.png" alt="Concept B Discover Page" onclick="openLightbox(this)">
+        <div class="mockup-label">Discover the Area — editorial features, weekend itinerary sidebar</div>
+      </div>
+    </div>
+    <div class="details">
+      <table>
+        <tr><th>Navigation</th><td>Refined horizontal bar: Experience · Stay · Discover · Adopt · Gift Vouchers + language toggle + amber "Reserve"</td></tr>
+        <tr><th>Content Flow</th><td>Magazine-style editorial grid — varying card sizes, feature stories, pull quotes</td></tr>
+        <tr><th>Photography</th><td>Dramatic, high-contrast landscapes mixed with warm interior shots</td></tr>
+        <tr><th>Colors</th><td>🟢 Deep sage (#2D4A3E) · 🟡 Amber gold (#C4963B) · ⬜ Warm cream (#F5F0E8) · ⬛ Charcoal</td></tr>
+        <tr><th>Booking CTA</th><td>Persistent amber "Reserve" button in navbar + contextual CTAs</td></tr>
+        <tr><th>Social Proof</th><td>Trust bar: Booking.com 9.6 badge, Google reviews, award badges</td></tr>
+        <tr><th>Discover Page</th><td>Magazine feature articles + "Your Perfect Weekend" itinerary sidebar</td></tr>
+      </table>
+      <div class="pros-cons">
+        <div class="pros"><h4>✅ Strengths</h4><ul>
+          <li>Most professional — positions Zagroda as premium boutique</li>
+          <li>Clear navigation — anything findable in 1 click</li>
+          <li>Best for SEO — clean page structure, proper headings</li>
+          <li>Easiest to build — closest to existing codebase</li>
+          <li>Trust signals prominent — 9.6 becomes a major feature</li>
+        </ul></div>
+        <div class="cons"><h4>⚠️ Trade-offs</h4><ul>
+          <li>Less emotionally unique — more "premium hotel" than "magical escape"</li>
+          <li>Needs professional photography to really sing</li>
+          <li>Could feel too corporate without warm copy</li>
+          <li>The "feeling" depends heavily on writing quality</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCEPT C -->
+  <div class="concept">
+    <div class="concept-header">
+      <h2>🌿 Concept C: "Living Countryside"</h2>
+      <p class="tagline">"The website feels like stepping into a warm, inviting country home — alive, organic, welcoming."</p>
+      <span class="badge badge-amber">Build effort: Medium</span>
+      <span class="badge badge-green">Uniqueness: High</span>
+      <span class="badge badge-green">SEO: Good</span>
+    </div>
+    <div class="mockup-grid">
+      <div>
+        <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/concept_c_countryside_1777893303222.png" alt="Concept C Homepage" onclick="openLightbox(this)">
+        <div class="mockup-label">Homepage — video hero, bento grid, radial nav hub</div>
+      </div>
+      <div>
+        <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/concept_c_inner_1777893370062.png" alt="Concept C Discover Page" onclick="openLightbox(this)">
+        <div class="mockup-label">Discover the Area — filterable Pinterest-style bento grid</div>
+      </div>
+    </div>
+    <div class="details">
+      <table>
+        <tr><th>Navigation</th><td>Radial compass hub (desktop) / bottom tab bar (mobile) — always accessible, never in the way</td></tr>
+        <tr><th>Content Flow</th><td>Bento-box masonry grid — varied card sizes invite exploration</td></tr>
+        <tr><th>Photography</th><td>Warm, sun-drenched lifestyle photography — families, textures, nature close-ups</td></tr>
+        <tr><th>Colors</th><td>🟤 Terracotta (#C67B5C) · ⬜ Warm white (#FAF7F2) · 🟢 Moss green (#5B7C5A) · 🟫 Wood (#8B7355)</td></tr>
+        <tr><th>Booking CTA</th><td>Floating bottom bar: "Plan Your Visit" + live availability</td></tr>
+        <tr><th>Social Proof</th><td>Guest reviews as cards within the grid — part of content, not separate</td></tr>
+        <tr><th>Discover Page</th><td>Filterable bento grid: Nature · Culture · Family Fun · Food & Drink</td></tr>
+      </table>
+      <div class="pros-cons">
+        <div class="pros"><h4>✅ Strengths</h4><ul>
+          <li>Warmest feel — closest to what Zagroda actually feels like</li>
+          <li>Best mobile experience — bottom tabs are modern & thumb-friendly</li>
+          <li>Encourages exploration — Pinterest-style makes visitors click</li>
+          <li>Social proof feels natural — reviews are cards in the grid</li>
+          <li>Live availability creates booking urgency</li>
+        </ul></div>
+        <div class="cons"><h4>⚠️ Trade-offs</h4><ul>
+          <li>Radial navigation is unconventional — may confuse some</li>
+          <li>Needs lots of quality photos for each card</li>
+          <li>Can feel scattered without careful curation</li>
+          <li>Medium build complexity — masonry + floating nav + filters</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE -->
+  <h2 class="section-title">📱 Mobile Comparison</h2>
+  <p class="section-sub">How each concept adapts to mobile — where 90%+ of visitors browse.</p>
+  <div class="mobile-section">
+    <img src="file:///C:/Users/jan/.gemini/antigravity/brain/f0efb1dd-910e-4450-bfc8-87bd37c95284/mobile_concepts_1777893400968.png" alt="Mobile comparison" onclick="openLightbox(this)" style="cursor:pointer;">
+  </div>
+
+  <!-- RECOMMENDATION -->
+  <div class="rec-box">
+    <h3>💡 My Recommendation: Hybrid Approach</h3>
+    <p>Take the best elements from each concept:</p>
+    <ul>
+      <li><strong>Concept C's bento grid + bottom nav</strong> — best mobile UX, most inviting feel</li>
+      <li><strong>Concept B's trust bar + editorial Discover page</strong> — strongest conversion + SEO</li>
+      <li><strong>Concept A's warm storytelling copy</strong> — the emotional magic that makes visitors book</li>
+    </ul>
+    <p style="margin-top:16px;">This gives you warm countryside warmth, professional trust signals, and magical copy — without any single concept's downsides.</p>
+    <p style="margin-top:16px;opacity:.8;font-size:.9rem;">No additional tools needed — I can build all of this with Next.js + Tailwind + Framer Motion.</p>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Zoomed mockup">
+</div>
+
+<script>
+function openLightbox(el) {
+  document.getElementById('lightbox-img').src = el.src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

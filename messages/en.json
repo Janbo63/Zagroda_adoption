@@ -1348,5 +1348,38 @@
         "p5": "Exclusive cuddle time"
       }
     }
+  },
+  "guestReviews": {
+    "exceptional": "Exceptional",
+    "basedOn": "Based on 83+ reviews · Booking.com",
+    "review1": {
+      "text": "Fantastic atmosphere, nice and cozy like at home. The alpacas are amazing and the kids didn't want to leave!",
+      "author": "Katarzyna, Poland"
+    },
+    "review2": {
+      "text": "Perfect family weekend. Peaceful countryside, friendly owners, and the children loved feeding the alpacas every morning.",
+      "author": "Marta & Tom, Netherlands"
+    },
+    "review3": {
+      "text": "A place with real character — fireplace, billiards, beautiful mountains. We'll definitely come back!",
+      "author": "Familie Schmidt, Germany"
+    }
+  },
+  "farmLife": {
+    "title": "More Than a Hotel",
+    "subtitle": "What guests love about staying with us",
+    "fireplace": "Evening by the fireplace",
+    "mountains": "Mountain views",
+    "garden": "Garden & grill area",
+    "kitchen": "Fully equipped kitchen",
+    "games": "Billiards & foosball",
+    "playground": "Children's playground"
+  },
+  "discoverTeaser": {
+    "label": "Explore the Area",
+    "title": "Discover the Karkonosze Mountains",
+    "castles": "Historic castles",
+    "spaTown": "Spa town 10 min",
+    "hiking": "Family trails"
   }
 }

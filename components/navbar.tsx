@@ -1,22 +1,12 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { Menu, X, ChevronDown } from 'lucide-react'
-import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import LanguageSwitcher from './LanguageSwitcher'
-import { AmbientSoundToggle } from './AmbientSoundToggle'
-
-const navigation = [
-  { key: 'home', href: '/' },
-  { key: 'animals', href: '/animals' },
-  { key: 'activities', href: '/activities' },
-  { key: 'adoption', href: '/adopt' },
-  { key: 'vouchers', href: '/vouchers' },
-  { key: 'contact', href: '/contact' },
-]
+import { CompassNav } from './layout/CompassNav'
 
 interface NavbarProps {
   locale: string
@@ -24,181 +14,74 @@ interface NavbarProps {
 
 export function Navbar({ locale }: NavbarProps) {
   const t = useTranslations('common')
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [compassOpen, setCompassOpen] = useState(false)
+  const { scrollY } = useScroll()
+  const bgOpacity = useTransform(scrollY, [0, 100], [0, 1])
+  const [scrolled, setScrolled] = useState(false)
 
-  const currentPath = pathname?.replace(/^\/(en|pl|de|cs|nl)/, '') || ''
-  const isAccomActive = currentPath === '/stay' || currentPath === '/discover'
+  useEffect(() => {
+    const unsubscribe = scrollY.on('change', (v) => setScrolled(v > 50))
+    return unsubscribe
+  }, [scrollY])
 
   return (
-    <nav className="bg-green-800 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-orange-400 opacity-20" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col sm:flex-row justify-between py-2 sm:h-16">
-
-          {/* Logo */}
-          <div className="flex flex-1 items-center justify-between sm:justify-start">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href={`/${locale}`} className="flex items-center">
-                <Image
-                  src="/images/zagrodanewlogo.png"
-                  alt="Zagroda Alpakoterapii Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2"
-                />
-                <span className="text-xl font-bold">Zagroda Alpakoterapii</span>
-              </Link>
-            </div>
-            <div className="sm:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-300 hover:text-white p-2"
-                aria-label="Toggle menu"
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-
-          {/* Desktop nav */}
-          <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
-            {/* Home, Animals, Activities */}
-            {navigation.slice(0, 3).map((item) => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${currentPath === item.href
-                    ? 'border-orange-400 text-white'
-                    : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
-                  }`}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-
-            {/* Accommodation dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
+    <>
+      <motion.nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
+          scrolled ? 'bg-warmWhite/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20">
+            {/* Menu button — always clearly visible */}
+            <button
+              onClick={() => setCompassOpen(true)}
+              className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/90 shadow-md hover:shadow-lg hover:bg-white text-warmCharcoal transition-all duration-200 backdrop-blur-sm border border-warmCharcoal/10"
+              aria-label="Open navigation"
             >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="17" y2="12" />
+                <line x1="3" y1="18" x2="14" y2="18" />
+              </svg>
+              <span className="text-sm font-semibold hidden sm:inline">Menu</span>
+            </button>
+
+            {/* Centre logo */}
+            <Link href={`/${locale}`} className="flex items-center gap-2.5">
+              <Image
+                src="/images/zagrodanewlogo.png"
+                alt="Zagroda Alpakoterapii Logo"
+                width={36}
+                height={36}
+                className="rounded-full"
+              />
+              <span className={`text-lg font-display font-bold tracking-tight hidden sm:inline transition-colors ${
+                scrolled ? 'text-warmCharcoal' : 'text-white'
+              }`}>
+                Zagroda Alpakoterapii
+              </span>
+            </Link>
+
+            {/* Right side: Language + Plan Visit CTA */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              <LanguageSwitcher />
               <Link
                 href={`/${locale}/stay`}
-                className={`inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium ${isAccomActive
-                    ? 'border-orange-400 text-white'
-                    : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
-                  }`}
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen}
+                className="inline-flex items-center px-4 sm:px-5 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
               >
-                {t('accommodation')}
-                <ChevronDown
-                  size={14}
-                  className={`transition-transform duration-150 ${dropdownOpen ? 'rotate-180' : ''}`}
-                />
-              </Link>
-
-              {dropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 bg-white rounded-xl shadow-xl ring-1 ring-black/5 overflow-hidden z-50">
-                  <Link
-                    href={`/${locale}/stay`}
-                    onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
-                  >
-                    <span>🏡</span> {t('stayWithUs')}
-                  </Link>
-                  <div className="border-t border-gray-100" />
-                  <Link
-                    href={`/${locale}/discover`}
-                    onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
-                  >
-                    <span>🗺️</span> {t('exploreTheArea')}
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            {/* Adopt, Vouchers, Contact */}
-            {navigation.slice(3).map((item) => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${currentPath === item.href
-                    ? 'border-orange-400 text-white'
-                    : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
-                  }`}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-          </div>
-
-          {/* Language + Sound */}
-          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0 sm:ml-8 gap-4">
-            <AmbientSoundToggle />
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="sm:hidden fixed inset-x-0 top-16 bg-green-800 z-50">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navigation.slice(0, 3).map((item) => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium touch-manipulation ${currentPath === item.href
-                    ? 'bg-orange-400 text-white'
-                    : 'text-gray-200 hover:bg-orange-400 hover:text-white'
-                  }`}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-
-            {/* Mobile Accommodation group */}
-            <div className="px-3 pt-2 pb-1">
-              <p className="text-xs font-semibold uppercase tracking-wider text-emerald-300 mb-1">
-                {t('accommodation')}
-              </p>
-              <Link
-                href={`/${locale}/stay`}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 py-2 pl-2 text-gray-200 hover:text-white text-base font-medium"
-              >
-                <span>🏡</span> {t('stayWithUs')}
-              </Link>
-              <Link
-                href={`/${locale}/discover`}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 py-2 pl-2 text-gray-200 hover:text-white text-base font-medium"
-              >
-                <span>🗺️</span> {t('exploreTheArea')}
+                {t('stayWithUs')}
               </Link>
             </div>
-
-            {navigation.slice(3).map((item) => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium touch-manipulation ${currentPath === item.href
-                    ? 'bg-orange-400 text-white'
-                    : 'text-gray-200 hover:bg-orange-400 hover:text-white'
-                  }`}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
           </div>
         </div>
-      )}
-    </nav>
+      </motion.nav>
+
+      <CompassNav
+        locale={locale}
+        isOpen={compassOpen}
+        onClose={() => setCompassOpen(false)}
+      />
+    </>
   )
 }

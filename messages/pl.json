@@ -1347,5 +1347,38 @@
         "p5": "Ekskluzywne przytulanie"
       }
     }
+  },
+  "guestReviews": {
+    "exceptional": "Wyjątkowy",
+    "basedOn": "Na podstawie 83+ opinii · Booking.com",
+    "review1": {
+      "text": "Fantastyczna atmosfera, przytulnie jak w domu. Alpaki są niesamowite, a dzieci nie chciały wyjeżdżać!",
+      "author": "Katarzyna, Polska"
+    },
+    "review2": {
+      "text": "Idealny rodzinny weekend. Spokojne otoczenie, mili właściciele, a dzieci uwielbiały karmić alpaki co rano.",
+      "author": "Marta i Tom, Holandia"
+    },
+    "review3": {
+      "text": "Miejsce z prawdziwym charakterem — kominek, bilard, piękne góry. Na pewno wrócimy!",
+      "author": "Familie Schmidt, Niemcy"
+    }
+  },
+  "farmLife": {
+    "title": "Więcej niż hotel",
+    "subtitle": "Co goście kochają w pobytach u nas",
+    "fireplace": "Wieczór przy kominku",
+    "mountains": "Widoki na góry",
+    "garden": "Ogród i strefa grillowa",
+    "kitchen": "W pełni wyposażona kuchnia",
+    "games": "Bilard i piłkarzyki",
+    "playground": "Plac zabaw dla dzieci"
+  },
+  "discoverTeaser": {
+    "label": "Odkryj okolicę",
+    "title": "Odkryj Karkonosze",
+    "castles": "Historyczne zamki",
+    "spaTown": "Uzdrowisko 10 min",
+    "hiking": "Rodzinne szlaki"
   }
 }
