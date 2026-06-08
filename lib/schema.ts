@@ -59,7 +59,9 @@ export const farmSchema = {
     },
     sameAs: [
         'https://www.facebook.com/zagrodaalpakoterapii',
-        'https://www.instagram.com/zagrodaalpakoterapii',
+        'https://www.instagram.com/zagrodaalpako',
+        'https://maps.app.goo.gl/zagrodaalpakoterapii',
+        'https://www.booking.com/hotel/pl/zagroda-alpakoterapii.html',
     ],
 };
 
@@ -124,4 +126,59 @@ export const discoverSchema = {
         { '@type': 'TouristAttraction', name: 'Liberec, Czech Republic', geo: { '@type': 'GeoCoordinates', latitude: 50.7671, longitude: 15.0562 } },
         { '@type': 'TouristAttraction', name: 'Świeradów-Zdrój Spa', geo: { '@type': 'GeoCoordinates', latitude: 50.9019, longitude: 15.3273 } },
     ],
+};
+
+/** BreadcrumbList schema — call with page-specific items */
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items.map((item, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: item.name,
+            item: item.url,
+        })),
+    };
+}
+
+/** FAQPage schema — pass array of {question, answer} pairs */
+export function faqSchema(faqs: { question: string; answer: string }[]) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+            },
+        })),
+    };
+}
+
+/** Service schema for alpaca therapy */
+export const therapyServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Alpaca-Assisted Therapy (Alpakoterapia)',
+    description: 'Therapeutic interaction sessions with gentle alpacas for children aged 3+ and adults. Helps reduce stress, anxiety, and promotes emotional well-being through guided animal contact.',
+    provider: {
+        '@type': 'LocalBusiness',
+        name: 'Zagroda Alpakoterapii',
+        url: 'https://zagrodaalpakoterapii.com',
+    },
+    serviceType: 'Animal-Assisted Therapy',
+    areaServed: {
+        '@type': 'GeoCircle',
+        geoMidpoint: { '@type': 'GeoCoordinates', latitude: 50.9568, longitude: 15.3856 },
+        geoRadius: '50000',
+    },
+    offers: {
+        '@type': 'Offer',
+        priceCurrency: 'PLN',
+        price: '150',
+        description: 'Per person for a guided alpaca therapy session',
+    },
 };

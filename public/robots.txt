@@ -1,10 +1,44 @@
-User-agent: *
+# === AI SEARCH BOTS (ALLOW — these cite you in answers and drive traffic) ===
+User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# === AI TRAINING BOTS (BLOCK — opt out of model training) ===
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# === SOCIAL CRAWLERS ===
 User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Facebot
+Allow: /
+
+# === DEFAULT ===
+User-agent: *
 Allow: /
 
 Sitemap: https://zagrodaalpakoterapii.com/sitemap.xml

@@ -5,8 +5,37 @@ import { Navbar } from '@/components/navbar'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] })
+
+const locales = ['en', 'pl', 'de', 'cs', 'nl'] as const;
+
+const siteUrl = 'https://zagrodaalpakoterapii.com';
+
+/** Localised meta titles and descriptions for the homepage / layout fallback */
+const metaByLocale: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'Zagroda Alpakoterapii — Alpaca Therapy Farm in the Karkonosze Mountains',
+    description: 'Experience alpaca therapy, guided alpaca walks, and cosy farm stays in the Karkonosze Mountains, Poland. Family-friendly agritourism near Mirsk with mountain views.',
+  },
+  pl: {
+    title: 'Zagroda Alpakoterapii — Alpakoterapia w Karkonoszach',
+    description: 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie. Alpakoterapia, spacery z alpakami i noclegi w Karkonoszach. Agroturystyka w Mirsku.',
+  },
+  de: {
+    title: 'Zagroda Alpakoterapii — Alpaka-Therapie-Farm im Riesengebirge',
+    description: 'Erleben Sie Alpaka-Therapie, geführte Alpaka-Spaziergänge und gemütliche Bauernhof-Übernachtungen im Riesengebirge, Polen. Familienfreundlicher Agrotourismus.',
+  },
+  cs: {
+    title: 'Zagroda Alpakoterapii — Farma s alpakami v Krkonoších',
+    description: 'Zažijte terapii s alpakami, vycházky s alpakami a útulné ubytování na farmě v Krkonoších v Polsku. Rodinný agroturismus u Mirsku.',
+  },
+  nl: {
+    title: 'Zagroda Alpakoterapii — Alpacatherapie Boerderij in het Reuzengebergte',
+    description: 'Ervaar alpacatherapie, begeleide alpacawandelingen en gezellige boerderijverblijven in het Reuzengebergte, Polen. Gezinsvriendelijk agrotoerisme.',
+  },
+};
 
 async function getMessages(locale: string) {
   try {
@@ -47,26 +76,30 @@ export default async function RootLayout({
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'pl' }, { locale: 'de' }, { locale: 'cs' }]
+  return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const messages = await getMessages(params.locale)
-  const url = 'https://zagrodaalpakoterapii.com'
-  const title = 'Zagroda Alpakoterapii'
-  const description = 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie'
-  const image = `${url}/images/zagrodanewlogo.png`
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
+  const meta = metaByLocale[locale] || metaByLocale.en;
+  const pageUrl = `${siteUrl}/${locale}`;
+  const image = `${siteUrl}/images/zagrodanewlogo.png`;
+
+  // Build hreflang alternates for all locales
+  const languages: Record<string, string> = {};
+  for (const loc of locales) {
+    languages[loc] = `${siteUrl}/${loc}`;
+  }
 
   return {
-    metadataBase: new URL(url),
-    title,
-    description,
-    canonical: url,
+    metadataBase: new URL(siteUrl),
+    title: meta.title,
+    description: meta.description,
     openGraph: {
-      title,
-      description,
-      url,
-      siteName: title,
+      title: meta.title,
+      description: meta.description,
+      url: pageUrl,
+      siteName: 'Zagroda Alpakoterapii',
       images: [
         {
           url: image,
@@ -76,26 +109,20 @@ export async function generateMetadata({ params }: { params: { locale: string } 
           type: 'image/png',
         },
       ],
-      locale: params.locale,
+      locale,
       type: 'website',
-      appId: '1608105036460297',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: meta.title,
+      description: meta.description,
       images: [image],
       creator: '@zagrodaalpak',
       site: '@zagrodaalpak'
     },
     alternates: {
-      canonical: url,
-      languages: {
-        'en': `${url}/en`,
-        'pl': `${url}/pl`,
-        'de': `${url}/de`,
-        'cs': `${url}/cs`,
-      },
+      canonical: pageUrl,
+      languages,
     },
     other: {
       'fb:app_id': '1608105036460297',

@@ -9,7 +9,7 @@ export function generateMetadata({ params }: { params: { locale: string } }) {
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'pl' }];
+  return [{ locale: 'en' }, { locale: 'pl' }, { locale: 'de' }, { locale: 'cs' }, { locale: 'nl' }];
 }
 
 export default function AlpacasPage({ params }: { params: { locale: string } }) {
