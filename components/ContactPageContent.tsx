@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { trackContactClick } from '@/lib/tracking'
 
 interface ContactPageContentProps {
   locale: string;
@@ -31,12 +32,12 @@ export function ContactPageContent({ locale: _locale }: ContactPageContentProps)
               <p className="text-lg">{displayNumber}</p>
               <div className="flex space-x-2">
                 <Button asChild variant="outline">
-                  <Link href={`tel:${phoneNumber}`}>
+                  <Link href={`tel:${phoneNumber}`} onClick={() => trackContactClick({ channel: 'phone', page: 'contact' })}>
                     <Phone className="mr-2 h-4 w-4" /> {t('call')}
                   </Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer" onClick={() => trackContactClick({ channel: 'whatsapp', page: 'contact' })}>
                     <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
                   </Link>
                 </Button>

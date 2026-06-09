@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useTranslations } from 'next-intl'
+import { Phone, MessageCircle } from 'lucide-react'
+import { trackContactClick } from '@/lib/tracking'
 
 const activityKeys = ['meetthealpacas', 'alpacawalks', 'privatealpacasafari']
 
@@ -14,6 +16,14 @@ interface ActivitiesPageContentProps {
 
 export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContentProps) {
   const t = useTranslations('activities')
+
+  const handleBookClick = (activityName: string) => {
+    trackContactClick({ channel: 'whatsapp', page: 'activities', label: activityName })
+  }
+
+  const handlePhoneClick = () => {
+    trackContactClick({ channel: 'phone', page: 'activities' })
+  }
 
   return (
     <div className="container mx-auto px-4 py-8 bg-gradient-to-b from-blue-100 to-green-100 min-h-screen">
@@ -47,13 +57,33 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
                   {t('requirements')}: <span className="font-normal">{t(`${key}.attributes.terms`)}</span>
                 </p>
               </div>
-              <Button className="mt-4 w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">
-                {t('bookNow')}
-              </Button>
+              <div className="flex gap-2 mt-4">
+                <a
+                  href={`https://wa.me/48695545330?text=${encodeURIComponent(t(`${key}.name`) + ' - ')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                  onClick={() => handleBookClick(key)}
+                >
+                  <Button className="w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    WhatsApp
+                  </Button>
+                </a>
+                <a
+                  href="tel:+48695545330"
+                  onClick={handlePhoneClick}
+                >
+                  <Button variant="outline" className="rounded-full py-2 px-4 transition-all duration-300 transform hover:scale-105">
+                    <Phone className="h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
             </CardContent>
           </Card>
         ))}
       </div>
     </div>
   )
-} 
+}
+ 
