@@ -194,7 +194,7 @@ export async function POST(req: Request) {
                     stripeCustomerId: intent.customer as string,
                     stripePaymentMethodId: intent.payment_method as string,
                     locale: meta.locale,
-                    source: 'alpaca-site',
+                    source: 'Website',
                 });
                 console.log(`[Booking] Beds25 booking created, OTA blocked (${bookingRef})`);
 
