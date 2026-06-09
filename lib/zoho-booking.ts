@@ -57,8 +57,19 @@ export async function createBookingDeal(
         phone: params.guest.phone,
     });
 
-    // 2. Look up the Room record by Beds24_Room_ID
+    // 2. Look up the Room record in Zoho
+    // Strategy: try Beds24_Room_ID search → hardcoded map → name search
     let zohoRoomId: string | null = null;
+
+    // Known Zoho Room record IDs (fallback if API search fails)
+    const ZOHO_ROOM_MAP: Record<string, string> = {
+        // Beds25 room CUIDs → Zoho Room record IDs
+        'cmloyy83x0001jmwjy0a0iw69': '884394000000896001',  // RM1 - Forest Apartment
+        'cmloyy83x0003jmwjcnyjqlt1': '884394000000896005',  // RM2 - Garden Room  
+        'cmloyy83x0005jmwjihxwwtv3': '884394000000897001',  // RM3 - Jungle Room
+    };
+
+    // Strategy A: Search by Beds24_Room_ID (original approach)
     try {
         const roomResult = await zoho.searchRecord(
             ZOHO_ROOMS_MODULE,
@@ -66,7 +77,33 @@ export async function createBookingDeal(
         );
         zohoRoomId = roomResult?.data?.[0]?.id || null;
     } catch {
-        console.warn(`[Booking] Room lookup failed for Beds24 ID ${params.room.id} — will store name only`);
+        console.warn(`[Booking] Room search by Beds24_Room_ID failed for ${params.room.id}`);
+    }
+
+    // Strategy B: Hardcoded map (handles Beds25 CUIDs that don't match Beds24 IDs)
+    if (!zohoRoomId && ZOHO_ROOM_MAP[params.room.id]) {
+        zohoRoomId = ZOHO_ROOM_MAP[params.room.id];
+        console.log(`[Booking] Room resolved via hardcoded map: ${params.room.id} → ${zohoRoomId}`);
+    }
+
+    // Strategy C: Search by room name
+    if (!zohoRoomId && params.room.name) {
+        try {
+            const nameResult = await zoho.searchRecord(
+                ZOHO_ROOMS_MODULE,
+                `(Name:equals:${params.room.name})`
+            );
+            zohoRoomId = nameResult?.data?.[0]?.id || null;
+            if (zohoRoomId) {
+                console.log(`[Booking] Room resolved by name search: "${params.room.name}" → ${zohoRoomId}`);
+            }
+        } catch {
+            console.warn(`[Booking] Room name search also failed for "${params.room.name}"`);
+        }
+    }
+
+    if (!zohoRoomId) {
+        console.error(`[Booking] ⚠️ ROOM NOT FOUND in Zoho! roomId=${params.room.id}, name="${params.room.name}" — booking will be created WITHOUT room link`);
     }
 
     const childrenSummary = params.guest.children.length > 0
@@ -100,7 +137,7 @@ export async function createBookingDeal(
         Stripe_Payment_Method_ID: params.stripePaymentMethodId,
     };
 
-    // Link to Room record if found, otherwise store name as text
+    // Link to Room record if found
     if (zohoRoomId) {
         bookingData.Room = zohoRoomId;
     }

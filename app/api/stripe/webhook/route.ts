@@ -152,9 +152,14 @@ export async function POST(req: Request) {
             }
 
             try {
-                // 1. Update Zoho Deal → Deposit Paid
-                await updateBookingStatus(zohoDealId, 'Deposit Paid');
-                console.log(`[Booking] Zoho Deal ${zohoDealId} → Deposit Paid (${bookingRef})`);
+                // 1. Update Zoho Deal → Deposit Paid + backpatch Stripe IDs
+                await updateBookingStatus(zohoDealId, 'Deposit Paid', {
+                    Stripe_Deposit_ID: intent.id,
+                    Stripe_Payment_Method_ID: typeof intent.payment_method === 'string'
+                        ? intent.payment_method
+                        : intent.payment_method?.id || null,
+                });
+                console.log(`[Booking] Zoho Deal ${zohoDealId} → Deposit Paid + Stripe IDs (${bookingRef})`);
 
                 // 2. Redeem voucher in Zoho (non-fatal)
                 if (meta.voucherCode) {

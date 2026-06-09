@@ -938,18 +938,23 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
     );
 }
 
-function StepPayment({ state, onSuccess, onBack, locale }: {
+function StepPayment({ state, onSuccess, onBack, locale, cachedClientSecret, onClientSecret }: {
     state: BookingState;
     onSuccess: (ref: string) => void;
     onBack: () => void;
     locale: string;
+    cachedClientSecret: string;
+    onClientSecret: (secret: string) => void;
 }) {
     const t = useTranslations('booking');
-    const [clientSecret, setClientSecret] = useState('');
+    const [clientSecret, setClientSecret] = useState(cachedClientSecret);
     const [intentError, setIntentError] = useState('');
     const stateRef = useRef(state);
 
     useEffect(() => {
+        // Guard: if we already have a clientSecret (from parent cache), skip API call
+        if (cachedClientSecret) return;
+
         const s = stateRef.current;
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 20000); // 20s timeout
@@ -982,8 +987,12 @@ function StepPayment({ state, onSuccess, onBack, locale }: {
             .then(r => r.json())
             .then(data => {
                 clearTimeout(timeout);
-                if (data.clientSecret) setClientSecret(data.clientSecret);
-                else setIntentError(data.error || t('payment.error'));
+                if (data.clientSecret) {
+                    setClientSecret(data.clientSecret);
+                    onClientSecret(data.clientSecret); // Cache in parent
+                } else {
+                    setIntentError(data.error || t('payment.error'));
+                }
             })
             .catch(err => {
                 clearTimeout(timeout);
@@ -1073,6 +1082,7 @@ function StepConfirmation({ state }: { state: BookingState }) {
 function BookingWidgetInner({ locale }: Props) {
     const [step, setStep] = useState(0);
     const [_bookingRef, setBookingRef] = useState('');
+    const [paymentClientSecret, setPaymentClientSecret] = useState(''); // Cached to survive back-navigate
     const widgetRef = useRef<HTMLDivElement>(null);
     const [state, setState] = useState<BookingState>({
         checkIn: '', checkOut: '', nights: 0,
@@ -1159,7 +1169,7 @@ function BookingWidgetInner({ locale }: Props) {
             {step === 2 && <StepGuests state={state} onChange={set} onNext={next} onBack={back} />}
             {step === 3 && <StepExtras state={state} onChange={set} onNext={next} onBack={back} />}
             {step === 4 && <StepSummary state={state} onNext={next} onBack={back} />}
-            {step === 5 && <StepPayment state={state} onSuccess={handlePaymentSuccess} onBack={back} locale={locale} />}
+            {step === 5 && <StepPayment state={state} onSuccess={handlePaymentSuccess} onBack={back} locale={locale} cachedClientSecret={paymentClientSecret} onClientSecret={setPaymentClientSecret} />}
             {step === 6 && <StepConfirmation state={state} />}
         </div>
     );
