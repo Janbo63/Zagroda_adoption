@@ -1348,5 +1348,51 @@
         "p5": "Exclusive cuddle time"
       }
     }
+  },
+  "guestReviews": {
+    "sectionTitle": "What Our Guests Say",
+    "ratingLabel": "Exceptional",
+    "visitorCount": "400+ happy guests",
+    "r1": {
+      "text": "We woke up with alpacas looking through our window. Nothing prepares you. Pure magic.",
+      "author": "Guest from the Netherlands"
+    },
+    "r2": {
+      "text": "The alpaca experience was the highlight of our entire trip to Poland. We'll be back.",
+      "author": "Guest from Belgium"
+    },
+    "r3": {
+      "text": "Such an intimate, peaceful place. Completely different from a hotel. Truly special.",
+      "author": "Guest from Germany"
+    }
+  },
+  "farmLife": {
+    "badge": "More than a hotel",
+    "headline": "This isn't a hotel — it's a home in the mountains",
+    "subheadline": "Everything that keeps our guests coming back year after year.",
+    "fireplace": {
+      "title": "Fireplace",
+      "desc": "Warm evenings by the fire after a day with the alpacas."
+    },
+    "mountains": {
+      "title": "Karkonosze Mountains",
+      "desc": "At the foot of the mountains. Trails, waterfalls, and fresh air — right outside your door."
+    },
+    "playground": {
+      "title": "Playground",
+      "desc": "Trampoline, swings, and open space for kids to roam free."
+    },
+    "kitchen": {
+      "title": "Shared Kitchen",
+      "desc": "Fully equipped kitchen — cook with produce from local farmers."
+    },
+    "billiards": {
+      "title": "Billiards & Table Tennis",
+      "desc": "Entertainment for the whole family — rainy evenings are never boring."
+    },
+    "garden": {
+      "title": "Garden with a View",
+      "desc": "Morning coffee, mountain views, and alpacas right next to you."
+    }
   }
-}
+}

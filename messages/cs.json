@@ -1,4 +1,4 @@
-﻿{
+{
   "common": {
     "title": "Zagroda Alpakoterapii",
     "description": "Zažijte léčivou sílu alpak a přírody",
@@ -1363,5 +1363,51 @@
         "p5": "Exkluzivní mazlení"
       }
     }
+  },
+  "guestReviews": {
+    "sectionTitle": "Co Říkají Naši Hosté",
+    "ratingLabel": "Výjimečné",
+    "visitorCount": "400+ spokojených hostů",
+    "r1": {
+      "text": "Probudili jsme se s alpakami koukajícími naším oknem. Nic vás na to nepřipraví. Čistá magie.",
+      "author": "Host z Nizozemska"
+    },
+    "r2": {
+      "text": "Zážitek s alpakami byl vrcholem celé naší cesty do Polska. Určitě se vrátíme.",
+      "author": "Host z Belgie"
+    },
+    "r3": {
+      "text": "Takové útulné, klidné místo. Úplně jiné než hotel. Opravdu výjimečné.",
+      "author": "Host z Německa"
+    }
+  },
+  "farmLife": {
+    "badge": "Víc než hotel",
+    "headline": "Tohle není hotel — je to domov v horách",
+    "subheadline": "Vše, co přiměje naše hosty se sem vracet rok za rokem.",
+    "fireplace": {
+      "title": "Krb",
+      "desc": "Teplé večery u krbu po dni stráveném s alpakami."
+    },
+    "mountains": {
+      "title": "Krkonoše",
+      "desc": "Na úpatí hor. Stezky, vodopády a čerstvý vzduch — hned za dveřmi."
+    },
+    "playground": {
+      "title": "Hřiště",
+      "desc": "Trampolína, houpačky a prostor pro děti."
+    },
+    "kitchen": {
+      "title": "Společná kuchyně",
+      "desc": "Plně vybavená kuchyně — vařte z produktů místních farmářů."
+    },
+    "billiards": {
+      "title": "Kulečník a stolní tenis",
+      "desc": "Zábava pro celou rodinu — deštivé večery nejsou problém."
+    },
+    "garden": {
+      "title": "Zahrada s výhledem",
+      "desc": "Ranní káva, výhled na hory a alpaky hned vedle vás."
+    }
   }
-}
+}

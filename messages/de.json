@@ -1346,5 +1346,51 @@
         "p5": "Exklusive Kuschelzeit"
       }
     }
+  },
+  "guestReviews": {
+    "sectionTitle": "Was Unsere Gäste Sagen",
+    "ratingLabel": "Herausragend",
+    "visitorCount": "400+ zufriedene Gäste",
+    "r1": {
+      "text": "Wir wachten auf, als Alpakas durch unser Fenster schauten. Darauf kann man sich nicht vorbereiten. Reine Magie.",
+      "author": "Gast aus den Niederlanden"
+    },
+    "r2": {
+      "text": "Das Alpaka-Erlebnis war das Highlight unserer gesamten Reise nach Polen. Wir kommen wieder.",
+      "author": "Gast aus Belgien"
+    },
+    "r3": {
+      "text": "So ein intimer, friedlicher Ort. Völlig anders als ein Hotel. Wirklich besonders.",
+      "author": "Gast aus Deutschland"
+    }
+  },
+  "farmLife": {
+    "badge": "Mehr als ein Hotel",
+    "headline": "Das ist kein Hotel — das ist ein Zuhause in den Bergen",
+    "subheadline": "Alles, was unsere Gäste Jahr für Jahr zurückkommen lässt.",
+    "fireplace": {
+      "title": "Kamin",
+      "desc": "Warme Abende am Kamin nach einem Tag mit den Alpakas."
+    },
+    "mountains": {
+      "title": "Riesengebirge",
+      "desc": "Am Fuße der Berge. Wanderwege, Wasserfälle und frische Luft — direkt vor der Tür."
+    },
+    "playground": {
+      "title": "Spielplatz",
+      "desc": "Trampolin, Schaukeln und viel Platz zum Toben für Kinder."
+    },
+    "kitchen": {
+      "title": "Gemeinschaftsküche",
+      "desc": "Voll ausgestattete Küche — kochen Sie mit Produkten lokaler Bauern."
+    },
+    "billiards": {
+      "title": "Billard & Tischtennis",
+      "desc": "Unterhaltung für die ganze Familie — auch Regentage werden nie langweilig."
+    },
+    "garden": {
+      "title": "Garten mit Aussicht",
+      "desc": "Morgenkaffee, Bergblick und Alpakas direkt neben Ihnen."
+    }
   }
-}
+}

@@ -1342,5 +1342,51 @@
                 "p5": "Exclusieve knuffeltijd"
             }
         }
+    },
+    "guestReviews": {
+        "sectionTitle": "Wat Onze Gasten Zeggen",
+        "ratingLabel": "Uitzonderlijk",
+        "visitorCount": "400+ tevreden gasten",
+        "r1": {
+            "text": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je hierop voor. Pure magie.",
+            "author": "Gast uit Nederland"
+        },
+        "r2": {
+            "text": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen zeker terug.",
+            "author": "Gast uit België"
+        },
+        "r3": {
+            "text": "Zo'n intiem, rustig plekje. Helemaal anders dan een hotel. Echt bijzonder.",
+            "author": "Gast uit Duitsland"
+        }
+    },
+    "farmLife": {
+        "badge": "Meer dan een hotel",
+        "headline": "Dit is geen hotel — het is een thuis in de bergen",
+        "subheadline": "Alles wat onze gasten jaar na jaar terug laat komen.",
+        "fireplace": {
+            "title": "Open haard",
+            "desc": "Warme avonden bij het vuur na een dag met de alpaca's."
+        },
+        "mountains": {
+            "title": "Reuzengebergte",
+            "desc": "Aan de voet van de bergen. Wandelpaden, watervallen en frisse lucht — vlak voor de deur."
+        },
+        "playground": {
+            "title": "Speeltuin",
+            "desc": "Trampoline, schommels en ruimte voor kinderen om vrij te spelen."
+        },
+        "kitchen": {
+            "title": "Gedeelde keuken",
+            "desc": "Volledig uitgeruste keuken — kook met producten van lokale boeren."
+        },
+        "billiards": {
+            "title": "Biljart & Tafeltennis",
+            "desc": "Entertainment voor het hele gezin — regenachtige avonden zijn nooit saai."
+        },
+        "garden": {
+            "title": "Tuin met uitzicht",
+            "desc": "Ochtendkoffie, bergzicht en alpaca's vlak naast je."
+        }
     }
-}
+}

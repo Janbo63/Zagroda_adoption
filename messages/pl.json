@@ -1347,5 +1347,52 @@
         "p5": "Ekskluzywne przytulanie"
       }
     }
+  },
+  "guestReviews": {
+    "sectionTitle": "Co Mówią Nasi Goście",
+    "ratingLabel": "Wyjątkowe",
+    "visitorCount": "400+ zadowolonych gości",
+    "r1": {
+      "text": "Obudziliśmy się z alpakami zaglądającymi przez okno. Nic na to nie przygotuje. Czysta magia.",
+      "author": "Gość z Holandii"
+    },
+    "r2": {
+      "text": "Doświadczenie z alpakami było szczytem naszej podróży do Polski. Na pewno wrócimy.",
+      "author": "Gość z Belgii"
+    },
+    "r3": {
+      "text": "Takie kameralne, spokojne miejsce. Zupełnie inne niż hotel. Naprawdę wyjątkowe.",
+      "author": "Gość z Niemiec"
+    }
+  },
+  "farmLife": {
+    "badge": "Więcej niż hotel",
+    "headline": "To nie hotel — to dom w górach",
+    "subheadline": "Wszystko, co sprawia, że goście wracają do nas rok po roku.",
+    "fireplace": {
+      "title": "Kominek",
+      "desc": "Ciepłe wieczory przy kominku po dniu spędzonym z alpakami."
+    },
+    "mountains": {
+      "title": "Karkonosze",
+      "desc": "U stóp gór. Szlaki, wodospady i czyste powietrze — tuż za progiem."
+    },
+    "playground": {
+      "title": "Plac zabaw",
+      "desc": "Trampolina, huśtawki i przestrzeń do zabawy dla dzieci."
+    },
+    "kitchen": {
+      "title": "Wspólna kuchnia",
+      "desc": "W pełni wyposażona kuchnia — gotuj z produktami lokalnych rolników."
+    },
+    "billiards": {
+      "title": "Bilard i tenis stołowy",
+      "desc": "Rozrywka dla całej rodziny — deszczowe wieczory nie są problemem."
+    },
+    "garden": {
+      "title": "Ogród z widokiem",
+      "desc": "Poranek z kawą, widok na góry i alpaki tuż obok."
+    }
   }
 }
+
