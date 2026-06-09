@@ -58,32 +58,27 @@ export async function createBookingDeal(
     });
 
     // 2. Look up the Room record in Zoho
-    // Strategy: try Beds24_Room_ID search → hardcoded map → name search
+    // The availability API returns Zoho record IDs as room IDs (e.g. '884394000000897001'),
+    // so room.id is usually the Zoho Room record ID itself.
     let zohoRoomId: string | null = null;
 
-    // Known Zoho Room record IDs (fallback if API search fails)
-    const ZOHO_ROOM_MAP: Record<string, string> = {
-        // Beds25 room CUIDs → Zoho Room record IDs
-        'cmloyy83x0001jmwjy0a0iw69': '884394000000896001',  // RM1 - Forest Apartment
-        'cmloyy83x0003jmwjcnyjqlt1': '884394000000896005',  // RM2 - Garden Room  
-        'cmloyy83x0005jmwjihxwwtv3': '884394000000897001',  // RM3 - Jungle Room
-    };
-
-    // Strategy A: Search by Beds24_Room_ID (original approach)
-    try {
-        const roomResult = await zoho.searchRecord(
-            ZOHO_ROOMS_MODULE,
-            `(Beds24_Room_ID:equals:${params.room.id})`
-        );
-        zohoRoomId = roomResult?.data?.[0]?.id || null;
-    } catch {
-        console.warn(`[Booking] Room search by Beds24_Room_ID failed for ${params.room.id}`);
+    // Strategy A: If room.id looks like a Zoho numeric record ID (15+ digits), use it directly
+    if (/^\d{15,}$/.test(params.room.id)) {
+        zohoRoomId = params.room.id;
+        console.log(`[Booking] Room ID is a Zoho record ID, using directly: ${zohoRoomId}`);
     }
 
-    // Strategy B: Hardcoded map (handles Beds25 CUIDs that don't match Beds24 IDs)
-    if (!zohoRoomId && ZOHO_ROOM_MAP[params.room.id]) {
-        zohoRoomId = ZOHO_ROOM_MAP[params.room.id];
-        console.log(`[Booking] Room resolved via hardcoded map: ${params.room.id} → ${zohoRoomId}`);
+    // Strategy B: Search by Beds24_Room_ID (for future Beds24-sourced IDs)
+    if (!zohoRoomId) {
+        try {
+            const roomResult = await zoho.searchRecord(
+                ZOHO_ROOMS_MODULE,
+                `(Beds24_Room_ID:equals:${params.room.id})`
+            );
+            zohoRoomId = roomResult?.data?.[0]?.id || null;
+        } catch {
+            console.warn(`[Booking] Room search by Beds24_Room_ID failed for ${params.room.id}`);
+        }
     }
 
     // Strategy C: Search by room name
