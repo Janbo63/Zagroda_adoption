@@ -1175,7 +1175,8 @@
       "checkOut": "Check-out",
       "nights": "{count} Nacht",
       "nights_plural": "{count} Nächte",
-      "minNights": "Mindestens {count} Nächte"
+      "minNights": "Mindestens {count} Nächte",
+      "minNightsHint": "Bitte wählen Sie ein Abreisedatum mindestens 2 Tage nach dem Check-in."
     },
     "rooms": {
       "title": "Wählen Sie Ihr Zimmer",

@@ -1192,7 +1192,8 @@
       "checkOut": "Check-out",
       "nights": "{count} noc",
       "nights_plural": "{count} nocí",
-      "minNights": "Minimálně {count} nocí"
+      "minNights": "Minimálně {count} nocí",
+      "minNightsHint": "Vyberte prosím datum odjezdu alespoň 2 dny po příjezdu."
     },
     "rooms": {
       "title": "Vyberte si pokoj",

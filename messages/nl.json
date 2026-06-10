@@ -1171,7 +1171,8 @@
             "checkOut": "Check-out",
             "nights": "{count} nacht",
             "nights_plural": "{count} nachten",
-            "minNights": "Minimaal {count} nachten"
+            "minNights": "Minimaal {count} nachten",
+            "minNightsHint": "Selecteer een vertrekdatum minstens 2 dagen na aankomst."
         },
         "rooms": {
             "title": "Kies je kamer",

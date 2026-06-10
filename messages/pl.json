@@ -1176,7 +1176,8 @@
       "checkOut": "Wymeldowanie",
       "nights": "{count} noc",
       "nights_plural": "{count} nocy",
-      "minNights": "Minimum {count} nocy"
+      "minNights": "Minimum {count} nocy",
+      "minNightsHint": "Wybierz datę wymeldowania co najmniej 2 dni po zameldowaniu."
     },
     "rooms": {
       "title": "Wybierz pokój",

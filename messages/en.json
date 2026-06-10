@@ -1177,7 +1177,8 @@
       "checkOut": "Check-out",
       "nights": "{count} night",
       "nights_plural": "{count} nights",
-      "minNights": "Minimum {count} nights"
+      "minNights": "Minimum {count} nights",
+      "minNightsHint": "Please select a checkout date at least 2 days after check-in."
     },
     "rooms": {
       "title": "Choose your room",

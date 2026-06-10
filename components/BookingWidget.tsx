@@ -334,6 +334,7 @@ function StepDates({ state, onChange, onNext }: {
         onChange('nights', calcNights(state.checkIn, v));
     };
 
+    const tooFewNights = state.checkIn && state.checkOut && state.nights > 0 && state.nights < 2;
     const canNext = state.checkIn && state.checkOut && state.nights >= 2;
 
     return (
@@ -365,8 +366,26 @@ function StepDates({ state, onChange, onNext }: {
             </div>
 
             {state.nights > 0 && (
-                <div className="inline-flex items-center gap-2 bg-emerald-900/50 border border-emerald-700 text-emerald-300 rounded-full px-4 py-1.5 text-sm mb-6">
+                <div className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm mb-4 border ${
+                    tooFewNights
+                        ? 'bg-amber-900/50 border-amber-700 text-amber-300'
+                        : 'bg-emerald-900/50 border-emerald-700 text-emerald-300'
+                }`}>
                     🌙 {t(state.nights === 1 ? 'dates.nights' : 'dates.nights_plural', { count: state.nights })}
+                </div>
+            )}
+
+            {tooFewNights && (
+                <div className="flex items-start gap-3 bg-amber-950/60 border border-amber-700/60 rounded-xl p-4 mb-6 animate-in fade-in slide-in-from-top-2 duration-300">
+                    <span className="text-amber-400 text-lg flex-shrink-0 mt-0.5">⚠️</span>
+                    <div>
+                        <p className="text-amber-200 font-medium text-sm">
+                            {t('dates.minNights', { count: 2 })}
+                        </p>
+                        <p className="text-amber-400/70 text-xs mt-1">
+                            {t('dates.minNightsHint')}
+                        </p>
+                    </div>
                 </div>
             )}
 
