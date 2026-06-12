@@ -8,14 +8,6 @@ services:
         - NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
     ports:
       - "3001:3000"
-    environment:
-      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
-      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
-      - NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
-      - BEDS25_API_KEY=${BEDS25_API_KEY}
-      - BEDS25_BASE_URL=${BEDS25_BASE_URL:-https://admin.zagrodaalpakoterapii.com}
-      - ZOHO_CLIENT_ID=${ZOHO_CLIENT_ID}
-      - ZOHO_CLIENT_SECRET=${ZOHO_CLIENT_SECRET}
-      - ZOHO_REFRESH_TOKEN=${ZOHO_REFRESH_TOKEN}
-      - CONTACT_EMAIL=${CONTACT_EMAIL:-info@zagrodaalpakoterapii.com}
+    env_file:
+      - .env
     restart: always
