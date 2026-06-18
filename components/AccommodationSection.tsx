@@ -79,14 +79,18 @@ export function AccommodationSection({ locale }: AccommodationSectionProps) {
             ))}
 
             {/* Optional: Add navigation dots */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1">
               {accommodationImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all
-                    ${currentImageIndex === index ? 'bg-white w-4' : 'bg-white/50'}`}
-                />
+                  aria-label={`Photo ${index + 1}`}
+                  className="p-2 group"
+                >
+                  <span className={`block rounded-full transition-all
+                    ${currentImageIndex === index ? 'bg-white w-4 h-2' : 'bg-white/50 w-2 h-2 group-hover:bg-white/80'}`}
+                  />
+                </button>
               ))}
             </div>
           </div>

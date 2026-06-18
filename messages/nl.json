@@ -104,6 +104,7 @@
         "title": "Activiteiten",
         "sectionTitle": "Onze activiteiten",
         "viewDetails": "Bekijk details",
+        "callUs": "Bel ons",
         "attributes": "Kenmerken van de activiteit",
         "details": "Details van de activiteit",
         "highlights": "Hoogtepunten",
@@ -847,7 +848,14 @@
     "social": {
         "title": "Mis niets!",
         "description": "Volg ons op sociale media voor speciale aanbiedingen voor verblijven en evenementen!",
+        "badge": "Exclusieve Content",
         "cta": "Bekijk onze profielen"
+    },
+    "video": {
+        "badge": "Bekijk het zelf",
+        "title": "Het leven op de boerderij 🦙",
+        "subtitle": "Een paar minuten in het Reuzengebergte met onze alpaca's.",
+        "caption": "Onze alpacaboerderij in het hart van het Sudetengebergte"
     },
     "stay": {
         "meta": {

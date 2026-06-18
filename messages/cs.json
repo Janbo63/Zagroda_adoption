@@ -283,6 +283,7 @@
     "title": "Aktivity",
     "sectionTitle": "Naše Aktivity",
     "viewDetails": "Zobrazit Podrobnosti",
+    "callUs": "Zavolejte nám",
     "attributes": "Atributy Aktivity",
     "details": "Detaily Aktivity",
     "highlights": "Hlavní Body",
@@ -868,7 +869,14 @@
   "social": {
     "title": "Nenechte si nic ujít!",
     "description": "Sledujte nás na sociálních sítích a získejte speciální nabídky na pobyty a akce!",
+    "badge": "Exkluzivní obsah",
     "cta": "Zobrazit naše profily"
+  },
+  "video": {
+    "badge": "Přesvědčte se sami",
+    "title": "Život na farmě 🦙",
+    "subtitle": "Pár minut v Krkonoších s našimi alpakami.",
+    "caption": "Naše alpaková farma v srdci Sudet"
   },
   "stay": {
     "meta": {

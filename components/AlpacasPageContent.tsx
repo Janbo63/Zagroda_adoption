@@ -32,7 +32,7 @@ export function AlpacasPageContent({ locale }: AlpacasPageContentProps) {
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold text-primary-600 flex justify-between items-center">
                 {t(`${id}.name`)}
-                <Heart className="w-5 h-5 text-red-400 hover:fill-red-400 cursor-pointer transition-colors" />
+                <Heart className="w-5 h-5 text-red-400" />
               </CardTitle>
             </CardHeader>
             <div className="relative aspect-[4/3] w-full group">

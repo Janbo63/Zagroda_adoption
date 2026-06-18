@@ -336,6 +336,7 @@
     "title": "Aktivitäten",
     "sectionTitle": "Unsere Aktivitäten",
     "viewDetails": "Details Anzeigen",
+    "callUs": "Rufen Sie uns an",
     "attributes": "Attribute",
     "details": "Details",
     "highlights": "Höhepunkte",
@@ -851,7 +852,14 @@
   "social": {
     "title": "Nichts verpassen!",
     "description": "Folgen Sie uns in de sozialen Medien, um Sonderangebote für Aufenthalte und Veranstaltungen zu erhalten!",
+    "badge": "Exklusiver Inhalt",
     "cta": "Unsere Profile ansehen"
+  },
+  "video": {
+    "badge": "Überzeugen Sie sich selbst",
+    "title": "Leben auf der Farm 🦙",
+    "subtitle": "Ein paar Minuten im Riesengebirge mit unseren Alpakas.",
+    "caption": "Unsere Alpakafarm im Herzen des Sudetengebirges"
   },
   "stay": {
     "meta": {

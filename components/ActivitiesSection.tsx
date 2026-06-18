@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card"
 import { useTranslations } from 'next-intl'
 
@@ -52,27 +51,25 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {activities.map((activity) => (
-          <Card key={activity.id} className="h-full hover:shadow-lg transition-shadow">
-            <CardContent className="p-4">
-              <CardTitle className="mb-2">{t(`${activity.id}.name`)}</CardTitle>
-              <div className="relative aspect-[4/3] mb-4">
-                <Image 
-                  src={activity.image} 
-                  alt={t(`${activity.id}.alt`)} 
-                  fill
-                  className="object-cover rounded-md" 
-                />
-              </div>
-              <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
-              <Link href={`/${locale}/activities`}>
-                <Button 
-                  className="mt-4 bg-blue-500 text-white hover:bg-blue-600 rounded-full transition-all duration-300 px-6"
-                >
+          <Link key={activity.id} href={`/${locale}/activities`} className="block h-full">
+            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
+              <CardContent className="p-4">
+                <CardTitle className="mb-2">{t(`${activity.id}.name`)}</CardTitle>
+                <div className="relative aspect-[4/3] mb-4 overflow-hidden rounded-md">
+                  <Image 
+                    src={activity.image} 
+                    alt={t(`${activity.id}.alt`)} 
+                    fill
+                    className="object-cover rounded-md transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+                <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
+                <span className="inline-block mt-4 bg-blue-500 text-white rounded-full transition-all duration-300 px-6 py-2 text-sm font-medium group-hover:bg-blue-600">
                   {t('viewDetails')}
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
+                </span>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </section>

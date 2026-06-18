@@ -2,7 +2,7 @@
 
 **Site**: zagrodaalpakoterapii.com  
 **Stack**: Next.js 14 · TypeScript · Tailwind · Zoho CRM · Stripe · Docker → Hostinger VPS  
-**Last updated**: 2026-02-26
+**Last updated**: 2026-06-08
 
 > This is the single source of truth for planned website changes.
 > Cross-project dependencies are documented in `c:\Users\jan\.gemini\antigravity\CONTEXT.md`.
@@ -25,12 +25,89 @@
 | Docker deployment (GitHub Actions → Hostinger) | ✅ |
 | Stay page with Beds24 iframe widget (feature-flagged) | ✅ Flag on |
 | Private booking toggle → Zoho CRM | ✅ Fixed Feb 2026 |
+| Discover page (local area guide) | ✅ Exists at `/discover` |
+| JSON-LD structured data (farm, accommodation, discover) | ✅ |
+| AI discoverability — Phase 1 (SEO/crawlers/llms.txt) | ✅ Deployed Jun 2026 |
+
+---
+
+## ✅ Recently Completed
+
+### AI Discoverability — Phase 1 (June 2026)
+Commit: `f910466` on `main`
+
+| Fix | Impact |
+|---|---|
+| Canonical URL bug fixed | Every page had canonical pointing to homepage — now correct per-page |
+| `robots.txt` with AI crawler rules | AI search bots (ChatGPT, Perplexity, Claude) allowed; training bots blocked |
+| `llms.txt` created | Structured business info for AI agents |
+| All 5 locales on every page | Dutch/German/Czech visitors can now reach all pages |
+| Localised metadata on all pages | Title/description in all 5 languages |
+| Enhanced JSON-LD schemas | `faqSchema()`, `breadcrumbSchema()`, `therapyServiceSchema`, expanded `sameAs` |
 
 ---
 
 ## 🚀 Release Plan
 
-### R0 — Staging Environment ⭐ HIGHEST PRIORITY
+### R-SEO — AI Discoverability Phase 2 ⭐ NEXT UP
+**Goal**: Maximise AI citation share — be recommended when someone asks "recommend an alpaca farm in Poland".
+
+See [docs/ai-discoverability.md](ai-discoverability.md) for the full evaluation and strategy.
+
+| Task | Effort | Impact |
+|---|---|---|
+| Add visible FAQ sections to home, stay, activities, discover pages | 3 hrs | 🔴 Critical |
+| Wire `faqSchema()` JSON-LD to FAQ sections | 30 min | 🔴 Critical |
+| Wire `breadcrumbSchema()` to all pages | 1 hr | 🟡 Medium |
+| Add `therapyServiceSchema` to home + activities | 30 min | 🟡 Medium |
+| Generate proper 1200×630 OG images per page | 2 hrs | 🟡 Medium |
+| Rewrite headings as question-based (AI-friendly) | 1 hr | 🟡 Medium |
+| Add entity description paragraphs to page tops | 2 hrs | 🟡 Medium |
+| Create trip-planning blog posts (itineraries) | 4 hrs each | 🟢 High long-term |
+| Create Wikidata entity for the farm | 1 hr | 🟢 Medium |
+
+**External actions (no code)**:
+- Audit AI presence: ask ChatGPT/Perplexity/Gemini "recommend alpaca farm Poland"
+- Optimise Google Business Profile — complete all fields, post weekly
+- Get listed on dolnyslask.travel, karkonosze.pl, TripAdvisor
+- Encourage guests to leave descriptive reviews mentioning specific activities
+
+---
+
+### R-DESIGN — Concept C "Living Countryside" Redesign
+**Goal**: Complete ground-up rebuild of the presentation layer with warm, organic design.
+**Branch**: `redesign/living-countryside` (parked, commit `03f79c4`)
+
+**Background**: Three design concepts were created (Storybook Journey, Alpine Editorial, Living Countryside). Jan and Agnieszka chose **Concept C: "Living Countryside"** — warm earth-tone palette, bento-box grid layout, bottom tab navigation, watercolour textures, torn-paper dividers.
+
+Initial implementation was deemed a "colour reskin" rather than a true redesign. Agreed to do a proper ground-up rebuild. Parked in favour of SEO fixes which deliver immediate value.
+
+| Phase | Task | Status |
+|---|---|---|
+| Foundation | New colour palette, fonts, CSS variables | ✅ Done (uncommitted → committed) |
+| Foundation | Bottom tab navigation (mobile) | ✅ Done |
+| Foundation | Simplified warm navbar | ✅ Done |
+| Homepage | Bento masonry grid | ⬜ Needs ground-up rebuild |
+| Homepage | Social proof (Booking.com 9.6 score) | ⬜ Needs guest reviews |
+| Homepage | Farm life amenities card | ✅ Component created |
+| Homepage | Discover teaser card | ✅ Component created |
+| Inner pages | Restyle stay, adopt, vouchers, discover, activities | ⬜ Not started |
+| New content | Activity pricing table | ⬜ Needs Jan's input |
+| New content | Guest review quotes (3-5 favourites) | ⬜ Needs Jan's input |
+| New content | Professional photography | ⬜ Needs Jan's input |
+
+**Content Jan needs to provide for redesign**:
+1. **Booking.com reviews** — 3-5 favourite guest quotes with names/countries
+2. **Activity pricing** — exact prices for each activity type
+3. **Professional photos** — high-quality images of rooms, alpacas, views, activities
+4. **Amenity confirmations** — fireplace, playground, kitchen, garden details
+
+**Style board**: Available at `public/styleboard.html` (run dev server and visit `/styleboard.html`)
+**Concept mockups**: Stored in `public/concept_*.png`
+
+---
+
+### R0 — Staging Environment
 **Goal**: A proper VPS staging environment so all future releases can be tested before hitting production.
 
 | Task | Notes |
@@ -110,35 +187,6 @@ Zero user-visible impact. One component per PR.
 
 ---
 
-### R4 — Local Area Guide (New Feature)
-**Goal**: A dedicated section covering activities and places of interest near the farm, helping visitors from further afield (Netherlands, Belgium) plan their full trip and make the booking decision.
-
-| Task | Notes |
-|---|---|
-| Define content scope: local vs extended area radius | Local (within 30 min) + extended (within 2 hrs for overnight visitors) |
-| Design page structure and navigation | Separate route, e.g. `/discover/area` or `/area` |
-| Content categories: nature, castles, towns, restaurants, family | Curated, not exhaustive |
-| Multi-language content for NL/EN priority locales | NL first (partner campaign audience) |
-| Link from accommodation/stay page | Decision-making context for overnight guests |
-| SEO: target "things to do near [farm location]" | Organic discovery from target markets |
-
-> **Note**: This is a standalone feature with no cross-project dependencies. Can be started in parallel with R2/R3.
-
----
-
-### R5 — Content & SEO
-**Goal**: Improve organic discovery and keep content fresh.
-
-| Task | Notes |
-|---|---|
-| Regular blog publishing cadence | CMS exists; no cadence yet |
-| Meta titles/descriptions review across all locales | EN/DE/NL likely need keyword work |
-| Dutch (`nl`) locale copy quality review | Priority — partner campaign traffic |
-| Activities page — gallery and pricing audit | `ActivitiesPageContent.tsx` |
-| About page content freshness check | |
-
----
-
 ## 🟡 Backlog (Unscheduled)
 
 | Item | Why Deferred |
@@ -151,20 +199,34 @@ Zero user-visible impact. One component per PR.
 | Admin: booking calendar view | Tape chart in Beds25; lightweight version here TBD |
 | Winter vol liefde campaign activation | Route exists; needs content + activation decision |
 | Performance / Lighthouse audit | Not yet measured |
+| Next.js 14 → 15 upgrade | Current version outdated, upgrade when stable |
 
 ---
 
-## 📌 Release Sequencing
+## 📌 Release Sequencing (Updated June 2026)
 
 ```
-R0 (Staging) → R0.5 (Alignment) → R1 (Booking Live) → R2+R3+R4 (parallel) → R5
+R-SEO (AI Phase 2) → R-DESIGN (Living Countryside) → R0 (Staging) → R0.5 → R1 (Booking Live) → R2+R3 (parallel)
 ```
 
-- **R0 first**: Everything must be testable before we make major changes
-- **R0.5 before R1**: Data accuracy and flow verification before public launch
-- **R1**: Core revenue — booking goes live with correct Stripe keys
-- **R2, R3, R4 can run in parallel** — no dependencies between them
-- **R5 ongoing**: Content is evergreen, can start any time
+- **R-SEO first**: Quick wins that improve discoverability with zero visual risk
+- **R-DESIGN next**: Full presentation layer rebuild (Concept C)
+- **R0 before R1**: Staging needed before booking goes public
+- **R0.5 before R1**: Data accuracy verification
+- **R1**: Core revenue — booking goes live
+- **R2, R3 in parallel**: Tech debt cleanup
+
+---
+
+## 🌿 Branch Registry
+
+| Branch | Purpose | Status |
+|---|---|---|
+| `main` | Production (auto-deploys to Hostinger) | ✅ Active |
+| `redesign/living-countryside` | Concept C redesign (WIP) | ⏸️ Parked |
+| `custom-booking-system` | Old booking experiments | 🔴 Stale (merged to main) |
+| `feat/booking-widget-golive` | Old booking widget | 🔴 Stale (merged to main) |
+| `look-and-feel-upgrade` | Experimental features (AI chatbot, Tinder swipe) | 🔴 Stale (incomplete prototypes) |
 
 ---
 

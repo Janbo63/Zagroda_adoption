@@ -104,6 +104,7 @@
     "title": "Aktywności",
     "sectionTitle": "Nasze Aktywności",
     "viewDetails": "Zobacz Szczegóły",
+    "callUs": "Zadzwoń do nas",
     "attributes": "Atrybuty Aktywności",
     "details": "Szczegóły Aktywności",
     "highlights": "Najważniejsze Informacje",
@@ -833,7 +834,14 @@
   "social": {
     "title": "Nie przegap okazji!",
     "description": "Obserwuj nas w mediach społecznościowych, aby otrzymywać specjalne oferty na pobyty i wydarzenia!",
+    "badge": "Ekskluzywna Treść",
     "cta": "Zobacz nasze profile"
+  },
+  "video": {
+    "badge": "Zobacz sam",
+    "title": "Życie na farmie 🦙",
+    "subtitle": "Kilka minut w Karkonoszach z naszymi alpakami.",
+    "caption": "Nasza farma alpak w sercu Sudetów"
   },
   "admin": {
     "dashboard": "Panel",

@@ -91,6 +91,7 @@
     "title": "Activities",
     "sectionTitle": "Our Activities",
     "viewDetails": "View Details",
+    "callUs": "Call us",
     "attributes": "Activity Attributes",
     "details": "Activity Details",
     "highlights": "Highlights",
@@ -834,7 +835,14 @@
   "social": {
     "title": "Don't Miss Out!",
     "description": "Follow us on social media to get special offers on stays and events!",
+    "badge": "Exclusive Content",
     "cta": "See Our Profiles"
+  },
+  "video": {
+    "badge": "See it for yourself",
+    "title": "Life at the farm 🦙",
+    "subtitle": "A few minutes in the Karkonosze mountains with our alpacas.",
+    "caption": "Our alpaca farm in the heart of the Sudeten mountains"
   },
   "admin": {
     "dashboard": "Dashboard",

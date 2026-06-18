@@ -89,7 +89,7 @@ export function GuestReviewsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               >
-                <Card className="h-full border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white group">
+                <Card className="h-full border-none shadow-md bg-white group">
                   <CardContent className="p-6 flex flex-col justify-between h-full">
                     {/* Quote icon */}
                     <div className="mb-4">

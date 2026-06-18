@@ -39,7 +39,8 @@ export function AlpacaSoundButton({ soundUrl, color = "bg-primary-500" }: Alpaca
                 size="icon"
                 className={`rounded-full shadow-md ${color} text-white border-2 border-white/50`}
                 onClick={(e) => {
-                    e.stopPropagation() // Prevent triggering card click
+                    e.preventDefault()      // Prevent Link navigation
+                    e.stopPropagation()      // Prevent triggering card click
                     playSound()
                 }}
                 aria-label="Play alpaca sound"

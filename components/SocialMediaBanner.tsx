@@ -34,7 +34,7 @@ export function SocialMediaBanner() {
                         <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                             <Sparkles className="w-6 h-6 text-yellow-200 animate-pulse" />
                             <span className="uppercase tracking-widest text-sm font-bold text-orange-100">
-                                Exclusive Content
+                                {t('badge')}
                             </span>
                         </div>
                         <h2 className="text-3xl md:text-4xl font-black mb-4 leading-tight">

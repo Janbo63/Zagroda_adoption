@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const VIDEO_ID = 'x2O-3kYXi_A';
 
@@ -9,6 +10,8 @@ const VIDEO_ID = 'x2O-3kYXi_A';
  * GDPR-friendly: no cookies set until user clicks play.
  */
 export function VideoSection() {
+    const t = useTranslations('video');
+
     return (
         <section className="py-16 bg-stone-50">
             <div className="max-w-4xl mx-auto px-4">
@@ -21,13 +24,13 @@ export function VideoSection() {
                     {/* Heading */}
                     <div className="text-center mb-8">
                         <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
-                            See it for yourself
+                            {t('badge')}
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                            Life at the farm 🦙
+                            {t('title')}
                         </h2>
                         <p className="text-gray-500 mt-2 text-lg">
-                            A few minutes in the Karkonosze mountains with our alpacas.
+                            {t('subtitle')}
                         </p>
                     </div>
 
@@ -46,7 +49,7 @@ export function VideoSection() {
 
                     {/* Sub-label */}
                     <p className="text-center text-sm text-gray-400 mt-4">
-                        🎬 Our alpaca farm in the heart of the Sudeten mountains
+                        🎬 {t('caption')}
                     </p>
                 </motion.div>
             </div>

@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useTranslations } from 'next-intl'
 import { Phone, MessageCircle } from 'lucide-react'
@@ -58,26 +59,26 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
                 </p>
               </div>
               <div className="flex gap-2 mt-4">
-                <a
-                  href={`https://wa.me/48695545330?text=${encodeURIComponent(t(`${key}.name`) + ' - ')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                  onClick={() => handleBookClick(key)}
-                >
-                  <Button className="w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">
+                <Button asChild className="flex-1 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">
+                  <a
+                    href={`https://wa.me/48695545330?text=${encodeURIComponent(t(`${key}.name`) + ' - ')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleBookClick(key)}
+                  >
                     <MessageCircle className="mr-2 h-4 w-4" />
                     WhatsApp
-                  </Button>
-                </a>
-                <a
-                  href="tel:+48695545330"
-                  onClick={handlePhoneClick}
-                >
-                  <Button variant="outline" className="rounded-full py-2 px-4 transition-all duration-300 transform hover:scale-105">
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="rounded-full min-w-[44px] min-h-[44px] transition-all duration-300 transform hover:scale-105">
+                  <a
+                    href="tel:+48695545330"
+                    onClick={handlePhoneClick}
+                    aria-label={t('callUs')}
+                  >
                     <Phone className="h-4 w-4" />
-                  </Button>
-                </a>
+                  </a>
+                </Button>
               </div>
             </CardContent>
           </Card>
