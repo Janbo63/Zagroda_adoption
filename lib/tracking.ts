@@ -47,6 +47,14 @@ export function trackContactClick({ channel, page, label }: TrackContactParams) 
     page: page || window.location.pathname,
   });
 
+  // Google Ads specific conversion — fires for all contact channels,
+  // weighted higher for WhatsApp as the primary booking channel
+  window.gtag?.('event', 'conversion', {
+    send_to: 'AW-1028380046/Mf3MCP-q__sbEI6rr-oD',
+    value: channel === 'whatsapp' ? 100.0 : 10.0,
+    currency: 'PLN',
+  });
+
   // Meta Pixel — 'Lead' is a standard event Meta Ads can optimise for
   window.fbq?.('track', 'Lead', {
     content_name: channel,
