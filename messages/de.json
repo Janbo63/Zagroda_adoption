@@ -1416,17 +1416,17 @@
     },
     "contrast": {
       "title": "Stadtwohnung vs. Alpaka Workation",
-      "subtitle": "Verbessern Sie Ihre Homeoffice-Routine mit Natur, Ruhe und tiergestützter Entspannung.",
+      "subtitle": "Verbessern Sie Ihre Homeoffice-Routine mit Natur, Weite und tiergestützter Entspannung.",
       "cityTitle": "Typische Stadtwohnung",
-      "city1": "Straßenlärm, Sirenen und Großstadtsmog",
+      "city1": "Stadtsmog, Betonwände und Umweltbelastung",
       "city2": "15 Minuten Kaffeepause mit dem Smartphone",
-      "city3": "Feierabend-Berufsverkehr und Stress",
-      "city4": "Enge Räume und laute Nachbarn",
+      "city3": "Feierabend-Gedränge und Großstadtstress",
+      "city4": "Enge Wohnung in dicht bebauter Umgebung",
       "zagrodaTitle": "Zagroda Alpaka Workation",
-      "zagroda1": "Bergluft, Vogelgezwitscher und grasende Alpakas vor dem Fenster",
+      "zagroda1": "Frische Bergluft, grüne Weiden und grasende Alpakas",
       "zagroda2": "Kaffeepause beim Füttern von Fernando & Elmo auf der Weide",
       "zagroda3": "Feierabend-Wanderungen im Isergebirge beim Sonnenuntergang",
-      "zagroda4": "Gemütliche Suite mit Schreibtisch & schnellem Glasfaser-WLAN"
+      "zagroda4": "Gemütlicher Aufenthalt in den Bergen mit Arbeitsplatz & Glasfaser-WLAN"
     },
     "essentials": {
       "title": "Perfekt für Fokus & Erholung",
@@ -1434,11 +1434,11 @@
       "wifiTitle": "100+ Mbit/s Glasfaser",
       "wifiDesc": "Ultra-schnelles Internet für reibungslose Zoom-, Teams- und Slack-Calls in allen Räumen.",
       "deskTitle": "Eigene Arbeitsplätze",
-      "deskDesc": "Bequeme Holzschreibtische mit viel Tageslicht, Steckdosen und ruhiger Umgebung.",
-      "coffeeTitle": "Espresso & Küchen",
-      "coffeeDesc": "Espressomaschinen, Bio-Tees und voll ausgestattete Küchen in jedem Apartment.",
-      "quietTitle": "Ungestörter Fokus",
-      "quietDesc": "Aufenthalte unter der Woche sind besonders friedlich. Garantiert ruhige Arbeitsstunden.",
+      "deskDesc": "Bequeme Holzschreibtische mit viel Tageslicht, Steckdosen und frischer Luft.",
+      "coffeeTitle": "Kaffee & Tee im Zimmer",
+      "coffeeDesc": "Zubereitungsmöglichkeiten für Kaffee & Tee im Zimmer, plus Küchennutzung für Selbstversorger.",
+      "quietTitle": "Digitaler Reset & Erholung",
+      "quietDesc": "Entkommen Sie den Menschenmassen der Stadt. Aufenthalte unter der Woche bieten erholsame Ruhe.",
       "alpacaTitle": "Entspannung durch Alpakas",
       "alpacaDesc": "Natürlicher Stressabbau. Gehen Sie jederzeit nach draußen, um bei der Herde aufzutanken.",
       "hikesTitle": "Zugang zu Wanderwegen",
@@ -1473,8 +1473,8 @@
       "a2": "Absolut. Unsere Workation-Pakete sind speziell für Aufenthalte von Sonntag bis Donnerstag oder Montag bis Freitag konzipiert.",
       "q3": "Welche Sprachen sprechen die Gastgeber?",
       "a3": "Wir sprechen fließend Englisch, Polnisch und Niederländisch!",
-      "q4": "Gibt es Küchen zur Selbstverpflegung?",
-      "a4": "Ja, alle Apartments verfügen über komplett ausgestattete Küchen."
+      "q4": "Stehen Kaffee- & Küchenmöglichkeiten zur Verfügung?",
+      "a4": "Alle Zimmer verfügen über Kaffee- und Teezubereitungsmöglichkeiten. Küchennutzung ist für Selbstversorger vorhanden."
     }
   }
 }

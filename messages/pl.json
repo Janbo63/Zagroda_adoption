@@ -1417,17 +1417,17 @@
     },
     "contrast": {
       "title": "Miejskie Mieszkanie vs. Alpaca Workation",
-      "subtitle": "Podnieś komfort pracy zdalnej dzięki naturze, ciszy i terapii z udziałem zwierząt.",
+      "subtitle": "Podnieś komfort pracy zdalnej dzięki naturze, otwartej przestrzeni i terapii ze zwierzętami.",
       "cityTitle": "Typowe Mieszkanie w Mieście",
-      "city1": "Hałas uliczny, syreny i miejski smog",
+      "city1": "Miejski smog, betonowe ściany i zanieczyszczenia",
       "city2": "15-minutowa przerwa na kawę ze smartfonem w ręku",
-      "city3": "Popołudniowe korki i codzienny stres",
-      "city4": "Ciasny pokój i głośni sąsiedzi za ścianą",
+      "city3": "Popołudniowe tłumy i miejski pośpiech",
+      "city4": "Ciasne mieszkanie w gęstej zabudowie miejskiej",
       "zagrodaTitle": "Zagroda Alpaca Workation",
-      "zagroda1": "Górska bryza, śpiew ptaków i pasące się alpaki za oknem",
+      "zagroda1": "Świeże górskie powietrze, zielone wybiegi i pasące się alpaki",
       "zagroda2": "Przerwa na kawę połączona z karmieniem Fernando i Elmo",
       "zagroda3": "Popołudniowy spacer szlakami Gór Izerskich o zachodzie słońca",
-      "zagroda4": "Przytulny apartament z biurkiem do pracy i szybkim światłowodem"
+      "zagroda4": "Przytulny górski pobyt z wygodnym miejscem do pracy i szybkim światłowodem"
     },
     "essentials": {
       "title": "Stworzone do Skupienia i Relaksu",
@@ -1436,10 +1436,10 @@
       "wifiDesc": "Brak zakłóceń podczas wideokonferencji Zoom, Teams i Slack w każdym pokoju.",
       "deskTitle": "Dedykowane Biurko",
       "deskDesc": "Wygodne drewniane biurka z naturalnym światłem i dostępem do gniazdek.",
-      "coffeeTitle": "Kawiarka & Kuchnia",
-      "coffeeDesc": "Zestawy do parzenia kawy, ekologiczne herbaty i wyposażone kuchnie w każdym apartamencie.",
-      "quietTitle": "Cisza i Skupienie",
-      "quietDesc": "Pobyty w środku tygodnia są wyjątkowo kameralne. Gwarancja spokojnej pracy bez hałasu.",
+      "coffeeTitle": "Kawa i Herbata w Pokoju",
+      "coffeeDesc": "Zestaw do parzenia kawy i herbaty w każdym pokoju oraz dostęp do kuchni.",
+      "quietTitle": "Digital Reset i Skupienie",
+      "quietDesc": "Ucieczka od miejskich tłumów. Pobyty w środku tygodnia oferują regenerujące tempo.",
       "alpacaTitle": "Redukcja Stresu z Alpakami",
       "alpacaDesc": "Naturalne obniżenie poziomu kortyzolu. Wystarczy wyjść na zewnątrz, by odpocząć przy stadzie.",
       "hikesTitle": "Dostęp do Szlaków Izerskich",
@@ -1474,8 +1474,8 @@
       "a2": "Oczywiście. Pakiety Workation zostały stworzone z myślą o pobytach Niedziela-Czwartek lub Poniedziałek-Piątek.",
       "q3": "W jakich językach rozmawiają gospodarze?",
       "a3": "Mówimy płynnie po angielsku, polsku i holendersku!",
-      "q4": "Czy apartamenty posiadają własną kuchnię?",
-      "a4": "Tak, wszystkie apartamenty posiadają w pełni wyposażone aneksy kuchenne."
+      "q4": "Czy dostępne są udogodnienia do parzenia kawy i kuchnia?",
+      "a4": "Wszystkie pokoje wyposażone są w zestawy do parzenia kawy i herbaty, a także dostęp do zaplecza kuchennego."
     }
   }
 }

@@ -1418,17 +1418,17 @@
     },
     "contrast": {
       "title": "The City Apartment vs. The Alpaca Workation",
-      "subtitle": "Upgrade your remote work routine with nature, quiet, and animal-assisted stress relief.",
+      "subtitle": "Upgrade your remote work routine with nature, open spaces, and animal-assisted stress relief.",
       "cityTitle": "Typical City Apartment",
-      "city1": "Traffic noise, sirens, and city pollution",
+      "city1": "City smog, concrete walls, and urban pollution",
       "city2": "15-minute coffee break scrolling on your phone",
-      "city3": "Post-work rush hour congestion and stress",
-      "city4": "Cramped room with noisy neighbors",
+      "city3": "Post-work rush hour crowds and city stress",
+      "city4": "Cramped apartment surrounded by urban congestion",
       "zagrodaTitle": "Zagroda Alpaca Workation",
-      "zagroda1": "Mountain breeze, birdsong, and grazing alpacas",
+      "zagroda1": "Fresh mountain air, open pastures, and grazing alpacas",
       "zagroda2": "Coffee break feeding Fernando & Elmo in the pasture",
       "zagroda3": "Post-work sunset walks on scenic Izera mountain trails",
-      "zagroda4": "Cozy mountain suite with private workspace & high-speed fiber"
+      "zagroda4": "Cozy mountain stay with comfortable work setup & high-speed fiber"
     },
     "essentials": {
       "title": "Built for Remote Focus & Unwinding",
@@ -1436,11 +1436,11 @@
       "wifiTitle": "100+ Mbps Fiber Wi-Fi",
       "wifiDesc": "Ultra-fast, reliable internet for seamless Zoom, Teams, and Slack calls across all rooms.",
       "deskTitle": "Dedicated Workspaces",
-      "deskDesc": "Comfortable wooden desks with ample natural light, power hubs, and quiet surroundings.",
-      "coffeeTitle": "Espresso & Kitchens",
-      "coffeeDesc": "Espresso setups, organic teas, and fully equipped kitchens in every apartment.",
-      "quietTitle": "Distraction-Free Focus",
-      "quietDesc": "Midweek stays are peaceful. Deep work hours guaranteed with zero city noise.",
+      "deskDesc": "Comfortable wooden desks with ample natural light, power hubs, and fresh air.",
+      "coffeeTitle": "Coffee & Tea Facilities",
+      "coffeeDesc": "In-room coffee and tea making setups, with kitchen access available for self-catering.",
+      "quietTitle": "Focus & Digital Reset",
+      "quietDesc": "Escape city crowds and urban fatigue. Midweek stays offer a relaxed, revitalizing pace.",
       "alpacaTitle": "Alpaca Stress Relief",
       "alpacaDesc": "Natural cortisol reduction. Step outside anytime to recharge next to our gentle herd.",
       "hikesTitle": "Izera Trail Access",
@@ -1472,11 +1472,11 @@
       "q1": "Is the Wi-Fi reliable enough for video calls?",
       "a1": "Yes! We operate a dedicated high-speed fiber line (100+ Mbps) throughout the property. Video calls on Zoom, Teams, and Slack run smoothly.",
       "q2": "Can I book a midweek stay starting on Sunday or Monday?",
-      "a2": "Absolutely. Our Workation packages are specifically designed for Sunday-to-Thursday or Monday-to-Friday stays to give you the quietest environment.",
+      "a2": "Absolutely. Our Workation packages are specifically designed for Sunday-to-Thursday or Monday-to-Friday stays to offer the best experience.",
       "q3": "What languages do the hosts speak?",
       "a3": "We speak English, Polish, and Dutch fluently, and welcome remote workers from across Europe!",
-      "q4": "Are kitchens available for self-catering?",
-      "a4": "Yes, all apartments feature fully-equipped kitchens so you can cook your own meals during your workday."
+      "q4": "Are kitchen & coffee facilities available?",
+      "a4": "All rooms include in-room coffee and tea making setups. Kitchen facilities are available for self-catering."
     }
   }
 }

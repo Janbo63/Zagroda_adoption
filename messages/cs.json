@@ -1433,17 +1433,17 @@
     },
     "contrast": {
       "title": "Městský Byt vs. Alpaka Workation",
-      "subtitle": "Posuňte svou práci z domova na novou úroveň díky přírodě, klidu a terapii se zvířaty.",
+      "subtitle": "Posuňte svou práci z domova na novou úroveň díky přírodě, otevřenému prostoru a terapii se zvířaty.",
       "cityTitle": "Typický Městský Byt",
-      "city1": "Hluk ulice, sirény a městský smog",
+      "city1": "Městský smog, betonové zdi a znečištění",
       "city2": "15minutová pauza na kávu s telefonem v ruce",
-      "city3": "Odpolední dopravní zácpy a stres",
-      "city4": "Malý pokoj a hluční sousedé za zdí",
+      "city3": "Odpolední davový shon a městský stres",
+      "city4": "Malý byt v husté městské zástavbě",
       "zagrodaTitle": "Zagroda Alpaka Workation",
-      "zagroda1": "Horský váněk, zpěv ptáků a pasoucí se alpaky za oknem",
+      "zagroda1": "Čerstvý horský vzduch, zelené pastviny a pasoucí se alpaky",
       "zagroda2": "Pauza na kávu spojená krmením Fernanda a Elma na pastvině",
       "zagroda3": "Podvečerní procházka po stezkách Jizerských hor při západu slunce",
-      "zagroda4": "Útulný apartmán s psacím stolem a rychlou optikou"
+      "zagroda4": "Útulný horský pobyt s pohodlným pracovním místem a rychlou optikou"
     },
     "essentials": {
       "title": "Stvořeno pro Soustředění a Relaxaci",
@@ -1451,11 +1451,11 @@
       "wifiTitle": "Optika 100+ Mbps",
       "wifiDesc": "Bezproblémový internet pro videohovory přes Zoom, Teams i Slack ve všech pokojích.",
       "deskTitle": "Vlastní Pracovní Místo",
-      "deskDesc": "Pohodlné dřevěné stoly s dostatkem denního světla, zásuvkami a klidným okolím.",
-      "coffeeTitle": "Kávovar a Kuchyně",
-      "coffeeDesc": "Kávovary, bio čaje a plně vybavená kuchyně v každém apartmánu.",
-      "quietTitle": "Klid na Práci",
-      "quietDesc": "Pobyty uprostřed týdne jsou velmi komorní. Zaručený klid bez městského ruchu.",
+      "deskDesc": "Pohodlné dřevěné stoly s dostatkem denního světla, zásuvkami a čerstvým vzduchem.",
+      "coffeeTitle": "Káva a Čaj na Pokoji",
+      "coffeeDesc": "Vybavení pro přípravu kávy a čaje na každém pokoji, plus přístup ke kuchyni pro vlastní vaření.",
+      "quietTitle": "Digital Reset a Soustředění",
+      "quietDesc": "Únik před městskými davy. Pobyty uprostřed týdne nabízejí regenerační tempo.",
       "alpacaTitle": "Redukce Stresu s Alpakami",
       "alpacaDesc": "Přirozené snížení kortizolu. Stačí vyjít ven a odpočinout si u stáda.",
       "hikesTitle": "Přístup na Jizerské Stezky",
@@ -1490,8 +1490,8 @@
       "a2": "Určitě. Naše balíčky Workation jsou navrženy právě pro pobyty Neděle-Čtvrtek nebo Pondělí-Pátek.",
       "q3": "Jakými jazyky mluví hostitelé?",
       "a3": "Mluvíme plynule anglicky, polsky a nizozemsky!",
-      "q4": "Jsou k dispozici kuchyně pro vlastní vaření?",
-      "a4": "Ano, všechny apartmány mají plně vybavené kuchyňské kouty."
+      "q4": "Je k dispozici káva a kuchyně?",
+      "a4": "Všechny pokoje mají kávový a čajový koutek. K dispozici je také kuchyňské zázemí pro vlastní vaření."
     }
   }
 }
