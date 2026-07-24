@@ -1403,5 +1403,80 @@
       "title": "Garden with a View",
       "desc": "Morning coffee, mountain views, and alpacas right next to you."
     }
+  },
+  "workation": {
+    "meta": {
+      "title": "Alpaca Workation & Midweek Reset | Zagroda Alpakoterapii",
+      "description": "Swap city noise for mountain air, 100+ Mbps Fiber Wi-Fi, and alpaca coffee breaks. Midweek remote work packages 90 mins from Prague."
+    },
+    "hero": {
+      "badge": "Midweek Remote Work & Digital Detox Package",
+      "title": "Work Remote. Live Remote.",
+      "subtitle": "Swap city burnout for mountain air, fast fiber Wi-Fi, and alpaca coffee breaks. Nestled in the Jizera Mountains, 90 mins from Prague.",
+      "ctaPrimary": "Check Midweek Availability",
+      "ctaWhatsApp": "Chat on WhatsApp"
+    },
+    "contrast": {
+      "title": "The City Apartment vs. The Alpaca Workation",
+      "subtitle": "Upgrade your remote work routine with nature, quiet, and animal-assisted stress relief.",
+      "cityTitle": "Typical City Apartment",
+      "city1": "Traffic noise, sirens, and city pollution",
+      "city2": "15-minute coffee break scrolling on your phone",
+      "city3": "Post-work rush hour congestion and stress",
+      "city4": "Cramped room with noisy neighbors",
+      "zagrodaTitle": "Zagroda Alpaca Workation",
+      "zagroda1": "Mountain breeze, birdsong, and grazing alpacas",
+      "zagroda2": "Coffee break feeding Fernando & Elmo in the pasture",
+      "zagroda3": "Post-work sunset walks on scenic Izera mountain trails",
+      "zagroda4": "Cozy mountain suite with private workspace & high-speed fiber"
+    },
+    "essentials": {
+      "title": "Built for Remote Focus & Unwinding",
+      "subtitle": "Everything you need for a productive workday and a peaceful evening.",
+      "wifiTitle": "100+ Mbps Fiber Wi-Fi",
+      "wifiDesc": "Ultra-fast, reliable internet for seamless Zoom, Teams, and Slack calls across all rooms.",
+      "deskTitle": "Dedicated Workspaces",
+      "deskDesc": "Comfortable wooden desks with ample natural light, power hubs, and quiet surroundings.",
+      "coffeeTitle": "Espresso & Kitchens",
+      "coffeeDesc": "Espresso setups, organic teas, and fully equipped kitchens in every apartment.",
+      "quietTitle": "Distraction-Free Focus",
+      "quietDesc": "Midweek stays are peaceful. Deep work hours guaranteed with zero city noise.",
+      "alpacaTitle": "Alpaca Stress Relief",
+      "alpacaDesc": "Natural cortisol reduction. Step outside anytime to recharge next to our gentle herd.",
+      "hikesTitle": "Izera Trail Access",
+      "hikesDesc": "Step directly out to scenic hiking, cycling, and trail running routes after work hours."
+    },
+    "timeline": {
+      "title": "A Day in the Life of a Workation Guest",
+      "subtitle": "How your workday feels when your office is on an alpaca farm.",
+      "t1Title": "08:00 AM — Gentle Wake Up & Coffee",
+      "t1Desc": "Start your day with fresh mountain air, coffee, and a view of alpacas in the morning mist.",
+      "t2Title": "09:00 AM — Morning Deep Work",
+      "t2Desc": "Power through your priority tasks over high-speed fiber Wi-Fi with zero interruptions.",
+      "t3Title": "01:00 PM — Pasture Lunch Break",
+      "t3Desc": "Take lunch outside. Spend 15 minutes feeding Fernando & Elmo to reset your brain.",
+      "t4Title": "05:05 PM — Log Off & Sunset Walk",
+      "t4Desc": "Close your laptop. Join us for a sunset alpaca walk or relax by the evening campfire."
+    },
+    "commute": {
+      "title": "Close to the City. A World Away from Stress.",
+      "subtitle": "Easily accessible by car from major regional cities across the border."
+    },
+    "booking": {
+      "tag": "Midweek Special Rates",
+      "title": "Reserve Your Midweek Reset",
+      "subtitle": "Choose your check-in date (Mon–Thu or Sun–Thu) for special workation rates."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is the Wi-Fi reliable enough for video calls?",
+      "a1": "Yes! We operate a dedicated high-speed fiber line (100+ Mbps) throughout the property. Video calls on Zoom, Teams, and Slack run smoothly.",
+      "q2": "Can I book a midweek stay starting on Sunday or Monday?",
+      "a2": "Absolutely. Our Workation packages are specifically designed for Sunday-to-Thursday or Monday-to-Friday stays to give you the quietest environment.",
+      "q3": "What languages do the hosts speak?",
+      "a3": "We speak English, Polish, and Dutch fluently, and welcome remote workers from across Europe!",
+      "q4": "Are kitchens available for self-catering?",
+      "a4": "Yes, all apartments feature fully-equipped kitchens so you can cook your own meals during your workday."
+    }
   }
 }

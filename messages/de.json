@@ -1401,5 +1401,80 @@
       "title": "Garten mit Aussicht",
       "desc": "Morgenkaffee, Bergblick und Alpakas direkt neben Ihnen."
     }
+  },
+  "workation": {
+    "meta": {
+      "title": "Alpaka Workation & Midweek Reset | Zagroda Alpakoterapii",
+      "description": "Tauschen Sie Großstadtlärm gegen Bergluft, schnelles Glasfaser-WLAN 100+ Mbit/s und Kaffeepausen bei den Alpakas. Remote Work Pakete unter der Woche."
+    },
+    "hero": {
+      "badge": "Remote Work & Digital Detox Paket unter der Woche",
+      "title": "Arbeiten aus der Ferne. Leben in der Natur.",
+      "subtitle": "Tauschen Sie Alltagsstress gegen Bergluft, schnelles WLAN und Kaffeepausen bei den Alpakas. Im Isergebirge, nur 90 Min. von Prag.",
+      "ctaPrimary": "Verfügbarkeit prüfen",
+      "ctaWhatsApp": "Per WhatsApp kontaktieren"
+    },
+    "contrast": {
+      "title": "Stadtwohnung vs. Alpaka Workation",
+      "subtitle": "Verbessern Sie Ihre Homeoffice-Routine mit Natur, Ruhe und tiergestützter Entspannung.",
+      "cityTitle": "Typische Stadtwohnung",
+      "city1": "Straßenlärm, Sirenen und Großstadtsmog",
+      "city2": "15 Minuten Kaffeepause mit dem Smartphone",
+      "city3": "Feierabend-Berufsverkehr und Stress",
+      "city4": "Enge Räume und laute Nachbarn",
+      "zagrodaTitle": "Zagroda Alpaka Workation",
+      "zagroda1": "Bergluft, Vogelgezwitscher und grasende Alpakas vor dem Fenster",
+      "zagroda2": "Kaffeepause beim Füttern von Fernando & Elmo auf der Weide",
+      "zagroda3": "Feierabend-Wanderungen im Isergebirge beim Sonnenuntergang",
+      "zagroda4": "Gemütliche Suite mit Schreibtisch & schnellem Glasfaser-WLAN"
+    },
+    "essentials": {
+      "title": "Perfekt für Fokus & Erholung",
+      "subtitle": "Alles, was Sie für einen produktiven Arbeitstag und einen entspannten Abend brauchen.",
+      "wifiTitle": "100+ Mbit/s Glasfaser",
+      "wifiDesc": "Ultra-schnelles Internet für reibungslose Zoom-, Teams- und Slack-Calls in allen Räumen.",
+      "deskTitle": "Eigene Arbeitsplätze",
+      "deskDesc": "Bequeme Holzschreibtische mit viel Tageslicht, Steckdosen und ruhiger Umgebung.",
+      "coffeeTitle": "Espresso & Küchen",
+      "coffeeDesc": "Espressomaschinen, Bio-Tees und voll ausgestattete Küchen in jedem Apartment.",
+      "quietTitle": "Ungestörter Fokus",
+      "quietDesc": "Aufenthalte unter der Woche sind besonders friedlich. Garantiert ruhige Arbeitsstunden.",
+      "alpacaTitle": "Entspannung durch Alpakas",
+      "alpacaDesc": "Natürlicher Stressabbau. Gehen Sie jederzeit nach draußen, um bei der Herde aufzutanken.",
+      "hikesTitle": "Zugang zu Wanderwegen",
+      "hikesDesc": "Direkter Zugang zu Wander-, Rad- und Laufstrecken nach Feierabend."
+    },
+    "timeline": {
+      "title": "Ein Tag im Leben eines Workation-Gastes",
+      "subtitle": "So fühlt sich Ihr Arbeitstag an, wenn Ihr Büro auf einer Alpaka-Farm liegt.",
+      "t1Title": "08:00 Uhr — Sanftes Aufstehen & Kaffee",
+      "t1Desc": "Starten Sie den Tag mit frischer Bergluft, Kaffee und Blick auf die Alpakas im Morgennebel.",
+      "t2Title": "09:00 Uhr — Produktives Arbeiten",
+      "t2Desc": "Erledigen Sie wichtige Aufgaben über schnelles Glasfaser-WLAN ohne Unterbrechungen.",
+      "t3Title": "13:00 Uhr — Mittagspause auf der Weide",
+      "t3Desc": "Essen Sie draußen. Verbringen Sie 15 Minuten beim Füttern von Fernando & Elmo.",
+      "t4Title": "17:05 Uhr — Feierabend & Abendspaziergang",
+      "t4Desc": "Klappen Sie den Laptop zu. Begleiten Sie uns zum Alpaka-Spaziergang oder ans Lagerfeuer."
+    },
+    "commute": {
+      "title": "Nah an der Stadt. Weit weg vom Stress.",
+      "subtitle": "Bequem mit dem Auto aus umliegenden Städten erreichbar."
+    },
+    "booking": {
+      "tag": "Sonderpreise unter der Woche",
+      "title": "Buchen Sie Ihre Auszeit",
+      "subtitle": "Wählen Sie Ihren Anreisetag (Mo–Do oder So–Do) für spezielle Workation-Tarife."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Ist das WLAN stabil genug für Videoanrufe?",
+      "a1": "Ja! Wir verfügen über eine eigene Glasfaserleitung (100+ Mbit/s). Anrufe über Zoom, Teams und Slack laufen einwandfrei.",
+      "q2": "Kann ich einen Aufenthalt ab Sonntag oder Montag buchen?",
+      "a2": "Absolut. Unsere Workation-Pakete sind speziell für Aufenthalte von Sonntag bis Donnerstag oder Montag bis Freitag konzipiert.",
+      "q3": "Welche Sprachen sprechen die Gastgeber?",
+      "a3": "Wir sprechen fließend Englisch, Polnisch und Niederländisch!",
+      "q4": "Gibt es Küchen zur Selbstverpflegung?",
+      "a4": "Ja, alle Apartments verfügen über komplett ausgestattete Küchen."
+    }
   }
 }

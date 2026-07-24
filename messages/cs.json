@@ -1418,5 +1418,80 @@
       "title": "Zahrada s výhledem",
       "desc": "Ranní káva, výhled na hory a alpaky hned vedle vás."
     }
+  },
+  "workation": {
+    "meta": {
+      "title": "Alpaka Workation & Midweek Reset | Zagroda Alpakoterapii",
+      "description": "Vyměňte městský hluk za horský vzduch, rychlou optiku 100+ Mbps a pauzu na kávu s alpakami. Balíčky práce z domova uprostřed týdne jen 90 minut z Prahy."
+    },
+    "hero": {
+      "badge": "Balíček Práce na Dálku & Digital Detox Uprostřed Týdne",
+      "title": "Pracujte na Dálku. Žijte v Přírodě.",
+      "subtitle": "Vyměňte městskou únavu za horský vzduch, rychlý internet a pauzu na kávu s alpakami. V srdci Jizerských hor, jen 90 minut z Prahy.",
+      "ctaPrimary": "Zkontrolovat Dostupnost Uprostřed Týdne",
+      "ctaWhatsApp": "Napsat na WhatsApp"
+    },
+    "contrast": {
+      "title": "Městský Byt vs. Alpaka Workation",
+      "subtitle": "Posuňte svou práci z domova na novou úroveň díky přírodě, klidu a terapii se zvířaty.",
+      "cityTitle": "Typický Městský Byt",
+      "city1": "Hluk ulice, sirény a městský smog",
+      "city2": "15minutová pauza na kávu s telefonem v ruce",
+      "city3": "Odpolední dopravní zácpy a stres",
+      "city4": "Malý pokoj a hluční sousedé za zdí",
+      "zagrodaTitle": "Zagroda Alpaka Workation",
+      "zagroda1": "Horský váněk, zpěv ptáků a pasoucí se alpaky za oknem",
+      "zagroda2": "Pauza na kávu spojená krmením Fernanda a Elma na pastvině",
+      "zagroda3": "Podvečerní procházka po stezkách Jizerských hor při západu slunce",
+      "zagroda4": "Útulný apartmán s psacím stolem a rychlou optikou"
+    },
+    "essentials": {
+      "title": "Stvořeno pro Soustředění a Relaxaci",
+      "subtitle": "Vše, co potřebujete pro produktivní pracovní den a klidný večer.",
+      "wifiTitle": "Optika 100+ Mbps",
+      "wifiDesc": "Bezproblémový internet pro videohovory přes Zoom, Teams i Slack ve všech pokojích.",
+      "deskTitle": "Vlastní Pracovní Místo",
+      "deskDesc": "Pohodlné dřevěné stoly s dostatkem denního světla, zásuvkami a klidným okolím.",
+      "coffeeTitle": "Kávovar a Kuchyně",
+      "coffeeDesc": "Kávovary, bio čaje a plně vybavená kuchyně v každém apartmánu.",
+      "quietTitle": "Klid na Práci",
+      "quietDesc": "Pobyty uprostřed týdne jsou velmi komorní. Zaručený klid bez městského ruchu.",
+      "alpacaTitle": "Redukce Stresu s Alpakami",
+      "alpacaDesc": "Přirozené snížení kortizolu. Stačí vyjít ven a odpočinout si u stáda.",
+      "hikesTitle": "Přístup na Jizerské Stezky",
+      "hikesDesc": "Přímý výstup na turistické, cyklistické a běžecké trasy po pracovní době."
+    },
+    "timeline": {
+      "title": "Den v Životě Hoste na Workation",
+      "subtitle": "Jak vypadá váš pracovní den, když máte kancelář na alpakové farmě.",
+      "t1Title": "08:00 — Ranní Káva a Horský Vzduch",
+      "t1Desc": "Začněte den čerstvým vzduchem, kávou a výhledem na alpaky v ranní mlze.",
+      "t2Title": "09:00 — Ranní Soustředěná Práce",
+      "t2Desc": "Plňte klíčové úkoly díky rychlému internetu bez jakéhokoli rušení.",
+      "t3Title": "13:00 — Pauza na Oběd a Krmení Alpak",
+      "t3Desc": "Dejte si oběd venku. Strávíte 15 minut s alpakami pro restart mysli.",
+      "t4Title": "17:05 — Zavření Notebooku a Procházka",
+      "t4Desc": "Zavřete notebook. Připojte se k nám na procházku s alpakami nebo relaxujte u ohně."
+    },
+    "commute": {
+      "title": "Blízko Města. Daleko od Stresu.",
+      "subtitle": "Pohodlný příjezd autem z okolních měst za hranicemi."
+    },
+    "booking": {
+      "tag": "Speciální Nabídka Uprostřed Týdne",
+      "title": "Rezervujte si Midweek Reset",
+      "subtitle": "Vyberte si datum příjezdu (Po–Čt nebo Ne–Čt) a využijte zvýhodněné ceny."
+    },
+    "faq": {
+      "title": "Často Kladené Dotazy",
+      "q1": "Je Wi-Fi dostatečně stabilní pro videohovory?",
+      "a1": "Ano! Máme vyhrazenou optickou přípojku (100+ Mbps). Hovory přes Zoom, Teams a Slack fungují hladce.",
+      "q2": "Mohu si rezervovat pobyt s nástupem v neděli nebo v pondělí?",
+      "a2": "Určitě. Naše balíčky Workation jsou navrženy právě pro pobyty Neděle-Čtvrtek nebo Pondělí-Pátek.",
+      "q3": "Jakými jazyky mluví hostitelé?",
+      "a3": "Mluvíme plynule anglicky, polsky a nizozemsky!",
+      "q4": "Jsou k dispozici kuchyně pro vlastní vaření?",
+      "a4": "Ano, všechny apartmány mají plně vybavené kuchyňské kouty."
+    }
   }
 }

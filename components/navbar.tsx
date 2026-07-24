@@ -117,6 +117,14 @@ export function Navbar({ locale }: NavbarProps) {
                   >
                     <span>🗺️</span> {t('exploreTheArea')}
                   </Link>
+                  <div className="border-t border-gray-100" />
+                  <Link
+                    href={`/${locale}/workation`}
+                    onClick={() => setDropdownOpen(false)}
+                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
+                  >
+                    <span>💻</span> Workation & Reset
+                  </Link>
                 </div>
               )}
             </div>

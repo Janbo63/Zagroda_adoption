@@ -11,6 +11,7 @@ const PUBLIC_PAGES = [
     '/animals/dogs',
     '/activities',
     '/stay',
+    '/workation',
     '/discover',
     '/adopt',
     '/vouchers',

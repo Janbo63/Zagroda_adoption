@@ -1397,5 +1397,80 @@
             "title": "Tuin met uitzicht",
             "desc": "Ochtendkoffie, bergzicht en alpaca's vlak naast je."
         }
+    },
+    "workation": {
+        "meta": {
+            "title": "Alpaca Workation & Midweek Reset | Zagroda Alpakoterapii",
+            "description": "Ruil stadsdrukte in voor berglucht, 100+ Mbps glasvezel Wi-Fi en alpaca koffiepauzes. Midweek werk- en ontspanningsarrangementen."
+        },
+        "hero": {
+            "badge": "Midweek Remote Work & Digital Detox Arrangement",
+            "title": "Werk Remote. Leef Remote.",
+            "subtitle": "Ruil je dagelijkse drukte in voor berglucht, snelle glasvezel Wi-Fi en koffiepauzes bij de alpaca's. In het IJzergebergte, 90 min van Praag.",
+            "ctaPrimary": "Bekijk Midweek Beschikbaarheid",
+            "ctaWhatsApp": "Chat via WhatsApp"
+        },
+        "contrast": {
+            "title": "Stadsappartement vs. Alpaca Workation",
+            "subtitle": "Upgrade je thuiswerkroutine met natuur, rust en ontspanning met dieren.",
+            "cityTitle": "Typisch Stadsappartement",
+            "city1": "Verkeerslawaai, sirenes en stadssmog",
+            "city2": "15 minuten koffiepauze scrollend op je telefoon",
+            "city3": "Spitsuur en dagelijkse stress na het werk",
+            "city4": "Krappe kamers en luide buren",
+            "zagrodaTitle": "Zagroda Alpaca Workation",
+            "zagroda1": "Bergwind, vogelgezang en grazende alpaca's voor je raam",
+            "zagroda2": "Koffiepauze met het voeren van Fernando & Elmo in de wei",
+            "zagroda3": "Zonsondergangwandelingen in de bergen na werktijd",
+            "zagroda4": "Sfeervolle suite met bureau & snelle glasvezel Wi-Fi"
+        },
+        "essentials": {
+            "title": "Gemaakt voor Focus & Ontspanning",
+            "subtitle": "Alles wat je nodig hebt voor een productieve werkdag en een rustige avond.",
+            "wifiTitle": "100+ Mbps Glasvezel Wi-Fi",
+            "wifiDesc": "Razendsnel, betrouwbaar internet voor probleemloze Zoom-, Teams- en Slack-gesprekken.",
+            "deskTitle": "Eigen Werkplek",
+            "deskDesc": "Comfortabele houten bureaus met veel daglicht, stopcontacten en een rustige omgeving.",
+            "coffeeTitle": "Espresso & Keukens",
+            "coffeeDesc": "Espressomachines, biologische thee en volledig uitgeruste keukens in elk appartement.",
+            "quietTitle": "Focus Zonder Afleiding",
+            "quietDesc": "Midweekverblijven zijn heerlijk rustig. Gegarandeerd ongestoord werken zonder stadslawaai.",
+            "alpacaTitle": "Ontstressen met Alpaca's",
+            "alpacaDesc": "Natuurlijke stressvermindering. Stap op elk moment naar buiten om op te laden bij onze kudde.",
+            "hikesTitle": "Toegang tot Wandelroutes",
+            "hikesDesc": "Wandel-, fiets- en hardlooproutes direct vanaf het terrein na werktijd."
+        },
+        "timeline": {
+            "title": "Een Dag uit het Leven van een Workation-Gast",
+            "subtitle": "Hoe je werkdag voelt als je kantoor op een alpacaboerderij staat.",
+            "t1Title": "08:00 uur — Rustig Ontwaken & Koffie",
+            "t1Desc": "Start je dag met frisse berglucht, koffie en uitzicht op de alpaca's in de ochtendmist.",
+            "t2Title": "09:00 uur — Ochtend Focuswerk",
+            "t2Desc": "Werk je belangrijkste taken af via snelle glasvezel Wi-Fi zonder enige onderbreking.",
+            "t3Title": "13:00 uur — Lunchpauze in de Wei",
+            "t3Desc": "Eet buiten. Besteed 15 minuten aan het voeren van Fernando & Elmo om je hoofd leeg te maken.",
+            "t4Title": "17:05 uur — Laptop Dicht & Wandeling",
+            "t4Desc": "Sluit je laptop. Wandel mee met de alpaca's bij zonsondergang of ontspan bij het kampvuur."
+        },
+        "commute": {
+            "title": "Dicht bij de Stad. Ver weg van Stress.",
+            "subtitle": "Gemakkelijk bereikbaar met de auto vanuit omliggende steden over de grens."
+        },
+        "booking": {
+            "tag": "Midweek Speciale Tarieven",
+            "title": "Reserveer Je Midweek Reset",
+            "subtitle": "Kies je aankomstdatum (ma–do of zo–do) voor speciale workation-tarieven."
+        },
+        "faq": {
+            "title": "Veelgestelde Vragen",
+            "q1": "Is de Wi-Fi betrouwbaar genoeg voor videobellen?",
+            "a1": "Ja! We beschikken over een eigen glasvezelverbinding (100+ Mbps). Gesprekken via Zoom, Teams en Slack verlopen vlekkeloos.",
+            "q2": "Kan ik een midweekverblijf boeken vanaf zondag of maandag?",
+            "a2": "Absoluut. Onze Workation-arrangementen zijn speciaal ontworpen voor verblijven van zondag tot donderdag of maandag tot vrijdag.",
+            "q3": "Welke talen spreken de eigenaren?",
+            "a3": "We spreken vloeiend Nederlands, Engels en Pools!",
+            "q4": "Zijn er keukens aanwezig voor zelfvoorziening?",
+            "a4": "Ja, alle appartementen zijn voorzien van volledig uitgeruste keukens."
+        }
     }
 }
