@@ -27,6 +27,7 @@ import {
     Star
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { trackContactClick } from '@/lib/tracking';
 import dynamic from 'next/dynamic';
 
 const BookingWidget = dynamic(() => import('@/components/BookingWidget'), { ssr: false });
@@ -129,6 +130,7 @@ export function WorkationPageContent({ locale }: { locale: string }) {
                             href="https://wa.me/48695545330?text=Hi!%20I'm%20interested%20in%20a%20midweek%20workation%20stay."
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackContactClick({ channel: 'whatsapp', page: 'workation', label: 'Workation Hero CTA' })}
                         >
                             <Button
                                 variant="outline"
