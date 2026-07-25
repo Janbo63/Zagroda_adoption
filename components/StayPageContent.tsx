@@ -38,8 +38,10 @@ const SHARED_PHOTOS = [
 
 // Apartment room photos (separate room — not common areas)
 const APARTMENT_PHOTOS = [
+    '/images/Rooms/apartment1.jpg',
     '/images/Rooms/apartment2.jpg',
     '/images/Rooms/apartment3-1.jpg',
+    '/images/Rooms/apartment4.jpg',
 ];
 
 // ─── Mini photo gallery component ────────────────────────────────────────────

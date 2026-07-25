@@ -156,9 +156,10 @@ const LOCAL_ROOM_IMAGES: Record<string, string[]> = {
         '/images/Rooms/Jungle-Room-5-edited.jpg',
     ],
     '884394000000896001': [ // Forest Apartment
+        '/images/Rooms/apartment1.jpg',
         '/images/Rooms/apartment2.jpg',
         '/images/Rooms/apartment3-1.jpg',
-        // TODO: add more actual apartment photos (kitchen.jpg was removed — it's the shared kitchen)
+        '/images/Rooms/apartment4.jpg',
     ],
     '884394000000884002': [ // Caravan
         // TODO: add actual caravan photos here
@@ -179,8 +180,10 @@ const LOCAL_ROOM_IMAGES: Record<string, string[]> = {
         '/images/Rooms/Jungle-Room-5-edited.jpg',
     ],
     'room-forest': [
+        '/images/Rooms/apartment1.jpg',
         '/images/Rooms/apartment2.jpg',
         '/images/Rooms/apartment3-1.jpg',
+        '/images/Rooms/apartment4.jpg',
     ],
 };
 
