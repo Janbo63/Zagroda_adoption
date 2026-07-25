@@ -158,12 +158,11 @@ const LOCAL_ROOM_IMAGES: Record<string, string[]> = {
     '884394000000896001': [ // Forest Apartment
         '/images/Rooms/apartment2.jpg',
         '/images/Rooms/apartment3-1.jpg',
-        '/images/Rooms/kitchen.jpg',
+        // TODO: add more actual apartment photos (kitchen.jpg was removed — it's the shared kitchen)
     ],
     '884394000000884002': [ // Caravan
-        '/images/Rooms/lounge-1.jpg',
-        '/images/Rooms/Lounge 2.jpg',
-        '/images/Rooms/Garden-1.jpg',
+        // TODO: add actual caravan photos here
+        // Removed: lounge-1.jpg & Lounge 2.jpg (shared lounge), Garden-1.jpg (Garden Room)
     ],
     // Dev stubs
     'room-garden': [
@@ -182,7 +181,6 @@ const LOCAL_ROOM_IMAGES: Record<string, string[]> = {
     'room-forest': [
         '/images/Rooms/apartment2.jpg',
         '/images/Rooms/apartment3-1.jpg',
-        '/images/Rooms/kitchen.jpg',
     ],
 };
 
@@ -498,7 +496,7 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                                 }`}
                         >
                             {/* Photo gallery */}
-                            {images && (
+                            {images && images.length > 0 && (
                                 <RoomPhotoGallery photos={images} roomName={room.name} />
                             )}
 
