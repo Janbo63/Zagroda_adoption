@@ -1405,6 +1405,7 @@
         },
         "hero": {
             "badge": "Midweek Remote Work & Digital Detox Arrangement",
+            "wifiBadge": "100 Mbps fiber – getest voor Zoom & videogesprekken ✅",
             "title": "Werk Remote. Leef Remote.",
             "subtitle": "Ruil je dagelijkse drukte in voor berglucht, snelle glasvezel Wi-Fi en koffiepauzes bij de alpaca's. In het IJzergebergte, 90 min van Praag.",
             "ctaPrimary": "Bekijk Midweek Beschikbaarheid",
@@ -1459,7 +1460,8 @@
         "booking": {
             "tag": "Midweek Speciale Tarieven",
             "title": "Reserveer Je Midweek Reset",
-            "subtitle": "Kies je aankomstdatum (ma–do of zo–do) voor speciale workation-tarieven."
+            "subtitle": "Kies je aankomstdatum (ma–do of zo–do) voor speciale workation-tarieven.",
+            "whatsappHint": "Liever eerst chatten? We reageren binnen enkele minuten."
         },
         "faq": {
             "title": "Veelgestelde Vragen",

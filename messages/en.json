@@ -1411,6 +1411,7 @@
     },
     "hero": {
       "badge": "Midweek Remote Work & Digital Detox Package",
+      "wifiBadge": "100 Mbps Fibre – tested for Zoom & video calls ✅",
       "title": "Work Remote. Live Remote.",
       "subtitle": "Swap city burnout for mountain air, fast fiber Wi-Fi, and alpaca coffee breaks. Nestled in the Jizera Mountains, 90 mins from Prague.",
       "ctaPrimary": "Check Midweek Availability",
@@ -1465,7 +1466,8 @@
     "booking": {
       "tag": "Midweek Special Rates",
       "title": "Reserve Your Midweek Reset",
-      "subtitle": "Choose your check-in date (Mon–Thu or Sun–Thu) for special workation rates."
+      "subtitle": "Choose your check-in date (Mon–Thu or Sun–Thu) for special workation rates.",
+      "whatsappHint": "Prefer to chat first? We reply within minutes."
     },
     "faq": {
       "title": "Frequently Asked Questions",

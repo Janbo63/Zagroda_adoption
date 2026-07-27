@@ -94,9 +94,11 @@ export function WorkationPageContent({ locale }: { locale: string }) {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-10 text-xs sm:text-sm font-medium"
                     >
-                        <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10">
-                            <Wifi className="w-4 h-4 text-emerald-400 shrink-0" />
-                            <span>100+ Mbps Fiber Wi-Fi</span>
+                        <div className="flex flex-col items-center justify-center gap-1 p-3 rounded-xl bg-emerald-500/20 backdrop-blur-md border border-emerald-400/30">
+                            <div className="flex items-center gap-2">
+                                <Wifi className="w-4 h-4 text-emerald-400 shrink-0" />
+                                <span>{t('hero.wifiBadge')}</span>
+                            </div>
                         </div>
                         <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10">
                             <Laptop className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -364,7 +366,22 @@ export function WorkationPageContent({ locale }: { locale: string }) {
                 </div>
             </section>
 
-            {/* ─── 6. BOOKING WIDGET INTEGRATION ───────────────────────────────── */}
+            {/* ─── 6a. WHATSAPP CTA (ABOVE FOLD ON MOBILE) ────────────────────── */}
+            <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+                <a
+                    href="https://wa.me/48695545330?text=Hi!%20I'm%20interested%20in%20a%20midweek%20workation%20stay."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackContactClick({ channel: 'whatsapp', page: 'workation', label: 'Workation Pre-Booking CTA' })}
+                    className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-5 px-8 rounded-2xl shadow-lg shadow-emerald-900/20 text-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
+                >
+                    <MessageCircle className="w-6 h-6" />
+                    {t('hero.ctaWhatsApp')}
+                </a>
+                <p className="text-center text-slate-500 text-sm mt-3">{t('booking.whatsappHint')}</p>
+            </section>
+
+            {/* ─── 6b. BOOKING WIDGET INTEGRATION ───────────────────────────────── */}
             <section id="workation-booking" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">

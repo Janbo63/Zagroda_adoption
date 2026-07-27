@@ -1409,6 +1409,7 @@
     },
     "hero": {
       "badge": "Remote Work & Digital Detox Paket unter der Woche",
+      "wifiBadge": "100 Mbps Fiber – getestet für Zoom & Videoanrufe ✅",
       "title": "Arbeiten aus der Ferne. Leben in der Natur.",
       "subtitle": "Tauschen Sie Alltagsstress gegen Bergluft, schnelles WLAN und Kaffeepausen bei den Alpakas. Im Isergebirge, nur 90 Min. von Prag.",
       "ctaPrimary": "Verfügbarkeit prüfen",
@@ -1463,7 +1464,8 @@
     "booking": {
       "tag": "Sonderpreise unter der Woche",
       "title": "Buchen Sie Ihre Auszeit",
-      "subtitle": "Wählen Sie Ihren Anreisetag (Mo–Do oder So–Do) für spezielle Workation-Tarife."
+      "subtitle": "Wählen Sie Ihren Anreisetag (Mo–Do oder So–Do) für spezielle Workation-Tarife.",
+      "whatsappHint": "Lieber erst chatten? Wir antworten innerhalb von Minuten."
     },
     "faq": {
       "title": "Häufig gestellte Fragen",

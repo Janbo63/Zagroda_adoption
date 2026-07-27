@@ -1426,6 +1426,7 @@
     },
     "hero": {
       "badge": "Balíček Práce na Dálku & Digital Detox Uprostřed Týdne",
+      "wifiBadge": "100 Mbps fiber – otestováno pro Zoom a videohovory ✅",
       "title": "Pracujte na Dálku. Žijte v Přírodě.",
       "subtitle": "Vyměňte městskou únavu za horský vzduch, rychlý internet a pauzu na kávu s alpakami. V srdci Jizerských hor, jen 90 minut z Prahy.",
       "ctaPrimary": "Zkontrolovat Dostupnost Uprostřed Týdne",
@@ -1480,7 +1481,8 @@
     "booking": {
       "tag": "Speciální Nabídka Uprostřed Týdne",
       "title": "Rezervujte si Midweek Reset",
-      "subtitle": "Vyberte si datum příjezdu (Po–Čt nebo Ne–Čt) a využijte zvýhodněné ceny."
+      "subtitle": "Vyberte si datum příjezdu (Po–Čt nebo Ne–Čt) a využijte zvýhodněné ceny.",
+      "whatsappHint": "Chcete si nejdřív popovídat? Odpovídáme během pár minut."
     },
     "faq": {
       "title": "Často Kladené Dotazy",

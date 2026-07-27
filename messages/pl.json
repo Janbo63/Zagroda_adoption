@@ -1410,6 +1410,7 @@
     },
     "hero": {
       "badge": "Pakiet Pracy Zdalnej & Digital Detox w Środku Tygodnia",
+      "wifiBadge": "100 Mbps fiber – przetestowany dla Zoom i wideorozmów ✅",
       "title": "Pracuj Zdalnie. Żyj Zdalnie.",
       "subtitle": "Zamień miejskie zmęczenie na górskie powietrze, szybki światłowód i przerwę na kawę z alpakami. W sercu Gór Izerskich, 90 minut od Pragi.",
       "ctaPrimary": "Sprawdź Dostępność w Środku Tygodnia",
@@ -1464,7 +1465,8 @@
     "booking": {
       "tag": "Oferta w Środku Tygodnia",
       "title": "Zarezerwuj Midweek Reset",
-      "subtitle": "Wybierz datę przyjazdu (Pn–Czwt lub Ndz–Czwt) i skorzystaj ze specjalnej stawki."
+      "subtitle": "Wybierz datę przyjazdu (Pn–Czwt lub Ndz–Czwt) i skorzystaj ze specjalnej stawki.",
+      "whatsappHint": "Wolisz najpierw porozmawiać? Odpowiadamy w kilka minut."
     },
     "faq": {
       "title": "Często Zadawane Pytania",
