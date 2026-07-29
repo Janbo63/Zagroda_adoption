@@ -10,6 +10,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import {
     trackBeginCheckout, trackSelectRoom, trackAddToCart,
     trackAddPaymentInfo, trackBookingConfirmed, trackPaymentFailed, trackVoucherApplied,
+    trackEvent,
 } from '@/lib/analytics';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
@@ -390,7 +391,19 @@ function StepDates({ state, onChange, onNext }: {
                 </div>
             )}
 
-            <StepNav showBack={false} onNext={onNext} nextLabel={t('nav.next')} disabled={!canNext} />
+            <StepNav
+            showBack={false}
+            onNext={() => {
+                trackEvent('search_availability', {
+                    check_in: state.checkIn,
+                    check_out: state.checkOut,
+                    nights: state.nights,
+                });
+                onNext();
+            }}
+            nextLabel={t('nav.next')}
+            disabled={!canNext}
+        />
         </div>
     );
 }
@@ -438,6 +451,21 @@ function StepRoom({ state, onChange, onNext, onBack }: {
                 })).filter((room: Room) => room.totalPrice > 0);
                 setRooms(mapped);
                 setLoading(false);
+                // Track availability outcome
+                if (mapped.length === 0) {
+                    trackEvent('no_availability', {
+                        check_in: state.checkIn,
+                        check_out: state.checkOut,
+                        nights: state.nights,
+                    });
+                } else {
+                    trackEvent('availability_found', {
+                        check_in: state.checkIn,
+                        check_out: state.checkOut,
+                        nights: state.nights,
+                        rooms_available: mapped.length,
+                    });
+                }
             })
             .catch(() => { setError('Unable to check availability. Please try again.'); setLoading(false); });
         // eslint-disable-next-line react-hooks/exhaustive-deps
