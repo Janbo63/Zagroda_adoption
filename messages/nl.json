@@ -1461,7 +1461,8 @@
             "tag": "Midweek Speciale Tarieven",
             "title": "Reserveer Je Midweek Reset",
             "subtitle": "Kies je aankomstdatum (ma–do of zo–do) voor speciale workation-tarieven.",
-            "whatsappHint": "Liever eerst chatten? We reageren binnen enkele minuten."
+            "whatsappHint": "Liever eerst chatten? We reageren binnen enkele minuten.",
+            "whatsappHintLink": "stuur ons een WhatsApp-bericht →"
         },
         "faq": {
             "title": "Veelgestelde Vragen",

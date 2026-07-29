@@ -1465,7 +1465,8 @@
       "tag": "Sonderpreise unter der Woche",
       "title": "Buchen Sie Ihre Auszeit",
       "subtitle": "Wählen Sie Ihren Anreisetag (Mo–Do oder So–Do) für spezielle Workation-Tarife.",
-      "whatsappHint": "Lieber erst chatten? Wir antworten innerhalb von Minuten."
+      "whatsappHint": "Lieber erst chatten? Wir antworten innerhalb von Minuten.",
+      "whatsappHintLink": "schreiben Sie uns auf WhatsApp →"
     },
     "faq": {
       "title": "Häufig gestellte Fragen",

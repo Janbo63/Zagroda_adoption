@@ -49,11 +49,12 @@ export function WorkationPageContent({ locale }: { locale: string }) {
             <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-emerald-950 text-white pt-24 pb-16">
                 <div className="absolute inset-0 z-0 opacity-40">
                     <Image
-                        src="/images/Rooms/Garden-1.jpg"
+                        src="/images/Rooms/Garden-1.webp"
                         alt="Workation at Zagroda Alpakoterapii"
                         fill
                         className="object-cover"
                         priority
+                        quality={85}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/70 to-emerald-950/40" />
                 </div>
@@ -69,13 +70,30 @@ export function WorkationPageContent({ locale }: { locale: string }) {
                         <span>{t('hero.badge')}</span>
                     </motion.div>
 
+                    {/* Google Reviews Trust Badge */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.05 }}
+                        className="flex items-center justify-center gap-2 mb-4"
+                    >
+                        <div className="flex items-center gap-0.5">
+                            {[1,2,3,4,5].map(i => (
+                                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                            ))}
+                        </div>
+                        <span className="text-emerald-200 text-sm font-medium">
+                            4.9 / 5 &nbsp;·&nbsp; Google Reviews
+                        </span>
+                    </motion.div>
+
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight"
                     >
-                        {t('hero.title')}
+                        {locale === 'cs' ? t('hero.titleAlt') : t('hero.title')}
                     </motion.h1>
 
                     <motion.p
@@ -396,6 +414,23 @@ export function WorkationPageContent({ locale }: { locale: string }) {
                 </div>
 
                 <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl">
+                    {/* WhatsApp fallback hint — shown on mobile */}
+                    <div className="flex items-center justify-center gap-2 mb-6 p-3 bg-emerald-50 rounded-xl border border-emerald-100 md:hidden">
+                        <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <p className="text-sm text-emerald-800">
+                            {t('booking.whatsappHint')}
+                            {' '}
+                            <a
+                                href="https://wa.me/48695545330?text=Hi!%20I'm%20interested%20in%20a%20midweek%20workation%20stay."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => trackContactClick({ channel: 'whatsapp', page: 'workation', label: 'Workation Widget Hint' })}
+                                className="font-semibold underline text-emerald-700"
+                            >
+                                {t('booking.whatsappHintLink')}
+                            </a>
+                        </p>
+                    </div>
                     <BookingWidget locale={locale} />
                 </div>
             </section>
@@ -433,6 +468,19 @@ export function WorkationPageContent({ locale }: { locale: string }) {
                     </div>
                 </div>
             </section>
+
+            {/* ─── STICKY MOBILE WHATSAPP BUTTON ──────────────────────────────── */}
+            <a
+                href="https://wa.me/48695545330?text=Hi!%20I'm%20interested%20in%20a%20midweek%20workation%20stay."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackContactClick({ channel: 'whatsapp', page: 'workation', label: 'Workation Sticky CTA' })}
+                className="fixed bottom-5 right-4 z-50 md:hidden flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3 px-5 rounded-full shadow-2xl shadow-black/30 text-sm transition-all hover:scale-105 active:scale-95"
+                aria-label="Chat on WhatsApp"
+            >
+                <MessageCircle className="w-5 h-5 shrink-0" />
+                <span>WhatsApp</span>
+            </a>
         </div>
     );
 }

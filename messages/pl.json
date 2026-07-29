@@ -1466,7 +1466,8 @@
       "tag": "Oferta w Środku Tygodnia",
       "title": "Zarezerwuj Midweek Reset",
       "subtitle": "Wybierz datę przyjazdu (Pn–Czwt lub Ndz–Czwt) i skorzystaj ze specjalnej stawki.",
-      "whatsappHint": "Wolisz najpierw porozmawiać? Odpowiadamy w kilka minut."
+      "whatsappHint": "Wolisz najpierw porozmawiać? Odpowiadamy w kilka minut.",
+      "whatsappHintLink": "napisz do nas na WhatsApp →"
     },
     "faq": {
       "title": "Często Zadawane Pytania",

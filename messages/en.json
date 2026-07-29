@@ -1467,7 +1467,8 @@
       "tag": "Midweek Special Rates",
       "title": "Reserve Your Midweek Reset",
       "subtitle": "Choose your check-in date (Mon–Thu or Sun–Thu) for special workation rates.",
-      "whatsappHint": "Prefer to chat first? We reply within minutes."
+      "whatsappHint": "Prefer to chat first? We reply within minutes.",
+      "whatsappHintLink": "message us on WhatsApp →"
     },
     "faq": {
       "title": "Frequently Asked Questions",
