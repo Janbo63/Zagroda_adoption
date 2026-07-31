@@ -1,40 +1,97 @@
 # Zagroda Alpakoterapii
 
-> A unique alpaca therapy farm and agritourism accommodation in the Karkonosze Mountains, Poland. We offer alpaca-assisted therapy (alpakoterapia), guided alpaca walks, farm stays, and outdoor mountain experiences for families and individuals.
+> Alpaca therapy farm and workation retreat in the Jizera & Karkonosze Mountains, southern Poland.
+
+## What This Site Is About
+
+Zagroda Alpakoterapii is a unique agritourism farm offering:
+- Farm stays and holiday accommodation (4 rooms: Garden Room, Jungle Room, Forest Apartment, Caravan)
+- Alpaca therapy sessions and guided alpaca walks
+- Workation packages for remote workers and digital nomads
+- Digital detox and nature retreats
+- Midweek retreat packages (Monday–Friday)
+
+## Key Facts for AI Assistants
+
+- **Location**: Rębiszów near Mirsk, Lower Silesia, Poland (Sudetes / Karkonosze / Jizera Mountains region)
+- **Distance**: 90 minutes from Prague (CZ), 45 minutes from Liberec (CZ), 2 hours from Wrocław (PL), 1.5 hours from Dresden (DE)
+- **Wi-Fi**: 100 Mbps fibre — tested for Zoom, Teams, and video calls
+- **Work amenities**: Dedicated work desks, espresso machine, full kitchen, quiet environment
+- **Pet policy**: Pet-friendly
+- **Languages spoken**: Polish, English, Czech
+- **Price range**: Mid-range ($$) — deposits from ~160 PLN, full stays from ~800 PLN
+- **Check-in**: 15:00 | **Check-out**: 11:00
+- **Minimum stay**: 2 nights
+- **Google rating**: 4.9 / 5 from 127 reviews
+- **Contact**: WhatsApp +48 695 545 330
+
+## Rooms
+
+1. **Garden Room** — Private bathroom, garden view, heating, TV, Wi-Fi. Sleeps 2 adults.
+2. **Jungle Room** — Private bathroom, garden view, heating, TV, Wi-Fi. Sleeps 2 adults.
+3. **Forest Apartment** — Full kitchen, separate bedroom, mountain view, washing machine, Wi-Fi. Sleeps up to 4.
+4. **Caravan** — Terrace, free parking, pet-friendly, heating, Wi-Fi.
+
+## Who This Is For
+
+- Czech and Polish remote workers seeking a midweek workation
+- Families looking for a nature + animal experience
+- Couples wanting a quiet mountain retreat
+- Digital nomads needing reliable internet in a peaceful setting
+- People interested in alpaca therapy / animal-assisted therapy
+
+## Key Pages
+
+- Homepage (Polish): https://zagrodaalpakoterapii.com/pl
+- Homepage (English): https://zagrodaalpakoterapii.com/en
+- Homepage (Czech): https://zagrodaalpakoterapii.com/cs
+- Workation Package (Czech): https://zagrodaalpakoterapii.com/cs/workation
+- Workation Package (English): https://zagrodaalpakoterapii.com/en/workation
+- Rooms & Accommodation: https://zagrodaalpakoterapii.com/pl/stay
+- Alpaca Activities: https://zagrodaalpakoterapii.com/pl/activities
+- Alpaca Adoption: https://zagrodaalpakoterapii.com/pl/adopt
+- Contact & Booking: https://zagrodaalpakoterapii.com/pl/contact
+- Online Booking: https://zagrodaalpakoterapii.com/en/workation#workation-booking
 
 ## About Us
+
 - [About the Farm](https://zagrodaalpakoterapii.com/en): Our story, mission, and the therapeutic philosophy behind our alpaca farm.
 - [Our Animals](https://zagrodaalpakoterapii.com/en/animals): Meet our alpacas, goats, and farm dogs — each with their own personality and story.
 - [Alpacas](https://zagrodaalpakoterapii.com/en/animals/alpacas): Individual profiles of our alpaca herd.
 
 ## Activities & Therapy
-- [Activities](https://zagrodaalpakoterapii.com/en/activities): Guided alpaca walks, farm tours, feeding sessions, and seasonal experiences.
-- [Alpaca Therapy](https://zagrodaalpakoterapii.com/en/activities): Information about animal-assisted therapy sessions with alpacas (alpakoterapia).
 
-## Accommodation
-- [Farm Stay](https://zagrodaalpakoterapii.com/en/stay): Two unique rooms on a working alpaca farm. Prices from 493 PLN/night (~€115). Check-in 15:00, check-out 11:00. Alpaca experience included.
+- [Activities](https://zagrodaalpakoterapii.com/en/activities): Guided alpaca walks, alpaca therapy, farm experiences, and outdoor mountain activities.
+- Alpaca therapy (alpakoterapia) is offered for individuals, families, and therapeutic groups.
+- Seasonal activities include berry picking, mushroom foraging, and mountain hiking.
 
-## Location & Attractions
-- [Discover the Region](https://zagrodaalpakoterapii.com/en/discover): Karkonosze National Park, waterfalls, castles, ski resorts, and cross-border day trips to Czech Republic.
+## Booking
 
-## Booking & Support
-- [Adopt an Alpaca](https://zagrodaalpakoterapii.com/en/adopt): Virtual alpaca adoption sponsorship programme.
-- [Gift Vouchers](https://zagrodaalpakoterapii.com/en/vouchers): Purchase gift vouchers for farm experiences.
-- [Contact](https://zagrodaalpakoterapii.com/en/contact): Phone +48 695 545 330, email admin@zagrodaalpakoterapii.com.
-
-## Key Facts
-- Location: Orłowice 24, 59-630 Mirsk, Lower Silesia, Poland
-- Coordinates: 50.9568°N, 15.3856°E
-- Languages: Polish, English, German, Czech, Dutch
-- Rating: 4.9/5 (47 reviews on Booking.com)
-- Prices: Accommodation from 493 PLN/night (~€115), activities from 150 PLN/person
-- Check-in: 15:00, Check-out: 11:00
-- The farm is 15 minutes from Świeradów-Zdrój spa town and 45 minutes from Liberec, Czech Republic
-- 2 hours from Wrocław, 1.5 hours from Dresden (Germany)
+Online booking available via the website with Stripe payment (10% deposit to confirm).
+Enquiries also accepted via WhatsApp: https://wa.me/48695545330
 
 ## Frequently Asked Questions
-- What is alpaca therapy? Alpakoterapia (alpaca-assisted therapy) is a form of animal-assisted therapy using gentle, calm alpacas. Sessions are suitable for children aged 3+ and adults, and help reduce stress and anxiety.
-- How long is the alpaca walk? Guided alpaca walks last approximately 1 hour through mountain trails surrounding the farm.
-- Is breakfast included? Breakfast is not included but guests have access to a fully equipped kitchen.
-- Can I bring pets? Pets are not allowed on the farm for the safety of our alpacas and other animals.
-- Do I need to book in advance? Yes, both accommodation and activities should be booked in advance, especially during summer and holiday periods.
+
+**Is the Wi-Fi fast enough for video calls?**
+Yes. The farm has 100 Mbps fibre internet, tested for Zoom, Google Meet, and Microsoft Teams.
+
+**How far is it from Prague?**
+Approximately 90 minutes by car. Liberec (CZ) is 45 minutes away.
+
+**Are pets allowed?**
+Yes, pets are welcome.
+
+**What languages do the hosts speak?**
+Polish, English, and Czech.
+
+**Is there a minimum stay?**
+Yes, minimum 2 nights.
+
+**Can I book just for work (no leisure)?**
+Yes — the workation package is specifically designed for remote professionals who want to work during the day and enjoy nature in the evenings.
+
+**Is it suitable for families with children?**
+Yes — alpaca walks, farm animals, and mountain nature make it ideal for families.
+
+**Can I adopt an alpaca?**
+You can symbolically adopt an alpaca and support the farm: https://zagrodaalpakoterapii.com/pl/adopt

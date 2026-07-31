@@ -56,11 +56,110 @@ export default async function RootLayout({
 
   const messages = await getMessages(locale)
 
+  const schemaJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['LodgingBusiness', 'VacationRental', 'TouristAttraction'],
+        '@id': 'https://zagrodaalpakoterapii.com/#property',
+        name: 'Zagroda Alpakoterapii',
+        alternateName: ['Alpaca Therapy Farm', 'Alpaka Farma Ubytování'],
+        description:
+          'Unique alpaca therapy farm and workation retreat in the Jizera and Karkonosze Mountains, Poland. 90 minutes from Prague, 2 hours from Wrocław. Offers farm stays, remote-work packages, alpaca therapy walks, and digital detox retreats. 100 Mbps fibre Wi-Fi tested for Zoom and video calls. Pet-friendly accommodation in four unique rooms: Garden Room, Jungle Room, Forest Apartment, and Caravan.',
+        url: 'https://zagrodaalpakoterapii.com',
+        telephone: '+48695545330',
+        email: 'zagrodaalpakoterapii@gmail.com',
+        image: [
+          'https://zagrodaalpakoterapii.com/images/Rooms/Garden Room1.jpg',
+          'https://zagrodaalpakoterapii.com/images/Rooms/Jungle Room 1.jpg',
+          'https://zagrodaalpakoterapii.com/images/Rooms/apartment1.jpg',
+          'https://zagrodaalpakoterapii.com/images/zagrodanewlogo.png',
+        ],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Rębiszów',
+          addressLocality: 'Mirsk',
+          addressRegion: 'Lower Silesian Voivodeship',
+          postalCode: '59-630',
+          addressCountry: 'PL',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 50.9712,
+          longitude: 15.3891,
+        },
+        hasMap: 'https://maps.google.com/?q=Zagroda+Alpakoterapii+Mirsk+Poland',
+        priceRange: '$$',
+        currenciesAccepted: 'PLN, EUR',
+        paymentAccepted: 'Credit Card, Cash, Bank Transfer',
+        checkinTime: '15:00',
+        checkoutTime: '11:00',
+        starRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '127',
+          bestRating: '5',
+          worstRating: '1',
+        },
+        amenityFeature: [
+          { '@type': 'LocationFeatureSpecification', name: 'Free Wi-Fi', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'High-speed fibre internet (100 Mbps)', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Free parking', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Pet-friendly', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Kitchen facilities', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Dedicated work desk', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Espresso machine', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Mountain views', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Alpaca therapy sessions', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Alpaca walks', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Garden', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Heating', value: true },
+        ],
+        numberOfRooms: 4,
+        petsAllowed: true,
+        smokingAllowed: false,
+        tourBookingPage: 'https://zagrodaalpakoterapii.com/en/workation',
+        availableLanguage: [
+          { '@type': 'Language', name: 'Polish' },
+          { '@type': 'Language', name: 'English' },
+          { '@type': 'Language', name: 'Czech' },
+        ],
+        keywords:
+          'alpaca farm, workation, remote work retreat, alpaca therapy, farm stay Poland, Karkonosze accommodation, Jizera Mountains retreat, digital nomad accommodation, pet friendly farm stay, nature retreat, Czech border Poland',
+        sameAs: [
+          'https://www.facebook.com/zagrodaalpakoterapii',
+          'https://www.instagram.com/zagrodaalpakoterapii',
+          'https://www.booking.com/hotel/pl/zagroda-alpakoterapii.html',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://zagrodaalpakoterapii.com/#website',
+        url: 'https://zagrodaalpakoterapii.com',
+        name: 'Zagroda Alpakoterapii',
+        inLanguage: ['pl', 'en', 'cs', 'de', 'nl'],
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://zagrodaalpakoterapii.com/en?q={search_term_string}',
+          'query-input': 'required name=search_term_string',
+        },
+      },
+    ],
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="fb:app_id" content="1608105036460297" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
+        />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
