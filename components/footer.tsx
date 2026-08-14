@@ -53,6 +53,9 @@ export function Footer({ locale }: FooterProps) {
                 <Instagram size={24} />
               </a>
             </div>
+            <Link href={`/${locale}/partners`} className="text-sm hover:text-orange-200 block mb-1">
+              {locale === 'pl' ? 'Dla Hoteli i Partnerów (Media Kit)' : locale === 'cs' ? 'Pro hotely a partnery' : locale === 'de' ? 'Für Partner & Hotels' : 'For Hotels & Partners (Media Kit)'}
+            </Link>
             <Link href={`/${locale}/privacy`} className="text-sm hover:text-orange-200 block mb-1">
               {t('privacyPolicy')}
             </Link>
