@@ -156,6 +156,8 @@ export default async function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="fb:app_id" content="1608105036460297" />
+        {/* Zoho Marketing Automation / PageSense Tracking Snippet */}
+        <script src="https://cdn-eu.pagesense.io/js/20118320383/73dfb9b8e0844389945694883c358b1f.js" async />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
