@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Copy, Check, Download, Mail, Phone, ExternalLink, MapPin, Sparkles, Send, Coffee } from 'lucide-react';
+import { Copy, Check, Download, Phone, ExternalLink, MapPin, Sparkles, Send, Coffee, Users, Compass } from 'lucide-react';
 
 interface PartnersPageContentProps {
   locale: string;
@@ -10,59 +10,81 @@ interface PartnersPageContentProps {
 
 const DESCRIPTIONS = {
   pl: {
-    title: 'Materiały dla Partnerów, Hoteli i Portali Turystycznych',
-    subtitle: 'Wszystko, czego potrzebujesz, aby polecić Zagrodę Alpakoterapii swoim gościom: gotowe opisy, zdjęcia wysokiej rozdzielczości i logo.',
+    title: 'Materiały dla Hoteli, Pensjonatów i Portali Turystycznych',
+    subtitle: 'Wzbogać ofertę swojego obiektu o wyjątkową atrakcję dla gości. Pobierz gotowe opisy spacerów z alpakami, zdjęcia i zamów bezpłatne materiały na recepcję.',
+    partnerTypeLabel: 'Wybierz typ profilu do skopiowania:',
+    hotelTab: '🏨 Dla Hoteli i Pensjonatów (Atrakcja dla Twoich gości)',
+    portalTab: '🗺️ Dla Portali i Informacji Turystycznej (Pełny profil)',
     locationLabel: 'Lokalizacja',
     contactLabel: 'Kontakt & Rezerwacje',
-    websiteLabel: 'Oficjalna Strona',
-    onlineBooking247: 'Rezerwacje online 24/7',
+    websiteLabel: 'Rezerwacja Atrakcji Online',
+    onlineBooking247: 'Bilety i terminy online 24/7',
     descriptionsHeading: 'Gotowe opisy do wklejenia na Państwa stronę',
-    descriptionsSubheading: 'Wybierz język, aby skopiować gotowy opis do zakładki „Atrakcje w okolicy”',
-    partnerInviteBadge: 'Zaproszenie Partnerskie',
+    descriptionsSubheading: 'Wybierz język, aby skopiować gotowy opis do zakładki „Atrakcje w okolicy / Co robić”',
+    partnerInviteBadge: 'Zaproszenie dla Personelu',
     distanceInfo: '15 min od Świeradowa-Zdroju, 25 min od Szklarskiej Poręby, 90 min od Pragi',
-    shortDescTitle: 'Krótki opis (do listingu atrakcji / 1-2 zdania)',
-    shortDescText: 'Zagroda Alpakoterapii w Rębiszowie (15 min od Świeradowa-Zdroju) – wyjątkowe miejsce spotkań z alpakami, spacery w naturze i alpakoterapia dla dzieci i dorosłych. Wymagana wcześniejsza rezerwacja online lub telefonicznie.',
-    longDescTitle: 'Pełny opis (na stronę z atrakcjami / artykuł)',
-    longDescText: 'Szukasz relaksującej atrakcji w sercu Gór Izerskich? Zagroda Alpakoterapii w Rębiszowie oferuje bezpośredni kontakt z łagodnymi alpakami, spacery z przewodnikiem po malowniczych łąkach oraz sesje terapeutyczne i edukacyjne. Idealna propozycja dla rodzin z dziećmi, par oraz wszystkich miłośników natury. Do dyspozycji gości jest także kameralne gospodarstwo, mini kózki oraz widoki na Karkonosze. Obiekt przyjazny zwierzętom. Rezerwacje biletów i spacerów: https://zagrodaalpakoterapii.com (tel. +48 695 545 330).',
-    photosTitle: 'Zdjęcia i Logo do pobrania (Wysoka rozdzielczość)',
-    photosSubtitle: 'Zdjęcia są wolne od praw autorskich do wykorzystania w materiałach promujących atrakcje regionu.',
-    receptionFlyersTitle: 'Darmowe ulotki i plakaty na recepcję',
-    receptionFlyersDesc: 'Prowadzisz hotel, pensjonat lub punkt informacji? Prześlemy Ci bezpłatnie elegancki stojak z ulotkami dla Twoich gości.',
-    staffInviteTitle: 'Bezpłatna wizyta dla personelu recepcji i managerów',
-    staffInviteDesc: 'Zapraszamy Ciebie i Twój zespół na bezpłatną kawę i spacer z alpakami, abyście mogli osobiście poznać naszą zagrodę i z pełnym przekonaniem polecać ją gościom!',
+    
+    // Hotel-focused snippets (100% Day Activity / Zero Accommodation competition)
+    hotelShortTitle: 'Krótki opis do listy atrakcji (1-2 zdania)',
+    hotelShortText: 'Zagroda Alpakoterapii w Rębiszowie (15 min od Świeradowa-Zdroju) – wspaniała atrakcja dla całej rodziny! Bezpośredni kontakt z łagodnymi alpakami, spacery z przewodnikiem i alpakoterapia. Wymagana wcześniejsza rezerwacja online na zagrodaalpakoterapii.com lub tel. +48 695 545 330.',
+    hotelLongTitle: 'Pełny artykuł do zakładki „Atrakcje w okolicy” (1-2 akapity)',
+    hotelLongText: 'Szukasz wyjątkowej atrakcji w ciągu dnia dla całej rodziny? Zagroda Alpakoterapii w Rębiszowie (zaledwie 15 minut od Świeradowa-Zdroju) to idealne miejsce na relaksujący spacer w naturze z łagodnymi alpakami. Gospodarstwo oferuje indywidualne i grupowe spacery po malowniczych izerskich łąkach, sesje alpakoterapii, karmienie kóz miniaturek oraz niezapomniane sesje zdjęciowe. Ze względu na kameralny charakter i komfort zwierząt, obowiązuje wcześniejsza rezerwacja wizyt: https://zagrodaalpakoterapii.com/pl/activities (tel. +48 695 545 330).',
+
+    // Portal-focused snippets
+    portalShortTitle: 'Krótki wpis katalogowy',
+    portalShortText: 'Zagroda Alpakoterapii w Rębiszowie (Góry Izerskie) – agroturystyka, alpakoterapia oraz spacery z alpakami w malowniczym otoczeniu Karkonoszy. Rezerwacje: zagrodaalpakoterapii.com.',
+    portalLongTitle: 'Pełny opis regionalny (Agroturystyka & Alpakoterapia)',
+    portalLongText: 'Zagroda Alpakoterapii to wyjątkowe gospodarstwo agroturystyczne i ośrodek alpakoterapii w Rębiszowie koło Mirska w Górach Izerskich. Oferuje spotkania edukacyjne, spacery z alpakami, warsztaty i sesje terapeutyczne w otoczeniu górskiej przyrody. Obiekt całoroczny, przyjazny zwierzętom i rodzinom z dziećmi. Szczegóły: https://zagrodaalpakoterapii.com (tel. +48 695 545 330).',
+
+    photosTitle: 'Zdjęcia Atrakcji i Logo do pobrania (Wysoka rozdzielczość)',
+    photosSubtitle: 'Zdjęcia są wolne od praw autorskich do wykorzystania na Państwa stronie w sekcji atrakcji regionalnych.',
+    receptionFlyersTitle: 'Darmowe ulotki i stojaki na recepcję',
+    receptionFlyersDesc: 'Prowadzisz hotel, pensjonat lub apartamenty? Prześlemy Ci bezpłatnie elegancki stojak z ulotkami o spacerach z alpakami, który ułatwi recepcji polecanie atrakcji.',
+    staffInviteTitle: 'Darmowa kawa i spacer z alpakami dla Twojej recepcji',
+    staffInviteDesc: 'Zapraszamy personel recepcji oraz managerów na bezpłatną wizytę i spacer z alpakami. Gdy zespół osobiście pozna to miejsce, będzie z entuzjazmem polecać je Państwa gościom!',
     copyBtn: 'Kopiuj opis',
     copiedBtn: 'Skopiowano!',
     downloadBtn: 'Pobierz zdjęcie',
     contactWhatsapp: 'Napisz na WhatsApp',
     requestFlyersBtn: 'Zamów darmowe ulotki',
-    formName: 'Nazwa obiektu / hotelu',
+    formName: 'Nazwa hotelu / pensjonatu',
     formAddress: 'Adres do wysyłki ulotek',
     formPhone: 'Telefon kontaktowy',
     formSubmit: 'Wyślij zamówienie',
-    formSuccess: 'Dziękujemy! Skontaktujemy się i wyślemy materiały promocyjne.',
-    whatsappMessage: 'Dzień dobry! Reprezentuję hotel/pensjonat. Chcielibyśmy skorzystać z zaproszenia partnerskiego i odwiedzić Zagrodę Alpakoterapii.',
+    formSuccess: 'Dziękujemy! Skontaktujemy się i wyślemy pakiet ulotek na recepcję.',
+    whatsappMessage: 'Dzień dobry! Reprezentuję hotel/pensjonat. Chcielibyśmy skorzystać z bezpłatnego zaproszenia partnerskiego dla naszej recepcji do Zagrody Alpakoterapii.',
   },
   cs: {
-    title: 'Materiály pro hotely, partnery a turistické portály',
-    subtitle: 'Vše, co potřebujete k doporučení Zagrody Alpakoterapii vašim hostům: připravené texty, fotografie ve vysokém rozlišení a logo.',
+    title: 'Materiály pro hotely, penziony a turistické portály',
+    subtitle: 'Obohaťte nabídku svého ubytování o jedinečný zážitek pro vaše hosty. Stáhněte si připravené texty o procházkách s alpakami a objednejte si letáky na recepci zdarma.',
+    partnerTypeLabel: 'Zvolte typ materiálů:',
+    hotelTab: '🏨 Pro hotely a penziony (Atrakce pro vaše hosty)',
+    portalTab: '🗺️ Pro turistické portály a infocentra (Kompletní profil)',
     locationLabel: 'Lokalita',
     contactLabel: 'Kontakt a rezervace',
-    websiteLabel: 'Oficiální web',
+    websiteLabel: 'Online rezervace zážitků',
     onlineBooking247: 'Online rezervace 24/7',
     descriptionsHeading: 'Připravené texty ke zkopírování na váš web',
     descriptionsSubheading: 'Vyberte jazyk pro zkopírování textu do sekce „Tipy na výlet a atrakce v okolí“',
-    partnerInviteBadge: 'Partnerské pozvání',
+    partnerInviteBadge: 'Pozvání pro recepci',
     distanceInfo: '45 min z Liberce, 90 min z Prahy, 15 min od lázní Świeradów-Zdrój',
-    shortDescTitle: 'Krátký popis (pro přehledy atrakcí / 1–2 věty)',
-    shortDescText: 'Zagroda Alpakoterapii v Rębiszowě (jen 45 min z Liberce) – unikátní alpaka farma, procházky s alpakami v přírodě Jizerských hor a alpakoterapie pro rodiny i jednotlivce. Nutná rezervace předem.',
-    longDescTitle: 'Plný popis (pro webové stránky a katalogy)',
-    longDescText: 'Hledáte klidný a nezapomenutelný zážitek v Jizerských horách? Zagroda Alpakoterapii nabízí přímý kontakt s přátelskými alpakami, komentované procházky přírodou a terapeutická setkání. Ideální pro rodiny s dětmi, páry i milovníky zvířat. K dispozici jsou také minikozy, krásné výhledy a útulné ubytování. Rezervace: https://zagrodaalpakoterapii.com (tel. +48 695 545 330, mluvíme česky i anglicky).',
+    
+    hotelShortTitle: 'Krátký popis do přehledu atrakcí (1-2 věty)',
+    hotelShortText: 'Zagroda Alpakoterapii v Rębiszowě (jen 45 min z Liberce / 15 min ze Świeradowa) – skvělý zážitek pro celou rodinu! Komentované procházky s přátelskými alpakami v přírodě Jizerských hor a alpakoterapie. Rezervace online na zagrodaalpakoterapii.com nebo tel. +48 695 545 330.',
+    hotelLongTitle: 'Plný popis pro sekci „Tipy na výlet v okolí“',
+    hotelLongText: 'Hledáte nezapomenutelný denní zážitek v Jizerských horách? Zagroda Alpakoterapii nabízí přímý kontakt s mírumilovnými alpakami, komentované procházky přírodou po malebných loukách a terapeutická setkání pro děti i dospělé. Na místě najdete také minikozy a nádherné výhledy. Z důvodu klidu zvířat a komfortu návštěvníků je nutná rezervace předem: https://zagrodaalpakoterapii.com/cs/activities (tel. +48 695 545 330, mluvíme česky i anglicky).',
+
+    portalShortTitle: 'Krátký zápis do katalogu',
+    portalShortText: 'Zagroda Alpakoterapii v Rębiszowě – alpaka farma, agroturistika a alpakoterapie v Jizerských horách. Rezervace: zagrodaalpakoterapii.com.',
+    portalLongTitle: 'Kompletní regionální profil',
+    portalLongText: 'Zagroda Alpakoterapii je unikátní alpaka farma a centrum alpakoterapie v Rębiszowě u polsko-české hranice. Nabízí procházky s alpakami, zážitkové programy pro rodiny s dětmi a relaxaci v přírodě. Více informací na: https://zagrodaalpakoterapii.com (tel. +48 695 545 330).',
+
     photosTitle: 'Fotografie a logo ke stažení (vysoké rozlišení)',
-    photosSubtitle: 'Fotografie můžete volně použít pro propagaci regionálních atrakcí.',
-    receptionFlyersTitle: 'Letáky na recepci zdarma',
-    receptionFlyersDesc: 'Provozujete hotel nebo penzion? Rádi vám zdarma zašleme tištěné informační letáky pro vaše hosty.',
-    staffInviteTitle: 'Bezplatná návštěva pro personál recepce',
-    staffInviteDesc: 'Zveme váš tým na bezplatnou kávu a seznámení s alpakami, abyste mohli zážitek osobně doporučit svým hostům!',
+    photosSubtitle: 'Fotografie můžete volně použít pro prezentaci regionálních atrakcí na vašem webu.',
+    receptionFlyersTitle: 'Tištěné letáky na recepci zdarma',
+    receptionFlyersDesc: 'Provozujete hotel nebo penzion? Rádi vám zdarma zašleme stojánek s informačními letáky o alpakách pro vaše hosty.',
+    staffInviteTitle: 'Káva a procházka s alpakami pro váš personál zdarma',
+    staffInviteDesc: 'Zveme recepční a manažery vašeho hotelu na bezplatnou návštěvu a seznámení s alpakami, abyste zážitek mohli s jistotou doporučit hostům!',
     copyBtn: 'Kopírovat text',
     copiedBtn: 'Zkopírováno!',
     downloadBtn: 'Stáhnout foto',
@@ -72,30 +94,40 @@ const DESCRIPTIONS = {
     formAddress: 'Adresa pro doručení',
     formPhone: 'Telefon',
     formSubmit: 'Odeslat žádost',
-    formSuccess: 'Děkujeme! Brzy vám zašleme propagační materiály.',
-    whatsappMessage: 'Dobrý den! Zastupuji hotel/penzion a rádi bychom využili partnerského pozvání na návštěvu Zagrody Alpakoterapii.',
+    formSuccess: 'Děkujeme! Brzy vám zašleme propagační letáky na recepci.',
+    whatsappMessage: 'Dobrý den! Zastupuji hotel/penzion a rádi bychom využili partnerského pozvání pro náš personál na návštěvu Zagrody Alpakoterapii.',
   },
   en: {
-    title: 'Media & Partner Kit for Hotels & Tourism Boards',
-    subtitle: 'Everything you need to recommend Zagroda Alpakoterapii to your guests: ready-to-use descriptions, high-res photos, and logos.',
+    title: 'Media Kit & Partner Portal for Hotels & Tourism Boards',
+    subtitle: 'Enrich your guests’ stay with a unique local experience. Download ready-to-use alpaca walk descriptions, high-res photos, and order free reception materials.',
+    partnerTypeLabel: 'Select profile type to copy:',
+    hotelTab: '🏨 For Hotels & Guesthouses (Guest Attraction / Day Trip)',
+    portalTab: '🗺️ For Tourism Boards & Directories (Full Profile)',
     locationLabel: 'Location',
     contactLabel: 'Contact & Bookings',
-    websiteLabel: 'Official Website',
+    websiteLabel: 'Online Activity Booking',
     onlineBooking247: 'Online booking 24/7',
     descriptionsHeading: 'Ready-to-use descriptions for your website',
-    descriptionsSubheading: 'Select a language to copy ready descriptions for your "Local Attractions" page',
-    partnerInviteBadge: 'Partner Invitation',
+    descriptionsSubheading: 'Select a language to copy ready descriptions for your "Local Attractions / Things to Do" page',
+    partnerInviteBadge: 'Staff VIP Invitation',
     distanceInfo: '15 min from Świeradów-Zdrój, 45 min from Liberec, 90 min from Prague, 2 hrs from Wrocław',
-    shortDescTitle: 'Short Description (for attraction listings / 1-2 sentences)',
-    shortDescText: 'Zagroda Alpakoterapii in Rębiszów (15 min from Świeradów-Zdrój) – a boutique alpaca therapy farm offering guided nature walks, animal therapy, and peaceful farm stays. Advance booking required.',
-    longDescTitle: 'Full Description (for partner pages / directory listings)',
-    longDescText: 'Looking for a relaxing nature experience in the Jizera Mountains? Zagroda Alpakoterapii offers direct interaction with gentle alpacas, guided mountain walks, and therapeutic sessions for all ages. Perfect for families, couples, and nature enthusiasts. Featuring farm stays, miniature goats, and stunning mountain views. Book online at https://zagrodaalpakoterapii.com (Phone: +48 695 545 330).',
+    
+    hotelShortTitle: 'Short description for attraction listings (1-2 sentences)',
+    hotelShortText: 'Zagroda Alpakoterapii in Rębiszów (15 min from Świeradów-Zdrój) – a delightful family activity! Direct interaction with gentle alpacas, guided nature walks, and animal therapy in the Jizera Mountains. Advance booking required at zagrodaalpakoterapii.com or +48 695 545 330.',
+    hotelLongTitle: 'Full article for your "Things to Do Nearby" page',
+    hotelLongText: 'Looking for a memorable day activity in the Jizera Mountains? Zagroda Alpakoterapii offers guided meadow walks with gentle alpacas, animal-assisted therapy, miniature goats, and scenic mountain views. Ideal for families, couples, and nature lovers staying in the region. Due to animal welfare and small-group comfort, advance booking is required: https://zagrodaalpakoterapii.com/en/activities (Phone: +48 695 545 330).',
+
+    portalShortTitle: 'Short Directory Listing',
+    portalShortText: 'Zagroda Alpakoterapii in Rębiszów – alpaca therapy farm, guided walks, and agritourism in the Jizera Mountains. Bookings: zagrodaalpakoterapii.com.',
+    portalLongTitle: 'Full Regional Directory Profile',
+    portalLongText: 'Zagroda Alpakoterapii is a boutique alpaca farm and therapy center in Rębiszów, Poland (15 min from Świeradów-Zdrój, 45 min from Liberec). Offers interactive alpaca walks, educational visits, and nature experiences. Pet-friendly and open year-round. Details: https://zagrodaalpakoterapii.com (Phone: +48 695 545 330).',
+
     photosTitle: 'Download Photos & Logos (High-Resolution)',
-    photosSubtitle: 'Royalty-free for hotels, travel portals, and regional tourism guides.',
-    receptionFlyersTitle: 'Free Reception Leaflets & Display Stands',
-    receptionFlyersDesc: 'Running a hotel, guest house, or tourist info office? We will courier free flyers and a counter stand directly to you.',
-    staffInviteTitle: 'Complimentary VIP Visit for Hotel Receptionists & Managers',
-    staffInviteDesc: 'We invite you and your front-desk staff for a free coffee and alpaca walk so you can experience our farm first-hand!',
+    photosSubtitle: 'Royalty-free for hotels, guest houses, and regional tourism guides.',
+    receptionFlyersTitle: 'Free Reception Leaflets & Counter Displays',
+    receptionFlyersDesc: 'Managing a hotel, guesthouse, or tourist office? We will courier free flyers and a countertop display directly to your reception desk.',
+    staffInviteTitle: 'Free VIP Visit for Hotel Front-Desk Staff & Managers',
+    staffInviteDesc: 'We invite your reception staff for free coffee and an alpaca walk so they can experience the farm firsthand and enthusiastically recommend it to guests!',
     copyBtn: 'Copy Description',
     copiedBtn: 'Copied!',
     downloadBtn: 'Download Photo',
@@ -105,30 +137,40 @@ const DESCRIPTIONS = {
     formAddress: 'Delivery Address',
     formPhone: 'Phone Number',
     formSubmit: 'Send Request',
-    formSuccess: 'Thank you! We will courier promotional materials to you.',
-    whatsappMessage: 'Hello! I represent a hotel/accommodation provider. We would love to take up the partner VIP invitation to visit Zagroda Alpakoterapii.',
+    formSuccess: 'Thank you! We will courier promotional flyers to your reception.',
+    whatsappMessage: 'Hello! I represent a hotel/accommodation provider. We would love to take up the VIP invitation for our front-desk staff to visit Zagroda Alpakoterapii.',
   },
   de: {
-    title: 'Partner-Kit für Hotels & Tourismusportale',
-    subtitle: 'Alles, was Sie benötigen, um die Zagroda Alpakoterapii Ihren Gästen zu empfehlen: fertige Texte, hochauflösende Fotos und Logos.',
+    title: 'Partner-Kit für Hotels, Pensionen & Tourismusportale',
+    subtitle: 'Bereichern Sie den Aufenthalt Ihrer Gäste mit einem einzigartigen Erlebnis. Laden Sie Beschreibungen für Alpaka-Spaziergänge herunter und bestellen Sie kostenlose Flyer für Ihre Rezeption.',
+    partnerTypeLabel: 'Profiltyp zum Kopieren wählen:',
+    hotelTab: '🏨 Für Hotels & Pensionen (Ausflugsziel für Ihre Gäste)',
+    portalTab: '🗺️ Für Tourismusportale (Gesamtprofil)',
     locationLabel: 'Standort',
     contactLabel: 'Kontakt & Buchungen',
-    websiteLabel: 'Offizielle Website',
-    onlineBooking247: 'Online-Buchung rund um die Uhr',
+    websiteLabel: 'Online-Erlebnisbuchung',
+    onlineBooking247: 'Online-Buchung 24/7',
     descriptionsHeading: 'Fertige Texte zum Einfügen auf Ihrer Website',
     descriptionsSubheading: 'Wählen Sie eine Sprache, um die Beschreibung für den Bereich „Ausflugsziele in der Region“ zu kopieren',
-    partnerInviteBadge: 'Partner-Einladung',
+    partnerInviteBadge: 'Team-Einladung',
     distanceInfo: '15 Min. von Bad Flinsberg (Świeradów-Zdrój), 90 Min. von Prag, 2 Std. von Dresden',
-    shortDescTitle: 'Kurzbeschreibung (für Attraktionslisten / 1-2 Sätze)',
-    shortDescText: 'Zagroda Alpakoterapii in Rębiszów (15 Min. von Świeradów-Zdrój) – ein einzigartiger Alpaka-Therapiehof mit geführten Spaziergängen und Erholung in der Natur des Isergebirges. Voranmeldung erforderlich.',
-    longDescTitle: 'Ausführliche Beschreibung (für Partnerseiten & Kataloge)',
-    longDescText: 'Suchen Sie nach einem erholsamen Naturerlebnis im Isergebirge? Die Zagroda Alpakoterapii bietet direkten Kontakt zu zahmen Alpakas, geführte Wiesenwanderungen und tiergestützte Therapie. Ideal für Familien mit Kindern, Paare und Naturliebhaber. Buchung: https://zagrodaalpakoterapii.com (Tel. +48 695 545 330).',
+    
+    hotelShortTitle: 'Kurzbeschreibung für Attraktionslisten (1-2 Sätze)',
+    hotelShortText: 'Zagroda Alpakoterapii in Rębiszów (15 Min. von Świeradów-Zdrój) – ein wunderbares Naturerlebnis für die ganze Familie! Direkter Kontakt zu zahmen Alpakas, geführte Wiesenwanderungen und tiergestützte Therapie. Voranmeldung erforderlich: zagrodaalpakoterapii.com oder Tel. +48 695 545 330.',
+    hotelLongTitle: 'Ausführlicher Beitrag für Ihre Rubrik „Ausflugsziele in der Nähe“',
+    hotelLongText: 'Suchen Sie nach einem besonderen Tagesausflug im Isergebirge? Die Zagroda Alpakoterapii bietet geführte Spaziergänge mit Alpakas durch die malerische Landschaft, Streichelzeit mit Miniziegen und Erholung in der Natur. Ideal für Familien mit Kindern und Naturliebhaber. Aus Rücksicht auf die Tiere ist eine Voranmeldung erforderlich: https://zagrodaalpakoterapii.com/de/activities (Tel. +48 695 545 330).',
+
+    portalShortTitle: 'Kurzer Katalogeintrag',
+    portalShortText: 'Zagroda Alpakoterapii in Rębiszów – Alpaka-Therapiehof, Wiesenwanderungen und Agrotourismus im Isergebirge. Buchung: zagrodaalpakoterapii.com.',
+    portalLongTitle: 'Ausführliches Regionalprofil',
+    portalLongText: 'Die Zagroda Alpakoterapii ist ein Alpaka-Hof und Therapiezentrum in Rębiszów bei Mirsk. Bietet geführte Naturspaziergänge mit Alpakas, Bildungsangebote und tiergestützte Erholung. Ganzjährig geöffnet. Details: https://zagrodaalpakoterapii.com (Tel. +48 695 545 330).',
+
     photosTitle: 'Fotos & Logo herunterladen (High-Res)',
-    photosSubtitle: 'Kostenlos nutzbar für regionale Reiseführer, Hotel-Websites und Tourismusportale.',
-    receptionFlyersTitle: 'Kostenlose Flyer für die Rezeption',
-    receptionFlyersDesc: 'Betreiben Sie ein Hotel oder eine Pension? Wir senden Ihnen gerne kostenlose Flyer für Ihre Gäste zu.',
-    staffInviteTitle: 'Kostenloser Besuch für Rezeption & Management',
-    staffInviteDesc: 'Wir laden Ihr Rezeptionsteam herzlich zu einem kostenlosen Kaffee und einem Alpaka-Spaziergang ein!',
+    photosSubtitle: 'Kostenlos nutzbar für Hotel-Websites, Gästebücher und regionale Reiseführer.',
+    receptionFlyersTitle: 'Kostenlose Flyer & Aufsteller für die Rezeption',
+    receptionFlyersDesc: 'Betreiben Sie ein Hotel oder eine Pension? Wir senden Ihnen gerne kostenlose Flyer über Alpaka-Wanderungen für Ihre Rezeption zu.',
+    staffInviteTitle: 'Kostenloser Besuch für Ihr Rezeptionsteam',
+    staffInviteDesc: 'Wir laden Ihr Rezeptionsteam herzlich zu einem kostenlosen Kaffee und einem Alpaka-Spaziergang ein, damit Sie das Erlebnis persönlich kennenlernen!',
     copyBtn: 'Text kopieren',
     copiedBtn: 'Kopiert!',
     downloadBtn: 'Foto laden',
@@ -138,62 +180,72 @@ const DESCRIPTIONS = {
     formAddress: 'Lieferadresse',
     formPhone: 'Telefon',
     formSubmit: 'Absenden',
-    formSuccess: 'Vielen Dank! Wir senden Ihnen das Infomaterial zu.',
-    whatsappMessage: 'Guten Tag! Ich vertrete ein Hotel/eine Pension und wir möchten gerne die Partnereinladung nutzen, um die Zagroda Alpakoterapii zu besuchen.',
+    formSuccess: 'Vielen Dank! Wir senden Ihnen Flyer für die Rezeption zu.',
+    whatsappMessage: 'Guten Tag! Ich vertrete ein Hotel/eine Pension und wir möchten gerne die Partnereinladung für unser Rezeptionsteam nutzen.',
   },
   nl: {
-    title: 'Media & Partner Kit voor Hotels en Toeristische Platforms',
-    subtitle: 'Alles wat u nodig heeft om Zagroda Alpakoterapii aan te bevelen aan uw gasten: kant-en-klare teksten, foto’s in hoge resolutie en logo’s.',
+    title: 'Media Kit & Partner Portal voor Hotels & Toeristische Platforms',
+    subtitle: 'Verrijk het verblijf van uw gasten met een unieke lokale activiteit. Download kant-en-klare teksten over alpacawandelingen en bestel gratis flyers voor de receptie.',
+    partnerTypeLabel: 'Selecteer type beschrijving:',
+    hotelTab: '🏨 Voor Hotels & Pensions (Daggastactiviteit voor uw gasten)',
+    portalTab: '🗺️ Voor Toeristische Gidsen & Portalen (Volledig profiel)',
     locationLabel: 'Locatie',
     contactLabel: 'Contact & Reserveringen',
-    websiteLabel: 'Officiële Website',
+    websiteLabel: 'Online Activiteit Reserveren',
     onlineBooking247: 'Online reserveren 24/7',
     descriptionsHeading: 'Kant-en-klare teksten voor uw website',
     descriptionsSubheading: 'Selecteer een taal om de beschrijving voor uw pagina "Bezienswaardigheden in de omgeving" te kopiëren',
-    partnerInviteBadge: 'Partner Uitnodiging',
+    partnerInviteBadge: 'Personeelsuitnodiging',
     distanceInfo: '15 min. van Świeradów-Zdrój, 90 min. van Praag, 2 uur van Wrocław',
-    shortDescTitle: 'Korte beschrijving (voor attractielijsten / 1-2 zinnen)',
-    shortDescText: 'Zagroda Alpakoterapii in Rębiszów (15 min. van Świeradów-Zdrój) – een unieke alpacatherapieboerderij met begeleide wandelingen in de natuur van het Isergebergte en alpacatherapie voor jong en oud. Vooraf reserveren verplicht.',
-    longDescTitle: 'Volledige beschrijving (voor partnerpagina’s & artikelen)',
-    longDescText: 'Op zoek naar een ontspannende natuurervaring in het Isergebergte? Zagroda Alpakoterapii biedt direct contact met vriendelijke alpaca’s, begeleide wandelingen door schilderachtige weiden en therapeutische sessies. Ideaal voor gezinnen met kinderen, stellen en natuurliebhebbers. Beschikt ook over boerderijverblijven, dwerggeitjes en prachtig uitzicht op het Reuzengebergte. Reserveren: https://zagrodaalpakoterapii.com (Tel. +48 695 545 330).',
+    
+    hotelShortTitle: 'Korte beschrijving voor activiteitenoverzichten (1-2 zinnen)',
+    hotelShortText: 'Zagroda Alpakoterapii in Rębiszów (15 min. van Świeradów-Zdrój) – een fantastische activiteit voor het hele gezin! Direct contact met vriendelijke alpaca’s, begeleide wandelingen in de natuur van het Isergebergte. Vooraf reserveren verplicht via zagrodaalpakoterapii.com of +48 695 545 330.',
+    hotelLongTitle: 'Volledig artikel voor uw pagina "Wat te doen in de omgeving"',
+    hotelLongText: 'Op zoek naar een ontspannende dagactiviteit in het Isergebergte? Zagroda Alpakoterapii biedt begeleide weidewandelingen met vriendelijke alpaca’s, dwerggeitjes en prachtig uitzicht op het Reuzengebergte. Ideaal voor gezinnen en stellen die in de regio verblijven. Vooraf reserveren is verplicht: https://zagrodaalpakoterapii.com/nl/activities (Tel. +48 695 545 330).',
+
+    portalShortTitle: 'Korte gidsvermelding',
+    portalShortText: 'Zagroda Alpakoterapii in Rębiszów – alpacatherapie, begeleide wandelingen en agritoerisme in het Isergebergte. Reserveren: zagrodaalpakoterapii.com.',
+    portalLongTitle: 'Volledig regionaal profiel',
+    portalLongText: 'Zagroda Alpakoterapii is een boerderij en alpacatherapiecentrum in Rębiszów nabij Mirsk. Biedt educatieve ontmoetingen, alpacawandelingen en natuurbeleving. Gehele jaar geopend. Info: https://zagrodaalpakoterapii.com (Tel. +48 695 545 330).',
+
     photosTitle: 'Foto’s & Logo downloaden (Hoge resolutie)',
-    photosSubtitle: 'Rechtenvrij te gebruiken voor hotels, reisgidsen en regionale toeristische platforms.',
-    receptionFlyersTitle: 'Gratis flyers voor de receptie',
-    receptionFlyersDesc: 'Beheert u een hotel, pension of VVV-kantoor? We sturen u graag een gratis display met flyers voor uw gasten.',
-    staffInviteTitle: 'Gratis VIP-bezoek voor receptiepersoneel en managers',
-    staffInviteDesc: 'We nodigen uw receptieteam van harte uit voor gratis koffie en een wandeling met de alpaca’s, zodat u onze boerderij zelf kunt ervaren en aanbevelen!',
+    photosSubtitle: 'Rechtenvrij te gebruiken voor hotelwebsites, gastenmappen en regionale reisgidsen.',
+    receptionFlyersTitle: 'Gratis flyers & display voor de receptie',
+    receptionFlyersDesc: 'Beheert u een hotel of pension? We sturen u graag een gratis display met flyers over alpacawandelingen voor uw gasten.',
+    staffInviteTitle: 'Gratis VIP-bezoek voor receptiepersoneel',
+    staffInviteDesc: 'We nodigen uw receptieteam van harte uit voor gratis koffie en een alpacawandeling, zodat u de boerderij zelf kunt ervaren en aanbevelen!',
     copyBtn: 'Tekst kopiëren',
     copiedBtn: 'Gekopieerd!',
     downloadBtn: 'Download foto',
     contactWhatsapp: 'WhatsApp contact',
     requestFlyersBtn: 'Flyers bestellen',
-    formName: 'Naam hotel / accommodatie',
+    formName: 'Naam hotel / pension',
     formAddress: 'Bezorgadres',
     formPhone: 'Telefoonnummer',
     formSubmit: 'Aanvraag versturen',
-    formSuccess: 'Bedankt! We sturen het promotiemateriaal zo snel mogelijk naar u toe.',
-    whatsappMessage: 'Hallo! Ik vertegenwoordig een hotel/accommodatie. We willen graag gebruikmaken van de partneruitnodiging om Zagroda Alpakoterapii te bezoeken.',
+    formSuccess: 'Bedankt! We sturen de flyers zo snel mogelijk naar uw receptie.',
+    whatsappMessage: 'Hallo! Ik vertegenwoordig een hotel/pension en we willen graag gebruikmaken van de partnereinladung voor ons receptieteam.',
   },
 };
 
 const PHOTOS = [
   {
-    title: 'Alpaca Walks & Meet-and-Greet',
+    title: 'Spacery i spotkania z alpakami (Alpaca Walk)',
     url: '/images/Meet-and-Greet.jpg',
-    category: 'Experience / Animals',
+    category: 'Atrakcja / Zwierzęta',
   },
   {
-    title: 'Alpaca in Jizera Mountain Nature',
+    title: 'Alpaka w plenerze Gór Izerskich',
     url: '/images/Alpaca-cover-1.jpg',
-    category: 'Landscape / Nature',
+    category: 'Krajobraz / Natura',
   },
   {
-    title: 'Cozy Farmhouse Rooms',
-    url: '/images/Farmhouse-rooms.jpg',
-    category: 'Accommodation / Rooms',
+    title: 'Karmienie i kontakt ze zwierzętami',
+    url: '/images/Ricky.jpeg',
+    category: 'Edukacja / Dzieci',
   },
   {
-    title: 'Official Logo (Zagroda Alpakoterapii)',
+    title: 'Oficjalne Logo Zagroda Alpakoterapii',
     url: '/images/zagrodanewlogo.png',
     category: 'Branding / Logo',
   },
@@ -202,11 +254,17 @@ const PHOTOS = [
 export function PartnersPageContent({ locale }: PartnersPageContentProps) {
   const t = DESCRIPTIONS[locale as keyof typeof DESCRIPTIONS] || DESCRIPTIONS.en;
   const [selectedLang, setSelectedLang] = useState<'pl' | 'cs' | 'en' | 'de' | 'nl'>((locale as 'pl' | 'cs' | 'en' | 'de' | 'nl') || 'en');
+  const [partnerType, setPartnerType] = useState<'hotel' | 'portal'>('hotel');
   const [copiedShort, setCopiedShort] = useState(false);
   const [copiedLong, setCopiedLong] = useState(false);
   const [flyerSubmitted, setFlyerSubmitted] = useState(false);
 
   const activeCopy = DESCRIPTIONS[selectedLang] || DESCRIPTIONS.en;
+
+  const shortTitle = partnerType === 'hotel' ? activeCopy.hotelShortTitle : activeCopy.portalShortTitle;
+  const shortText = partnerType === 'hotel' ? activeCopy.hotelShortText : activeCopy.portalShortText;
+  const longTitle = partnerType === 'hotel' ? activeCopy.hotelLongTitle : activeCopy.portalLongTitle;
+  const longText = partnerType === 'hotel' ? activeCopy.hotelLongText : activeCopy.portalLongText;
 
   const handleCopy = (text: string, type: 'short' | 'long') => {
     navigator.clipboard.writeText(text);
@@ -227,7 +285,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold">
             <Sparkles className="w-4 h-4" />
-            <span>Media Kit & B2B Partner Portal</span>
+            <span>Media Kit & Partner Portal</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.title}
@@ -259,17 +317,49 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
             <ExternalLink className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
             <div>
               <p className="font-semibold text-slate-900">{t.websiteLabel}</p>
-              <a href="https://zagrodaalpakoterapii.com" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-600 hover:underline">
-                zagrodaalpakoterapii.com
+              <a href="https://zagrodaalpakoterapii.com/activities" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-600 hover:underline">
+                zagrodaalpakoterapii.com/activities
               </a>
               <p className="text-xs text-slate-500 mt-1">{t.onlineBooking247}</p>
             </div>
           </div>
         </div>
 
-        {/* Language Tabs for Descriptions */}
+        {/* Audience Segment Tabs (Hotels vs Tourism Portals) */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          
+          <div className="space-y-3 border-b border-slate-100 pb-6">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              {t.partnerTypeLabel}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <button
+                onClick={() => setPartnerType('hotel')}
+                className={`p-4 rounded-xl border text-left font-semibold transition flex items-center justify-between ${
+                  partnerType === 'hotel'
+                    ? 'border-emerald-600 bg-emerald-50 text-emerald-950 shadow-sm'
+                    : 'border-slate-200 hover:bg-slate-50 text-slate-700'
+                }`}
+              >
+                <span>{t.hotelTab}</span>
+                {partnerType === 'hotel' && <Check className="w-5 h-5 text-emerald-600" />}
+              </button>
+              <button
+                onClick={() => setPartnerType('portal')}
+                className={`p-4 rounded-xl border text-left font-semibold transition flex items-center justify-between ${
+                  partnerType === 'portal'
+                    ? 'border-emerald-600 bg-emerald-50 text-emerald-950 shadow-sm'
+                    : 'border-slate-200 hover:bg-slate-50 text-slate-700'
+                }`}
+              >
+                <span>{t.portalTab}</span>
+                {partnerType === 'portal' && <Check className="w-5 h-5 text-emerald-600" />}
+              </button>
+            </div>
+          </div>
+
+          {/* Language Switcher Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <h2 className="text-xl font-bold text-slate-900">{t.descriptionsHeading}</h2>
               <p className="text-sm text-slate-500">{t.descriptionsSubheading}</p>
@@ -295,38 +385,38 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
           <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200/60">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                {activeCopy.shortDescTitle}
+                {shortTitle}
               </span>
               <button
-                onClick={() => handleCopy(activeCopy.shortDescText, 'short')}
+                onClick={() => handleCopy(shortText, 'short')}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 transition"
               >
                 {copiedShort ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                 {copiedShort ? activeCopy.copiedBtn : activeCopy.copyBtn}
               </button>
             </div>
-            <p className="text-slate-800 text-sm leading-relaxed">{activeCopy.shortDescText}</p>
+            <p className="text-slate-800 text-sm leading-relaxed">{shortText}</p>
           </div>
 
           {/* Long Description */}
           <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200/60">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                {activeCopy.longDescTitle}
+                {longTitle}
               </span>
               <button
-                onClick={() => handleCopy(activeCopy.longDescText, 'long')}
+                onClick={() => handleCopy(longText, 'long')}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 transition"
               >
                 {copiedLong ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                 {copiedLong ? activeCopy.copiedBtn : activeCopy.copyBtn}
               </button>
             </div>
-            <p className="text-slate-800 text-sm leading-relaxed">{activeCopy.longDescText}</p>
+            <p className="text-slate-800 text-sm leading-relaxed">{longText}</p>
           </div>
         </div>
 
-        {/* Photo Gallery & Download Pack */}
+        {/* Photo Gallery & Download Pack (Focused on Day Activities & Animals) */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
           <div>
             <h2 className="text-xl font-bold text-slate-900">{t.photosTitle}</h2>
