@@ -12,7 +12,13 @@ const DESCRIPTIONS = {
   pl: {
     title: 'Materiały dla Partnerów, Hoteli i Portali Turystycznych',
     subtitle: 'Wszystko, czego potrzebujesz, aby polecić Zagrodę Alpakoterapii swoim gościom: gotowe opisy, zdjęcia wysokiej rozdzielczości i logo.',
-    quickFactsTitle: 'Kluczowe informacje o obiekcie',
+    locationLabel: 'Lokalizacja',
+    contactLabel: 'Kontakt & Rezerwacje',
+    websiteLabel: 'Oficjalna Strona',
+    onlineBooking247: 'Rezerwacje online 24/7',
+    descriptionsHeading: 'Gotowe opisy do wklejenia na Państwa stronę',
+    descriptionsSubheading: 'Wybierz język, aby skopiować gotowy opis do zakładki „Atrakcje w okolicy”',
+    partnerInviteBadge: 'Zaproszenie Partnerskie',
     distanceInfo: '15 min od Świeradowa-Zdroju, 25 min od Szklarskiej Poręby, 90 min od Pragi',
     shortDescTitle: 'Krótki opis (do listingu atrakcji / 1-2 zdania)',
     shortDescText: 'Zagroda Alpakoterapii w Rębiszowie (15 min od Świeradowa-Zdroju) – wyjątkowe miejsce spotkań z alpakami, spacery w naturze i alpakoterapia dla dzieci i dorosłych. Wymagana wcześniejsza rezerwacja online lub telefonicznie.',
@@ -34,11 +40,18 @@ const DESCRIPTIONS = {
     formPhone: 'Telefon kontaktowy',
     formSubmit: 'Wyślij zamówienie',
     formSuccess: 'Dziękujemy! Skontaktujemy się i wyślemy materiały promocyjne.',
+    whatsappMessage: 'Dzień dobry! Reprezentuję hotel/pensjonat. Chcielibyśmy skorzystać z zaproszenia partnerskiego i odwiedzić Zagrodę Alpakoterapii.',
   },
   cs: {
     title: 'Materiály pro hotely, partnery a turistické portály',
     subtitle: 'Vše, co potřebujete k doporučení Zagrody Alpakoterapii vašim hostům: připravené texty, fotografie ve vysokém rozlišení a logo.',
-    quickFactsTitle: 'Klíčové informace o objektu',
+    locationLabel: 'Lokalita',
+    contactLabel: 'Kontakt a rezervace',
+    websiteLabel: 'Oficiální web',
+    onlineBooking247: 'Online rezervace 24/7',
+    descriptionsHeading: 'Připravené texty ke zkopírování na váš web',
+    descriptionsSubheading: 'Vyberte jazyk pro zkopírování textu do sekce „Tipy na výlet a atrakce v okolí“',
+    partnerInviteBadge: 'Partnerské pozvání',
     distanceInfo: '45 min z Liberce, 90 min z Prahy, 15 min od lázní Świeradów-Zdrój',
     shortDescTitle: 'Krátký popis (pro přehledy atrakcí / 1–2 věty)',
     shortDescText: 'Zagroda Alpakoterapii v Rębiszowě (jen 45 min z Liberce) – unikátní alpaka farma, procházky s alpakami v přírodě Jizerských hor a alpakoterapie pro rodiny i jednotlivce. Nutná rezervace předem.',
@@ -60,11 +73,18 @@ const DESCRIPTIONS = {
     formPhone: 'Telefon',
     formSubmit: 'Odeslat žádost',
     formSuccess: 'Děkujeme! Brzy vám zašleme propagační materiály.',
+    whatsappMessage: 'Dobrý den! Zastupuji hotel/penzion a rádi bychom využili partnerského pozvání na návštěvu Zagrody Alpakoterapii.',
   },
   en: {
     title: 'Media & Partner Kit for Hotels & Tourism Boards',
     subtitle: 'Everything you need to recommend Zagroda Alpakoterapii to your guests: ready-to-use descriptions, high-res photos, and logos.',
-    quickFactsTitle: 'Key Venue Information',
+    locationLabel: 'Location',
+    contactLabel: 'Contact & Bookings',
+    websiteLabel: 'Official Website',
+    onlineBooking247: 'Online booking 24/7',
+    descriptionsHeading: 'Ready-to-use descriptions for your website',
+    descriptionsSubheading: 'Select a language to copy ready descriptions for your "Local Attractions" page',
+    partnerInviteBadge: 'Partner Invitation',
     distanceInfo: '15 min from Świeradów-Zdrój, 45 min from Liberec, 90 min from Prague, 2 hrs from Wrocław',
     shortDescTitle: 'Short Description (for attraction listings / 1-2 sentences)',
     shortDescText: 'Zagroda Alpakoterapii in Rębiszów (15 min from Świeradów-Zdrój) – a boutique alpaca therapy farm offering guided nature walks, animal therapy, and peaceful farm stays. Advance booking required.',
@@ -86,11 +106,18 @@ const DESCRIPTIONS = {
     formPhone: 'Phone Number',
     formSubmit: 'Send Request',
     formSuccess: 'Thank you! We will courier promotional materials to you.',
+    whatsappMessage: 'Hello! I represent a hotel/accommodation provider. We would love to take up the partner VIP invitation to visit Zagroda Alpakoterapii.',
   },
   de: {
     title: 'Partner-Kit für Hotels & Tourismusportale',
     subtitle: 'Alles, was Sie benötigen, um die Zagroda Alpakoterapii Ihren Gästen zu empfehlen: fertige Texte, hochauflösende Fotos und Logos.',
-    quickFactsTitle: 'Wichtige Informationen',
+    locationLabel: 'Standort',
+    contactLabel: 'Kontakt & Buchungen',
+    websiteLabel: 'Offizielle Website',
+    onlineBooking247: 'Online-Buchung rund um die Uhr',
+    descriptionsHeading: 'Fertige Texte zum Einfügen auf Ihrer Website',
+    descriptionsSubheading: 'Wählen Sie eine Sprache, um die Beschreibung für den Bereich „Ausflugsziele in der Region“ zu kopieren',
+    partnerInviteBadge: 'Partner-Einladung',
     distanceInfo: '15 Min. von Bad Flinsberg (Świeradów-Zdrój), 90 Min. von Prag, 2 Std. von Dresden',
     shortDescTitle: 'Kurzbeschreibung (für Attraktionslisten / 1-2 Sätze)',
     shortDescText: 'Zagroda Alpakoterapii in Rębiszów (15 Min. von Świeradów-Zdrój) – ein einzigartiger Alpaka-Therapiehof mit geführten Spaziergängen und Erholung in der Natur des Isergebirges. Voranmeldung erforderlich.',
@@ -112,40 +139,41 @@ const DESCRIPTIONS = {
     formPhone: 'Telefon',
     formSubmit: 'Absenden',
     formSuccess: 'Vielen Dank! Wir senden Ihnen das Infomaterial zu.',
+    whatsappMessage: 'Guten Tag! Ich vertrete ein Hotel/eine Pension und wir möchten gerne die Partnereinladung nutzen, um die Zagroda Alpakoterapii zu besuchen.',
   },
 };
 
 const PHOTOS = [
   {
-    title: 'Spacery i spotkania z alpakami (Alpaca Walk)',
+    title: 'Alpaca Walks & Meet-and-Greet',
     url: '/images/Meet-and-Greet.jpg',
-    category: 'Atrakcja / Zwierzęta',
+    category: 'Experience / Animals',
   },
   {
-    title: 'Alpaka w plenerze Gór Izerskich',
+    title: 'Alpaca in Jizera Mountain Nature',
     url: '/images/Alpaca-cover-1.jpg',
-    category: 'Krajobraz / Natura',
+    category: 'Landscape / Nature',
   },
   {
-    title: 'Pokoje i Gospodarstwo (Pokoje gościnne)',
+    title: 'Cozy Farmhouse Rooms',
     url: '/images/Farmhouse-rooms.jpg',
-    category: 'Noclegi / Pokoje',
+    category: 'Accommodation / Rooms',
   },
   {
-    title: 'Oficjalne Logo Zagroda Alpakoterapii',
+    title: 'Official Logo (Zagroda Alpakoterapii)',
     url: '/images/zagrodanewlogo.png',
     category: 'Branding / Logo',
   },
 ];
 
 export function PartnersPageContent({ locale }: PartnersPageContentProps) {
-  const t = DESCRIPTIONS[locale as keyof typeof DESCRIPTIONS] || DESCRIPTIONS.pl;
-  const [selectedLang, setSelectedLang] = useState<'pl' | 'cs' | 'en' | 'de'>((locale as 'pl' | 'cs' | 'en' | 'de') || 'pl');
+  const t = DESCRIPTIONS[locale as keyof typeof DESCRIPTIONS] || DESCRIPTIONS.en;
+  const [selectedLang, setSelectedLang] = useState<'pl' | 'cs' | 'en' | 'de'>((locale as 'pl' | 'cs' | 'en' | 'de') || 'en');
   const [copiedShort, setCopiedShort] = useState(false);
   const [copiedLong, setCopiedLong] = useState(false);
   const [flyerSubmitted, setFlyerSubmitted] = useState(false);
 
-  const activeCopy = DESCRIPTIONS[selectedLang] || DESCRIPTIONS.pl;
+  const activeCopy = DESCRIPTIONS[selectedLang] || DESCRIPTIONS.en;
 
   const handleCopy = (text: string, type: 'short' | 'long') => {
     navigator.clipboard.writeText(text);
@@ -181,7 +209,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
           <div className="flex items-start gap-3">
             <MapPin className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
             <div>
-              <p className="font-semibold text-slate-900">Lokalizacja</p>
+              <p className="font-semibold text-slate-900">{t.locationLabel}</p>
               <p className="text-sm">Orłowice 24 / Rębiszów, 59-630 Mirsk</p>
               <p className="text-xs text-slate-500 mt-1">{t.distanceInfo}</p>
             </div>
@@ -189,7 +217,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
           <div className="flex items-start gap-3">
             <Phone className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
             <div>
-              <p className="font-semibold text-slate-900">Kontakt & Rezerwacje</p>
+              <p className="font-semibold text-slate-900">{t.contactLabel}</p>
               <p className="text-sm">+48 695 545 330 (PL, EN, CS)</p>
               <p className="text-xs text-slate-500 mt-1">zagrodaalpakoterapii@gmail.com</p>
             </div>
@@ -197,11 +225,11 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
           <div className="flex items-start gap-3">
             <ExternalLink className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
             <div>
-              <p className="font-semibold text-slate-900">Oficjalna Strona</p>
+              <p className="font-semibold text-slate-900">{t.websiteLabel}</p>
               <a href="https://zagrodaalpakoterapii.com" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-600 hover:underline">
                 zagrodaalpakoterapii.com
               </a>
-              <p className="text-xs text-slate-500 mt-1">Rezerwacje online 24/7</p>
+              <p className="text-xs text-slate-500 mt-1">{t.onlineBooking247}</p>
             </div>
           </div>
         </div>
@@ -210,8 +238,8 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-900">Gotowe opisy do wklejenia na Państwa stronę</h2>
-              <p className="text-sm text-slate-500">Wybierz język, aby skopiować gotowy opis do zakładki „Atrakcje w okolicy”</p>
+              <h2 className="text-xl font-bold text-slate-900">{t.descriptionsHeading}</h2>
+              <p className="text-sm text-slate-500">{t.descriptionsSubheading}</p>
             </div>
             <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
               {(['pl', 'cs', 'en', 'de'] as const).map((lang) => (
@@ -312,7 +340,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-800 text-emerald-200 text-xs font-semibold">
                 <Coffee className="w-4 h-4" />
-                <span>Zaproszenie Partnerskie</span>
+                <span>{t.partnerInviteBadge}</span>
               </div>
               <h3 className="text-2xl font-bold">{t.staffInviteTitle}</h3>
               <p className="text-emerald-100 text-sm leading-relaxed">
@@ -320,7 +348,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
               </p>
             </div>
             <a
-              href="https://wa.me/48695545330?text=Dzie%C5%84%20dobry!%20Reprezentuj%C4%99%20hotel/pensjonat.%20Chcieliby%C5%9Bmy%20skorzysta%C4%87%20z%20zaproszenia%20partnerskiego%20i%20odwiedzi%C4%87%20Zagrod%C4%99%20Alpakoterapii."
+              href={`https://wa.me/48695545330?text=${encodeURIComponent(t.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full py-3 bg-emerald-400 hover:bg-emerald-300 text-emerald-950 font-bold rounded-xl transition"
