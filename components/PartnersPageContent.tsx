@@ -141,6 +141,39 @@ const DESCRIPTIONS = {
     formSuccess: 'Vielen Dank! Wir senden Ihnen das Infomaterial zu.',
     whatsappMessage: 'Guten Tag! Ich vertrete ein Hotel/eine Pension und wir möchten gerne die Partnereinladung nutzen, um die Zagroda Alpakoterapii zu besuchen.',
   },
+  nl: {
+    title: 'Media & Partner Kit voor Hotels en Toeristische Platforms',
+    subtitle: 'Alles wat u nodig heeft om Zagroda Alpakoterapii aan te bevelen aan uw gasten: kant-en-klare teksten, foto’s in hoge resolutie en logo’s.',
+    locationLabel: 'Locatie',
+    contactLabel: 'Contact & Reserveringen',
+    websiteLabel: 'Officiële Website',
+    onlineBooking247: 'Online reserveren 24/7',
+    descriptionsHeading: 'Kant-en-klare teksten voor uw website',
+    descriptionsSubheading: 'Selecteer een taal om de beschrijving voor uw pagina "Bezienswaardigheden in de omgeving" te kopiëren',
+    partnerInviteBadge: 'Partner Uitnodiging',
+    distanceInfo: '15 min. van Świeradów-Zdrój, 90 min. van Praag, 2 uur van Wrocław',
+    shortDescTitle: 'Korte beschrijving (voor attractielijsten / 1-2 zinnen)',
+    shortDescText: 'Zagroda Alpakoterapii in Rębiszów (15 min. van Świeradów-Zdrój) – een unieke alpacatherapieboerderij met begeleide wandelingen in de natuur van het Isergebergte en alpacatherapie voor jong en oud. Vooraf reserveren verplicht.',
+    longDescTitle: 'Volledige beschrijving (voor partnerpagina’s & artikelen)',
+    longDescText: 'Op zoek naar een ontspannende natuurervaring in het Isergebergte? Zagroda Alpakoterapii biedt direct contact met vriendelijke alpaca’s, begeleide wandelingen door schilderachtige weiden en therapeutische sessies. Ideaal voor gezinnen met kinderen, stellen en natuurliebhebbers. Beschikt ook over boerderijverblijven, dwerggeitjes en prachtig uitzicht op het Reuzengebergte. Reserveren: https://zagrodaalpakoterapii.com (Tel. +48 695 545 330).',
+    photosTitle: 'Foto’s & Logo downloaden (Hoge resolutie)',
+    photosSubtitle: 'Rechtenvrij te gebruiken voor hotels, reisgidsen en regionale toeristische platforms.',
+    receptionFlyersTitle: 'Gratis flyers voor de receptie',
+    receptionFlyersDesc: 'Beheert u een hotel, pension of VVV-kantoor? We sturen u graag een gratis display met flyers voor uw gasten.',
+    staffInviteTitle: 'Gratis VIP-bezoek voor receptiepersoneel en managers',
+    staffInviteDesc: 'We nodigen uw receptieteam van harte uit voor gratis koffie en een wandeling met de alpaca’s, zodat u onze boerderij zelf kunt ervaren en aanbevelen!',
+    copyBtn: 'Tekst kopiëren',
+    copiedBtn: 'Gekopieerd!',
+    downloadBtn: 'Download foto',
+    contactWhatsapp: 'WhatsApp contact',
+    requestFlyersBtn: 'Flyers bestellen',
+    formName: 'Naam hotel / accommodatie',
+    formAddress: 'Bezorgadres',
+    formPhone: 'Telefoonnummer',
+    formSubmit: 'Aanvraag versturen',
+    formSuccess: 'Bedankt! We sturen het promotiemateriaal zo snel mogelijk naar u toe.',
+    whatsappMessage: 'Hallo! Ik vertegenwoordig een hotel/accommodatie. We willen graag gebruikmaken van de partneruitnodiging om Zagroda Alpakoterapii te bezoeken.',
+  },
 };
 
 const PHOTOS = [
@@ -168,7 +201,7 @@ const PHOTOS = [
 
 export function PartnersPageContent({ locale }: PartnersPageContentProps) {
   const t = DESCRIPTIONS[locale as keyof typeof DESCRIPTIONS] || DESCRIPTIONS.en;
-  const [selectedLang, setSelectedLang] = useState<'pl' | 'cs' | 'en' | 'de'>((locale as 'pl' | 'cs' | 'en' | 'de') || 'en');
+  const [selectedLang, setSelectedLang] = useState<'pl' | 'cs' | 'en' | 'de' | 'nl'>((locale as 'pl' | 'cs' | 'en' | 'de' | 'nl') || 'en');
   const [copiedShort, setCopiedShort] = useState(false);
   const [copiedLong, setCopiedLong] = useState(false);
   const [flyerSubmitted, setFlyerSubmitted] = useState(false);
@@ -242,7 +275,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
               <p className="text-sm text-slate-500">{t.descriptionsSubheading}</p>
             </div>
             <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
-              {(['pl', 'cs', 'en', 'de'] as const).map((lang) => (
+              {(['pl', 'cs', 'en', 'de', 'nl'] as const).map((lang) => (
                 <button
                   key={lang}
                   onClick={() => setSelectedLang(lang)}
