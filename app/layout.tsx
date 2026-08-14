@@ -67,6 +67,48 @@ export default function RootLayout({
 
               // Google Ads conversion tracking
               gtag('config', '${GOOGLE_ADS_ID}');
+
+              // ── AI Referrer Detection ──
+              // Detects visitors arriving from AI assistants and fires a custom event.
+              // Catches traffic that GA4 would otherwise classify as direct/organic/referral.
+              (function() {
+                var defined = {
+                  'chatgpt.com':       'ChatGPT',
+                  'chat.openai.com':   'ChatGPT',
+                  'perplexity.ai':     'Perplexity',
+                  'claude.ai':         'Claude',
+                  'gemini.google.com': 'Gemini',
+                  'bard.google.com':   'Gemini',
+                  'copilot.microsoft.com': 'Copilot',
+                  'bing.com/chat':     'Copilot',
+                  'meta.ai':           'MetaAI',
+                  'you.com':           'YouAI',
+                  'phind.com':         'Phind',
+                  'poe.com':           'Poe',
+                  'huggingface.co/chat': 'HuggingChat',
+                  'deepseek.com':      'DeepSeek'
+                };
+                var ref = document.referrer || '';
+                var aiSource = null;
+                for (var domain in defined) {
+                  if (ref.indexOf(domain) !== -1) {
+                    aiSource = defined[domain];
+                    break;
+                  }
+                }
+                if (aiSource) {
+                  gtag('event', 'ai_referral', {
+                    ai_engine: aiSource,
+                    referrer_url: ref,
+                    landing_page: window.location.pathname
+                  });
+                  // Also set a user property so all subsequent events are tagged
+                  gtag('set', 'user_properties', {
+                    ai_referred: 'true',
+                    ai_engine: aiSource
+                  });
+                }
+              })();
             `,
           }}
         />
