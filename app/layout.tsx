@@ -40,6 +40,12 @@ export default function RootLayout({
       <body>
         <FacebookPixel />
 
+        {/* ── 0. Zoho Marketing Automation (PageSense) ── */}
+        <Script
+          strategy="afterInteractive"
+          src="https://cdn-eu.pagesense.io/js/20118320383/73dfb9b8e0844389945694883c358b1f.js"
+        />
+
         {/* ── 1. Google Analytics (GA4) ── */}
         <Script
           strategy="afterInteractive"
