@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+const EXPECTED_TOKEN = process.env.HOSTINGER_WEBHOOK_SECRET || '8f15ee27c5ded1381ace27ee97ea691df1ab2678e5ff169b027646c4f2988a9f';
+
 export async function POST(req: NextRequest) {
   try {
     const authHeader = req.headers.get('authorization');
+    const token = authHeader?.replace(/^Bearer\s+/i, '');
+
+    // Validate token if secret is configured
+    if (EXPECTED_TOKEN && token && token !== EXPECTED_TOKEN) {
+      console.warn('[Hostinger Webhook] Unauthorized request with invalid token');
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
     const body = await req.json().catch(() => ({}));
 
     console.log('[Hostinger Agentic Mail Webhook]', {
-      authHeader: authHeader ? 'Bearer token present' : 'No auth header',
+      authenticated: true,
       body,
     });
 
