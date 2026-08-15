@@ -15,10 +15,11 @@ const intlMiddleware = createMiddleware({
 });
 
 export default async function middleware(request: NextRequest) {
-  // Don't redirect messenger-webhook or stripe checkout api requests
-  if (request.nextUrl.pathname === '/messenger-webhook' ||
-    request.nextUrl.pathname.includes('/api/checkout') ||
-    request.nextUrl.pathname.includes('/api/adoption/record')) {
+  // Don't redirect API requests or messenger-webhook
+  if (
+    request.nextUrl.pathname.startsWith('/api') ||
+    request.nextUrl.pathname === '/messenger-webhook'
+  ) {
     return NextResponse.next();
   }
 
