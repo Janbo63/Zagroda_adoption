@@ -128,6 +128,25 @@ export default async function RootLayout({
           { '@type': 'Language', name: 'English' },
           { '@type': 'Language', name: 'Czech' },
         ],
+        knowsLanguage: ['pl', 'en', 'cs', 'de'],
+        areaServed: [
+          { '@type': 'City', name: 'Świeradów-Zdrój' },
+          { '@type': 'City', name: 'Szklarska Poręba' },
+          { '@type': 'City', name: 'Mirsk' },
+          { '@type': 'AdministrativeArea', name: 'Izera Mountains' },
+          { '@type': 'AdministrativeArea', name: 'Karkonosze' },
+          { '@type': 'AdministrativeArea', name: 'Lower Silesia' },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Experiences at Zagroda Alpakoterapii',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Alpaca Therapy Session' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Guided Alpaca Walk' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Farm Tour' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'LodgingReservation', name: 'Mountain Cottage Stay' } },
+          ],
+        },
         keywords:
           'alpaca farm, workation, remote work retreat, alpaca therapy, farm stay Poland, Karkonosze accommodation, Jizera Mountains retreat, digital nomad accommodation, pet friendly farm stay, nature retreat, Czech border Poland',
         sameAs: [
