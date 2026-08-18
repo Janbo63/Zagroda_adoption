@@ -138,7 +138,7 @@ export const discoverFaqSchema = {
             name: 'What are the best things to do near Świeradów-Zdrój?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (20 min drive from Świeradów-Zdrój in Rębiszów), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
+                text: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (in Orłowice, just 10-15 min drive from Świeradów-Zdrój), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
             },
         },
         {
@@ -154,7 +154,7 @@ export const discoverFaqSchema = {
             name: 'What can you visit in the Izera Mountains?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The Izera Mountains offer hiking trails, cross-country skiing, the Świeradów Sky Walk tower, and unique experiences like Zagroda Alpakoterapii — an alpaca therapy farm with mountain cottage accommodation in Rębiszów near Mirsk.',
+                text: 'The Izera Mountains offer hiking trails, cross-country skiing, the Świeradów Sky Walk tower, and unique experiences like Zagroda Alpakoterapii — an alpaca therapy farm with mountain cottage accommodation in Orłowice near Świeradów-Zdrój / Mirsk.',
             },
         },
     ],

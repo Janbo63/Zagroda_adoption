@@ -77,7 +77,7 @@ export default async function RootLayout({
         ],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Rębiszów',
+          streetAddress: 'Orłowice 24',
           addressLocality: 'Mirsk',
           addressRegion: 'Lower Silesian Voivodeship',
           postalCode: '59-630',

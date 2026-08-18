@@ -301,7 +301,7 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
             <MapPin className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
             <div>
               <p className="font-semibold text-slate-900">{t.locationLabel}</p>
-              <p className="text-sm">Orłowice 24 / Rębiszów, 59-630 Mirsk</p>
+              <p className="text-sm">Orłowice 24, 59-630 Mirsk (near Świeradów-Zdrój)</p>
               <p className="text-xs text-slate-500 mt-1">{t.distanceInfo}</p>
             </div>
           </div>
