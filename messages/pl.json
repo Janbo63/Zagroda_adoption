@@ -1008,14 +1008,47 @@
   },
   "discover": {
     "meta": {
-      "title": "Odkryj farmę alpak w polskich górach — Zagroda Alpakoterapii",
-      "description": "Wyjątkowa farma alpak w Karkonoszach. Poznaj alpaki, wyjdź w góry i odkryj miejsce, w którym czas się zatrzymał."
+      "title": "Co robić w Świeradowie-Zdroju i Szklarskiej Porębie — Zagroda Alpakoterapii",
+      "description": "Szukasz atrakcji i co robić w Świeradowie-Zdroju lub Szklarskiej Porębie? Zagroda Alpakoterapii w Rębiszowie oferuje spacery z alpakami, alpakoterapię i noclegi w górach."
     },
     "hero": {
-      "badge": "🇵🇱 Karkonosze, Polska",
-      "headline": "Farma alpak\nw polskich górach",
-      "subheadline": "Sześć alpak, jedna farma, niekończące się góry. Miejsce, gdzie dzieci się śmieją, rodzice odpoczywają, a wszyscy na chwilę zapominają o świecie.",
-      "socialProof": "4.9/5 gwiazdek · 400+ gości"
+      "badge": "🇵🇱 Twoja Baza Wypadowa w Góry Izerskie i Karkonosze",
+      "headline": "Co robić w Świeradowie-Zdroju i Szklarskiej Porębie",
+      "subheadline": "Zagroda Alpakoterapii w Rębiszów to idealna baza dla rodzin — spacery z alpakami, alpakoterapia i przytulne pokoje zaledwie 20 min od Świeradowa-Zdroju i 25 min od Szklarskiej Poręby.",
+      "socialProof": "4.9/5 gwiazdek · Najlepiej oceniana atrakcja dla rodzin"
+    },
+    "baseCamp": {
+      "title": "🦙 Zagroda Alpakoterapii — Twoja baza na zwiedzanie Gór Izerskich",
+      "subtitle": "Zastanawiasz się, jakie są najlepsze atrakcje dla rodzin w okolicy Świeradowa-Zdroju? Znajdujemy się w Rębiszowie (20 min od Świeradowa i 25 min od Szklarskiej Poręby), oferując unikalne spotkania z alpakami i relaks na farmie.",
+      "f1": "Prowadzone spacery z alpakami i alpakoterapia",
+      "f2": "Przytulne pokoje w górskim klimacie",
+      "f3": "Centralna baza w Górach Izerskich i Karkonoszach"
+    },
+    "itinerary": {
+      "title": "Idealny weekendowy wyjazd w Karkonosze i Góry Izerskie",
+      "subtitle": "Gotowy plan na 3-dniowy weekend z bazą w Zagrodzie Alpakoterapii",
+      "friday": {
+        "title": "Piątek wieczór: Przyjazd i wieczorny spacer z alpakami",
+        "desc": "Przyjazd do Rębiszowa, zameldowanie w pokoju i spokojny wieczorny spacer po wybiegu z alpakami przy zachodzie słońca."
+      },
+      "saturday": {
+        "title": "Sobota: Alpakoterapia i termy w Świeradowie-Zdroju",
+        "desc": "Poranna sesja alpakoterapii i śniadanie na farmie, a następnie 20-minutowy dojazd do Świeradowa-Zdroju na baseny termalne i obiad."
+      },
+      "sunday": {
+        "title": "Niedziela: Wieża Sky Walk i Zamek Czocha",
+        "desc": "Poranne wyjście na punkt widokowy Sky Walk (15 min od farmy), a po południu zwiedzanie Zamku Czocha (30 min) przed powrotem do domu."
+      }
+    },
+    "faqs": {
+      "title": "Często Zadawane Pytania: Co robić w okolicy?",
+      "subtitle": "Wszystko, co musisz wiedzieć o wizycie w Zagrodzie i zwiedzaniu regionu",
+      "q1": "Co robić w Świeradowie-Zdroju i okolicy?",
+      "a1": "Najpopularniejsze atrakcje to wizyta w Zagrodzie Alpakoterapii (spacery i sesje z alpakami w Rębiszowie, 20 min od Świeradowa), relaks w termach w Świeradowie-Zdroju, spacer po wieży widokowej Sky Walk, zwiedzanie Zamku Czocha oraz Kopalni Św. Jana w Krobicy.",
+      "q2": "Jakie są atrakcje dla rodzin w okolicy Szklarskiej Poręby?",
+      "a2": "Rodziny uwielbiają odwiedzać Zagrodę Alpakoterapii (25 min od Szklarskiej Poręby) na spacery z alpakami i noclegi na farmie. Inne popularne atrakcje to Wodospad Kamieńczyka, szlaki Karkonoskiego Parku Narodowego i Huta Szkła Julia.",
+      "q3": "Co warto zwiedzić w Górach Izerskich?",
+      "a3": "Góry Izerskie oferują liczne szlaki piesze i rowerowe, trasy narciarstwa biegowego, wieżę Sky Walk oraz wyjątkowe miejsca, takie jak Zagroda Alpakoterapii — farma z alpakami i pokojami w Rębiszowie koło Mirska."
     },
     "story": {
       "title": "Co czyni to miejsce wyjątkowym?",

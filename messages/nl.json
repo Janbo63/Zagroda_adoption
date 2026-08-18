@@ -1003,14 +1003,47 @@
     },
     "discover": {
         "meta": {
-            "title": "Ontdek een alpacaboerderij in de Poolse bergen — Zagroda Alpakoterapii",
-            "description": "Een unieke alpacaboerderij in het Reuzengebergte, Polen. Ontmoet de alpaca's, wandel in de bergen, en ontdek een plek waar de tijd stilstaat."
+            "title": "Wat te doen in de buurt van Świeradów-Zdrój & Szklarska Poręba — Zagroda Alpakoterapii",
+            "description": "Op zoek naar bezienswaardigheden in de buurt van Świeradów-Zdrój & Szklarska Poręba? Zagroda Alpakoterapii biedt alpacawandelingen, therapie en overnachtingen in Rębiszów."
         },
         "hero": {
-            "badge": "🇵🇱 Reuzengebergte, Polen",
-            "headline": "Een alpacaboerderij\nin de Poolse bergen",
-            "subheadline": "Zes alpaca's, een boerderij, eindeloze bergen. Een plek waar kinderen lachen, ouders ontspannen, en iedereen even de wereld vergeet.",
-            "socialProof": "4.9/5 sterren · 400+ bezoekers"
+            "badge": "🇵🇱 Jouw uitvalsbasis voor het IJzergebergte & Reuzengebergte",
+            "headline": "Wat te doen in de buurt van Świeradów-Zdrój & Szklarska Poręba",
+            "subheadline": "Zagroda Alpakoterapii in Rębiszów is jouw uitvalsbasis voor familie-activiteiten, alpacawandelingen en een vakantie in de bergen — slechts 20 min van Świeradów-Zdrój en 25 min van Szklarska Poręba.",
+            "socialProof": "4.9/5 sterren · Best beoordeelde familie-ervaring"
+        },
+        "baseCamp": {
+            "title": "🦙 Zagroda Alpakoterapii — Jouw uitvalsbasis voor het IJzergebergte",
+            "subtitle": "Op zoek naar activiteiten met kinderen in de buurt van Świeradów-Zdrój? Onze alpacaboerderij in Rębiszów (20 min van Świeradów en 25 min van Szklarska Poręba) biedt unieke ervaringen.",
+            "f1": "Begeleide alpacawandelingen & therapiesessies",
+            "f2": "Sfeervolle kamers & bergcottages",
+            "f3": "Centrale ligging in het IJzer- en Reuzengebergte"
+        },
+        "itinerary": {
+            "title": "Een perfect weekendje weg in het Reuzengebergte & IJzergebergte",
+            "subtitle": "Het ultieme 3-daagse weekendplan met Zagroda Alpakoterapii als uitvalsbasis",
+            "friday": {
+                "title": "Vrijdagavond: Aankomst & Zonsondergangswandeling met alpaca's",
+                "desc": "Aankomst in Rębiszów, inchecken in je bergcottage en een rustige avondwandeling in de weide met de alpaca's bij zonsondergang."
+            },
+            "saturday": {
+                "title": "Zaterdag: Alpacatherapie & Thermen van Świeradów-Zdrój",
+                "desc": "Ochtendsessie alpacatherapie en ontbijt op de boerderij, gevolgd door 20 minuten rijden naar de thermale baden van Świeradów-Zdrój."
+            },
+            "sunday": {
+                "title": "Zondag: Sky Walk uitkijktoren & Kasteel Czocha",
+                "desc": "Ochtendwandeling naar de Sky Walk toren (15 min rijden), gevolgd door een rondleiding in het middeleeuwse Kasteel Czocha (30 min rijden)."
+            }
+        },
+        "faqs": {
+            "title": "Veelgestelde vragen: Bezienswaardigheden in de omgeving",
+            "subtitle": "Alles wat je moet weten over een bezoek aan Zagroda en het verkennen van de regio",
+            "q1": "Wat te doen in de buurt van Świeradów-Zdrój?",
+            "a1": "Populaire activiteiten zijn een bezoek aan Zagroda Alpakoterapii voor alpacawandelingen (20 min rijden in Rębiszów), ontspannen in de thermale baden van Świeradów, wandelen naar de Sky Walk toren, Kasteel Czocha en de zilvermijn van Krobica.",
+            "q2": "Welke familie-activiteiten zijn er in de buurt van Szklarska Poręba?",
+            "a2": "Families zijn dol op Zagroda Alpakoterapii (25 min van Szklarska Poręba) voor begeleide alpacawandelingen en boerderij-overnachtingen. Andere highlights zijn de Kamieńczyk-waterval en de wandelpaden in het Reuzengebergte National Park.",
+            "q3": "Wat is er te zien in het IJzergebergte?",
+            "a3": "Het IJzergebergte biedt prachtige wandel- en fietsroutes, langlaufpistes, de Sky Walk toren en unieke locaties zoals Zagroda Alpakoterapii — een alpacaboerderij met accommodatie in Rębiszów nabij Mirsk."
         },
         "story": {
             "title": "Wat maakt het zo bijzonder?",

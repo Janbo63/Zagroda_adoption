@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { DiscoverPageContent } from '@/components/DiscoverPageContent';
 import { JsonLd } from '@/components/JsonLd';
-import { discoverSchema, farmSchema } from '@/lib/schema';
+import { discoverSchema, farmSchema, discoverFaqSchema } from '@/lib/schema';
 
 // Generate static params for all supported locales
 export async function generateStaticParams() {
@@ -39,6 +39,7 @@ export default function DiscoverPage({ params: { locale } }: { params: { locale:
         <>
             <JsonLd data={discoverSchema} />
             <JsonLd data={farmSchema} />
+            <JsonLd data={discoverFaqSchema} />
             <DiscoverPageContent locale={locale} />
         </>
     );

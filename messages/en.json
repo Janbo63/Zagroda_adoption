@@ -1009,14 +1009,47 @@
   },
   "discover": {
     "meta": {
-      "title": "Discover an alpaca farm in the Polish mountains — Zagroda Alpakoterapii",
-      "description": "A unique alpaca farm in the Giant Mountains, Poland. Meet the alpacas, hike the mountains, and discover a place where time stands still."
+      "title": "Things to Do Near Świeradów-Zdrój & Szklarska Poręba — Zagroda Alpakoterapii",
+      "description": "Looking for things to do near Świeradów-Zdrój & Szklarska Poręba? Zagroda Alpakoterapii offers alpaca therapy walks, family activities, and mountain cottage stays in Rębiszów."
     },
     "hero": {
-      "badge": "🇵🇱 Giant Mountains, Poland",
-      "headline": "An alpaca farm\nin the Polish mountains",
-      "subheadline": "Six alpacas, one farm, endless mountains. A place where kids laugh, parents relax, and everyone forgets the world for a while.",
-      "socialProof": "4.9/5 stars · 400+ visitors"
+      "badge": "🇵🇱 Your Base for Exploring Izera & Karkonosze Mountains",
+      "headline": "Top Things to Do Near Świeradów-Zdrój & Szklarska Poręba",
+      "subheadline": "Zagroda Alpakoterapii is your home base for family activities, alpaca walks, and mountain retreats in Rębiszów — just 20 min from Świeradów-Zdrój and 25 min from Szklarska Poręba.",
+      "socialProof": "4.9/5 stars · Top Rated Family Experience"
+    },
+    "baseCamp": {
+      "title": "🦙 Zagroda Alpakoterapii — Your Base for Exploring the Izera Mountains",
+      "subtitle": "Looking for things to do near Świeradów-Zdrój with children? Located in Rębiszów, just 20 minutes from Świeradów-Zdrój and 25 minutes from Szklarska Poręba, our alpaca farm offers unique family experiences you can't find anywhere else in the region.",
+      "f1": "Guided Alpaca Walks & Therapy Sessions",
+      "f2": "Cozy Mountain Cottage Accommodation",
+      "f3": "Central Izera & Karkonosze Base"
+    },
+    "itinerary": {
+      "title": "A Perfect Weekend Trip from Zagroda Alpakoterapii",
+      "subtitle": "How to make the ultimate 3-day weekend getaway in the Karkonosze & Izera Mountains",
+      "friday": {
+        "title": "Friday Evening: Arrival & Sunset Alpaca Walk",
+        "desc": "Arrive in Rębiszów, settle into your mountain cottage, and enjoy an evening stroll around the pasture with our gentlest alpacas as the sun sets."
+      },
+      "saturday": {
+        "title": "Saturday: Alpaca Therapy & Świeradów Thermal Spa",
+        "desc": "Enjoy a morning alpaca therapy session and farm breakfast, followed by a 20-minute drive to Świeradów-Zdrój for mineral thermal baths and local dining."
+      },
+      "sunday": {
+        "title": "Sunday: Sky Walk Observation Tower & Castle Czocha",
+        "desc": "Take a morning hike to the Sky Walk tower (15 min drive from Zagroda), followed by an afternoon tour of medieval Castle Czocha (30 min drive) before departing."
+      }
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions: Things to Do in the Area",
+      "subtitle": "Everything you need to know about visiting Zagroda and exploring the region",
+      "q1": "What are the best things to do near Świeradów-Zdrój?",
+      "a1": "Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (just 20 min drive from Świeradów-Zdrój in Rębiszów), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.",
+      "q2": "What family activities are near Szklarska Poręba?",
+      "a2": "Families love visiting Zagroda Alpakoterapii (25 min drive from Szklarska Poręba) for guided alpaca walks, therapy sessions, and mountain cottage stays. Other family activities include the Szklarska Poręba waterfall hike, Karkonosze National Park trails, and the glass-making museum.",
+      "q3": "What can you visit in the Izera Mountains?",
+      "a3": "The Izera Mountains offer hiking trails, cross-country skiing, the Świeradów Sky Walk tower, and unique experiences like Zagroda Alpakoterapii — an alpaca therapy farm with mountain cottage accommodation in Rębiszów near Mirsk."
     },
     "story": {
       "title": "What makes it so special?",

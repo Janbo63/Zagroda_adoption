@@ -128,6 +128,38 @@ export const discoverSchema = {
     ],
 };
 
+/** FAQPage schema for Discover page targeting AI search queries */
+export const discoverFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: 'What are the best things to do near Świeradów-Zdrój?',
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (20 min drive from Świeradów-Zdrój in Rębiszów), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
+            },
+        },
+        {
+            '@type': 'Question',
+            name: 'What family activities are near Szklarska Poręba?',
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Families love visiting Zagroda Alpakoterapii (25 min drive from Szklarska Poręba) for guided alpaca walks, therapy sessions, and mountain cottage stays. Other family activities include the Szklarska Poręba waterfall hike, Karkonosze National Park trails, and the glass-making museum.',
+            },
+        },
+        {
+            '@type': 'Question',
+            name: 'What can you visit in the Izera Mountains?',
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'The Izera Mountains offer hiking trails, cross-country skiing, the Świeradów Sky Walk tower, and unique experiences like Zagroda Alpakoterapii — an alpaca therapy farm with mountain cottage accommodation in Rębiszów near Mirsk.',
+            },
+        },
+    ],
+};
+
 /** BreadcrumbList schema — call with page-specific items */
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
     return {

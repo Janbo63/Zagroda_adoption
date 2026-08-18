@@ -1007,14 +1007,47 @@
   },
   "discover": {
     "meta": {
-      "title": "Entdecke eine Alpakafarm im polnischen Riesengebirge — Zagroda Alpakoterapii",
-      "description": "Eine einzigartige Alpakafarm im Riesengebirge, Polen. Triff die Alpakas, wandere in den Bergen und entdecke einen Ort, an dem die Zeit stillsteht."
+      "title": "Sehenswürdigkeiten nahe Świeradów-Zdrój & Szklarska Poręba — Zagroda Alpakoterapii",
+      "description": "Suchst du Sehenswürdigkeiten nahe Świeradów-Zdrój & Szklarska Poręba? Zagroda Alpakoterapii bietet Alpakawanderungen, Alpakatherapie und Übernachtungen in Rębiszów."
     },
     "hero": {
-      "badge": "🇵🇱 Riesengebirge, Polen",
-      "headline": "Eine Alpakafarm\nin den polnischen Bergen",
-      "subheadline": "Sechs Alpakas, ein Bauernhof, unendliche Berge. Ein Ort, an dem Kinder lachen, Eltern sich entspannen und alle für eine Weile die Welt vergessen.",
-      "socialProof": "4,9/5 Sterne · 400+ Besucher"
+      "badge": "🇵🇱 Deine Basis für das Isergebirge & Riesengebirge",
+      "headline": "Sehenswürdigkeiten nahe Świeradów-Zdrój & Szklarska Poręba",
+      "subheadline": "Zagroda Alpakoterapii in Rębiszów ist deine ideale Basis für Familienaktivitäten, Alpakawanderungen und Bergurlaub — nur 20 Min. von Świeradów-Zdrój und 25 Min. von Szklarska Poręba.",
+      "socialProof": "4.9/5 Sterne · Top-Bewertetes Familien-Erlebnis"
+    },
+    "baseCamp": {
+      "title": "🦙 Zagroda Alpakoterapii — Deine Basis für das Isergebirge",
+      "subtitle": "Suchst du Aktivitäten mit Kindern nahe Świeradów-Zdrój? In Rębiszów gelegen (20 Min. von Świeradów-Zdrój und 25 Min. von Szklarska Poręba), bietet unsere Alpakafarm einzigartige Erlebnisse.",
+      "f1": "Geführte Alpakawanderungen & Therapie-Sessions",
+      "f2": "Gemütliche Zimmer & Ferienwohnungen",
+      "f3": "Zentrale Lage im Iser- und Riesengebirge"
+    },
+    "itinerary": {
+      "title": "Ein perfekter Wochenendausflug im Riesengebirge",
+      "subtitle": "Der 3-Tage-Plan für dein Wochenende von Zagroda Alpakoterapii aus",
+      "friday": {
+        "title": "Freitagabend: Ankunft & Abendlicher Alpakaspaziergang",
+        "desc": "Ankunft in Rębiszów, Einziehen in die Unterkunft und ein ruhiger Abendspaziergang mit den Alpakas auf der Weide."
+      },
+      "saturday": {
+        "title": "Samstag: Alpakatherapie & Therme Świeradów-Zdrój",
+        "desc": "Morgendliche Alpakatherapie-Session und Frühstück auf dem Hof, danach 20 Minuten Fahrt zur Therme Świeradów-Zdrój."
+      },
+      "sunday": {
+        "title": "Sonntag: Sky Walk Aussichtsturm & Burg Czocha",
+        "desc": "Morgenwanderung zum Sky Walk Aussichtsturm (15 Min. Fahrt), gefolgt von einer Führung auf der mittelalterlichen Burg Czocha (30 Min. Fahrt)."
+      }
+    },
+    "faqs": {
+      "title": "Häufig gestellte Fragen: Ausflugsziele in der Region",
+      "subtitle": "Alles, was du über deinen Besuch bei Zagroda und Ausflüge in die Region wissen musst",
+      "q1": "Was sind die besten Sehenswürdigkeiten nahe Świeradów-Zdrój?",
+      "a1": "Zu den beliebtesten Aktivitäten gehören ein Besuch bei Zagroda Alpakoterapii für Alpakawanderungen und Therapiesessions (20 Min. von Świeradów-Zdrój in Rębiszów), Entspannung in der Therme Świeradów, der Aussichtsturm Sky Walk, Burg Czocha und das Silberbergwerk Krobica.",
+      "q2": "Welche Familienaktivitäten gibt es nahe Szklarska Poręba?",
+      "a2": "Familien lieben den Besuch bei Zagroda Alpakoterapii (25 Min. von Szklarska Poręba) für geführte Alpakawanderungen und Hof-Übernachtungen. Weitere Highlights sind der Zackelfall (Kamieńczyk), Wanderwege im Nationalpark und die Glashütte Julia.",
+      "q3": "Was kann man im Isergebirge besuchen?",
+      "a3": "Das Isergebirge bietet herrliche Wanderwege, Langlauf-Lopen, den Sky Walk Turm in Świeradów und einzigartige Orte wie Zagroda Alpakoterapii — eine Alpakafarm mit Unterkünften in Rębiszów nahe Mirsk."
     },
     "story": {
       "title": "Was macht es so besonders?",
