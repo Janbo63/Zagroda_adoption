@@ -32,8 +32,8 @@ export function Navbar({ locale }: NavbarProps) {
   const isAccomActive = currentPath === '/stay' || currentPath === '/discover'
 
   return (
-    <nav className="bg-green-800 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-orange-400 opacity-20" />
+    <nav className="bg-green-800 text-white relative z-50">
+      <div className="absolute inset-0 bg-orange-400 opacity-20 pointer-events-none overflow-hidden" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col sm:flex-row justify-between py-2 sm:h-16">
 
@@ -80,13 +80,13 @@ export function Navbar({ locale }: NavbarProps) {
 
             {/* Accommodation dropdown */}
             <div
-              className="relative"
+              className="relative py-2"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link
-                href={`/${locale}/stay`}
-                className={`inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium ${isAccomActive
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className={`inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer ${isAccomActive
                     ? 'border-orange-400 text-white'
                     : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
                   }`}
@@ -98,14 +98,14 @@ export function Navbar({ locale }: NavbarProps) {
                   size={14}
                   className={`transition-transform duration-150 ${dropdownOpen ? 'rotate-180' : ''}`}
                 />
-              </Link>
+              </button>
 
               {dropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 bg-white rounded-xl shadow-xl ring-1 ring-black/5 overflow-hidden z-50">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-52 bg-white rounded-xl shadow-2xl ring-1 ring-black/10 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                   <Link
                     href={`/${locale}/stay`}
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
+                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-emerald-900 transition-colors"
                   >
                     <span>🏡</span> {t('stayWithUs')}
                   </Link>
@@ -113,7 +113,7 @@ export function Navbar({ locale }: NavbarProps) {
                   <Link
                     href={`/${locale}/discover`}
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
+                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-emerald-900 transition-colors"
                   >
                     <span>🗺️</span> {t('exploreTheArea')}
                   </Link>
@@ -121,7 +121,7 @@ export function Navbar({ locale }: NavbarProps) {
                   <Link
                     href={`/${locale}/workation`}
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
+                    className="flex items-center gap-2.5 px-4 py-3 text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-emerald-900 transition-colors"
                   >
                     <span>💻</span> Workation & Reset
                   </Link>
