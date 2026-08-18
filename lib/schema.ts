@@ -138,7 +138,7 @@ export const discoverFaqSchema = {
             name: 'What are the best things to do near Świeradów-Zdrój?',
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (in Orłowice, just 10-15 min drive from Świeradów-Zdrój), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
+                text: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (in Orłowice, just 5 min drive from Świeradów-Zdrój), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
             },
         },
         {

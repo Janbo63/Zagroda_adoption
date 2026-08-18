@@ -136,7 +136,7 @@ export function DiscoverPageContent({ locale }: { locale: string }) {
                             <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
                                 <div className="text-2xl mb-2">🗺️</div>
                                 <h3 className="font-bold text-white mb-1 text-base">{t('baseCamp.f3')}</h3>
-                                <p className="text-emerald-200 text-xs leading-relaxed">20 min to Świeradów-Zdrój & 25 min to Szklarska Poręba</p>
+                                <p className="text-emerald-200 text-xs leading-relaxed">5 min to Świeradów-Zdrój & 25 min to Szklarska Poręba</p>
                             </div>
                         </motion.div>
 
@@ -210,7 +210,7 @@ export function DiscoverPageContent({ locale }: { locale: string }) {
                                     </p>
                                 </div>
                                 <span className="inline-flex items-center text-xs font-semibold text-orange-800 bg-orange-50 px-3 py-1.5 rounded-full self-start">
-                                    🚗 20 min drive to Świeradów
+                                    🚗 5 min drive to Świeradów
                                 </span>
                             </motion.div>
 

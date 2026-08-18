@@ -1015,12 +1015,12 @@
     "hero": {
       "badge": "🇵🇱 Your Base for Exploring Izera & Karkonosze Mountains",
       "headline": "Top Things to Do Near Świeradów-Zdrój & Szklarska Poręba",
-      "subheadline": "Zagroda Alpakoterapii is your home base for family activities, alpaca walks, and mountain retreats in Orłowice — just 10-15 min from Świeradów-Zdrój and 25 min from Szklarska Poręba.",
+      "subheadline": "Zagroda Alpakoterapii is your home base for family activities, alpaca walks, and mountain retreats in Orłowice — just 5 min from Świeradów-Zdrój and 25 min from Szklarska Poręba.",
       "socialProof": "4.9/5 stars · Top Rated Family Experience"
     },
     "baseCamp": {
       "title": "🦙 Zagroda Alpakoterapii — Your Base for Exploring the Izera Mountains",
-      "subtitle": "Looking for things to do near Świeradów-Zdrój with children? Located in Orłowice, just minutes from Świeradów-Zdrój and 25 minutes from Szklarska Poręba, our alpaca farm offers unique family experiences you can't find anywhere else in the region.",
+      "subtitle": "Looking for things to do near Świeradów-Zdrój with children? Located in Orłowice, just 5 minutes from Świeradów-Zdrój and 25 minutes from Szklarska Poręba, our alpaca farm offers unique family experiences you can't find anywhere else in the region.",
       "f1": "Guided Alpaca Walks & Therapy Sessions",
       "f2": "Cozy Mountain Cottage Accommodation",
       "f3": "Central Izera & Karkonosze Base"
@@ -1034,7 +1034,7 @@
       },
       "saturday": {
         "title": "Saturday: Alpaca Therapy & Świeradów Thermal Spa",
-        "desc": "Enjoy a morning alpaca therapy session and farm breakfast, followed by a short 10-minute drive to Świeradów-Zdrój for mineral thermal baths and local dining."
+        "desc": "Enjoy a morning alpaca therapy session and farm breakfast, followed by a short 5-minute drive to Świeradów-Zdrój for mineral thermal baths and local dining."
       },
       "sunday": {
         "title": "Sunday: Sky Walk Observation Tower & Castle Czocha",
@@ -1045,7 +1045,7 @@
       "title": "Frequently Asked Questions: Things to Do in the Area",
       "subtitle": "Everything you need to know about visiting Zagroda and exploring the region",
       "q1": "What are the best things to do near Świeradów-Zdrój?",
-      "a1": "Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (just 10 min drive from Świeradów-Zdrój in Orłowice), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.",
+      "a1": "Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (just 5 min drive from Świeradów-Zdrój in Orłowice), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.",
       "q2": "What family activities are near Szklarska Poręba?",
       "a2": "Families love visiting Zagroda Alpakoterapii (25 min drive from Szklarska Poręba) for guided alpaca walks, therapy sessions, and mountain cottage stays. Other family activities include the Szklarska Poręba waterfall hike, Karkonosze National Park trails, and the glass-making museum.",
       "q3": "What can you visit in the Izera Mountains?",
@@ -1151,7 +1151,7 @@
           "icon": "🛁",
           "name": "Świeradów-Zdrój Spa Town",
           "desc": "A charming spa town with thermal springs and mineral-rich waters — ideal after an active day outdoors.",
-          "distance": "10 min",
+          "distance": "5 min",
           "type": "Spa Town"
         }
       ],
