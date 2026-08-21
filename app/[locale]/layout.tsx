@@ -147,12 +147,17 @@ export default async function RootLayout({
             { '@type': 'Offer', itemOffered: { '@type': 'LodgingReservation', name: 'Mountain Cottage Stay' } },
           ],
         },
+        dateModified: '2026-08-21T00:00:00+02:00',
+        datePublished: '2024-01-01T00:00:00+02:00',
         keywords:
           'alpaca farm, workation, remote work retreat, alpaca therapy, farm stay Poland, Karkonosze accommodation, Jizera Mountains retreat, digital nomad accommodation, pet friendly farm stay, nature retreat, Czech border Poland',
         sameAs: [
           'https://www.facebook.com/zagrodaalpakoterapii',
           'https://www.instagram.com/zagrodaalpakoterapii',
           'https://www.booking.com/hotel/pl/zagroda-alpakoterapii.html',
+          'https://maps.google.com/?q=Zagroda+Alpakoterapii+Mirsk+Poland',
+          'https://maps.app.goo.gl/zagrodaalpakoterapii',
+          'https://www.tripadvisor.com/Search?q=Zagroda+Alpakoterapii',
         ],
       },
       {

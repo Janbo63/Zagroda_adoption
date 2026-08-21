@@ -117,6 +117,7 @@ export const discoverSchema = {
         latitude: 50.9568,
         longitude: 15.3856,
     },
+    dateModified: '2026-08-21T00:00:00+02:00',
     includesAttraction: [
         { '@type': 'TouristAttraction', name: 'Karkonosze National Park', geo: { '@type': 'GeoCoordinates', latitude: 50.7714, longitude: 15.5394 } },
         { '@type': 'TouristAttraction', name: 'Kamieńczyk Waterfall', geo: { '@type': 'GeoCoordinates', latitude: 50.8283, longitude: 15.5072 } },
@@ -128,37 +129,38 @@ export const discoverSchema = {
     ],
 };
 
-/** FAQPage schema for Discover page targeting AI search queries */
-export const discoverFaqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-        {
+/** Dynamic FAQPage schema generator for localized Discover pages */
+export function generateDiscoverFaqSchema(faqs: { question: string; answer: string }[]) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        dateModified: '2026-08-21T00:00:00+02:00',
+        mainEntity: faqs.map((faq) => ({
             '@type': 'Question',
-            name: 'What are the best things to do near Świeradów-Zdrój?',
+            name: faq.question,
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (in Orłowice, just 5 min drive from Świeradów-Zdrój), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
+                text: faq.answer,
             },
-        },
-        {
-            '@type': 'Question',
-            name: 'What family activities are near Szklarska Poręba?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Families love visiting Zagroda Alpakoterapii (25 min drive from Szklarska Poręba) for guided alpaca walks, therapy sessions, and mountain cottage stays. Other family activities include the Szklarska Poręba waterfall hike, Karkonosze National Park trails, and the glass-making museum.',
-            },
-        },
-        {
-            '@type': 'Question',
-            name: 'What can you visit in the Izera Mountains?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'The Izera Mountains offer hiking trails, cross-country skiing, the Świeradów Sky Walk tower, and unique experiences like Zagroda Alpakoterapii — an alpaca therapy farm with mountain cottage accommodation in Orłowice near Świeradów-Zdrój / Mirsk.',
-            },
-        },
-    ],
-};
+        })),
+    };
+}
+
+/** Fallback static FAQPage schema */
+export const discoverFaqSchema = generateDiscoverFaqSchema([
+    {
+        question: 'What are the best things to do near Świeradów-Zdrój?',
+        answer: 'Top activities include visiting Zagroda Alpakoterapii for alpaca walks and therapy sessions (in Orłowice, just 5 min drive from Świeradów-Zdrój), relaxing at Świeradów thermal baths, hiking to the Sky Walk observation tower, exploring Castle Czocha, and visiting the Krobica Silver Mine.',
+    },
+    {
+        question: 'What family activities are near Szklarska Poręba?',
+        answer: 'Families love visiting Zagroda Alpakoterapii (25 min drive from Szklarska Poręba) for guided alpaca walks, therapy sessions, and mountain cottage stays. Other family activities include the Szklarska Poręba waterfall hike, Karkonosze National Park trails, and the glass-making museum.',
+    },
+    {
+        question: 'What can you visit in the Izera Mountains?',
+        answer: 'The Izera Mountains offer hiking trails, cross-country skiing, the Świeradów Sky Walk tower, and unique experiences like Zagroda Alpakoterapii — an alpaca therapy farm with mountain cottage accommodation in Orłowice near Świeradów-Zdrój / Mirsk.',
+    },
+]);
 
 /** BreadcrumbList schema — call with page-specific items */
 export function breadcrumbSchema(items: { name: string; url: string }[]) {

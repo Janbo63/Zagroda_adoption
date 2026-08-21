@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { DiscoverPageContent } from '@/components/DiscoverPageContent';
 import { JsonLd } from '@/components/JsonLd';
-import { discoverSchema, farmSchema, discoverFaqSchema } from '@/lib/schema';
+import { discoverSchema, farmSchema, generateDiscoverFaqSchema } from '@/lib/schema';
+
+// Force static optimization & caching for benchmark performance (TTFB < 200ms)
+export const revalidate = 86400; // 24 hours static caching
 
 // Generate static params for all supported locales
 export async function generateStaticParams() {
@@ -34,12 +37,22 @@ export async function generateMetadata({
     };
 }
 
-export default function DiscoverPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function DiscoverPage({ params: { locale } }: { params: { locale: string } }) {
+    const t = await getTranslations({ locale, namespace: 'discover' });
+
+    const localizedFaqs = [
+        { question: t('faqs.q1'), answer: t('faqs.a1') },
+        { question: t('faqs.q2'), answer: t('faqs.a2') },
+        { question: t('faqs.q3'), answer: t('faqs.a3') },
+    ];
+
+    const faqSchema = generateDiscoverFaqSchema(localizedFaqs);
+
     return (
         <>
             <JsonLd data={discoverSchema} />
             <JsonLd data={farmSchema} />
-            <JsonLd data={discoverFaqSchema} />
+            <JsonLd data={faqSchema} />
             <DiscoverPageContent locale={locale} />
         </>
     );

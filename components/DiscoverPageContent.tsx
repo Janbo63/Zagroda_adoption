@@ -423,8 +423,13 @@ export function DiscoverPageContent({ locale }: { locale: string }) {
                         variants={stagger}
                     >
                         <motion.div variants={fadeUp} className="text-center mb-12">
-                            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
-                                <HelpCircle className="w-3.5 h-3.5" /> Travel Guide & FAQs
+                            <div className="flex flex-wrap justify-center gap-2 mb-3">
+                                <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    <HelpCircle className="w-3.5 h-3.5" /> Travel Guide & FAQs
+                                </div>
+                                <div className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1 rounded-full border border-stone-200">
+                                    {t('lastUpdated')}
+                                </div>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                                 {t('faqs.title')}
