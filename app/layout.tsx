@@ -61,6 +61,12 @@ export default function RootLayout({
               window.gtag = gtag;
               gtag('js', new Date());
               
+              // Suppress analytics only for automated headless scrapers (selenium/puppeteer)
+              if (navigator.webdriver) {
+                console.log('[Analytics] Suppressed for automated headless agent');
+                return;
+              }
+
               // We use replace to ensure tracking matches www domain
               var currentUrl = window.location.href;
               var wwwUrl = currentUrl.replace('https://', 'https://www.');
