@@ -534,7 +534,68 @@ export function PartnersPageContent({ locale }: PartnersPageContentProps) {
               </form>
             )}
           </div>
+        </div>
 
+        {/* Verified Regional Partners & Portals Showcase */}
+        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+          <div>
+            <h2 className="text-xl font-bold text-slate-900">
+              {locale === 'cs' ? 'Naši partneři a doporučená místa v regionu' : locale === 'pl' ? 'Nasi Partnerzy i Polecane Miejsca w Regionie' : 'Our Regional Partners & Recommended Places'}
+            </h2>
+            <p className="text-sm text-slate-500">
+              {locale === 'cs' ? 'Spolupracujeme s předními hotely a turistickými portály v Jizerských horách a příhraničí.' : locale === 'pl' ? 'Współpracujemy z wiodącymi hotelami i portalami turystycznymi w Górach Izerskich i regionie.' : 'We collaborate with leading hotels and regional tourism portals.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Kudy z Nudy */}
+            <a 
+              href="https://www.kudyznudy.cz" 
+              target="_blank" 
+              rel="noopener"
+              className="flex items-start gap-4 p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-md transition bg-slate-50 group"
+            >
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center font-bold text-emerald-700 shadow-sm border border-slate-200 flex-shrink-0 text-xs text-center">
+                🇨🇿 KZN
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold text-slate-900 group-hover:text-emerald-700 transition text-sm">Kudy z nudy (CzechTourism)</h3>
+                  <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-emerald-600" />
+                </div>
+                <p className="text-xs text-slate-600 mt-1">
+                  {locale === 'cs' ? 'Největší oficiální turistický portál v České republice s tipy na rodinné výlety a zážitky.' : 'Oficjalny czeski portal turystyczny z propozycjami wycieczek i atrakcji w regionie i przygraniczu.'}
+                </p>
+                <span className="inline-block mt-2 text-[10px] font-semibold uppercase text-emerald-700 bg-emerald-100/60 px-2 py-0.5 rounded">
+                  {locale === 'cs' ? 'Oficiální turistický portál' : 'Oficjalny Portal Turystyczny'}
+                </span>
+              </div>
+            </a>
+
+            {/* Elements Hotel */}
+            <a 
+              href="https://elements-hotel.pl" 
+              target="_blank" 
+              rel="noopener"
+              className="flex items-start gap-4 p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-md transition bg-slate-50 group"
+            >
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center font-bold text-emerald-700 shadow-sm border border-slate-200 flex-shrink-0 text-xs text-center">
+                🏨 5★
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold text-slate-900 group-hover:text-emerald-700 transition text-sm">Elements Hotel & Spa</h3>
+                  <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-emerald-600" />
+                </div>
+                <p className="text-xs text-slate-600 mt-1">
+                  {locale === 'cs' ? 'Luxusní 5hvězdičkový hotelový komplex v lázních Świeradów-Zdrój.' : 'Luksusowy 5-gwiazdkowy kompleks hotelowo-rekreacyjny w Świeradowie-Zdroju.'}
+                </p>
+                <span className="inline-block mt-2 text-[10px] font-semibold uppercase text-emerald-700 bg-emerald-100/60 px-2 py-0.5 rounded">
+                  {locale === 'cs' ? 'Hotelový partner' : 'Partner Hotelowy (5 Gwiazdek)'}
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
 
       </div>

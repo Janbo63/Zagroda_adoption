@@ -64,7 +64,33 @@ export function Footer({ locale }: FooterProps) {
             </Link>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-white/20 text-center">
+        {/* Verified Regional Partners & Tourism Portals */}
+        <div className="mt-8 pt-6 border-t border-white/20">
+          <p className="text-xs uppercase tracking-wider text-green-200 font-bold mb-3">
+            {locale === 'cs' ? 'Doporučujeme & Naši partneři v regionu:' : locale === 'pl' ? 'Polecamy & Nasi partnerzy w regionie:' : 'Recommended & Regional Partners:'}
+          </p>
+          <div className="flex flex-wrap items-center gap-3 text-xs text-green-100">
+            <a 
+              href="https://www.kudyznudy.cz" 
+              target="_blank" 
+              rel="noopener" 
+              className="hover:text-orange-200 underline decoration-green-400 underline-offset-4 font-medium"
+            >
+              🇨🇿 Kudy z nudy – Tipy na výlety
+            </a>
+            <span className="text-green-400/60">•</span>
+            <a 
+              href="https://elements-hotel.pl" 
+              target="_blank" 
+              rel="noopener" 
+              className="hover:text-orange-200 underline decoration-green-400 underline-offset-4 font-medium"
+            >
+              🏨 Elements Hotel & Spa Świeradów-Zdrój
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-white/10 text-center">
           <p>&copy; {new Date().getFullYear()} Zagroda Alpakoterapii. {t('allRightsReserved')}</p>
         </div>
       </div>
