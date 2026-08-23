@@ -27,6 +27,7 @@ Polish (default), English, German, Czech, Dutch — via `next-intl` with locale-
 
 - **Zoho CRM backend** — Pivoted from local Prisma DB to Zoho CRM as data backend for contacts and adoption records. Prisma schema was emptied but dependency kept (may be repurposed for local caching)
 - **Docker deployment** — Containerized via Docker Compose, deployed to Hostinger VPS at port 3001 behind Caddy
+- **VPS Security & Firewall** — Hostinger Managed VPS Firewall active (`FutureSolutions Web Server` ruleset: Accept TCP ports 22, 80, 443; Drop all other incoming traffic). Fail2ban enabled for SSH brute force defense. Malware detection configured for manual on-demand scans (no continuous background daemon to preserve CPU/RAM).
 - **Stripe for payments** — Adoption sponsorships and voucher purchases, with automated email confirmations
 - **next-intl for i18n** — Locale detection disabled, Polish as default, Facebook crawler handling in middleware
 
