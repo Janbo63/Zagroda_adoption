@@ -15,25 +15,25 @@ const siteUrl = 'https://zagrodaalpakoterapii.com';
 
 /** Localised meta titles and descriptions for the homepage / layout fallback */
 const metaByLocale: Record<string, { title: string; description: string }> = {
-  en: {
-    title: 'Zagroda Alpakoterapii — Alpaca Therapy Farm in the Karkonosze Mountains',
-    description: 'Experience alpaca therapy, guided alpaca walks, and cosy farm stays in the Karkonosze Mountains, Poland. Family-friendly agritourism near Mirsk with mountain views.',
-  },
   pl: {
-    title: 'Zagroda Alpakoterapii — Alpakoterapia w Karkonoszach',
-    description: 'Odkryj terapeutyczną moc alpak i natury w naszej zagrodzie. Alpakoterapia, spacery z alpakami i noclegi w Karkonoszach. Agroturystyka w Mirsku.',
-  },
-  de: {
-    title: 'Zagroda Alpakoterapii — Alpaka-Therapie-Farm im Riesengebirge',
-    description: 'Erleben Sie Alpaka-Therapie, geführte Alpaka-Spaziergänge und gemütliche Bauernhof-Übernachtungen im Riesengebirge, Polen. Familienfreundlicher Agrotourismus.',
+    title: 'Zagroda Alpakoterapii | Spotkania z Alpakami i Alpakoterapia Świeradów-Zdrój (Góry Izerskie)',
+    description: 'Odwiedź nasze łagodne stado alpak i minikózek w Orłowicach (5 min od Świeradowa-Zdroju, Góry Izerskie). Relaksująca alpakoterapia, karmienie z ręki i kryta stodoła w każdą pogodę.',
   },
   cs: {
-    title: 'Zagroda Alpakoterapii — Farma s alpakami v Krkonoších',
-    description: 'Zažijte terapii s alpakami, vycházky s alpakami a útulné ubytování na farmě v Krkonoších v Polsku. Rodinný agroturismus u Mirsku.',
+    title: 'Zagroda Alpakoterapii | Setkání s alpakami a farma v Jizerských horách (Frýdlant / Świeradów)',
+    description: 'Kouzelná farma s alpakami a minikózami v Orłowicích (jen 25 min z Frýdlantu a 45 min z Liberce). Osobní krmení z ruky, rodinná alpakoterapie a krytá stodoła i za deště.',
+  },
+  en: {
+    title: 'Zagroda Alpakoterapii | Alpaca Therapy Farm near Świeradów-Zdrój (Jizera Mountains)',
+    description: 'Experience gentle alpaca encounters, relaxing therapy sessions, and mini goats near Świeradów-Zdrój in the Jizera Mountains. Family-friendly all-weather farm.',
+  },
+  de: {
+    title: 'Zagroda Alpakoterapii | Alpakas & Alpakatherapie Bad Flinsberg (Isergebirge)',
+    description: 'Besuchen Sie unsere sanften Alpakas und Zwergziegen in Orłowice (5 Min von Bad Flinsberg / Świeradów-Zdrój im Isergebirge). Alpakatherapie, Fütterung aus der Hand & wetterfeste Scheune.',
   },
   nl: {
-    title: 'Zagroda Alpakoterapii — Alpacatherapie Boerderij in het Reuzengebergte',
-    description: 'Ervaar alpacatherapie, begeleide alpacawandelingen en gezellige boerderijverblijven in het Reuzengebergte, Polen. Gezinsvriendelijk agrotoerisme.',
+    title: 'Zagroda Alpakoterapii | Alpacaboerderij & Alpacatherapie bij Świeradów-Zdrój (Isergebergte)',
+    description: 'Bezoek onze vriendelijke alpaca\'s en minigeitjes nabij Świeradów-Zdrój in het Isergebergte. Rustgevende alpacatherapie en gezinsvriendelijke boerderijbezoeken.',
   },
 };
 
