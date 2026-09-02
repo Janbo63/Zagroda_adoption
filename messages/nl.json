@@ -1,1513 +1,1500 @@
 {
-    "Common": {
-        "title": "Zagroda Alpakoterapii",
-        "description": "Ervaar de helende kracht van alpaca's en natuur"
-    },
-    "common": {
-        "home": "Home",
-        "animals": "Dieren",
-        "accommodation": "Accommodatie",
-        "stayWithUs": "Verblijf bij ons",
-        "exploreTheArea": "Ontdek de omgeving",
-        "adoption": "Adopteren",
-        "vouchers": "Cadeaubonnen",
-        "activities": "Activiteiten",
-        "blog": "Blog",
-        "contact": "Contact",
-        "backToAnimals": "Terug naar alle dieren",
-        "age": "Geboren in",
-        "color": "Kleur",
-        "birthplace": "Geboorteplaats",
-        "breed": "Ras",
-        "role": "Rol",
-        "years": "jaar",
-        "attributes": "Kenmerken",
-        "character": "Karakter",
-        "stories": "Verhalen"
-    },
-    "animals": {
-        "title": "Ontmoet onze dieren",
-        "sectionTitle": "Ontmoet onze dierenvrienden",
-        "meetButton": "Ontmoet {name}",
-        "alpacas": {
-            "name": "Alpaca's",
-            "description": "Onze zachte, pluizige therapeuten staan klaar om je te ontmoeten!",
-            "superpower": "Rust en Zachtheid Uitstralen",
-            "alt": "Alpaca's op onze boerderij"
-        },
-        "goats": {
-            "name": "Geiten",
-            "description": "Speelse en vriendelijke geiten die van aandacht houden",
-            "superpower": "Speelse Energie & Klimmen",
-            "alt": "Geiten op onze boerderij"
-        },
-        "dogs": {
-            "name": "Honden",
-            "description": "Onze trouwe boerderijhonden zijn hier om je te begroeten en gezelschap te houden.",
-            "superpower": "Onvoorwaardelijke Liefde",
-            "alt": "Honden op onze boerderij"
-        }
-    },
-    "home": {
-        "title": "Welkom bij Zagroda Alpakoterapii",
-        "subtitle": "Ervaar het plezier van alpacatherapie",
-        "heroImageAlt": "Uitzicht op Zagroda Alpakoterapii boerderij",
-        "planVisit": "Plan je bezoek",
-        "featuredAnimals": "Onze dierenvrienden",
-        "alpacasTitle": "Alpaca's",
-        "alpacasDescription": "Ontmoet onze vriendelijke alpaca's en ervaar hun kalmerende aanwezigheid.",
-        "alpacasAlt": "Alpaca's bij Zagroda Alpakoterapii",
-        "goatsTitle": "Geiten",
-        "goatsDescription": "Onze speelse geiten zijn altijd in voor plezier.",
-        "goatsAlt": "Geiten bij Zagroda Alpakoterapii",
-        "dogsTitle": "Honden",
-        "dogsDescription": "Onze trouwe boerderijhonden zijn hier om je te begroeten en gezelschap te houden.",
-        "dogsAlt": "Honden bij Zagroda Alpakoterapii",
-        "meetThem": "Ontmoet ze",
-        "stayTitle": "Verblijf bij ons",
-        "farmhouseRoomsTitle": "Gezellige boerderijkamers",
-        "farmhouseRoomsDescription": "Ervaar rustieke charme in onze gerenoveerde boerderij",
-        "farmhouseRoomsAlt": "Gezellige boerderijkamers bij Zagroda Alpakoterapii",
-        "bookStay": "Boek je verblijf",
-        "activitiesTitle": "Onze activiteiten",
-        "meetAlpacasTitle": "Ontmoet de alpaca's",
-        "meetAlpacasDescription": "Kom heel dichtbij onze alpacahud",
-        "meetAlpacasAlt": "Alpaca's ontmoeten bij Zagroda Alpakoterapii",
-        "alpacaWalksTitle": "Alpaca wandelingen",
-        "alpacaWalksDescription": "Maak een wandeling met een alpacamaatje",
-        "alpacaWalksAlt": "Alpaca wandelingen bij Zagroda Alpakoterapii",
-        "weekendHelperTitle": "Weekendhulp",
-        "weekendHelperDescription": "Ervaar het boerderijleven van dichtbij",
-        "weekendHelperAlt": "Weekendhulp activiteiten bij Zagroda Alpakoterapii",
-        "exploreActivities": "Ontdek activiteiten",
-        "logoAlt": "Zagroda Alpakoterapii Logo",
-        "contactUs": "Neem contact op",
-        "phoneNumber": "695 545 330",
-        "address": "24 Orłowice, Mirsk 59-630, Polen",
-        "followUs": "Volg ons",
-        "imageNotFound": "Afbeelding niet gevonden"
-    },
-    "stay": {
-        "title": "Overnachtingsmogelijkheden",
-        "farmhouseRooms": {
-            "title": "Boerderijkamers",
-            "description": "Ervaar de charme van onze gerenoveerde boerderij"
-        },
-        "caravanStays": {
-            "title": "Verblijf in een caravan",
-            "description": "Geniet van een uniek verblijf in onze vintage caravans"
-        },
-        "bookNow": "Boek nu",
-        "checkAvailability": "Check beschikbaarheid"
-    },
-    "activities": {
-        "title": "Activiteiten",
-        "sectionTitle": "Onze activiteiten",
-        "viewDetails": "Bekijk details",
-        "callUs": "Bel ons",
-        "attributes": "Kenmerken van de activiteit",
-        "details": "Details van de activiteit",
-        "highlights": "Hoogtepunten",
-        "requirements": "Vereisten",
-        "duration": "Duur",
-        "groupSize": "Groepsgrootte",
-        "minAge": "Minimumleeftijd",
-        "availability": "Beschikbaarheid",
-        "meetthealpacas": {
-            "name": "Ontmoet de alpaca's",
-            "image": "/images/activities/meet-alpacas.jpg",
-            "description": "Kom heel dichtbij onze vriendelijke alpaca's! Perfect voor gezinnen die meer willen weten over deze fascinerende dieren.",
-            "details": "Ervaar een unieke kans om onze vriendelijke alpacahud te ontmoeten.",
-            "highlights": "Ontmoet onze vriendelijke alpaca's en leer over hun unieke persoonlijkheden. Je krijgt interactie met de kudde, leert over de verzorging van alpaca's en hebt volop fotomogelijkheden.",
-            "requirements": "Comfortabele wandelschoenen, kleding passend bij het weer. Camera optioneel. Vooraf reserveren verplicht.",
-            "attributes": {
-                "duration": "Ongeveer 1 uur",
-                "groupSize": "Maximaal 6 personen",
-                "minAge": "Alle leeftijden welkom",
-                "availability": "Dagelijks, op afspraak"
-            },
-            "alt": "Activiteit Ontmoet de alpaca's"
-        },
-        "alpacawalks": {
-            "name": "Wandelen met alpaca's",
-            "image": "/images/activities/alpaca-walks.jpg",
-            "description": "Maak een ontspannen wandeling over ons prachtige boerderijterrein, vergezeld door je eigen alpacamaatje!",
-            "details": "Ga met ons mee voor een rustige wandeling over schilderachtige paden met je eigen alpacagezelschap.",
-            "highlights": "Individuele wandeling met een alpaca, mooie routes, leer alpaca's te begeleiden, fotomogelijkheden.",
-            "requirements": "Comfortabele wandelschoenen, kleding passend bij het weer, minimumleeftijd: 6 jaar.",
-            "attributes": {
-                "duration": "Ongeveer 90 minuten",
-                "groupSize": "Maximaal 4 personen",
-                "minAge": "6 jaar en ouder",
-                "availability": "Dagelijks, afhankelijk van het weer"
-            },
-            "alt": "Activiteit Wandelen met alpaca's"
-        },
-        "privatealpacasafari": {
-            "name": "Speciale privé-aanbieding",
-            "image": "/images/zagrodanewlogo.png",
-            "description": "Geniet van een exclusieve tour over onze boerderij met een kudde alpaca's! Perfect voor grotere groepen of speciale gelegenheden.",
-            "details": "Geniet van een exclusieve ervaring met onze alpaca's in een privéomgeving. Opties zijn onder andere Verjaardagen, Romantische Picknicks, Verlovingen, Fotosessies etc. Bel ons als je een speciaal idee hebt waar we aan kunnen werken!",
-            "highlights": "Privégids, op maat gemaakte ervaring, extra tijd met de alpaca's, speciale fotomogelijkheden.",
-            "requirements": "Reservering minimaal 48 uur van tevoren vereist. Geschikt voor alle leeftijden.",
-            "attributes": {
-                "duration": "2-3 uur",
-                "groupSize": "Privégroep tot 8 personen",
-                "minAge": "Alle leeftijden welkom",
-                "availability": "Op speciale afspraak"
-            },
-            "alt": "Activiteit Privé Alpaca Safari"
-        },
-        "bookNow": "Boek nu"
-    },
-    "blog": {
-        "title": "Ons Blog",
-        "noPosts": "Momenteel zijn er geen blogartikelen beschikbaar. Kom snel terug!",
-        "readMore": "Lees meer",
-        "recentPosts": "Recente artikelen",
-        "viewAll": "Bekijk alle artikelen"
-    },
-    "contact": {
-        "title": "Neem contact op",
-        "name": "Naam",
-        "email": "E-mail",
-        "message": "Bericht",
-        "send": "Bericht versturen",
-        "addressTitle": "Ons adres",
-        "phoneTitle": "Telefoon",
-        "emailTitle": "E-mail",
-        "formSuccess": "Bedankt voor je bericht. We nemen snel contact met je op!",
-        "formError": "Er is een fout opgetreden bij het versturen van je bericht. Probeer het opnieuw.",
-        "callOrMessage": "Bel of bericht ons",
-        "call": "Bellen",
-        "visitUs": "Bezoek ons",
-        "followUs": "Volg ons"
-    },
-    "hero": {
-        "title": "Welkom bij Zagroda Alpakoterapii",
-        "subtitle": "Ervaar de magie van alpacatherapie in onze rustige boerderijomgeving",
-        "planVisit": "Plan je bezoek",
-        "exploreActivities": "Ontdek activiteiten",
-        "contactUs": "Neem contact op"
-    },
-    "accommodation": {
-        "sectionTitle": "Verblijf bij ons",
-        "bookNow": "Boek nu",
-        "cozyfarmhouserooms": {
-            "name": "Gezellige boerderijkamers",
-            "description": "Slaap heerlijk in onze comfortabele boerderij!",
-            "alt": "Gezellige boerderij accommodatie"
-        }
-    },
-    "adoption": {
-        "title": "Adopteer een alpaca",
-        "legal": {
-            "terms_title": "Conditions",
-            "privacy_title": "Privacy",
-            "accept_terms": "Ik accepteer de Algemene Voorwaarden en de Privacyverklaring",
-            "marketing_opt_in": "Ik wil graag updates over de alpaca's en speciale aanbiedingen ontvangen",
-            "required_error": "Accepteer de voorwaarden om door te gaan",
-            "footer_link": "Voorwaarden"
-        },
-        "sectionTitle": "Jaarlijks Virtueel Adoptieprogramma",
-        "campaignTitle": "Winter vol Liefde Special",
-        "campaignSubtitle": "Vind je perfecte match tussen onze zachte sterren. Geen drama, alleen onvoorwaardelijke liefde.",
-        "starProfiles": {
-            "Elvis": {
-                "hook": "De Ultieme Luisteraar",
-                "description": "Elvis oordeelt niet over jouw drama. Terwijl de emoties in 'Winter vol Liefde' hoog oplopen, blijft hij de rust zelve. Hij is de ideale partner voor een winterwandeling om je hoofd leeg te maken."
-            },
-            "Micky": {
-                "hook": "De Nieuwsgierige Avonturier",
-                "description": "Micky is de 'hoofdrolspeler' van onze kudde. Hij is nieuwsgierig en steekt zijn neus overal in. De perfecte match voor wie houdt van een beetje actie en humor."
-            },
-            "Suri": {
-                "hook": "De Elegante Diva",
-                "description": "Suri is de belichaming van elegantie en 'slow travel'. Geen haast, alleen pure verbinding. Ideaal voor wie kiest voor schoonheid en een diepe band met de natuur."
-            },
-            "Teddy": {
-                "hook": "De Kalme Leider",
-                "description": "Teddy is de rots in de branding van onze kudde. Hij is ontzettend geduldig, vooral met kinderen. De ideale match voor gezinnen die rust en stabiliteit zoeken."
-            },
-            "Ricky": {
-                "hook": "De Charmante Kwebbelkous",
-                "description": "Ricky is misschien een beetje verlegen, maar als hij eenmaal begint te neuriën, houdt hij niet meer op. Hij is de perfecte metgezel voor wie van gezelligheid en verhalen houdt."
-            },
-            "Freddy": {
-                "hook": "De Slimme Charmeur",
-                "description": "Freddy weet precies hoe hij met zijn voetje om wat lekkers moet bedelen. Hij steelt ieders hart en brengt vrolijkheid in elke ontmoeting."
-            },
-            "General": {
-                "hook": "Onze Vriendelijke Alpaca",
-                "description": "Al onze alpaca's hebben hun eigen unieke karakter. Kies je favoriet en word onderdeel van onze boerderijfamilie."
-            }
-        },
-        "bronze": {
-            "name": "Bronzen Beschermer",
-            "price": "149 PLN",
-            "features": [
-                "Adoptiecertificaat",
-                "Persoonlijke foto van je alpaca",
-                "Ontmoet je alpaca (voor één gezin)"
-            ]
-        },
-        "silver": {
-            "name": "Zilveren Vriend",
-            "price": "349 PLN",
-            "features": [
-                "Alle Bronze voordelen",
-                "10% korting op verblijf in het Guesthouse",
-                "Een boswandeling met je alpaca en zijn beste vriend"
-            ]
-        },
-        "gold": {
-            "name": "Gouden Beschermer",
-            "price": "999 PLN",
-            "features": [
-                "Alle Silver voordelen",
-                "Weekendverblijf in het appartement",
-                "Help mee met de verzorging (wakker maken en naar bed brengen)",
-                "Een met de hand afgewerkte mini-versie van je alpaca"
-            ]
-        },
-        "chooseAlpaca": "Kies je alpaca",
-        "chooseAlpacaSubtitle": "Selecteer je favoriete protegé",
-        "benefitsTitle": "Alles wat je krijgt",
-        "benefitsSubtitle": "Ontdek de magie die is inbegrepen in onze adoptiepakketten",
-        "bestValue": "Keuze",
-        "annualFeeNote": "Eenmalige jaarlijkse vergoeding",
-        "selectionRequired": "Selecteer je alpacamaatje om af te ronden",
-        "selectButton": "Selecteer pakket",
-        "confirmAdoption": "Bevestig adoptie",
-        "selected": "Geselecteerd",
-        "success": {
-            "title": "Gefeliciteerd!",
-            "message": "Je bent succesvol lid geworden van ons adoptieprogramma!",
-            "details": "Je bent nu een beschermer van {alpaca} met het {tier} pakket.",
-            "description": "Bedankt voor het steunen van onze kudde. Je ontvangt binnenkort een bevestigingsmail en je virtuele adoptiekit.",
-            "backHome": "Terug naar Home"
-        },
-        "benefits": {
-            "certificate": {
-                "title": "Adoptie Certificaat",
-                "description": "Een officieel certificaat als bewijs van je adoptie en steun aan onze alpacafamilie."
-            },
-            "meet": {
-                "title": "Ontmoet je Alpaca",
-                "description": "Een persoonlijke ontmoeting met je gekozen alpaca op de boerderij (toegang voor 1 persoon)."
-            },
-            "fur_lock": {
-                "title": "Foto met Wol-lokje",
-                "description": "Een prachtige ingelijste foto van je alpaca samen met een echt plukje van zijn zachte wol."
-            },
-            "discount": {
-                "title": "Guesthouse Korting",
-                "description": "Geniet van 10% korting op al je verblijven in het Zagroda Alpako Terapii Guesthouse."
-            },
-            "forest_walk": {
-                "title": "Boswandeling",
-                "description": "Maak een onvergetelijke wandeling naar het bos met je alpaca en zijn beste vriend."
-            },
-            "weekend": {
-                "title": "Weekendverblijf",
-                "description": "Een compleet weekendverblijf in ons sfeervolle appartement direct bij de alpaca's."
-            },
-            "care": {
-                "title": "Help met Verzorging",
-                "description": "Ervaar het leven op de boerderij door je alpaca mee te helpen wekken en naar bed te brengen."
-            },
-            "mini_me": {
-                "title": "Mini-Alpaca Versie",
-                "description": "Een met de hand afgewerkte mini-versie (knuffel) die precies lijkt op jouw geadopteerde alpaca."
-            }
-        },
-        "terms": {
-            "title": "Algemene Voorwaarden",
-            "summary": "Snelle Samenvatting",
-            "items": [
-                "Adoptie is voor een periode van 12 maanden vanaf de datum van betaling.",
-                "Kortingen op verblijven zijn afhankelijk van beschikbaarheid en moeten vooraf worden gereserveerd.",
-                "Het weekendverblijf in het appartement is onder voorbehoud van beschikbaarheid.",
-                "Activiteiten zoals wandelingen moeten apart worden ingepland; adoptie garandeert de deelname van je alpaca.",
-                "De mini-alpaca en certificaten worden binnen 14 dagen na adoptie verwerkt."
-            ],
-            "viewFull": "Bekijk volledige Algemene Voorwaarden"
-        }
-    },
-    "terms_full": {
-        "title": "Terms & Conditions of Business",
-        "last_updated": "Last updated: February 2026",
-        "intro": "These Terms & Conditions govern the use of our website and the purchase of any services, adoptions, or vouchers from Zagroda Alpakoterapii.",
-        "identity": {
-            "title": "1. Business Identity",
-            "content": "The website and services are operated by Future Solutions Jan Fura. Address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678, REGON: 383008039."
-        },
-        "vouchers": {
-            "title": "2. Gift Vouchers",
-            "content": "Gift Vouchers are non-refundable and cannot be exchanged for cash. Vouchers are valid for 12 months from the date of purchase. If a service booked with a voucher is cancelled by the client with less than 48 hours' notice, the voucher shall be considered redeemed."
-        },
-        "adoptions": {
-            "title": "3. Virtual Adoptions",
-            "content": "Virtual Adoption is a symbolic supporting contribution. It does not grant ownership rights over the animal. Adoption benefits (visits, walks, stays) are subject to availability and must be booked in advance within the 12-month period."
-        },
-        "availability": {
-            "title": "4. Availability & Animal Welfare",
-            "content": "As our services involve live animals and outdoor activities, we reserve the right to reschedule any booking at short notice due to adverse weather or animal welfare concerns. In such cases, a new date will be provided. No refunds are issued for rescheduling due to these factors."
-        },
-        "governing_law": {
-            "title": "5. Governing Law",
-            "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
-        }
-    },
-    "vouchers": {
-        "title": "Cadeaubonnen",
-        "legal": {
-            "terms_title": "Conditions",
-            "privacy_title": "Privacy",
-            "accept_terms": "Ik accepteer de Algemene Voorwaarden en de Privacyverklaring",
-            "marketing_opt_in": "Ik wil graag updates over de alpaca's en speciale aanbiedingen ontvangen",
-            "required_error": "Accepteer de voorwaarden om door te gaan",
-            "footer_link": "Voorwaarden"
-        },
-        "subtitle": "Geef het cadeau van alpaca-magie",
-        "description": "Elke bon kan worden gebruikt voor activiteiten, verblijven of alpaca-adoptie.",
-        "selectAmount": "Selecteer Bedrag",
-        "currency": "Valuta",
-        "recipientDetails": "Gegevens Ontvanger",
-        "recipientEmail": "E-mail Ontvanger",
-        "recipientName": "Naam Ontvanger (optioneel)",
-        "personalMessage": "Persoonlijk Bericht (optioneel)",
-        "buyerEmail": "Jouw e-mail",
-        "buyNow": "Koop Bon",
-        "howItWorks": "Hoe Het Werkt",
-        "step1": "Kies je bedrag",
-        "step2": "Voeg gegevens ontvanger toe",
-        "step3": "Ontvanger krijgt een e-mail met een unieke code",
-        "step4": "Code kan worden gebruikt voor elke boerderij-ervaring",
-        "validFor": "Geldig voor 12 maanden",
-        "redeemCode": "Verzilver Code",
-        "enterCode": "Voer boncode in",
-        "applyVoucher": "Toepassen",
-        "voucherApplied": "Bon toegepast",
-        "voucherBalance": "Bonsaldo",
-        "invalidCode": "Ongeldige boncode",
-        "expired": "Bon is verlopen",
-        "fullyRedeemed": "Bon is volledig verzilverd"
-    },
-    "campaign": {
-        "badge": "Winter Experience Speciaal",
-        "hero": {
-            "title": "Vind Jouw Winteravontuur",
-            "subtitle": "Geen drama. Alleen onvoorwaardelijke vriendschap. De perfecte winterse ontsnapping. ✨",
-            "socialProof": "4.9/5 sterren · 400+ bezoekers",
-            "primaryCta": "Ontdek Meer",
-            "secondaryCta": "Adopteer Een Alpaca"
-        },
-        "video": {
-            "caption": "Pure vreugde en alpacazoentjes!"
-        },
-        "stars": {
-            "title": "Ontmoet Onze Sterren",
-            "subtitle": "Elk met hun eigen persoonlijkheid. Welke past perfect bij jou?",
-            "idealForLabel": "Ideaal voor",
-            "chooseCta": "Kies",
-            "elvis": {
-                "personality": "De perfecte luisteraar. Elvis oordeelt niet over je drama. Hij blijft kalm terwijl emoties koken.",
-                "idealFor": "Gestresste professionals die rust zoeken"
-            },
-            "micky": {
-                "personality": "Nieuwsgierige avonturier. Micky wil alles ontdekken en maakt elke wandeling tot een expeditie.",
-                "idealFor": "Avontuurlijke geesten en natuurliefhebbers"
-            },
-            "suri": {
-                "personality": "Zachte ziel. Suri's fluweelzachte vacht en kalme karakter zijn therapeutisch. Pure sereniteit.",
-                "idealFor": "Romantische koppels en gezinnen"
-            },
-            "teddy": {
-                "personality": "De kalme leider. Teddy is de rots in de branding van onze kudde. Hij is ontzettend geduldig, vooral met kinderen.",
-                "idealFor": "Gezinnen met jonge kinderen en rustzoekers"
-            },
-            "ricky": {
-                "personality": "De charmante kwebbelkous. Ricky is misschien een beetje verlegen, maar als hij eenmaal begint te neuriën, houdt hij niet meer op.",
-                "idealFor": "Mensen die houden van gezelligheid en verhalen"
-            },
-            "freddy": {
-                "personality": "De slimme charmeur. Freddy weet precies hoe hij met zijn voetje om wat lekkers moet bedelen. Hij steelt ieders hart.",
-                "idealFor": "Bezoekers die wel wat extra vrolijkheid kunnen gebruiken"
-            }
-        },
-        "comparison": {
-            "title": "Waarom Kiezen Voor Alpaca's?",
-            "tv": {
-                "title": "Winter vol Liefde (TV)",
-                "point1": "Nep drama & tranen",
-                "point2": "Camera's overal",
-                "point3": "Relatie onzekerheid",
-                "point4": "Dure dates"
-            },
-            "us": {
-                "title": "Zagroda Alpakoterapii",
-                "point1": "Authentieke knuffels",
-                "point2": "Pure privacy",
-                "point3": "Onvoorwaardelijke alpaca liefde",
-                "point4": "Unieke ervaringen"
-            },
-            "cta": "Skip Het Drama"
-        },
-        "packages": {
-            "title": "Kies Jouw Avontuur",
-            "subtitle": "Onvergetelijke momenten voor iedereen",
-            "cta": "Koop Cadeaubon",
-            "lite": {
-                "name": "Alpaca Meet & Greet",
-                "point1": "30 minuten interactie",
-                "point2": "Voeren van de alpaca's",
-                "point3": "Leuke fotomomenten"
-            },
-            "popular": {
-                "name": "Winter Wandeling",
-                "badge": "Populairst",
-                "point1": "60 minuten wandeling",
-                "point2": "Warme chocolademelk",
-                "point3": "Digitale fotopakket",
-                "point4": "Gepersonaliseerde gids"
-            },
-            "vip": {
-                "name": "VIP Alpaca Experience",
-                "point1": "90 minuten privé sessie",
-                "point2": "Alpaca souvenir pakket",
-                "point3": "Lokale snacks & drankjes",
-                "point4": "Focus op therapie & rust",
-                "point5": "Exclusieve knuffeltijd"
-            }
-        },
-        "finalCta": {
-            "title": "Klaar voor Een Uniek Avontuur?",
-            "subtitle": "Boek je winterse ervaring vandaag nog",
-            "primaryBtn": "Koop Cadeaubon",
-            "secondaryBtn": "Meer Informatie",
-            "urgency": "⏰ Winter Special: beperkt beschikbaar"
-        }
-    },
-    "navigation": {
-        "home": "Home",
-        "animals": "Dieren",
-        "activities": "Activiteiten",
-        "blog": "Blog",
-        "contact": "Contact",
-        "accommodation": "Accommodatie"
-    },
+  "Common": {
+    "title": "Zagroda Alpakoterapii",
+    "description": "Ervaar de helende kracht van alpaca's en natuur"
+  },
+  "common": {
+    "home": "Home",
+    "animals": "Dieren",
+    "accommodation": "Accommodatie",
+    "stayWithUs": "Verblijf bij ons",
+    "exploreTheArea": "Ontdek de omgeving",
+    "adoption": "Adopteren",
+    "vouchers": "Cadeaubonnen",
+    "activities": "Activiteiten",
+    "blog": "Blog",
+    "contact": "Contact",
+    "backToAnimals": "Terug naar alle dieren",
+    "age": "Geboren in",
+    "color": "Kleur",
+    "birthplace": "Geboorteplaats",
+    "breed": "Ras",
+    "role": "Rol",
+    "years": "jaar",
+    "attributes": "Kenmerken",
+    "character": "Karakter",
+    "stories": "Verhalen"
+  },
+  "animals": {
+    "title": "Ontmoet onze dieren",
+    "sectionTitle": "Ontmoet onze dierenvrienden",
+    "meetButton": "Ontmoet {name}",
     "alpacas": {
-        "pageTitle": "Ontmoet onze alpacagroep",
-        "backToAnimals": "Terug naar dieren",
-        "attributes": "Kenmerken",
-        "character": "Karakter",
-        "stories": "Verhalen",
-        "age": "Geboren in",
-        "color": "Kleur",
-        "birthplace": "Geboorteplaats",
-        "years": "jaar",
-        "micky": {
-            "name": "Micky",
-            "attributes": {
-                "age": "2018",
-                "color": "Bruin",
-                "birthplace": "Duitsland"
-            },
-            "superpower": "Zachte Ziel & Camouflage",
-            "character": "Micky is erg schuw en bang voor lawaai en geschreeuw.",
-            "stories": {
-                "0": "Toen Micky voor het eerst een muis in de schuur zag, schrok hij en rende snel weg.",
-                "1": "Ondanks zijn schuwheid toonde Micky ongelooflijke moed toen hij hielp een nerveus kind te kalmeren tijdens een therapie door hem voorzichtig te benaderen en dichtbij te blijven."
-            }
-        },
-        "elvis": {
-            "name": "Elvis",
-            "attributes": {
-                "age": "2020",
-                "color": "Grijs en wit",
-                "birthplace": "Duitsland"
-            },
-            "superpower": "Rockstar Energie & Hoge Sprongen",
-            "character": "Elvis is eigenwijs en rebels. Hij is nieuwsgierig en gedraagt zich vaak als een ster.",
-            "stories": {
-                "0": "Elvis kan heel hoog springen, dus op een keer sprong hij over het hek en rende het bos in. Gelukkig kwam hij na korte tijd weer terug.",
-                "1": "Tijdens een therapiesessie begon Elvis mee te neuriën toen een bezoeker zong, waarmee hij zijn naam als echte artiest eer aandeed!"
-            }
-        },
-        "ricky": {
-            "name": "Ricky",
-            "attributes": {
-                "age": "2020",
-                "color": "Rood en wit",
-                "birthplace": "Duitsland"
-            },
-            "superpower": "Charmante Kwebbelkous & Plassendanser",
-            "character": "Ricky is erg verlegen, maar hij is de grootste kwebbelkous.",
-            "stories": {
-                "0": "Ricky kwam als bezoeker bij ons, maar hij werd zo goed bevriend met Elvis dat hij bleef.",
-                "1": "Op een regenachtige dag ontdekte Ricky dat hij dol is op spelen in plassen en nu doet hij een vreugdedansje wanneer het regent."
-            }
-        },
-        "teddy": {
-            "name": "Teddy",
-            "attributes": {
-                "age": "2018",
-                "color": "Karamel",
-                "birthplace": "Duitsland"
-            },
-            "superpower": "Kalme Leider & Kindvriendelijk",
-            "character": "Teddy is the leader of the herd. He is known for his calm demeanor and friendly nature.",
-            "stories": {
-                "0": "Teddy liet een 2-jarig meisje hem meenemen voor een wandeling.",
-                "1": "Tijdens een stormachtige nacht hield Teddy de wacht over de jongere alpaca's, waarmee hij zijn ware leiderschapskwaliteiten toonde."
-            }
-        },
-        "suri": {
-            "name": "Suri",
-            "attributes": {
-                "age": "2018",
-                "color": "Zwart",
-                "birthplace": "Duitsland"
-            },
-            "superpower": "Dappere Bewaker & Slimme Leerling",
-            "character": "Suri is erg dapper, wat er vaak toe leidt dat hij de kudde probeert te domineren.",
-            "stories": {
-                "0": "Suri is nergens bang voor en heeft ooit op Daisy gespuugd.",
-                "1": "Toen we nieuwe hooiruiven introduceerden, was Suri de eerste die doorhad hoe ze te gebruiken en liet het de anderen zien."
-            }
-        },
-        "freddy": {
-            "name": "Freddy",
-            "attributes": {
-                "age": "2019",
-                "color": "Beige",
-                "birthplace": "Chili"
-            },
-            "superpower": "Veranderlijke Geest & Meester in Bedelen",
-            "character": "Freddy heeft een veranderlijk karakter - soms kan hij naar gasten snuiven.",
-            "stories": {
-                "0": "Freddy is erg intelligent. He quickly learned to ask for food with his foot.",
-                "1": "In de winter ontdekte Freddy dat hij dol is op het vangen van sneeuwvlokken met zijn tong, waarmee iedereen moest lachen om zijn speelse capriolen."
-            }
-        }
-    },
-    "dogs": {
-        "pageTitle": "Ontmoet onze honden",
-        "backToAnimals": "Terug naar dieren",
-        "attributes": "Kenmerken",
-        "age": "Geboren in",
-        "color": "Kleur",
-        "breed": "Ras",
-        "role": "Rol",
-        "character": "Karakter",
-        "stories": "Verhalen",
-        "alwaysWithUs": "Altijd bij ons",
-        "lucy": {
-            "name": "Lucy",
-            "status": "active",
-            "attributes": {
-                "age": "2019",
-                "color": "Goud",
-                "breed": "Yorkshire Terriër",
-                "role": "Boerderijbewaker"
-            },
-            "character": "Lucy is an energetic and loving Yorkshire Terrier. Despite her small size, she has a big personality and loves to keep watch over the farm.",
-            "stories": {
-                "0": "Lucy may be tiny, but she takes her job as farm guardian very seriously.",
-                "1": "She's incredibly gentle with visitors and loves to show them around the farm."
-            }
-        },
-        "daisy": {
-            "name": "Daisy",
-            "status": "memorial",
-            "memoriam": "Altijd in ons hart, wakend over de alpaca's vanuit haar favoriete plekje in de tuin.",
-            "attributes": {
-                "age": "2020",
-                "color": "Zwart",
-                "breed": "Labrador Kruising",
-                "role": "Beschermengel"
-            },
-            "character": "Daisy was een lieve en vriendelijke hond die van aandacht hield. Ze is nu onze beschermengel in de tuin.",
-            "stories": {
-                "0": "Daisy had een speciale band met de babygeitjes en waakte vaak over hen.",
-                "1": "Ze wordt door iedereen op de boerderij erg gemist, vooral door haar alpacamaatjes."
-            }
-        },
-        "molly": {
-            "name": "Molly",
-            "status": "active",
-            "attributes": {
-                "age": "2025",
-                "color": "Chocoladebruin",
-                "breed": "Labrador Retriever",
-                "role": "Boerderijpuppy"
-            },
-            "character": "Molly is erg liefdevol en speels. Ze stuitert door de tuin op zoek naar kinderen om mee te spelen.",
-            "stories": {
-                "0": "Hoewel ze nieuw is, heeft Molly al de harten van alle boerderijbezoekers gestolen.",
-                "1": "Ze vindt het heerlijk om bellen na te jagen en verstoppertje te spelen in het hoge gras."
-            }
-        }
+      "name": "Alpaca's",
+      "description": "Onze zachte, pluizige therapeuten staan klaar om je te ontmoeten!",
+      "superpower": "Rust en Zachtheid Uitstralen",
+      "alt": "Alpaca's op onze boerderij"
     },
     "goats": {
-        "pageTitle": "Ontmoet onze geitenbende",
-        "backToAnimals": "Terug naar dieren",
-        "attributes": "Kenmerken",
-        "character": "Karakter",
-        "stories": "Verhalen",
-        "age": "Geboren in",
-        "color": "Kleur",
-        "birthplace": "Geboorteplaats",
-        "years": "jaar",
-        "madonna": {
-            "name": "Madonna",
-            "attributes": {
-                "age": "2017",
-                "color": "Wit",
-                "birthplace": "Tsjechië"
-            },
-            "character": "Madonna is the diva of the goat herd. She loves attention and often 'sings' to visitors.",
-            "stories": {
-                "0": "Madonna once stole a visitor's hat and wore it around the farm for an entire day.",
-                "1": "She has a habit of standing on the highest point of any structure, as if posing for a photo shoot."
-            }
-        },
-        "ladygaga": {
-            "name": "Lady Gaga",
-            "attributes": {
-                "age": "2016",
-                "color": "Zwart and white",
-                "birthplace": "Tsjechië"
-            },
-            "character": "Lady Gaga is known for her unique 'fashion sense', often found wearing flowers or leaves in her fur.",
-            "stories": {
-                "0": "Lady Gaga once organized a 'goat parade' where she led the entire herd in a line around the farm.",
-                "1": "She has a special talent for finding the tastiest leaves and will share them with her goat friends."
-            }
-        },
-        "nella": {
-            "name": "Nella",
-            "attributes": {
-                "age": "2020",
-                "color": "Bruin",
-                "birthplace": "Tsjechië"
-            },
-            "character": "Nella is the gentle soul of the group. She's particularly good with children and loves cuddles.",
-            "stories": {
-                "0": "Nella once comforted a crying child by nuzzling up to them and staying by their side until they smiled.",
-                "1": "She has a unique friendship with one of the farm cats and they can often be found napping together in the sun."
-            }
-        },
-        "baron": {
-            "name": "Baron",
-            "attributes": {
-                "age": "2020",
-                "color": "Zwart",
-                "birthplace": "Tsjechië"
-            },
-            "character": "Baron is the dignified leader of the goat herd. He's calm, wise, and protective of the others.",
-            "stories": {
-                "0": "Baron once alerted the farmers to a broken fence by repeatedly headbutting the barn door until someone came to check.",
-                "1": "He has a unique habit of 'escorting' visitors around the farm, walking beside them like a tour guide."
-            }
-        }
+      "name": "Geiten",
+      "description": "Speelse en vriendelijke geiten die van aandacht houden",
+      "superpower": "Speelse Energie & Klimmen",
+      "alt": "Geiten op onze boerderij"
     },
-    "footer": {
-        "description": "Ervaar het plezier van alpacatherapie",
-        "contactUs": "Neem contact op",
-        "followUs": "Volg ons",
-        "privacyPolicy": "Privacyverklaring",
-        "termsAndConditions": "Algemene Voorwaarden",
-        "allRightsReserved": "Alle rechten voorbehouden"
+    "dogs": {
+      "name": "Honden",
+      "description": "Onze trouwe boerderijhonden zijn hier om je te begroeten en gezelschap te houden.",
+      "superpower": "Onvoorwaardelijke Liefde",
+      "alt": "Honden op onze boerderij"
+    }
+  },
+  "home": {
+    "title": "Welkom bij Zagroda Alpakoterapii",
+    "subtitle": "Ervaar het plezier van alpacatherapie",
+    "heroImageAlt": "Uitzicht op Zagroda Alpakoterapii boerderij",
+    "planVisit": "Plan je bezoek",
+    "featuredAnimals": "Onze dierenvrienden",
+    "alpacasTitle": "Alpaca's",
+    "alpacasDescription": "Ontmoet onze vriendelijke alpaca's en ervaar hun kalmerende aanwezigheid.",
+    "alpacasAlt": "Alpaca's bij Zagroda Alpakoterapii",
+    "goatsTitle": "Geiten",
+    "goatsDescription": "Onze speelse geiten zijn altijd in voor plezier.",
+    "goatsAlt": "Geiten bij Zagroda Alpakoterapii",
+    "dogsTitle": "Honden",
+    "dogsDescription": "Onze trouwe boerderijhonden zijn hier om je te begroeten en gezelschap te houden.",
+    "dogsAlt": "Honden bij Zagroda Alpakoterapii",
+    "meetThem": "Ontmoet ze",
+    "stayTitle": "Verblijf bij ons",
+    "farmhouseRoomsTitle": "Gezellige boerderijkamers",
+    "farmhouseRoomsDescription": "Ervaar rustieke charme in onze gerenoveerde boerderij",
+    "farmhouseRoomsAlt": "Gezellige boerderijkamers bij Zagroda Alpakoterapii",
+    "bookStay": "Boek je verblijf",
+    "activitiesTitle": "Onze activiteiten",
+    "meetAlpacasTitle": "Ontmoet de alpaca's",
+    "meetAlpacasDescription": "Kom heel dichtbij onze alpacahud",
+    "meetAlpacasAlt": "Alpaca's ontmoeten bij Zagroda Alpakoterapii",
+    "alpacaWalksTitle": "Alpaca wandelingen",
+    "alpacaWalksDescription": "Maak een wandeling met een alpacamaatje",
+    "alpacaWalksAlt": "Alpaca wandelingen bij Zagroda Alpakoterapii",
+    "weekendHelperTitle": "Weekendhulp",
+    "weekendHelperDescription": "Ervaar het boerderijleven van dichtbij",
+    "weekendHelperAlt": "Weekendhulp activiteiten bij Zagroda Alpakoterapii",
+    "exploreActivities": "Ontdek activiteiten",
+    "logoAlt": "Zagroda Alpakoterapii Logo",
+    "contactUs": "Neem contact op",
+    "phoneNumber": "695 545 330",
+    "address": "24 Orłowice, Mirsk 59-630, Polen",
+    "followUs": "Volg ons",
+    "imageNotFound": "Afbeelding niet gevonden"
+  },
+  "stay": {
+    "meta": {
+      "title": "Herfstverblijf op de alpacaboerderij — Zagroda Alpakoterapii",
+      "description": "Slaap deze herfst op een alpacaboerderij in het Reuzengebergte. Geniet van herfstkleuren, paddenstoelen zoeken en ochtendwandelingen met alpacas inbegrepen. Vanaf 493 PLN / ~€115 per 2 nachten."
     },
-    "privacy": {
-        "title": "Privacyverklaring",
-        "intro": {
-            "p1": "Welkom bij Zagroda Alpakoterapii. Wij doen er alles aan om uw persoonlijke gegevens te beschermen en uw privacy te respecteren.",
-            "p2": "Deze privacyverklaring legt uit hoe wij uw persoonlijke gegevens verzamelen, verwerken en beschermen, hoe wij deze informatie gebruiken en welke rechten u heeft met betrekking tot uw persoonlijke gegevens.",
-            "p3": "Door onze website en diensten te gebruiken, stemt u in met het verzamelen en gebruiken van uw informatie zoals beschreven in deze privacyverklaring."
-        },
-        "whoWeAre": {
-            "title": "Wie zijn wij?",
-            "content": "Ons website adres is: www.zagrodaalpakoterapii.com. De beheerder van de gegevens is Future Solutions Jan Fura, adres: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678.",
-            "items": [
-                "Bedrijf: Future Solutions Jan Fura",
-                "Adres: 24 Orłowice, Mirsk 59-630, Polen",
-                "NIP: 6161566678"
-            ]
-        },
-        "messengerData": {
-            "title": "Facebook Messenger Bot Gegevens",
-            "content": "Wanneer u interactie heeft met onze Facebook Messenger bot, verzamelen en verwerken wij:",
-            "items": [
-                "Berichten die u naar onze bot stuurt",
-                "Uw openbare Facebook-profielinformatie",
-                "Informatie die nodig is voor boekingen en klantenservice"
-            ],
-            "purpose": "Wij gebruiken deze informatie om:",
-            "purposeItems": [
-                "Te reageren op uw vragen",
-                "Uw boekingen te verwerken",
-                "Onze diensten te verbeteren",
-                "Klantenservice te bieden"
-            ]
-        },
-        "dataCollection": {
-            "title": "Welke persoonlijke gegevens we verzamelen en waarom we die verzamelen",
-            "content": "Wij verzamelen persoonlijke gegevens voor de volgende doeleinden:",
-            "items": [
-                "Contactformulieren: informatie om contact met u op te nemen en betalingen voor kamers of activiteiten te verwerken",
-                "Marketingcommunicatie: gegevens van gebruikers die ervoor hebben gekozen om informatie te ontvangen",
-                "Ingesloten inhoud van andere websites: kan gegevens over u verzamelen en cookies gebruiken"
-            ],
-            "contactForms": {
-                "title": "Contactformulieren",
-                "content": "Voor klanten die kamers of activiteiten willen boeken, verzamelen we informatie om contact met u op te nemen en, indien van toepassing, voor de kamer te betalen. Voor gebruikers die ervoor hebben gekozen om communicatie van ons te ontvangen, gebruiken we de verstrekte informatie vaak binnen marketing- of algemene communicatiecampagnes."
-            },
-            "embeddedContent": {
-                "title": "Ingesloten inhoud van andere websites",
-                "p1": "Artikelen op deze site kunnen ingesloten inhoud bevatten (bijv. video's, afbeeldingen, artikelen, enz.). Ingesloten inhoud van andere websites gedraagt zich op exact dezelfde manier alsof de bezoeker de andere website heeft bezocht.",
-                "p2": "Deze websites kunnen gegevens over u verzamelen, cookies gebruiken, extra tracking van derden insluiten en uw interactie met die ingesloten inhoud monitoren, inclusief het bijhouden van uw interactie met de ingesloten inhoud als u een account heeft en bent ingelogd op die website."
-            }
-        },
-        "dataSharing": {
-            "title": "Met wie we uw gegevens delen",
-            "content": "Wij verkopen uw gegevens niet. Wij delen uw persoonlijke gegevens met vertrouwde externe dienstverleners om uw bestellingen te verwerken en onze relatie te beheren. Dit zijn onder andere:",
-            "items": [
-                "Zoho Corporation (CRM voor orderbeheer en communicatie)",
-                "Stripe Payments (Veilige betalingsverwerking)",
-                "WhatsApp/Meta (Voor communicatie als u deze kanalen gebruikt)"
-            ]
-        },
-        "dataRetention": {
-            "title": "Hoe lang we uw gegevens bewaren",
-            "content": "Voor gebruikers die een boeking of aanvraag invullen, bewaren we uw informatie alleen voor de doeleinden van die transactie.",
-            "items": [
-                "Boekingen en aanvragen: informatie wordt binnen 3 jaar gearchiveerd",
-                "Messenger-bot interacties: berichten en gerelateerde gegevens worden maximaal 3 jaar bewaard"
-            ]
-        },
-        "dataDeletion": {
-            "title": "Hoe u kunt verzoeken om gegevensverwijdering",
-            "content": "U kunt verzoeken om verwijdering van uw gegevens door:",
-            "items": [
-                "Een e-mail te sturen naar admin@zagrodaalpakoterapii.com",
-                "Gebruik te maken van ons contactformulier",
-                "Ons rechtstreeks een bericht te sturen via Facebook Messenger"
-            ]
-        },
-        "yourRights": {
-            "title": "Welke rechten u heeft over uw gegevens",
-            "content": "Onder de AVG heeft u de volgende rechten:",
-            "items": [
-                "Recht op inzage — u kunt een kopie van uw persoonlijke gegevens opvragen",
-                "Recht op rectificatie — u kunt ons vragen om onjuiste gegevens te corrigeren",
-                "Recht op wissing — u kunt verzoeken om verwijdering van uw persoonlijke gegevens",
-                "Gegevens die voor administratieve, juridische of beveiligingsdoeleinden worden bewaard, zijn uitgezonderd van verwijdering"
-            ]
-        },
-        "contact": {
-            "title": "Onze contactgegevens",
-            "content": "Voor privacygerelateerde zaken kunt u contact met ons opnemen:",
-            "items": [
-                "E-mail: admin@zagrodaalpakoterapii.com",
-                "Adres: 24 Orłowice, 59-630 Mirsk, Polen",
-                "Telefoon: +48 695 545 330"
-            ]
-        },
-        "metaCrawlers": {
-            "title": "Meta Web Crawlers",
-            "content": "Onze website wordt gecrawld door de webcrawlers van Meta voor verschillende doeleinden, waaronder:",
-            "items": [
-                "FacebookExternalHit - voor het verwerken van inhoud die wordt gedeeld op Meta-platforms (Facebook, Instagram, Messenger)",
-                "Meta-ExternalAgent - voor training van AI-modellen en productverbetering",
-                "Meta-ExternalFetcher - voor door gebruikers geïnitieerde inhoudsopvraging"
-            ],
-            "dataCollection": "Deze crawlers kunnen informatie verzamelen zoals:",
-            "dataItems": [
-                "Website-inhoud en -structuur",
-                "Open Graph-eigenschappen",
-                "Thumbnails en metadata",
-                "Gedeelde inhoud en links"
-            ],
-            "security": "Om veiligheids- en integriteitsredenen kunnen sommige Meta-crawlers de standaard toegangsbeperkingen omzeilen bij het uitvoeren van veiligheidscontroles of het verifiëren van inhoud.",
-            "technicalRequirements": {
-                "title": "Technische vereisten",
-                "content": "Om een goede functionaliteit met Meta-platforms te garanderen, doet onze website het volgende:",
-                "items": [
-                    "Gebruikt gzip- en deflate-compressie voor efficiënte gegevensoverdracht",
-                    "Plaatst alle Open Graph-eigenschappen binnen de eerste 1 MB van de inhoud",
-                    "Zorgt ervoor dat de inhoud snel toegankelijk is voor crawlervragen",
-                    "Behandelt range-based content requests op de juiste manier",
-                    "Onderhoudt een allowlist van Meta crawler user agents and IP-adressen"
-                ]
-            }
-        }
+    "hero": {
+      "badge": "Overnachting",
+      "headline": "Slaap bij de alpaca's. Wandel met ze bij het ochtendgloren.",
+      "subheadline": "Twee unieke kamers op een werkende alpacaboerderij diep in de Karkonosze-bergen. Word wakker met frisse lucht, stilte en je eigen persoonlijke alpaca-escorte.",
+      "cta": "Controleer beschikbaarheid",
+      "socialProof": "4.9/5 sterren · 400+ bezoekers"
     },
-    "social": {
-        "title": "Mis niets!",
-        "description": "Volg ons op sociale media voor speciale aanbiedingen voor verblijven en evenementen!",
-        "badge": "Exclusieve Content",
-        "cta": "Bekijk onze profielen"
+    "experience": {
+      "title": "Wat je te wachten staat",
+      "intimacy": {
+        "icon": "🌙",
+        "title": "Alleen jij en de boerderij",
+        "desc": "Klein en intiem — geen hotel. Je deelt de boerderij met de alpaca's, de geiten en de bergstilte."
+      },
+      "walk": {
+        "icon": "🦙",
+        "title": "Maak kennis met de alpaca's",
+        "desc": "Een inbegrepen georganiseerde ervaring: voer je alpaca, zit bij ze, maak foto's en geniet van knuffels. Een echte band met deze zachte dieren."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "Karkonosze-bergen",
+        "desc": "Bos, frisse berglucht en weidse vergezichten. Stap naar buiten en ontdek een van de mooiste landschappen van Polen."
+      }
     },
-    "video": {
-        "badge": "Bekijk het zelf",
-        "title": "Het leven op de boerderij 🦙",
-        "subtitle": "Een paar minuten in het Reuzengebergte met onze alpaca's.",
-        "caption": "Onze alpacaboerderij in het hart van het Sudetengebergte"
+    "rooms": {
+      "title": "Kies jouw kamer",
+      "subtitle": "Twee kamers. Beide uniek. Beide onvergetelijk.",
+      "garden": {
+        "name": "Tuinkamer",
+        "desc": "Word wakker vlakbij de alpaca's. Een uniek ontworpen kamer vol karakter — een bijzonder plek om te rusten na een dag op de boerderij.",
+        "capacity": "Tot 3 gasten",
+        "price": "vanaf 493 PLN / ~€115",
+        "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
+        "included": [
+          "Eigen badkamer",
+          "Maak kennis met de alpaca's",
+          "Uniek ontworpen kamer",
+          "Toegang tot tuin"
+        ]
+      },
+      "jungle": {
+        "name": "Junglekamer",
+        "desc": "Weelderige, groene kamer met een gezellig gevoel. Een privéretraite omringd door botanisch karakter.",
+        "capacity": "Tot 3 gasten",
+        "price": "vanaf 493 PLN / ~€115",
+        "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
+        "included": [
+          "Eigen badkamer",
+          "Maak kennis met de alpaca's",
+          "Uniek ontworpen kamer met karakter",
+          "Toegang tot tuin"
+        ]
+      },
+      "forest": {
+        "name": "Bosappartement",
+        "desc": "Een op zichzelf staand appartement met uitzicht op de alpacatuin. De enige ruimte met een eigen kookhoek — perfect voor langer verblijf en families die hun eigen ruimte willen.",
+        "capacity": "2 volwassenen + 2 kinderen",
+        "price": "vanaf 593 PLN / ~€138",
+        "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
+        "included": [
+          "Eigen kookhoek",
+          "Maak kennis met de alpaca's",
+          "Uitzicht op de alpacatuin",
+          "Eigen badkamer"
+        ]
+      },
+      "sharedAreas": "Gedeelde ruimtes",
+      "sharedDesc": "Keuken, gezellige lounge, tuin — allemaal voor jou."
     },
-    "stay": {
-        "meta": {
-            "title": "Overnachten bij de alpaca's — Zagroda Alpakoterapii",
-            "description": "Slaap op een alpacaboerderij in de Karkonosze-bergen. Twee unieke kamers, ochtendwandelingen met alpaca's inbegrepen. Vanaf 493 PLN / ~€115 per 2 nachten."
-        },
-        "hero": {
-            "badge": "Overnachting",
-            "headline": "Slaap bij de alpaca's. Wandel met ze bij het ochtendgloren.",
-            "subheadline": "Twee unieke kamers op een werkende alpacaboerderij diep in de Karkonosze-bergen. Word wakker met frisse lucht, stilte en je eigen persoonlijke alpaca-escorte.",
-            "cta": "Controleer beschikbaarheid",
-            "socialProof": "4.9/5 sterren · 400+ bezoekers"
-        },
-        "experience": {
-            "title": "Wat je te wachten staat",
-            "intimacy": {
-                "icon": "🌙",
-                "title": "Alleen jij en de boerderij",
-                "desc": "Klein en intiem — geen hotel. Je deelt de boerderij met de alpaca's, de geiten en de bergstilte."
-            },
-            "walk": {
-                "icon": "🦙",
-                "title": "Maak kennis met de alpaca's",
-                "desc": "Een inbegrepen georganiseerde ervaring: voer je alpaca, zit bij ze, maak foto's en geniet van knuffels. Een echte band met deze zachte dieren."
-            },
-            "nature": {
-                "icon": "🏔️",
-                "title": "Karkonosze-bergen",
-                "desc": "Bos, frisse berglucht en weidse vergezichten. Stap naar buiten en ontdek een van de mooiste landschappen van Polen."
-            }
-        },
-        "rooms": {
-            "title": "Kies jouw kamer",
-            "subtitle": "Twee kamers. Beide uniek. Beide onvergetelijk.",
-            "garden": {
-                "name": "Tuinkamer",
-                "desc": "Word wakker vlakbij de alpaca's. Een uniek ontworpen kamer vol karakter — een bijzonder plek om te rusten na een dag op de boerderij.",
-                "capacity": "Tot 3 gasten",
-                "price": "vanaf 493 PLN / ~€115",
-                "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
-                "included": [
-                    "Eigen badkamer",
-                    "Maak kennis met de alpaca's",
-                    "Uniek ontworpen kamer",
-                    "Toegang tot tuin"
-                ]
-            },
-            "jungle": {
-                "name": "Junglekamer",
-                "desc": "Weelderige, groene kamer met een gezellig gevoel. Een privéretraite omringd door botanisch karakter.",
-                "capacity": "Tot 3 gasten",
-                "price": "vanaf 493 PLN / ~€115",
-                "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
-                "included": [
-                    "Eigen badkamer",
-                    "Maak kennis met de alpaca's",
-                    "Uniek ontworpen kamer met karakter",
-                    "Toegang tot tuin"
-                ]
-            },
-            "forest": {
-                "name": "Bosappartement",
-                "desc": "Een op zichzelf staand appartement met uitzicht op de alpacatuin. De enige ruimte met een eigen kookhoek — perfect voor langer verblijf en families die hun eigen ruimte willen.",
-                "capacity": "2 volwassenen + 2 kinderen",
-                "price": "vanaf 593 PLN / ~€138",
-                "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
-                "included": [
-                    "Eigen kookhoek",
-                    "Maak kennis met de alpaca's",
-                    "Uitzicht op de alpacatuin",
-                    "Eigen badkamer"
-                ]
-            },
-            "sharedAreas": "Gedeelde ruimtes",
-            "sharedDesc": "Keuken, gezellige lounge, tuin — allemaal voor jou."
-        },
-        "packages": {
-            "title": "Kies jouw verblijf",
-            "weekend": {
-                "name": "Weekend bij de alpaca's",
-                "nights": "2 nachten",
-                "highlights": [
-                    "Maak kennis met de alpaca's (beide dagen)",
-                    "Volledige toegang tot boerderij",
-                    "Alpaca's voeren",
-                    "Uniek ontworpen kamer vol karakter"
-                ]
-            },
-            "extended": {
-                "name": "Extended Retreat",
-                "nights": "3+ nachten",
-                "badge": "Beste prijs",
-                "highlights": [
-                    "Alle weekendvoordelen",
-                    "Prijskorting vanaf nacht 3",
-                    "Meer flexibiliteit",
-                    "Neem contact op voor data"
-                ]
-            }
-        },
-        "booking": {
-            "title": "Controleer beschikbaarheid",
-            "subtitle": "Selecteer jouw data hieronder",
-            "cta": "Boek nu",
-            "note": "Vragen? Bel ons: +48 695 545 330",
-            "needHelp": "Hulp nodig bij uw boeking?"
-        },
-        "distance": {
-            "title": "Hier naartoe",
-            "subtitle": "Plan je reis",
-            "brussels": {
-                "flag": "🇧🇪",
-                "label": "Brussel",
-                "drive": "~9u rijden",
-                "fly": "Vlieg naar Wrocław (TUI direct) → 2u rijden"
-            },
-            "amsterdam": {
-                "flag": "🇳🇱",
-                "label": "Amsterdam",
-                "drive": "~10u rijden",
-                "fly": "Vlieg naar Wrocław → 2u rijden"
-            },
-            "warsaw": {
-                "flag": "🇵🇱",
-                "label": "Warschau",
-                "drive": "~4,5u rijden",
-                "fly": "Wrocław: 2u rijden"
-            },
-            "address": "24 Orłowice, Mirsk 59-630, Polen"
-        },
-        "reviews": {
-            "title": "Wat gasten zeggen",
-            "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
-            "a1": "Gast uit Nederland",
-            "q2": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
-            "a2": "Gast uit België",
-            "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
-            "a3": "Gast uit Duitsland"
-        },
-        "cta": {
-            "title": "Klaar om wakker te worden met de alpaca's?",
-            "subtitle": "Beperkt aantal kamers — boek jouw data voor ze weg zijn.",
-            "btn": "Controleer beschikbaarheid"
-        }
-    },
-    "discover": {
-        "meta": {
-            "title": "Wat te doen in de buurt van Świeradów-Zdrój & Szklarska Poręba — Zagroda Alpakoterapii",
-            "description": "Op zoek naar bezienswaardigheden in de buurt van Świeradów-Zdrój & Szklarska Poręba? Zagroda Alpakoterapii biedt alpacawandelingen, therapie en overnachtingen in Orłowice."
-        },
-        "hero": {
-            "badge": "🇵🇱 Jouw uitvalsbasis voor het IJzergebergte & Reuzengebergte",
-            "headline": "Wat te doen in de buurt van Świeradów-Zdrój & Szklarska Poręba",
-            "subheadline": "Zagroda Alpakoterapii in Orłowice is jouw uitvalsbasis voor familie-activiteiten, alpacawandelingen en een vakantie in de bergen — slechts 10 min van Świeradów-Zdrój en 25 min van Szklarska Poręba.",
-            "socialProof": "4.9/5 sterren · Best beoordeelde familie-ervaring"
-        },
-        "baseCamp": {
-            "title": "🦙 Zagroda Alpakoterapii — Jouw uitvalsbasis voor het IJzergebergte",
-            "subtitle": "Op zoek naar activiteiten met kinderen in de buurt van Świeradów-Zdrój? Onze alpacaboerderij in Orłowice (vlakbij Świeradów en 25 min van Szklarska Poręba) biedt unieke ervaringen.",
-            "f1": "Begeleide alpacawandelingen & therapiesessies",
-            "f2": "Sfeervolle kamers & bergcottages",
-            "f3": "Centrale ligging in het IJzer- en Reuzengebergte"
-        },
-        "itinerary": {
-            "title": "Een perfect weekendje weg in het Reuzengebergte & IJzergebergte",
-            "subtitle": "Het ultieme 3-daagse weekendplan met Zagroda Alpakoterapii als uitvalsbasis",
-            "friday": {
-                "title": "Vrijdagavond: Aankomst & Zonsondergangswandeling met alpaca's",
-                "desc": "Aankomst in Orłowice, inchecken in je bergcottage en een rustige avondwandeling in de weide met de alpaca's bij zonsondergang."
-            },
-            "saturday": {
-                "title": "Zaterdag: Alpacatherapie & Thermen van Świeradów-Zdrój",
-                "desc": "Ochtendsessie alpacatherapie en ontbijt op de boerderij, gevolgd door 10 minuten rijden naar de thermale baden van Świeradów-Zdrój."
-            },
-            "sunday": {
-                "title": "Zondag: Sky Walk uitkijktoren & Kasteel Czocha",
-                "desc": "Ochtendwandeling naar de Sky Walk toren (15 min rijden), gevolgd door een rondleiding in het middeleeuwse Kasteel Czocha (30 min rijden)."
-            }
-        },
-        "faqs": {
-            "title": "Veelgestelde vragen: Bezienswaardigheden in de omgeving",
-            "subtitle": "Alles wat je moet weten over een bezoek aan Zagroda en het verkennen van de regio",
-            "q1": "Wat te doen in de buurt van Świeradów-Zdrój?",
-            "a1": "Populaire activiteiten zijn een bezoek aan Zagroda Alpakoterapii voor alpacawandelingen (10 min rijden in Orłowice), ontspannen in de thermale baden van Świeradów, wandelen naar de Sky Walk toren, Kasteel Czocha en de zilvermijn van Krobica.",
-            "q2": "Welke familie-activiteiten zijn er in de buurt van Szklarska Poręba?",
-            "a2": "Families zijn dol op Zagroda Alpakoterapii (25 min van Szklarska Poręba) voor begeleide alpacawandelingen en boerderij-overnachtingen. Andere highlights zijn de Kamieńczyk-waterval en de wandelpaden in het Reuzengebergte National Park.",
-            "q3": "Wat is er te zien in het IJzergebergte?",
-            "a3": "Het IJzergebergte biedt prachtige wandel- en fietsroutes, langlaufpistes, de Sky Walk toren en unieke locaties zoals Zagroda Alpakoterapii — een alpacaboerderij met accommodatie in Orłowice nabij Świeradów-Zdrój / Mirsk."
-        },
-        "lastUpdated": "📅 Gids bijgewerkt: Augustus 2026",
-        "story": {
-            "title": "Wat maakt het zo bijzonder?",
-            "subtitle": "Drie dingen die bezoekers nooit vergeten",
-            "alpacas": {
-                "icon": "🦙",
-                "title": "De alpaca's ontmoeten",
-                "desc": "Zes alpaca's met elk hun eigen karakter. Voer ze, loop met ze, zit bij ze in het gras. Geen haast, geen schema — gewoon samen zijn.",
-                "image": "/images/activities/meet-alpacas.jpg"
-            },
-            "nature": {
-                "icon": "🏔️",
-                "title": "De bergen in",
-                "desc": "De boerderij ligt aan de voet van het Reuzengebergte. Bossen, frisse lucht, watervallen — en 's avonds niets dan sterren.",
-                "image": "/images/Alpacas/Suri.jpg"
-            },
-            "farm": {
-                "icon": "🏡",
-                "title": "Leven op de boerderij",
-                "desc": "Geen hotel. Geen toerisme. Een echte boerderij waar je meehelpt, de hond aait, en 's ochtends wakker wordt met alpaca's voor je raam.",
-                "image": "/images/Rooms/Garden-1.jpg"
-            }
-        },
-        "gallery": {
-            "title": "Een dag op de boerderij"
-        },
-        "reviews": {
-            "title": "Wat bezoekers zeggen",
-            "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
-            "a1": "Gast uit Nederland",
-            "q2": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
-            "a2": "Gast uit België",
-            "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
-            "a3": "Gast uit Duitsland"
-        },
-        "distance": {
-            "title": "Hoe kom je er?",
-            "subtitle": "Dichter dan je denkt",
-            "brussels": {
-                "flag": "🇧🇪",
-                "label": "Brussel",
-                "drive": "~9u rijden",
-                "fly": "Vlieg naar Wrocław (TUI direct) → 2u rijden"
-            },
-            "amsterdam": {
-                "flag": "🇳🇱",
-                "label": "Amsterdam",
-                "drive": "~10u rijden",
-                "fly": "Vlieg naar Wrocław → 2u rijden"
-            },
-            "warsaw": {
-                "flag": "🇵🇱",
-                "label": "Warschau",
-                "drive": "~4,5u rijden",
-                "fly": "Wrocław: 2u rijden"
-            },
-            "address": "24 Orłowice, Mirsk 59-630, Polen"
-        },
-        "cta": {
-            "title": "Benieuwd naar een verblijf?",
-            "subtitle": "Twee unieke kamers op de boerderij. Ochtendwandeling met alpaca's inbegrepen. Kijk wanneer er plek is.",
-            "btn": "Bekijk de kamers →"
-        },
-        "attractions": {
-            "title": "Ontdek de omgeving",
-            "subtitle": "Uw uitvalsbasis voor het beste van het Reuzengebergte",
-            "tab15": "⏱ Binnen 15 min",
-            "tab60": "🚗 Binnen 1 uur",
-            "near": [
-                {
-                    "icon": "🏔️",
-                    "name": "Nationaal Park Reuzengebergte",
-                    "desc": "Wandelroutes van wereldklasse beginnen op slechts enkele minuten van de boerderij. Spectaculaire bergkammen, alpenweides en ravijnen.",
-                    "distance": "5 min",
-                    "type": "Wandelen"
-                },
-                {
-                    "icon": "🌊",
-                    "name": "Kwisa-dal",
-                    "desc": "Een prachtig rivierdal — ideaal voor gezinswandelingen en picknicks langs de oever.",
-                    "distance": "5 min",
-                    "type": "Natuurwandeling"
-                },
-                {
-                    "icon": "🏖️",
-                    "name": "Singiel Trail",
-                    "desc": "Een legendarisch singletrack door het Sudetisch bos — perfect voor avontuurlijke gezinnen en mountainbikers.",
-                    "distance": "10 min",
-                    "type": "Trail"
-                },
-                {
-                    "icon": "💎",
-                    "name": "Zilvermijn Krobica",
-                    "desc": "Bezoek een historische ondergrondse zilvermijn. Een fascinerend uitje voor kinderen en volwassenen.",
-                    "distance": "10 min",
-                    "type": "Mijnbezoek"
-                },
-                {
-                    "icon": "🛁",
-                    "name": "Świeradów-Zdrój",
-                    "desc": "Een charmant kuuroord met thermale bronnen en mineraalwaters — ideaal na een actieve dag buiten.",
-                    "distance": "5 min",
-                    "type": "Kuuroord"
-                }
-            ],
-            "far": [
-                {
-                    "icon": "💧",
-                    "name": "Kamieńczyk Waterval",
-                    "desc": "De hoogste waterval van de Poolse Sudeten in een dramatische kloof bij Szklarska Poręba.",
-                    "distance": "25 min",
-                    "type": "Waterval"
-                },
-                {
-                    "icon": "🏰",
-                    "name": "Kasteel Czocha",
-                    "desc": "Een prachtig middeleeuws kasteel boven een meer. Verken torens, kerkers en de rijke geschiedenis van een van Polen's meest sfeervolle burchten.",
-                    "distance": "25 min",
-                    "type": "Kasteel"
-                },
-                {
-                    "icon": "🏙️",
-                    "name": "Jelenia Góra",
-                    "desc": "Een charmante barokke binnenstad met kleurrijke arcades, musea en geweldige restaurants.",
-                    "distance": "30 min",
-                    "type": "Historische stad"
-                },
-                {
-                    "icon": "🌍",
-                    "name": "Liberec (Tsjechische Republiek)",
-                    "desc": "Net over de grens — een levendige Tsjechische stad met een dierentuin, de Ještěd-toren en een prachtig stadhuis. Een geweldig dagje uit!",
-                    "distance": "45 min",
-                    "type": "Stad"
-                },
-                {
-                    "icon": "⛰️",
-                    "name": "Śnieżka (1.602 m)",
-                    "desc": "De hoogste bergtop van de Sudeten. Neem de kabelbaan vanuit Karpacz voor een adembenemend 360°-uitzicht over Polen en Tsjechië.",
-                    "distance": "40 min",
-                    "type": "Bergtop"
-                },
-                {
-                    "icon": "♨️",
-                    "name": "Thermische Baden Lądek-Zdrój",
-                    "desc": "Een van Polen's oudste kuuroorden. Ontspan in natuurlijke minerale thermische baden — zaligheid na bergwandelingen.",
-                    "distance": "55 min",
-                    "type": "Thermisch bad"
-                }
-            ]
-        }
+    "packages": {
+      "title": "Kies jouw verblijf",
+      "weekend": {
+        "name": "Weekend bij de alpaca's",
+        "nights": "2 nachten",
+        "highlights": [
+          "Maak kennis met de alpaca's (beide dagen)",
+          "Volledige toegang tot boerderij",
+          "Alpaca's voeren",
+          "Uniek ontworpen kamer vol karakter"
+        ]
+      },
+      "extended": {
+        "name": "Extended Retreat",
+        "nights": "3+ nachten",
+        "badge": "Beste prijs",
+        "highlights": [
+          "Alle weekendvoordelen",
+          "Prijskorting vanaf nacht 3",
+          "Meer flexibiliteit",
+          "Neem contact op voor data"
+        ]
+      }
     },
     "booking": {
-        "steps": {
-            "dates": "Data",
-            "room": "Kamer",
-            "guests": "Gasten",
-            "extras": "Extra's",
-            "summary": "Overzicht",
-            "payment": "Betaling",
-            "confirmed": "Bevestigd"
-        },
-        "dates": {
-            "title": "Wanneer kom je op bezoek?",
-            "subtitle": "Minimaal 2 nachten. Alle verblijven inclusief de Maak kennis met de alpaca's ervaring.",
-            "checkIn": "Check-in",
-            "checkOut": "Check-out",
-            "nights": "{count} nacht",
-            "nights_plural": "{count} nachten",
-            "minNights": "Minimaal {count} nachten",
-            "minNightsHint": "Selecteer een vertrekdatum minstens 2 dagen na aankomst."
-        },
-        "rooms": {
-            "title": "Kies je kamer",
-            "dateRange": "{checkIn} → {checkOut} · {nights} nacht(en)",
-            "checking": "Beschikbaarheid controleren…",
-            "noRooms": "Geen kamers beschikbaar voor deze data.",
-            "tryDifferent": "Probeer andere data",
-            "selected": "Geselecteerd",
-            "perNight": "{price} PLN/nacht",
-            "totalStay": "{nights} nachten · {price} PLN/nacht",
-            "depositToday": "Aanbetaling vandaag",
-            "cleaningFee": "+ {amount} PLN schoonmaakkosten",
-            "priceOnRequest": "Prijs op aanvraag"
-        },
-        "guests": {
-            "title": "Wie komen er?",
-            "subtitle": "Vertel ons over je groep.",
-            "adults": "Volwassenen",
-            "children": "Kinderen",
-            "childAge": "Leeftijd kind {number}",
-            "addChild": "Kind toevoegen",
-            "removeChild": "Verwijderen"
-        },
-        "details": {
-            "title": "Gastgegevens",
-            "subtitle": "We gebruiken dit om je boeking te bevestigen.",
-            "fullName": "Volledige naam",
-            "email": "E-mailadres",
-            "phone": "Telefoonnummer",
-            "specialRequests": "Speciale verzoeken (optioneel)",
-            "nipNumber": "BTW-nummer (optioneel voor factuur)"
-        },
-        "voucher": {
-            "title": "Heb je een bon?",
-            "subtitle": "Pas een cadeaubon toe om de prijs van je verblijf te verlagen.",
-            "placeholder": "Voer boncode in",
-            "apply": "Toepassen",
-            "applied": "Bon toegepast!",
-            "discount": "Korting: {amount} PLN",
-            "invalid": "Ongeldige of verlopen boncode",
-            "skip": "Overslaan — ik heb geen bon"
-        },
-        "summary": {
-            "title": "Controleer je boeking",
-            "room": "Kamer",
-            "dates": "Data",
-            "guests": "Gasten",
-            "totalStay": "Totaal verblijf",
-            "voucherDiscount": "Bonkorting",
-            "depositNow": "Aanbetaling nu (10%)",
-            "balanceDue": "Restbedrag 3 dagen voor aankomst",
-            "cancellation": "Annuleringsbeleid",
-            "cancellationText": "De aanbetaling is niet-restitueerbaar. Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven. Je kunt gratis wijzigen of annuleren tot 3 dagen voor aankomst.",
-            "proceedToPayment": "Doorgaan naar betaling →"
-        },
-        "payment": {
-            "title": "Betaling",
-            "subtitle": "Veilige kaartbetaling via Stripe.",
-            "preparing": "Betaling voorbereiden…",
-            "chargingDeposit": "Aanbetaling: {amount} PLN",
-            "cardSaved": "Je kaartgegevens worden veilig opgeslagen voor de resterende betaling 3 dagen voor aankomst.",
-            "payButton": "Betaal {amount} PLN aanbetaling",
-            "processing": "Verwerken…",
-            "error": "Betaling kon niet worden gestart. Probeer het opnieuw.",
-            "backToSummary": "← Terug naar overzicht"
-        },
-        "confirmation": {
-            "title": "Boeking bevestigd!",
-            "thankYou": "Bedankt, {name}!",
-            "ref": "Boekingsref",
-            "depositPaid": "Aanbetaling betaald",
-            "balanceDue": "Restbedrag T-3",
-            "emailSent": "Er is een bevestigingsmail onderweg naar",
-            "balanceNote": "Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven — geen actie nodig."
-        },
-        "nav": {
-            "back": "← Terug",
-            "next": "Volgende →"
-        }
+      "title": "Controleer beschikbaarheid",
+      "subtitle": "Selecteer jouw data hieronder",
+      "cta": "Boek nu",
+      "note": "Vragen? Bel ons: +48 695 545 330",
+      "needHelp": "Hulp nodig bij uw boeking?"
     },
-    "welkom": {
-        "meta": {
-            "title": "Ontdek de alpaca's — Zagroda Alpakoterapii",
-            "description": "Een alpacaboerderij in de Poolse bergen. Ontmoet Elvis, Micky en de hele kudde. Plan een bezoek of geef een unieke ervaring cadeau."
-        },
-        "hero": {
-            "badge": "🦙 Alpacaboerderij · Reuzengebergte",
-            "title": "Ontmoet Elvis en zijn kudde",
-            "subtitle": "Zes alpaca's, een boerderij in de bergen, en een ervaring die je nooit vergeet.",
-            "socialProof": "4.9/5 sterren · 400+ bezoekers",
-            "cta": "Ontdek de boerderij",
-            "imageAlt": "Elvis de alpaca kijkt je aan op de boerderij"
-        },
-        "story": {
-            "title": "Wat maakt het zo bijzonder?",
-            "subtitle": "Drie dingen die bezoekers nooit vergeten",
-            "alpacas": {
-                "icon": "🦙",
-                "title": "De alpaca's ontmoeten",
-                "desc": "Zes alpaca's met elk hun eigen karakter. Voer ze, loop met ze, zit bij ze in het gras. Geen haast — gewoon samen zijn."
-            },
-            "nature": {
-                "icon": "🏔️",
-                "title": "De bergen in",
-                "desc": "De boerderij ligt aan de voet van het Reuzengebergte. Bossen, frisse lucht, watervallen — en 's avonds niets dan sterren."
-            },
-            "rooms": {
-                "icon": "🏡",
-                "title": "Slapen op de boerderij",
-                "desc": "Geen hotel. Een echte boerderij waar je 's ochtends wakker wordt met alpaca's voor je raam."
-            }
-        },
-        "alpacas": {
-            "title": "Ontmoet de sterren",
-            "subtitle": "Elk met een eigen karakter. Wie is jouw favoriet?",
-            "elvis": "De perfecte luisteraar. Elvis blijft kalm als de emoties hoog oplopen.",
-            "micky": "Nieuwsgierige ontdekker. Micky maakt van elke wandeling een avontuur.",
-            "suri": "Zachte ziel. Suri's fluwelen vacht en rustige karakter zijn therapeutisch.",
-            "teddy": "De kalme leider. Teddy is ongelooflijk geduldig, vooral met kinderen.",
-            "ricky": "De charmante brommer. Verlegen, maar als hij eenmaal begint te neuriën...",
-            "freddy": "De slimme charmeur. Freddy weet precies hoe hij je hart steelt."
-        },
-        "reviews": {
-            "title": "Wat bezoekers zeggen",
-            "r1": {
-                "text": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
-                "author": "Gast uit Nederland"
-            },
-            "r2": {
-                "text": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen zeker terug.",
-                "author": "Gast uit België"
-            },
-            "r3": {
-                "text": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
-                "author": "Gast uit Duitsland"
-            }
-        },
-        "cta": {
-            "title": "Benieuwd geworden?",
-            "subtitle": "Ontdek de kamers op de boerderij of geef een alpaca-ervaring cadeau aan iemand die je lief hebt.",
-            "stayBtn": "Bekijk de kamers",
-            "giftBtn": "Geef een cadeaubon"
-        },
-        "packages": {
-            "title": "Kies jouw ervaring",
-            "subtitle": "Onvergetelijke momenten voor iedereen",
-            "cta": "Koop cadeaubon",
-            "lite": {
-                "name": "Alpaca Meet & Greet",
-                "p1": "30 minuten interactie met de kudde",
-                "p2": "De alpaca's voeren",
-                "p3": "Leuke fotomomenten"
-            },
-            "popular": {
-                "name": "Alpaca Wandeling",
-                "badge": "Populairst",
-                "p1": "60 minuten wandeling door de bergen",
-                "p2": "Warme chocolademelk inbegrepen",
-                "p3": "Digitale foto's van de wandeling",
-                "p4": "Eigen gids voor jouw groep"
-            },
-            "vip": {
-                "name": "VIP Alpaca Ervaring",
-                "p1": "90 minuten privétijd met de alpaca's",
-                "p2": "Alpaca-souvenirpakket",
-                "p3": "Lokale snacks en drankjes",
-                "p4": "Focus op rust en therapie",
-                "p5": "Exclusieve knuffeltijd"
-            }
-        }
+    "distance": {
+      "title": "Hier naartoe",
+      "subtitle": "Plan je reis",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brussel",
+        "drive": "~9u rijden",
+        "fly": "Vlieg naar Wrocław (TUI direct) → 2u rijden"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10u rijden",
+        "fly": "Vlieg naar Wrocław → 2u rijden"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warschau",
+        "drive": "~4,5u rijden",
+        "fly": "Wrocław: 2u rijden"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polen"
     },
-    "guestReviews": {
-        "sectionTitle": "Wat Onze Gasten Zeggen",
-        "ratingLabel": "Uitzonderlijk",
-        "visitorCount": "400+ tevreden gasten",
-        "r1": {
-            "text": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je hierop voor. Pure magie.",
-            "author": "Gast uit Nederland"
-        },
-        "r2": {
-            "text": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen zeker terug.",
-            "author": "Gast uit België"
-        },
-        "r3": {
-            "text": "Zo'n intiem, rustig plekje. Helemaal anders dan een hotel. Echt bijzonder.",
-            "author": "Gast uit Duitsland"
-        }
+    "reviews": {
+      "title": "Wat gasten zeggen",
+      "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
+      "a1": "Gast uit Nederland",
+      "q2": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
+      "a2": "Gast uit België",
+      "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
+      "a3": "Gast uit Duitsland"
     },
-    "farmLife": {
-        "badge": "Meer dan een hotel",
-        "headline": "Dit is geen hotel — het is een thuis in de bergen",
-        "subheadline": "Alles wat onze gasten jaar na jaar terug laat komen.",
-        "fireplace": {
-            "title": "Open haard",
-            "desc": "Warme avonden bij het vuur na een dag met de alpaca's."
-        },
-        "mountains": {
-            "title": "Reuzengebergte",
-            "desc": "Aan de voet van de bergen. Wandelpaden, watervallen en frisse lucht — vlak voor de deur."
-        },
-        "playground": {
-            "title": "Speeltuin",
-            "desc": "Trampoline, schommels en ruimte voor kinderen om vrij te spelen."
-        },
-        "kitchen": {
-            "title": "Gedeelde keuken",
-            "desc": "Volledig uitgeruste keuken — kook met producten van lokale boeren."
-        },
-        "billiards": {
-            "title": "Biljart & Tafeltennis",
-            "desc": "Entertainment voor het hele gezin — regenachtige avonden zijn nooit saai."
-        },
-        "garden": {
-            "title": "Tuin met uitzicht",
-            "desc": "Ochtendkoffie, bergzicht en alpaca's vlak naast je."
-        }
-    },
-    "workation": {
-        "meta": {
-            "title": "Alpaca Workation & Midweek Reset | Zagroda Alpakoterapii",
-            "description": "Ruil stadsdrukte in voor berglucht, 100+ Mbps glasvezel Wi-Fi en alpaca koffiepauzes. Midweek werk- en ontspanningsarrangementen."
-        },
-        "hero": {
-            "badge": "Midweek Remote Work & Digital Detox Arrangement",
-            "wifiBadge": "100 Mbps fiber – getest voor Zoom & videogesprekken ✅",
-            "title": "Werk Remote. Leef Remote.",
-            "subtitle": "Ruil je dagelijkse drukte in voor berglucht, snelle glasvezel Wi-Fi en koffiepauzes bij de alpaca's. In het IJzergebergte, 90 min van Praag.",
-            "ctaPrimary": "Bekijk Midweek Beschikbaarheid",
-            "ctaWhatsApp": "Chat via WhatsApp"
-        },
-        "contrast": {
-            "title": "Stadsappartement vs. Alpaca Workation",
-            "subtitle": "Upgrade je thuiswerkroutine met natuur, open ruimte en ontspanning met dieren.",
-            "cityTitle": "Typisch Stadsappartement",
-            "city1": "Stadssmog, betonnen muren en luchtvervuiling",
-            "city2": "15 minuten koffiepauze scrollend op je telefoon",
-            "city3": "Drukte en mensenmassa's na het werk",
-            "city4": "Klein appartement in drukke stedelijke omgeving",
-            "zagrodaTitle": "Zagroda Alpaca Workation",
-            "zagroda1": "Frisse berglucht, groene weiden en grazende alpaca's",
-            "zagroda2": "Koffiepauze met het voeren van Fernando & Elmo in de wei",
-            "zagroda3": "Zonsondergangwandelingen in de bergen na werktijd",
-            "zagroda4": "Sfeervol verblijf met comfortabele werkplek & snelle glasvezel Wi-Fi"
-        },
-        "essentials": {
-            "title": "Gemaakt voor Focus & Ontspanning",
-            "subtitle": "Alles wat je nodig hebt voor een productieve werkdag en een rustige avond.",
-            "wifiTitle": "100+ Mbps Glasvezel Wi-Fi",
-            "wifiDesc": "Razendsnel, betrouwbaar internet voor probleemloze Zoom-, Teams- en Slack-gesprekken.",
-            "deskTitle": "Eigen Werkplek",
-            "deskDesc": "Comfortabele houten bureaus met veel daglicht, stopcontacten en een frisse lucht.",
-            "coffeeTitle": "Koffie & Thee op de Kamer",
-            "coffeeDesc": "Koffie- en theefaciliteiten op elke kamer, plus keukengebruik voor zelfverzorgers.",
-            "quietTitle": "Digital Reset & Focus",
-            "quietDesc": "Ontsnap aan de stadsdrukte. Midweekverblijven bieden een herstellend tempo.",
-            "alpacaTitle": "Ontstressen met Alpaca's",
-            "alpacaDesc": "Natuurlijke stressvermindering. Stap op elk moment naar buiten om op te laden bij onze kudde.",
-            "hikesTitle": "Toegang tot Wandelroutes",
-            "hikesDesc": "Wandel-, fiets- en hardlooproutes direct vanaf het terrein na werktijd."
-        },
-        "timeline": {
-            "title": "Een Dag uit het Leven van een Workation-Gast",
-            "subtitle": "Hoe je werkdag voelt als je kantoor op een alpacaboerderij staat.",
-            "t1Title": "08:00 uur — Rustig Ontwaken & Koffie",
-            "t1Desc": "Start je dag met frisse berglucht, koffie en uitzicht op de alpaca's in de ochtendmist.",
-            "t2Title": "09:00 uur — Ochtend Focuswerk",
-            "t2Desc": "Werk je belangrijkste taken af via snelle glasvezel Wi-Fi zonder enige onderbreking.",
-            "t3Title": "13:00 uur — Lunchpauze in de Wei",
-            "t3Desc": "Eet buiten. Besteed 15 minuten aan het voeren van Fernando & Elmo om je hoofd leeg te maken.",
-            "t4Title": "17:05 uur — Laptop Dicht & Wandeling",
-            "t4Desc": "Sluit je laptop. Wandel mee met de alpaca's bij zonsondergang of ontspan bij het kampvuur."
-        },
-        "commute": {
-            "title": "Dicht bij de Stad. Ver weg van Stress.",
-            "subtitle": "Gemakkelijk bereikbaar met de auto vanuit omliggende steden over de grens."
-        },
-        "booking": {
-            "tag": "Midweek Speciale Tarieven",
-            "title": "Reserveer Je Midweek Reset",
-            "subtitle": "Kies je aankomstdatum (ma–do of zo–do) voor speciale workation-tarieven.",
-            "whatsappHint": "Liever eerst chatten? We reageren binnen enkele minuten.",
-            "whatsappHintLink": "stuur ons een WhatsApp-bericht →"
-        },
-        "faq": {
-            "title": "Veelgestelde Vragen",
-            "q1": "Is de Wi-Fi betrouwbaar genoeg voor videobellen?",
-            "a1": "Ja! We beschikken over een eigen glasvezelverbinding (100+ Mbps). Gesprekken via Zoom, Teams en Slack verlopen vlekkeloos.",
-            "q2": "Kan ik een midweekverblijf boeken vanaf zondag of maandag?",
-            "a2": "Absoluut. Onze Workation-arrangementen zijn speciaal ontworpen voor verblijven van zondag tot donderdag of maandag tot vrijdag.",
-            "q3": "Welke talen spreken de eigenaren?",
-            "a3": "We spreken vloeiend Nederlands, Engels en Pools!",
-            "q4": "Zijn er koffie- & keukenfaciliteiten?",
-            "a4": "Alle kamers hebben koffie- en theefaciliteiten. Keukengebruik is beschikbaar voor zelfverzorgers."
-        }
+    "cta": {
+      "title": "Klaar om wakker te worden met de alpaca's?",
+      "subtitle": "Beperkt aantal kamers — boek jouw data voor ze weg zijn.",
+      "btn": "Controleer beschikbaarheid"
     }
-}
+  },
+  "activities": {
+    "title": "Activiteiten",
+    "sectionTitle": "Onze activiteiten",
+    "viewDetails": "Bekijk details",
+    "callUs": "Bel ons",
+    "attributes": "Kenmerken van de activiteit",
+    "details": "Details van de activiteit",
+    "highlights": "Hoogtepunten",
+    "requirements": "Vereisten",
+    "duration": "Duur",
+    "groupSize": "Groepsgrootte",
+    "minAge": "Minimumleeftijd",
+    "availability": "Beschikbaarheid",
+    "meetthealpacas": {
+      "name": "Ontmoet de alpaca's",
+      "image": "/images/activities/meet-alpacas.jpg",
+      "description": "Kom heel dichtbij onze vriendelijke alpaca's! Perfect voor gezinnen die meer willen weten over deze fascinerende dieren.",
+      "details": "Ervaar een unieke kans om onze vriendelijke alpacahud te ontmoeten.",
+      "highlights": "Ontmoet onze vriendelijke alpaca's en leer over hun unieke persoonlijkheden. Je krijgt interactie met de kudde, leert over de verzorging van alpaca's en hebt volop fotomogelijkheden.",
+      "requirements": "Comfortabele wandelschoenen, kleding passend bij het weer. Camera optioneel. Vooraf reserveren verplicht.",
+      "attributes": {
+        "duration": "Ongeveer 1 uur",
+        "groupSize": "Maximaal 6 personen",
+        "minAge": "Alle leeftijden welkom",
+        "availability": "Dagelijks, op afspraak"
+      },
+      "alt": "Activiteit Ontmoet de alpaca's"
+    },
+    "alpacawalks": {
+      "name": "Wandelen met alpaca's",
+      "image": "/images/activities/alpaca-walks.jpg",
+      "description": "Maak een ontspannen wandeling over ons prachtige boerderijterrein, vergezeld door je eigen alpacamaatje!",
+      "details": "Ga met ons mee voor een rustige wandeling over schilderachtige paden met je eigen alpacagezelschap.",
+      "highlights": "Individuele wandeling met een alpaca, mooie routes, leer alpaca's te begeleiden, fotomogelijkheden.",
+      "requirements": "Comfortabele wandelschoenen, kleding passend bij het weer, minimumleeftijd: 6 jaar.",
+      "attributes": {
+        "duration": "Ongeveer 90 minuten",
+        "groupSize": "Maximaal 4 personen",
+        "minAge": "6 jaar en ouder",
+        "availability": "Dagelijks, afhankelijk van het weer"
+      },
+      "alt": "Activiteit Wandelen met alpaca's"
+    },
+    "privatealpacasafari": {
+      "name": "Speciale privé-aanbieding",
+      "image": "/images/zagrodanewlogo.png",
+      "description": "Geniet van een exclusieve tour over onze boerderij met een kudde alpaca's! Perfect voor grotere groepen of speciale gelegenheden.",
+      "details": "Geniet van een exclusieve ervaring met onze alpaca's in een privéomgeving. Opties zijn onder andere Verjaardagen, Romantische Picknicks, Verlovingen, Fotosessies etc. Bel ons als je een speciaal idee hebt waar we aan kunnen werken!",
+      "highlights": "Privégids, op maat gemaakte ervaring, extra tijd met de alpaca's, speciale fotomogelijkheden.",
+      "requirements": "Reservering minimaal 48 uur van tevoren vereist. Geschikt voor alle leeftijden.",
+      "attributes": {
+        "duration": "2-3 uur",
+        "groupSize": "Privégroep tot 8 personen",
+        "minAge": "Alle leeftijden welkom",
+        "availability": "Op speciale afspraak"
+      },
+      "alt": "Activiteit Privé Alpaca Safari"
+    },
+    "bookNow": "Boek nu"
+  },
+  "blog": {
+    "title": "Ons Blog",
+    "noPosts": "Momenteel zijn er geen blogartikelen beschikbaar. Kom snel terug!",
+    "readMore": "Lees meer",
+    "recentPosts": "Recente artikelen",
+    "viewAll": "Bekijk alle artikelen"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "name": "Naam",
+    "email": "E-mail",
+    "message": "Bericht",
+    "send": "Bericht versturen",
+    "addressTitle": "Ons adres",
+    "phoneTitle": "Telefoon",
+    "emailTitle": "E-mail",
+    "formSuccess": "Bedankt voor je bericht. We nemen snel contact met je op!",
+    "formError": "Er is een fout opgetreden bij het versturen van je bericht. Probeer het opnieuw.",
+    "callOrMessage": "Bel of bericht ons",
+    "call": "Bellen",
+    "visitUs": "Bezoek ons",
+    "followUs": "Volg ons"
+  },
+  "hero": {
+    "title": "Welkom bij Zagroda Alpakoterapii",
+    "subtitle": "Ervaar de magie van alpacatherapie in onze rustige boerderijomgeving",
+    "planVisit": "Plan je bezoek",
+    "exploreActivities": "Ontdek activiteiten",
+    "contactUs": "Neem contact op"
+  },
+  "accommodation": {
+    "sectionTitle": "Verblijf bij ons",
+    "bookNow": "Boek nu",
+    "cozyfarmhouserooms": {
+      "name": "Gezellige boerderijkamers",
+      "description": "Slaap heerlijk in onze comfortabele boerderij!",
+      "alt": "Gezellige boerderij accommodatie"
+    }
+  },
+  "adoption": {
+    "title": "Adopteer een alpaca",
+    "legal": {
+      "terms_title": "Conditions",
+      "privacy_title": "Privacy",
+      "accept_terms": "Ik accepteer de Algemene Voorwaarden en de Privacyverklaring",
+      "marketing_opt_in": "Ik wil graag updates over de alpaca's en speciale aanbiedingen ontvangen",
+      "required_error": "Accepteer de voorwaarden om door te gaan",
+      "footer_link": "Voorwaarden"
+    },
+    "sectionTitle": "Jaarlijks Virtueel Adoptieprogramma",
+    "campaignTitle": "Winter vol Liefde Special",
+    "campaignSubtitle": "Vind je perfecte match tussen onze zachte sterren. Geen drama, alleen onvoorwaardelijke liefde.",
+    "starProfiles": {
+      "Elvis": {
+        "hook": "De Ultieme Luisteraar",
+        "description": "Elvis oordeelt niet over jouw drama. Terwijl de emoties in 'Winter vol Liefde' hoog oplopen, blijft hij de rust zelve. Hij is de ideale partner voor een winterwandeling om je hoofd leeg te maken."
+      },
+      "Micky": {
+        "hook": "De Nieuwsgierige Avonturier",
+        "description": "Micky is de 'hoofdrolspeler' van onze kudde. Hij is nieuwsgierig en steekt zijn neus overal in. De perfecte match voor wie houdt van een beetje actie en humor."
+      },
+      "Suri": {
+        "hook": "De Elegante Diva",
+        "description": "Suri is de belichaming van elegantie en 'slow travel'. Geen haast, alleen pure verbinding. Ideaal voor wie kiest voor schoonheid en een diepe band met de natuur."
+      },
+      "Teddy": {
+        "hook": "De Kalme Leider",
+        "description": "Teddy is de rots in de branding van onze kudde. Hij is ontzettend geduldig, vooral met kinderen. De ideale match voor gezinnen die rust en stabiliteit zoeken."
+      },
+      "Ricky": {
+        "hook": "De Charmante Kwebbelkous",
+        "description": "Ricky is misschien een beetje verlegen, maar als hij eenmaal begint te neuriën, houdt hij niet meer op. Hij is de perfecte metgezel voor wie van gezelligheid en verhalen houdt."
+      },
+      "Freddy": {
+        "hook": "De Slimme Charmeur",
+        "description": "Freddy weet precies hoe hij met zijn voetje om wat lekkers moet bedelen. Hij steelt ieders hart en brengt vrolijkheid in elke ontmoeting."
+      },
+      "General": {
+        "hook": "Onze Vriendelijke Alpaca",
+        "description": "Al onze alpaca's hebben hun eigen unieke karakter. Kies je favoriet en word onderdeel van onze boerderijfamilie."
+      }
+    },
+    "bronze": {
+      "name": "Bronzen Beschermer",
+      "price": "149 PLN",
+      "features": [
+        "Adoptiecertificaat",
+        "Persoonlijke foto van je alpaca",
+        "Ontmoet je alpaca (voor één gezin)"
+      ]
+    },
+    "silver": {
+      "name": "Zilveren Vriend",
+      "price": "349 PLN",
+      "features": [
+        "Alle Bronze voordelen",
+        "10% korting op verblijf in het Guesthouse",
+        "Een boswandeling met je alpaca en zijn beste vriend"
+      ]
+    },
+    "gold": {
+      "name": "Gouden Beschermer",
+      "price": "999 PLN",
+      "features": [
+        "Alle Silver voordelen",
+        "Weekendverblijf in het appartement",
+        "Help mee met de verzorging (wakker maken en naar bed brengen)",
+        "Een met de hand afgewerkte mini-versie van je alpaca"
+      ]
+    },
+    "chooseAlpaca": "Kies je alpaca",
+    "chooseAlpacaSubtitle": "Selecteer je favoriete protegé",
+    "benefitsTitle": "Alles wat je krijgt",
+    "benefitsSubtitle": "Ontdek de magie die is inbegrepen in onze adoptiepakketten",
+    "bestValue": "Keuze",
+    "annualFeeNote": "Eenmalige jaarlijkse vergoeding",
+    "selectionRequired": "Selecteer je alpacamaatje om af te ronden",
+    "selectButton": "Selecteer pakket",
+    "confirmAdoption": "Bevestig adoptie",
+    "selected": "Geselecteerd",
+    "success": {
+      "title": "Gefeliciteerd!",
+      "message": "Je bent succesvol lid geworden van ons adoptieprogramma!",
+      "details": "Je bent nu een beschermer van {alpaca} met het {tier} pakket.",
+      "description": "Bedankt voor het steunen van onze kudde. Je ontvangt binnenkort een bevestigingsmail en je virtuele adoptiekit.",
+      "backHome": "Terug naar Home"
+    },
+    "benefits": {
+      "certificate": {
+        "title": "Adoptie Certificaat",
+        "description": "Een officieel certificaat als bewijs van je adoptie en steun aan onze alpacafamilie."
+      },
+      "meet": {
+        "title": "Ontmoet je Alpaca",
+        "description": "Een persoonlijke ontmoeting met je gekozen alpaca op de boerderij (toegang voor 1 persoon)."
+      },
+      "fur_lock": {
+        "title": "Foto met Wol-lokje",
+        "description": "Een prachtige ingelijste foto van je alpaca samen met een echt plukje van zijn zachte wol."
+      },
+      "discount": {
+        "title": "Guesthouse Korting",
+        "description": "Geniet van 10% korting op al je verblijven in het Zagroda Alpako Terapii Guesthouse."
+      },
+      "forest_walk": {
+        "title": "Boswandeling",
+        "description": "Maak een onvergetelijke wandeling naar het bos met je alpaca en zijn beste vriend."
+      },
+      "weekend": {
+        "title": "Weekendverblijf",
+        "description": "Een compleet weekendverblijf in ons sfeervolle appartement direct bij de alpaca's."
+      },
+      "care": {
+        "title": "Help met Verzorging",
+        "description": "Ervaar het leven op de boerderij door je alpaca mee te helpen wekken en naar bed te brengen."
+      },
+      "mini_me": {
+        "title": "Mini-Alpaca Versie",
+        "description": "Een met de hand afgewerkte mini-versie (knuffel) die precies lijkt op jouw geadopteerde alpaca."
+      }
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden",
+      "summary": "Snelle Samenvatting",
+      "items": [
+        "Adoptie is voor een periode van 12 maanden vanaf de datum van betaling.",
+        "Kortingen op verblijven zijn afhankelijk van beschikbaarheid en moeten vooraf worden gereserveerd.",
+        "Het weekendverblijf in het appartement is onder voorbehoud van beschikbaarheid.",
+        "Activiteiten zoals wandelingen moeten apart worden ingepland; adoptie garandeert de deelname van je alpaca.",
+        "De mini-alpaca en certificaten worden binnen 14 dagen na adoptie verwerkt."
+      ],
+      "viewFull": "Bekijk volledige Algemene Voorwaarden"
+    }
+  },
+  "terms_full": {
+    "title": "Terms & Conditions of Business",
+    "last_updated": "Last updated: February 2026",
+    "intro": "These Terms & Conditions govern the use of our website and the purchase of any services, adoptions, or vouchers from Zagroda Alpakoterapii.",
+    "identity": {
+      "title": "1. Business Identity",
+      "content": "The website and services are operated by Future Solutions Jan Fura. Address: 24 Orłowice, Mirsk 59-630, Poland. NIP: 6161566678, REGON: 383008039."
+    },
+    "vouchers": {
+      "title": "2. Gift Vouchers",
+      "content": "Gift Vouchers are non-refundable and cannot be exchanged for cash. Vouchers are valid for 12 months from the date of purchase. If a service booked with a voucher is cancelled by the client with less than 48 hours' notice, the voucher shall be considered redeemed."
+    },
+    "adoptions": {
+      "title": "3. Virtual Adoptions",
+      "content": "Virtual Adoption is a symbolic supporting contribution. It does not grant ownership rights over the animal. Adoption benefits (visits, walks, stays) are subject to availability and must be booked in advance within the 12-month period."
+    },
+    "availability": {
+      "title": "4. Availability & Animal Welfare",
+      "content": "As our services involve live animals and outdoor activities, we reserve the right to reschedule any booking at short notice due to adverse weather or animal welfare concerns. In such cases, a new date will be provided. No refunds are issued for rescheduling due to these factors."
+    },
+    "governing_law": {
+      "title": "5. Governing Law",
+      "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
+    }
+  },
+  "vouchers": {
+    "title": "Cadeaubonnen",
+    "legal": {
+      "terms_title": "Conditions",
+      "privacy_title": "Privacy",
+      "accept_terms": "Ik accepteer de Algemene Voorwaarden en de Privacyverklaring",
+      "marketing_opt_in": "Ik wil graag updates over de alpaca's en speciale aanbiedingen ontvangen",
+      "required_error": "Accepteer de voorwaarden om door te gaan",
+      "footer_link": "Voorwaarden"
+    },
+    "subtitle": "Geef het cadeau van alpaca-magie",
+    "description": "Elke bon kan worden gebruikt voor activiteiten, verblijven of alpaca-adoptie.",
+    "selectAmount": "Selecteer Bedrag",
+    "currency": "Valuta",
+    "recipientDetails": "Gegevens Ontvanger",
+    "recipientEmail": "E-mail Ontvanger",
+    "recipientName": "Naam Ontvanger (optioneel)",
+    "personalMessage": "Persoonlijk Bericht (optioneel)",
+    "buyerEmail": "Jouw e-mail",
+    "buyNow": "Koop Bon",
+    "howItWorks": "Hoe Het Werkt",
+    "step1": "Kies je bedrag",
+    "step2": "Voeg gegevens ontvanger toe",
+    "step3": "Ontvanger krijgt een e-mail met een unieke code",
+    "step4": "Code kan worden gebruikt voor elke boerderij-ervaring",
+    "validFor": "Geldig voor 12 maanden",
+    "redeemCode": "Verzilver Code",
+    "enterCode": "Voer boncode in",
+    "applyVoucher": "Toepassen",
+    "voucherApplied": "Bon toegepast",
+    "voucherBalance": "Bonsaldo",
+    "invalidCode": "Ongeldige boncode",
+    "expired": "Bon is verlopen",
+    "fullyRedeemed": "Bon is volledig verzilverd"
+  },
+  "campaign": {
+    "badge": "Winter Experience Speciaal",
+    "hero": {
+      "title": "Vind Jouw Winteravontuur",
+      "subtitle": "Geen drama. Alleen onvoorwaardelijke vriendschap. De perfecte winterse ontsnapping. ✨",
+      "socialProof": "4.9/5 sterren · 400+ bezoekers",
+      "primaryCta": "Ontdek Meer",
+      "secondaryCta": "Adopteer Een Alpaca"
+    },
+    "video": {
+      "caption": "Pure vreugde en alpacazoentjes!"
+    },
+    "stars": {
+      "title": "Ontmoet Onze Sterren",
+      "subtitle": "Elk met hun eigen persoonlijkheid. Welke past perfect bij jou?",
+      "idealForLabel": "Ideaal voor",
+      "chooseCta": "Kies",
+      "elvis": {
+        "personality": "De perfecte luisteraar. Elvis oordeelt niet over je drama. Hij blijft kalm terwijl emoties koken.",
+        "idealFor": "Gestresste professionals die rust zoeken"
+      },
+      "micky": {
+        "personality": "Nieuwsgierige avonturier. Micky wil alles ontdekken en maakt elke wandeling tot een expeditie.",
+        "idealFor": "Avontuurlijke geesten en natuurliefhebbers"
+      },
+      "suri": {
+        "personality": "Zachte ziel. Suri's fluweelzachte vacht en kalme karakter zijn therapeutisch. Pure sereniteit.",
+        "idealFor": "Romantische koppels en gezinnen"
+      },
+      "teddy": {
+        "personality": "De kalme leider. Teddy is de rots in de branding van onze kudde. Hij is ontzettend geduldig, vooral met kinderen.",
+        "idealFor": "Gezinnen met jonge kinderen en rustzoekers"
+      },
+      "ricky": {
+        "personality": "De charmante kwebbelkous. Ricky is misschien een beetje verlegen, maar als hij eenmaal begint te neuriën, houdt hij niet meer op.",
+        "idealFor": "Mensen die houden van gezelligheid en verhalen"
+      },
+      "freddy": {
+        "personality": "De slimme charmeur. Freddy weet precies hoe hij met zijn voetje om wat lekkers moet bedelen. Hij steelt ieders hart.",
+        "idealFor": "Bezoekers die wel wat extra vrolijkheid kunnen gebruiken"
+      }
+    },
+    "comparison": {
+      "title": "Waarom Kiezen Voor Alpaca's?",
+      "tv": {
+        "title": "Winter vol Liefde (TV)",
+        "point1": "Nep drama & tranen",
+        "point2": "Camera's overal",
+        "point3": "Relatie onzekerheid",
+        "point4": "Dure dates"
+      },
+      "us": {
+        "title": "Zagroda Alpakoterapii",
+        "point1": "Authentieke knuffels",
+        "point2": "Pure privacy",
+        "point3": "Onvoorwaardelijke alpaca liefde",
+        "point4": "Unieke ervaringen"
+      },
+      "cta": "Skip Het Drama"
+    },
+    "packages": {
+      "title": "Kies Jouw Avontuur",
+      "subtitle": "Onvergetelijke momenten voor iedereen",
+      "cta": "Koop Cadeaubon",
+      "lite": {
+        "name": "Alpaca Meet & Greet",
+        "point1": "30 minuten interactie",
+        "point2": "Voeren van de alpaca's",
+        "point3": "Leuke fotomomenten"
+      },
+      "popular": {
+        "name": "Winter Wandeling",
+        "badge": "Populairst",
+        "point1": "60 minuten wandeling",
+        "point2": "Warme chocolademelk",
+        "point3": "Digitale fotopakket",
+        "point4": "Gepersonaliseerde gids"
+      },
+      "vip": {
+        "name": "VIP Alpaca Experience",
+        "point1": "90 minuten privé sessie",
+        "point2": "Alpaca souvenir pakket",
+        "point3": "Lokale snacks & drankjes",
+        "point4": "Focus op therapie & rust",
+        "point5": "Exclusieve knuffeltijd"
+      }
+    },
+    "finalCta": {
+      "title": "Klaar voor Een Uniek Avontuur?",
+      "subtitle": "Boek je winterse ervaring vandaag nog",
+      "primaryBtn": "Koop Cadeaubon",
+      "secondaryBtn": "Meer Informatie",
+      "urgency": "⏰ Winter Special: beperkt beschikbaar"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "animals": "Dieren",
+    "activities": "Activiteiten",
+    "blog": "Blog",
+    "contact": "Contact",
+    "accommodation": "Accommodatie"
+  },
+  "alpacas": {
+    "pageTitle": "Ontmoet onze alpacagroep",
+    "backToAnimals": "Terug naar dieren",
+    "attributes": "Kenmerken",
+    "character": "Karakter",
+    "stories": "Verhalen",
+    "age": "Geboren in",
+    "color": "Kleur",
+    "birthplace": "Geboorteplaats",
+    "years": "jaar",
+    "micky": {
+      "name": "Micky",
+      "attributes": {
+        "age": "2018",
+        "color": "Bruin",
+        "birthplace": "Duitsland"
+      },
+      "superpower": "Zachte Ziel & Camouflage",
+      "character": "Micky is erg schuw en bang voor lawaai en geschreeuw.",
+      "stories": {
+        "0": "Toen Micky voor het eerst een muis in de schuur zag, schrok hij en rende snel weg.",
+        "1": "Ondanks zijn schuwheid toonde Micky ongelooflijke moed toen hij hielp een nerveus kind te kalmeren tijdens een therapie door hem voorzichtig te benaderen en dichtbij te blijven."
+      }
+    },
+    "elvis": {
+      "name": "Elvis",
+      "attributes": {
+        "age": "2020",
+        "color": "Grijs en wit",
+        "birthplace": "Duitsland"
+      },
+      "superpower": "Rockstar Energie & Hoge Sprongen",
+      "character": "Elvis is eigenwijs en rebels. Hij is nieuwsgierig en gedraagt zich vaak als een ster.",
+      "stories": {
+        "0": "Elvis kan heel hoog springen, dus op een keer sprong hij over het hek en rende het bos in. Gelukkig kwam hij na korte tijd weer terug.",
+        "1": "Tijdens een therapiesessie begon Elvis mee te neuriën toen een bezoeker zong, waarmee hij zijn naam als echte artiest eer aandeed!"
+      }
+    },
+    "ricky": {
+      "name": "Ricky",
+      "attributes": {
+        "age": "2020",
+        "color": "Rood en wit",
+        "birthplace": "Duitsland"
+      },
+      "superpower": "Charmante Kwebbelkous & Plassendanser",
+      "character": "Ricky is erg verlegen, maar hij is de grootste kwebbelkous.",
+      "stories": {
+        "0": "Ricky kwam als bezoeker bij ons, maar hij werd zo goed bevriend met Elvis dat hij bleef.",
+        "1": "Op een regenachtige dag ontdekte Ricky dat hij dol is op spelen in plassen en nu doet hij een vreugdedansje wanneer het regent."
+      }
+    },
+    "teddy": {
+      "name": "Teddy",
+      "attributes": {
+        "age": "2018",
+        "color": "Karamel",
+        "birthplace": "Duitsland"
+      },
+      "superpower": "Kalme Leider & Kindvriendelijk",
+      "character": "Teddy is the leader of the herd. He is known for his calm demeanor and friendly nature.",
+      "stories": {
+        "0": "Teddy liet een 2-jarig meisje hem meenemen voor een wandeling.",
+        "1": "Tijdens een stormachtige nacht hield Teddy de wacht over de jongere alpaca's, waarmee hij zijn ware leiderschapskwaliteiten toonde."
+      }
+    },
+    "suri": {
+      "name": "Suri",
+      "attributes": {
+        "age": "2018",
+        "color": "Zwart",
+        "birthplace": "Duitsland"
+      },
+      "superpower": "Dappere Bewaker & Slimme Leerling",
+      "character": "Suri is erg dapper, wat er vaak toe leidt dat hij de kudde probeert te domineren.",
+      "stories": {
+        "0": "Suri is nergens bang voor en heeft ooit op Daisy gespuugd.",
+        "1": "Toen we nieuwe hooiruiven introduceerden, was Suri de eerste die doorhad hoe ze te gebruiken en liet het de anderen zien."
+      }
+    },
+    "freddy": {
+      "name": "Freddy",
+      "attributes": {
+        "age": "2019",
+        "color": "Beige",
+        "birthplace": "Chili"
+      },
+      "superpower": "Veranderlijke Geest & Meester in Bedelen",
+      "character": "Freddy heeft een veranderlijk karakter - soms kan hij naar gasten snuiven.",
+      "stories": {
+        "0": "Freddy is erg intelligent. He quickly learned to ask for food with his foot.",
+        "1": "In de winter ontdekte Freddy dat hij dol is op het vangen van sneeuwvlokken met zijn tong, waarmee iedereen moest lachen om zijn speelse capriolen."
+      }
+    }
+  },
+  "dogs": {
+    "pageTitle": "Ontmoet onze honden",
+    "backToAnimals": "Terug naar dieren",
+    "attributes": "Kenmerken",
+    "age": "Geboren in",
+    "color": "Kleur",
+    "breed": "Ras",
+    "role": "Rol",
+    "character": "Karakter",
+    "stories": "Verhalen",
+    "alwaysWithUs": "Altijd bij ons",
+    "lucy": {
+      "name": "Lucy",
+      "status": "active",
+      "attributes": {
+        "age": "2019",
+        "color": "Goud",
+        "breed": "Yorkshire Terriër",
+        "role": "Boerderijbewaker"
+      },
+      "character": "Lucy is an energetic and loving Yorkshire Terrier. Despite her small size, she has a big personality and loves to keep watch over the farm.",
+      "stories": {
+        "0": "Lucy may be tiny, but she takes her job as farm guardian very seriously.",
+        "1": "She's incredibly gentle with visitors and loves to show them around the farm."
+      }
+    },
+    "daisy": {
+      "name": "Daisy",
+      "status": "memorial",
+      "memoriam": "Altijd in ons hart, wakend over de alpaca's vanuit haar favoriete plekje in de tuin.",
+      "attributes": {
+        "age": "2020",
+        "color": "Zwart",
+        "breed": "Labrador Kruising",
+        "role": "Beschermengel"
+      },
+      "character": "Daisy was een lieve en vriendelijke hond die van aandacht hield. Ze is nu onze beschermengel in de tuin.",
+      "stories": {
+        "0": "Daisy had een speciale band met de babygeitjes en waakte vaak over hen.",
+        "1": "Ze wordt door iedereen op de boerderij erg gemist, vooral door haar alpacamaatjes."
+      }
+    },
+    "molly": {
+      "name": "Molly",
+      "status": "active",
+      "attributes": {
+        "age": "2025",
+        "color": "Chocoladebruin",
+        "breed": "Labrador Retriever",
+        "role": "Boerderijpuppy"
+      },
+      "character": "Molly is erg liefdevol en speels. Ze stuitert door de tuin op zoek naar kinderen om mee te spelen.",
+      "stories": {
+        "0": "Hoewel ze nieuw is, heeft Molly al de harten van alle boerderijbezoekers gestolen.",
+        "1": "Ze vindt het heerlijk om bellen na te jagen en verstoppertje te spelen in het hoge gras."
+      }
+    }
+  },
+  "goats": {
+    "pageTitle": "Ontmoet onze geitenbende",
+    "backToAnimals": "Terug naar dieren",
+    "attributes": "Kenmerken",
+    "character": "Karakter",
+    "stories": "Verhalen",
+    "age": "Geboren in",
+    "color": "Kleur",
+    "birthplace": "Geboorteplaats",
+    "years": "jaar",
+    "madonna": {
+      "name": "Madonna",
+      "attributes": {
+        "age": "2017",
+        "color": "Wit",
+        "birthplace": "Tsjechië"
+      },
+      "character": "Madonna is the diva of the goat herd. She loves attention and often 'sings' to visitors.",
+      "stories": {
+        "0": "Madonna once stole a visitor's hat and wore it around the farm for an entire day.",
+        "1": "She has a habit of standing on the highest point of any structure, as if posing for a photo shoot."
+      }
+    },
+    "ladygaga": {
+      "name": "Lady Gaga",
+      "attributes": {
+        "age": "2016",
+        "color": "Zwart and white",
+        "birthplace": "Tsjechië"
+      },
+      "character": "Lady Gaga is known for her unique 'fashion sense', often found wearing flowers or leaves in her fur.",
+      "stories": {
+        "0": "Lady Gaga once organized a 'goat parade' where she led the entire herd in a line around the farm.",
+        "1": "She has a special talent for finding the tastiest leaves and will share them with her goat friends."
+      }
+    },
+    "nella": {
+      "name": "Nella",
+      "attributes": {
+        "age": "2020",
+        "color": "Bruin",
+        "birthplace": "Tsjechië"
+      },
+      "character": "Nella is the gentle soul of the group. She's particularly good with children and loves cuddles.",
+      "stories": {
+        "0": "Nella once comforted a crying child by nuzzling up to them and staying by their side until they smiled.",
+        "1": "She has a unique friendship with one of the farm cats and they can often be found napping together in the sun."
+      }
+    },
+    "baron": {
+      "name": "Baron",
+      "attributes": {
+        "age": "2020",
+        "color": "Zwart",
+        "birthplace": "Tsjechië"
+      },
+      "character": "Baron is the dignified leader of the goat herd. He's calm, wise, and protective of the others.",
+      "stories": {
+        "0": "Baron once alerted the farmers to a broken fence by repeatedly headbutting the barn door until someone came to check.",
+        "1": "He has a unique habit of 'escorting' visitors around the farm, walking beside them like a tour guide."
+      }
+    }
+  },
+  "footer": {
+    "description": "Ervaar het plezier van alpacatherapie",
+    "contactUs": "Neem contact op",
+    "followUs": "Volg ons",
+    "privacyPolicy": "Privacyverklaring",
+    "termsAndConditions": "Algemene Voorwaarden",
+    "allRightsReserved": "Alle rechten voorbehouden"
+  },
+  "privacy": {
+    "title": "Privacyverklaring",
+    "intro": {
+      "p1": "Welkom bij Zagroda Alpakoterapii. Wij doen er alles aan om uw persoonlijke gegevens te beschermen en uw privacy te respecteren.",
+      "p2": "Deze privacyverklaring legt uit hoe wij uw persoonlijke gegevens verzamelen, verwerken en beschermen, hoe wij deze informatie gebruiken en welke rechten u heeft met betrekking tot uw persoonlijke gegevens.",
+      "p3": "Door onze website en diensten te gebruiken, stemt u in met het verzamelen en gebruiken van uw informatie zoals beschreven in deze privacyverklaring."
+    },
+    "whoWeAre": {
+      "title": "Wie zijn wij?",
+      "content": "Ons website adres is: www.zagrodaalpakoterapii.com. De beheerder van de gegevens is Future Solutions Jan Fura, adres: 24 Orłowice, Mirsk 59-630, Polen. NIP: 6161566678.",
+      "items": [
+        "Bedrijf: Future Solutions Jan Fura",
+        "Adres: 24 Orłowice, Mirsk 59-630, Polen",
+        "NIP: 6161566678"
+      ]
+    },
+    "messengerData": {
+      "title": "Facebook Messenger Bot Gegevens",
+      "content": "Wanneer u interactie heeft met onze Facebook Messenger bot, verzamelen en verwerken wij:",
+      "items": [
+        "Berichten die u naar onze bot stuurt",
+        "Uw openbare Facebook-profielinformatie",
+        "Informatie die nodig is voor boekingen en klantenservice"
+      ],
+      "purpose": "Wij gebruiken deze informatie om:",
+      "purposeItems": [
+        "Te reageren op uw vragen",
+        "Uw boekingen te verwerken",
+        "Onze diensten te verbeteren",
+        "Klantenservice te bieden"
+      ]
+    },
+    "dataCollection": {
+      "title": "Welke persoonlijke gegevens we verzamelen en waarom we die verzamelen",
+      "content": "Wij verzamelen persoonlijke gegevens voor de volgende doeleinden:",
+      "items": [
+        "Contactformulieren: informatie om contact met u op te nemen en betalingen voor kamers of activiteiten te verwerken",
+        "Marketingcommunicatie: gegevens van gebruikers die ervoor hebben gekozen om informatie te ontvangen",
+        "Ingesloten inhoud van andere websites: kan gegevens over u verzamelen en cookies gebruiken"
+      ],
+      "contactForms": {
+        "title": "Contactformulieren",
+        "content": "Voor klanten die kamers of activiteiten willen boeken, verzamelen we informatie om contact met u op te nemen en, indien van toepassing, voor de kamer te betalen. Voor gebruikers die ervoor hebben gekozen om communicatie van ons te ontvangen, gebruiken we de verstrekte informatie vaak binnen marketing- of algemene communicatiecampagnes."
+      },
+      "embeddedContent": {
+        "title": "Ingesloten inhoud van andere websites",
+        "p1": "Artikelen op deze site kunnen ingesloten inhoud bevatten (bijv. video's, afbeeldingen, artikelen, enz.). Ingesloten inhoud van andere websites gedraagt zich op exact dezelfde manier alsof de bezoeker de andere website heeft bezocht.",
+        "p2": "Deze websites kunnen gegevens over u verzamelen, cookies gebruiken, extra tracking van derden insluiten en uw interactie met die ingesloten inhoud monitoren, inclusief het bijhouden van uw interactie met de ingesloten inhoud als u een account heeft en bent ingelogd op die website."
+      }
+    },
+    "dataSharing": {
+      "title": "Met wie we uw gegevens delen",
+      "content": "Wij verkopen uw gegevens niet. Wij delen uw persoonlijke gegevens met vertrouwde externe dienstverleners om uw bestellingen te verwerken en onze relatie te beheren. Dit zijn onder andere:",
+      "items": [
+        "Zoho Corporation (CRM voor orderbeheer en communicatie)",
+        "Stripe Payments (Veilige betalingsverwerking)",
+        "WhatsApp/Meta (Voor communicatie als u deze kanalen gebruikt)"
+      ]
+    },
+    "dataRetention": {
+      "title": "Hoe lang we uw gegevens bewaren",
+      "content": "Voor gebruikers die een boeking of aanvraag invullen, bewaren we uw informatie alleen voor de doeleinden van die transactie.",
+      "items": [
+        "Boekingen en aanvragen: informatie wordt binnen 3 jaar gearchiveerd",
+        "Messenger-bot interacties: berichten en gerelateerde gegevens worden maximaal 3 jaar bewaard"
+      ]
+    },
+    "dataDeletion": {
+      "title": "Hoe u kunt verzoeken om gegevensverwijdering",
+      "content": "U kunt verzoeken om verwijdering van uw gegevens door:",
+      "items": [
+        "Een e-mail te sturen naar admin@zagrodaalpakoterapii.com",
+        "Gebruik te maken van ons contactformulier",
+        "Ons rechtstreeks een bericht te sturen via Facebook Messenger"
+      ]
+    },
+    "yourRights": {
+      "title": "Welke rechten u heeft over uw gegevens",
+      "content": "Onder de AVG heeft u de volgende rechten:",
+      "items": [
+        "Recht op inzage — u kunt een kopie van uw persoonlijke gegevens opvragen",
+        "Recht op rectificatie — u kunt ons vragen om onjuiste gegevens te corrigeren",
+        "Recht op wissing — u kunt verzoeken om verwijdering van uw persoonlijke gegevens",
+        "Gegevens die voor administratieve, juridische of beveiligingsdoeleinden worden bewaard, zijn uitgezonderd van verwijdering"
+      ]
+    },
+    "contact": {
+      "title": "Onze contactgegevens",
+      "content": "Voor privacygerelateerde zaken kunt u contact met ons opnemen:",
+      "items": [
+        "E-mail: admin@zagrodaalpakoterapii.com",
+        "Adres: 24 Orłowice, 59-630 Mirsk, Polen",
+        "Telefoon: +48 695 545 330"
+      ]
+    },
+    "metaCrawlers": {
+      "title": "Meta Web Crawlers",
+      "content": "Onze website wordt gecrawld door de webcrawlers van Meta voor verschillende doeleinden, waaronder:",
+      "items": [
+        "FacebookExternalHit - voor het verwerken van inhoud die wordt gedeeld op Meta-platforms (Facebook, Instagram, Messenger)",
+        "Meta-ExternalAgent - voor training van AI-modellen en productverbetering",
+        "Meta-ExternalFetcher - voor door gebruikers geïnitieerde inhoudsopvraging"
+      ],
+      "dataCollection": "Deze crawlers kunnen informatie verzamelen zoals:",
+      "dataItems": [
+        "Website-inhoud en -structuur",
+        "Open Graph-eigenschappen",
+        "Thumbnails en metadata",
+        "Gedeelde inhoud en links"
+      ],
+      "security": "Om veiligheids- en integriteitsredenen kunnen sommige Meta-crawlers de standaard toegangsbeperkingen omzeilen bij het uitvoeren van veiligheidscontroles of het verifiëren van inhoud.",
+      "technicalRequirements": {
+        "title": "Technische vereisten",
+        "content": "Om een goede functionaliteit met Meta-platforms te garanderen, doet onze website het volgende:",
+        "items": [
+          "Gebruikt gzip- en deflate-compressie voor efficiënte gegevensoverdracht",
+          "Plaatst alle Open Graph-eigenschappen binnen de eerste 1 MB van de inhoud",
+          "Zorgt ervoor dat de inhoud snel toegankelijk is voor crawlervragen",
+          "Behandelt range-based content requests op de juiste manier",
+          "Onderhoudt een allowlist van Meta crawler user agents and IP-adressen"
+        ]
+      }
+    }
+  },
+  "social": {
+    "title": "Mis niets!",
+    "description": "Volg ons op sociale media voor speciale aanbiedingen voor verblijven en evenementen!",
+    "badge": "Exclusieve Content",
+    "cta": "Bekijk onze profielen"
+  },
+  "video": {
+    "badge": "Bekijk het zelf",
+    "title": "Het leven op de boerderij 🦙",
+    "subtitle": "Een paar minuten in het Reuzengebergte met onze alpaca's.",
+    "caption": "Onze alpacaboerderij in het hart van het Sudetengebergte"
+  },
+  "discover": {
+    "meta": {
+      "title": "Wat te doen in de buurt van Świeradów-Zdrój & Szklarska Poręba — Zagroda Alpakoterapii",
+      "description": "Op zoek naar bezienswaardigheden in de buurt van Świeradów-Zdrój & Szklarska Poręba? Zagroda Alpakoterapii biedt alpacawandelingen, therapie en overnachtingen in Orłowice."
+    },
+    "hero": {
+      "badge": "🇵🇱 Jouw uitvalsbasis voor het IJzergebergte & Reuzengebergte",
+      "headline": "Wat te doen in de buurt van Świeradów-Zdrój & Szklarska Poręba",
+      "subheadline": "Zagroda Alpakoterapii in Orłowice is jouw uitvalsbasis voor familie-activiteiten, alpacawandelingen en een vakantie in de bergen — slechts 10 min van Świeradów-Zdrój en 25 min van Szklarska Poręba.",
+      "socialProof": "4.9/5 sterren · Best beoordeelde familie-ervaring"
+    },
+    "baseCamp": {
+      "title": "🦙 Zagroda Alpakoterapii — Jouw uitvalsbasis voor het IJzergebergte",
+      "subtitle": "Op zoek naar activiteiten met kinderen in de buurt van Świeradów-Zdrój? Onze alpacaboerderij in Orłowice (vlakbij Świeradów en 25 min van Szklarska Poręba) biedt unieke ervaringen.",
+      "f1": "Begeleide alpacawandelingen & therapiesessies",
+      "f2": "Sfeervolle kamers & bergcottages",
+      "f3": "Centrale ligging in het IJzer- en Reuzengebergte"
+    },
+    "itinerary": {
+      "title": "Een perfect weekendje weg in het Reuzengebergte & IJzergebergte",
+      "subtitle": "Het ultieme 3-daagse weekendplan met Zagroda Alpakoterapii als uitvalsbasis",
+      "friday": {
+        "title": "Vrijdagavond: Aankomst & Zonsondergangswandeling met alpaca's",
+        "desc": "Aankomst in Orłowice, inchecken in je bergcottage en een rustige avondwandeling in de weide met de alpaca's bij zonsondergang."
+      },
+      "saturday": {
+        "title": "Zaterdag: Alpacatherapie & Thermen van Świeradów-Zdrój",
+        "desc": "Ochtendsessie alpacatherapie en ontbijt op de boerderij, gevolgd door 10 minuten rijden naar de thermale baden van Świeradów-Zdrój."
+      },
+      "sunday": {
+        "title": "Zondag: Sky Walk uitkijktoren & Kasteel Czocha",
+        "desc": "Ochtendwandeling naar de Sky Walk toren (15 min rijden), gevolgd door een rondleiding in het middeleeuwse Kasteel Czocha (30 min rijden)."
+      }
+    },
+    "faqs": {
+      "title": "Veelgestelde vragen: Bezienswaardigheden in de omgeving",
+      "subtitle": "Alles wat je moet weten over een bezoek aan Zagroda en het verkennen van de regio",
+      "q1": "Wat te doen in de buurt van Świeradów-Zdrój?",
+      "a1": "Populaire activiteiten zijn een bezoek aan Zagroda Alpakoterapii voor alpacawandelingen (10 min rijden in Orłowice), ontspannen in de thermale baden van Świeradów, wandelen naar de Sky Walk toren, Kasteel Czocha en de zilvermijn van Krobica.",
+      "q2": "Welke familie-activiteiten zijn er in de buurt van Szklarska Poręba?",
+      "a2": "Families zijn dol op Zagroda Alpakoterapii (25 min van Szklarska Poręba) voor begeleide alpacawandelingen en boerderij-overnachtingen. Andere highlights zijn de Kamieńczyk-waterval en de wandelpaden in het Reuzengebergte National Park.",
+      "q3": "Wat is er te zien in het IJzergebergte?",
+      "a3": "Het IJzergebergte biedt prachtige wandel- en fietsroutes, langlaufpistes, de Sky Walk toren en unieke locaties zoals Zagroda Alpakoterapii — een alpacaboerderij met accommodatie in Orłowice nabij Świeradów-Zdrój / Mirsk."
+    },
+    "lastUpdated": "📅 Gids bijgewerkt: Augustus 2026",
+    "story": {
+      "title": "Wat maakt het zo bijzonder?",
+      "subtitle": "Drie dingen die bezoekers nooit vergeten",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "De alpaca's ontmoeten",
+        "desc": "Zes alpaca's met elk hun eigen karakter. Voer ze, loop met ze, zit bij ze in het gras. Geen haast, geen schema — gewoon samen zijn.",
+        "image": "/images/activities/meet-alpacas.jpg"
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "De bergen in",
+        "desc": "De boerderij ligt aan de voet van het Reuzengebergte. Bossen, frisse lucht, watervallen — en 's avonds niets dan sterren.",
+        "image": "/images/Alpacas/Suri.jpg"
+      },
+      "farm": {
+        "icon": "🏡",
+        "title": "Leven op de boerderij",
+        "desc": "Geen hotel. Geen toerisme. Een echte boerderij waar je meehelpt, de hond aait, en 's ochtends wakker wordt met alpaca's voor je raam.",
+        "image": "/images/Rooms/Garden-1.jpg"
+      }
+    },
+    "gallery": {
+      "title": "Een dag op de boerderij"
+    },
+    "reviews": {
+      "title": "Wat bezoekers zeggen",
+      "q1": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
+      "a1": "Gast uit Nederland",
+      "q2": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen terug.",
+      "a2": "Gast uit België",
+      "q3": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
+      "a3": "Gast uit Duitsland"
+    },
+    "distance": {
+      "title": "Hoe kom je er?",
+      "subtitle": "Dichter dan je denkt",
+      "brussels": {
+        "flag": "🇧🇪",
+        "label": "Brussel",
+        "drive": "~9u rijden",
+        "fly": "Vlieg naar Wrocław (TUI direct) → 2u rijden"
+      },
+      "amsterdam": {
+        "flag": "🇳🇱",
+        "label": "Amsterdam",
+        "drive": "~10u rijden",
+        "fly": "Vlieg naar Wrocław → 2u rijden"
+      },
+      "warsaw": {
+        "flag": "🇵🇱",
+        "label": "Warschau",
+        "drive": "~4,5u rijden",
+        "fly": "Wrocław: 2u rijden"
+      },
+      "address": "24 Orłowice, Mirsk 59-630, Polen"
+    },
+    "cta": {
+      "title": "Benieuwd naar een verblijf?",
+      "subtitle": "Twee unieke kamers op de boerderij. Ochtendwandeling met alpaca's inbegrepen. Kijk wanneer er plek is.",
+      "btn": "Bekijk de kamers →"
+    },
+    "attractions": {
+      "title": "Ontdek de omgeving",
+      "subtitle": "Uw uitvalsbasis voor het beste van het Reuzengebergte",
+      "tab15": "⏱ Binnen 15 min",
+      "tab60": "🚗 Binnen 1 uur",
+      "near": [
+        {
+          "icon": "🏔️",
+          "name": "Nationaal Park Reuzengebergte",
+          "desc": "Wandelroutes van wereldklasse beginnen op slechts enkele minuten van de boerderij. Spectaculaire bergkammen, alpenweides en ravijnen.",
+          "distance": "5 min",
+          "type": "Wandelen"
+        },
+        {
+          "icon": "🌊",
+          "name": "Kwisa-dal",
+          "desc": "Een prachtig rivierdal — ideaal voor gezinswandelingen en picknicks langs de oever.",
+          "distance": "5 min",
+          "type": "Natuurwandeling"
+        },
+        {
+          "icon": "🏖️",
+          "name": "Singiel Trail",
+          "desc": "Een legendarisch singletrack door het Sudetisch bos — perfect voor avontuurlijke gezinnen en mountainbikers.",
+          "distance": "10 min",
+          "type": "Trail"
+        },
+        {
+          "icon": "💎",
+          "name": "Zilvermijn Krobica",
+          "desc": "Bezoek een historische ondergrondse zilvermijn. Een fascinerend uitje voor kinderen en volwassenen.",
+          "distance": "10 min",
+          "type": "Mijnbezoek"
+        },
+        {
+          "icon": "🛁",
+          "name": "Świeradów-Zdrój",
+          "desc": "Een charmant kuuroord met thermale bronnen en mineraalwaters — ideaal na een actieve dag buiten.",
+          "distance": "5 min",
+          "type": "Kuuroord"
+        }
+      ],
+      "far": [
+        {
+          "icon": "💧",
+          "name": "Kamieńczyk Waterval",
+          "desc": "De hoogste waterval van de Poolse Sudeten in een dramatische kloof bij Szklarska Poręba.",
+          "distance": "25 min",
+          "type": "Waterval"
+        },
+        {
+          "icon": "🏰",
+          "name": "Kasteel Czocha",
+          "desc": "Een prachtig middeleeuws kasteel boven een meer. Verken torens, kerkers en de rijke geschiedenis van een van Polen's meest sfeervolle burchten.",
+          "distance": "25 min",
+          "type": "Kasteel"
+        },
+        {
+          "icon": "🏙️",
+          "name": "Jelenia Góra",
+          "desc": "Een charmante barokke binnenstad met kleurrijke arcades, musea en geweldige restaurants.",
+          "distance": "30 min",
+          "type": "Historische stad"
+        },
+        {
+          "icon": "🌍",
+          "name": "Liberec (Tsjechische Republiek)",
+          "desc": "Net over de grens — een levendige Tsjechische stad met een dierentuin, de Ještěd-toren en een prachtig stadhuis. Een geweldig dagje uit!",
+          "distance": "45 min",
+          "type": "Stad"
+        },
+        {
+          "icon": "⛰️",
+          "name": "Śnieżka (1.602 m)",
+          "desc": "De hoogste bergtop van de Sudeten. Neem de kabelbaan vanuit Karpacz voor een adembenemend 360°-uitzicht over Polen en Tsjechië.",
+          "distance": "40 min",
+          "type": "Bergtop"
+        },
+        {
+          "icon": "♨️",
+          "name": "Thermische Baden Lądek-Zdrój",
+          "desc": "Een van Polen's oudste kuuroorden. Ontspan in natuurlijke minerale thermische baden — zaligheid na bergwandelingen.",
+          "distance": "55 min",
+          "type": "Thermisch bad"
+        }
+      ]
+    }
+  },
+  "booking": {
+    "steps": {
+      "dates": "Data",
+      "room": "Kamer",
+      "guests": "Gasten",
+      "extras": "Extra's",
+      "summary": "Overzicht",
+      "payment": "Betaling",
+      "confirmed": "Bevestigd"
+    },
+    "dates": {
+      "title": "Wanneer kom je op bezoek?",
+      "subtitle": "Minimaal 2 nachten. Alle verblijven inclusief de Maak kennis met de alpaca's ervaring.",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights": "{count} nacht",
+      "nights_plural": "{count} nachten",
+      "minNights": "Minimaal {count} nachten",
+      "minNightsHint": "Selecteer een vertrekdatum minstens 2 dagen na aankomst."
+    },
+    "rooms": {
+      "title": "Kies je kamer",
+      "dateRange": "{checkIn} → {checkOut} · {nights} nacht(en)",
+      "checking": "Beschikbaarheid controleren…",
+      "noRooms": "Geen kamers beschikbaar voor deze data.",
+      "tryDifferent": "Probeer andere data",
+      "selected": "Geselecteerd",
+      "perNight": "{price} PLN/nacht",
+      "totalStay": "{nights} nachten · {price} PLN/nacht",
+      "depositToday": "Aanbetaling vandaag",
+      "cleaningFee": "+ {amount} PLN schoonmaakkosten",
+      "priceOnRequest": "Prijs op aanvraag"
+    },
+    "guests": {
+      "title": "Wie komen er?",
+      "subtitle": "Vertel ons over je groep.",
+      "adults": "Volwassenen",
+      "children": "Kinderen",
+      "childAge": "Leeftijd kind {number}",
+      "addChild": "Kind toevoegen",
+      "removeChild": "Verwijderen"
+    },
+    "details": {
+      "title": "Gastgegevens",
+      "subtitle": "We gebruiken dit om je boeking te bevestigen.",
+      "fullName": "Volledige naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "specialRequests": "Speciale verzoeken (optioneel)",
+      "nipNumber": "BTW-nummer (optioneel voor factuur)"
+    },
+    "voucher": {
+      "title": "Heb je een bon?",
+      "subtitle": "Pas een cadeaubon toe om de prijs van je verblijf te verlagen.",
+      "placeholder": "Voer boncode in",
+      "apply": "Toepassen",
+      "applied": "Bon toegepast!",
+      "discount": "Korting: {amount} PLN",
+      "invalid": "Ongeldige of verlopen boncode",
+      "skip": "Overslaan — ik heb geen bon"
+    },
+    "summary": {
+      "title": "Controleer je boeking",
+      "room": "Kamer",
+      "dates": "Data",
+      "guests": "Gasten",
+      "totalStay": "Totaal verblijf",
+      "voucherDiscount": "Bonkorting",
+      "depositNow": "Aanbetaling nu (10%)",
+      "balanceDue": "Restbedrag 3 dagen voor aankomst",
+      "cancellation": "Annuleringsbeleid",
+      "cancellationText": "De aanbetaling is niet-restitueerbaar. Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven. Je kunt gratis wijzigen of annuleren tot 3 dagen voor aankomst.",
+      "proceedToPayment": "Doorgaan naar betaling →"
+    },
+    "payment": {
+      "title": "Betaling",
+      "subtitle": "Veilige kaartbetaling via Stripe.",
+      "preparing": "Betaling voorbereiden…",
+      "chargingDeposit": "Aanbetaling: {amount} PLN",
+      "cardSaved": "Je kaartgegevens worden veilig opgeslagen voor de resterende betaling 3 dagen voor aankomst.",
+      "payButton": "Betaal {amount} PLN aanbetaling",
+      "processing": "Verwerken…",
+      "error": "Betaling kon niet worden gestart. Probeer het opnieuw.",
+      "backToSummary": "← Terug naar overzicht"
+    },
+    "confirmation": {
+      "title": "Boeking bevestigd!",
+      "thankYou": "Bedankt, {name}!",
+      "ref": "Boekingsref",
+      "depositPaid": "Aanbetaling betaald",
+      "balanceDue": "Restbedrag T-3",
+      "emailSent": "Er is een bevestigingsmail onderweg naar",
+      "balanceNote": "Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven — geen actie nodig."
+    },
+    "nav": {
+      "back": "← Terug",
+      "next": "Volgende →"
+    }
+  },
+  "welkom": {
+    "meta": {
+      "title": "Ontdek de alpaca's — Zagroda Alpakoterapii",
+      "description": "Een alpacaboerderij in de Poolse bergen. Ontmoet Elvis, Micky en de hele kudde. Plan een bezoek of geef een unieke ervaring cadeau."
+    },
+    "hero": {
+      "badge": "🦙 Alpacaboerderij · Reuzengebergte",
+      "title": "Ontmoet Elvis en zijn kudde",
+      "subtitle": "Zes alpaca's, een boerderij in de bergen, en een ervaring die je nooit vergeet.",
+      "socialProof": "4.9/5 sterren · 400+ bezoekers",
+      "cta": "Ontdek de boerderij",
+      "imageAlt": "Elvis de alpaca kijkt je aan op de boerderij"
+    },
+    "story": {
+      "title": "Wat maakt het zo bijzonder?",
+      "subtitle": "Drie dingen die bezoekers nooit vergeten",
+      "alpacas": {
+        "icon": "🦙",
+        "title": "De alpaca's ontmoeten",
+        "desc": "Zes alpaca's met elk hun eigen karakter. Voer ze, loop met ze, zit bij ze in het gras. Geen haast — gewoon samen zijn."
+      },
+      "nature": {
+        "icon": "🏔️",
+        "title": "De bergen in",
+        "desc": "De boerderij ligt aan de voet van het Reuzengebergte. Bossen, frisse lucht, watervallen — en 's avonds niets dan sterren."
+      },
+      "rooms": {
+        "icon": "🏡",
+        "title": "Slapen op de boerderij",
+        "desc": "Geen hotel. Een echte boerderij waar je 's ochtends wakker wordt met alpaca's voor je raam."
+      }
+    },
+    "alpacas": {
+      "title": "Ontmoet de sterren",
+      "subtitle": "Elk met een eigen karakter. Wie is jouw favoriet?",
+      "elvis": "De perfecte luisteraar. Elvis blijft kalm als de emoties hoog oplopen.",
+      "micky": "Nieuwsgierige ontdekker. Micky maakt van elke wandeling een avontuur.",
+      "suri": "Zachte ziel. Suri's fluwelen vacht en rustige karakter zijn therapeutisch.",
+      "teddy": "De kalme leider. Teddy is ongelooflijk geduldig, vooral met kinderen.",
+      "ricky": "De charmante brommer. Verlegen, maar als hij eenmaal begint te neuriën...",
+      "freddy": "De slimme charmeur. Freddy weet precies hoe hij je hart steelt."
+    },
+    "reviews": {
+      "title": "Wat bezoekers zeggen",
+      "r1": {
+        "text": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je voor. Pure magie.",
+        "author": "Gast uit Nederland"
+      },
+      "r2": {
+        "text": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen zeker terug.",
+        "author": "Gast uit België"
+      },
+      "r3": {
+        "text": "Zo'n intieme, vredige plek. Compleet anders dan een hotel. Echt bijzonder.",
+        "author": "Gast uit Duitsland"
+      }
+    },
+    "cta": {
+      "title": "Benieuwd geworden?",
+      "subtitle": "Ontdek de kamers op de boerderij of geef een alpaca-ervaring cadeau aan iemand die je lief hebt.",
+      "stayBtn": "Bekijk de kamers",
+      "giftBtn": "Geef een cadeaubon"
+    },
+    "packages": {
+      "title": "Kies jouw ervaring",
+      "subtitle": "Onvergetelijke momenten voor iedereen",
+      "cta": "Koop cadeaubon",
+      "lite": {
+        "name": "Alpaca Meet & Greet",
+        "p1": "30 minuten interactie met de kudde",
+        "p2": "De alpaca's voeren",
+        "p3": "Leuke fotomomenten"
+      },
+      "popular": {
+        "name": "Alpaca Wandeling",
+        "badge": "Populairst",
+        "p1": "60 minuten wandeling door de bergen",
+        "p2": "Warme chocolademelk inbegrepen",
+        "p3": "Digitale foto's van de wandeling",
+        "p4": "Eigen gids voor jouw groep"
+      },
+      "vip": {
+        "name": "VIP Alpaca Ervaring",
+        "p1": "90 minuten privétijd met de alpaca's",
+        "p2": "Alpaca-souvenirpakket",
+        "p3": "Lokale snacks en drankjes",
+        "p4": "Focus op rust en therapie",
+        "p5": "Exclusieve knuffeltijd"
+      }
+    }
+  },
+  "guestReviews": {
+    "sectionTitle": "Wat Onze Gasten Zeggen",
+    "ratingLabel": "Uitzonderlijk",
+    "visitorCount": "400+ tevreden gasten",
+    "r1": {
+      "text": "We werden wakker met alpaca's die door ons raam keken. Niets bereidt je hierop voor. Pure magie.",
+      "author": "Gast uit Nederland"
+    },
+    "r2": {
+      "text": "De alpaca-ervaring was het hoogtepunt van onze hele reis naar Polen. We komen zeker terug.",
+      "author": "Gast uit België"
+    },
+    "r3": {
+      "text": "Zo'n intiem, rustig plekje. Helemaal anders dan een hotel. Echt bijzonder.",
+      "author": "Gast uit Duitsland"
+    }
+  },
+  "farmLife": {
+    "badge": "Meer dan een hotel",
+    "headline": "Dit is geen hotel — het is een thuis in de bergen",
+    "subheadline": "Alles wat onze gasten jaar na jaar terug laat komen.",
+    "fireplace": {
+      "title": "Open haard",
+      "desc": "Warme avonden bij het vuur na een dag met de alpaca's."
+    },
+    "mountains": {
+      "title": "Reuzengebergte",
+      "desc": "Aan de voet van de bergen. Wandelpaden, watervallen en frisse lucht — vlak voor de deur."
+    },
+    "playground": {
+      "title": "Speeltuin",
+      "desc": "Trampoline, schommels en ruimte voor kinderen om vrij te spelen."
+    },
+    "kitchen": {
+      "title": "Gedeelde keuken",
+      "desc": "Volledig uitgeruste keuken — kook met producten van lokale boeren."
+    },
+    "billiards": {
+      "title": "Biljart & Tafeltennis",
+      "desc": "Entertainment voor het hele gezin — regenachtige avonden zijn nooit saai."
+    },
+    "garden": {
+      "title": "Tuin met uitzicht",
+      "desc": "Ochtendkoffie, bergzicht en alpaca's vlak naast je."
+    }
+  },
+  "workation": {
+    "meta": {
+      "title": "Alpaca Workation & Midweek Reset | Zagroda Alpakoterapii",
+      "description": "Ruil stadsdrukte in voor berglucht, 100+ Mbps glasvezel Wi-Fi en alpaca koffiepauzes. Midweek werk- en ontspanningsarrangementen."
+    },
+    "hero": {
+      "badge": "Midweek Remote Work & Digital Detox Arrangement",
+      "wifiBadge": "100 Mbps fiber – getest voor Zoom & videogesprekken ✅",
+      "title": "Werk Remote. Leef Remote.",
+      "subtitle": "Ruil je dagelijkse drukte in voor berglucht, snelle glasvezel Wi-Fi en koffiepauzes bij de alpaca's. In het IJzergebergte, 90 min van Praag.",
+      "ctaPrimary": "Bekijk Midweek Beschikbaarheid",
+      "ctaWhatsApp": "Chat via WhatsApp"
+    },
+    "contrast": {
+      "title": "Stadsappartement vs. Alpaca Workation",
+      "subtitle": "Upgrade je thuiswerkroutine met natuur, open ruimte en ontspanning met dieren.",
+      "cityTitle": "Typisch Stadsappartement",
+      "city1": "Stadssmog, betonnen muren en luchtvervuiling",
+      "city2": "15 minuten koffiepauze scrollend op je telefoon",
+      "city3": "Drukte en mensenmassa's na het werk",
+      "city4": "Klein appartement in drukke stedelijke omgeving",
+      "zagrodaTitle": "Zagroda Alpaca Workation",
+      "zagroda1": "Frisse berglucht, groene weiden en grazende alpaca's",
+      "zagroda2": "Koffiepauze met het voeren van Fernando & Elmo in de wei",
+      "zagroda3": "Zonsondergangwandelingen in de bergen na werktijd",
+      "zagroda4": "Sfeervol verblijf met comfortabele werkplek & snelle glasvezel Wi-Fi"
+    },
+    "essentials": {
+      "title": "Gemaakt voor Focus & Ontspanning",
+      "subtitle": "Alles wat je nodig hebt voor een productieve werkdag en een rustige avond.",
+      "wifiTitle": "100+ Mbps Glasvezel Wi-Fi",
+      "wifiDesc": "Razendsnel, betrouwbaar internet voor probleemloze Zoom-, Teams- en Slack-gesprekken.",
+      "deskTitle": "Eigen Werkplek",
+      "deskDesc": "Comfortabele houten bureaus met veel daglicht, stopcontacten en een frisse lucht.",
+      "coffeeTitle": "Koffie & Thee op de Kamer",
+      "coffeeDesc": "Koffie- en theefaciliteiten op elke kamer, plus keukengebruik voor zelfverzorgers.",
+      "quietTitle": "Digital Reset & Focus",
+      "quietDesc": "Ontsnap aan de stadsdrukte. Midweekverblijven bieden een herstellend tempo.",
+      "alpacaTitle": "Ontstressen met Alpaca's",
+      "alpacaDesc": "Natuurlijke stressvermindering. Stap op elk moment naar buiten om op te laden bij onze kudde.",
+      "hikesTitle": "Toegang tot Wandelroutes",
+      "hikesDesc": "Wandel-, fiets- en hardlooproutes direct vanaf het terrein na werktijd."
+    },
+    "timeline": {
+      "title": "Een Dag uit het Leven van een Workation-Gast",
+      "subtitle": "Hoe je werkdag voelt als je kantoor op een alpacaboerderij staat.",
+      "t1Title": "08:00 uur — Rustig Ontwaken & Koffie",
+      "t1Desc": "Start je dag met frisse berglucht, koffie en uitzicht op de alpaca's in de ochtendmist.",
+      "t2Title": "09:00 uur — Ochtend Focuswerk",
+      "t2Desc": "Werk je belangrijkste taken af via snelle glasvezel Wi-Fi zonder enige onderbreking.",
+      "t3Title": "13:00 uur — Lunchpauze in de Wei",
+      "t3Desc": "Eet buiten. Besteed 15 minuten aan het voeren van Fernando & Elmo om je hoofd leeg te maken.",
+      "t4Title": "17:05 uur — Laptop Dicht & Wandeling",
+      "t4Desc": "Sluit je laptop. Wandel mee met de alpaca's bij zonsondergang of ontspan bij het kampvuur."
+    },
+    "commute": {
+      "title": "Dicht bij de Stad. Ver weg van Stress.",
+      "subtitle": "Gemakkelijk bereikbaar met de auto vanuit omliggende steden over de grens."
+    },
+    "booking": {
+      "tag": "Midweek Speciale Tarieven",
+      "title": "Reserveer Je Midweek Reset",
+      "subtitle": "Kies je aankomstdatum (ma–do of zo–do) voor speciale workation-tarieven.",
+      "whatsappHint": "Liever eerst chatten? We reageren binnen enkele minuten.",
+      "whatsappHintLink": "stuur ons een WhatsApp-bericht →"
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "q1": "Is de Wi-Fi betrouwbaar genoeg voor videobellen?",
+      "a1": "Ja! We beschikken over een eigen glasvezelverbinding (100+ Mbps). Gesprekken via Zoom, Teams en Slack verlopen vlekkeloos.",
+      "q2": "Kan ik een midweekverblijf boeken vanaf zondag of maandag?",
+      "a2": "Absoluut. Onze Workation-arrangementen zijn speciaal ontworpen voor verblijven van zondag tot donderdag of maandag tot vrijdag.",
+      "q3": "Welke talen spreken de eigenaren?",
+      "a3": "We spreken vloeiend Nederlands, Engels en Pools!",
+      "q4": "Zijn er koffie- & keukenfaciliteiten?",
+      "a4": "Alle kamers hebben koffie- en theefaciliteiten. Keukengebruik is beschikbaar voor zelfverzorgers."
+    }
+  }
+}

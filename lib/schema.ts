@@ -68,7 +68,7 @@ export const farmSchema = {
 /** Lodging / Stay page schema */
 export const accommodationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'BedAndBreakfast',
+    '@type': ['LodgingBusiness', 'BedAndBreakfast'],
     name: 'Zagroda Alpakoterapii — Alpaca Farm Stay',
     url: `${BASE_URL}/stay`,
     image: [
