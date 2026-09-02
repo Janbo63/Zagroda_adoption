@@ -17,6 +17,17 @@ export async function POST(req: Request) {
 
         const normalised = code.toUpperCase().trim();
 
+        // ── Active Seasonal Campaign Promo Codes ──────────────────────────────
+        if (normalised === 'AUTUMN2026' || normalised === 'AUTUMN-2026' || normalised === 'AUTUMN') {
+            return NextResponse.json({
+                valid: true,
+                code: 'AUTUMN2026',
+                discountType: 'PERCENT',
+                discountValue: 10,
+                description: 'Autumn 2026 Promo (10% off September & October bookings)',
+            });
+        }
+
         // Search Zoho Vouchers module for this code
         const result = await zoho.searchRecord('Vouchers', `(Voucher_Code:equals:${normalised})`);
         const voucher = result?.data?.[0];

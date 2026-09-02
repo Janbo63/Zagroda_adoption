@@ -2,6 +2,7 @@ import '../globals.css'
 import { Inter } from 'next/font/google'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
+import { AutumnPromoBanner } from '@/components/AutumnPromoBanner'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -189,6 +190,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
+          <AutumnPromoBanner locale={locale} />
           <Navbar locale={locale} />
           <main className="flex-grow bg-gradient-to-br from-green-100 to-blue-100 pt-16">
             {children}
