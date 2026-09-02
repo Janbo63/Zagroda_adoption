@@ -874,11 +874,21 @@ function StepSummary({ state, onNext, onBack }: {
         </div>
     );
 
+    const totalAfterDiscountLabels: Record<string, string> = {
+        pl: 'Łącznie po zniżce',
+        cs: 'Celkem po slevě',
+        de: 'Gesamt nach Rabatt',
+        nl: 'Totaal na korting',
+        en: 'Total after discount',
+    };
+
+    const finalTotal = state.voucherDiscount > 0 ? Math.max(0, state.totalAmount - state.voucherDiscount) : state.totalAmount;
+
     return (
         <div>
             <h2 className={stepTitleCls}>{t('summary.title')}</h2>
 
-            <div className="bg-stone-900 border border-stone-700 rounded-2xl overflow-hidden mb-5 mt-4">
+            <div className="bg-stone-900 border border-stone-700 rounded-2xl overflow-hidden mb-5 mt-4 shadow-xl">
                 <div className="px-5 py-4">
                     <SummaryRow label={t('summary.room')} value={room.name} />
                     <SummaryRow label={t('summary.dates')} value={`${state.checkIn} → ${state.checkOut} (${t(state.nights === 1 ? 'dates.nights' : 'dates.nights_plural', { count: state.nights })})`} />
@@ -886,18 +896,45 @@ function StepSummary({ state, onNext, onBack }: {
                         label={t('summary.guests')}
                         value={`${state.adults} adult${state.adults !== 1 ? 's' : ''}${state.children.length > 0 ? `, ${state.children.length} child${state.children.length !== 1 ? 'ren' : ''}` : ''}`}
                     />
-                    {state.voucherDiscount > 0 && (
-                        <div className="flex justify-between items-center py-3 border-b border-stone-700/50">
-                            <span className="text-stone-400 text-sm">{t('summary.voucherDiscount')} ({state.voucherCode})</span>
-                            <strong className="text-emerald-400">−{state.voucherDiscount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
-                        </div>
+
+                    {/* Price Breakdown */}
+                    {state.voucherDiscount > 0 ? (
+                        <>
+                            <SummaryRow
+                                label={t('summary.totalStay')}
+                                value={`${state.totalAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`}
+                            />
+                            <div className="flex justify-between items-center py-3 border-b border-stone-700/50 text-sm">
+                                <span className="text-stone-400">{t('summary.voucherDiscount')} ({state.voucherCode})</span>
+                                <strong className="text-emerald-400 font-bold">−{state.voucherDiscount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
+                            </div>
+                            <div className="flex justify-between items-center py-3 border-b border-stone-700/50 bg-stone-800/60 px-3 rounded-xl my-2">
+                                <span className="text-stone-200 font-semibold text-sm">
+                                    {totalAfterDiscountLabels[locale] || totalAfterDiscountLabels.en}
+                                </span>
+                                <strong className="text-white text-base font-bold">
+                                    {finalTotal.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN
+                                </strong>
+                            </div>
+                        </>
+                    ) : (
+                        <SummaryRow
+                            label={t('summary.totalStay')}
+                            value={`${state.totalAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`}
+                        />
                     )}
                 </div>
-                <div className="bg-emerald-950/50 border-t border-emerald-800/50 px-5 py-4">
-                    <SummaryRow label={t('summary.depositNow')} value={`${state.depositAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`} highlight />
-                    <div className="flex justify-between items-center pt-3">
-                        <span className="text-stone-500 text-xs">{t('summary.balanceDue')}</span>
-                        <span className="text-stone-400 text-sm font-semibold">{state.balanceAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</span>
+
+                {/* Deposit & Balance Schedule */}
+                <div className="bg-emerald-950/60 border-t border-emerald-800/50 px-5 py-4">
+                    <SummaryRow
+                        label={t('summary.depositNow')}
+                        value={`${state.depositAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`}
+                        highlight
+                    />
+                    <div className="flex justify-between items-center pt-3 text-sm">
+                        <span className="text-stone-400 text-xs sm:text-sm">{t('summary.balanceDue')} (90%)</span>
+                        <span className="text-stone-300 font-semibold">{state.balanceAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</span>
                     </div>
                 </div>
             </div>
