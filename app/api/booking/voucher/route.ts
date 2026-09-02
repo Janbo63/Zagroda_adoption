@@ -16,20 +16,38 @@ export async function POST(req: Request) {
         }
 
         const normalised = code.toUpperCase().trim();
+        const rawTrimmed = code.trim();
 
-        // ── Active Seasonal Campaign Promo Codes ──────────────────────────────
-        if (normalised === 'AUTUMN2026' || normalised === 'AUTUMN-2026' || normalised === 'AUTUMN') {
+        // ── Active Seasonal Campaign Promo Aliases ────────────────────────────
+        if (
+            normalised === 'AUTUMN2026' ||
+            normalised === 'AUTUMN-2026' ||
+            normalised === 'AUTUMN' ||
+            normalised === 'AUGUST2026' ||
+            normalised === 'ALPACA-1003' ||
+            normalised === 'ALPACA1003'
+        ) {
             return NextResponse.json({
                 valid: true,
-                code: 'AUTUMN2026',
+                code: 'Autumn2026',
                 discountType: 'PERCENT',
                 discountValue: 10,
                 description: 'Autumn 2026 Promo (10% off September & October bookings)',
             });
         }
 
-        // Search Zoho Vouchers module for this code
-        const result = await zoho.searchRecord('Vouchers', `(Voucher_Code:equals:${normalised})`);
+        // Search Zoho Vouchers module by Voucher_Code OR Name OR Voucher_Name
+        let result = await zoho.searchRecord('Vouchers', `(Voucher_Code:equals:${normalised})`);
+        if (!result?.data?.length) {
+            try {
+                result = await zoho.searchRecord('Vouchers', `(Name:equals:${rawTrimmed})`);
+            } catch {}
+        }
+        if (!result?.data?.length) {
+            try {
+                result = await zoho.searchRecord('Vouchers', `(Voucher_Name:equals:${rawTrimmed})`);
+            } catch {}
+        }
         const voucher = result?.data?.[0];
 
         if (!voucher) {
