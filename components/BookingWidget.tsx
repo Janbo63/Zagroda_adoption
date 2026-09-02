@@ -123,8 +123,8 @@ function formatAmenity(code: unknown): string {
 // ─── Friendly room name overrides ─────────────────────────────────────────────
 // Keys are the real Beds25 room IDs. These override whatever name the API returns.
 const ROOM_NAME_OVERRIDES: Record<string, string> = {
-    '884394000000897001': 'Garden Room',
-    '884394000000894006': 'Jungle Room',
+    '884394000000894006': 'Garden Room',
+    '884394000000897001': 'Jungle Room',
     '884394000000896001': 'Forest Apartment',
     '884394000000884002': 'Caravan',
 };
@@ -132,8 +132,8 @@ const ROOM_NAME_OVERRIDES: Record<string, string> = {
 // ─── Amenity overrides per room ID ────────────────────────────────────────────
 // Uses our AMENITY_LABELS codes. Overrides whatever Booking.com/Beds25 sends.
 const ROOM_AMENITY_OVERRIDES: Record<string, string[]> = {
-    '884394000000897001': ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW', 'HEATING', 'TV'],      // Garden Room
-    '884394000000894006': ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW', 'HEATING', 'TV'],      // Jungle Room
+    '884394000000894006': ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW', 'HEATING', 'TV'],      // Garden Room
+    '884394000000897001': ['WIFI', 'PRIVATE_BATHROOM', 'GARDEN_VIEW', 'HEATING', 'TV'],      // Jungle Room
     '884394000000896001': ['WIFI', 'PRIVATE_BATHROOM', 'KITCHEN', 'SEPARATE_BEDROOM', 'MOUNTAIN_VIEW', 'WASHING_MACHINE', 'TV'], // Forest Apartment
     '884394000000884002': ['WIFI', 'PARKING', 'HEATING', 'PETS_ALLOWED', 'TERRACE'],         // Caravan
 };
@@ -143,14 +143,14 @@ const ROOM_AMENITY_OVERRIDES: Record<string, string[]> = {
 // Images from the Beds25 API media[] field are used as fallback.
 const LOCAL_ROOM_IMAGES: Record<string, string[]> = {
     // Real Beds24 room IDs
-    '884394000000897001': [ // Garden Room
+    '884394000000894006': [ // Garden Room
         '/images/Rooms/Garden Room1.jpg',
         '/images/Rooms/Garden Room 3.jpg',
         '/images/Rooms/Garden Room 4.jpg',
         '/images/Rooms/GardenRoom 2.jpg',
         '/images/Rooms/Garden-1.jpg',
     ],
-    '884394000000894006': [ // Jungle Room
+    '884394000000897001': [ // Jungle Room
         '/images/Rooms/Jungle Room 1.jpg',
         '/images/Rooms/Jungle Room 2.jpg',
         '/images/Rooms/Jungle Room 3.jpg',
