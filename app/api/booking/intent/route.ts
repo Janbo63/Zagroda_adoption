@@ -1,23 +1,32 @@
 /**
  * POST /api/booking/intent
  *
- * Flow (per Beds25 integration guide):
- *   1. Create Zoho Deal → receive bookingRef + zohoDealId
- *   2. Create Stripe Customer (or find existing)
- *   3. Create PaymentIntent with setup_future_usage:'off_session'
- *      → embed bookingRef + zohoDealId in metadata
+ * Revised flow — Zoho + Beds25 records are created ONLY after payment:
+ *   1. Generate a local booking reference (ZAP-XXXXXX)
+ *   2. Create or find Stripe Customer
+ *   3. Create PaymentIntent with all booking data in metadata
  *   4. Return clientSecret + bookingRef to client
  *
  * Webhook (payment_intent.succeeded) then:
- *   → Calls POST /api/public/booking/create on Beds25
- *   → Updates Zoho Deal to DEPOSIT_PAID
+ *   → Creates Zoho Booking record (status: Deposit Paid)
+ *   → Creates Beds25 booking (blocks OTA calendar)
+ *   → Redeems voucher if applicable
+ *
+ * This ensures NO Zoho orphans and NO premature confirmation emails
+ * if the guest abandons the payment step.
  */
 
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { createBookingDeal } from '@/lib/zoho-booking';
+import crypto from 'crypto';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2026-01-28.clover' as any });
+
+/** Generate a human-friendly booking reference: ZAP-XXXXXX */
+function generateBookingRef(): string {
+    const hex = crypto.randomBytes(3).toString('hex').toUpperCase(); // 6 hex chars
+    return `ZAP-${hex}`;
+}
 
 export async function POST(req: Request) {
     try {
@@ -51,29 +60,8 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Deposit amount must be positive' }, { status: 400 });
         }
 
-        // ── Step 1: Create Zoho Deal (before payment so bookingRef is known upfront) ──
-        // If this fails we return early — no Stripe charge, no orphan payment
-        const { zohoBookingRef, zohoDealId } = await createBookingDeal({
-            room: { id: roomId, name: roomName },
-            checkIn,
-            checkOut,
-            nights,
-            depositAmount,
-            balanceAmount,
-            totalAmount,
-            guest: {
-                name: guestName,
-                email: guestEmail,
-                phone: guestPhone,
-                adults: adults ?? 2,
-                children: children ?? [],
-                specialRequests: specialRequests ?? undefined,
-                nipNumber: nipNumber ?? undefined,
-            },
-            voucherCode: voucherCode || undefined,
-            voucherAmount: voucherAmount || undefined,
-            locale,
-        });
+        // ── Step 1: Generate booking reference locally ────────────────────────────
+        const bookingRef = generateBookingRef();
 
         // ── Step 2: Create or retrieve Stripe customer ────────────────────────────
         let customerId: string;
@@ -85,22 +73,23 @@ export async function POST(req: Request) {
                 email: guestEmail,
                 name: guestName,
                 phone: guestPhone,
-                metadata: { locale, bookingRef: zohoBookingRef },
+                metadata: { locale, bookingRef },
             });
             customerId = customer.id;
         }
 
         // ── Step 3: Create PaymentIntent ──────────────────────────────────────────
+        // All booking data is stored in metadata so the webhook can create
+        // the Zoho + Beds25 records after payment succeeds.
         const paymentIntent = await stripe.paymentIntents.create({
             amount: Math.round(depositAmount * 100), // PLN → grosze
             currency: 'pln',
             customer: customerId,
-            setup_future_usage: 'off_session', // ← saves card for T-3 balance charge
-            description: `Deposit: ${roomName} ${checkIn}–${checkOut} [${zohoBookingRef}]`,
+            setup_future_usage: 'off_session', // saves card for T-3 balance charge
+            description: `Deposit: ${roomName} ${checkIn}–${checkOut} [${bookingRef}]`,
             metadata: {
                 type: 'booking_deposit',
-                bookingRef: zohoBookingRef,
-                zohoBookingDealId: zohoDealId,
+                bookingRef,
                 roomId,
                 roomName,
                 checkIn,
@@ -124,7 +113,7 @@ export async function POST(req: Request) {
 
         return NextResponse.json({
             clientSecret: paymentIntent.client_secret,
-            bookingRef: zohoBookingRef, // show the guest their ref in the confirmation step
+            bookingRef, // show the guest their ref in the confirmation step
         });
 
     } catch (err: any) {

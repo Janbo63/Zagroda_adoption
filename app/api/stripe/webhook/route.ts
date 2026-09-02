@@ -5,7 +5,6 @@ import { zoho } from '@/lib/zoho';
 import { voucherGenerator } from '@/lib/voucher-generator';
 import { certificateGenerator } from '@/lib/certificate-generator';
 import { emailService } from '@/lib/email-service';
-import { updateBookingStatus, redeemVoucherInZoho } from '@/lib/zoho-booking';
 import { createBeds25Booking } from '@/lib/beds25';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -136,30 +135,52 @@ export async function POST(req: Request) {
         }
 
         // ─── Booking Deposit Confirmed ────────────────────────────────────────
-        // Zoho Deal was created BEFORE payment in /api/booking/intent.
-        // bookingRef + zohoDealId are stored in the PaymentIntent metadata.
-        // We just: update Zoho status → redeem voucher → POST to Beds25.
+        // Zoho + Beds25 records are created HERE — only after real payment.
+        // All booking data is stored in the PaymentIntent metadata.
         case 'payment_intent.succeeded': {
             const intent = event.data.object as Stripe.PaymentIntent;
             if (intent.metadata?.type !== 'booking_deposit') break;
 
             const meta = intent.metadata;
-            const { bookingRef, zohoBookingDealId: zohoDealId } = meta;
+            const { bookingRef } = meta;
 
-            if (!bookingRef || !zohoDealId) {
-                console.error('[Booking] CRITICAL: payment_intent.succeeded missing bookingRef or zohoDealId', meta);
+            if (!bookingRef) {
+                console.error('[Booking] CRITICAL: payment_intent.succeeded missing bookingRef', meta);
                 break;
             }
 
             try {
-                // 1. Update Zoho Deal → Deposit Paid + backpatch Stripe IDs
-                await updateBookingStatus(zohoDealId, 'Deposit Paid', {
-                    Stripe_Deposit_ID: intent.id,
-                    Stripe_Payment_Method_ID: typeof intent.payment_method === 'string'
+                // 1. Create Zoho Booking record (first time — status: Deposit Paid)
+                const children = JSON.parse(meta.childrenJson || '[]');
+                const { createBookingDeal, redeemVoucherInZoho } = await import('@/lib/zoho-booking');
+
+                const { zohoDealId } = await createBookingDeal({
+                    room: { id: meta.roomId, name: meta.roomName },
+                    checkIn: meta.checkIn,
+                    checkOut: meta.checkOut,
+                    nights: Number(meta.nights),
+                    depositAmount: Number(meta.depositAmount),
+                    balanceAmount: Number(meta.balanceAmount),
+                    totalAmount: Number(meta.totalAmount),
+                    guest: {
+                        name: meta.guestName,
+                        email: meta.guestEmail,
+                        phone: meta.guestPhone,
+                        adults: Number(meta.adults),
+                        children,
+                        specialRequests: meta.specialRequests || undefined,
+                        nipNumber: meta.nipNumber || undefined,
+                    },
+                    voucherCode: meta.voucherCode || undefined,
+                    voucherAmount: meta.voucherAmount ? Number(meta.voucherAmount) : undefined,
+                    stripeDepositId: intent.id,
+                    stripeCustomerId: intent.customer as string,
+                    stripePaymentMethodId: typeof intent.payment_method === 'string'
                         ? intent.payment_method
                         : intent.payment_method?.id || null,
+                    locale: meta.locale,
                 });
-                console.log(`[Booking] Zoho Deal ${zohoDealId} → Deposit Paid + Stripe IDs (${bookingRef})`);
+                console.log(`[Booking] Zoho Booking created: ${zohoDealId} (${bookingRef}) — Deposit Paid`);
 
                 // 2. Redeem voucher in Zoho (non-fatal)
                 if (meta.voucherCode) {
@@ -172,7 +193,6 @@ export async function POST(req: Request) {
                 }
 
                 // 3. Create booking in Beds25 → blocks OTA (Beds24) calendar
-                const children = JSON.parse(meta.childrenJson || '[]');
                 await createBeds25Booking({
                     bookingRef,
                     zohoBookingDealId: zohoDealId,
@@ -209,7 +229,6 @@ export async function POST(req: Request) {
                         `An error occurred during post-payment processing:\n\n` +
                         `Error: ${err?.message || err}\n` +
                         `Booking Ref: ${bookingRef}\n` +
-                        `Zoho Deal ID: ${zohoDealId}\n` +
                         `Meta Snapshot:\n${JSON.stringify(meta, null, 2)}`
                     );
                 } catch (emailErr) {
