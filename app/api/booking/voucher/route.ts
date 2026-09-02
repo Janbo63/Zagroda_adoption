@@ -7,9 +7,17 @@
 import { NextResponse } from 'next/server';
 import { zoho } from '@/lib/zoho';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
     try {
-        const { code } = await req.json();
+        let code = '';
+        try {
+            const body = await req.json();
+            code = body?.code || '';
+        } catch {
+            return NextResponse.json({ valid: false, error: 'Invalid request body' }, { status: 400 });
+        }
 
         if (!code || typeof code !== 'string') {
             return NextResponse.json({ valid: false, error: 'No voucher code provided' }, { status: 400 });
