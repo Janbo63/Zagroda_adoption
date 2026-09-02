@@ -67,6 +67,23 @@ export default function RootLayout({
                 return;
               }
 
+              // Check for internal tester flag (?internal=1 or stored)
+              try {
+                var params = new URLSearchParams(window.location.search);
+                if (params.get('internal') === '1' || params.get('test_mode') === '1' || params.get('admin') === '1') {
+                  localStorage.setItem('fs_internal_tester', 'true');
+                }
+              } catch(e){}
+
+              var isInternal = false;
+              try {
+                isInternal = localStorage.getItem('fs_internal_tester') === 'true';
+              } catch(e){}
+
+              if (isInternal) {
+                gtag('set', 'user_properties', { traffic_type: 'internal' });
+              }
+
               // We use replace to ensure tracking matches www domain
               var currentUrl = window.location.href;
               var wwwUrl = currentUrl.replace('https://', 'https://www.');
@@ -74,7 +91,7 @@ export default function RootLayout({
               gtag('config', '${GA4_ID}', {
                 page_path: window.location.pathname,
                 page_location: wwwUrl,
-                send_page_view: true
+                send_page_view: !isInternal
               });
 
               // Google Ads conversion tracking

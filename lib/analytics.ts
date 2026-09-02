@@ -3,9 +3,26 @@
  * Used throughout the booking funnel and key conversion points.
  */
 
+function isInternal(): boolean {
+    if (typeof window === 'undefined') return false;
+    try {
+        if (localStorage.getItem('fs_internal_tester') === 'true') return true;
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('internal') === '1' || params.get('test_mode') === '1' || params.get('admin') === '1') {
+            localStorage.setItem('fs_internal_tester', 'true');
+            return true;
+        }
+    } catch {}
+    return false;
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function gtag(...args: any[]) {
     if (typeof window === 'undefined' || !window.gtag) return;
+    if (isInternal()) {
+        // Suppress funnel events for internal testing so real conversion stats stay clean
+        return;
+    }
     window.gtag(...args);
 }
 
