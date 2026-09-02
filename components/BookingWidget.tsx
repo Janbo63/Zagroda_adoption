@@ -774,7 +774,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                 onChange('voucherDiscount', discountAmount);
                 trackVoucherApplied({ code: state.voucherCode, discount: discountAmount });
                 const discountedTotal = Math.max(0, state.totalAmount - discountAmount);
-                const newDeposit = Math.round(discountedTotal * 0.3);
+                const newDeposit = Math.round(discountedTotal * 0.1);
                 onChange('depositAmount', newDeposit);
                 onChange('balanceAmount', discountedTotal - newDeposit);
             } else {
