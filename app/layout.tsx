@@ -84,9 +84,11 @@ export default function RootLayout({
                 gtag('set', 'user_properties', { traffic_type: 'internal' });
               }
 
-              // We use replace to ensure tracking matches www domain
-              var currentUrl = window.location.href;
-              var wwwUrl = currentUrl.replace('https://', 'https://www.');
+              // Ensure canonical www domain for tracking without creating double www.www.
+              var wwwUrl = window.location.href;
+              if (wwwUrl.indexOf('https://') === 0 && wwwUrl.indexOf('https://www.') !== 0) {
+                wwwUrl = wwwUrl.replace('https://', 'https://www.');
+              }
               
               gtag('config', '${GA4_ID}', {
                 page_path: window.location.pathname,
