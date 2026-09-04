@@ -1,8 +1,6 @@
-import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AutumnPromoBanner } from '@/components/AutumnPromoBanner';
 
 export async function generateStaticParams() {
     return [
@@ -30,33 +28,32 @@ export default function AutumnPage({ params: { locale } }: { params: { locale: s
 
     return (
         <div className="bg-stone-950 text-stone-100 min-h-screen">
-            <AutumnPromoBanner />
-            
             {/* Hero Section */}
             <section className="relative py-20 lg:py-32 overflow-hidden px-4">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/activities/alpaca-walks.jpg"
-                        alt="Autumn at Zagroda"
+                        src="/images/activities/forest-walk-autumn.jpg"
+                        alt="Walking with alpacas in autumn forest at Zagroda"
                         fill
-                        className="object-cover opacity-30"
+                        priority
+                        className="object-cover opacity-35"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/60 to-stone-950" />
                 </div>
                 
                 <div className="relative z-10 max-w-5xl mx-auto text-center mt-12">
                     <span className="inline-block py-1 px-3 rounded-full bg-emerald-900/50 text-emerald-400 border border-emerald-800 text-sm font-medium mb-6">
-                        Autumn 2026 Special
+                        Autumn 2026 Special • 10% OFF
                     </span>
                     <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-50 mb-6 tracking-tight">
                         Experience the Magic of Autumn in the Izera Mountains
                     </h1>
                     <p className="text-xl text-stone-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Cozy rooms, golden forests, alpaca walks, and evening bonfires. Book your September or October getaway with code <strong className="text-emerald-400">AUTUMN2026</strong> for 10% off.
+                        Cozy rooms, golden forests, alpaca walks, and evening bonfires. Book your September or October getaway with code <strong className="text-emerald-400">Autumn2026</strong> for 10% off.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href={`/${locale}/stay`} className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg font-medium transition-colors text-lg">
-                            Book Your Stay
+                        <Link href={`/${locale}/stay?code=Autumn2026`} className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg font-medium transition-colors text-lg shadow-lg hover:shadow-emerald-900/50">
+                            Book Your Stay with 10% OFF
                         </Link>
                         <Link href="#activities" className="bg-stone-800 hover:bg-stone-700 text-stone-200 px-8 py-4 rounded-lg font-medium transition-colors border border-stone-700 text-lg">
                             Explore Activities
@@ -159,8 +156,8 @@ export default function AutumnPage({ params: { locale } }: { params: { locale: s
                         </li>
                     </ul>
                     <div className="mt-8 text-center">
-                        <Link href={`/${locale}/stay`} className="inline-block bg-emerald-700 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                            Check Availability Now
+                        <Link href={`/${locale}/stay?code=Autumn2026`} className="inline-block bg-emerald-700 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                            Check Availability Now (10% OFF)
                         </Link>
                     </div>
                 </div>
@@ -190,8 +187,8 @@ function RoomCard({ name, price, desc, locale, highlight = false }: { name: stri
             <h3 className="text-2xl font-serif font-bold text-stone-100 mb-2">{name}</h3>
             <div className="text-emerald-400 font-medium mb-4">{price}</div>
             <p className="text-stone-400 flex-grow mb-6">{desc}</p>
-            <Link href={`/${locale}/stay`} className="block text-center bg-stone-800 hover:bg-stone-700 text-stone-200 py-3 rounded-lg font-medium transition-colors border border-stone-700 w-full">
-                View Room
+            <Link href={`/${locale}/stay?code=Autumn2026`} className="block text-center bg-stone-800 hover:bg-stone-700 text-stone-200 py-3 rounded-lg font-medium transition-colors border border-stone-700 w-full">
+                View Room (10% OFF)
             </Link>
         </div>
     );

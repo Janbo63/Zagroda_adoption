@@ -49,10 +49,51 @@ export function AutumnPromoBanner({ locale }: Props) {
     const isDismissed = sessionStorage.getItem('autumn_promo_dismissed_2026');
     if (!isDismissed) {
       setVisible(true);
+      // Track banner impression in GA4
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'view_promotion', {
+          creative_name: 'autumn_banner_2026',
+          promotion_name: 'Autumn Special 10%',
+          promo_code: 'Autumn2026',
+          location_id: locale || 'pl',
+        });
+      }
     }
-  }, []);
+  }, [locale]);
+
+  const handleCtaClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'select_promotion', {
+        creative_name: 'autumn_banner_2026',
+        promotion_name: 'Autumn Special 10%',
+        promo_code: 'Autumn2026',
+        location_id: locale || 'pl',
+      });
+      window.gtag('event', 'promo_banner_click', {
+        promo_code: 'Autumn2026',
+        locale: locale || 'pl',
+        destination: 'stay_booking'
+      });
+    }
+  };
+
+  const handleInfoClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'promo_banner_info_click', {
+        promo_code: 'Autumn2026',
+        locale: locale || 'pl',
+        destination: 'jesien_page'
+      });
+    }
+  };
 
   const handleDismiss = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'dismiss_promotion', {
+        creative_name: 'autumn_banner_2026',
+        location_id: locale || 'pl',
+      });
+    }
     sessionStorage.setItem('autumn_promo_dismissed_2026', 'true');
     setVisible(false);
   };
@@ -67,14 +108,22 @@ export function AutumnPromoBanner({ locale }: Props) {
         
         {/* Left / Center: Promo message */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 flex-1 justify-center sm:justify-start">
-          <span className="inline-flex items-center gap-1 bg-amber-950/70 border border-amber-400/40 text-amber-200 text-xs font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+          <Link
+            href={`/${locale}/jesien`}
+            onClick={handleInfoClick}
+            className="inline-flex items-center gap-1 bg-amber-950/70 border border-amber-400/40 text-amber-200 text-xs font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider hover:bg-amber-900/80 transition-colors"
+          >
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             {content.badge}
-          </span>
+          </Link>
           
-          <span className="font-medium text-stone-100 hidden md:inline">
+          <Link
+            href={`/${locale}/jesien`}
+            onClick={handleInfoClick}
+            className="font-medium text-stone-100 hidden md:inline hover:text-amber-200 transition-colors"
+          >
             {content.text}
-          </span>
+          </Link>
           
           <span className="inline-flex items-center gap-1 bg-white/15 backdrop-blur-sm border border-white/30 text-white font-mono font-bold px-2.5 py-0.5 rounded-md">
             <Tag className="w-3.5 h-3.5 text-amber-200" />
@@ -82,7 +131,8 @@ export function AutumnPromoBanner({ locale }: Props) {
           </span>
 
           <Link
-            href={`/${locale}/stay`}
+            href={`/${locale}/stay?code=Autumn2026`}
+            onClick={handleCtaClick}
             className="inline-flex items-center font-bold text-amber-200 hover:text-white underline underline-offset-4 hover:no-underline transition-colors ml-1"
           >
             {content.cta}

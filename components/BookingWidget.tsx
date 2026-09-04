@@ -754,7 +754,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
     const locale = useLocale();
     const [validating, setValidating] = useState(false);
 
-    const validateVoucher = async () => {
+    const validateVoucher = useCallback(async () => {
         if (!state.voucherCode) return;
         setValidating(true);
         onChange('voucherError', '');
@@ -787,7 +787,14 @@ function StepExtras({ state, onChange, onNext, onBack }: {
         } finally {
             setValidating(false);
         }
-    };
+    }, [state.voucherCode, state.totalAmount, onChange]);
+
+    // Auto-validate promo code if passed from URL and not yet validated
+    useEffect(() => {
+        if (state.voucherCode && !state.voucherValid && !state.voucherError && !validating && state.totalAmount > 0) {
+            validateVoucher();
+        }
+    }, [state.voucherCode, state.voucherValid, state.voucherError, validating, state.totalAmount, validateVoucher]);
 
     return (
         <div>
@@ -1186,6 +1193,19 @@ function BookingWidgetInner({ locale }: Props) {
     const set = useCallback((k: keyof BookingState, v: any) => {
         setState(prev => ({ ...prev, [k]: v }));
     }, []);
+
+    // Pre-fill promo/voucher code from URL params (e.g. ?code=Autumn2026 or ?promo=Autumn2026)
+    useEffect(() => {
+        try {
+            if (typeof window !== 'undefined') {
+                const params = new URLSearchParams(window.location.search);
+                const promo = params.get('code') || params.get('promo') || params.get('voucher');
+                if (promo) {
+                    set('voucherCode', promo.trim().toUpperCase());
+                }
+            }
+        } catch {}
+    }, [set]);
 
     // Step-aware next — fires the appropriate GA4 event when moving forward
     const next = () => {
