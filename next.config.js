@@ -41,7 +41,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/campaigns/:path*',
+        source: '/campaigns/:path*.mp4',
         headers: [
           {
             key: 'Content-Type',
