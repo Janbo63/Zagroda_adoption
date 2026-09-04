@@ -32,30 +32,30 @@ export default function AutumnPage({ params: { locale } }: { params: { locale: s
             <section className="relative py-20 lg:py-32 overflow-hidden px-4">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/activities/forest-walk-autumn.jpg"
+                        src="/images/activities/forest-walk-opt.jpg"
                         alt="Walking with alpacas in autumn forest at Zagroda"
                         fill
                         priority
-                        className="object-cover opacity-35"
+                        className="object-cover opacity-90 object-center"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/60 to-stone-950" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-stone-950/40 via-stone-950/30 to-stone-950" />
                 </div>
                 
-                <div className="relative z-10 max-w-5xl mx-auto text-center mt-12">
-                    <span className="inline-block py-1 px-3 rounded-full bg-emerald-900/50 text-emerald-400 border border-emerald-800 text-sm font-medium mb-6">
+                <div className="relative z-10 max-w-4xl mx-auto text-center mt-6 bg-stone-950/70 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-stone-800/70 shadow-2xl">
+                    <span className="inline-block py-1 px-3 rounded-full bg-emerald-900/60 text-emerald-400 border border-emerald-700/60 text-sm font-medium mb-6">
                         Autumn 2026 Special • 10% OFF
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-50 mb-6 tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-50 mb-6 tracking-tight drop-shadow-md">
                         Experience the Magic of Autumn in the Izera Mountains
                     </h1>
-                    <p className="text-xl text-stone-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-xl text-stone-200 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow">
                         Cozy rooms, golden forests, alpaca walks, and evening bonfires. Book your September or October getaway with code <strong className="text-emerald-400">Autumn2026</strong> for 10% off.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href={`/${locale}/stay?code=Autumn2026`} className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg font-medium transition-colors text-lg shadow-lg hover:shadow-emerald-900/50">
                             Book Your Stay with 10% OFF
                         </Link>
-                        <Link href="#activities" className="bg-stone-800 hover:bg-stone-700 text-stone-200 px-8 py-4 rounded-lg font-medium transition-colors border border-stone-700 text-lg">
+                        <Link href="#activities" className="bg-stone-800/90 hover:bg-stone-700 text-stone-200 px-8 py-4 rounded-lg font-medium transition-colors border border-stone-700 text-lg">
                             Explore Activities
                         </Link>
                     </div>
