@@ -1,7 +1,15 @@
 # Alpaca Farm Website — zagrodaalpakoterapii.com
 
 > Public-facing website for the alpaca farm: activities, animal profiles, accommodation, adoption program, voucher shop, and blog.
-> Inherits global standards from `~/.gemini/GEMINI.md`.
+
+## Governance
+
+- **Priority Tier**: 🔴 Tier 1 — Revenue Infrastructure
+- **Autonomy Level**: 🟢 Full Auto — Execute and report, commit (no push)
+- **Owner**: Kelly (Marketing), Robin (Engineering)
+- **Shared contracts**: See `F:\Senior Management\contracts.md` (Booking Triad, Deployment, i18n, Error Logging)
+- **Full objectives & KPIs**: See `F:\Senior Management\objectives.md`
+- **Escalation protocol**: See `F:\Senior Management\guardrails.md`
 
 ## Project Context
 
@@ -18,12 +26,10 @@ Polish (default), English, German, Czech, Dutch — via `next-intl` with locale-
 
 ## Key Decisions & Architecture
 
-### 🏨 The Booking Triad Contract (Crucial Architecture Rule)
-> **Beds24 is the Master PMS (Source of Truth)**. Do not attempt a two-way sync loop.
-1. **Direct Injection**: The Website treats Beds24 as the master engine and injects bookings via Beds24 API v2 (`/bookings`) with source tag `WEBSITE`.
-2. **Availability Rule**: Hospitality PMS standard: **no price set = date blocked / unavailable**. Never assume base price if a date rate is missing.
-3. **Beds25 Role**: Beds25 (`admin.zagrodaalpakoterapii.com`) is a read/admin dashboard and Zoho sync layer. It receives Beds24 webhooks and mirrors data to Zoho CRM without conflicting writes.
-4. **Idempotency**: All booking requests must carry a unique reference ID to prevent duplicate or ghost records.
+### Booking Integration
+> Follows the **Booking Triad Contract** — see `F:\Senior Management\contracts.md` for full rules.
+> This website injects bookings into Beds24 API v2 (`/bookings`, source `WEBSITE`).
+> Beds24 is the master PMS. Never attempt a two-way sync loop.
 
 - **Zoho CRM backend** — Pivoted from local Prisma DB to Zoho CRM as data backend for contacts and adoption records. Prisma schema was emptied but dependency kept (may be repurposed for local caching)
 - **Docker deployment** — Containerized via Docker Compose, deployed to Hostinger VPS at port 3001 behind Caddy
