@@ -183,6 +183,100 @@ export default async function RootLayout({
         <meta property="fb:app_id" content="1608105036460297" />
         {/* Zoho Marketing Automation / PageSense Tracking Snippet */}
         <script src="https://cdn-eu.pagesense.io/js/20118320383/73dfb9b8e0844389945694883c358b1f.js" async />
+
+        {/* ── Google Analytics (GA4) + Google Ads ── */}
+        {/* Plain <script> in <head> ensures GA4 fires on first paint, not after React hydration */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9R1JJYYSG" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+
+              // Only suppress for selenium/puppeteer bots
+              var isBotSuppressed = false;
+              try { isBotSuppressed = navigator.webdriver; } catch(e){}
+              if (isBotSuppressed) {
+                console.log('[Analytics] Suppressed for automated headless agent');
+              } else {
+                // Check for internal tester flag (?internal=1 or stored)
+                try {
+                  var params = new URLSearchParams(window.location.search);
+                  if (params.get('internal') === '1' || params.get('test_mode') === '1' || params.get('admin') === '1') {
+                    localStorage.setItem('fs_internal_tester', 'true');
+                  }
+                } catch(e){}
+
+                var isInternal = false;
+                try {
+                  isInternal = localStorage.getItem('fs_internal_tester') === 'true';
+                } catch(e){}
+
+                if (isInternal) {
+                  gtag('set', 'user_properties', { traffic_type: 'internal' });
+                }
+
+                // Ensure canonical www domain for tracking
+                var wwwUrl = window.location.href;
+                if (wwwUrl.indexOf('https://') === 0 && wwwUrl.indexOf('https://www.') !== 0) {
+                  wwwUrl = wwwUrl.replace('https://', 'https://www.');
+                }
+
+                gtag('config', 'G-V9R1JJYYSG', {
+                  page_path: window.location.pathname,
+                  page_location: wwwUrl,
+                  send_page_view: !isInternal
+                });
+
+                // Google Ads conversion tracking
+                gtag('config', 'AW-1028380046');
+
+                // ── AI Referrer Detection ──
+                (function() {
+                  var defined = {
+                    'chatgpt.com':'ChatGPT','chat.openai.com':'ChatGPT',
+                    'perplexity.ai':'Perplexity','claude.ai':'Claude',
+                    'gemini.google.com':'Gemini','bard.google.com':'Gemini',
+                    'copilot.microsoft.com':'Copilot','bing.com/chat':'Copilot',
+                    'meta.ai':'MetaAI','you.com':'YouAI','phind.com':'Phind',
+                    'poe.com':'Poe','huggingface.co/chat':'HuggingChat',
+                    'deepseek.com':'DeepSeek'
+                  };
+                  var ref = document.referrer || '';
+                  var aiSource = null;
+                  for (var domain in defined) {
+                    if (ref.indexOf(domain) !== -1) { aiSource = defined[domain]; break; }
+                  }
+                  if (aiSource) {
+                    gtag('event', 'ai_referral', {
+                      ai_engine: aiSource, referrer_url: ref,
+                      landing_page: window.location.pathname
+                    });
+                    gtag('set', 'user_properties', {
+                      ai_referred: 'true', ai_engine: aiSource
+                    });
+                  }
+                })();
+              }
+            `,
+          }}
+        />
+
+        {/* ── Microsoft Clarity ── */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "vlllu29qxu");
+            `,
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
