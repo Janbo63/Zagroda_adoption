@@ -31,6 +31,13 @@ const nextConfig = {
       { source: '/adopt', destination: '/en/adopt', permanent: false },
       { source: '/vouchers', destination: '/en/vouchers', permanent: false },
       { source: '/blog', destination: '/en/blog', permanent: false },
+      // Catch broken booking/hotel URLs (confirmed 404s blocking conversions)
+      { source: '/booking', destination: '/pl/stay#booking', permanent: false },
+      { source: '/:locale/booking', destination: '/:locale/stay#booking', permanent: false },
+      { source: '/hotel', destination: '/pl/stay', permanent: false },
+      { source: '/:locale/hotel', destination: '/:locale/stay', permanent: false },
+      // Orphaned test route → real adoption page
+      { source: '/:locale/adoptuj', destination: '/:locale/adopt', permanent: true },
       // Typo redirects found in GA4 analytics
       { source: '/:locale/welcom', destination: '/:locale/welkom', permanent: false },
       { source: '/:locale/welc', destination: '/:locale/welkom', permanent: false },

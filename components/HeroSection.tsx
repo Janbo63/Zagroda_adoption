@@ -61,20 +61,36 @@ export function HeroSection({ locale }: HeroSectionProps) {
             {t('subtitle')}
           </p>
 
-          <Link href={`/${locale}/contact`} className="pointer-events-auto">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant="default"
-                size="lg"
-                className="bg-[#2196f3] hover:bg-[#1976d2] text-white font-bold py-3 px-8 text-lg rounded-full shadow-lg transition-colors"
+          <div className="flex flex-col sm:flex-row gap-3 pointer-events-auto">
+            <Link href={`/${locale}/stay`}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {t('planVisit')}
-              </Button>
-            </motion.div>
-          </Link>
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 text-lg rounded-full shadow-lg transition-colors w-full sm:w-auto"
+                >
+                  🏡 {t('bookStay')}
+                </Button>
+              </motion.div>
+            </Link>
+            <Link href={`/${locale}/contact`}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="bg-[#2196f3] hover:bg-[#1976d2] text-white font-bold py-3 px-8 text-lg rounded-full shadow-lg transition-colors w-full sm:w-auto"
+                >
+                  {t('planVisit')}
+                </Button>
+              </motion.div>
+            </Link>
+          </div>
         </motion.div>
       </section>
     </>

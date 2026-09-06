@@ -144,8 +144,14 @@ export function Navbar({ locale }: NavbarProps) {
             ))}
           </div>
 
-          {/* Language + Sound */}
+          {/* Book Now CTA + Language + Sound */}
           <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0 sm:ml-8 gap-4">
+            <Link
+              href={`/${locale}/stay`}
+              className="hidden sm:inline-flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-md hover:shadow-lg"
+            >
+              🏡 {t('bookStay')}
+            </Link>
             <AmbientSoundToggle />
             <LanguageSwitcher />
           </div>
@@ -156,6 +162,15 @@ export function Navbar({ locale }: NavbarProps) {
       {isOpen && (
         <div className="sm:hidden fixed inset-x-0 top-16 bg-green-800 z-50">
           <div className="px-2 pt-2 pb-3 space-y-1">
+            {/* Mobile booking CTA — top of menu for maximum visibility */}
+            <Link
+              href={`/${locale}/stay`}
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center gap-2 px-3 py-3 rounded-lg text-base font-bold bg-orange-500 text-white hover:bg-orange-600 transition-colors touch-manipulation shadow-md mb-2"
+            >
+              🏡 {t('bookStay')}
+            </Link>
+
             {navigation.slice(0, 3).map((item) => (
               <Link
                 key={item.key}
