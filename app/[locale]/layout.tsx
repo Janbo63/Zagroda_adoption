@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 import { AutumnPromoBanner } from '@/components/AutumnPromoBanner'
+import { WhatsAppFloatingButton } from '@/components/WhatsAppFloatingButton'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -290,6 +291,7 @@ export default async function RootLayout({
             {children}
           </main>
           <Footer locale={locale} />
+          <WhatsAppFloatingButton locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
