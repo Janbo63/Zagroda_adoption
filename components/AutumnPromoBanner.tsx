@@ -18,7 +18,7 @@ const bannerTexts: Record<string, { badge: string; text: string; code: string; c
   cs: {
     badge: '🍂 Podzimní akce',
     text: 'Získejte 10% slevu na pobyty v září a říjnu!',
-    code: 'Kód: Autumn2026',
+    code: 'Kód: Podzim2026',
     cta: 'Rezervovat pobyt →',
   },
   en: {

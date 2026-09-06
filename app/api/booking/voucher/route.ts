@@ -31,6 +31,9 @@ export async function POST(req: Request) {
             normalised === 'AUTUMN2026' ||
             normalised === 'AUTUMN-2026' ||
             normalised === 'AUTUMN' ||
+            normalised === 'PODZIM2026' ||
+            normalised === 'PODZIM-2026' ||
+            normalised === 'PODZIM' ||
             normalised === 'AUGUST2026' ||
             normalised === 'ALPACA-1003' ||
             normalised === 'ALPACA1003'

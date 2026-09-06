@@ -40,9 +40,13 @@ export function WhatsAppFloatingButton({ locale }: Props) {
   // Custom greeting if on Autumn landing page
   let greeting = loc.greeting;
   if (pathname?.includes('jesien')) {
-    greeting = locale === 'pl'
-      ? 'Dzień dobry! Piszę w sprawie jesiennego pobytu z kodem Autumn2026 🦙'
-      : loc.greeting;
+    if (locale === 'cs') {
+      greeting = 'Dobrý den, mám zájem o podzimní pobyt v Zagrodě...';
+    } else if (locale === 'pl') {
+      greeting = 'Dzień dobry! Piszę w sprawie jesiennego pobytu z kodem Autumn2026 🦙';
+    } else {
+      greeting = 'Hello! Inquiring about an autumn stay with promo code Autumn2026 🦙';
+    }
   }
 
   const handleClick = () => {
