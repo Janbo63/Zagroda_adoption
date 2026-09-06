@@ -1,0 +1,51 @@
+name: VPS Drift Check
+
+on:
+  schedule:
+    # Run daily at 05:00 UTC (07:00 CEST)
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  drift-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check for unauthorized VPS changes
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 2m
+          script: |
+            cd /var/www/Zagroda_adoption
+
+            # Check if working tree matches git HEAD
+            DIRTY=$(git status --porcelain 2>/dev/null || echo "UNKNOWN")
+
+            # Check if HEAD matches origin/main
+            git fetch origin main --quiet
+            LOCAL=$(git rev-parse HEAD)
+            REMOTE=$(git rev-parse origin/main)
+
+            if [ -n "$DIRTY" ]; then
+              echo "❌ DRIFT: Uncommitted changes found on VPS!"
+              echo "$DIRTY"
+              curl -s -X POST https://stef.futuresolutionsai.com/api/logs \
+                -H "Content-Type: application/json" \
+                -H "X-API-Key: fs-log-key-2026" \
+                -d "{\"app\":\"zagroda-website\",\"level\":\"critical\",\"message\":\"❌ VPS DRIFT: Someone edited files directly on production server, bypassing GitHub. Files: $(echo $DIRTY | tr '\n' ', '). Fix: push changes via git, never edit on VPS.\"}"
+              exit 1
+            elif [ "$LOCAL" != "$REMOTE" ]; then
+              echo "⚠️ VPS is behind origin/main"
+              echo "  VPS:    $LOCAL"
+              echo "  Remote: $REMOTE"
+              curl -s -X POST https://stef.futuresolutionsai.com/api/logs \
+                -H "Content-Type: application/json" \
+                -H "X-API-Key: fs-log-key-2026" \
+                -d "{\"app\":\"zagroda-website\",\"level\":\"warn\",\"message\":\"⚠️ VPS is behind origin/main. VPS: ${LOCAL:0:8}, Remote: ${REMOTE:0:8}. A deployment may have failed.\"}"
+              exit 1
+            else
+              echo "✅ VPS is in sync with origin/main (${LOCAL:0:8})"
+            fi

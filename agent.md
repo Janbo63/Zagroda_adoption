@@ -102,6 +102,24 @@ Current release order: **R0 (Staging) → R0.5 (Booking Alignment) → R1 (Booki
 - **Beds25** (`F:\Git Hub Projects\Beds25\`): The internal booking admin system. The alpaca site calls Beds25 APIs for availability, booking creation and voucher validation. Room/property attribute definitions are owned by Beds25.
 - **Marketing Strategy**: Research and campaigns managed in the "Alpaca Farm Marketing Strategy" NotebookLM notebook.
 
+## Deployment Rules (Critical)
+
+> **⛔ NEVER edit files directly on the VPS.** All production changes MUST go through: `git commit → git push → GitHub Actions → auto-deploy`.
+
+**Why**: In September 2026, a GA4 tracking hotfix was applied directly via SSH to the VPS, bypassing git. This caused code drift between the repo and production, and the next CI/CD deploy could have overwritten the fix. We lost ~2 weeks of analytics data because the broken state wasn't caught.
+
+**Guardrails in place**:
+1. **`deploy-vps.sh`** — Detects unauthorized file edits on the VPS before each deploy and alerts Stef Dashboard
+2. **`drift-check.yml`** — Daily cron (07:00 CEST) verifies VPS code matches `origin/main`. Posts critical alert if drifted
+3. **`deploy.yml`** — Posts success/failure notifications to Stef Dashboard. On failure, explicitly says "DO NOT hotfix via SSH"
+4. **GA4 verification** — Post-deploy smoke test checks that `G-V9R1JJYYSG` is present in the HTML
+
+**If a deployment fails**:
+1. Check the GitHub Actions log for the error
+2. Fix the code locally
+3. Push to `main` — GitHub Actions will redeploy
+4. **Never** SSH into the VPS to edit code. The deploy script will overwrite any local changes.
+
 ## Known Issues
 
 - Large monolith components need refactoring: `AdoptionPageContent.tsx` (23KB), `VoucherPurchaseFlow.tsx` (17KB), `CampaignLandingPage.tsx` (18KB)
@@ -121,4 +139,6 @@ Current release order: **R0 (Staging) → R0.5 (Booking Alignment) → R1 (Booki
 | `components/CampaignLandingPage.tsx` | Marketing campaign page |
 | `middleware.ts` | i18n routing + Facebook crawler handling |
 | `docker-compose.yml` | Container config (port 3001) |
-| `.github/workflows/deploy.yml` | Auto-deploy to Hostinger via SSH |
+| `.github/workflows/deploy.yml` | Auto-deploy to Hostinger via SSH + Stef alerts |
+| `.github/workflows/drift-check.yml` | Daily VPS drift detection cron |
+| `scripts/deploy-vps.sh` | Server-side deploy: drift check, Docker rebuild, smoke tests, GA4 verify |
