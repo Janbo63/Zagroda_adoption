@@ -1568,6 +1568,10 @@
     "holiday2Tag": "Family Favorite",
     "holiday3": "Nov 11 — Independence Day (PL)",
     "holiday3Tag": "Long Weekend",
-    "checkAvailability": "Check Availability Now (10% OFF)"
+    "checkAvailability": "Check Availability Now (10% OFF)",
+    "includedTitle": "Included in every stay:",
+    "freeAlpacaPerk": "Complimentary Meet the Alpacas session + unlimited open access to visit the alpacas during your stay!",
+    "roomPerkMeet": "Free Meet the Alpacas session included",
+    "roomPerkAccess": "Open access to visit the alpacas while staying"
   }
 }

@@ -1508,18 +1508,23 @@
   },
   "autumn": {
     "badge": "Jesień 2026 • 10% Zniżki",
+    "heroOffer": "Jesienny pobyt z alpakami — od 499 PLN",
+    "urgency": "⚡ Zostało tylko kilka wolnych terminów w październiku!",
+    "socialProof": "⭐ 4.9/5 • ponad 250 zadowolonych gości",
     "metaTitle": "Jesień w Zagrodzie Alpakoterapii - 10% zniżki",
     "metaDescription": "Przeżyj magiczną jesień w Górach Izerskich. Spacery z alpakami, ogniska, złote lasy i przytulne pokoje. 10% zniżki z kodem Autumn2026.",
     "heroTitle": "Odkryj Magię Jesieni w Górach Izerskich",
     "heroSubtitle": "Przytulne pokoje, złote lasy, spacery z alpakami i wieczory przy ognisku. Zarezerwuj pobyt we wrześniu lub październiku z kodem Autumn2026 i zyskaj 10% zniżki.",
     "ctaBook": "Zarezerwuj z 10% Zniżki",
+    "ctaBookNow": "Zarezerwuj teraz",
+    "bookRoom": "Rezerwuj",
     "ctaActivities": "Zobacz Aktywności",
     "ctaWhatsapp": "Rezerwuj przez WhatsApp",
     "locationHook": "Tylko 5 min od Świeradowa-Zdroju • 25 min ze Szklarskiej Poręby • 2h z Wrocławia",
     "frictionLanguage": "Mówimy po polsku, czesku i angielsku",
     "frictionPayment": "Płatność kartą, BLIK oraz online",
     "frictionPromo": "10% zniżki z kodem Autumn2026",
-    "whatsappMessage": "Dzień dobry! Piszę w sprawie rezerwacji jesiennego pobytu z kodem Autumn2026 🦙",
+    "whatsappMessage": "Cześć, chcę zarezerwować pobyt jesienny z kodem Autumn2026 🦙",
     "activitiesTitle": "Jesienne Aktywności",
     "activitiesSubtitle": "Ciesz się złotą porą roku na naszej farmie i na izerskich szlakach.",
     "activity1Title": "Spacery i Karmienie Alpak",
@@ -1554,6 +1559,10 @@
     "holiday2Tag": "Ulubione dla Rodzin",
     "holiday3": "11 listopada — Święto Niepodległości (Polska)",
     "holiday3Tag": "Długi Weekend",
-    "checkAvailability": "Sprawdź Dostępność (10% Zniżki)"
+    "checkAvailability": "Sprawdź Dostępność (10% Zniżki)",
+    "includedTitle": "W cenie każdego pobytu:",
+    "freeAlpacaPerk": "Bezpłatne spotkanie z alpakami + nielimitowany dostęp do zagrody przez cały czas pobytu!",
+    "roomPerkMeet": "Bezpłatne spotkanie z alpakami w cenie",
+    "roomPerkAccess": "Otwarty dostęp do alpak przez cały pobyt"
   }
 }

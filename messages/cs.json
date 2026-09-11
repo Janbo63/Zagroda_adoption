@@ -1526,6 +1526,9 @@
   },
   "autumn": {
     "badge": "Podzim 2026 • Sleva 10 %",
+    "heroOffer": "Podzimní pobyt u alpak — od 2 900 Kč / noc",
+    "urgency": "⚡ Zbývá jen několik volných termínů v říjnu!",
+    "socialProof": "⭐ 4.9/5 • více než 250 spokojených hostů",
     "metaTitle": "Kam s dětmi na podzimní prázdniny? Farma alpak Zagroda (Jizerské hory)",
     "metaDescription": "Kouzelná farma alpak v Jizerských horách jen 15 min za hranicemi. Krmení z ruky, procházky na vodítku, tvořivé dílny a rodinné ubytování. 10% sleva s kódem Podzim2026.",
     "heroTitle": "Kam s dětmi na podzimní prázdniny v Jizerských horách? Objevte kouzelnou farmu alpak jen kousek za hranicemi",
@@ -1534,8 +1537,10 @@
     "frictionLanguage": "Domluvíte se u nás česky",
     "frictionPayment": "Platba kartou i v CZK možná",
     "frictionPromo": "10% sleva s kódem Podzim2026",
-    "whatsappMessage": "Dobrý den, mám zájem o podzimní pobyt v Zagrodě...",
+    "whatsappMessage": "Dobrý den, chci rezervovat podzimní pobyt s kódem Podzim2026 🦙",
     "ctaBook": "Rezervovat pobyt",
+    "ctaBookNow": "Rezervovat nyní",
+    "bookRoom": "Rezervovat",
     "ctaActivities": "Prozkoumat aktivity",
     "ctaWhatsapp": "Dotaz na WhatsApp",
     "activitiesTitle": "Zážitky pro celou rodinu",
@@ -1572,6 +1577,10 @@
     "holiday2Tag": "Hlavní rodinný termín",
     "holiday3": "11. listopadu — Polský Den nezávislosti",
     "holiday3Tag": "Listopadový klid",
-    "checkAvailability": "Ověřit dostupnost (10% sleva)"
+    "checkAvailability": "Ověřit dostupnost (10% sleva)",
+    "includedTitle": "V ceně každého pobytu:",
+    "freeAlpacaPerk": "Setkání s alpakami zdarma + neomezený přístup k alpakám po celou dobu pobytu!",
+    "roomPerkMeet": "Setkání s alpakami zdarma v ceně",
+    "roomPerkAccess": "Neomezený přístup k alpakám po celou dobu"
   }
 }

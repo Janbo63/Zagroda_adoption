@@ -113,6 +113,21 @@ export default async function AutumnPage({ params: { locale } }: { params: { loc
                         </span>
                     </div>
 
+                    {/* Value Inclusions Highlight Callout */}
+                    <div className="mb-6 sm:mb-8 p-4 sm:p-5 rounded-2xl bg-emerald-950/70 border border-emerald-500/50 shadow-xl text-left max-w-xl mx-auto backdrop-blur-sm">
+                        <div className="flex items-center sm:items-start gap-3.5">
+                            <span className="text-2xl sm:text-3xl flex-shrink-0">🦙</span>
+                            <div>
+                                <span className="text-emerald-400 font-bold text-xs sm:text-sm uppercase tracking-wider block mb-0.5">
+                                    {t('includedTitle')}
+                                </span>
+                                <p className="text-stone-100 font-semibold text-sm sm:text-base leading-snug">
+                                    {t('freeAlpacaPerk')}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Conversion CTAs — Above the fold on mobile */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                         <Link
@@ -201,6 +216,8 @@ export default async function AutumnPage({ params: { locale } }: { params: { loc
                             locale={locale}
                             promoCode={promoCode}
                             ctaText={t('viewRoom')}
+                            perkMeet={t('roomPerkMeet')}
+                            perkAccess={t('roomPerkAccess')}
                         />
                         <RoomCard 
                             name={t('roomJungleName')}
@@ -211,6 +228,8 @@ export default async function AutumnPage({ params: { locale } }: { params: { loc
                             highlight={true}
                             popularBadge={t('mostPopular')}
                             ctaText={t('viewRoom')}
+                            perkMeet={t('roomPerkMeet')}
+                            perkAccess={t('roomPerkAccess')}
                         />
                         <RoomCard 
                             name={t('roomForestName')}
@@ -219,6 +238,8 @@ export default async function AutumnPage({ params: { locale } }: { params: { loc
                             locale={locale}
                             promoCode={promoCode}
                             ctaText={t('viewRoom')}
+                            perkMeet={t('roomPerkMeet')}
+                            perkAccess={t('roomPerkAccess')}
                         />
                     </div>
                 </div>
@@ -274,7 +295,7 @@ function ActivityCard({ title, desc, icon }: { title: string, desc: string, icon
     );
 }
 
-function RoomCard({ name, price, desc, locale, promoCode = 'Autumn2026', highlight = false, popularBadge = 'Most Popular', ctaText = 'View Room' }: { name: string, price: string, desc: string, locale: string, promoCode?: string, highlight?: boolean, popularBadge?: string, ctaText?: string }) {
+function RoomCard({ name, price, desc, locale, promoCode = 'Autumn2026', highlight = false, popularBadge = 'Most Popular', ctaText = 'View Room', perkMeet, perkAccess }: { name: string, price: string, desc: string, locale: string, promoCode?: string, highlight?: boolean, popularBadge?: string, ctaText?: string, perkMeet?: string, perkAccess?: string }) {
     return (
         <div className={`p-6 rounded-xl border flex flex-col h-full ${highlight ? 'bg-stone-900 border-emerald-800 relative' : 'bg-stone-900 border-stone-800'}`}>
             {highlight && (
@@ -284,10 +305,25 @@ function RoomCard({ name, price, desc, locale, promoCode = 'Autumn2026', highlig
             )}
             <h3 className="text-2xl font-serif font-bold text-stone-100 mb-2">{name}</h3>
             <div className="text-emerald-400 font-medium mb-4">{price}</div>
-            <p className="text-stone-400 flex-grow mb-6">{desc}</p>
-            <Link href={`/${locale}/stay?code=${promoCode}`} className="block text-center bg-stone-800 hover:bg-stone-700 text-stone-200 py-3 rounded-lg font-medium transition-colors border border-stone-700 w-full">
-                {ctaText}
-            </Link>
+            <p className="text-stone-400 mb-4">{desc}</p>
+            
+            {/* Included Perks in Every Room */}
+            <div className="space-y-2 mb-6 pt-3 border-t border-stone-800/80 text-xs sm:text-sm text-stone-300">
+                <div className="flex items-center gap-2 text-emerald-400 font-medium">
+                    <span className="text-base">✓</span>
+                    <span>{perkMeet}</span>
+                </div>
+                <div className="flex items-center gap-2 text-emerald-400 font-medium">
+                    <span className="text-base">✓</span>
+                    <span>{perkAccess}</span>
+                </div>
+            </div>
+
+            <div className="mt-auto">
+                <Link href={`/${locale}/stay?code=${promoCode}`} className="block text-center bg-stone-800 hover:bg-stone-700 text-stone-200 py-3 rounded-lg font-medium transition-colors border border-stone-700 w-full">
+                    {ctaText}
+                </Link>
+            </div>
         </div>
     );
 }

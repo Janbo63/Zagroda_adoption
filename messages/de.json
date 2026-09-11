@@ -1553,6 +1553,10 @@
     "holiday2Tag": "Familien-Favorit",
     "holiday3": "11. November — Unabhängigkeitstag (PL)",
     "holiday3Tag": "Langes Wochenende",
-    "checkAvailability": "Verfügbarkeit prüfen (10% Rabatt)"
+    "checkAvailability": "Verfügbarkeit prüfen (10% Rabatt)",
+    "includedTitle": "In jedem Aufenthalt inbegriffen:",
+    "freeAlpacaPerk": "Kostenlose Alpaka-Begegnung + unbegrenzter Zugang zu den Alpakas während des gesamten Aufenthalts!",
+    "roomPerkMeet": "Kostenlose Alpaka-Begegnung inbegriffen",
+    "roomPerkAccess": "Freier Zugang zu den Alpakas während des Aufenthalts"
   }
 }
