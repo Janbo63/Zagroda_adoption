@@ -179,6 +179,7 @@ export async function POST(req: Request) {
                         ? intent.payment_method
                         : intent.payment_method?.id || null,
                     locale: meta.locale,
+                    currency: meta.currency || 'PLN',
                 });
                 console.log(`[Booking] Zoho Booking created: ${zohoDealId} (${bookingRef}) — Deposit Paid`);
 
@@ -208,6 +209,7 @@ export async function POST(req: Request) {
                     nipNumber: meta.nipNumber || undefined,
                     voucherCode: meta.voucherCode || undefined,
                     voucherAmount: meta.voucherAmount ? Number(meta.voucherAmount) : undefined,
+                    // TODO: When Beds25 integration goes live, these should use original PLN amounts (originalPLNTotal)
                     depositAmount: Number(meta.depositAmount),
                     balanceAmount: Number(meta.balanceAmount),
                     stripeDepositId: intent.id,

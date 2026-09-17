@@ -469,6 +469,10 @@
     "governing_law": {
       "title": "5. Prawo Właściwe",
       "content": "Niniejszy regulamin podlega prawu polskiemu. Wszelkie spory będą rozstrzygane przez sądy właściwe dla siedziby właściciela w Polsce. W przypadku rozbieżności między wersjami językowymi, wersja polska jest rozstrzygająca."
+    },
+    "pricing_errors": {
+      "title": "6. Ceny i Błędy Techniczne",
+      "content": "Wszystkie ceny są wyświetlane w walucie lokalnej dla wygody, przy użyciu stałych kursów wymiany. Walutą bazową wszystkich rezerwacji jest polski złoty (PLN). Zastrzegamy sobie prawo do anulowania i pełnego zwrotu każdej rezerwacji, w której błąd techniczny, awaria systemu lub błąd konwersji walutowej spowodował wyświetlenie lub naliczenie nieprawidłowej ceny. W takich przypadkach gość zostanie niezwłocznie powiadomiony i otrzyma możliwość ponownej rezerwacji po prawidłowej cenie. Żadna rezerwacja nie zostanie potwierdzona w cenie wynikającej z oczywistego błędu. Ceny wyświetlane w walutach innych niż PLN mają charakter orientacyjny i oparte są na stałych kursach wymiany, które są okresowo weryfikowane."
     }
   },
   "vouchers": {
@@ -1219,10 +1223,10 @@
       "noRooms": "Brak dostępnych pokoi w wybranym terminie.",
       "tryDifferent": "Spróbuj innych dat",
       "selected": "Wybrany",
-      "perNight": "{price} PLN/noc",
-      "totalStay": "{nights} nocy · {price} PLN/noc",
+      "perNight": "{price}/noc",
+      "totalStay": "{nights} nocy · {price}/noc",
       "depositToday": "Zaliczka dziś",
-      "cleaningFee": "+ {amount} PLN opłata za sprzątanie",
+      "cleaningFee": "+ {amount} opłata za sprzątanie",
       "priceOnRequest": "Cena na zapytanie"
     },
     "guests": {
@@ -1249,7 +1253,7 @@
       "placeholder": "Wpisz kod vouchera",
       "apply": "Zastosuj",
       "applied": "Voucher zastosowany!",
-      "discount": "Zniżka: {amount} PLN",
+      "discount": "Zniżka: {amount}",
       "invalid": "Nieprawidłowy lub wygasły kod vouchera",
       "skip": "Pomiń — nie mam vouchera"
     },
@@ -1264,15 +1268,16 @@
       "balanceDue": "Reszta do zapłaty 3 dni przed przyjazdem",
       "cancellation": "Polityka anulowania",
       "cancellationText": "Zaliczka jest bezzwrotna. Pozostała kwota zostanie pobrana automatycznie 3 dni przed przyjazdem. Możesz zmienić termin lub anulować bezpłatnie do 3 dni przed przyjazdem.",
+      "currencyNote": "Ceny w PLN. Pełne warunki rezerwacji dostępne poniżej.",
       "proceedToPayment": "Przejdź do płatności →"
     },
     "payment": {
       "title": "Płatność",
       "subtitle": "Bezpieczna płatność kartą przez Stripe.",
       "preparing": "Przygotowywanie płatności…",
-      "chargingDeposit": "Kwota zaliczki: {amount} PLN",
+      "chargingDeposit": "Kwota zaliczki: {amount}",
       "cardSaved": "Dane karty są bezpiecznie zapisane do pobrania pozostałej kwoty 3 dni przed przyjazdem.",
-      "payButton": "Zapłać {amount} PLN zaliczki",
+      "payButton": "Zapłać {amount} zaliczki",
       "processing": "Przetwarzanie…",
       "error": "Nie udało się zainicjować płatności. Spróbuj ponownie.",
       "backToSummary": "← Powrót do podsumowania"

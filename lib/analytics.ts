@@ -33,9 +33,10 @@ export function trackBeginCheckout(params: {
     checkIn: string;
     checkOut: string;
     nights: number;
+    currency?: string;
 }) {
     gtag('event', 'begin_checkout', {
-        currency: 'PLN',
+        currency: params.currency || 'PLN',
         value: 0, // unknown until room selected
         items: [],
         check_in_date: params.checkIn,
@@ -50,6 +51,7 @@ export function trackSelectRoom(params: {
     roomName: string;
     price: number;
     nights: number;
+    currency?: string;
 }) {
     gtag('event', 'select_item', {
         item_list_name: 'Available Rooms',
@@ -62,7 +64,7 @@ export function trackSelectRoom(params: {
         }],
         nights: params.nights,
         value: params.price,
-        currency: 'PLN',
+        currency: params.currency || 'PLN',
     });
 }
 
@@ -73,9 +75,10 @@ export function trackAddToCart(params: {
     totalPrice: number;
     depositAmount: number;
     nights: number;
+    currency?: string;
 }) {
     gtag('event', 'add_to_cart', {
-        currency: 'PLN',
+        currency: params.currency || 'PLN',
         value: params.totalPrice,
         items: [{
             item_id: params.roomId,
@@ -95,9 +98,10 @@ export function trackAddPaymentInfo(params: {
     roomName: string;
     totalPrice: number;
     depositAmount: number;
+    currency?: string;
 }) {
     gtag('event', 'add_payment_info', {
-        currency: 'PLN',
+        currency: params.currency || 'PLN',
         value: params.depositAmount,
         payment_type: 'Stripe',
         items: [{
@@ -120,10 +124,11 @@ export function trackBookingConfirmed(params: {
     nights: number;
     checkIn: string;
     checkOut: string;
+    currency?: string;
 }) {
     gtag('event', 'purchase', {
         transaction_id: params.bookingRef,
-        currency: 'PLN',
+        currency: params.currency || 'PLN',
         value: params.depositAmount,      // deposit paid now (revenue recognised)
         tax: 0,
         shipping: 0,

@@ -128,7 +128,7 @@
         "name": "Tuinkamer",
         "desc": "Word wakker vlakbij de alpaca's. Een uniek ontworpen kamer vol karakter — een bijzonder plek om te rusten na een dag op de boerderij.",
         "capacity": "Tot 3 gasten",
-        "price": "vanaf 493 PLN / ~€115",
+        "price": "vanaf €115",
         "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
         "included": [
           "Eigen badkamer",
@@ -141,7 +141,7 @@
         "name": "Junglekamer",
         "desc": "Weelderige, groene kamer met een gezellig gevoel. Een privéretraite omringd door botanisch karakter.",
         "capacity": "Tot 3 gasten",
-        "price": "vanaf 493 PLN / ~€115",
+        "price": "vanaf €115",
         "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
         "included": [
           "Eigen badkamer",
@@ -154,7 +154,7 @@
         "name": "Bosappartement",
         "desc": "Een op zichzelf staand appartement met uitzicht op de alpacatuin. De enige ruimte met een eigen kookhoek — perfect voor langer verblijf en families die hun eigen ruimte willen.",
         "capacity": "2 volwassenen + 2 kinderen",
-        "price": "vanaf 593 PLN / ~€138",
+        "price": "vanaf €139",
         "priceSub": "per 2 nachten, incl. Maak kennis met de alpaca's",
         "included": [
           "Eigen kookhoek",
@@ -492,6 +492,10 @@
     "governing_law": {
       "title": "5. Governing Law",
       "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
+    },
+    "pricing_errors": {
+      "title": "6. Prijzen & Technische Fouten",
+      "content": "Alle prijzen worden voor uw gemak in uw lokale valuta weergegeven met vaste wisselkoersen. De basisvaluta voor alle boekingen is de Poolse Złoty (PLN). Wij behouden ons het recht voor om elke boeking te annuleren en volledig terug te betalen wanneer een technische fout, systeemstoring of valutaomrekeningsfout heeft geleid tot een onjuiste prijsweergave of -berekening. In dergelijke gevallen wordt de gast onmiddellijk op de hoogte gebracht en krijgt de mogelijkheid om opnieuw te boeken tegen de juiste prijs. Geen enkele boeking wordt bevestigd tegen een prijs die het gevolg was van een kennelijke fout. Prijzen weergegeven in andere valuta dan PLN zijn indicatief en gebaseerd op vaste wisselkoersen die periodiek worden herzien."
     }
   },
   "vouchers": {
@@ -1214,10 +1218,10 @@
       "noRooms": "Geen kamers beschikbaar voor deze data.",
       "tryDifferent": "Probeer andere data",
       "selected": "Geselecteerd",
-      "perNight": "{price} PLN/nacht",
-      "totalStay": "{nights} nachten · {price} PLN/nacht",
+      "perNight": "{price}/nacht",
+      "totalStay": "{nights} nachten · {price}/nacht",
       "depositToday": "Aanbetaling vandaag",
-      "cleaningFee": "+ {amount} PLN schoonmaakkosten",
+      "cleaningFee": "+ {amount} schoonmaakkosten",
       "priceOnRequest": "Prijs op aanvraag"
     },
     "guests": {
@@ -1244,7 +1248,7 @@
       "placeholder": "Voer boncode in",
       "apply": "Toepassen",
       "applied": "Bon toegepast!",
-      "discount": "Korting: {amount} PLN",
+      "discount": "Korting: {amount}",
       "invalid": "Ongeldige of verlopen boncode",
       "skip": "Overslaan — ik heb geen bon"
     },
@@ -1259,15 +1263,16 @@
       "balanceDue": "Restbedrag 3 dagen voor aankomst",
       "cancellation": "Annuleringsbeleid",
       "cancellationText": "De aanbetaling is niet-restitueerbaar. Je restbedrag wordt automatisch 3 dagen voor aankomst afgeschreven. Je kunt gratis wijzigen of annuleren tot 3 dagen voor aankomst.",
+      "currencyNote": "Prijzen omgerekend vanuit PLN tegen een vaste wisselkoers. Zie Voorwaarden.",
       "proceedToPayment": "Doorgaan naar betaling →"
     },
     "payment": {
       "title": "Betaling",
       "subtitle": "Veilige kaartbetaling via Stripe.",
       "preparing": "Betaling voorbereiden…",
-      "chargingDeposit": "Aanbetaling: {amount} PLN",
+      "chargingDeposit": "Aanbetaling: {amount}",
       "cardSaved": "Je kaartgegevens worden veilig opgeslagen voor de resterende betaling 3 dagen voor aankomst.",
-      "payButton": "Betaal {amount} PLN aanbetaling",
+      "payButton": "Betaal {amount} aanbetaling",
       "processing": "Verwerken…",
       "error": "Betaling kon niet worden gestart. Probeer het opnieuw.",
       "backToSummary": "← Terug naar overzicht"
@@ -1532,13 +1537,13 @@
     "roomsTitle": "Gezellige Herfstaccommodaties",
     "roomsSubtitle": "Jouw toevluchtsoord in de bergen in Orłowice, vlak bij de Tsjechische grens.",
     "roomGardenName": "Tuinkamer",
-    "roomGardenPrice": "320 PLN / nacht",
+    "roomGardenPrice": "€75 / nacht",
     "roomGardenDesc": "Intiem en gezellig, perfect voor stellen. Directe toegang tot de tuin en zicht op de alpaca's.",
     "roomJungleName": "Jungle Kamer",
-    "roomJunglePrice": "350 PLN / nacht",
+    "roomJunglePrice": "€82 / nacht",
     "roomJungleDesc": "Ruim en sfeervol. Favoriet bij gezinnen voor een ontspannen herfstuitje.",
     "roomForestName": "Bos Appartement",
-    "roomForestPrice": "400 PLN / nacht",
+    "roomForestPrice": "€94 / nacht",
     "roomForestDesc": "Onze grootste accommodatie met eigen kookgelegenheid. Ideaal voor langere verblijven en privacy.",
     "mostPopular": "Meest populair",
     "viewRoom": "Bekijk kamer (10% korting)",

@@ -360,7 +360,7 @@
         "name": "Gartenzimmer",
         "desc": "Wachen Sie nah bei den Alpakas auf. Ein einzigartig gestaltetes Zimmer voller Charakter — ein besonderer Ort zum Entspannen nach einem Tag auf dem Bauernhof.",
         "capacity": "Bis zu 3 Gäste",
-        "price": "ab 493 PLN / ~€115",
+        "price": "ab €115",
         "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
         "included": [
           "Eigenes Bad",
@@ -373,7 +373,7 @@
         "name": "Dschungelzimmer",
         "desc": "Üppiges, grünes Zimmer mit gemütlichem Flair. Ein privater Rückzugsort umgeben von botanischem Charakter.",
         "capacity": "Bis zu 3 Gäste",
-        "price": "ab 493 PLN / ~€115",
+        "price": "ab €115",
         "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
         "included": [
           "Eigenes Bad",
@@ -386,7 +386,7 @@
         "name": "Waldapartement",
         "desc": "Ein eigenständiges Apartment mit Blick auf den Alpakagarten. Der einzige Bereich mit einer eigenen Kochecke — perfekt für längere Aufenthalte und Familien, die ihren eigenen Raum möchten.",
         "capacity": "2 Erwachsene + 2 Kinder",
-        "price": "ab 593 PLN / ~€138",
+        "price": "ab €139",
         "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
         "included": [
           "Eigene Kochecke",
@@ -720,6 +720,10 @@
     "governing_law": {
       "title": "5. Anwendbares Recht",
       "content": "Diese AGB unterliegen dem polnischen Recht. Gerichtsstand ist Polen. Bei Abweichungen zwischen den Sprachversionen ist die polnische Fassung maßgebend."
+    },
+    "pricing_errors": {
+      "title": "6. Preise & Technische Fehler",
+      "content": "Alle Preise werden zu Ihrer Bequemlichkeit in Ihrer Landeswährung mit festen Wechselkursen angezeigt. Die Basiswährung für alle Buchungen ist der Polnische Złoty (PLN). Wir behalten uns das Recht vor, jede Buchung zu stornieren und vollständig zu erstatten, bei der ein technischer Fehler, eine Systemstörung oder ein Währungsumrechnungsfehler zu einer falschen Preisanzeige oder -berechnung geführt hat. In solchen Fällen wird der Gast sofort benachrichtigt und erhält die Möglichkeit, zum korrekten Preis erneut zu buchen. Keine Buchung gilt als bestätigt zu einem Preis, der offensichtlich fehlerhaft war. In Nicht-PLN-Währungen angezeigte Preise sind Richtwerte und basieren auf festen Wechselkursen, die regelmäßig überprüft werden."
     }
   },
   "footer": {
@@ -1218,10 +1222,10 @@
       "noRooms": "Keine Zimmer für diese Daten verfügbar.",
       "tryDifferent": "Andere Daten versuchen",
       "selected": "Ausgewählt",
-      "perNight": "{price} PLN/Nacht",
-      "totalStay": "{nights} Nächte · {price} PLN/Nacht",
+      "perNight": "{price}/Nacht",
+      "totalStay": "{nights} Nächte · {price}/Nacht",
       "depositToday": "Anzahlung heute",
-      "cleaningFee": "+ {amount} PLN Reinigungsgebühr",
+      "cleaningFee": "+ {amount} Reinigungsgebühr",
       "priceOnRequest": "Preis auf Anfrage"
     },
     "guests": {
@@ -1248,7 +1252,7 @@
       "placeholder": "Gutscheincode eingeben",
       "apply": "Anwenden",
       "applied": "Gutschein angewendet!",
-      "discount": "Rabatt: {amount} PLN",
+      "discount": "Rabatt: {amount}",
       "invalid": "Ungültiger oder abgelaufener Gutscheincode",
       "skip": "Überspringen — ich habe keinen Gutschein"
     },
@@ -1263,15 +1267,16 @@
       "balanceDue": "Restbetrag 3 Tage vor Ankunft",
       "cancellation": "Stornierungsbedingungen",
       "cancellationText": "Die Anzahlung ist nicht erstattungsfähig. Ihr Restbetrag wird automatisch 3 Tage vor Ankunft abgebucht. Sie können bis 3 Tage vor Ankunft kostenlos umbuchen oder stornieren.",
+      "currencyNote": "Preise aus PLN zu festem Wechselkurs umgerechnet. Siehe AGB.",
       "proceedToPayment": "Weiter zur Zahlung →"
     },
     "payment": {
       "title": "Zahlung",
       "subtitle": "Sichere Kartenzahlung über Stripe.",
       "preparing": "Zahlung wird vorbereitet…",
-      "chargingDeposit": "Anzahlung: {amount} PLN",
+      "chargingDeposit": "Anzahlung: {amount}",
       "cardSaved": "Ihre Kartendaten werden sicher für die Restzahlung 3 Tage vor Ankunft gespeichert.",
-      "payButton": "{amount} PLN Anzahlung bezahlen",
+      "payButton": "{amount} Anzahlung bezahlen",
       "processing": "Verarbeitung…",
       "error": "Zahlung konnte nicht initiiert werden. Bitte versuchen Sie es erneut.",
       "backToSummary": "← Zurück zur Zusammenfassung"
@@ -1536,13 +1541,13 @@
     "roomsTitle": "Gemütliche Unterkünfte für den Herbst",
     "roomsSubtitle": "Ihr Rückzugsort in den Bergen in Orłowice, direkt an der tschechischen Grenze.",
     "roomGardenName": "Gartenzimmer",
-    "roomGardenPrice": "320 PLN / Nacht",
+    "roomGardenPrice": "€75 / Nacht",
     "roomGardenDesc": "Gemütlich und intim, ideal für Paare. Direkter Zugang zum Garten und Blick auf die Alpakas.",
     "roomJungleName": "Dschungelzimmer",
-    "roomJunglePrice": "350 PLN / Nacht",
+    "roomJunglePrice": "€82 / Nacht",
     "roomJungleDesc": "Geräumig und lebendig. Beliebt bei Familien für eine erholsame Auszeit im Herbst.",
     "roomForestName": "Wald-Apartment",
-    "roomForestPrice": "400 PLN / Nacht",
+    "roomForestPrice": "€94 / Nacht",
     "roomForestDesc": "Unsere größte Unterkunft mit eigener Küchenzeile. Ideal für längere Aufenthalte und viel Privatsphäre.",
     "mostPopular": "Sehr beliebt",
     "viewRoom": "Zimmer ansehen (10% Rabatt)",

@@ -430,7 +430,7 @@
         "name": "Zahradní pokoj",
         "desc": "Probuďte se blízko alpak. Jedinečně navržený pokoj plný charakteru — výjimečné místo k odpočinku po dni na farmě.",
         "capacity": "Až 3 hosté",
-        "price": "od 493 PLN / ~€115",
+        "price": "od 2 860 Kč",
         "priceSub": "za 2 noci, vč. Poznejte alpaky",
         "included": [
           "Vlastní koupelna",
@@ -443,7 +443,7 @@
         "name": "Džunglový pokoj",
         "desc": "Bujný, zelený pokoj s útulnou atmosférou. Soukromý úkryt obklopený botanickým charakterem.",
         "capacity": "Až 3 hosté",
-        "price": "od 493 PLN / ~€115",
+        "price": "od 2 860 Kč",
         "priceSub": "za 2 noci, vč. Poznejte alpaky",
         "included": [
           "Vlastní koupelna",
@@ -456,7 +456,7 @@
         "name": "Lesní apartmán",
         "desc": "Samostatný apartmán s výhledem na alpacíí zahradu. Jediné ubytování s vlastní kuchyňkou — ideální pro delší pobyty a rodiny, které chtějí vlastní prostor.",
         "capacity": "2 dospělí + 2 děti",
-        "price": "od 593 PLN / ~€138",
+        "price": "od 3 440 Kč",
         "priceSub": "za 2 noci, vč. Poznejte alpaky",
         "included": [
           "Vlastní kuchyňka",
@@ -738,6 +738,10 @@
     "governing_law": {
       "title": "5. Governing Law",
       "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
+    },
+    "pricing_errors": {
+      "title": "6. Ceny a Technické Chyby",
+      "content": "Všechny ceny jsou pro vaše pohodlí zobrazeny v místní měně s použitím pevných směnných kurzů. Základní měnou všech rezervací je polský zlotý (PLN). Vyhrazujeme si právo zrušit a plně vrátit jakoukoli rezervaci, u které technická chyba, porucha systému nebo chyba při převodu měny vedla k zobrazení nebo účtování nesprávné ceny. V takových případech bude host neprodleně informován a bude mu nabídnuta možnost nové rezervace za správnou cenu. Žádná rezervace nebude potvrzena za cenu, která byla výsledkem zjevné chyby. Ceny zobrazené v jiných měnách než PLN jsou orientační a jsou založeny na pevných směnných kurzech, které jsou pravidelně revidovány."
     }
   },
   "footer": {
@@ -1236,10 +1240,10 @@
       "noRooms": "Pro vybraná data nejsou dostupné žádné pokoje.",
       "tryDifferent": "Zkuste jiná data",
       "selected": "Vybráno",
-      "perNight": "{price} PLN/noc",
-      "totalStay": "{nights} nocí · {price} PLN/noc",
+      "perNight": "{price}/noc",
+      "totalStay": "{nights} nocí · {price}/noc",
       "depositToday": "Záloha dnes",
-      "cleaningFee": "+ {amount} PLN poplatek za úklid",
+      "cleaningFee": "+ {amount} poplatek za úklid",
       "priceOnRequest": "Cena na vyžádání"
     },
     "guests": {
@@ -1266,7 +1270,7 @@
       "placeholder": "Zadejte kód poukazu",
       "apply": "Uplatnit",
       "applied": "Poukaz uplatněn!",
-      "discount": "Sleva: {amount} PLN",
+      "discount": "Sleva: {amount}",
       "invalid": "Neplatný nebo prošlý kód poukazu",
       "skip": "Přeskočit — nemám poukaz"
     },
@@ -1281,15 +1285,16 @@
       "balanceDue": "Doplatek 3 dny před příjezdem",
       "cancellation": "Podmínky zrušení",
       "cancellationText": "Záloha je nevratná. Zbývající částka bude automaticky stržena 3 dny před příjezdem. Můžete změnit termín nebo zrušit zdarma do 3 dnů před příjezdem.",
+      "currencyNote": "Ceny jsou přepočteny z PLN pevným kurzem. Podrobnosti v obchodních podmínkách.",
       "proceedToPayment": "Pokračovat k platbě →"
     },
     "payment": {
       "title": "Platba",
       "subtitle": "Bezpečná platba kartou přes Stripe.",
       "preparing": "Příprava platby…",
-      "chargingDeposit": "Záloha: {amount} PLN",
+      "chargingDeposit": "Záloha: {amount}",
       "cardSaved": "Údaje vaší karty jsou bezpečně uloženy pro doplatek 3 dny před příjezdem.",
-      "payButton": "Zaplatit {amount} PLN zálohu",
+      "payButton": "Zaplatit {amount} zálohu",
       "processing": "Zpracovávání…",
       "error": "Platbu se nepodařilo iniciovat. Zkuste to prosím znovu.",
       "backToSummary": "← Zpět na shrnutí"
@@ -1560,13 +1565,13 @@
     "roomsTitle": "Útulné Rodinné Ubytování",
     "roomsSubtitle": "Pokoje s výhledem na výběh alpak v Orłowicích, jen 15 minut z Nového Města pod Smrkem.",
     "roomGardenName": "Pokoj Zahrada",
-    "roomGardenPrice": "320 PLN / noc",
+    "roomGardenPrice": "1 856 Kč / noc",
     "roomGardenDesc": "Útulný pokoj ideální pro páry s přímým vstupem do zahrady a výhledem na alpaky.",
     "roomJungleName": "Pokoj Džungle",
-    "roomJunglePrice": "350 PLN / noc",
+    "roomJunglePrice": "2 030 Kč / noc",
     "roomJungleDesc": "Prostorný pokoj oblíbený u rodin hledajících podzimní únik do přírody.",
     "roomForestName": "Apartmán Les",
-    "roomForestPrice": "400 PLN / noc",
+    "roomForestPrice": "2 320 Kč / noc",
     "roomForestDesc": "Náš největší apartmán s vlastní kuchyňkou. Ideální pro delší pobyty a soukromí.",
     "mostPopular": "Nejoblíbenější",
     "viewRoom": "Zobrazit pokoj (-10 %)",

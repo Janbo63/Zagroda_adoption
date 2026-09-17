@@ -12,6 +12,7 @@ import {
     trackAddPaymentInfo, trackBookingConfirmed, trackPaymentFailed, trackVoucherApplied,
     trackEvent,
 } from '@/lib/analytics';
+import { getCurrencyForLocale, convertFromPLN, formatPrice, type Currency } from '@/lib/currency';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -59,6 +60,7 @@ interface BookingState {
     depositAmount: number;
     balanceAmount: number;
     totalAmount: number;
+    originalPLNTotal: number;
 }
 
 interface Props { locale: string; }
@@ -472,21 +474,25 @@ function StepRoom({ state, onChange, onNext, onBack }: {
     }, [state.checkIn, state.checkOut]);
 
     const selectRoom = (room: Room) => {
+        const currency = getCurrencyForLocale(locale);
         onChange('selectedRoom', room);
         // Track room selection into GA4
-        trackSelectRoom({ roomId: room.roomId, roomName: room.name, price: room.totalPrice, nights: room.nights || state.nights });
+        trackSelectRoom({ roomId: room.roomId, roomName: room.name, price: room.totalPrice, nights: room.nights || state.nights, currency });
         // Use totalPrice from API; fall back to basePrice * nights, then rackRate * nights
         const nights = room.nights || state.nights || 1;
-        let effectiveTotal = room.totalPrice > 0 ? room.totalPrice : 0;
-        if (!effectiveTotal && room.basePrice > 0) effectiveTotal = room.basePrice * nights;
-        if (!effectiveTotal && room.rackRate && room.rackRate > 0) effectiveTotal = room.rackRate * nights;
-        if (!effectiveTotal || isNaN(effectiveTotal)) effectiveTotal = 0;
-        const deposit = Math.round(effectiveTotal * 0.1);
+        let plnTotal = room.totalPrice > 0 ? room.totalPrice : 0;
+        if (!plnTotal && room.basePrice > 0) plnTotal = room.basePrice * nights;
+        if (!plnTotal && room.rackRate && room.rackRate > 0) plnTotal = room.rackRate * nights;
+        if (!plnTotal || isNaN(plnTotal)) plnTotal = 0;
+        // Convert to display currency
+        const displayTotal = convertFromPLN(plnTotal, currency);
+        const deposit = Math.round(displayTotal * 0.1);
         onChange('depositAmount', deposit);
-        onChange('balanceAmount', effectiveTotal - deposit);
-        onChange('totalAmount', effectiveTotal);
+        onChange('balanceAmount', displayTotal - deposit);
+        onChange('totalAmount', displayTotal);
+        onChange('originalPLNTotal', plnTotal);
         // Patch the room object so summary/payment steps show the correct price
-        onChange('selectedRoom', { ...room, totalPrice: effectiveTotal, pricePerNight: Math.round(effectiveTotal / room.nights) });
+        onChange('selectedRoom', { ...room, totalPrice: displayTotal, pricePerNight: Math.round(displayTotal / room.nights) });
     };
 
     return (
@@ -578,34 +584,36 @@ function StepRoom({ state, onChange, onNext, onBack }: {
 
                                 {/* Pricing — emerald callout matching site pattern */}
                                 {(() => {
+                                    const currency = getCurrencyForLocale(locale);
                                     const nights = room.nights || state.nights || 1;
-                                    let effectiveTotal = room.totalPrice > 0 ? room.totalPrice : 0;
-                                    if (!effectiveTotal && room.basePrice > 0) effectiveTotal = room.basePrice * nights;
-                                    if (!effectiveTotal && room.rackRate && room.rackRate > 0) effectiveTotal = room.rackRate * nights;
-                                    if (!effectiveTotal || isNaN(effectiveTotal)) effectiveTotal = 0;
-                                    const effectivePPN = nights > 0 ? Math.round(effectiveTotal / nights) : 0;
+                                    let plnTotal = room.totalPrice > 0 ? room.totalPrice : 0;
+                                    if (!plnTotal && room.basePrice > 0) plnTotal = room.basePrice * nights;
+                                    if (!plnTotal && room.rackRate && room.rackRate > 0) plnTotal = room.rackRate * nights;
+                                    if (!plnTotal || isNaN(plnTotal)) plnTotal = 0;
+                                    const displayTotal = convertFromPLN(plnTotal, currency);
+                                    const displayPPN = nights > 0 ? Math.round(displayTotal / nights) : 0;
                                     return (
                                         <div className="bg-emerald-950/60 border border-emerald-800/50 rounded-xl p-4 flex justify-between items-end">
                                             <div>
                                                 <div className="text-2xl font-bold text-emerald-400">
-                                                    {effectiveTotal > 0 ? `${effectiveTotal.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN` : t('rooms.priceOnRequest')}
+                                                    {displayTotal > 0 ? formatPrice(displayTotal, currency) : t('rooms.priceOnRequest')}
                                                 </div>
-                                                {effectiveTotal > 0 && (
+                                                {displayTotal > 0 && (
                                                     <div className="text-sm text-emerald-600">
-                                                        {t('rooms.totalStay', { nights, price: effectivePPN })}
+                                                        {t('rooms.totalStay', { nights, price: formatPrice(displayPPN, currency) })}
                                                     </div>
                                                 )}
                                                 {room.cleaningFee && room.cleaningFee > 0 && (
                                                     <div className="text-xs text-stone-500 mt-1">
-                                                        {t('rooms.cleaningFee', { amount: room.cleaningFee })}
+                                                        {t('rooms.cleaningFee', { amount: formatPrice(convertFromPLN(room.cleaningFee, currency), currency) })}
                                                     </div>
                                                 )}
                                             </div>
-                                            {effectiveTotal > 0 && (
+                                            {displayTotal > 0 && (
                                                 <div className="text-right">
                                                     <div className="text-xs text-stone-400">{t('rooms.depositToday')}</div>
                                                     <div className="text-lg font-bold text-white">
-                                                        {Math.round(effectiveTotal * 0.1).toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN
+                                                        {formatPrice(Math.round(displayTotal * 0.1), currency)}
                                                     </div>
                                                 </div>
                                             )}
@@ -766,11 +774,12 @@ function StepExtras({ state, onChange, onNext, onBack }: {
             });
             const data = await res.json();
             if (data.valid) {
+                const currency = getCurrencyForLocale(locale);
                 onChange('voucherValid', true);
                 onChange('voucherDiscountType', data.discountType);
                 const discountAmount = data.discountType === 'PERCENT'
                     ? Math.round(state.totalAmount * data.discountValue / 100)
-                    : data.discountValue;
+                    : convertFromPLN(data.discountValue, currency); // Fixed voucher values are in PLN
                 onChange('voucherDiscount', discountAmount);
                 trackVoucherApplied({ code: state.voucherCode, discount: discountAmount });
                 const discountedTotal = Math.max(0, state.totalAmount - discountAmount);
@@ -828,7 +837,7 @@ function StepExtras({ state, onChange, onNext, onBack }: {
                     </div>
                     {state.voucherValid && (
                         <p className="text-emerald-400 text-sm mt-2 flex items-center gap-1">
-                            <Check className="w-4 h-4" /> {t('voucher.discount', { amount: state.voucherDiscount.toLocaleString(locale === 'en' ? 'en-US' : locale) })}
+                            <Check className="w-4 h-4" /> {t('voucher.discount', { amount: formatPrice(state.voucherDiscount, getCurrencyForLocale(locale)) })}
                         </p>
                     )}
                     {state.voucherError && <p className="text-red-400 text-sm mt-2">{state.voucherError}</p>}
@@ -873,6 +882,7 @@ function StepSummary({ state, onNext, onBack }: {
     const t = useTranslations('booking');
     const locale = useLocale();
     const room = state.selectedRoom!;
+    const currency = getCurrencyForLocale(locale);
 
     const SummaryRow = ({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) => (
         <div className={`flex justify-between items-center py-3 border-b border-stone-700/50 ${highlight ? 'text-white' : ''}`}>
@@ -909,25 +919,25 @@ function StepSummary({ state, onNext, onBack }: {
                         <>
                             <SummaryRow
                                 label={t('summary.totalStay')}
-                                value={`${state.totalAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`}
+                                value={formatPrice(state.totalAmount, currency)}
                             />
                             <div className="flex justify-between items-center py-3 border-b border-stone-700/50 text-sm">
                                 <span className="text-stone-400">{t('summary.voucherDiscount')} ({state.voucherCode})</span>
-                                <strong className="text-emerald-400 font-bold">−{state.voucherDiscount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
+                                <strong className="text-emerald-400 font-bold">−{formatPrice(state.voucherDiscount, currency)}</strong>
                             </div>
                             <div className="flex justify-between items-center py-3 border-b border-stone-700/50 bg-stone-800/60 px-3 rounded-xl my-2">
                                 <span className="text-stone-200 font-semibold text-sm">
                                     {totalAfterDiscountLabels[locale] || totalAfterDiscountLabels.en}
                                 </span>
                                 <strong className="text-white text-base font-bold">
-                                    {finalTotal.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN
+                                    {formatPrice(finalTotal, currency)}
                                 </strong>
                             </div>
                         </>
                     ) : (
                         <SummaryRow
                             label={t('summary.totalStay')}
-                            value={`${state.totalAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`}
+                            value={formatPrice(state.totalAmount, currency)}
                         />
                     )}
                 </div>
@@ -936,12 +946,12 @@ function StepSummary({ state, onNext, onBack }: {
                 <div className="bg-emerald-950/60 border-t border-emerald-800/50 px-5 py-4">
                     <SummaryRow
                         label={t('summary.depositNow')}
-                        value={`${state.depositAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN`}
+                        value={formatPrice(state.depositAmount, currency)}
                         highlight
                     />
                     <div className="flex justify-between items-center pt-3 text-sm">
                         <span className="text-stone-400 text-xs sm:text-sm">{t('summary.balanceDue')} (90%)</span>
-                        <span className="text-stone-300 font-semibold">{state.balanceAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</span>
+                        <span className="text-stone-300 font-semibold">{formatPrice(state.balanceAmount, currency)}</span>
                     </div>
                 </div>
             </div>
@@ -949,6 +959,7 @@ function StepSummary({ state, onNext, onBack }: {
             <div className="bg-stone-800/50 border border-stone-700 rounded-xl p-4 text-sm text-stone-400 leading-relaxed">
                 <strong className="text-stone-300 block mb-1">{t('summary.cancellation')}</strong>
                 {t('summary.cancellationText')}
+                <p className="text-xs text-stone-500 mt-2">{t('summary.currencyNote')}</p>
             </div>
 
             <StepNav onBack={onBack} onNext={onNext} nextLabel={t('summary.proceedToPayment')} />
@@ -1004,7 +1015,7 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
             <div className="bg-emerald-950/50 border border-emerald-800/50 rounded-xl p-4 text-sm">
-                <strong className="text-white block mb-0.5">{t('payment.chargingDeposit', { amount: state.depositAmount?.toLocaleString(locale === 'en' ? 'en-US' : locale) })}</strong>
+                <strong className="text-white block mb-0.5">{t('payment.chargingDeposit', { amount: formatPrice(state.depositAmount, getCurrencyForLocale(locale)) })}</strong>
                 <p className="text-emerald-400/80">{t('payment.cardSaved')}</p>
             </div>
             <PaymentElement onReady={() => setElementReady(true)} />
@@ -1024,7 +1035,7 @@ function PaymentForm({ state, onSuccess, locale }: { state: BookingState; onSucc
                 className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl py-3 text-base disabled:opacity-40"
                 disabled={!stripe || processing || !elementReady}
             >
-                {processing ? t('payment.processing') : t('payment.payButton', { amount: state.depositAmount?.toLocaleString(locale === 'en' ? 'en-US' : locale) })}
+                {processing ? t('payment.processing') : t('payment.payButton', { amount: formatPrice(state.depositAmount, getCurrencyForLocale(locale)) })}
             </Button>
         </form>
     );
@@ -1074,6 +1085,8 @@ function StepPayment({ state, onSuccess, onBack, locale, cachedClientSecret, onC
                 voucherCode: s.voucherValid ? s.voucherCode : undefined,
                 voucherAmount: s.voucherValid ? s.voucherDiscount : undefined,
                 locale,
+                currency: getCurrencyForLocale(locale),
+                originalPLNTotal: s.originalPLNTotal,
             }),
         })
             .then(r => r.json())
@@ -1136,6 +1149,7 @@ function StepPayment({ state, onSuccess, onBack, locale, cachedClientSecret, onC
 function StepConfirmation({ state }: { state: BookingState }) {
     const t = useTranslations('booking');
     const locale = useLocale();
+    const currency = getCurrencyForLocale(locale);
     return (
         <div className="text-center py-6">
             <div className="text-6xl mb-4">🦙</div>
@@ -1153,11 +1167,11 @@ function StepConfirmation({ state }: { state: BookingState }) {
                 </div>
                 <div className="flex justify-between text-sm">
                     <span className="text-stone-400">{t('confirmation.depositPaid')}</span>
-                    <strong className="text-emerald-400">{state.depositAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
+                    <strong className="text-emerald-400">{formatPrice(state.depositAmount, currency)}</strong>
                 </div>
                 <div className="flex justify-between text-sm">
                     <span className="text-stone-400">{t('confirmation.balanceDue')}</span>
-                    <strong className="text-white">{state.balanceAmount.toLocaleString(locale === 'en' ? 'en-US' : locale)} PLN</strong>
+                    <strong className="text-white">{formatPrice(state.balanceAmount, currency)}</strong>
                 </div>
             </div>
 
@@ -1182,7 +1196,7 @@ function BookingWidgetInner({ locale }: Props) {
         guestName: '', guestEmail: '', guestPhone: '', adults: 2, children: [],
         specialRequests: '', nipNumber: '',
         voucherCode: '', voucherValid: false, voucherDiscount: 0, voucherDiscountType: 'FIXED', voucherError: '',
-        depositAmount: 0, balanceAmount: 0, totalAmount: 0,
+        depositAmount: 0, balanceAmount: 0, totalAmount: 0, originalPLNTotal: 0,
     });
 
     // Scroll the widget into view whenever the step changes
@@ -1212,7 +1226,7 @@ function BookingWidgetInner({ locale }: Props) {
         const s = state;
         switch (step) {
             case 0: // Dates → Rooms
-                trackBeginCheckout({ checkIn: s.checkIn, checkOut: s.checkOut, nights: s.nights });
+                trackBeginCheckout({ checkIn: s.checkIn, checkOut: s.checkOut, nights: s.nights, currency: getCurrencyForLocale(locale) });
                 break;
             case 1: // Room selected → Guest details
                 if (s.selectedRoom) {
@@ -1222,6 +1236,7 @@ function BookingWidgetInner({ locale }: Props) {
                         totalPrice: s.selectedRoom.totalPrice,
                         depositAmount: s.depositAmount,
                         nights: s.nights,
+                        currency: getCurrencyForLocale(locale),
                     });
                 }
                 break;
@@ -1234,6 +1249,7 @@ function BookingWidgetInner({ locale }: Props) {
                         roomName: s.selectedRoom.name,
                         totalPrice: s.totalAmount,
                         depositAmount: s.depositAmount,
+                        currency: getCurrencyForLocale(locale),
                     });
                 }
                 break;
@@ -1256,6 +1272,7 @@ function BookingWidgetInner({ locale }: Props) {
                 nights: state.nights,
                 checkIn: state.checkIn,
                 checkOut: state.checkOut,
+                currency: getCurrencyForLocale(locale),
             });
         }
     };

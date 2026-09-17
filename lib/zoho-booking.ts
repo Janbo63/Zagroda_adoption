@@ -29,6 +29,7 @@ export interface CreateBookingDealParams {
     depositAmount: number;   // in PLN (not cents)
     balanceAmount: number;   // in PLN
     totalAmount: number;     // in PLN
+    currency?: string;
     voucherCode?: string;
     voucherAmount?: number;
     stripeDepositId?: string;
@@ -127,6 +128,7 @@ export async function createBookingDeal(
         NIP_Number: params.guest.nipNumber || '',
         Deposit_Amount: params.depositAmount,
         Balance_Amount: params.balanceAmount,
+        Booking_Currency: params.currency || 'PLN',
         Stripe_Deposit_ID: params.stripeDepositId,
         Stripe_Customer_ID: params.stripeCustomerId,
         Stripe_Payment_Method_ID: params.stripePaymentMethodId,

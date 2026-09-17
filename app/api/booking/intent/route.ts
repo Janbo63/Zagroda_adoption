@@ -19,6 +19,7 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import crypto from 'crypto';
+import { SUPPORTED_CURRENCIES, STRIPE_CURRENCY, toStripeAmount, type Currency } from '@/lib/currency';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2026-01-28.clover' as any });
 
@@ -50,6 +51,8 @@ export async function POST(req: Request) {
             voucherCode,
             voucherAmount,
             locale = 'pl',
+            currency: rawCurrency = 'PLN',
+            originalPLNTotal,
         } = body;
 
         // Basic validation
@@ -59,6 +62,11 @@ export async function POST(req: Request) {
         if (depositAmount < 1) {
             return NextResponse.json({ error: 'Deposit amount must be positive' }, { status: 400 });
         }
+
+        // Validate currency
+        const currency: Currency = (SUPPORTED_CURRENCIES as readonly string[]).includes(rawCurrency)
+            ? (rawCurrency as Currency)
+            : 'PLN';
 
         // ── Step 1: Generate booking reference locally ────────────────────────────
         const bookingRef = generateBookingRef();
@@ -82,8 +90,8 @@ export async function POST(req: Request) {
         // All booking data is stored in metadata so the webhook can create
         // the Zoho + Beds25 records after payment succeeds.
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: Math.round(depositAmount * 100), // PLN → grosze
-            currency: 'pln',
+            amount: toStripeAmount(depositAmount, currency),
+            currency: STRIPE_CURRENCY[currency],
             customer: customerId,
             setup_future_usage: 'off_session', // saves card for T-3 balance charge
             description: `Deposit: ${roomName} ${checkIn}–${checkOut} [${bookingRef}]`,
@@ -108,6 +116,8 @@ export async function POST(req: Request) {
                 voucherCode: voucherCode ?? '',
                 voucherAmount: String(voucherAmount ?? 0),
                 locale,
+                currency,
+                originalPLNTotal: String(originalPLNTotal ?? ''),
             },
         });
 

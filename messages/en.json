@@ -348,6 +348,10 @@
     "governing_law": {
       "title": "5. Governing Law",
       "content": "These terms are governed by Polish law. Any disputes shall be subject to the exclusive jurisdiction of the courts in Poland. In case of discrepancies between language versions, the Polish version shall prevail."
+    },
+    "pricing_errors": {
+      "title": "6. Pricing & Technical Errors",
+      "content": "All prices are displayed in your local currency for convenience using fixed exchange rates. The base currency for all bookings is Polish Złoty (PLN). We reserve the right to cancel and fully refund any booking where a technical error, system malfunction, or currency conversion error has resulted in an incorrect price being displayed or charged. In such cases, the guest will be notified immediately and offered the option to rebook at the correct price. No booking shall be considered confirmed at a price that was the result of an obvious error. Displayed prices in non-PLN currencies are indicative and based on fixed exchange rates which are reviewed periodically."
     }
   },
   "vouchers": {
@@ -904,7 +908,7 @@
         "name": "Garden Room",
         "desc": "Wake up close to the alpacas. A uniquely designed room bursting with character — a truly special place to rest after a day on the farm.",
         "capacity": "Up to 3 guests",
-        "price": "from 493 PLN / ~€115",
+        "price": "from £98",
         "priceSub": "per 2 nights, incl. Meet the Alpacas experience",
         "included": [
           "Private bathroom",
@@ -917,7 +921,7 @@
         "name": "Jungle Room",
         "desc": "Lush, green-themed room with a cozy feel. A private retreat surrounded by botanical character.",
         "capacity": "Up to 3 guests",
-        "price": "from 493 PLN / ~€115",
+        "price": "from £98",
         "priceSub": "per 2 nights, incl. Meet the Alpacas experience",
         "included": [
           "Private bathroom",
@@ -930,7 +934,7 @@
         "name": "Forest Apartment",
         "desc": "A self-contained apartment looking out onto the alpaca garden. The only room with its own cooking area — perfect for longer stays and families who want their own space.",
         "capacity": "2 adults + 2 children",
-        "price": "from 593 PLN / ~€138",
+        "price": "from £118",
         "priceSub": "per 2 nights, incl. Meet the Alpacas experience",
         "included": [
           "Private cooking area",
@@ -1233,10 +1237,10 @@
       "noRooms": "No rooms available for these dates.",
       "tryDifferent": "Try different dates",
       "selected": "Selected",
-      "perNight": "{price} PLN/night",
-      "totalStay": "{nights} nights · {price} PLN/night",
+      "perNight": "{price}/night",
+      "totalStay": "{nights} nights · {price}/night",
       "depositToday": "Deposit today",
-      "cleaningFee": "+ {amount} PLN cleaning fee",
+      "cleaningFee": "+ {amount} cleaning fee",
       "priceOnRequest": "Price on request"
     },
     "guests": {
@@ -1263,7 +1267,7 @@
       "placeholder": "Enter voucher code",
       "apply": "Apply",
       "applied": "Voucher applied!",
-      "discount": "Discount: {amount} PLN",
+      "discount": "Discount: {amount}",
       "invalid": "Invalid or expired voucher code",
       "skip": "Skip — I don't have a voucher"
     },
@@ -1278,15 +1282,16 @@
       "balanceDue": "Balance due 3 days before arrival",
       "cancellation": "Cancellation policy",
       "cancellationText": "The deposit is non-refundable. Your remaining balance will be charged automatically 3 days before arrival. You may reschedule or cancel for free up to 3 days before arrival.",
+      "currencyNote": "Prices converted from PLN at a fixed exchange rate. See Terms & Conditions.",
       "proceedToPayment": "Proceed to Payment →"
     },
     "payment": {
       "title": "Payment",
       "subtitle": "Secure card payment via Stripe.",
       "preparing": "Preparing payment…",
-      "chargingDeposit": "Charging deposit: {amount} PLN",
+      "chargingDeposit": "Charging deposit: {amount}",
       "cardSaved": "Your card details are saved securely for the balance charge 3 days before arrival.",
-      "payButton": "Pay {amount} PLN deposit",
+      "payButton": "Pay {amount} deposit",
       "processing": "Processing…",
       "error": "Unable to initiate payment. Please try again.",
       "backToSummary": "← Back to summary"
@@ -1551,13 +1556,13 @@
     "roomsTitle": "Cozy Autumn Accommodations",
     "roomsSubtitle": "Your mountain retreat awaits in Orłowice, right on the Czech border.",
     "roomGardenName": "Garden Room",
-    "roomGardenPrice": "320 PLN / night",
+    "roomGardenPrice": "£64 / night",
     "roomGardenDesc": "Intimate and cozy, perfect for couples. Direct access to the garden and alpaca views.",
     "roomJungleName": "Jungle Room",
-    "roomJunglePrice": "350 PLN / night",
+    "roomJunglePrice": "£70 / night",
     "roomJungleDesc": "Spacious and vibrant. A favorite for small families looking for an autumn escape.",
     "roomForestName": "Forest Apartment",
-    "roomForestPrice": "400 PLN / night",
+    "roomForestPrice": "£80 / night",
     "roomForestDesc": "Our largest offering with its own cooking area. Ideal for longer stays and complete privacy.",
     "mostPopular": "Most Popular",
     "viewRoom": "View Room (10% OFF)",
