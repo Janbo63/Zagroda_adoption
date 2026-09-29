@@ -37,20 +37,35 @@ export async function POST(req: Request) {
             // ── Adoptions ────────────────────────────────────────────────────
             if (session.metadata?.alpaca) {
                 try {
+                    const customerEmail = session.customer_details?.email || '';
                     const customerName = session.customer_details?.name || '';
                     const nameParts = customerName.split(' ');
                     const firstName = nameParts[0] || '';
                     const lastName = nameParts.slice(1).join(' ') || '';
                     const phone = session.customer_details?.phone || undefined;
 
+                    // Create or find the Contact in Zoho CRM
+                    const contactId = await zoho.createOrFindContact({
+                        email: customerEmail || 'unknown@stripe.com',
+                        firstName,
+                        lastName,
+                        phone,
+                    });
+
                     let zohoRecordId = '';
                     const adoption = await zoho.findAdoptionBySessionId(session.id);
                     if (adoption) {
+                        // Update existing Pending record with real customer details + link Contact
                         zohoRecordId = adoption.id;
-                        await zoho.updateRecord('Adoptions', adoption.id, { Status: 'Paid' });
+                        await zoho.updateRecord('Adoptions', adoption.id, {
+                            Status: 'Paid',
+                            Email: customerEmail,
+                            ...(contactId ? { Client: contactId } : {}),
+                        });
                     } else {
+                        // No pre-existing record — create fresh with full details
                         const createResult = await zoho.syncAdoption({
-                            email: session.customer_details?.email || 'pending@stripe.com',
+                            email: customerEmail || 'unknown@stripe.com',
                             alpaca: session.metadata.alpaca,
                             tier: session.metadata.tier,
                             amount: session.amount_total || 0,
@@ -63,6 +78,8 @@ export async function POST(req: Request) {
                         zohoRecordId = createResult.data?.[0]?.details?.id;
                     }
 
+                    // Generate certificate, upload to Zoho, email to customer + admin
+                    let certFilePath = '';
                     if (zohoRecordId) {
                         try {
                             const { filePath, publicUrl } = await certificateGenerator.generateCertificate({
@@ -73,6 +90,7 @@ export async function POST(req: Request) {
                                 tier: (session.metadata.tier?.toLowerCase() as any) || 'bronze',
                                 locale: 'en',
                             });
+                            certFilePath = filePath;
                             const fs = await import('fs');
                             const pdfBuffer = fs.readFileSync(filePath);
                             await zoho.uploadCertificateAttachment(zohoRecordId, pdfBuffer, `Adoption_${session.metadata.alpaca}.pdf`);
@@ -80,6 +98,36 @@ export async function POST(req: Request) {
                         } catch (certErr) {
                             console.error('Certificate Automation Error:', certErr);
                         }
+                    }
+
+                    // Email certificate to the customer
+                    if (customerEmail && certFilePath) {
+                        try {
+                            await emailService.sendCertificate({
+                                email: customerEmail,
+                                adopterName: customerName || 'Valued Adopter',
+                                alpacaName: session.metadata.alpaca,
+                                pdfPath: certFilePath,
+                                locale: 'en',
+                            });
+                        } catch (emailErr) {
+                            console.error('Certificate Email Error:', emailErr);
+                        }
+                    }
+
+                    // Notify admin about the new adoption
+                    try {
+                        await emailService.sendAdoptionToAdmin({
+                            adminEmail: process.env.CONTACT_EMAIL || 'info@zagrodaalpakoterapii.com',
+                            adopterName: customerName || 'Unknown',
+                            adopterEmail: customerEmail || 'unknown@stripe.com',
+                            alpacaName: session.metadata.alpaca,
+                            tier: session.metadata.tier || 'bronze',
+                            amount: session.amount_total || 0,
+                            pdfPath: certFilePath || undefined,
+                        });
+                    } catch (adminEmailErr) {
+                        console.error('Admin Adoption Notification Error:', adminEmailErr);
                     }
                 } catch (zohoErr) {
                     console.error('Zoho Adoption Update Error:', zohoErr);

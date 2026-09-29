@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { zoho } from '@/lib/zoho';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2026-01-28.clover' as any,
@@ -59,21 +58,6 @@ export async function POST(request: Request) {
                 campaign: campaign || "winter-vol-liefde"
             },
         });
-
-        // Push initial adoption to Zoho CRM (Pending)
-        try {
-            await zoho.syncAdoption({
-                email: email || 'pending@stripe.com',
-                alpaca,
-                tier,
-                amount: price,
-                status: 'Pending',
-                stripeSessionId: session.id,
-                campaign: campaign || "winter-vol-liefde"
-            });
-        } catch (zohoError) {
-            console.error('Failed to sync to Zoho:', zohoError);
-        }
 
         return NextResponse.json({ url: session.url });
     } catch (err: any) {

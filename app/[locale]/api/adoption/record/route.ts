@@ -21,10 +21,10 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Payment not completed' }, { status: 400 });
         }
 
-        const adoptionId = session.metadata?.adoptionId;
+        const alpaca = session.metadata?.alpaca;
         const email = session.customer_details?.email;
 
-        if (!adoptionId || !email) {
+        if (!alpaca || !email) {
             return NextResponse.json({ error: 'Incomplete session metadata' }, { status: 400 });
         }
 

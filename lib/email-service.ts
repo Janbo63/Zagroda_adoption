@@ -24,6 +24,16 @@ export interface VoucherEmailData {
     pdfPath: string;
 }
 
+export interface AdoptionAdminEmailData {
+    adminEmail: string;
+    adopterName: string;
+    adopterEmail: string;
+    alpacaName: string;
+    tier: string;
+    amount: number;
+    pdfPath?: string;
+}
+
 export class EmailService {
     private transporter: nodemailer.Transporter;
 
@@ -112,6 +122,61 @@ export class EmailService {
             return true;
         } catch (error) {
             console.error('Error sending voucher email:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Send adoption notification to admin
+     */
+    async sendAdoptionToAdmin(data: AdoptionAdminEmailData): Promise<boolean> {
+        try {
+            const amountDisplay = `${data.amount / 100} PLN`;
+            const subject = `🦙 New Adoption: ${data.alpacaName} (${data.tier.toUpperCase()})`;
+
+            const html = `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <h1 style="color: #10b981;">New Alpaca Adoption! 🦙</h1>
+                    <div style="background-color: #ecfdf5; padding: 20px; border-radius: 8px; border: 1px solid #a7f3d0;">
+                        <p><strong>Adopter:</strong> ${data.adopterName} (<a href="mailto:${data.adopterEmail}">${data.adopterEmail}</a>)</p>
+                        <p><strong>Alpaca:</strong> ${data.alpacaName}</p>
+                        <p><strong>Tier:</strong> <span style="background: #d1fae5; padding: 4px 8px; border-radius: 4px; font-weight: bold;">${data.tier.toUpperCase()}</span></p>
+                        <p><strong>Amount:</strong> ${amountDisplay}</p>
+                    </div>
+                    <p style="margin-top: 20px; line-height: 1.6;">
+                        A new adoption has been confirmed and paid via Stripe.<br>
+                        The adoption certificate has been generated and attached to the Zoho CRM record.
+                        ${data.pdfPath ? '<br><strong>Certificate PDF is also attached to this email.</strong>' : ''}
+                    </p>
+                    <p style="color: #6b7280; font-size: 12px; margin-top: 20px;">
+                        <strong>Action Required:</strong> Send the adoption welcome pack and certificate to the adopter.
+                    </p>
+                </div>
+            `;
+
+            const mailOptions: any = {
+                from: process.env.EMAIL_FROM || 'Alpaca Farm <noreply@alpacafarm.com>',
+                to: data.adminEmail,
+                subject,
+                html,
+            };
+
+            if (data.pdfPath) {
+                const fs = await import('fs');
+                if (fs.existsSync(data.pdfPath)) {
+                    mailOptions.attachments = [{
+                        filename: `Adoption-Certificate-${data.alpacaName}.pdf`,
+                        path: data.pdfPath,
+                        contentType: 'application/pdf'
+                    }];
+                }
+            }
+
+            const info = await this.transporter.sendMail(mailOptions);
+            console.log('Adoption admin notification sent:', info.messageId);
+            return true;
+        } catch (error) {
+            console.error('Error sending adoption admin email:', error);
             return false;
         }
     }
