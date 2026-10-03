@@ -76,15 +76,56 @@ for url in "/" "/en/stay" "/nl/welkom" "/en/discover" "/en/activities" "/sitemap
   fi
 done
 
-# ── 5. GA4 VERIFICATION ─────────────────────────────────────────────────
-echo "--- 🔍 Verifying GA4 analytics ---"
-GA4_CHECK=$(curl -s "${SITE_URL}/pl" | grep -c 'G-V9R1JJYYSG' || echo "0")
+# ── 5. GA4 & DOM INTEGRITY VERIFICATION ─────────────────────────────────
+echo "--- 🔍 Verifying GA4 analytics & DOM integrity ---"
+HTML_OUTPUT=$(curl -s "${SITE_URL}/pl")
+
+HTML_TAG_COUNT=$(echo "$HTML_OUTPUT" | grep -io '<html' | wc -l || echo "0")
+HEAD_TAG_COUNT=$(echo "$HTML_OUTPUT" | grep -io '<head' | wc -l || echo "0")
+BODY_TAG_COUNT=$(echo "$HTML_OUTPUT" | grep -io '<body' | wc -l || echo "0")
+GA4_CHECK=$(echo "$HTML_OUTPUT" | grep -c 'G-V9R1JJYYSG' || echo "0")
+CLARITY_CHECK=$(echo "$HTML_OUTPUT" | grep -c 'clarity' || echo "0")
+
+# Check for duplicate <html>, <head>, or <body> tags
+if [ "$HTML_TAG_COUNT" -ne 1 ]; then
+  echo "  ❌ DOM Integrity Error: Found $HTML_TAG_COUNT <html> tags (expected exactly 1)!"
+  FAIL=1
+  stef_log "critical" "❌ DOM Integrity Failed after deploy (commit: $DEPLOYED_COMMIT): Found $HTML_TAG_COUNT <html> tags in rendered /pl output."
+else
+  echo "  ✅ Valid single <html> tag confirmed."
+fi
+
+if [ "$HEAD_TAG_COUNT" -ne 1 ]; then
+  echo "  ❌ DOM Integrity Error: Found $HEAD_TAG_COUNT <head> tags (expected exactly 1)!"
+  FAIL=1
+  stef_log "critical" "❌ DOM Integrity Failed after deploy (commit: $DEPLOYED_COMMIT): Found $HEAD_TAG_COUNT <head> tags in rendered /pl output."
+else
+  echo "  ✅ Valid single <head> tag confirmed."
+fi
+
+if [ "$BODY_TAG_COUNT" -ne 1 ]; then
+  echo "  ❌ DOM Integrity Error: Found $BODY_TAG_COUNT <body> tags (expected exactly 1)!"
+  FAIL=1
+  stef_log "critical" "❌ DOM Integrity Failed after deploy (commit: $DEPLOYED_COMMIT): Found $BODY_TAG_COUNT <body> tags in rendered /pl output."
+else
+  echo "  ✅ Valid single <body> tag confirmed."
+fi
+
+# Check GA4 and Clarity tags
 if [ "$GA4_CHECK" -ge 1 ]; then
   echo "  ✅ GA4 tracking present ($GA4_CHECK references)"
 else
   echo "  ❌ GA4 tracking MISSING!"
   FAIL=1
   stef_log "critical" "❌ GA4 tracking MISSING after deploy (commit: $DEPLOYED_COMMIT). G-V9R1JJYYSG not found in HTML."
+fi
+
+if [ "$CLARITY_CHECK" -ge 1 ]; then
+  echo "  ✅ Microsoft Clarity present ($CLARITY_CHECK references)"
+else
+  echo "  ❌ Microsoft Clarity tracking MISSING!"
+  FAIL=1
+  stef_log "critical" "❌ Microsoft Clarity tracking MISSING after deploy (commit: $DEPLOYED_COMMIT)."
 fi
 
 # ── 6. REPORT RESULTS ───────────────────────────────────────────────────

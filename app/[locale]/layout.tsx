@@ -6,6 +6,8 @@ import { AutumnPromoBanner } from '@/components/AutumnPromoBanner'
 import { WhatsAppFloatingButton } from '@/components/WhatsAppFloatingButton'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
+import { Suspense } from 'react';
+import { AnalyticsTracker } from '@/components/AnalyticsTracker';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 
@@ -202,11 +204,15 @@ export default async function RootLayout({
               if (isBotSuppressed) {
                 console.log('[Analytics] Suppressed for automated headless agent');
               } else {
-                // Check for internal tester flag (?internal=1 or stored)
+                // Check for internal tester flag (?internal=1 or stored) or debug mode (?debug=1)
+                var isDebug = false;
                 try {
                   var params = new URLSearchParams(window.location.search);
                   if (params.get('internal') === '1' || params.get('test_mode') === '1' || params.get('admin') === '1') {
                     localStorage.setItem('fs_internal_tester', 'true');
+                  }
+                  if (params.get('debug') === '1') {
+                    isDebug = true;
                   }
                 } catch(e){}
 
@@ -219,17 +225,15 @@ export default async function RootLayout({
                   gtag('set', 'user_properties', { traffic_type: 'internal' });
                 }
 
-                // Ensure canonical www domain for tracking
-                var wwwUrl = window.location.href;
-                if (wwwUrl.indexOf('https://') === 0 && wwwUrl.indexOf('https://www.') !== 0) {
-                  wwwUrl = wwwUrl.replace('https://', 'https://www.');
+                var configOptions = {
+                  page_path: window.location.pathname,
+                  page_location: window.location.href
+                };
+                if (isDebug) {
+                  configOptions.debug_mode = true;
                 }
 
-                gtag('config', 'G-V9R1JJYYSG', {
-                  page_path: window.location.pathname,
-                  page_location: wwwUrl,
-                  send_page_view: !isInternal
-                });
+                gtag('config', 'G-V9R1JJYYSG', configOptions);
 
                 // Google Ads conversion tracking
                 gtag('config', 'AW-1028380046');
@@ -312,6 +316,9 @@ export default async function RootLayout({
         </noscript>
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <Suspense fallback={null}>
+          <AnalyticsTracker />
+        </Suspense>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <AutumnPromoBanner locale={locale} />
           <Navbar locale={locale} />

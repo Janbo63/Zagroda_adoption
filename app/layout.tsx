@@ -1,7 +1,4 @@
-'use client';
-
 import './globals.css';
-import FacebookPixel from '@/components/FacebookPixel';
 
 declare global {
   interface Window {
@@ -31,13 +28,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>
-        <FacebookPixel />
-        {/* GA4, Clarity, and Zoho PageSense scripts are in app/[locale]/layout.tsx <head> */}
-        {children}
-      </body>
-    </html>
-  );
+  return children;
 }
