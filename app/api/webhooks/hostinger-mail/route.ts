@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     // Optional: Log to Stef Dashboard if configured
     try {
       const STEF_LOG_URL = process.env.STEF_LOG_URL || 'https://stef.futuresolutionsai.com/api/logs';
-      const STEF_LOG_KEY = process.env.STEF_LOG_KEY || 'fs-log-key-2026';
+      const STEF_LOG_KEY = process.env.STEF_LOG_KEY || '';
       
       await fetch(STEF_LOG_URL, {
         method: 'POST',

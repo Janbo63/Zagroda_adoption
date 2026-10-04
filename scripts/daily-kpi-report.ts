@@ -10,7 +10,7 @@
 
 const STEF_KPI_URL = 'https://stef.futuresolutionsai.com/api/kpis?project=zagroda&refresh=true';
 const STEF_LOG_URL = 'https://stef.futuresolutionsai.com/api/logs';
-const STEF_LOG_KEY = 'fs-log-key-2026';
+const STEF_LOG_KEY = process.env.STEF_LOG_KEY || '';
 const APP_NAME = 'zagroda-website';
 
 interface KpiPeriod {
@@ -83,7 +83,7 @@ async function postLog(level: 'info' | 'warn' | 'error', message: string, metada
 async function main() {
   console.log(`[${new Date().toISOString()}] Fetching KPI data...`);
 
-  const res = await fetch(STEF_KPI_URL);
+  const res = await fetch(STEF_KPI_URL, { headers: { 'X-API-Key': STEF_LOG_KEY } });
   if (!res.ok) {
     const msg = `❌ KPI fetch failed: ${res.status} ${res.statusText}`;
     console.error(msg);

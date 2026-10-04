@@ -34,7 +34,7 @@ jobs:
               echo "$DIRTY"
               curl -s -X POST https://stef.futuresolutionsai.com/api/logs \
                 -H "Content-Type: application/json" \
-                -H "X-API-Key: fs-log-key-2026" \
+                -H "X-API-Key: ${{ secrets.STEF_LOG_KEY }}" \
                 -d "{\"app\":\"zagroda-website\",\"level\":\"critical\",\"message\":\"❌ VPS DRIFT: Someone edited files directly on production server, bypassing GitHub. Files: $(echo $DIRTY | tr '\n' ', '). Fix: push changes via git, never edit on VPS.\"}"
               exit 1
             elif [ "$LOCAL" != "$REMOTE" ]; then
@@ -43,7 +43,7 @@ jobs:
               echo "  Remote: $REMOTE"
               curl -s -X POST https://stef.futuresolutionsai.com/api/logs \
                 -H "Content-Type: application/json" \
-                -H "X-API-Key: fs-log-key-2026" \
+                -H "X-API-Key: ${{ secrets.STEF_LOG_KEY }}" \
                 -d "{\"app\":\"zagroda-website\",\"level\":\"warn\",\"message\":\"⚠️ VPS is behind origin/main. VPS: ${LOCAL:0:8}, Remote: ${REMOTE:0:8}. A deployment may have failed.\"}"
               exit 1
             else

@@ -6,7 +6,7 @@
 set -e
 
 STEF_URL="https://stef.futuresolutionsai.com/api/logs"
-STEF_KEY="fs-log-key-2026"
+STEF_KEY="$(grep -E '^STEF_LOG_KEY=' /var/www/Zagroda_adoption/.env 2>/dev/null | head -1 | cut -d= -f2- | tr -d '\r"' || true)"
 APP="zagroda-website"
 SITE_URL="https://zagrodaalpakoterapii.com"
 
