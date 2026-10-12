@@ -396,12 +396,12 @@
   "stay": {
     "meta": {
       "title": "Podzimní pobyt u alpak — Zagroda Alpakoterapii",
-      "description": "Přespěte letos na podzim na alpaky farmě v Krkonoších. Užijte si podzimní barvy, houbaření a ranní procházky s alpakami v ceně. Od 493 PLN / ~2900 CZK za 2 noci."
+      "description": "Přespěte letos na podzim na alpačí farmě v Jizerských horách. Užijte si podzimní barvy, houbaření a ranní procházky s alpakami v ceně. Od 493 PLN / ~2900 CZK za 2 noci."
     },
     "hero": {
       "badge": "Přenocování",
       "headline": "Spěte u alpak. Procházejte se s nimi za svítání.",
-      "subheadline": "Dva jedinečné pokoje na fungující farmě alpak hluboko v Krkonoších. Probuďte se do čerstvého vzduchu, ticha a vlastní osobní alpaky průvodce.",
+      "subheadline": "Dva jedinečné pokoje na fungující farmě alpak v polských Jizerských horách. Probuďte se do čerstvého vzduchu, ticha a vlastní osobní alpaky průvodce.",
       "cta": "Zkontrolovat dostupnost",
       "socialProof": "4,9/5 hvězd · 400+ návštěvníků"
     },
@@ -419,7 +419,7 @@
       },
       "nature": {
         "icon": "🏔️",
-        "title": "Krkonoše",
+        "title": "Jizerské hory",
         "desc": "Les, čerstvý horský vzduch a široké výhledy. Vyjděte ven a objevěte jednu z nejkrásnějších krajin v Polsku."
       }
     },
@@ -1015,7 +1015,7 @@
   "video": {
     "badge": "Přesvědčte se sami",
     "title": "Život na farmě 🦙",
-    "subtitle": "Pár minut v Krkonoších s našimi alpakami.",
+    "subtitle": "Pár minut v Jizerských horách s našimi alpakami.",
     "caption": "Naše alpaková farma v srdci Sudet"
   },
   "discover": {
@@ -1538,7 +1538,7 @@
     "metaDescription": "Kouzelná farma alpak v Jizerských horách jen 15 min za hranicemi. Krmení z ruky, procházky na vodítku, tvořivé dílny a rodinné ubytování. 10% sleva s kódem Podzim2026.",
     "heroTitle": "Kam s dětmi na podzimní prázdniny v Jizerských horách? Objevte kouzelnou farmu alpak jen kousek za hranicemi",
     "heroSubtitle": "Přátelské alpaky, krmení přímo z ruky, klidné procházky podzimní přírodou na vodítku, tvořivé dílny a útulné rodinné ubytování v Orłowicích.",
-    "locationHook": "Jen 15 min z Nového Města pod Smrkem • 25 min z Frýdlantu • 45 min z Liberce",
+    "locationHook": "Jen 15 min z Nového Města pod Smrkem • 25 min z Frýdlantu • 50–60 min z Liberce",
     "frictionLanguage": "Domluvíte se u nás česky",
     "frictionPayment": "Platba kartou i v CZK možná",
     "frictionPromo": "10% sleva s kódem Podzim2026",

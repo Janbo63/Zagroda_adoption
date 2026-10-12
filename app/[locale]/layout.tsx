@@ -26,7 +26,7 @@ const metaByLocale: Record<string, { title: string; description: string }> = {
   },
   cs: {
     title: 'Zagroda Alpakoterapii | Setkání s alpakami a farma v Jizerských horách (Frýdlant / Świeradów)',
-    description: 'Kouzelná farma s alpakami a minikózami v Orłowicích (jen 25 min z Frýdlantu a 45 min z Liberce). Osobní krmení z ruky, rodinná alpakoterapie a krytá stodoła i za deště.',
+    description: 'Kouzelná farma s alpakami a minikózami v Orłowicích (jen 25–30 min z Frýdlantu a cca 50–60 min z Liberce). Osobní krmení z ruky, rodinná alpakoterapie a krytá stodola i za deště.',
   },
   en: {
     title: 'Zagroda Alpakoterapii | Alpaca Therapy Farm near Świeradów-Zdrój (Jizera Mountains)',

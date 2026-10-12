@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Check, MapPin, Phone, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Check, MapPin, Phone, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { trackContactClick } from '@/lib/tracking';
 import dynamic from 'next/dynamic';
@@ -587,6 +587,91 @@ export function StayPageContent({ locale }: { locale: string }) {
                     </motion.div>
                 </div>
             </section >
+
+            {/* ── THEMED RETREAT GUIDES ─────────────────────────────────── */}
+            <section className="py-16 bg-stone-100 border-t border-b border-stone-200">
+                <div className="max-w-6xl mx-auto px-4">
+                    <div className="text-center max-w-2xl mx-auto mb-12">
+                        <span className="inline-block rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold uppercase tracking-wider px-3 py-1 mb-3">
+                            {locale === 'pl' ? 'Przewodniki tematyczne' : locale === 'cs' ? 'Tematické pobyty' : locale === 'de' ? 'Themenaufenthalte' : locale === 'nl' ? 'Thema-verblijven' : 'Themed Getaways'}
+                        </span>
+                        <h2 className="text-3xl font-bold text-stone-900 mb-3">
+                            {locale === 'pl' ? 'Wybierz styl wypoczynku w Górach Izerskich' : locale === 'cs' ? 'Vyberte si styl odpočinku v Jizerských horách' : locale === 'de' ? 'Wählen Sie Ihre Auszeit im Isergebirge' : locale === 'nl' ? 'Kies uw verblijfstype in het IJzergebergte' : 'Choose Your Izera Mountain Escape'}
+                        </h2>
+                        <p className="text-stone-600">
+                            {locale === 'pl' ? 'Szczegółowe plany pobytu, odpowiedzi na najczęstsze pytania i porównanie z dużymi hotelami.' : locale === 'cs' ? 'Podrobné průvodce, odpovědi na časté dotazy a férové srovnání s velkými hotely.' : locale === 'de' ? 'Detaillierte Leitfäden, Antworten auf häufige Fragen und ein ehrlicher Vergleich mit Hotelresorts.' : locale === 'nl' ? 'Gedetailleerde gidsen, veelgestelde vragen en een eerlijke vergelijking met resort-hotels.' : 'Detailed stay guides, answer capsules, and an honest comparison with large hotel resorts.'}
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Romantic card */}
+                        <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-stone-200 flex flex-col">
+                            <div className="relative aspect-[16/9] w-full">
+                                <Image
+                                    src="/images/Rooms/Garden Room1.jpg"
+                                    alt="Romantic getaway room at Zagroda Alpakoterapii"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                                <span className="absolute top-4 left-4 bg-emerald-950/80 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1.5 rounded-full">
+                                    {locale === 'pl' ? 'Dla Par' : locale === 'cs' ? 'Pro páry' : locale === 'de' ? 'Für Paare' : locale === 'nl' ? 'Voor koppels' : 'For Couples'}
+                                </span>
+                            </div>
+                            <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h3 className="text-2xl font-bold text-stone-900 mb-3">
+                                        {locale === 'pl' ? 'Romantyczny Weekend we Dwoje' : locale === 'cs' ? 'Romantický víkend pro dva' : locale === 'de' ? 'Romantische Auszeit zu zweit' : locale === 'nl' ? 'Romantisch uitje voor twee' : 'Romantic Mountain Escape for Two'}
+                                    </h3>
+                                    <p className="text-stone-600 mb-6 leading-relaxed">
+                                        {locale === 'pl' ? 'Kameralna alternatywa dla zatłoczonych resortów: wspólny salon z kominkiem, alpaki za oknem, widok na góry i prywatne spacery we dwoje. Tylko 3 pokoje.' : locale === 'cs' ? 'Klidná alternativa k hotelovým resortům: večery u krbu, alpaky za oknem a soukromé procházky po loukách. Pouze 3 pokoje na celé farmě.' : locale === 'de' ? 'Boutique-Alternative zu großen Resorts: Kaminlounge, Bergblick aus dem Garten und private Alpakawanderungen. Nur 3 Gästezimmer auf dem Hof.' : locale === 'nl' ? 'Kleinschalig alternatief voor drukke resorts: salon met open haard, uitzicht op de bergen en rustige alpacawandelingen. Slechts 3 kamers.' : 'A boutique alternative to hotel resorts: fireplace lounge, mountain views from the garden, and quiet private meadow alpaca walks. Only three guest rooms on the farm.'}
+                                    </p>
+                                </div>
+                                <Link
+                                    href={`/${locale}/romantic-getaway`}
+                                    className="inline-flex items-center justify-between w-full rounded-2xl bg-stone-900 text-white font-semibold px-6 py-3.5 hover:bg-emerald-900 transition"
+                                >
+                                    <span>{locale === 'pl' ? 'Przewodnik dla par' : locale === 'cs' ? 'Průvodce pro páry' : locale === 'de' ? 'Leitfaden für Paare' : locale === 'nl' ? 'Gids voor koppels' : 'Read Couples Guide'}</span>
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Family card */}
+                        <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-stone-200 flex flex-col">
+                            <div className="relative aspect-[16/9] w-full">
+                                <Image
+                                    src="/images/Rooms/apartment1.jpg"
+                                    alt="Family farm stay apartment at Zagroda Alpakoterapii"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                                <span className="absolute top-4 left-4 bg-orange-600/90 text-white backdrop-blur-sm text-xs font-semibold px-3 py-1.5 rounded-full">
+                                    {locale === 'pl' ? 'Dla Rodzin z Dziećmi' : locale === 'cs' ? 'Pro rodiny s dětmi' : locale === 'de' ? 'Für Familien' : locale === 'nl' ? 'Voor gezinnen' : 'For Families with Kids'}
+                                </span>
+                            </div>
+                            <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h3 className="text-2xl font-bold text-stone-900 mb-3">
+                                        {locale === 'pl' ? 'Rodzinne Wakacje na Farmie' : locale === 'cs' ? 'Rodinná dovolená na farmě alpak' : locale === 'de' ? 'Familienurlaub auf dem Bauernhof' : locale === 'nl' ? 'Gezinsvakantie op de boerderij' : 'Family Farm Stay with Alpacas'}
+                                    </h3>
+                                    <p className="text-stone-600 mb-6 leading-relaxed">
+                                        {locale === 'pl' ? 'Leśny Apartament dla 2 dorosłych + 2 dzieci z aneksem kuchennym. Spotkanie z alpakami w cenie pobytu, minikózki i zadaszona stodoła na deszcz.' : locale === 'cs' ? 'Lesní apartmán pro 2 dospělé + 2 děti s vlastní kuchyňkou. Setkání se zvířaty v ceně pobytu, minikozy a krytá stodola pro případ deště.' : locale === 'de' ? 'Waldapartement für 2 Erwachsene + 2 Kinder mit Kochnische. Alpakatreffen im Zimmerpreis inbegriffen, Zwergziegen und wetterfeste Scheune.' : locale === 'nl' ? 'Bosappartement voor 2 volwassenen + 2 kinderen met kitchenette. Ontmoeting met alpaca\'s inbegrepen, minigeitjes en overdekte schuur.' : 'Forest Apartment for 2 adults + 2 children with kitchen facilities. Meet the Alpacas included in your room rate, plus mini goats and a covered barn for rainy days.'}
+                                    </p>
+                                </div>
+                                <Link
+                                    href={`/${locale}/family-farm-stay`}
+                                    className="inline-flex items-center justify-between w-full rounded-2xl bg-orange-600 text-white font-semibold px-6 py-3.5 hover:bg-orange-700 transition"
+                                >
+                                    <span>{locale === 'pl' ? 'Przewodnik dla rodzin' : locale === 'cs' ? 'Průvodce pro rodiny' : locale === 'de' ? 'Leitfaden für Familien' : locale === 'nl' ? 'Gids voor gezinnen' : 'Read Family Guide'}</span>
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* ── FINAL CTA ────────────────────────────────────────────── */}
             <section className="py-20 bg-emerald-900 text-white text-center">

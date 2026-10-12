@@ -84,6 +84,26 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
           </Card>
         ))}
       </div>
+
+      {_locale === 'cs' && (
+        <div className="mt-12 rounded-2xl border border-emerald-300 bg-white/90 p-6 md:p-8 text-center text-stone-800 shadow-lg max-w-3xl mx-auto backdrop-blur-sm">
+          <span className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800 uppercase tracking-wider mb-2">
+            Tipy pro návštěvníky z Česka
+          </span>
+          <h2 className="text-2xl font-bold text-emerald-950 mb-3">
+            Plánujete rodinný výlet z Frýdlantu či Liberce?
+          </h2>
+          <p className="text-stone-700 mb-6 leading-relaxed">
+            Přečtěte si praktického průvodce: ověřené dojezdové časy (10 km od hranice), platby v korunách i kartou, krytá stodola pro případ deště a odpovědi na nejčastější dotazy.
+          </p>
+          <Link
+            href="/cs/vylet"
+            className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 font-bold text-white shadow hover:bg-emerald-800 transition"
+          >
+            Průvodce: Výlet k alpakám pro rodiny z ČR →
+          </Link>
+        </div>
+      )}
     </div>
   )
 }

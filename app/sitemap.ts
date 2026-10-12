@@ -16,10 +16,15 @@ const PUBLIC_PAGES = [
     '/adopt',
     '/vouchers',
     '/contact',
-    '/blog',
+    '/romantic-getaway',
+    '/family-farm-stay',
     '/welkom',
     '/privacy',
     '/terms',
+];
+
+const CS_ONLY_PAGES = [
+    '/vylet',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -31,9 +36,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 url: `${BASE_URL}/${locale}${page}`,
                 lastModified: new Date(),
                 changeFrequency: page === '' ? 'weekly' : 'monthly',
-                priority: page === '' ? 1.0 : page === '/stay' ? 0.9 : 0.7,
+                priority: page === '' ? 1.0 : (page === '/stay' || page === '/romantic-getaway' || page === '/family-farm-stay') ? 0.9 : 0.7,
             });
         }
+    }
+
+    for (const page of CS_ONLY_PAGES) {
+        entries.push({
+            url: `${BASE_URL}/cs${page}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        });
     }
 
     return entries;
