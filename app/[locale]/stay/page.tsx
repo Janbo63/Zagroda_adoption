@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { StayPageContent } from '@/components/StayPageContent';
-import { JsonLd } from '@/components/JsonLd';
-import { accommodationSchema, farmSchema } from '@/lib/schema';
 
 // Generate static params for all supported locales
 export async function generateStaticParams() {
@@ -37,8 +35,6 @@ export async function generateMetadata({
 export default function StayPage({ params: { locale } }: { params: { locale: string } }) {
     return (
         <>
-            <JsonLd data={accommodationSchema} />
-            <JsonLd data={farmSchema} />
             <StayPageContent locale={locale} />
         </>
     );

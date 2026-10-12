@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { WorkationPageContent } from '@/components/WorkationPageContent';
-import { JsonLd } from '@/components/JsonLd';
-import { accommodationSchema, farmSchema } from '@/lib/schema';
 
 export async function generateStaticParams() {
     return [
@@ -35,8 +33,6 @@ export async function generateMetadata({
 export default function WorkationPage({ params: { locale } }: { params: { locale: string } }) {
     return (
         <>
-            <JsonLd data={accommodationSchema} />
-            <JsonLd data={farmSchema} />
             <WorkationPageContent locale={locale} />
         </>
     );

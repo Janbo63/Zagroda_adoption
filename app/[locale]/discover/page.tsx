@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { DiscoverPageContent } from '@/components/DiscoverPageContent';
 import { JsonLd } from '@/components/JsonLd';
-import { discoverSchema, farmSchema, generateDiscoverFaqSchema } from '@/lib/schema';
+import { discoverSchema, generateDiscoverFaqSchema } from '@/lib/schema';
 
 // Force static optimization & caching for benchmark performance (TTFB < 200ms)
 export const revalidate = 86400; // 24 hours static caching
@@ -51,7 +51,6 @@ export default async function DiscoverPage({ params: { locale } }: { params: { l
     return (
         <>
             <JsonLd data={discoverSchema} />
-            <JsonLd data={farmSchema} />
             <JsonLd data={faqSchema} />
             <DiscoverPageContent locale={locale} />
         </>

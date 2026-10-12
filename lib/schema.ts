@@ -1,124 +1,151 @@
 /**
  * Schema.org JSON-LD generators for Zagroda Alpakoterapii.
- * Use these in page.tsx files as <JsonLd data={...} />.
  *
- * Key schemas:
- *  - farmSchema        → LocalBusiness + TouristAttraction (home page)
- *  - accommodationSchema → LodgingBusiness (stay page)
- *  - attractionsSchema → TouristAttraction list (discover page)
+ * ONE business entity (`PROPERTY_ID`) is emitted site-wide from app/[locale]/layout.tsx
+ * via buildSiteGraph(). Page-level schemas must reference it by @id, never redefine it —
+ * duplicated entities with conflicting facts are what search/AI engines discard.
+ *
+ * Every fact below must be traceable to site copy (messages/*.json) or a verified source.
+ * Do NOT add review counts, star ratings or amenities without a primary source.
+ *
+ *  - buildSiteGraph(locale) → LodgingBusiness + TouristAttraction + WebSite (all pages)
+ *  - discoverSchema         → TouristDestination (discover page)
  */
 
 const BASE_URL = 'https://zagrodaalpakoterapii.com';
 const LOGO = `${BASE_URL}/images/zagrodanewlogo.png`;
 
-/** Core business schema — used everywhere */
-export const farmSchema = {
-    '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'TouristAttraction', 'FarmStay'],
-    name: 'Zagroda Alpakoterapii',
-    alternateName: 'Alpaca Farm Karkonosze',
-    url: BASE_URL,
-    logo: LOGO,
-    image: [
-        `${BASE_URL}/images/Alpacas/Elvis.jpg`,
-        `${BASE_URL}/images/Rooms/Garden-1.jpg`,
-        `${BASE_URL}/images/activities/alpaca-walks.jpg`,
-    ],
-    description:
-        'A unique alpaca therapy farm in the Karkonosze mountains, Poland. Family-friendly stays, alpaca walks, and outdoor experiences for all ages.',
-    address: {
-        '@type': 'PostalAddress',
-        streetAddress: '24 Orłowice',
-        addressLocality: 'Mirsk',
-        postalCode: '59-630',
-        addressCountry: 'PL',
-    },
-    geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 50.9568,
-        longitude: 15.3856,
-    },
-    telephone: '+48695545330',
-    email: 'admin@zagrodaalpakoterapii.com',
-    openingHours: 'Mo-Su 08:00-20:00',
-    priceRange: '$$',
-    currenciesAccepted: 'PLN',
-    paymentAccepted: 'Cash, Credit Card',
-    amenityFeature: [
-        { '@type': 'LocationFeatureSpecification', name: 'Alpaca Walks', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Family Friendly', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Pet Friendly', value: false },
-        { '@type': 'LocationFeatureSpecification', name: 'Outdoor Activities', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Kid Friendly', value: true },
-    ],
-    aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '47',
-        bestRating: '5',
-    },
-    sameAs: [
-        'https://www.facebook.com/zagrodaalpakoterapii',
-        'https://www.instagram.com/zagrodaalpako',
-        'https://maps.app.goo.gl/zagrodaalpakoterapii',
-        'https://www.booking.com/hotel/pl/zagroda-alpakoterapii.html',
-    ],
+export const PROPERTY_ID = `${BASE_URL}/#property`;
+export const WEBSITE_ID = `${BASE_URL}/#website`;
+
+// Source: OpenStreetMap POI "Zagroda Alpakoterapii" (way 397435660), tourism=guest_house, Orłowice 24.
+export const FARM_GEO = { '@type': 'GeoCoordinates', latitude: 50.9265386, longitude: 15.3518507 } as const;
+
+const ADDRESS = {
+    '@type': 'PostalAddress',
+    streetAddress: 'Orłowice 24',
+    addressLocality: 'Mirsk',
+    addressRegion: 'dolnośląskie',
+    postalCode: '59-630',
+    addressCountry: 'PL',
+} as const;
+
+const amenity = (name: string) => ({ '@type': 'LocationFeatureSpecification', name, value: true });
+
+/** Room data mirrors messages/en.json → stay.rooms.* (capacity strings). */
+const ROOMS = [
+    { id: 'garden', type: 'HotelRoom', name: 'Garden Room', maxOccupancy: 3, image: 'Rooms/Garden Room1.jpg', extras: ['Private bathroom'] },
+    { id: 'jungle', type: 'HotelRoom', name: 'Jungle Room', maxOccupancy: 3, image: 'Rooms/Jungle Room 1.jpg', extras: ['Private bathroom'] },
+    { id: 'forest', type: 'Apartment', name: 'Forest Apartment', maxOccupancy: 4, image: 'Rooms/apartment1.jpg', extras: ['Own cooking area', 'View onto the alpaca garden'] },
+];
+
+const DESCRIPTION: Record<string, string> = {
+    pl: 'Zagroda Alpakoterapii to farma alpak z pokojami gościnnymi w Orłowicach koło Świeradowa-Zdroju, w Górach Izerskich (Dolny Śląsk), blisko granicy z Czechami. Goście nocują w Pokoju Ogrodowym, Pokoju Dżungla lub Leśnym Apartamencie z aneksem kuchennym i mogą wziąć udział w spacerach z alpakami, karmieniu alpak oraz sesjach alpakoterapii. Wieczory przy kominku, widok na góry z ogrodu, światłowodowe Wi-Fi 100 Mb/s.',
+    en: 'Zagroda Alpakoterapii is an alpaca therapy farm with guest rooms in Orłowice near Świeradów-Zdrój, in the Izera Mountains (Lower Silesia, Poland), close to the Czech border. Guests stay in the Garden Room, the Jungle Room or the self-catering Forest Apartment and can join alpaca walks, alpaca feeding and alpaca therapy sessions. Evenings by the fireplace, mountain views from the garden, and 100 Mbps fibre Wi-Fi.',
 };
 
-/** Lodging / Stay page schema */
-export const accommodationSchema = {
-    '@context': 'https://schema.org',
-    '@type': ['LodgingBusiness', 'BedAndBreakfast'],
-    name: 'Zagroda Alpakoterapii — Alpaca Farm Stay',
-    url: `${BASE_URL}/stay`,
-    image: [
-        `${BASE_URL}/images/Rooms/Garden-1.jpg`,
-        `${BASE_URL}/images/Rooms/Jungle-1.jpg`,
-    ],
-    description:
-        'Sleep on a working alpaca farm deep in the Karkonosze mountains. Two unique rooms with included alpaca experience from 493 PLN / ~€115.',
-    address: {
-        '@type': 'PostalAddress',
-        streetAddress: '24 Orłowice',
-        addressLocality: 'Mirsk',
-        postalCode: '59-630',
-        addressCountry: 'PL',
-    },
-    priceRange: '493–999 PLN',
-    telephone: '+48695545330',
-    checkinTime: '15:00',
-    checkoutTime: '11:00',
-    amenityFeature: [
-        { '@type': 'LocationFeatureSpecification', name: 'Alpaca Experience Included', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Private Bathroom', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Garden Access', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Mountain Views', value: true },
-        { '@type': 'LocationFeatureSpecification', name: 'Family Rooms', value: true },
-    ],
-    aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '47',
-        bestRating: '5',
-    },
-};
+/** The single business entity. Locale only changes description language and booking URL. */
+export function propertySchema(locale: string) {
+    const stayUrl = `${BASE_URL}/${locale}/stay`;
+    return {
+        '@type': ['LodgingBusiness', 'TouristAttraction'],
+        '@id': PROPERTY_ID,
+        name: 'Zagroda Alpakoterapii',
+        alternateName: 'Alpaca Therapy Farm',
+        description: DESCRIPTION[locale] || DESCRIPTION.en,
+        url: BASE_URL,
+        logo: LOGO,
+        image: [
+            `${BASE_URL}/images/Alpacas/Micky.jpg`,
+            `${BASE_URL}/images/Rooms/Garden Room1.jpg`,
+            `${BASE_URL}/images/Rooms/apartment1.jpg`,
+            `${BASE_URL}/images/activities/alpaca-walks.jpg`,
+        ],
+        telephone: '+48695545330',
+        email: 'zagrodaalpakoterapii@gmail.com',
+        address: ADDRESS,
+        geo: FARM_GEO,
+        hasMap: `https://www.google.com/maps/search/?api=1&query=${FARM_GEO.latitude},${FARM_GEO.longitude}`,
+        priceRange: '$$',
+        currenciesAccepted: 'PLN, CZK, EUR, GBP',
+        paymentAccepted: 'Credit Card',
+        numberOfRooms: ROOMS.length,
+        // Confirmed by owner 2026-10-12
+        checkinTime: '15:00',
+        checkoutTime: '11:00',
+        petsAllowed: 'Only by prior arrangement with the hosts',
+        touristType: ['Families with children', 'Couples'],
+        availableLanguage: [
+            { '@type': 'Language', name: 'Polish', alternateName: 'pl' },
+            { '@type': 'Language', name: 'English', alternateName: 'en' },
+        ],
+        amenityFeature: [
+            amenity('Fireplace'),
+            amenity('Mountain views'),
+            amenity('Alpaca walks'),
+            amenity('Alpaca feeding'),
+            amenity('Alpaca therapy sessions'),
+            amenity('Garden with alpacas'),
+            amenity('Fibre Wi-Fi (100 Mbps)'),
+            amenity('Family friendly'),
+        ],
+        containsPlace: ROOMS.map((r) => ({
+            '@type': r.type,
+            '@id': `${BASE_URL}/#room-${r.id}`,
+            name: r.name,
+            url: stayUrl,
+            image: `${BASE_URL}/images/${r.image}`,
+            occupancy: { '@type': 'QuantitativeValue', maxValue: r.maxOccupancy, unitText: 'guests' },
+            amenityFeature: r.extras.map(amenity),
+        })),
+        potentialAction: {
+            '@type': 'ReserveAction',
+            target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${stayUrl}#booking`,
+                inLanguage: locale,
+                actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
+            },
+            result: { '@type': 'LodgingReservation', name: 'Direct booking at Zagroda Alpakoterapii' },
+        },
+        sameAs: [
+            'https://www.facebook.com/zagrodaalpakoterapii',
+            'https://www.instagram.com/zagrodaalpako',
+        ],
+    };
+}
+
+/** Full site-wide graph — rendered once in app/[locale]/layout.tsx. */
+export function buildSiteGraph(locale: string) {
+    return {
+        '@context': 'https://schema.org',
+        '@graph': [
+            propertySchema(locale),
+            {
+                '@type': 'WebSite',
+                '@id': WEBSITE_ID,
+                url: BASE_URL,
+                name: 'Zagroda Alpakoterapii',
+                inLanguage: ['pl', 'en', 'cs', 'de', 'nl'],
+                publisher: { '@id': PROPERTY_ID },
+            },
+        ],
+    };
+}
 
 /** Discover / Area Guide page schema */
 export const discoverSchema = {
     '@context': 'https://schema.org',
     '@type': 'TouristDestination',
-    name: 'Karkonosze Region — Alpaca Farm & Local Attractions',
+    name: 'Izera & Karkonosze Mountains — Alpaca Farm & Local Attractions',
     url: `${BASE_URL}/discover`,
     description:
         'Family-friendly region in the Polish Sudeten mountains. Alpaca farm, national park hiking, waterfalls, castles, and the Izerski Tourist Package.',
     image: `${BASE_URL}/images/Alpacas/Suri.jpg`,
-    geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 50.9568,
-        longitude: 15.3856,
-    },
-    dateModified: '2026-08-21T00:00:00+02:00',
+    geo: FARM_GEO,
+    dateModified: '2026-10-12T00:00:00+02:00',
     includesAttraction: [
+        { '@id': PROPERTY_ID },
         { '@type': 'TouristAttraction', name: 'Karkonosze National Park', geo: { '@type': 'GeoCoordinates', latitude: 50.7714, longitude: 15.5394 } },
         { '@type': 'TouristAttraction', name: 'Kamieńczyk Waterfall', geo: { '@type': 'GeoCoordinates', latitude: 50.8283, longitude: 15.5072 } },
         { '@type': 'TouristAttraction', name: 'Castle Czocha', geo: { '@type': 'GeoCoordinates', latitude: 51.0697, longitude: 15.2636 } },
@@ -198,15 +225,11 @@ export const therapyServiceSchema = {
     '@type': 'Service',
     name: 'Alpaca-Assisted Therapy (Alpakoterapia)',
     description: 'Therapeutic interaction sessions with gentle alpacas for children aged 3+ and adults. Helps reduce stress, anxiety, and promotes emotional well-being through guided animal contact.',
-    provider: {
-        '@type': 'LocalBusiness',
-        name: 'Zagroda Alpakoterapii',
-        url: 'https://zagrodaalpakoterapii.com',
-    },
+    provider: { '@id': PROPERTY_ID },
     serviceType: 'Animal-Assisted Therapy',
     areaServed: {
         '@type': 'GeoCircle',
-        geoMidpoint: { '@type': 'GeoCoordinates', latitude: 50.9568, longitude: 15.3856 },
+        geoMidpoint: FARM_GEO,
         geoRadius: '50000',
     },
     offers: {
