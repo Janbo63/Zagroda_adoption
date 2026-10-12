@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { trackContactClick } from '@/lib/tracking'
+import { FARM_GEO } from '@/lib/schema'
 
 interface ContactPageContentProps {
   locale: string;
@@ -75,12 +76,13 @@ export function ContactPageContent({ locale: _locale }: ContactPageContentProps)
           </Card>
         </div>
         <div className="h-[400px] md:h-full">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.769454826891!2d15.375555776580615!3d50.91731827172701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470ee0f0b5d0b3c3%3A0x7c7b6d6a6c6d6c6d!2s24%20Or%C5%82owice%2C%2059-630%20Mirsk%2C%20Poland!5e0!3m2!1sen!2sus!4v1637000000000!5m2!1sen!2sus" 
-            width="100%" 
-            height="100%" 
-            style={{border:0}} 
-            allowFullScreen={true} 
+          <iframe
+            title="Zagroda Alpakoterapii — Orłowice 24, 59-630 Mirsk"
+            src={`https://maps.google.com/maps?q=${FARM_GEO.latitude},${FARM_GEO.longitude}&z=15&hl=${_locale}&output=embed`}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
