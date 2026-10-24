@@ -1,3 +1,17 @@
+---
+project: zagroda-website
+goal: 100% direct booking independence (0 OTA fees), steady 20+ bookings/month year-round, automated Stripe payments. (from Stef data — confirm)
+target: 20 autumn direct bookings (Sep–Oct) with promo code Autumn2026 / Podzim2026. (from Stef data — confirm)
+target_by: 2026-10-31
+progress: unknown — count not recorded in the project
+health: yellow
+last_action: 2026-10-24 Adopted Project Standard; found webhook auth flaw (no-token requests accepted)
+next_action: Approve the webhook auth fix + secret rotation (backlog #2)
+next_owner: Jan
+next_due: 2026-10-31
+waiting_on: Jan
+---
+
 # Zagroda Alpakoterapii Website — Progress hand-off
 
 Updated 2026-10-24 by Antigravity agent (Robin). **Rewrite this file; do not append.** Keep it ≤ 40 lines.
