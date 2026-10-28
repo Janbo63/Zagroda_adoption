@@ -56,7 +56,7 @@ export const vyletCs: LandingContent = {
         },
         {
             q: 'Dá se u alpak i přespat?',
-            a: 'Ano. Máme tři pokoje: Zahradní a Džunglový pokoj až pro 3 osoby s vlastní koupelnou a Lesní apartmán pro 2 dospělé a 2 děti s vlastní kuchyňkou. Ceny začínají {gardenPrice} {gardenPriceSub}. Minimální pobyt jsou 2 noci. Rezervovat a zaplatit v korunách můžete online na našem webu.',
+            a: 'Ano. Máme tři pokoje: Zahradní a Džunglový pokoj až pro 3 osoby s vlastní koupelnou a Lesní apartmán až pro 3 osoby s vlastní kuchyňkou. Ceny začínají {gardenPrice} {gardenPriceSub}. Minimální pobyt jsou 2 noci. Rezervovat a zaplatit v korunách můžete online na našem webu.',
         },
     ],
     table: {

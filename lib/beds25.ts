@@ -189,9 +189,9 @@ export async function getAvailability(
                     id: 'room-forest',
                     name: 'Forest Apartment',
                     description: 'Spacious apartment with mountain views, separate bedroom, fully equipped kitchen — perfect for families.',
-                    capacity: 5,
-                    maxAdults: 2,
-                    maxChildren: 3,
+                    capacity: 3,
+                    maxAdults: 3,
+                    maxChildren: 2,
                     minNights: 2,
                     basePrice: 410,
                     amenities: ['WIFI', 'PRIVATE_BATHROOM', 'KITCHEN', 'SEPARATE_BEDROOM', 'MOUNTAIN_VIEW'],
@@ -224,7 +224,7 @@ export async function getRooms(): Promise<Beds25Room[]> {
             },
             {
                 id: 'room-forest', name: 'Forest Apartment', description: 'Spacious apartment with mountain views.',
-                roomType: 'apartment', capacity: 5, maxAdults: 2, maxChildren: 3, minNights: 2, basePrice: 410,
+                roomType: 'apartment', capacity: 3, maxAdults: 3, maxChildren: 2, minNights: 2, basePrice: 410,
                 amenities: ['WIFI', 'PRIVATE_BATHROOM', 'KITCHEN', 'SEPARATE_BEDROOM', 'MOUNTAIN_VIEW'], sortOrder: 3,
             },
         ];

@@ -63,6 +63,16 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Deposit amount must be positive' }, { status: 400 });
         }
 
+        // Enforce strict room occupancy: at least 1 adult, maximum 3 guests total per room
+        const numAdults = Number(adults);
+        const childrenList = Array.isArray(children) ? children : [];
+        if (!Number.isFinite(numAdults) || numAdults < 1) {
+            return NextResponse.json({ error: 'At least 1 adult is required per room' }, { status: 400 });
+        }
+        if (numAdults + childrenList.length > 3) {
+            return NextResponse.json({ error: 'Maximum 3 guests (adults + children) allowed per room' }, { status: 400 });
+        }
+
         // Validate currency
         const currency: Currency = (SUPPORTED_CURRENCIES as readonly string[]).includes(rawCurrency)
             ? (rawCurrency as Currency)

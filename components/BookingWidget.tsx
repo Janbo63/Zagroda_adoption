@@ -25,6 +25,7 @@ interface Room {
     capacity: string;
     maxAdults: number;
     maxChildren: number;
+    maxOccupancy: number;
     minNights: number;
     basePrice: number;
     amenities: string[];
@@ -426,31 +427,44 @@ function StepRoom({ state, onChange, onNext, onBack }: {
 
     useEffect(() => {
         setLoading(true);
+        const capLabels: Record<string, (n: number) => string> = {
+            pl: n => `Do ${n} osób`,
+            cs: n => `Až ${n} hosté`,
+            de: n => `Bis zu ${n} Gäste`,
+            nl: n => `Tot ${n} gasten`,
+            en: n => `Up to ${n} guests`,
+        };
+        const formatCap = capLabels[locale] || capLabels.en;
+
         fetch(`/api/booking/availability?checkIn=${state.checkIn}&checkOut=${state.checkOut}`)
             .then(r => r.json())
             .then(data => {
-                const mapped: Room[] = (data.availableRooms || []).map((r: any) => ({
-                    roomId: r.id,
-                    name: ROOM_NAME_OVERRIDES[r.id] || r.name,
-                    description: r.description || '',
-                    capacity: `${r.maxAdults} adult${r.maxAdults !== 1 ? 's' : ''}${r.maxChildren > 0 ? ` + ${r.maxChildren} child${r.maxChildren !== 1 ? 'ren' : ''}` : ''}`,
-                    maxAdults: r.maxAdults,
-                    maxChildren: r.maxChildren,
-                    minNights: r.minNights,
-                    basePrice: r.basePrice,
-                    amenities: ROOM_AMENITY_OVERRIDES[r.id] || (() => {
-                        const raw = typeof r.amenities === 'string' ? JSON.parse(r.amenities) : (r.amenities || []);
-                        return Array.isArray(raw) ? raw.flat(Infinity).filter((a: any) => typeof a === 'string') : [];
-                    })(),
-                    totalPrice: r.pricing?.totalPrice ?? 0,
-                    pricePerNight: r.pricing?.averagePerNight ?? r.basePrice,
-                    currency: r.pricing?.currency ?? 'PLN',
-                    nights: r.pricing?.nights ?? state.nights,
-                    size: r.size,
-                    sizeUnit: r.sizeUnit,
-                    cleaningFee: r.cleaningFee,
-                    rackRate: r.rackRate,
-                })).filter((room: Room) => room.totalPrice > 0);
+                const mapped: Room[] = (data.availableRooms || []).map((r: any) => {
+                    const maxOcc = Math.min(3, r.maxOccupancy || r.capacity || 3);
+                    return {
+                        roomId: r.id,
+                        name: ROOM_NAME_OVERRIDES[r.id] || r.name,
+                        description: r.description || '',
+                        capacity: formatCap(maxOcc),
+                        maxAdults: Math.min(maxOcc, r.maxAdults || maxOcc),
+                        maxChildren: Math.min(maxOcc - 1, r.maxChildren ?? (maxOcc - 1)),
+                        maxOccupancy: maxOcc,
+                        minNights: r.minNights,
+                        basePrice: r.basePrice,
+                        amenities: ROOM_AMENITY_OVERRIDES[r.id] || (() => {
+                            const raw = typeof r.amenities === 'string' ? JSON.parse(r.amenities) : (r.amenities || []);
+                            return Array.isArray(raw) ? raw.flat(Infinity).filter((a: any) => typeof a === 'string') : [];
+                        })(),
+                        totalPrice: r.pricing?.totalPrice ?? 0,
+                        pricePerNight: r.pricing?.averagePerNight ?? r.basePrice,
+                        currency: r.pricing?.currency ?? 'PLN',
+                        nights: r.pricing?.nights ?? state.nights,
+                        size: r.size,
+                        sizeUnit: r.sizeUnit,
+                        cleaningFee: r.cleaningFee,
+                        rackRate: r.rackRate,
+                    };
+                }).filter((room: Room) => room.totalPrice > 0);
                 setRooms(mapped);
                 setLoading(false);
                 // Track availability outcome
@@ -476,6 +490,14 @@ function StepRoom({ state, onChange, onNext, onBack }: {
     const selectRoom = (room: Room) => {
         const currency = getCurrencyForLocale(locale);
         onChange('selectedRoom', room);
+        // Clamp guests if current selection exceeds room maxOccupancy (max 3)
+        const maxOcc = Math.min(3, room.maxOccupancy || 3);
+        const clampedAdults = Math.max(1, Math.min(maxOcc, state.adults));
+        const maxChildrenRemaining = Math.max(0, maxOcc - clampedAdults);
+        if (clampedAdults !== state.adults) onChange('adults', clampedAdults);
+        if (state.children.length > maxChildrenRemaining) {
+            onChange('children', state.children.slice(0, maxChildrenRemaining));
+        }
         // Track room selection into GA4
         trackSelectRoom({ roomId: room.roomId, roomName: room.name, price: room.totalPrice, nights: room.nights || state.nights, currency });
         // Use totalPrice from API; fall back to basePrice * nights, then rackRate * nights
@@ -667,6 +689,10 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.guestEmail);
     const phoneValid = /^\+?[\d\s\-()]{7,20}$/.test(state.guestPhone.trim());
 
+    const maxTotalGuests = Math.min(3, state.selectedRoom?.maxOccupancy || 3);
+    const maxAdultsAllowed = Math.max(1, maxTotalGuests - state.children.length);
+    const totalGuests = state.adults + state.children.length;
+
     const updateChildAge = (index: number, age: number) => {
         const next = [...state.children];
         next[index] = { age };
@@ -674,7 +700,9 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     };
 
     const addChild = () => {
-        if (state.children.length < 4) onChange('children', [...state.children, { age: 0 }]);
+        if (state.adults + state.children.length < maxTotalGuests) {
+            onChange('children', [...state.children, { age: 0 }]);
+        }
     };
 
     const removeChild = (i: number) => {
@@ -682,7 +710,16 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     };
 
     const ageValid = state.children.every(c => c.age >= 0 && c.age <= 15);
-    const canNext = state.guestName && emailValid && phoneValid && state.adults >= 1 && ageValid;
+    const guestsValid = state.adults >= 1 && totalGuests >= 1 && totalGuests <= maxTotalGuests;
+    const canNext = Boolean(state.guestName && emailValid && phoneValid && guestsValid && ageValid);
+
+    const maxGuestsHint: Record<string, string> = {
+        pl: `Maksymalnie ${maxTotalGuests} osoby w pokoju (min. 1 osoba dorosła). Wybrano: ${totalGuests}/${maxTotalGuests}.`,
+        cs: `Maximálně ${maxTotalGuests} hosté na pokoj (min. 1 dospělý). Vybráno: ${totalGuests}/${maxTotalGuests}.`,
+        de: `Maximal ${maxTotalGuests} Gäste pro Zimmer (mind. 1 Erwachsener). Ausgewählt: ${totalGuests}/${maxTotalGuests}.`,
+        nl: `Maximaal ${maxTotalGuests} gasten per kamer (min. 1 volwassene). Geselecteerd: ${totalGuests}/${maxTotalGuests}.`,
+        en: `Maximum ${maxTotalGuests} guests per room (at least 1 adult). Selected: ${totalGuests}/${maxTotalGuests}.`,
+    };
 
     return (
         <div>
@@ -713,20 +750,23 @@ function StepGuests({ state, onChange, onNext, onBack }: {
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className={labelCls}>{t('guests.adults')} *</label>
-                        <Counter value={state.adults} onChange={v => onChange('adults', v)} min={1} max={6} />
+                        <Counter value={state.adults} onChange={v => onChange('adults', Math.max(1, Math.min(maxAdultsAllowed, v)))} min={1} max={maxAdultsAllowed} />
                     </div>
                     <div>
                         <label className={labelCls}>{t('guests.children')}</label>
                         <button
                             type="button"
                             onClick={addChild}
-                            disabled={state.children.length >= 4}
+                            disabled={totalGuests >= maxTotalGuests}
                             className="text-sm text-emerald-400 hover:text-emerald-300 border border-emerald-700 hover:border-emerald-500 rounded-lg px-3 py-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                         >
                             + Add child
                         </button>
                     </div>
                 </div>
+                <p className="text-xs text-stone-400">
+                    👥 {maxGuestsHint[_locale] || maxGuestsHint.en}
+                </p>
 
                 {state.children.map((child, i) => (
                     <div key={i} className="flex items-center gap-3 bg-stone-800 rounded-xl p-3 border border-stone-700">

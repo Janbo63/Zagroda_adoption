@@ -385,7 +385,7 @@
       "forest": {
         "name": "Waldapartement",
         "desc": "Ein eigenständiges Apartment mit Blick auf den Alpakagarten. Der einzige Bereich mit einer eigenen Kochecke — perfekt für längere Aufenthalte und Familien, die ihren eigenen Raum möchten.",
-        "capacity": "2 Erwachsene + 2 Kinder",
+        "capacity": "Bis zu 3 Gäste",
         "price": "ab €139",
         "priceSub": "für 2 Nächte, inkl. Alpaka-Erlebnis",
         "included": [

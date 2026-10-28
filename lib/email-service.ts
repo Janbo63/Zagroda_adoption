@@ -34,6 +34,29 @@ export interface AdoptionAdminEmailData {
     pdfPath?: string;
 }
 
+export interface BookingNotificationData {
+    bookingRef: string;
+    roomName: string;
+    checkIn: string;
+    checkOut: string;
+    nights: number;
+    guestName: string;
+    guestEmail: string;
+    guestPhone: string;
+    adults: number;
+    childrenCount: number;
+    childrenAges?: string;
+    specialRequests?: string;
+    voucherCode?: string;
+    totalPLN: number;
+    depositPLN: number;
+    balancePLN: number;
+    paidCurrency: string;
+    paidDepositDisplay: number;
+    balanceDisplay: number;
+    locale?: string;
+}
+
 export class EmailService {
     private transporter: nodemailer.Transporter;
 
@@ -177,6 +200,100 @@ export class EmailService {
             return true;
         } catch (error) {
             console.error('Error sending adoption admin email:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Send new accommodation booking notification to admin (Jan & Dorota Fura)
+     */
+    async sendBookingToAdmin(data: BookingNotificationData): Promise<boolean> {
+        try {
+            const recipients = process.env.ADMIN_EMAIL || process.env.CONTACT_EMAIL || 'janskifura@gmail.com,dordafura@gmail.com,info@zagrodaalpakoterapii.com';
+            const subject = `🏡 New Website Booking [${data.bookingRef}]: ${data.guestName} (${data.checkIn} → ${data.checkOut})`;
+            const foreignNote = data.paidCurrency !== 'PLN'
+                ? `<p><strong>Guest Paid Currency (${data.paidCurrency}):</strong> Deposit ${data.paidDepositDisplay} ${data.paidCurrency} paid | Balance ${data.balanceDisplay} ${data.paidCurrency}</p>`
+                : '';
+
+            const html = `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <h1 style="color: #059669;">New Website Booking Confirmed! 🏡🦙</h1>
+                    <div style="background-color: #ecfdf5; padding: 20px; border-radius: 8px; border: 1px solid #a7f3d0;">
+                        <p><strong>Booking Ref:</strong> <code>${data.bookingRef}</code></p>
+                        <p><strong>Room:</strong> ${data.roomName}</p>
+                        <p><strong>Dates:</strong> ${data.checkIn} → ${data.checkOut} (${data.nights} nights)</p>
+                        <p><strong>Guest:</strong> ${data.guestName} (<a href="mailto:${data.guestEmail}">${data.guestEmail}</a> | ${data.guestPhone})</p>
+                        <p><strong>Occupancy:</strong> ${data.adults} adult(s), ${data.childrenCount} child(ren)${data.childrenAges ? ` (${data.childrenAges})` : ''}</p>
+                        ${data.voucherCode ? `<p><strong>Voucher Applied:</strong> ${data.voucherCode}</p>` : ''}
+                        <hr style="border: 0; border-top: 1px solid #a7f3d0; margin: 12px 0;" />
+                        <p><strong>Total Stay (Net PLN):</strong> ${data.totalPLN.toFixed(2)} PLN</p>
+                        <p><strong>10% Deposit Paid (Stripe):</strong> <span style="color: #059669; font-weight: bold;">${data.depositPLN.toFixed(2)} PLN</span></p>
+                        <p><strong>90% Balance Due:</strong> <strong>${data.balancePLN.toFixed(2)} PLN</strong></p>
+                        ${foreignNote}
+                        ${data.specialRequests ? `<p><strong>Special Requests / Notes:</strong> ${data.specialRequests}</p>` : ''}
+                    </div>
+                </div>
+            `;
+
+            const info = await this.transporter.sendMail({
+                from: process.env.EMAIL_FROM || 'Zagroda Alpakoterapii <jeff@futuresolutionsjf.com>',
+                to: recipients,
+                subject,
+                html,
+            });
+            console.log('Booking admin notification sent:', info.messageId);
+            return true;
+        } catch (error) {
+            console.error('Error sending booking admin notification:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Send booking confirmation email to the guest
+     */
+    async sendBookingConfirmationToGuest(data: BookingNotificationData): Promise<boolean> {
+        try {
+            const subject = `🦙 Booking Confirmation [${data.bookingRef}] — Zagroda Alpakoterapii (${data.checkIn} → ${data.checkOut})`;
+            const depositStr = data.paidCurrency !== 'PLN'
+                ? `${data.paidDepositDisplay} ${data.paidCurrency} (${data.depositPLN.toFixed(2)} PLN)`
+                : `${data.depositPLN.toFixed(2)} PLN`;
+            const balanceStr = data.paidCurrency !== 'PLN'
+                ? `${data.balanceDisplay} ${data.paidCurrency} (${data.balancePLN.toFixed(2)} PLN)`
+                : `${data.balancePLN.toFixed(2)} PLN`;
+
+            const html = `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
+                    <h1 style="color: #059669;">Thank you for your reservation! 🦙</h1>
+                    <p>Dear ${data.guestName},</p>
+                    <p>Your reservation at <strong>Zagroda Alpakoterapii</strong> (Orłowice 24, 59-630 Mirsk, Poland) is confirmed.</p>
+                    <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; border: 1px solid #e5e7eb; margin: 20px 0;">
+                        <p><strong>Booking Reference:</strong> ${data.bookingRef}</p>
+                        <p><strong>Room:</strong> ${data.roomName}</p>
+                        <p><strong>Check-in:</strong> ${data.checkIn} (from 15:00)</p>
+                        <p><strong>Check-out:</strong> ${data.checkOut} (until 11:00)</p>
+                        <p><strong>Guests:</strong> ${data.adults} adult(s)${data.childrenCount > 0 ? `, ${data.childrenCount} child(ren)` : ''}</p>
+                        <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 12px 0;" />
+                        <p><strong>Deposit Paid Today:</strong> ${depositStr}</p>
+                        <p><strong>Remaining Balance (90%):</strong> ${balanceStr}</p>
+                        ${data.specialRequests ? `<p><strong>Special Requests:</strong> ${data.specialRequests}</p>` : ''}
+                    </div>
+                    <p>If you have any questions before your arrival, please reply to this email or contact us on WhatsApp at <strong>+48 695 545 330</strong>.</p>
+                    <p>Warm regards,<br/><strong>Jan &amp; Dorota Fura</strong><br/>Zagroda Alpakoterapii</p>
+                </div>
+            `;
+
+            const info = await this.transporter.sendMail({
+                from: process.env.EMAIL_FROM || 'Zagroda Alpakoterapii <jeff@futuresolutionsjf.com>',
+                replyTo: process.env.CONTACT_EMAIL || 'info@zagrodaalpakoterapii.com',
+                to: data.guestEmail,
+                subject,
+                html,
+            });
+            console.log('Guest booking confirmation sent:', info.messageId);
+            return true;
+        } catch (error) {
+            console.error('Error sending guest booking confirmation:', error);
             return false;
         }
     }
