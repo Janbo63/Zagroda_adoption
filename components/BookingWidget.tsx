@@ -428,11 +428,11 @@ function StepRoom({ state, onChange, onNext, onBack }: {
     useEffect(() => {
         setLoading(true);
         const capLabels: Record<string, (n: number) => string> = {
-            pl: n => `Do ${n} osób`,
-            cs: n => `Až ${n} hosté`,
-            de: n => `Bis zu ${n} Gäste`,
-            nl: n => `Tot ${n} gasten`,
-            en: n => `Up to ${n} guests`,
+            pl: n => n === 3 ? 'Maks. 3 osoby (np. 3 dorosłych, 2+1 dziecko lub 1+2 dzieci)' : `Do ${n} osób dorosłych`,
+            cs: n => n === 3 ? 'Max. 3 hosté (např. 3 dospělí, 2+1 dítě nebo 1+2 děti)' : `Až ${n} dospělí`,
+            de: n => n === 3 ? 'Max. 3 Gäste (z.B. 3 Erw., 2 Erw. + 1 Kind oder 1 Erw. + 2 Kinder)' : `Bis zu ${n} Erwachsene`,
+            nl: n => n === 3 ? 'Max. 3 gasten (bijv. 3 volw., 2+1 kind of 1+2 kinderen)' : `Tot ${n} volwassenen`,
+            en: n => n === 3 ? 'Max 3 guests (3 adults, 2 adults + 1 child, or 1 adult + 2 children)' : `Up to ${n} adults`,
         };
         const formatCap = capLabels[locale] || capLabels.en;
 
@@ -655,21 +655,23 @@ function StepRoom({ state, onChange, onNext, onBack }: {
 
 // ─── Step 3: Guest Details ────────────────────────────────────────────────────
 
-function Counter({ value, onChange, min = 1, max = 6 }: { value: number; onChange: (v: number) => void; min?: number; max?: number }) {
+function Counter({ value, onChange, min = 1, max = 3 }: { value: number; onChange: (v: number) => void; min?: number; max?: number }) {
     return (
         <div className="flex items-center gap-3">
             <button
                 type="button"
+                disabled={value <= min}
                 onClick={() => onChange(Math.max(min, value - 1))}
-                className="w-9 h-9 rounded-full border border-stone-600 text-stone-300 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-lg font-bold transition-colors"
+                className="w-9 h-9 rounded-full border border-stone-600 text-stone-300 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-lg font-bold transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             >
                 −
             </button>
             <span className="text-white font-semibold w-6 text-center">{value}</span>
             <button
                 type="button"
+                disabled={value >= max}
                 onClick={() => onChange(Math.min(max, value + 1))}
-                className="w-9 h-9 rounded-full border border-stone-600 text-stone-300 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-lg font-bold transition-colors"
+                className="w-9 h-9 rounded-full border border-stone-600 text-stone-300 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-lg font-bold transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             >
                 +
             </button>
@@ -690,8 +692,24 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     const phoneValid = /^\+?[\d\s\-()]{7,20}$/.test(state.guestPhone.trim());
 
     const maxTotalGuests = Math.min(3, state.selectedRoom?.maxOccupancy || 3);
+    const maxChildrenForRoom = Math.min(maxTotalGuests - 1, state.selectedRoom?.maxChildren ?? (maxTotalGuests - 1));
     const maxAdultsAllowed = Math.max(1, maxTotalGuests - state.children.length);
     const totalGuests = state.adults + state.children.length;
+
+    useEffect(() => {
+        if (state.adults < 1) {
+            onChange('adults', 1);
+        } else if (state.children.length > maxChildrenForRoom) {
+            onChange('children', state.children.slice(0, maxChildrenForRoom));
+        } else if (state.adults + state.children.length > maxTotalGuests) {
+            const allowedChildren = Math.max(0, maxTotalGuests - state.adults);
+            if (state.children.length > allowedChildren) {
+                onChange('children', state.children.slice(0, allowedChildren));
+            } else {
+                onChange('adults', Math.max(1, maxTotalGuests - state.children.length));
+            }
+        }
+    }, [state.adults, state.children.length, maxTotalGuests, maxChildrenForRoom]);
 
     const updateChildAge = (index: number, age: number) => {
         const next = [...state.children];
@@ -700,7 +718,7 @@ function StepGuests({ state, onChange, onNext, onBack }: {
     };
 
     const addChild = () => {
-        if (state.adults + state.children.length < maxTotalGuests) {
+        if (state.adults + state.children.length < maxTotalGuests && state.children.length < maxChildrenForRoom) {
             onChange('children', [...state.children, { age: 0 }]);
         }
     };
@@ -757,7 +775,7 @@ function StepGuests({ state, onChange, onNext, onBack }: {
                         <button
                             type="button"
                             onClick={addChild}
-                            disabled={totalGuests >= maxTotalGuests}
+                            disabled={totalGuests >= maxTotalGuests || state.children.length >= maxChildrenForRoom}
                             className="text-sm text-emerald-400 hover:text-emerald-300 border border-emerald-700 hover:border-emerald-500 rounded-lg px-3 py-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                         >
                             + Add child

@@ -1,49 +1,40 @@
 ---
 project: zagroda-website
-goal: 100% direct booking independence (0 OTA fees), steady 20+ bookings/month year-round, automated Stripe payments. (from Stef data — confirm)
-target: 20 autumn direct bookings (Sep–Oct) with promo code Autumn2026 / Podzim2026. (from Stef data — confirm)
-target_by: 2026-10-31
-progress: unknown — count not recorded in the project
-health: yellow
-last_action: 2026-10-24 Adopted Project Standard; found webhook auth flaw (no-token requests accepted)
-next_action: Approve the webhook auth fix + secret rotation (backlog #2)
+sub_business: "3. Zagroda Alpakoterapii (10,000 PLN/mo Target)"
+project_type: Product
+stage: Build
+status: green
+owner: Robin
+goal: "Drive 10,000 PLN/mo net farm income for Dorota Fura via direct bookings, Living Website monthly bulletin (Pilot #1), Slow-Tourism PR, Corporate Staycations (ex-AlpAIka), vouchers, and alpaca adoptions"
+last_updated: 2026-10-28
+last_action: "2026-10-28 — Fixed foreign-currency (CZK/EUR/GBP) Stripe webhook PLN normalization, added Admin+Guest booking confirmation emails + SMTP env vars, capped room occupancy at max 3 guests (min 1 adult) across UI/i18n/API, and corrected Michal Zitnan's booking data across Zoho/Beds25/Beds24"
+next_action: "Plan and execute controlled detachment of Beds24 and direct Booking.com connection to Beds25; next week (w/c 2 Nov): Slow-Tourism PR pitch & Christmas Voucher / Living Bulletin #1"
 next_owner: Jan
-next_due: 2026-10-31
-waiting_on: Jan
+next_due: 2026-11-04
+waiting_on: "Ready for Step 4 architectural review: detaching Beds24 and reattaching Booking.com directly"
+live_url: https://zagrodaalpakoterapii.com
 ---
 
-# Zagroda Alpakoterapii Website — Progress hand-off
+# Zagroda Alpakoterapii Hub — Progress Hand-off
 
-Updated 2026-10-24 by Antigravity agent (Robin). **Rewrite this file; do not append.** Keep it ≤ 40 lines.
+> **Single Consolidated Workspace (25 Oct 2026):** All Zagroda work—Website, Living Bulletin (Pilot #1), Slow-Tourism PR & Marketing (`F:\Git Hub Projects\marketing` docs), and Corporate Mid-Week Staycations (`Family Staycation` / `AlpAIka`)—is now managed from this single project hub. `Beds25` runs silently as a background maintenance pipe.
 
-## Current state
+## Current State & Active Workstreams
+1. **Website & Living Bulletin (Pilot #1 for Zoho Semi-Auto Sprints):**
+   - Production on Hostinger via Docker Compose (host port 3001 → 3000), `zagrodaalpakoterapii.com`.
+   - Latest: JSON-LD entity, Czech day-trip page, `/llms.txt`, Stripe→Zoho adoption fixes, multi-currency booking.
+   - Connected to `ai-citation-monitor` (`work/001_zoho_semi_auto_sprint_poc`) as Live Pilot #1 (`Zoho Account: 884394000002274001`, `Deal: 884394000002275001`).
+2. **Slow-Tourism PR & Helper Exchange *(Consolidated from `marketing`)*:**
+   - Guardrail: Zero blind paid Meta/Google ads.
+   - Ready for sign-off: Polish/English slow-tourism media pitch featuring **Dorota Fura** & the herd (**Teddy, Elvis, Ricky, Micky, Freddy, Suri** + goats **Madonna, Baron, Nella, Lady Gaga**) + downstairs live-in helper exchange listing.
+3. **Corporate Mid-Week Staycations & Vouchers *(Consolidated from `Family Staycation` / `AlpAIka`)*:**
+   - Target: 4 mid-week (Mon–Thu) remote-work stays / wellness voucher bundles @ 2,500 PLN = 10,000 PLN. Validate with 3 warm SME contacts before adding new pages.
 
-- In production on Hostinger via Docker Compose (host port 3001 → 3000), `zagrodaalpakoterapii.com`. I did not check it live this session.
-- Latest work (Oct 2026): SEO/AEO (JSON-LD entity, Czech day-trip page, `llms.txt`), Stef key from env only, Stripe→Zoho adoption fixes, multi-currency booking.
-- Old notes disagreed with the code in five places: port registry says 3000 but compose publishes 3001; Meta Pixel `1054665503839276` is primary and `1608105036460297` is also loaded; roadmap lists admin dashboards live but `app/[locale]/admin/*` folders are empty; GA4 script exists in this repo; README points to a missing `.env.local.example`.
-- **Security finding**: `app/api/webhooks/hostinger-mail/route.ts` has a hard-coded fallback for `HOSTINGER_WEBHOOK_SECRET` and accepts requests with no token. Not changed (docs-only session).
-- Uncommitted, not mine: `src/` (LivingShopWindow), `public/certificates/`, `public/images/press/`.
+## Definition of Done & Security Gaps
+- **Urgent Security Fix Pending Approval:** `app/api/webhooks/hostinger-mail/route.ts` has a hard-coded fallback for `HOSTINGER_WEBHOOK_SECRET` and accepts requests with no token.
+- **CI / Ops Gaps:** Add CI gate (`lint` + `typecheck` + `build`), `/api/health`, and shared `stef-logger`.
 
-## Definition of Done gaps
-
-- CI deploys on push to `main` as `root` **without** lint, typecheck or tests.
-- No `typecheck` or `test` script; no `.env.example`.
-- No shared `stef-logger` (inline `fetch` calls instead); no `GET /api/health`.
-- Admin/internal routes: none protected by middleware (no NextAuth); confirm none are live.
-
-## Active work
-
-| Item | Status | Note |
-|---|---|---|
-| 100% i18n coverage (zero `MISSING_MESSAGE`) | open (from project brief) | not re-checked |
-| Room booking flow live (roadmap R1) | open | not re-checked |
-
-## Open decisions for Jan
-
-- Rotate the Hostinger webhook secret and remove the hard-coded fallback, then require a valid token. Recommendation: yes, urgent.
-- Port registry: record 3001 for this site (or change compose to 3000)? Recommendation: update registry to 3001.
-- Approve a CI gate (lint + typecheck + build) before deploy, plus `/api/health` and `stef-logger`. Recommendation: yes.
-
-## Next action
-
-1. Fix the hostinger-mail webhook auth (after Jan approves the secret rotation).
+## Next Actions
+1. **Jan & Robin:** Rotate `HOSTINGER_WEBHOOK_SECRET` and deploy strict token check on `hostinger-mail` webhook.
+2. **Jan & Dorota:** Sign off and dispatch the Slow-Tourism PR release + downstairs helper listing.
+3. **Jan & Robin:** Connect the Zoho Semi-Automated Monthly Sprint approval feed from `ai-citation-monitor`.
