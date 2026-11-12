@@ -322,12 +322,12 @@
       "footer_link": "Regulamin"
     },
     "sectionTitle": "Roczny Program Wirtualnej Adopcji",
-    "campaignTitle": "Specjał Winter vol Liefde",
-    "campaignSubtitle": "Znajdź swoją idealną parę wśród naszych puszystych gwiazd. Bez dramatu, tylko bezwarunkowa miłość.",
+    "campaignTitle": "Wirtualna Adopcja Alpaki",
+    "campaignSubtitle": "Zostań opiekunem wybranej alpaki na 12 miesięcy lub podaruj imienny certyfikat adopcji na prezent. Twoje wsparcie pomaga nam dbać o stado przez cały rok.",
     "starProfiles": {
       "Elvis": {
         "hook": "Najlepszy słuchacz",
-        "description": "Elvis nie ocenia Twoich dramatów. Podczas gdy emocje w 'Winter vol Liefde' sięgają zenitu, on pozostaje spokojny. Jest idealnym partnerem na zimowy spacer, by odnaleźć wewnętrzny spokój."
+        "description": "Elvis to oaza spokoju w naszym stadzie. Zawsze uważnie słucha, uwielbia delikatne głaskanie i jest idealnym towarzyszem na relaksujący spacer w Górach Izerskich."
       },
       "Micky": {
         "hook": "Ciekawski poszukiwacz przygód",
@@ -384,8 +384,10 @@
     },
     "chooseAlpaca": "Wybierz swoją alpakę",
     "chooseAlpacaSubtitle": "Wybierz swojego ulubionego podopiecznego",
-    "benefitsTitle": "Wszystko, co otrzymujesz",
-    "benefitsSubtitle": "Odkryj magię zawartą w naszych pakietach adopcyjnych",
+    "benefitsTitle": "Co zawierają pakiety adopcyjne (od Bronze do Gold)",
+    "benefitsTitleSelected": "W Twoim wybranym pakiecie: {tier}",
+    "benefitsSubtitle": "Wybierz pakiet powyżej, aby przefiltrować zdjęcia korzyści zawartych w wybranym wariancie",
+    "showAllBenefits": "Pokaż porównanie wszystkich 8 korzyści (Bronze–Gold)",
     "bestValue": "Wybór",
     "annualFeeNote": "Jednorazowa opłata roczna",
     "selectionRequired": "Wybierz alpakę, aby sfinalizować",
@@ -555,7 +557,7 @@
     "comparison": {
       "title": "Dlaczego Wybrać Alpaki?",
       "tv": {
-        "title": "Winter vol Liefde (TV)",
+        "title": "Zwykły weekend w mieście",
         "point1": "Sztuczny dramat i łzy",
         "point2": "Kamery wszędzie",
         "point3": "Niepewność związku",
@@ -1569,5 +1571,28 @@
     "freeAlpacaPerk": "Bezpłatne spotkanie z alpakami + nielimitowany dostęp do zagrody przez cały czas pobytu!",
     "roomPerkMeet": "Bezpłatne spotkanie z alpakami w cenie",
     "roomPerkAccess": "Otwarty dostęp do alpak przez cały pobyt"
+  },
+  "livingBulletin": {
+    "badge": "Biuletyn Sezonowy • Listopad / Zima 2026",
+    "barnBadge": "W cenie wizyty i pobytu • Gwarancja pogody",
+    "barnTitle": "Deszcz lub śnieg? Usiądź z alpakami w naszej przytulnej stodole!",
+    "barnDescription": "Gdy pogoda w Górach Izerskich nie dopisuje, przenosimy spotkanie pod dach — w ramach standardowej wizyty lub pobytu. Czeka na Was nasza klimatyczna, rozświetlona lampkami stodoła z dywanami i poduszkami, gdzie możecie odpocząć i nakarmić alpaki w cieple.",
+    "barnImageAlt": "Przytulna zimowa stodoła z alpakami w Zagrodzie Alpakoterapii w Orłowicach",
+    "watchReelCta": "Zobacz wideo ze stodoły (FB)",
+    "planVisitCta": "Zobacz aktywności i wizyty",
+    "autumnOfferLink": "Pobyty Jesień/Zima (-10%)",
+    "christmasBadge": "Prezenty na Święta 2026 • PDF w 2 minuty",
+    "christmasTitle": "Wyjątkowe prezenty pod choinkę z Zagrody",
+    "christmasSubtitle": "Imienny voucher lub certyfikat adopcji otrzymasz natychmiast na e-mail — gotowy do wydrukowania i wręczenia.",
+    "voucherCardTitle": "Świąteczne Vouchery Podarunkowe",
+    "voucherCardDesc": "Ważne przez 12 miesięcy na spacery z alpakami, spotkania w przytulnej stodole, alpakoterapię oraz noclegi w gospodarstwie.",
+    "voucherCardCta": "Kup Voucher na Święta →",
+    "adoptCardTitle": "Świąteczna Adopcja Alpaki",
+    "adoptCardDesc": "Podaruj 12-miesięczną adopcję wybranej alpaki (Bronze 149 zł / Silver 349 zł ze spacerem / Gold VIP 999 zł z weekendowym pobytem i ręcznie robioną maskotką z wełny Twojej alpaki).",
+    "adoptCardCta": "Wybierz Alpakę do Adopcji →",
+    "voucherPageBannerBadge": "🎄 Idealny prezent pod choinkę — dostawa na e-mail w 2 minuty",
+    "voucherPageBannerText": "Każdy voucher jest ważny przez 12 miesięcy i obejmuje również spotkania w naszej przytulnej zimowej stodole z alpakami, gdy pogoda na zewnątrz nie sprzyja.",
+    "voucherPageAdoptLink": "Szukasz imiennego certyfikatu konkretnej alpaki? Zobacz Świąteczne Pakiety Adopcji →",
+    "messagePlaceholderChristmas": "Wesołych Świąt! Niezapomnianych chwil z alpakami 🎄🦙"
   }
 }

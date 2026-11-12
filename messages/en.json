@@ -201,12 +201,12 @@
       "footer_link": "Terms & Conditions"
     },
     "sectionTitle": "One-year Virtual Adoption Program",
-    "campaignTitle": "Winter vol Liefde Special",
-    "campaignSubtitle": "Find your perfect match among our soft stars. No drama, just unconditional love.",
+    "campaignTitle": "Adopt an Alpaca — 12-Month Patronage",
+    "campaignSubtitle": "Become the official sponsor of your favourite alpaca for 12 months or gift a named Adoption Certificate. Your support directly funds winter hay and care for our herd.",
     "starProfiles": {
       "Elvis": {
         "hook": "The Ultimate Listener",
-        "description": "Elvis doesn't judge your drama. While emotions run high in 'Winter vol Liefde', he remains calm. He's the ideal partner for a winter walk to find your inner peace."
+        "description": "Elvis is the calmest soul in our herd. He never rushes, loves gentle company, and is the ideal companion for a peaceful walk in the Izera Mountains."
       },
       "Micky": {
         "hook": "The Curious Adventurer",
@@ -263,8 +263,10 @@
     },
     "chooseAlpaca": "Choose your alpaca",
     "chooseAlpacaSubtitle": "Select your favorite beneficiary",
-    "benefitsTitle": "Everything You Get",
-    "benefitsSubtitle": "Explore the magic included in our adoption packages",
+    "benefitsTitle": "What's Inside Our Adoption Packages (Bronze → Gold)",
+    "benefitsTitleSelected": "Included in Your {tier} Package",
+    "benefitsSubtitle": "Select a package above to filter the picture cards to what is included in your chosen tier",
+    "showAllBenefits": "Show all 8 benefits across tiers (Bronze–Gold)",
     "bestValue": "Value",
     "annualFeeNote": "One-off Annual Fee",
     "selectionRequired": "Please select your alpaca buddy to finalize",
@@ -434,7 +436,7 @@
     "comparison": {
       "title": "Why Choose Alpacas?",
       "tv": {
-        "title": "Winter vol Liefde (TV)",
+        "title": "Crowded Tourist Resorts",
         "point1": "Fake drama & tears",
         "point2": "Cameras everywhere",
         "point3": "Relationship uncertainty",
@@ -1578,5 +1580,28 @@
     "freeAlpacaPerk": "Complimentary Meet the Alpacas session + unlimited open access to visit the alpacas during your stay!",
     "roomPerkMeet": "Free Meet the Alpacas session included",
     "roomPerkAccess": "Open access to visit the alpacas while staying"
+  },
+  "livingBulletin": {
+    "badge": "Living Bulletin • November / Winter 2026",
+    "barnBadge": "Included in Standard Visits & Stays • All-Weather Comfort",
+    "barnTitle": "Rain or Snow Outside? Sit Inside Our Cosy Alpaca Barn!",
+    "barnDescription": "When mountain weather turns chilly or wet, your visit moves indoors as part of our standard experience. Relax on carpets and cushions inside our warm, fairy-lit brick barn right alongside the alpacas—feed them, unwind, and enjoy the calm atmosphere indoors.",
+    "barnImageAlt": "Cosy indoor winter barn with alpacas at Zagroda Alpakoterapii in Orłowice",
+    "watchReelCta": "Watch Barn Reel (Facebook)",
+    "planVisitCta": "Explore Visits & Activities",
+    "autumnOfferLink": "Autumn/Winter Stays (-10%)",
+    "christmasBadge": "Christmas Gifts 2026 • Instant Printable PDF",
+    "christmasTitle": "Give the Gift of Alpaca Magic This Christmas",
+    "christmasSubtitle": "Delivered straight to your inbox in minutes—ready to print and place under the Christmas tree.",
+    "voucherCardTitle": "Christmas Gift Vouchers",
+    "voucherCardDesc": "Valid for 12 months towards alpaca walks, cosy indoor barn visits, therapy sessions, and mountain farmhouse stays.",
+    "voucherCardCta": "Buy Christmas Voucher →",
+    "adoptCardTitle": "Christmas Alpaca Adoption Packages",
+    "adoptCardDesc": "Gift a 12-month adoption of Teddy, Elvis, Ricky, Micky, Freddy or Suri (Bronze 149 PLN / Silver 349 PLN incl. walk / Gold VIP 999 PLN incl. weekend stay & handmade alpaca mascot).",
+    "adoptCardCta": "Adopt an Alpaca for Christmas →",
+    "voucherPageBannerBadge": "🎄 Christmas Gift Ready in 2 Minutes — Instant PDF Delivery",
+    "voucherPageBannerText": "Every voucher is valid for 12 months and includes indoor visits in our cosy fairy-lit alpaca barn whenever the weather outside is poor.",
+    "voucherPageAdoptLink": "Want to gift a named alpaca certificate instead? View Christmas Adoption Packages →",
+    "messagePlaceholderChristmas": "Merry Christmas! Wishing you magical moments with the alpacas 🎄🦙"
   }
 }

@@ -36,8 +36,7 @@ export function AnimalSection({ locale }: { locale: string }) {
   return (
     <section className="w-full mb-8 md:mb-12 px-2 sm:px-4">
       <Link href={`/${locale}/animals`}>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-primary-700 
-          hover:text-primary-500 transition-colors duration-300 group flex items-center justify-center gap-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4 md:mb-6 text-center text-stone-900 hover:text-orange-700 tracking-tight transition-colors duration-300 group flex items-center justify-center gap-2">
           {t('sectionTitle')}
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
         </h2>
@@ -82,14 +81,14 @@ export function AnimalSection({ locale }: { locale: string }) {
                   </div>
 
                   <div className="p-6 relative z-10">
-                    <CardTitle className="mb-2 text-2xl text-primary-800">{t(`${animal.id}.name`)}</CardTitle>
+                    <CardTitle className="mb-2 text-2xl font-serif text-stone-900">{t(`${animal.id}.name`)}</CardTitle>
 
                     <CardDescription className="line-clamp-2 group-hover:line-clamp-none transition-all duration-500 text-stone-600">
                       {t(`${animal.id}.description`)}
                     </CardDescription>
 
                     <Button
-                      className="mt-4 w-full bg-primary-100 text-primary-700 hover:bg-primary-600 hover:text-white rounded-xl font-bold transition-all duration-300 group-hover:shadow-md"
+                      className="mt-4 w-full bg-orange-600 text-white hover:bg-orange-700 rounded-xl font-bold transition-all duration-300 group-hover:shadow-md"
                     >
                       {t('meetButton', { name: t(`${animal.id}.name`) })}
                     </Button>

@@ -58,6 +58,7 @@ export async function generateMetadata({
 export default async function AutumnPage({ params: { locale } }: { params: { locale: string } }) {
     unstable_setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'autumn' });
+    const lb = await getTranslations({ locale, namespace: 'livingBulletin' });
 
     const promoCode = locale === 'cs' ? 'Podzim2026' : 'Autumn2026';
     const whatsappText = t('whatsappMessage');
@@ -153,6 +154,58 @@ export default async function AutumnPage({ params: { locale } }: { params: { loc
                         >
                             {t('ctaActivities')}
                         </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* All-Weather Cosy Winter Barn Highlight */}
+            <section className="py-12 bg-stone-950 px-4">
+                <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-stone-900 via-stone-900 to-amber-950/90 border border-amber-500/40 shadow-2xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                        <div className="lg:col-span-5 relative min-h-[260px] lg:min-h-[340px]">
+                            <Image
+                                src="/images/activities/winter-barn.jpg"
+                                alt={lb('barnImageAlt')}
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 45vw"
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                            <div>
+                                <span className="inline-block text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-500/20 border border-amber-400/40 px-3 py-1 rounded-full mb-3">
+                                    🏠 {lb('barnBadge')}
+                                </span>
+                                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-stone-50 mb-3 leading-snug">
+                                    {lb('barnTitle')}
+                                </h2>
+                                <p className="text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+                                    {lb('barnDescription')}
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-stone-800">
+                                <a
+                                    href="https://www.facebook.com/share/r/1EPSYJYUkz/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold px-5 py-3 rounded-xl text-sm shadow-lg transition-all"
+                                >
+                                    <span>🎬 {lb('watchReelCta')}</span>
+                                </a>
+                                <Link
+                                    href={`/${locale}/vouchers`}
+                                    className="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-amber-300 border border-amber-500/30 font-semibold px-4 py-3 rounded-xl text-sm transition-colors"
+                                >
+                                    <span>🎄 {lb('voucherCardCta')}</span>
+                                </Link>
+                                <Link
+                                    href={`/${locale}/adopt`}
+                                    className="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-emerald-300 border border-emerald-500/30 font-semibold px-4 py-3 rounded-xl text-sm transition-colors"
+                                >
+                                    <span>🦙 {lb('adoptCardCta')}</span>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -34,24 +34,24 @@ export function Navbar({ locale }: NavbarProps) {
   return (
     <nav className="bg-green-800 text-white relative z-50">
       <div className="absolute inset-0 bg-orange-400 opacity-20 pointer-events-none overflow-hidden" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col sm:flex-row justify-between py-2 sm:h-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between py-2 xl:h-16 gap-2 xl:gap-4">
 
-          {/* Logo */}
-          <div className="flex flex-1 items-center justify-between sm:justify-start">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href={`/${locale}`} className="flex items-center">
-                <Image
-                  src="/images/zagrodanewlogo.png"
-                  alt="Zagroda Alpakoterapii Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2"
-                />
-                <span className="text-xl font-bold">Zagroda Alpakoterapii</span>
-              </Link>
-            </div>
-            <div className="sm:hidden">
+          {/* Logo — flex-shrink-0 prevents Flexbox from ever crushing the logo width */}
+          <div className="flex flex-shrink-0 items-center justify-between">
+            <Link href={`/${locale}`} className="flex items-center flex-shrink-0">
+              <Image
+                src="/images/zagrodanewlogo.png"
+                alt="Zagroda Alpakoterapii Logo"
+                width={40}
+                height={40}
+                className="mr-2.5 flex-shrink-0"
+              />
+              <span className="text-lg sm:text-xl font-bold whitespace-nowrap">
+                Zagroda Alpakoterapii
+              </span>
+            </Link>
+            <div className="xl:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white p-2"
@@ -63,13 +63,13 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
+          <div className="hidden xl:flex xl:items-center xl:gap-4 2xl:gap-6 flex-shrink-0">
             {/* Home, Animals, Activities */}
             {navigation.slice(0, 3).map((item) => (
               <Link
                 key={item.key}
                 href={`/${locale}${item.href}`}
-                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${currentPath === item.href
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap ${currentPath === item.href
                     ? 'border-orange-400 text-white'
                     : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
                   }`}
@@ -86,7 +86,7 @@ export function Navbar({ locale }: NavbarProps) {
             >
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className={`inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer ${isAccomActive
+                className={`inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer whitespace-nowrap ${isAccomActive
                     ? 'border-orange-400 text-white'
                     : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
                   }`}
@@ -134,7 +134,7 @@ export function Navbar({ locale }: NavbarProps) {
               <Link
                 key={item.key}
                 href={`/${locale}${item.href}`}
-                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${currentPath === item.href
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap ${currentPath === item.href
                     ? 'border-orange-400 text-white'
                     : 'border-transparent text-gray-200 hover:border-orange-200 hover:text-white'
                   }`}
@@ -145,10 +145,10 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
 
           {/* Book Now CTA + Language + Sound */}
-          <div className="flex items-center justify-center sm:justify-end mt-2 sm:mt-0 sm:ml-8 gap-4">
+          <div className="flex items-center justify-center xl:justify-end gap-2.5 flex-shrink-0">
             <Link
               href={`/${locale}/stay`}
-              className="hidden sm:inline-flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-md hover:shadow-lg"
+              className="hidden xl:inline-flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-md hover:shadow-lg whitespace-nowrap"
             >
               🏡 {t('bookStay')}
             </Link>
@@ -158,9 +158,9 @@ export function Navbar({ locale }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile / Tablet menu */}
       {isOpen && (
-        <div className="sm:hidden fixed inset-x-0 top-16 bg-green-800 z-50">
+        <div className="xl:hidden fixed inset-x-0 top-16 bg-green-800 z-50 shadow-xl">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {/* Mobile booking CTA — top of menu for maximum visibility */}
             <Link

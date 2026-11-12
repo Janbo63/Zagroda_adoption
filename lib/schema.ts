@@ -17,6 +17,7 @@ const LOGO = `${BASE_URL}/images/zagrodanewlogo.png`;
 
 export const PROPERTY_ID = `${BASE_URL}/#property`;
 export const WEBSITE_ID = `${BASE_URL}/#website`;
+export const OFFER_CATALOG_ID = `${BASE_URL}/#offercatalog`;
 
 // Source: OpenStreetMap POI "Zagroda Alpakoterapii" (way 397435660), tourism=guest_house, Orłowice 24.
 export const FARM_GEO = { '@type': 'GeoCoordinates', latitude: 50.9265386, longitude: 15.3518507 } as const;
@@ -82,6 +83,9 @@ export function propertySchema(locale: string) {
         availableLanguage: [
             { '@type': 'Language', name: 'Polish', alternateName: 'pl' },
             { '@type': 'Language', name: 'English', alternateName: 'en' },
+            { '@type': 'Language', name: 'Czech', alternateName: 'cs' },
+            { '@type': 'Language', name: 'German', alternateName: 'de' },
+            { '@type': 'Language', name: 'Dutch', alternateName: 'nl' },
         ],
         amenityFeature: [
             amenity('Fireplace'),
@@ -102,6 +106,73 @@ export function propertySchema(locale: string) {
             occupancy: { '@type': 'QuantitativeValue', maxValue: r.maxOccupancy, unitText: 'guests' },
             amenityFeature: r.extras.map(amenity),
         })),
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            '@id': OFFER_CATALOG_ID,
+            name: 'Zagroda Alpakoterapii — Living Bulletin #1 (Winter 2026/2027) & Core Offers',
+            url: `${BASE_URL}/agent-catalog.json`,
+            itemListElement: [
+                {
+                    '@type': 'Offer',
+                    '@id': `${BASE_URL}/#offer-christmas-vouchers-2026`,
+                    name: 'Christmas Gift Voucher: Alpaca Walks, Cosy Indoor Barn Visits & Farm Stays',
+                    description: 'From 100 PLN / 25 EUR, 12-month validity, instant printable PDF certificate delivered by email, includes all-weather indoor winter barn access.',
+                    price: '100.00',
+                    priceCurrency: 'PLN',
+                    validFrom: '2026-11-07',
+                    validThrough: '2027-02-28',
+                    url: `${BASE_URL}/${locale}/vouchers`,
+                    availability: 'https://schema.org/InStock',
+                },
+                {
+                    '@type': 'Offer',
+                    '@id': `${BASE_URL}/#offer-christmas-adoption-2026`,
+                    name: 'Christmas Symbolic Alpaca Adoption Pack (Bronze 149 PLN / Silver 349 PLN / Gold VIP 999 PLN)',
+                    description: '12-month personalized Adoption Certificate for Teddy, Elvis, Ricky, Micky, Freddy, or Suri (149 PLN Bronze / 349 PLN Silver incl. forest walk / 999 PLN Gold VIP incl. weekend apartment stay & hand-finished alpaca wool mascot).',
+                    price: '149.00',
+                    priceCurrency: 'PLN',
+                    validFrom: '2026-11-07',
+                    validThrough: '2027-02-28',
+                    url: `${BASE_URL}/${locale}/adopt`,
+                    image: `${BASE_URL}/images/adoption/alpaca-mascots.jpg`,
+                    availability: 'https://schema.org/InStock',
+                },
+                {
+                    '@type': 'Offer',
+                    '@id': `${BASE_URL}/#offer-midweek-workation-4n`,
+                    name: 'Izera Mountain 4-Night Midweek Workation (Mon–Fri)',
+                    description: '4 nights (Mon–Fri) private accommodation with ergonomic work desk, 100 Mbps symmetric fibre Wi-Fi, espresso coffee, and complimentary mid-week alpaca walk or indoor barn session (10% Stripe deposit: 128 PLN).',
+                    price: '1280.00',
+                    priceCurrency: 'PLN',
+                    validFrom: '2026-11-07',
+                    validThrough: '2027-02-28',
+                    url: `${BASE_URL}/${locale}/workation#workation-booking`,
+                    availability: 'https://schema.org/InStock',
+                },
+                {
+                    '@type': 'Offer',
+                    '@id': `${BASE_URL}/#offer-alpaca-walk-60m`,
+                    name: 'Private Guided Alpaca Walk & Farm Feeding (60 mins, includes All-Weather Indoor Barn)',
+                    description: 'Private 60-minute guided walk and hand-feeding for up to 4 guests; moves indoors to our fairy-lit brick barn with carpets and cushions when weather is wet or snowy.',
+                    price: '200.00',
+                    priceCurrency: 'PLN',
+                    validThrough: '2027-12-31',
+                    url: `${BASE_URL}/${locale}/activities`,
+                    availability: 'https://schema.org/InStock',
+                },
+                {
+                    '@type': 'Offer',
+                    '@id': `${BASE_URL}/#offer-alpaca-therapy-60m`,
+                    name: '1-on-1 Child or Adult Alpaca Therapy Session / Alpakoterapia (60 mins)',
+                    description: 'Tailored 60-minute therapeutic session with gentle alpacas in Orłowice 24.',
+                    price: '240.00',
+                    priceCurrency: 'PLN',
+                    validThrough: '2027-12-31',
+                    url: `${BASE_URL}/${locale}/activities`,
+                    availability: 'https://schema.org/InStock',
+                },
+            ],
+        },
         potentialAction: {
             '@type': 'ReserveAction',
             target: {
@@ -239,7 +310,7 @@ export const therapyServiceSchema = {
     offers: {
         '@type': 'Offer',
         priceCurrency: 'PLN',
-        price: '150',
-        description: 'Per person for a guided alpaca therapy session',
+        price: '240',
+        description: '60-minute 1-on-1 guided alpaca therapy session (Alpakoterapia)',
     },
 };

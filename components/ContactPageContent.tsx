@@ -20,7 +20,7 @@ export function ContactPageContent({ locale: _locale }: ContactPageContentProps)
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8 text-primary-700">{t('title')}</h1>
+      <h1 className="text-4xl font-serif font-bold text-center mb-8 text-stone-900">{t('title')}</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-6">
           <Card>

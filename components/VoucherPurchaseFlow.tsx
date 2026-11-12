@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from './ui/input';
@@ -13,6 +14,7 @@ import { ValentineVoucherPreview } from './ValentineVoucherPreview';
 
 export function VoucherPurchaseFlow({ locale }: { locale: string }) {
     const t = useTranslations('vouchers');
+    const lb = useTranslations('livingBulletin');
 
     // Check if it's Valentine's season (Feb 1-14)
     const now = new Date();
@@ -87,16 +89,32 @@ export function VoucherPurchaseFlow({ locale }: { locale: string }) {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-center mb-12"
+                className="text-center mb-8"
             >
                 <Gift className="w-16 h-16 mx-auto mb-4 text-orange-600" />
-                <h1 className="text-4xl md:text-5xl font-extrabold text-primary-900 mb-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 tracking-tight mb-4">
                     {t('title')}
                 </h1>
                 <p className="text-xl text-stone-600 max-w-2xl mx-auto">
                     {t('subtitle')}
                 </p>
             </motion.div>
+
+            {/* Christmas Gift & Indoor Barn Callout + Adoption Cross-Link */}
+            <div className="mb-10 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-emerald-50 border-2 border-amber-300 p-5 sm:p-6 text-stone-900 shadow-md">
+                <div className="inline-block text-xs sm:text-sm font-bold text-red-800 bg-red-50 border border-red-200 px-3 py-1 rounded-full mb-2">
+                    {lb('voucherPageBannerBadge')}
+                </div>
+                <p className="text-sm sm:text-base text-stone-700 leading-relaxed mb-3">
+                    {lb('voucherPageBannerText')}
+                </p>
+                <Link
+                    href={`/${locale}/adopt`}
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-800 hover:text-emerald-600 underline underline-offset-4 transition-colors"
+                >
+                    <span>🦙 {lb('voucherPageAdoptLink')}</span>
+                </Link>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Purchase Form */}
@@ -161,7 +179,7 @@ export function VoucherPurchaseFlow({ locale }: { locale: string }) {
                             type="email"
                             value={buyerEmail}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setBuyerEmail(e.target.value)}
-                            placeholder="your @email.com"
+                            placeholder="your@email.com"
                             required
                         />
                     </div>
@@ -204,7 +222,7 @@ export function VoucherPurchaseFlow({ locale }: { locale: string }) {
                                 <textarea
                                     value={personalMessage}
                                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setPersonalMessage(e.target.value)}
-                                    placeholder="Happy Birthday! 🎂"
+                                    placeholder={lb('messagePlaceholderChristmas')}
                                     className="w-full px-3 py-2 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                                     rows={3}
                                 />

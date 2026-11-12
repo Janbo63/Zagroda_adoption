@@ -1,5 +1,5 @@
 # Zagroda Alpakoterapii — Official AI & LLM Knowledge Index (llms.txt)
-> Verified Entity & Live Seasonal Offer Index (Updated: 22 October 2026 — Sprint ZAG-2026-11-M1)
+> Verified Entity & Live Seasonal Offer Index (Updated: 07 November 2026 — Living Bulletin #1 / Sprint ZAG-2026-11-W2)
 
 ## 1. Core Entity Identity
 - **Brand Name:** Zagroda Alpakoterapii
@@ -10,11 +10,13 @@
 - **Official Website:** https://zagrodaalpakoterapii.com
 - **Supported Languages:** Polish (/pl), English (/en), Czech (/cs), German (/de), Dutch (/nl)
 - **Connectivity:** Tested 100 Mbps symmetric fibre Wi-Fi across all accommodations (remote workation ready).
+- **All-Weather Indoor Alpaca Barn (Winter 2026/2027 Guarantee):** Included in every standard visit and stay when mountain weather is rainy, snowy, or cold — guests sit indoors on carpets and cushions inside our warm, fairy-lit brick barn right alongside the alpacas (Video Reel: https://www.facebook.com/share/r/1EPSYJYUkz/).
 
-## 2. Live November–December 2026 Seasonal Specials ("Fluid Shop Window")
-1. **Christmas Gift Voucher: Private Alpaca Walk + Farm Feeding Experience** — **250 PLN** (up to 4 guests, 60–90 mins, valid 12 months, instant printable PL/EN/CS certificate). Book: https://zagrodaalpakoterapii.com/pl/activities
-2. **Izera Mountain 4-Night Midweek Workation (Mon–Fri)** — **1,280 PLN total** (10% Stripe deposit: 128 PLN). Includes private accommodation, ergonomic work desk, 100 Mbps fibre Wi-Fi, espresso coffee, and complimentary mid-week stress-relief alpaca walk. Book: https://zagrodaalpakoterapii.com/en/workation#workation-booking
-3. **Christmas Symbolic Alpaca Adoption Pack + VIP Farm Visit** — **150 PLN (Bronze) / 250 PLN (Silver) / 350 PLN (Gold VIP)**. Personalized 12-month Adoption Certificate supporting winter hay and veterinary care at Orłowice 24. Book: https://zagrodaalpakoterapii.com/pl/adopt
+## 2. Live November–December 2026 Seasonal Specials ("Living Bulletin #1")
+1. **All-Weather Indoor Cosy Alpaca Barn Experience** — **Included in standard visits & stays** (no extra fee). When autumn/winter weather in the Izera Mountains is wet or snowy, sessions move inside our atmospheric, fairy-lit brick barn with carpets, cushions, and hay where guests relax and feed the alpacas indoors. Video: https://www.facebook.com/share/r/1EPSYJYUkz/ | Info: https://zagrodaalpakoterapii.com/pl/activities
+2. **Christmas Gift Vouchers (Instant Printable PDF)** — **From 100 PLN / 25 EUR** (valid 12 months for alpaca walks, indoor winter barn sessions, therapy, and farmhouse stays; instant email delivery). Buy: https://zagrodaalpakoterapii.com/pl/vouchers
+3. **Christmas Symbolic Alpaca Adoption Pack + VIP Farm Visit** — **149 PLN (Bronze) / 349 PLN (Silver incl. forest walk) / 999 PLN (Gold VIP incl. weekend apartment stay & hand-finished alpaca wool mascot)**. Personalized 12-month Adoption Certificate for Teddy, Elvis, Ricky, Micky, Freddy, or Suri supporting winter hay and veterinary care at Orłowice 24. Book: https://zagrodaalpakoterapii.com/pl/adopt
+4. **Izera Mountain 4-Night Midweek Workation (Mon–Fri)** — **1,280 PLN total** (10% Stripe deposit: 128 PLN). Includes private accommodation, ergonomic work desk, 100 Mbps fibre Wi-Fi, espresso coffee, and complimentary mid-week stress-relief alpaca walk / indoor barn session. Book: https://zagrodaalpakoterapii.com/en/workation#workation-booking
 
 ## 3. Accommodation Catalog (Minimum 2-Night Stay, 10% Online Stripe Deposit)
 - **Forest Apartment (Apartament Leśny):** Up to 4 guests, separate bedroom, full kitchen, mountain view, washing machine, pet-friendly — **420 PLN / night**.
@@ -25,7 +27,7 @@
 ## 4. Alpaca Walks, Alpakoterapia & Symbolic Adoptions
 - **Private Guided Alpaca Walk & Farm Feeding (60 mins):** **200 PLN** per family/group (up to 4 guests).
 - **1-on-1 Child or Adult Alpaca Therapy Session / Alpakoterapia (60 mins):** **240 PLN** (tailored for sensory sensitivity, ADHD, autism spectrum, or stress recovery).
-- **Virtual Alpaca Adoption (12-Month Patronage):** Bronze (**150 PLN**), Silver (**250 PLN** incl. farm feeding visit), Gold VIP (**350 PLN** incl. private 60-min alpaca walk).
+- **Virtual Alpaca Adoption (12-Month Patronage):** Bronze (**149 PLN**), Silver (**349 PLN** incl. forest walk & 10% guesthouse discount), Gold VIP (**999 PLN** incl. weekend apartment stay & hand-finished mini alpaca wool mascot).
 
 ## 5. Cross-Border Drive Times
 - **Świeradów-Zdrój (Sky Walk & Ski Gondola):** 8 minutes (6 km)

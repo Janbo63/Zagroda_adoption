@@ -11,13 +11,30 @@ import { useRouter, useParams } from 'next/navigation'
 
 const BENEFIT_IMAGES = {
     certificate: '/images/adoption/certificate.png',
-    meet: '/images/adoption/photo.png',
-    fur_lock: '/images/adoption/plush.png',
+    meet: '/images/activities/winter-barn.jpg',
+    fur_lock: '/images/adoption/photo.png',
     discount: '/images/Farmhouse-rooms.jpg',
     forest_walk: '/images/activities/meet-alpacas.jpg',
     weekend: '/images/Farmhouse-rooms.jpg',
     care: '/images/adoption/greetings.png',
     mini_me: '/images/adoption/plush.png'
+}
+
+const TIER_BENEFITS: Record<'bronze' | 'silver' | 'gold', string[]> = {
+    bronze: ['certificate', 'fur_lock', 'meet'],
+    silver: ['certificate', 'fur_lock', 'meet', 'discount', 'forest_walk'],
+    gold: ['certificate', 'fur_lock', 'meet', 'discount', 'forest_walk', 'weekend', 'care', 'mini_me'],
+}
+
+const BENEFIT_TIER_BADGE: Record<string, { label: string; className: string }> = {
+    certificate: { label: 'Bronze • Silver • Gold', className: 'bg-amber-800/90 text-amber-50 border-amber-400/60' },
+    fur_lock: { label: 'Bronze • Silver • Gold', className: 'bg-amber-800/90 text-amber-50 border-amber-400/60' },
+    meet: { label: 'Bronze • Silver • Gold', className: 'bg-amber-800/90 text-amber-50 border-amber-400/60' },
+    discount: { label: 'Silver & Gold', className: 'bg-slate-700/90 text-slate-100 border-slate-300/60' },
+    forest_walk: { label: 'Silver & Gold', className: 'bg-slate-700/90 text-slate-100 border-slate-300/60' },
+    weekend: { label: '⭐ Gold Only', className: 'bg-orange-600/95 text-white border-amber-300' },
+    care: { label: '⭐ Gold Only', className: 'bg-orange-600/95 text-white border-amber-300' },
+    mini_me: { label: '⭐ Gold Only', className: 'bg-orange-600/95 text-white border-amber-300' },
 }
 
 export function AdoptionPageContent() {
@@ -35,7 +52,8 @@ export function AdoptionPageContent() {
 
     const tiers = ['bronze', 'silver', 'gold']
     const alpacas = ['Micky', 'Elvis', 'Ricky', 'Teddy', 'Suri', 'Freddy']
-    const benefitsKeys = ['certificate', 'meet', 'fur_lock', 'discount', 'forest_walk', 'weekend', 'care', 'mini_me']
+    const allBenefitsKeys = ['certificate', 'fur_lock', 'meet', 'discount', 'forest_walk', 'weekend', 'care', 'mini_me']
+    const visibleBenefitsKeys = selectedTier ? TIER_BENEFITS[selectedTier] : allBenefitsKeys
 
     const handleAdoption = async () => {
         if (!selectedAlpaca || !selectedTier) return
@@ -56,7 +74,7 @@ export function AdoptionPageContent() {
                     tier: selectedTier,
                     alpaca: selectedAlpaca,
                     locale: locale,
-                    campaign: "winter-vol-liefde",
+                    campaign: "seasonal-adoption",
                     marketingConsent: marketingConsent
                 }),
             })
@@ -82,10 +100,10 @@ export function AdoptionPageContent() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center mb-12"
             >
-                <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-orange-100 text-orange-600 text-xs font-black uppercase tracking-[0.2em] shadow-sm">
+                <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-orange-100 text-orange-600 text-xs font-serif font-bold uppercase tracking-[0.2em] shadow-sm">
                     {t('campaignTitle')}
                 </div>
-                <h1 className="text-4xl md:text-6xl font-extrabold text-primary-900 mb-6 tracking-tight leading-tight">
+                <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 mb-6 tracking-tight leading-tight">
                     {t('campaignTitle')}
                 </h1>
                 <p className="text-xl md:text-2xl text-stone-600 max-w-3xl mx-auto font-medium leading-relaxed">
@@ -108,19 +126,19 @@ export function AdoptionPageContent() {
                             }`}>
                             {tier === 'gold' && (
                                 <div className="absolute top-0 right-0">
-                                    <div className="bg-orange-500 text-white text-[10px] uppercase tracking-widest font-black py-1 px-10 rotate-45 translate-x-[30px] translate-y-[10px] shadow-sm">
+                                    <div className="bg-orange-500 text-white text-[10px] uppercase tracking-widest font-serif font-bold py-1 px-10 rotate-45 translate-x-[30px] translate-y-[10px] shadow-sm">
                                         {t('bestValue')}
                                     </div>
                                 </div>
                             )}
 
                             <CardHeader className="text-center pb-2 pt-8">
-                                <CardTitle className="text-2xl font-black text-primary-800 uppercase tracking-wide">
+                                <CardTitle className="text-2xl font-serif font-bold text-stone-900 uppercase tracking-wide">
                                     {t(`${tier}.name`)}
                                 </CardTitle>
                                 <div className="flex flex-col items-center mt-4">
-                                    <div className="text-4xl font-black text-orange-500">{t(`${tier}.price`)}</div>
-                                    <div className="text-xs uppercase tracking-widest text-stone-400 font-bold mt-1">{t('annualFeeNote')}</div>
+                                    <div className="text-4xl font-serif font-bold text-orange-500">{t(`${tier}.price`)}</div>
+                                    <div className="text-xs uppercase tracking-widest text-stone-400 font-serif font-bold mt-1">{t('annualFeeNote')}</div>
                                 </div>
                             </CardHeader>
 
@@ -137,11 +155,30 @@ export function AdoptionPageContent() {
                                         </li>
                                     ))}
                                 </ul>
+
+                                {tier === 'gold' && (
+                                    <div className="mt-5 rounded-xl overflow-hidden border-2 border-amber-300 bg-stone-900 shadow-md">
+                                        <div className="relative w-full aspect-[4/3]">
+                                            <Image
+                                                src="/images/adoption/alpaca-mascots.jpg"
+                                                alt={t('benefits.mini_me.title')}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, 350px"
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                        <div className="bg-amber-50 px-3 py-2 text-center border-t border-amber-200">
+                                            <p className="text-xs font-serif font-bold text-amber-900">
+                                                ✨ {t('benefits.mini_me.title')} — {t('benefits.mini_me.description')}
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
                             </CardContent>
 
                             <CardFooter className="pt-6 pb-8 px-6">
                                 <Button
-                                    className={`w-full font-black text-lg h-14 rounded-2xl transition-all duration-300 ${selectedTier === tier
+                                    className={`w-full font-serif font-bold text-lg h-14 rounded-2xl transition-all duration-300 ${selectedTier === tier
                                         ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-lg'
                                         : 'bg-stone-100 text-stone-600 hover:bg-orange-100 hover:text-orange-600'
                                         }`}
@@ -164,31 +201,48 @@ export function AdoptionPageContent() {
                 className="mb-20"
             >
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl font-black text-primary-800 mb-2 underline decoration-orange-400 decoration-4 underline-offset-8">
-                        {t('benefitsTitle')}
+                    <h2 className="text-3xl font-serif font-bold text-stone-900 mb-2 underline decoration-orange-400 decoration-4 underline-offset-8">
+                        {selectedTier
+                            ? t('benefitsTitleSelected', { tier: `${t(`${selectedTier}.name`)} (${t(`${selectedTier}.price`)})` })
+                            : t('benefitsTitle')}
                     </h2>
                     <p className="text-stone-500 font-medium">{t('benefitsSubtitle')}</p>
+                    {selectedTier && (
+                        <button
+                            type="button"
+                            onClick={() => setSelectedTier(null)}
+                            className="mt-3 inline-flex items-center gap-1.5 text-xs font-serif font-bold uppercase tracking-wider text-orange-600 hover:text-orange-700 underline underline-offset-4"
+                        >
+                            {t('showAllBenefits')}
+                        </button>
+                    )}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                    {benefitsKeys.map((key, idx) => (
+                <div className={`grid grid-cols-1 sm:grid-cols-2 ${visibleBenefitsKeys.length === 3 ? 'lg:grid-cols-3 max-w-5xl' : 'lg:grid-cols-4 max-w-7xl'} gap-6 mx-auto`}>
+                    {visibleBenefitsKeys.map((key, idx) => {
+                        const badge = BENEFIT_TIER_BADGE[key];
+                        return (
                         <motion.div
                             key={key}
                             initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: idx * 0.05 }}
                             className="bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden group"
                         >
-                            <div className="relative h-40 overflow-hidden">
+                            <div className="relative h-44 overflow-hidden bg-stone-900">
                                 <Image
                                     src={BENEFIT_IMAGES[key as keyof typeof BENEFIT_IMAGES]}
                                     alt={t(`benefits.${key}.title`)}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                                <h4 className="absolute bottom-3 left-4 text-white font-black text-lg">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                                {badge && (
+                                    <span className={`absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[11px] font-bold border shadow-sm ${badge.className}`}>
+                                        {badge.label}
+                                    </span>
+                                )}
+                                <h4 className="absolute bottom-3 left-4 text-white font-serif font-bold text-lg">
                                     {t(`benefits.${key}.title`)}
                                 </h4>
                             </div>
@@ -198,7 +252,8 @@ export function AdoptionPageContent() {
                                 </p>
                             </div>
                         </motion.div>
-                    ))}
+                        );
+                    })}
                 </div>
             </motion.div>
 
@@ -216,7 +271,7 @@ export function AdoptionPageContent() {
 
                         <div className="relative z-10">
                             <div className="text-center mb-10">
-                                <h3 className="text-3xl font-black text-primary-900 mb-2">{t('chooseAlpaca')}</h3>
+                                <h3 className="text-3xl font-serif font-bold text-stone-900 mb-2">{t('chooseAlpaca')}</h3>
                                 <p className="text-stone-500 font-semibold">{t('chooseAlpacaSubtitle')}</p>
                             </div>
 
@@ -248,7 +303,7 @@ export function AdoptionPageContent() {
                                                 </div>
                                             )}
                                         </div>
-                                        <span className={`text-lg font-black tracking-tight transition-colors ${selectedAlpaca === name ? 'text-orange-600' : 'text-stone-700'}`}>
+                                        <span className={`text-lg font-serif font-bold tracking-tight transition-colors ${selectedAlpaca === name ? 'text-orange-600' : 'text-stone-700'}`}>
                                             {name}
                                         </span>
                                     </motion.div>
@@ -269,7 +324,7 @@ export function AdoptionPageContent() {
                                             <div className="absolute top-4 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
                                                 <Heart className="w-16 h-16 text-orange-500" />
                                             </div>
-                                            <h4 className="text-orange-600 font-black uppercase tracking-widest text-sm mb-3 text-center">
+                                            <h4 className="text-orange-600 font-serif font-bold uppercase tracking-widest text-sm mb-3 text-center">
                                                 {t(`starProfiles.${selectedAlpaca}.hook`) || t('starProfiles.General.hook')}
                                             </h4>
                                             <p className="text-stone-700 font-medium text-lg leading-relaxed italic text-center">
@@ -323,7 +378,7 @@ export function AdoptionPageContent() {
                                         <motion.p
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
-                                            className="text-red-500 text-xs font-bold uppercase tracking-wider mt-2"
+                                            className="text-red-500 text-xs font-serif font-bold uppercase tracking-wider mt-2"
                                         >
                                             {t('legal.required_error')}
                                         </motion.p>
@@ -333,7 +388,7 @@ export function AdoptionPageContent() {
                                 <Button
                                     size="lg"
                                     disabled={!selectedAlpaca || !selectedTier || isProcessing}
-                                    className={`px-16 py-10 rounded-3xl shadow-2xl text-2xl font-black transition-all duration-500 transform group
+                                    className={`px-16 py-10 rounded-3xl shadow-2xl text-2xl font-serif font-bold transition-all duration-500 transform group
                                         ${selectedAlpaca && selectedTier
                                             ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white hover:scale-105 active:scale-95'
                                             : 'bg-stone-200 text-stone-400 cursor-not-allowed'}`}
@@ -343,7 +398,7 @@ export function AdoptionPageContent() {
                                     {isProcessing ? t('confirmAdoption') + '...' : t('confirmAdoption')}
                                 </Button>
                                 {!selectedAlpaca && (
-                                    <p className="text-stone-400 mt-6 text-sm font-bold flex items-center gap-2 italic">
+                                    <p className="text-stone-400 mt-6 text-sm font-serif font-bold flex items-center gap-2 italic">
                                         <Info className="w-4 h-4" /> {t('selectionRequired')}
                                     </p>
                                 )}
@@ -357,7 +412,7 @@ export function AdoptionPageContent() {
             <div className="mt-20 max-w-4xl mx-auto">
                 <button
                     onClick={() => setShowTerms(!showTerms)}
-                    className="flex items-center justify-center gap-2 w-full text-stone-400 hover:text-stone-600 transition-colors font-bold uppercase tracking-widest text-xs"
+                    className="flex items-center justify-center gap-2 w-full text-stone-400 hover:text-stone-600 transition-colors font-serif font-bold uppercase tracking-widest text-xs"
                 >
                     {t('terms.title')}
                     <ChevronDown className={`w-4 h-4 transition-transform ${showTerms ? 'rotate-180' : ''}`} />

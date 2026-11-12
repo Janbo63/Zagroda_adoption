@@ -43,8 +43,7 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
   return (
     <section className="w-full mb-8 md:mb-12 px-2 sm:px-4">
       <Link href={`/${locale}/activities`}>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-primary-700 
-          hover:text-primary-500 transition-colors duration-300 group flex items-center justify-center gap-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4 md:mb-6 text-center text-stone-900 hover:text-orange-700 tracking-tight transition-colors duration-300 group flex items-center justify-center gap-2">
           {t('sectionTitle')}
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
         </h2>
@@ -64,7 +63,7 @@ export function ActivitiesSection({ locale }: ActivitiesSectionProps) {
                   />
                 </div>
                 <CardDescription>{t(`${activity.id}.description`)}</CardDescription>
-                <span className="inline-block mt-4 bg-blue-500 text-white rounded-full transition-all duration-300 px-6 py-2 text-sm font-medium group-hover:bg-blue-600">
+                <span className="inline-block mt-4 bg-orange-600 text-white rounded-xl transition-all duration-300 px-6 py-2.5 text-sm font-bold shadow-sm group-hover:bg-orange-700">
                   {t('viewDetails')}
                 </span>
               </CardContent>

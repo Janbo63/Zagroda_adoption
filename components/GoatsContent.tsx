@@ -80,16 +80,16 @@ export default function GoatsContent({
   return (
     <div className="container mx-auto px-4 py-8">
       <Link href={`/${params.locale}/animals`}>
-        <Button variant="outline" className="mb-4 bg-primary-500 hover:bg-primary-600 text-white">
+        <Button variant="outline" className="mb-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold shadow-sm">
           &larr; Back to All Animals
         </Button>
       </Link>
-      <h1 className="text-4xl font-bold text-center mb-8 text-primary-700">Meet Our Goat Gang</h1>
+      <h1 className="text-4xl font-serif font-bold text-center mb-8 text-stone-900">Meet Our Goat Gang</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {goats.map((goat) => (
           <Card key={goat.name} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary-600">{goat.name}</CardTitle>
+              <CardTitle className="text-2xl font-serif font-bold text-stone-900">{goat.name}</CardTitle>
             </CardHeader>
             <div className="relative aspect-[4/3] w-full">
               <Image
@@ -103,31 +103,31 @@ export default function GoatsContent({
             <CardContent className="p-4">
               <Tabs defaultValue="attributes">
                 <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="attributes" className="text-primary-600">Attributes</TabsTrigger>
-                  <TabsTrigger value="character" className="text-primary-600">Character</TabsTrigger>
-                  <TabsTrigger value="stories" className="text-primary-600">Stories</TabsTrigger>
+                  <TabsTrigger value="attributes" className="text-stone-900">Attributes</TabsTrigger>
+                  <TabsTrigger value="character" className="text-stone-900">Character</TabsTrigger>
+                  <TabsTrigger value="stories" className="text-stone-900">Stories</TabsTrigger>
                 </TabsList>
                 <TabsContent value="attributes">
                   <dl className="mt-4 space-y-2">
                     <div>
-                      <dt className="font-semibold text-primary-700">Age:</dt>
+                      <dt className="font-semibold text-stone-900">Age:</dt>
                       <dd>{goat.attributes.age} years</dd>
                     </div>
                     <div>
-                      <dt className="font-semibold text-primary-700">Color:</dt>
+                      <dt className="font-semibold text-stone-900">Color:</dt>
                       <dd>{goat.attributes.color}</dd>
                     </div>
                     <div>
-                      <dt className="font-semibold text-primary-700">Birthplace:</dt>
+                      <dt className="font-semibold text-stone-900">Birthplace:</dt>
                       <dd>{goat.attributes.birthplace}</dd>
                     </div>
                   </dl>
                 </TabsContent>
                 <TabsContent value="character">
-                  <p className="mt-4 text-primary-700">{goat.character}</p>
+                  <p className="mt-4 text-stone-900">{goat.character}</p>
                 </TabsContent>
                 <TabsContent value="stories">
-                  <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
+                  <ul className="mt-4 list-disc pl-5 space-y-2 text-stone-900">
                     {goat.stories.map((story, index) => (
                       <li key={index}>{story}</li>
                     ))}

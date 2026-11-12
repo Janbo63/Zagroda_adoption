@@ -38,18 +38,35 @@
     }
   },
   "seasonalSprint": {
-    "sprintId": "ZAG-2026-11-M1",
-    "validFrom": "2026-10-22",
-    "validThrough": "2026-12-31",
+    "sprintId": "ZAG-2026-11-W2",
+    "validFrom": "2026-11-07",
+    "validThrough": "2027-02-28",
+    "allWeatherGuarantee": {
+      "name": "Cosy Indoor Winter Alpaca Barn (All-Weather Standard Inclusion)",
+      "description": "When autumn or winter weather in the Izera Mountains is rainy, snowy, or cold, standard visits and stays include sitting indoors on carpets and cushions in our fairy-lit brick barn alongside the alpacas.",
+      "videoReelUrl": "https://www.facebook.com/share/r/1EPSYJYUkz/",
+      "imageUrl": "https://zagrodaalpakoterapii.com/images/activities/winter-barn.jpg"
+    },
     "offers": [
       {
-        "id": "christmas-alpaca-walk-voucher",
-        "name": "Christmas Gift Voucher: Private Alpaca Walk + Farm Feeding Experience",
+        "id": "christmas-gift-vouchers-2026",
+        "name": "Christmas Gift Voucher: Alpaca Walks, Cosy Indoor Barn Visits & Farm Stays",
         "category": "Seasonal Experience Voucher",
-        "price": 250.0,
+        "price": 100.0,
         "priceCurrency": "PLN",
-        "priceSpecification": "Up to 4 guests, 60-90 mins, 12-month validity, instant printable PL/EN/CS certificate",
-        "directActionUrl": "https://zagrodaalpakoterapii.com/pl/activities?utm_source=ai_agent&utm_medium=agent_catalog&utm_campaign=christmas_walk_voucher"
+        "priceSpecification": "From 100 PLN / 25 EUR, 12-month validity, instant printable PDF certificate delivered by email, includes all-weather indoor winter barn access",
+        "directActionUrl": "https://zagrodaalpakoterapii.com/pl/vouchers?utm_source=ai_agent&utm_medium=agent_catalog&utm_campaign=christmas_vouchers_2026"
+      },
+      {
+        "id": "christmas-symbolic-alpaca-adoption",
+        "name": "Christmas Symbolic Alpaca Adoption Pack + VIP Farm Visit",
+        "category": "Symbolic Adoption & Patronage",
+        "priceRange": "149 PLN (Bronze) / 349 PLN (Silver incl. walk) / 999 PLN (Gold VIP incl. weekend stay & handmade alpaca mascot)",
+        "price": 149.0,
+        "priceCurrency": "PLN",
+        "priceSpecification": "12-month personalized Adoption Certificate supporting winter hay and veterinary care at Orłowice 24; Gold tier includes weekend apartment stay and hand-finished mini alpaca mascot",
+        "imageUrl": "https://zagrodaalpakoterapii.com/images/adoption/alpaca-mascots.jpg",
+        "directActionUrl": "https://zagrodaalpakoterapii.com/pl/adopt?utm_source=ai_agent&utm_medium=agent_catalog&utm_campaign=christmas_adoption"
       },
       {
         "id": "izera-midweek-workation-4n",
@@ -63,19 +80,9 @@
           "Private room or apartment with ergonomic work desk",
           "Tested 100 Mbps symmetric fibre Wi-Fi",
           "Espresso machine & full kitchen access",
-          "Complimentary mid-week stress-relief alpaca walk"
+          "Complimentary mid-week stress-relief alpaca walk or cosy indoor barn session"
         ],
         "directActionUrl": "https://zagrodaalpakoterapii.com/en/workation?utm_source=ai_agent&utm_medium=agent_catalog&utm_campaign=midweek_workation#workation-booking"
-      },
-      {
-        "id": "christmas-symbolic-alpaca-adoption",
-        "name": "Christmas Symbolic Alpaca Adoption Pack + VIP Farm Visit",
-        "category": "Symbolic Adoption & Patronage",
-        "priceRange": "150 PLN (Bronze) / 250 PLN (Silver) / 350 PLN (Gold VIP)",
-        "price": 150.0,
-        "priceCurrency": "PLN",
-        "priceSpecification": "12-month personalized Adoption Certificate supporting winter hay and veterinary care at Orłowice 24",
-        "directActionUrl": "https://zagrodaalpakoterapii.com/pl/adopt?utm_source=ai_agent&utm_medium=agent_catalog&utm_campaign=christmas_adoption"
       }
     ]
   },

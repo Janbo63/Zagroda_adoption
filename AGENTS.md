@@ -1,7 +1,7 @@
 # Zagroda Alpakoterapii Website — zagrodaalpakoterapii.com
 
 > Follows the FutureSolutions Project Standard v1.0 — `F:\Senior Management\standards\README.md`.
-> Read `PROGRESS.md` next. Keep this file ≤ 80 lines; detail belongs in `README.md` or `docs/`.
+> **Mandatory Entry Sequence**: Read `AGENTS.md` → `PROGRESS.md` → `TIMELINE.md` on entry so historical decisions and `COM-xx` records are never forgotten. Keep this file ≤ 80 lines; detail belongs in `README.md` or `docs/`.
 
 ## 1. What this is
 
@@ -25,7 +25,8 @@ Customer-facing website for the alpaca therapy farm: animals, activities, accomm
 ## 4. Where to look
 
 1. `PROGRESS.md` — current state, DoD gaps, open decisions, next action
-2. `docs/architecture-notes.md` — architecture, analytics IDs, env var names, gotchas, key files
+2. `TIMELINE.md` — auto-synced chronological history (`D3` / `COM-05` / PR & Living Bulletin milestones)
+3. `docs/architecture-notes.md` — architecture, analytics IDs, env var names, gotchas, key files
 3. `docs/roadmap.md` — release plan (single source of truth for planned features) · `project-brief.md` — business case and KPIs · `README.md` — setup
 4. Key files: `lib/zoho.ts` (Zoho client) · `lib/email-service.ts` (Nodemailer) · `lib/certificate-generator.ts` + `lib/voucher-generator.ts` (PDFs) · `app/api/stripe/webhook/route.ts` · `app/api/booking/*` (Beds25 calls) · `middleware.ts` (i18n + Facebook crawler) · `app/[locale]/layout.tsx` (GA4, Meta Pixel, Clarity)
 

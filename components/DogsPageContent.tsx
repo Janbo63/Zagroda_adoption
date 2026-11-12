@@ -27,11 +27,11 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       <Link href={`/${locale}/animals`}>
-        <Button variant="outline" className="mb-4 bg-primary-500 hover:bg-primary-600 text-white">
+        <Button variant="outline" className="mb-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold shadow-sm">
           &larr; {tc('backToAnimals')}
         </Button>
       </Link>
-      <h1 className="text-4xl font-bold text-center mb-8 text-primary-700">{t('pageTitle')}</h1>
+      <h1 className="text-4xl font-serif font-bold text-center mb-8 text-stone-900">{t('pageTitle')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {dogs.map((dogId) => {
           const isMemorial = t(`${dogId}.status`) === 'memorial';
@@ -40,7 +40,7 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
             <Card key={dogId} className={`overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${isMemorial ? 'bg-stone-50/90' : 'bg-white/80'} backdrop-blur-sm relative`}>
               {isMemorial && (
                 <div className="absolute top-0 right-0 z-20">
-                  <div className="bg-stone-800/80 text-white text-[10px] uppercase tracking-widest font-black py-1 px-10 rotate-45 translate-x-[30px] translate-y-[10px] shadow-sm backdrop-blur-sm border border-white/20">
+                  <div className="bg-stone-800/80 text-white text-[10px] uppercase tracking-widest font-serif font-bold py-1 px-10 rotate-45 translate-x-[30px] translate-y-[10px] shadow-sm backdrop-blur-sm border border-white/20">
                     In Memoriam
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
               </div>
 
               <CardHeader className="relative">
-                <CardTitle className="text-2xl font-bold text-primary-600 flex items-center gap-2">
+                <CardTitle className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2">
                   {t(`${dogId}.name`)}
                   {isMemorial && <span className="text-stone-400 text-sm font-normal italic">({t('alwaysWithUs')})</span>}
                 </CardTitle>
@@ -78,35 +78,35 @@ export function DogsPageContent({ locale }: DogsPageContentProps) {
 
                 <Tabs defaultValue="attributes">
                   <TabsList className="grid w-full grid-cols-3">
-                    <TabsTrigger value="attributes" className="text-primary-600">{tc('attributes')}</TabsTrigger>
-                    <TabsTrigger value="character" className="text-primary-600">{tc('character')}</TabsTrigger>
-                    <TabsTrigger value="stories" className="text-primary-600">{tc('stories')}</TabsTrigger>
+                    <TabsTrigger value="attributes" className="text-stone-900">{tc('attributes')}</TabsTrigger>
+                    <TabsTrigger value="character" className="text-stone-900">{tc('character')}</TabsTrigger>
+                    <TabsTrigger value="stories" className="text-stone-900">{tc('stories')}</TabsTrigger>
                   </TabsList>
                   <TabsContent value="attributes">
                     <dl className="mt-4 space-y-2">
                       <div>
-                        <dt className="font-semibold text-primary-700">{tc('age')}:</dt>
+                        <dt className="font-semibold text-stone-900">{tc('age')}:</dt>
                         <dd>{t(`${dogId}.attributes.age`)}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-primary-700">{tc('color')}:</dt>
+                        <dt className="font-semibold text-stone-900">{tc('color')}:</dt>
                         <dd>{t(`${dogId}.attributes.color`)}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-primary-700">{tc('breed')}:</dt>
+                        <dt className="font-semibold text-stone-900">{tc('breed')}:</dt>
                         <dd>{t(`${dogId}.attributes.breed`)}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-primary-700">{tc('role')}:</dt>
+                        <dt className="font-semibold text-stone-900">{tc('role')}:</dt>
                         <dd>{t(`${dogId}.attributes.role`)}</dd>
                       </div>
                     </dl>
                   </TabsContent>
                   <TabsContent value="character">
-                    <p className="mt-4 text-primary-700">{t(`${dogId}.character`)}</p>
+                    <p className="mt-4 text-stone-900">{t(`${dogId}.character`)}</p>
                   </TabsContent>
                   <TabsContent value="stories">
-                    <ul className="mt-4 list-disc pl-5 space-y-2 text-primary-700">
+                    <ul className="mt-4 list-disc pl-5 space-y-2 text-stone-900">
                       <li>{t(`${dogId}.stories.0`)}</li>
                       <li>{t(`${dogId}.stories.1`)}</li>
                     </ul>

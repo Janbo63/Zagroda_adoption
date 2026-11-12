@@ -577,12 +577,12 @@
       "footer_link": "AGB"
     },
     "sectionTitle": "Einjähriges virtuelles Adoptionsprogramm",
-    "campaignTitle": "Winter vol Liefde Special",
-    "campaignSubtitle": "Finde dein perfektes Match unter unseren sanften Stars. Kein Drama, nur bedingungslose Liebe.",
+    "campaignTitle": "Alpaka-Patenschaft — 12 Monate",
+    "campaignSubtitle": "Werden Sie für 12 Monate Pate Ihres Lieblingsalpakas oder verschenken Sie ein persönliches Adoptionszertifikat. Ihre Unterstützung sichert Heu und Pflege für unsere Herde.",
     "starProfiles": {
       "Elvis": {
         "hook": "Der ultimative Zuhörer",
-        "description": "Elvis urteilt nicht über dein Drama. Während bei 'Winter vol Liefde' die Emotionen hochkochen, bleibt er gelassen. Er ist der ideale Partner für einen Winterspaziergang, um den Kopf frei zu bekommen."
+        "description": "Elvis ist der Ruhepol unserer Herde. Er strahlt Gelassenheit aus und ist der perfekte Begleiter für einen entspannten Spaziergang im Isergebirge."
       },
       "Micky": {
         "hook": "Der neugierige Abenteurer",
@@ -599,7 +599,7 @@
     },
     "bronze": {
       "name": "Bronze-Beschützer",
-      "price": "199 PLN",
+      "price": "149 PLN",
       "features": [
         "Offizielle Adoptionsurkunde",
         "Triff dein Alpaka (Eintritt für 1 Person)",
@@ -608,7 +608,7 @@
     },
     "silver": {
       "name": "Silber-Beschützer",
-      "price": "499 PLN",
+      "price": "349 PLN",
       "features": [
         "Alle Bronze-Vorteile",
         "10% Rabatt auf Aufenthalte im Guesthouse Zagroda Alpako Terapii",
@@ -627,8 +627,10 @@
     },
     "chooseAlpaca": "Wählen Sie Ihr Alpaka",
     "chooseAlpacaSubtitle": "Wählen Sie Ihren Schützling aus",
-    "benefitsTitle": "Alles, was Sie erhalten",
-    "benefitsSubtitle": "Entdecken Sie die Magie unserer Adoptionspakete",
+    "benefitsTitle": "Was unsere Adoptionspakete enthalten (Bronze → Gold)",
+    "benefitsTitleSelected": "In Ihrem gewählten Paket enthalten: {tier}",
+    "benefitsSubtitle": "Wählen Sie oben ein Paket aus, um die Bilder auf Ihr gewähltes Paket zu filtern",
+    "showAllBenefits": "Alle 8 Vorteile aller Pakete anzeigen (Bronze–Gold)",
     "bestValue": "Tipp",
     "annualFeeNote": "Einmalige Jahresgebühr",
     "selectionRequired": "Bitte wählen Sie Ihr Alpaka aus, um fortzufahren",
@@ -938,7 +940,7 @@
     "comparison": {
       "title": "Warum Alpakas Wählen?",
       "tv": {
-        "title": "Winter vol Liefde (TV)",
+        "title": "Überfüllte Touristenorte",
         "point1": "Falsches Drama & Tränen",
         "point2": "Kameras überall",
         "point3": "Beziehungsunsicherheit",
@@ -1563,5 +1565,28 @@
     "freeAlpacaPerk": "Kostenlose Alpaka-Begegnung + unbegrenzter Zugang zu den Alpakas während des gesamten Aufenthalts!",
     "roomPerkMeet": "Kostenlose Alpaka-Begegnung inbegriffen",
     "roomPerkAccess": "Freier Zugang zu den Alpakas während des Aufenthalts"
+  },
+  "livingBulletin": {
+    "badge": "Saison-Bulletin • November / Winter 2026",
+    "barnBadge": "Im Standardbesuch & Aufenthalt enthalten • Wetterfest",
+    "barnTitle": "Regen oder Schnee? Sitzen Sie mit den Alpakas in unserer gemütlichen Scheune!",
+    "barnDescription": "Wenn das Bergwetter im Isergebirge ungemütlich wird, verlegen wir Ihr Treffen einfach nach drinnen — als Teil unseres regulären Besuchs oder Aufenthalts. Entspannen Sie auf Teppichen und Kissen in unserer mit Lichterketten beleuchteten Backsteinscheune direkt bei den Alpakas.",
+    "barnImageAlt": "Gemütliche Winterscheune mit Alpakas in der Zagroda Alpakoterapii",
+    "watchReelCta": "Scheunen-Video ansehen (FB)",
+    "planVisitCta": "Besuche & Aktivitäten",
+    "autumnOfferLink": "Herbst/Winter-Aufenthalte (-10%)",
+    "christmasBadge": "Weihnachtsgeschenke 2026 • Sofort-PDF in 2 Minuten",
+    "christmasTitle": "Verschenken Sie Alpaka-Momente zu Weihnachten",
+    "christmasSubtitle": "Sofort per E-Mail zum Ausdrucken — das besondere Erlebnisgeschenk unter dem Weihnachtsbaum.",
+    "voucherCardTitle": "Weihnachts-Geschenkgutscheine",
+    "voucherCardDesc": "12 Monate gültig für Alpaka-Spaziergänge, gemütliche Scheunenbesuche, Alpakatherapie und Übernachtungen auf dem Hof.",
+    "voucherCardCta": "Weihnachtsgutschein kaufen →",
+    "adoptCardTitle": "Alpaka-Adoptionspakete zu Weihnachten",
+    "adoptCardDesc": "Verschenken Sie eine 12-monatige Patenschaft für ein Alpaka (Bronze 149 PLN / Silver 349 PLN inkl. Spaziergang / Gold VIP 999 PLN inkl. Wochenendaufenthalt & handgefertigtem Alpaka-Maskottchen).",
+    "adoptCardCta": "Alpaka zu Weihnachten adoptieren →",
+    "voucherPageBannerBadge": "🎄 Perfektes Weihnachtsgeschenk — Sofort-PDF per E-Mail",
+    "voucherPageBannerText": "Jeder Gutschein ist 12 Monate gültig und beinhaltet bei schlechtem Wetter auch das gemütliche Zusammensitzen mit den Alpakas in unserer beleuchteten Winterscheune.",
+    "voucherPageAdoptLink": "Möchten Sie ein persönliches Adoptionszertifikat verschenken? Zu den Alpaka-Adoptionspaketen →",
+    "messagePlaceholderChristmas": "Frohe Weihnachten! Unvergessliche Momente mit den Alpakas 🎄🦙"
   }
 }

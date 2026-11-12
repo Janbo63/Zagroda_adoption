@@ -37,7 +37,7 @@ export function FarmLifeSection() {
           <span className="inline-block bg-amber-50 text-amber-700 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
             {t('badge')}
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-700 mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight mb-3">
             {t('headline')}
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">

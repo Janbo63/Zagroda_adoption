@@ -3,15 +3,15 @@ project: zagroda-website
 sub_business: "3. Zagroda Alpakoterapii (10,000 PLN/mo Target)"
 project_type: Product
 stage: Build
-status: green
+status: yellow
 owner: Robin
 goal: "Drive 10,000 PLN/mo net farm income for Dorota Fura via direct bookings, Living Website monthly bulletin (Pilot #1), Slow-Tourism PR, Corporate Staycations (ex-AlpAIka), vouchers, and alpaca adoptions"
-last_updated: 2026-10-28
-last_action: "2026-10-28 — Fixed foreign-currency (CZK/EUR/GBP) Stripe webhook PLN normalization, added Admin+Guest booking confirmation emails + SMTP env vars, capped room occupancy at max 3 guests (min 1 adult) across UI/i18n/API, and corrected Michal Zitnan's booking data across Zoho/Beds25/Beds24"
-next_action: "Plan and execute controlled detachment of Beds24 and direct Booking.com connection to Beds25; next week (w/c 2 Nov): Slow-Tourism PR pitch & Christmas Voucher / Living Bulletin #1"
+last_updated: 2026-11-12
+last_action: "2026-11-12 — Deployed 07.11 Christmas Gift Vouchers + Living Bulletin #1 (/llms.txt + /agent-catalog.json + SSR OfferCatalog JSON-LD) + WeTransfer digital master winter-barn & handmade alpaca wool mascot images + dynamic package-filtered benefit cards on /adopt + fail-closed hostinger-mail webhook fix live to zagrodaalpakoterapii.com"
+next_action: "EXECUTE BY FRI 13.11: (1) Launch Pre-Christmas Voucher & Dec Winter Peak campaign (past-guest WhatsApp/email list in PL/EN/DE/CZ + ROI-capped Meta offer <=50 PLN CPA / 150 PLN kill-switch); (2) Send TVP3 Wrocław PR follow-up (by Sat 14.11)"
 next_owner: Jan
-next_due: 2026-11-04
-waiting_on: "Ready for Step 4 architectural review: detaching Beds24 and reattaching Booking.com directly"
+next_due: 2026-11-13
+waiting_on: "Launch of Pre-Christmas / Dec Winter booking campaign (past-guest WhatsApp/email + ROI-capped Meta offer <=50 PLN CPA) & TVP3 Wrocław follow-up"
 live_url: https://zagrodaalpakoterapii.com
 ---
 
@@ -31,7 +31,7 @@ live_url: https://zagrodaalpakoterapii.com
    - Target: 4 mid-week (Mon–Thu) remote-work stays / wellness voucher bundles @ 2,500 PLN = 10,000 PLN. Validate with 3 warm SME contacts before adding new pages.
 
 ## Definition of Done & Security Gaps
-- **Urgent Security Fix Pending Approval:** `app/api/webhooks/hostinger-mail/route.ts` has a hard-coded fallback for `HOSTINGER_WEBHOOK_SECRET` and accepts requests with no token.
+- **Hostinger-Mail Webhook Fix Staged (`app/api/webhooks/hostinger-mail/route.ts`):** Removed hard-coded fallback and enforced fail-closed Bearer token check (`500` if `HOSTINGER_WEBHOOK_SECRET` unset, `401` if token missing or mismatched). Ready for live deploy + env var check on VPS.
 - **CI / Ops Gaps:** Add CI gate (`lint` + `typecheck` + `build`), `/api/health`, and shared `stef-logger`.
 
 ## Next Actions

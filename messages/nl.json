@@ -345,12 +345,12 @@
       "footer_link": "Voorwaarden"
     },
     "sectionTitle": "Jaarlijks Virtueel Adoptieprogramma",
-    "campaignTitle": "Winter vol Liefde Special",
-    "campaignSubtitle": "Vind je perfecte match tussen onze zachte sterren. Geen drama, alleen onvoorwaardelijke liefde.",
+    "campaignTitle": "Adopteer een Alpaca — 12 Maanden",
+    "campaignSubtitle": "Word 12 maanden lang adoptieouder van je favoriete alpaca of geef een persoonlijk adoptiecertificaat cadeau. Jouw steun helpt bij de verzorging en het winterhooi van de kudde.",
     "starProfiles": {
       "Elvis": {
         "hook": "De Ultieme Luisteraar",
-        "description": "Elvis oordeelt niet over jouw drama. Terwijl de emoties in 'Winter vol Liefde' hoog oplopen, blijft hij de rust zelve. Hij is de ideale partner voor een winterwandeling om je hoofd leeg te maken."
+        "description": "Elvis is de rust zelve in onze kudde. Hij straalt kalmte uit en is het perfecte gezelschap voor een ontspannen wandeling in het IJzergebergte."
       },
       "Micky": {
         "hook": "De Nieuwsgierige Avonturier",
@@ -407,8 +407,10 @@
     },
     "chooseAlpaca": "Kies je alpaca",
     "chooseAlpacaSubtitle": "Selecteer je favoriete protegé",
-    "benefitsTitle": "Alles wat je krijgt",
-    "benefitsSubtitle": "Ontdek de magie die is inbegrepen in onze adoptiepakketten",
+    "benefitsTitle": "Wat zit er in onze adoptiepakketten (Bronze → Gold)",
+    "benefitsTitleSelected": "Inbegrepen in jouw pakket: {tier}",
+    "benefitsSubtitle": "Selecteer hierboven een pakket om de foto's te filteren op jouw gekozen pakket",
+    "showAllBenefits": "Toon alle 8 voordelen van alle pakketten (Bronze–Gold)",
     "bestValue": "Keuze",
     "annualFeeNote": "Eenmalige jaarlijkse vergoeding",
     "selectionRequired": "Selecteer je alpacamaatje om af te ronden",
@@ -578,7 +580,7 @@
     "comparison": {
       "title": "Waarom Kiezen Voor Alpaca's?",
       "tv": {
-        "title": "Winter vol Liefde (TV)",
+        "title": "Drukke vakantieparken",
         "point1": "Nep drama & tranen",
         "point2": "Camera's overal",
         "point3": "Relatie onzekerheid",
@@ -1559,5 +1561,28 @@
     "freeAlpacaPerk": "Gratis ontmoeting met de alpaca's + onbeperkte toegang tot de alpaca's tijdens uw verblijf!",
     "roomPerkMeet": "Gratis Alpaca-ontmoeting inbegrepen",
     "roomPerkAccess": "Vrije toegang tot de alpaca's tijdens het verblijf"
+  },
+  "livingBulletin": {
+    "badge": "Seizoensbulletin • November / Winter 2026",
+    "barnBadge": "Inbegrepen bij elk bezoek & verblijf • Weerbestendig",
+    "barnTitle": "Regen of sneeuw? Kom binnen zitten bij de alpaca’s in onze knusse schuur!",
+    "barnDescription": "Als het bergweer in het IJzergebergte tegenzit, verplaatsen we jullie ontmoeting gewoon naar binnen als onderdeel van het standaardbezoek. Ontspan op kleden en kussens in onze sfeervol verlichte bakstenen schuur, midden tussen de alpaca’s.",
+    "barnImageAlt": "Knusse winterschuur met alpaca’s bij Zagroda Alpakoterapii",
+    "watchReelCta": "Bekijk de schuurvideo (FB)",
+    "planVisitCta": "Bekijk bezoeken & activiteiten",
+    "autumnOfferLink": "Herfst/Winter-verblijven (-10%)",
+    "christmasBadge": "Kerstcadeaus 2026 • Directe PDF in 2 minuten",
+    "christmasTitle": "Geef een onvergetelijke alpaca-ervaring voor Kerst",
+    "christmasSubtitle": "Direct per e-mail geleverd om uit te printen voor onder de kerstboom.",
+    "voucherCardTitle": "Kerst Cadeaubonnen",
+    "voucherCardDesc": "12 maanden geldig voor alpacawandelingen, knusse bezoeken in de winterschuur, alpacatherapie en verblijven op de boerderij.",
+    "voucherCardCta": "Koop Kerstcadeaubon →",
+    "adoptCardTitle": "Kerst Alpaca Adoptiepakketten",
+    "adoptCardDesc": "Geef een adoptie van 12 maanden cadeau (Bronze 149 PLN / Silver 349 PLN incl. wandeling / Gold VIP 999 PLN incl. weekendverblijf & handgemaakte alpaca-knuffel).",
+    "adoptCardCta": "Adopteer een Alpaca voor Kerst →",
+    "voucherPageBannerBadge": "🎄 Perfect kerstcadeau — Direct als PDF in je mailbox",
+    "voucherPageBannerText": "Elke cadeaubon is 12 maanden geldig en omvat bij slecht weer ook een knus bezoek in onze sfeervol verlichte alpacaschuur.",
+    "voucherPageAdoptLink": "Wil je liever een adoptiecertificaat op naam geven? Bekijk onze Kerst Adoptiepakketten →",
+    "messagePlaceholderChristmas": "Vrolijk Kerstfeest! Onvergetelijke momenten met de alpaca’s 🎄🦙"
   }
 }

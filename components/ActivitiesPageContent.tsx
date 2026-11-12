@@ -28,12 +28,12 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
 
   return (
     <div className="container mx-auto px-4 py-8 bg-gradient-to-b from-blue-100 to-green-100 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-8 text-primary-700">{t('title')}</h1>
+      <h1 className="text-4xl font-serif font-bold text-center mb-8 text-stone-900">{t('title')}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {activityKeys.map((key) => (
           <Card key={key} className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-primary-600">
+              <CardTitle className="text-2xl font-serif font-bold text-stone-900">
                 {t(`${key}.name`)}
               </CardTitle>
             </CardHeader>
@@ -47,19 +47,19 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
               />
             </div>
             <CardContent className="p-4">
-              <CardDescription className="text-primary-700 mb-4">
+              <CardDescription className="text-stone-900 mb-4">
                 {t(`${key}.description`)}
               </CardDescription>
               <div className="space-y-2">
-                <p className="font-semibold text-primary-600">
+                <p className="font-semibold text-stone-900">
                   {t('duration')}: <span className="font-normal">{t(`${key}.attributes.duration`)}</span>
                 </p>
-                <p className="font-semibold text-primary-600">
+                <p className="font-semibold text-stone-900">
                   {t('requirements')}: <span className="font-normal">{t(`${key}.attributes.terms`)}</span>
                 </p>
               </div>
               <div className="flex gap-2 mt-4">
-                <Button asChild className="flex-1 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">
+                <Button asChild className="flex-1 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-serif font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">
                   <a
                     href={`https://wa.me/48695545330?text=${encodeURIComponent(t(`${key}.name`) + ' - ')}`}
                     target="_blank"
@@ -90,7 +90,7 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
           <span className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800 uppercase tracking-wider mb-2">
             Tipy pro návštěvníky z Česka
           </span>
-          <h2 className="text-2xl font-bold text-emerald-950 mb-3">
+          <h2 className="text-2xl font-serif font-bold text-emerald-950 mb-3">
             Plánujete rodinný výlet z Frýdlantu či Liberce?
           </h2>
           <p className="text-stone-700 mb-6 leading-relaxed">
@@ -98,7 +98,7 @@ export function ActivitiesPageContent({ locale: _locale }: ActivitiesPageContent
           </p>
           <Link
             href="/cs/vylet"
-            className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 font-bold text-white shadow hover:bg-emerald-800 transition"
+            className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 font-serif font-bold text-white shadow hover:bg-emerald-800 transition"
           >
             Průvodce: Výlet k alpakám pro rodiny z ČR →
           </Link>

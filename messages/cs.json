@@ -567,6 +567,14 @@
     "exploreActivities": "Prozkoumat aktivity",
     "contactUs": "Kontakt"
   },
+  "home": {
+    "title": "Vítejte v Zagroda Alpakoterapii",
+    "subtitle": "Zažijte magii alpakoterapie v našem klidném farmářském prostředí",
+    "contactUs": "Kontaktujte nás",
+    "phoneNumber": "695 545 330",
+    "address": "Orłowice 24, 59-630 Mirsk, Polsko",
+    "followUs": "Sledujte nás"
+  },
   "accommodation": {
     "sectionTitle": "Ubytujte se u nás",
     "bookNow": "Rezervovat nyní",
@@ -595,12 +603,12 @@
       "footer_link": "Podmínky"
     },
     "sectionTitle": "Jednoletý virtuální adopční program",
-    "campaignTitle": "Speciál Winter vol Liefde",
-    "campaignSubtitle": "Najděte svůj ideální protějšek mezi našimi hebkými hvězdami. Žádné drama, jen bezpodmínečná láska.",
+    "campaignTitle": "Virtuální adopce alpaky na 12 měsíců",
+    "campaignSubtitle": "Staňte se patronem své oblíbené alpaky na celý rok nebo darujte jmenovitý certifikát o adopci jako originální dárek. Vaše podpora pomáhá financovat péči o stádo.",
     "starProfiles": {
       "Elvis": {
         "hook": "Dokonalý posluchač",
-        "description": "Elvis nesoudí vaše drama. Zatímco v 'Winter vol Liefde' emoce vřou, on zůstává klidný. Je to ideální partner pro zimní procházku k nalezení vnitřního klidu."
+        "description": "Elvis je nejklidnější duší našeho stáda. Nikam nespěchá, miluje klidnou společnost a je ideálním parťákem na relaxační procházku v Jizerských horách."
       },
       "Micky": {
         "hook": "Zvědavý dobrodruh",
@@ -617,7 +625,7 @@
     },
     "bronze": {
       "name": "Bronzový Ochrance",
-      "price": "199 PLN",
+      "price": "149 PLN",
       "features": [
         "Oficiální Adoptivní Certifikát",
         "Setkání s alpakou (vstup pro 1 osobu)",
@@ -626,7 +634,7 @@
     },
     "silver": {
       "name": "Stříbrný Ochrance",
-      "price": "499 PLN",
+      "price": "349 PLN",
       "features": [
         "Všechny výhody Bronze",
         "10% sleva na pobyt v Guesthouse Zagroda Alpako Terapii",
@@ -645,8 +653,10 @@
     },
     "chooseAlpaca": "Vyberte si svou alpaku",
     "chooseAlpacaSubtitle": "Vyberte si svého favorita",
-    "benefitsTitle": "Vše, co získáte",
-    "benefitsSubtitle": "Objevte kouzlo zahrnuté v našich adopčních balíčcích",
+    "benefitsTitle": "Co obsahují adopční balíčky (od Bronze po Gold)",
+    "benefitsTitleSelected": "Zahrnuto ve vašem balíčku: {tier}",
+    "benefitsSubtitle": "Vyberte si balíček výše a vyfiltrujte obrázky podle toho, co obsahuje zvolená varianta",
+    "showAllBenefits": "Zobrazit porovnání všech 8 výhod (Bronze–Gold)",
     "bestValue": "Tip",
     "annualFeeNote": "Jednorázový roční poplatek",
     "selectionRequired": "Pro dokončení si prosím vyberte svou alpaku",
@@ -956,7 +966,7 @@
     "comparison": {
       "title": "Proč Zvolit Alpaky?",
       "tv": {
-        "title": "Winter vol Liefde (TV)",
+        "title": "Přeplněná turistická centra",
         "point1": "Falešné drama & slzy",
         "point2": "Kamery všude",
         "point3": "Nejistota vztahu",
@@ -1587,5 +1597,28 @@
     "freeAlpacaPerk": "Setkání s alpakami zdarma + neomezený přístup k alpakám po celou dobu pobytu!",
     "roomPerkMeet": "Setkání s alpakami zdarma v ceně",
     "roomPerkAccess": "Neomezený přístup k alpakám po celou dobu"
+  },
+  "livingBulletin": {
+    "badge": "Sezónní zpravodaj • Listopad / Zima 2026",
+    "barnBadge": "V ceně standardní návštěvy a pobytu • Za každého počasí",
+    "barnTitle": "Prší nebo sněží? Poseďte s alpakami v naší útulné stodole!",
+    "barnDescription": "Když v Jizerských horách nepřeje počasí, přesouváme setkání pod střechu jako součást běžné návštěvy či pobytu. Čeká na vás naše kouzelná, světýlky nasvícená cihlová stodola s koberci a polštáři, kde si v teple a klidu posedíte přímo mezi alpakami.",
+    "barnImageAlt": "Útulná zimní stodola s alpakami v Zagrodě Alpakoterapii v Orłowicích",
+    "watchReelCta": "Přehrát video ze stodoly (FB)",
+    "planVisitCta": "Prohlédnout aktivity a návštěvy",
+    "autumnOfferLink": "Podzimní a zimní pobyty (-10%)",
+    "christmasBadge": "Vánoční dárky 2026 • PDF do 2 minut na e-mail",
+    "christmasTitle": "Darujte pod stromeček zážitek s alpakami",
+    "christmasSubtitle": "Jmenovitý poukaz nebo certifikát o adopci obdržíte ihned na e-mail — připravený k vytištění pod stromeček.",
+    "voucherCardTitle": "Vánoční dárkové poukazy",
+    "voucherCardDesc": "Platnost 12 měsíců na procházky s alpakami, posezení v útulné stodole, alpakoterapii i víkendové pobyty na farmě (15 min od českých hranic).",
+    "voucherCardCta": "Koupit vánoční poukaz →",
+    "adoptCardTitle": "Vánoční balíčky adopce alpak",
+    "adoptCardDesc": "Darujte 12měsíční adopci vybrané alpaky (Bronze 149 PLN / Silver 349 PLN vč. procházky / Gold VIP 999 PLN vč. víkendového pobytu a ručně vyráběného maskota vaší alpaky).",
+    "adoptCardCta": "Vybrat alpaku k adopci →",
+    "voucherPageBannerBadge": "🎄 Ideální dárek pod stromeček — doručení v PDF do 2 minut",
+    "voucherPageBannerText": "Každý poukaz platí 12 měsíců a při nepříznivém počasí zahrnuje i posezení s alpakami v naší útulné, světýlky nasvícené stodole.",
+    "voucherPageAdoptLink": "Chcete darovat jmenovitý certifikát konkrétní alpaky? Prohlédněte si Vánoční adopci alpak →",
+    "messagePlaceholderChristmas": "Veselé Vánoce! Nezapomenutelné chvíle s alpakami 🎄🦙"
   }
 }

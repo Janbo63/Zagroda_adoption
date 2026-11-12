@@ -53,8 +53,7 @@ export function AccommodationSection({ locale }: AccommodationSectionProps) {
   return (
     <section className="w-full mb-8 md:mb-12 px-2 sm:px-4">
       <Link href={`/${locale}/stay`}>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-primary-700 
-          hover:text-primary-500 transition-colors duration-300 group flex items-center justify-center gap-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4 md:mb-6 text-center text-stone-900 hover:text-orange-700 tracking-tight transition-colors duration-300 group flex items-center justify-center gap-2">
           {t('sectionTitle')}
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
         </h2>
@@ -101,7 +100,7 @@ export function AccommodationSection({ locale }: AccommodationSectionProps) {
             </CardDescription>
             <Link href={`/${locale}/stay`}>
               <Button
-                className="bg-blue-500 text-white hover:bg-blue-600 rounded-full transition-all duration-300 px-6"
+                className="bg-orange-600 text-white hover:bg-orange-700 rounded-xl font-bold shadow-sm transition-all duration-300 px-6 py-2.5"
               >
                 {t('bookNow')}
               </Button>
